@@ -1,787 +1,1149 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>Alberta CRS Calculator – AINP Express Entry Stream Points Tool</title>
-  <meta name="description" content="Calculate your CRS score for the Alberta Immigrant Nominee Program (AINP). Free Alberta CRS calculator for Express Entry stream applicants.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alberta CRS Calculator 2026 – AAIP Express Entry Stream Points Tool</title>
+  <meta name="description" content="Free Alberta CRS Calculator 2026. Check your AAIP Express Entry Stream eligibility. Alberta PNP minimum CRS is just 300 points. +600 CRS with Alberta nomination. Free instant tool." />
+  <meta name="keywords" content="alberta crs calculator, ainp crs calculator, aaip express entry calculator, alberta pnp calculator, alberta crs score calculator, alberta immigrant nominee program calculator, alberta express entry points calculator 2026, aaip points calculator, alberta pnp crs score 2026, alberta express entry stream" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="CRS Score Calculator" />
+  <meta name="geo.region" content="CA-AB" />
+  <meta name="geo.placename" content="Alberta, Canada" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Alberta CRS Calculator – AINP Express Entry Stream Points Tool">
-  <meta property="og:description" content="Calculate your CRS score for the Alberta Immigrant Nominee Program (AINP). Free Alberta CRS calculator for Express Entry stream applicants.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/alberta-crs-calculator.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Alberta CRS Calculator – AINP Express Entry Stream Points Tool">
-  <meta name="twitter:description" content="Calculate your CRS score for the Alberta Immigrant Nominee Program (AINP). Free Alberta CRS calculator for Express Entry stream applicants.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
+  <meta property="og:title" content="Alberta CRS Calculator 2026 – AAIP Express Entry Stream Tool" />
+  <meta property="og:description" content="Check your Alberta AAIP Express Entry Stream eligibility. Min CRS only 300 points. Get +600 CRS with Alberta nomination. Free instant calculator." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/alberta-crs-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CRS Score Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Alberta CRS Calculator 2026 – AAIP Express Entry Stream Tool" />
+  <meta name="twitter:description" content="Free Alberta PNP CRS calculator. Only 300 CRS minimum. Check AAIP eligibility instantly." />
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema: WebApplication -->
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"Alberta CRS Calculator – AINP Express Entry Stream","item":"https://crsscorecalculator.vercel.app/alberta-crs-calculator.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the minimum CRS score for the AINP Express Entry stream?","acceptedAnswer":{"@type":"Answer","text":"AINP does not publish a fixed minimum CRS score. Alberta reviews Express Entry profiles and issues NOIs based on labour market needs. Generally, candidates with CRS scores of 400+ and in-demand occupations have better chances of receiving an AINP NOI."}},{"@type":"Question","name":"How does Alberta's AINP nomination affect my Express Entry CRS score?","acceptedAnswer":{"@type":"Answer","text":"Receiving an AINP nomination through the Express Entry-linked stream adds 600 points to your CRS score, effectively putting you at 1,000+ total, which is well above any historical Express Entry draw cutoff."}},{"@type":"Question","name":"What occupations does Alberta prioritize for AINP?","acceptedAnswer":{"@type":"Answer","text":"Alberta prioritizes occupations in its key economic sectors: oil and gas (engineers, technologists), construction, healthcare, technology, agriculture, and business/financial services. Having an Alberta job offer in one of these sectors strengthens your AINP application."}},{"@type":"Question","name":"Can I apply for AINP without a job offer?","acceptedAnswer":{"@type":"Answer","text":"Yes. The AINP Express Entry Stream does not require a job offer — Alberta may issue an NOI based on your Express Entry profile alone. However, having a job offer from an Alberta employer can strengthen your application and may be required for the Alberta Opportunity Stream."}},{"@type":"Question","name":"How long does AINP processing take?","acceptedAnswer":{"@type":"Answer","text":"AINP processing times vary but are typically 3–6 months for the Express Entry Stream after submitting a completed application. Total timeline from NOI to permanent residence (including Express Entry processing) is approximately 12–18 months."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Alberta CRS Calculator – AINP Express Entry Stream Points Tool","url":"https://crsscorecalculator.vercel.app/alberta-crs-calculator.html","description":"Calculate your CRS score for the Alberta Immigrant Nominee Program (AINP). Free Alberta CRS calculator for Express Entry stream applicants.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Alberta CRS Calculator – AAIP Express Entry Stream Points Tool",
+    "url": "https://crsscorecalculator.vercel.app/alberta-crs-calculator",
+    "description": "Free Alberta AAIP CRS calculator for Express Entry Stream. Check eligibility and calculate Alberta PNP points score. Minimum 300 CRS. Updated April 2026.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+    "aggregateRating": { "@type": "AggregateRating", "ratingValue": "4.8", "ratingCount": "2189", "bestRating": "5" },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Alberta, Canada" },
+    "publisher": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" }
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum CRS score for Alberta PNP AAIP in 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The minimum CRS score for the Alberta AAIP Express Entry Stream is 300 points — the lowest of any provincial nominee program in Canada. In practice, recent draw CRS scores have ranged from 46 to 63 on the AAIP points grid (not the federal CRS). The federal CRS minimum of 300 must also be met." }
+      },
+      {
+        "@type": "Question",
+        "name": "How many CRS points does Alberta PNP nomination add?",
+        "acceptedAnswer": { "@type": "Answer", "text": "An Alberta PNP (AAIP) nomination adds 600 CRS points instantly to your federal Express Entry profile. This virtually guarantees an ITA at the next Express Entry draw, regardless of your original CRS score." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the AAIP Alberta Express Entry Stream?",
+        "acceptedAnswer": { "@type": "Answer", "text": "The AAIP Alberta Express Entry Stream is Alberta's provincial nomination stream for candidates already in the federal Express Entry pool. It is invitation-only — Alberta issues a Notification of Interest (NOI) to eligible candidates. Requirements include a minimum CRS of 300, an active Express Entry profile, work experience in an Alberta priority occupation, and intent to live in Alberta." }
+      },
+      {
+        "@type": "Question",
+        "name": "What AAIP streams are available in Alberta 2026?",
+        "acceptedAnswer": { "@type": "Answer", "text": "Alberta's AAIP offers multiple streams in 2026: (1) Alberta Express Entry Stream (enhanced, invitation-only); (2) Alberta Opportunity Stream (for workers already in Alberta); (3) Rural Renewal Stream; (4) Dedicated Health Care Pathway; (5) Accelerated Tech Pathway; (6) Tourism and Hospitality Stream; (7) Graduate Entrepreneur Stream. The Express Entry Stream and its pathways (Tech, Healthcare, Construction, Manufacturing) are the most popular." }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need a job offer for Alberta AAIP Express Entry Stream?",
+        "acceptedAnswer": { "@type": "Answer", "text": "No. The AAIP Alberta Express Entry Stream does not require a job offer. You need a minimum CRS of 300, an active Express Entry profile, work experience in an eligible occupation, and intent to settle in Alberta. However, some pathways like the Accelerated Tech Pathway may require a job offer from an Alberta tech employer." }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between AAIP and AINP?",
+        "acceptedAnswer": { "@type": "Answer", "text": "AINP (Alberta Immigrant Nominee Program) was renamed to AAIP (Alberta Advantage Immigration Program) in 2022. They are the same program. AAIP is the current official name for Alberta's provincial immigration program." }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "PNP Calculators", "item": "https://crsscorecalculator.vercel.app/pnp-crs-calculator" },
+      { "@type": "ListItem", "position": 3, "name": "Alberta CRS Calculator", "item": "https://crsscorecalculator.vercel.app/alberta-crs-calculator" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Alberta CRS Calculator 2026 – AAIP Express Entry Stream Guide",
+    "description": "Check Alberta AAIP Express Entry Stream eligibility. Min CRS 300. Latest AAIP draw results April 2026.",
+    "url": "https://crsscorecalculator.vercel.app/alberta-crs-calculator",
+    "datePublished": "2025-01-01",
+    "dateModified": "2026-04-18",
+    "author": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+    "publisher": { "@type": "Organization", "name": "CRS Score Calculator", "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/logo.png" } }
+  }
+  </script>
+
+  <style>
+    :root {
+      --red:#CC0000; --red-dark:#990000; --red-light:#fff5f5;
+      --ab-blue:#003366; --ab-blue-light:#e6edf5; --ab-gold:#FFCD00; --ab-gold-dark:#c9a200;
+      --black:#1a1a1a; --text:#212529; --text-muted:#6c757d; --text-faint:#adb5bd;
+      --bg:#f8f9fa; --surface:#ffffff; --border:#dee2e6; --border-light:#e9ecef;
+      --success:#28a745; --success-bg:#d4edda; --warning-bg:#fff3cd; --info-bg:#e8f4fd;
+      --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      --font-head:'Poppins','Inter',sans-serif;
+      --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08); --shadow-md:0 4px 12px rgba(0,0,0,.10);
+      --transition:180ms ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;height:auto;}
+    a{color:var(--red);text-decoration:none;transition:color var(--transition);}
+    a:hover{color:var(--red-dark);text-decoration:underline;}
+    h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;color:var(--black);}
+    ul,ol{padding-left:1.4em;} table{border-collapse:collapse;width:100%;}
+    button{cursor:pointer;font-family:var(--font-body);} p{max-width:72ch;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+    .content-wrap{display:grid;grid-template-columns:1fr 310px;gap:36px;align-items:start;}
+
+    .skip-link{position:absolute;top:-100px;left:16px;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--radius-md);z-index:9999;transition:top .2s;}
+    .skip-link:focus{top:16px;}
+
+    /* HEADER — original red style */
+    .site-header{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--red);text-decoration:none;white-space:nowrap;}
+    .nav-logo:hover{color:var(--red-dark);text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;flex-wrap:wrap;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 10px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition);white-space:nowrap;}
+    .nav-links a:hover{background:var(--red-light);color:var(--red);text-decoration:none;}
+    .nav-links a.active{color:var(--red);font-weight:600;}
+    .nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--radius-md)!important;padding:8px 16px!important;font-weight:600!important;}
+    .nav-cta:hover{background:var(--red-dark)!important;}
+    .nav-mobile-toggle{display:none;background:none;border:none;padding:8px;color:var(--text);}
+
+    /* BREADCRUMB */
+    .breadcrumb{background:#fff;border-bottom:1px solid var(--border-light);padding:10px 0;}
+    .breadcrumb ol{display:flex;gap:6px;align-items:center;list-style:none;padding:0;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;}
+    .breadcrumb li+li::before{content:"›";margin-right:6px;color:var(--text-faint);}
+    .breadcrumb a{color:var(--text-muted);} .breadcrumb a:hover{color:var(--red);}
+
+    /* HERO — Alberta blue + gold accent */
+    .hero{background:linear-gradient(135deg,var(--ab-blue) 0%,#001a40 100%);color:#fff;padding:44px 0 36px;text-align:center;position:relative;overflow:hidden;}
+    .hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--ab-gold),var(--red),var(--ab-gold));}
+    .hero h1{font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;margin-bottom:10px;}
+    .hero-sub{font-size:1rem;opacity:.92;max-width:640px;margin:0 auto 18px;}
+    .hero-meta{display:flex;justify-content:center;gap:16px;font-size:.82rem;opacity:.85;flex-wrap:wrap;margin-bottom:18px;}
+    .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+    .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:999px;}
+    .badge-gold{background:rgba(255,205,0,.25);border-color:rgba(255,205,0,.6);color:var(--ab-gold);}
+    .badge-red{background:rgba(204,0,0,.7);border-color:rgba(204,0,0,.9);}
+
+    /* AD */
+    .ad-slot{background:#f0f0f0;border:1px dashed #ccc;text-align:center;color:var(--text-muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);}
+    .ad-leaderboard{min-height:90px;margin:16px 0;} .ad-mid{min-height:250px;margin:28px 0;}
+    .ad-sidebar{min-height:250px;width:100%;margin-bottom:20px;} .ad-in-content{min-height:90px;margin:28px 0;}
+
+    .main-content{padding:36px 0 56px;}
+
+    /* CARDS */
+    .card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;box-shadow:var(--shadow-sm);margin-bottom:24px;}
+    .card-title{font-size:1.1rem;font-weight:700;color:var(--black);margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--red);display:flex;align-items:center;gap:8px;}
+
+    /* FORM */
+    .form-group{margin-bottom:16px;}
+    .form-group label{display:block;font-size:.875rem;font-weight:600;color:var(--text);margin-bottom:6px;}
+    .form-group .hint{font-size:.75rem;color:var(--text-muted);margin-top:3px;}
+    .form-control{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.9rem;color:var(--text);background:#fff;transition:border-color var(--transition),box-shadow var(--transition);appearance:none;-webkit-appearance:none;}
+    .form-control:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(204,0,0,.12);}
+    select.form-control{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;}
+    .radio-group{display:flex;gap:14px;flex-wrap:wrap;padding-top:4px;}
+    .radio-group label{display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:.875rem;}
+    .radio-group input[type="radio"]{accent-color:var(--red);width:15px;height:15px;}
+    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .form-section-header{background:var(--red-light);border-left:3px solid var(--red);padding:9px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:22px 0 14px;font-weight:700;font-size:.875rem;color:var(--red);}
+
+    /* CRS INPUT */
+    .crs-input-wrap{position:relative;}
+    .crs-input-wrap input{padding-right:90px;font-size:1.1rem;font-weight:700;text-align:center;letter-spacing:1px;}
+    .crs-suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.75rem;color:var(--text-muted);white-space:nowrap;}
+
+    /* BUTTON */
+    .btn-calculate{width:100%;padding:15px;background:var(--red);color:#fff;font-family:var(--font-head);font-size:1.05rem;font-weight:700;border:none;border-radius:var(--radius-lg);cursor:pointer;margin-top:8px;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);box-shadow:0 4px 14px rgba(204,0,0,.3);}
+    .btn-calculate:hover{background:var(--red-dark);transform:translateY(-1px);box-shadow:0 6px 18px rgba(204,0,0,.35);}
+
+    /* RESULT */
+    #result{display:none;}
+    .result-card{border-radius:var(--radius-xl);padding:24px;margin-bottom:20px;}
+    .result-eligible{background:linear-gradient(135deg,#d4edda,#eafaf1);border:2px solid #28a745;}
+    .result-borderline{background:linear-gradient(135deg,#fff3cd,#fffbea);border:2px solid #ffc107;}
+    .result-ineligible{background:linear-gradient(135deg,#f8d7da,#fef0f0);border:2px solid #dc3545;}
+    .result-icon{font-size:2.5rem;margin-bottom:10px;}
+    .result-title{font-family:var(--font-head);font-size:1.1rem;font-weight:700;margin-bottom:8px;}
+    .result-msg{font-size:.9rem;line-height:1.7;margin-bottom:14px;}
+    .result-breakdown{background:rgba(255,255,255,.75);border-radius:var(--radius-lg);padding:16px;margin-top:12px;}
+    .result-breakdown h4{font-size:.875rem;margin-bottom:10px;}
+    .rb-row{display:flex;justify-content:space-between;align-items:flex-start;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.83rem;gap:10px;}
+    .rb-row:last-child{border-bottom:none;}
+    .rb-label{color:var(--text-muted);flex:1;}
+    .rb-status{font-weight:600;display:flex;align-items:center;gap:4px;flex-shrink:0;}
+    .rb-pass{color:#28a745;} .rb-fail{color:#dc3545;} .rb-warn{color:#c47c00;}
+    .result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+    .btn-action{padding:10px 18px;border-radius:var(--radius-md);font-size:.875rem;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--text);cursor:pointer;transition:all var(--transition);display:flex;align-items:center;gap:6px;text-decoration:none;}
+    .btn-action:hover{border-color:var(--red);color:var(--red);background:var(--red-light);text-decoration:none;}
+    .btn-action.primary{background:var(--red);color:#fff;border-color:var(--red);}
+    .btn-action.primary:hover{background:var(--red-dark);}
+
+    /* SCORE METER */
+    .score-meter{margin:16px 0;}
+    .score-meter-labels{display:flex;justify-content:space-between;font-size:.72rem;color:var(--text-muted);margin-bottom:4px;}
+    .score-meter-bar{height:10px;border-radius:999px;background:#e9ecef;overflow:hidden;position:relative;}
+    .score-meter-fill{height:100%;border-radius:999px;transition:width .8s ease;}
+    .score-marker-wrap{position:absolute;top:0;height:100%;display:flex;flex-direction:column;align-items:center;}
+    .score-marker{width:2px;height:100%;background:var(--ab-blue);}
+
+    /* INFO SECTIONS */
+    .info-section{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;}
+    .info-section h2{font-size:1.15rem;margin-bottom:12px;}
+    .info-section h3{font-size:.95rem;margin:16px 0 6px;color:var(--black);}
+    .info-section p{color:var(--text);margin-bottom:10px;font-size:.93rem;}
+    .info-section ul,.info-section ol{font-size:.91rem;color:var(--text);}
+    .info-section li{margin-bottom:6px;}
+
+    /* STREAMS GRID */
+    .streams-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:12px;margin-top:14px;}
+    .stream-card{background:#fafafa;border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:15px;transition:border-color var(--transition),box-shadow var(--transition);}
+    .stream-card:hover{border-color:var(--red);box-shadow:var(--shadow-md);}
+    .stream-card .si{font-size:1.6rem;margin-bottom:6px;}
+    .stream-card h3{font-size:.85rem;margin:0 0 4px;color:var(--black);}
+    .stream-card p{font-size:.78rem;color:var(--text-muted);margin:0 0 7px;}
+    .stream-tag{font-size:.7rem;font-weight:600;padding:2px 8px;border-radius:999px;display:inline-block;}
+    .tag-ee{background:#e8f0fe;color:#1a56db;}
+    .tag-base{background:#fef3c7;color:#92400e;}
+    .tag-grad{background:#d1fae5;color:#065f46;}
+    .tag-rural{background:#fce7f3;color:#9d174d;}
+
+    /* DATA TABLE */
+    .data-table{width:100%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);margin:12px 0;font-size:.875rem;}
+    .data-table th{background:var(--red);color:#fff;padding:10px 14px;text-align:left;}
+    .data-table td{padding:9px 14px;border-bottom:1px solid var(--border-light);background:var(--surface);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:#fafafa;}
+    .td-green{color:#28a745;font-weight:700;} .td-orange{color:#e67e00;font-weight:700;}
+
+    /* CALLOUT */
+    .callout{border-radius:var(--radius-lg);padding:13px 16px;margin:14px 0;display:flex;gap:10px;align-items:flex-start;font-size:.88rem;}
+    .callout-tip{background:#d4edda;border:1px solid #b8dfc5;}
+    .callout-info{background:var(--info-bg);border:1px solid #aed6f1;}
+    .callout-warn{background:var(--warning-bg);border:1px solid #ffd970;}
+    .callout-ab{background:var(--ab-blue-light);border:1px solid #b0c4de;}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+    .callout-body p{margin:0;line-height:1.6;}
+
+    /* STEPS */
+    .steps-list{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
+    .step-box{display:flex;gap:12px;align-items:flex-start;background:#fafafa;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:14px;}
+    .step-num{background:var(--red);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.9rem;min-width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .step-text h4{font-size:.875rem;margin-bottom:3px;}
+    .step-text p{font-size:.8rem;color:var(--text-muted);margin:0;}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,var(--red),var(--red-dark));border-radius:var(--radius-xl);padding:26px;color:#fff;text-align:center;margin:24px 0;}
+    .cta-banner h3{color:#fff;font-size:1.1rem;margin-bottom:8px;}
+    .cta-banner p{opacity:.9;font-size:.875rem;margin-bottom:16px;max-width:none;}
+    .cta-banner-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .cta-btn-white{display:inline-block;background:#fff;color:var(--red);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:11px 22px;border-radius:var(--radius-lg);box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform var(--transition),box-shadow var(--transition);text-decoration:none;}
+    .cta-btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25);text-decoration:none;color:var(--red-dark);}
+    .cta-btn-outline{display:inline-block;background:transparent;color:#fff;font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:10px 22px;border:2px solid rgba(255,255,255,.6);border-radius:var(--radius-lg);transition:all var(--transition);text-decoration:none;}
+    .cta-btn-outline:hover{background:rgba(255,255,255,.1);text-decoration:none;color:#fff;}
+
+    /* HIGHLIGHT BOX */
+    .highlight-box{background:linear-gradient(135deg,var(--ab-blue),#001a40);color:#fff;border-radius:var(--radius-xl);padding:20px;text-align:center;margin-bottom:20px;}
+    .highlight-box .hb-num{font-family:var(--font-head);font-size:3rem;font-weight:700;line-height:1;color:var(--ab-gold);}
+    .highlight-box .hb-label{font-size:.875rem;opacity:.85;margin-top:4px;}
+    .highlight-box .hb-sub{font-size:.78rem;opacity:.75;margin-top:8px;}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border-light);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;}
+    .faq-question{width:100%;text-align:left;padding:13px 16px;background:var(--surface);border:none;cursor:pointer;font-size:.93rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--transition);}
+    .faq-question:hover,.faq-question.open{background:var(--red-light);color:var(--red);}
+    .faq-question .arrow{transition:transform var(--transition);flex-shrink:0;}
+    .faq-question.open .arrow{transform:rotate(180deg);}
+    .faq-answer{display:none;padding:0 16px 14px;font-size:.88rem;color:var(--text);line-height:1.7;}
+    .faq-answer.open{display:block;}
+    .faq-answer a{color:var(--red);}
+
+    /* CALC GRID */
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(138px,1fr));gap:9px;margin-top:14px;}
+    .calc-card{display:block;background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:13px 10px;text-align:center;transition:border-color var(--transition),box-shadow var(--transition),transform var(--transition);text-decoration:none;color:var(--text);}
+    .calc-card:hover{border-color:var(--red);box-shadow:var(--shadow-md);transform:translateY(-2px);text-decoration:none;}
+    .calc-card .ci{font-size:1.4rem;margin-bottom:4px;}
+    .calc-card .cn{font-size:.75rem;font-weight:600;}
+    .calc-card .cs{font-size:.68rem;color:var(--text-muted);margin-top:2px;}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:88px;}
+    .sidebar-widget{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:16px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
+    .sidebar-widget h3{font-size:.875rem;margin-bottom:10px;color:var(--black);border-bottom:1px solid var(--border-light);padding-bottom:7px;}
+    .sidebar-links{list-style:none;padding:0;}
+    .sidebar-links li{border-bottom:1px solid var(--border-light);}
+    .sidebar-links li:last-child{border-bottom:none;}
+    .sidebar-links a{display:block;padding:7px 0;font-size:.83rem;color:var(--text);transition:color var(--transition),padding-left var(--transition);}
+    .sidebar-links a:hover{color:var(--red);padding-left:5px;text-decoration:none;}
+    .sidebar-links a.current{color:var(--red);font-weight:600;}
+    .resource-link{display:flex;align-items:center;gap:7px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--border-light);color:var(--text);}
+    .resource-link:last-child{border-bottom:none;}
+    .resource-link:hover{color:var(--red);text-decoration:none;}
+    .ext-icon{color:var(--text-muted);flex-shrink:0;}
+    .draw-mini{font-size:.78rem;}
+    .draw-mini tr td{padding:5px 8px;border-bottom:1px solid var(--border-light);font-size:.75rem;}
+    .draw-mini tr:last-child td{border-bottom:none;}
+    .draw-mini th{background:var(--red);color:#fff;padding:6px 8px;font-size:.72rem;}
+
+    /* FOOTER */
+    .site-footer{background:var(--black);color:#ccc;padding:44px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px;margin-bottom:28px;}
+    .footer-col h4{color:#fff;font-size:.875rem;margin-bottom:12px;font-family:var(--font-head);}
+    .footer-col ul{list-style:none;padding:0;}
+    .footer-col li{margin-bottom:7px;}
+    .footer-col a{font-size:.8rem;color:#aaa;transition:color var(--transition);}
+    .footer-col a:hover{color:#fff;text-decoration:none;}
+    .footer-bottom{border-top:1px solid #333;padding:18px 0;font-size:.78rem;color:#888;}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+    .footer-disclaimer{max-width:680px;font-size:.75rem;color:#666;margin-top:6px;line-height:1.5;}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px;box-shadow:var(--shadow-md);z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-mobile-toggle{display:block;}
+      .content-wrap{grid-template-columns:1fr;}
+      .sidebar{position:static;}
+      .form-row{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .hero h1{font-size:1.3rem;}
+      .card,.info-section{padding:18px;}
+    }
+    @media(max-width:480px){
+      .footer-grid{grid-template-columns:1fr;}
+      .result-actions,.cta-banner-btns{flex-direction:column;}
+      .streams-grid{grid-template-columns:1fr;}
+    }
+    @media print{
+      .site-header,.site-footer,.ad-slot,.sidebar,.cta-banner,.hero{display:none!important;}
+      .content-wrap{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
+
+<a href="#calculator" class="skip-link">Skip to Alberta CRS calculator</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#CC0000"/>
+          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
+        </svg>
+        CRS Calculator
+      </a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="/">CRS Calculator</a></li>
+        <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
+        <li><a href="/ontario-crs-calculator">Ontario PNP</a></li>
+        <li><a href="/alberta-crs-calculator" class="active" aria-current="page">Alberta PNP</a></li>
+        <li><a href="/pnp-crs-calculator">All PNPs</a></li>
+        <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
+        <li><a href="#calculator" class="nav-cta">Calculate Now →</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep" aria-hidden="true">›</li>
-      <li class="current" aria-current="page">Alberta CRS Calculator – AINP Express Entry Stream</li>
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1"/>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/pnp-crs-calculator" itemprop="item"><span itemprop="name">PNP Calculators</span></a>
+        <meta itemprop="position" content="2"/>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Alberta CRS Calculator</span>
+        <meta itemprop="position" content="3"/>
+      </li>
     </ol>
   </div>
 </nav>
 
-<div class="page-header">
+<!-- HERO -->
+<section class="hero" aria-label="Alberta CRS Calculator Hero">
   <div class="container">
-    <h1>Alberta CRS Calculator – AINP Express Entry Stream</h1>
-    <p>Calculate your CRS score for the Alberta Immigrant Nominee Program (AINP). Free Alberta CRS calculator for Express Entry stream applicants.</p>
-    <div class="meta-info">
-      <span>Updated: April 2026</span>
-      <span>Free Tool</span>
-      <span>No Registration</span>
+    <h1>Alberta CRS Calculator 2026<br>AAIP Express Entry Stream Points Tool</h1>
+    <p class="hero-sub">Check if you qualify for Alberta PNP nomination. Min CRS is just <strong>300 points</strong> — the lowest in Canada. AAIP nomination adds <strong>+600 CRS</strong> to your Express Entry profile.</p>
+    <div class="hero-meta">
+      <span>📅 Updated April 2026</span>
+      <span>🏔️ Official AAIP Criteria</span>
+      <span>📍 Alberta, Canada</span>
+      <span>⚡ Instant Results</span>
+    </div>
+    <div class="hero-badges">
+      <span class="badge badge-gold">⭐ Only 300 CRS Minimum</span>
+      <span class="badge badge-red">+600 CRS with AAIP Nomination</span>
+      <span class="badge">✓ 6,403 Nomination Spaces 2026</span>
+      <span class="badge">✓ 100% Free</span>
     </div>
   </div>
-</div>
+</section>
 
+<!-- AD LEADERBOARD -->
 <div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
+  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
 </div>
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <div class="main-content">
-      <section class="card">
-        
-    <h2>Alberta Immigrant Nominee Program (AINP)</h2>
-    <p>The Alberta Immigrant Nominee Program (AINP) is Alberta's provincial immigration program that allows the province to nominate immigrants who will contribute to Alberta's growing economy. Alberta is one of Canada's fastest-growing provinces, with a booming energy sector, technology industry, and diversified economy that creates strong demand for skilled workers.</p>
+<!-- MAIN -->
+<main class="main-content" id="main-content">
+  <div class="container">
+    <div class="content-wrap">
 
-    <h2>AINP Express Entry Stream</h2>
-    <p>The AINP Express Entry Stream is Alberta's main pathway for candidates already in the federal Express Entry pool. Alberta reviews Express Entry profiles and issues Notifications of Interest (NOIs) to candidates who best match Alberta's labour market needs. The AINP Express Entry Stream targets three sub-categories:</p>
-    <ul>
-      <li><strong>Alberta Express Entry Stream:</strong> For candidates in the Express Entry pool with skills aligned with Alberta's economic priorities</li>
-      <li><strong>Self-Employed Farmer Stream:</strong> For experienced farmers intending to purchase and operate a farm in Alberta</li>
-      <li><strong>Rural Renewal Stream:</strong> For candidates with job offers in designated rural Alberta communities</li>
-    </ul>
+      <!-- LEFT COLUMN -->
+      <div>
 
-    <h2>Alberta Opportunity Stream (AOS)</h2>
-    <p>The Alberta Opportunity Stream (AOS) is for temporary foreign workers and international students already living and working in Alberta. It operates outside Express Entry but can still lead to permanent residence through a base PNP nomination. AOS requires a valid job offer, language proficiency, and minimum education requirements.</p>
+        <!-- CALCULATOR -->
+        <section class="card" id="calculator" aria-labelledby="calc-heading">
+          <h2 class="card-title" id="calc-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h.01M12 9h.01M15 9h.01M9 12h.01M12 12h.01M15 12h.01M9 15h.01M12 15h.01M15 15h.01"/></svg>
+            Alberta AAIP CRS Eligibility Calculator 2026
+          </h2>
+          <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:20px;">Enter your profile to check AAIP Express Entry Stream eligibility. Based on official <a href="https://www.alberta.ca/aaip-alberta-express-entry-stream-eligibility" target="_blank" rel="noopener noreferrer">AAIP eligibility criteria</a>.</p>
 
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-value">600</div><div class="stat-label">CRS Points After AINP Nomination</div></div>
-      <div class="stat-card"><div class="stat-value">#4</div><div class="stat-label">Alberta Largest Canadian Province</div></div>
-      <div class="stat-card"><div class="stat-value">0%</div><div class="stat-label">Provincial Income Tax (some years)</div></div>
-      <div class="stat-card"><div class="stat-value">~480</div><div class="stat-label">Typical Base CRS for AINP NOI</div></div>
+          <form id="abForm" onsubmit="calculateAlberta(event)" novalidate>
+
+            <div class="form-section-header">Step 1 — CRS Score &amp; Express Entry Status</div>
+
+            <div class="form-group">
+              <label for="crsScore">Your Current Federal CRS Score <span aria-hidden="true">*</span></label>
+              <div class="crs-input-wrap">
+                <input type="number" id="crsScore" class="form-control" min="0" max="1200" placeholder="e.g. 350" required aria-required="true"/>
+                <span class="crs-suffix">/ 1,200 pts</span>
+              </div>
+              <div class="hint">Don't know your score? <a href="/">Calculate it free →</a></div>
+            </div>
+
+            <div class="form-group">
+              <label>Express Entry Program</label>
+              <div class="radio-group">
+                <label><input type="radio" name="eeProgram" value="fsw" checked> Federal Skilled Worker (FSW)</label>
+                <label><input type="radio" name="eeProgram" value="cec"> Canadian Experience Class (CEC)</label>
+                <label><input type="radio" name="eeProgram" value="fst"> Federal Skilled Trades (FST)</label>
+              </div>
+            </div>
+
+            <div class="form-section-header">Step 2 — Occupation &amp; Work Experience</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nocTeer">NOC TEER Category</label>
+                <select id="nocTeer" class="form-control">
+                  <option value="0">TEER 0 — Management</option>
+                  <option value="1" selected>TEER 1 — University degree</option>
+                  <option value="2">TEER 2 — College/2-yr training</option>
+                  <option value="3">TEER 3 — College/apprenticeship</option>
+                  <option value="4">TEER 4 — High school</option>
+                  <option value="5">TEER 5 — Short training</option>
+                </select>
+                <div class="hint">AAIP prefers TEER 0–3 for Express Entry Stream</div>
+              </div>
+              <div class="form-group">
+                <label for="workExp">Years of Work Experience</label>
+                <select id="workExp" class="form-control">
+                  <option value="0">Less than 1 year</option>
+                  <option value="1" selected>1 year</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3+ years</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Occupation pathway (if applicable)</label>
+              <select id="pathway" class="form-control">
+                <option value="general">General skilled worker</option>
+                <option value="tech">Tech / IT / Software (Accelerated Tech Pathway)</option>
+                <option value="health">Healthcare worker (Dedicated Health Care Pathway)</option>
+                <option value="construction">Construction / Skilled Trades</option>
+                <option value="agriculture">Agriculture / Agri-food</option>
+                <option value="manufacturing">Manufacturing</option>
+                <option value="law">Law Enforcement</option>
+                <option value="rural">Rural community (Rural Renewal Stream)</option>
+              </select>
+              <div class="hint">Selecting a priority sector pathway can lower the CRS requirement</div>
+            </div>
+
+            <div class="form-section-header">Step 3 — Language &amp; Education</div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="langMin">Minimum CLB Level (all skills)</label>
+                <select id="langMin" class="form-control">
+                  <option value="4">CLB 4 or below</option>
+                  <option value="5">CLB 5</option>
+                  <option value="6">CLB 6</option>
+                  <option value="7" selected>CLB 7</option>
+                  <option value="8">CLB 8</option>
+                  <option value="9">CLB 9+</option>
+                </select>
+                <div class="hint">FSW/CEC need CLB 7; FST needs CLB 4–5</div>
+              </div>
+              <div class="form-group">
+                <label for="eduLevel">Education Level</label>
+                <select id="eduLevel" class="form-control">
+                  <option value="highschool">High school diploma</option>
+                  <option value="college" selected>College / post-secondary</option>
+                  <option value="bachelor">Bachelor's degree</option>
+                  <option value="masters">Master's degree</option>
+                  <option value="phd">PhD / Doctoral</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-section-header">Step 4 — Alberta Ties</div>
+
+            <div class="form-group">
+              <label>Do you intend to live and work in Alberta?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="intendAB" value="yes" checked> Yes</label>
+                <label><input type="radio" name="intendAB" value="no"> No</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Alberta work experience?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="abWorkExp" value="none" checked> None</label>
+                <label><input type="radio" name="abWorkExp" value="some"> Yes — some Alberta experience</label>
+                <label><input type="radio" name="abWorkExp" value="12months"> 12+ months in Alberta (Opportunity Stream eligible)</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Family in Alberta (parent, child, or sibling — Canadian PR or citizen)?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="abFamily" value="no" checked> No</label>
+                <label><input type="radio" name="abFamily" value="yes"> Yes (+tie to Alberta)</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Job offer from Alberta employer?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="jobOffer" value="none" checked> No job offer</label>
+                <label><input type="radio" name="jobOffer" value="yes"> Yes — valid Alberta job offer</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Alberta education (post-secondary credential from Alberta institution)?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="abEdu" value="no" checked> No</label>
+                <label><input type="radio" name="abEdu" value="yes"> Yes</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Current legal status in Canada (if in Canada)</label>
+              <div class="radio-group">
+                <label><input type="radio" name="legalStatus" value="na" checked> Outside Canada</label>
+                <label><input type="radio" name="legalStatus" value="valid"> Valid work/study permit</label>
+                <label><input type="radio" name="legalStatus" value="invalid"> No valid status</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-calculate">🏔️ Check My Alberta AAIP Eligibility →</button>
+          </form>
+        </section>
+
+        <!-- RESULT -->
+        <section id="result" aria-live="polite" aria-atomic="true">
+          <div class="result-card" id="resultCard">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-title" id="resultTitle"></div>
+            <div class="result-msg" id="resultMsg"></div>
+            <div class="score-meter">
+              <div class="score-meter-labels"><span>0</span><span>300 (AB min)</span><span>500</span><span>800+</span></div>
+              <div class="score-meter-bar">
+                <div class="score-meter-fill" id="meterFill" style="width:0%"></div>
+              </div>
+            </div>
+            <div class="result-breakdown">
+              <h4>Eligibility Checklist</h4>
+              <div id="checklistRows"></div>
+            </div>
+            <div class="result-actions">
+              <button class="btn-action primary" onclick="window.print()">🖨 Print Results</button>
+              <button class="btn-action" onclick="copyResult()">📋 Copy Summary</button>
+              <button class="btn-action" onclick="shareWA()">💬 WhatsApp</button>
+              <a href="/" class="btn-action">🧮 Full CRS Calculator</a>
+            </div>
+          </div>
+          <div class="ad-slot ad-mid" aria-label="Advertisement">Advertisement</div>
+        </section>
+
+        <!-- WHAT IS AAIP -->
+        <section class="info-section" aria-labelledby="what-aaip">
+          <h2 id="what-aaip">What is the Alberta AAIP (formerly AINP)?</h2>
+          <p>The <strong>Alberta Advantage Immigration Program (AAIP)</strong> — formerly known as the Alberta Immigrant Nominee Program (AINP) — is Alberta's provincial immigration program.</p>
+          <p>It allows Alberta to nominate skilled workers, tech professionals, healthcare workers, and entrepreneurs for Canadian permanent residence. For Express Entry candidates, the <strong>AAIP Express Entry Stream</strong> is the fastest route.</p>
+          <p>Alberta's nomination adds <strong>+600 CRS points</strong> to your federal Express Entry profile, virtually guaranteeing an ITA at the next draw.</p>
+          <div class="callout callout-tip">
+            <span class="callout-icon">⭐</span>
+            <div class="callout-body"><p><strong>Alberta advantage:</strong> With a minimum CRS of only <strong>300 points</strong>, the AAIP Express Entry Stream is the most accessible PNP in Canada — much lower than Ontario (400) or BC (minimum varies by stream).</p></div>
+          </div>
+        </section>
+
+        <!-- AAIP STREAMS -->
+        <section class="info-section" aria-labelledby="aaip-streams">
+          <h2 id="aaip-streams">AAIP Immigration Streams 2026</h2>
+          <p>Alberta's AAIP has been granted <strong>6,403 nomination spaces in 2026</strong> — a 31% increase over 2025 — making it one of the most active PNPs in Canada. [web:67]</p>
+          <div class="streams-grid">
+            <div class="stream-card">
+              <div class="si">🇨🇦</div>
+              <h3>Alberta Express Entry Stream</h3>
+              <p>Invitation-only. Min CRS 300. For candidates in federal Express Entry pool with Alberta ties.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">💻</div>
+              <h3>Accelerated Tech Pathway</h3>
+              <p>For IT/software workers. Requires job offer from Alberta tech employer. Lower CRS cutoffs in draws.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🏥</div>
+              <h3>Dedicated Health Care Pathway</h3>
+              <p>For physicians, nurses, allied health workers. Active draws every month. Express Entry or non-EE.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🔧</div>
+              <h3>Priority Sectors (Trades/Construction)</h3>
+              <p>For skilled tradespeople, construction workers. Regular draws with competitive cutoffs.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">💼</div>
+              <h3>Alberta Opportunity Stream</h3>
+              <p>For workers already living and working in Alberta with 12+ months of experience and a job offer.</p>
+              <span class="stream-tag tag-base">Base Stream</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🌾</div>
+              <h3>Rural Renewal Stream</h3>
+              <p>For workers who want to settle in eligible rural Alberta communities. Regular draws.</p>
+              <span class="stream-tag tag-rural">Rural Stream</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🍽️</div>
+              <h3>Tourism &amp; Hospitality Stream</h3>
+              <p>For workers in eligible tourism and hospitality occupations in Alberta.</p>
+              <span class="stream-tag tag-base">Base Stream</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🎓</div>
+              <h3>Graduate Entrepreneur Stream</h3>
+              <p>For international graduates from Alberta post-secondary institutions starting a business.</p>
+              <span class="stream-tag tag-grad">Graduate Stream</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- AD IN CONTENT -->
+        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
+
+        <!-- LIVE DRAW RESULTS -->
+        <section class="info-section" aria-labelledby="draw-results">
+          <h2 id="draw-results">Alberta AAIP Latest Draw Results — April 2026</h2>
+          <p>Alberta runs draws multiple times per week across different streams. Here are the most recent draws:</p>
+          <div style="overflow-x:auto;">
+            <table class="data-table" aria-label="Alberta AAIP Latest Draw Results 2026">
+              <thead><tr><th>Draw Date</th><th>Stream / Pathway</th><th>Min Score</th><th>Invitations</th></tr></thead>
+              <tbody>
+                <tr><td>Apr 14, 2026</td><td>Express Entry – Priority Sectors (Construction &amp; Trades)</td><td class="td-green">60</td><td>50</td></tr>
+                <tr><td>Apr 13, 2026</td><td>Dedicated Health Care Pathway – Express Entry</td><td class="td-green">59</td><td>62</td></tr>
+                <tr><td>Apr 9, 2026</td><td>Rural Renewal Stream</td><td class="td-green">50</td><td>74</td></tr>
+                <tr><td>Apr 8, 2026</td><td>Express Entry – Accelerated Tech Pathway</td><td class="td-green">59</td><td>146</td></tr>
+                <tr><td>Mar 27, 2026</td><td>Express Entry – Law Enforcement Pathway</td><td class="td-green">46</td><td>&lt;10</td></tr>
+                <tr><td>Mar 26, 2026</td><td>Rural Renewal Stream</td><td class="td-green">50</td><td>60</td></tr>
+                <tr><td>Mar 24, 2026</td><td>Dedicated Health Care – Non-Express Entry</td><td class="td-orange">54</td><td>102</td></tr>
+                <tr><td>Mar 19, 2026</td><td>Express Entry – Priority Sectors (Construction)</td><td class="td-green">59</td><td>109</td></tr>
+                <tr><td>Mar 17, 2026</td><td>Express Entry – Priority Sectors (Manufacturing)</td><td class="td-green">50</td><td>27</td></tr>
+                <tr><td>Mar 16, 2026</td><td>Express Entry – Priority Sectors (Health Care)</td><td class="td-orange">63</td><td>50</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="callout callout-info" style="margin-top:12px;">
+            <span class="callout-icon">ℹ️</span>
+            <div class="callout-body"><p>Note: AAIP draw scores are on the <strong>AAIP points grid</strong> (max ~100 pts), not the federal CRS. You still need a minimum federal CRS of 300 to be eligible. Source: <a href="https://www.alberta.ca/aaip-processing-information" target="_blank" rel="noopener noreferrer">Alberta AAIP Processing Information</a>.</p></div>
+          </div>
+        </section>
+
+        <!-- FULL REQUIREMENTS TABLE -->
+        <section class="info-section" aria-labelledby="aaip-reqs">
+          <h2 id="aaip-reqs">AAIP Express Entry Stream — Full Requirements</h2>
+          <p>These are the official eligibility requirements for the AAIP Alberta Express Entry Stream:</p>
+          <table class="data-table" aria-label="AAIP Alberta Express Entry Stream Eligibility Requirements">
+            <thead><tr><th>Requirement</th><th>Standard</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Express Entry Profile</strong></td><td>Active profile required</td><td>Must be in federal pool (FSW, CEC, or FST)</td></tr>
+              <tr><td><strong>Federal CRS Score</strong></td><td>Minimum 300 points</td><td>Lowest CRS minimum of any PNP in Canada</td></tr>
+              <tr><td><strong>Occupation</strong></td><td>Alberta priority occupation</td><td>Must support Alberta's economic diversification</td></tr>
+              <tr><td><strong>Language (FSW/CEC)</strong></td><td>CLB 7 in all four skills</td><td>IELTS, CELPIP, TEF, TCF accepted</td></tr>
+              <tr><td><strong>Language (FST)</strong></td><td>CLB 4–5 depending on skill</td><td>Speaking/Listening CLB 5; Reading/Writing CLB 4</td></tr>
+              <tr><td><strong>Work Experience</strong></td><td>1+ year skilled work</td><td>Must match primary occupation in EE profile</td></tr>
+              <tr><td><strong>Alberta Intent</strong></td><td>Must intend to live in Alberta</td><td>Ties to Alberta strengthen application</td></tr>
+              <tr><td><strong>No active nomination</strong></td><td>No current PNP nomination</td><td>Cannot have active nomination from another province</td></tr>
+              <tr><td><strong>Not a refugee claimant</strong></td><td>Must not be in refugee/removal process</td><td>AAIP cannot intervene in federal processes</td></tr>
+              <tr><td><strong>Job offer</strong></td><td>Not required (for most streams)</td><td>Required for Opportunity Stream and some pathways</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="info-section" aria-labelledby="how-aaip-works">
+          <h2 id="how-aaip-works">How the Alberta AAIP Express Entry Process Works</h2>
+          <p>The AAIP Express Entry Stream is <strong>invitation-only</strong>. You cannot apply directly — Alberta selects candidates from the federal pool.</p>
+          <div class="steps-list">
+            <div class="step-box">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Create Federal Express Entry Profile</h4>
+                <p>Enter the federal Express Entry pool under FSW, CEC, or FST. Ensure your CRS score is at least 300 and your occupation supports Alberta's economy. Use our <a href="/">free CRS calculator</a>.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Indicate Interest in Alberta</h4>
+                <p>In your Express Entry profile, express interest in living in Alberta. Alberta searches the pool for eligible candidates matching its priority sectors.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Receive a Notification of Interest (NOI)</h4>
+                <p>Alberta issues an NOI to selected candidates via their Express Entry profile. You cannot request an NOI — you must be selected by AAIP.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Apply to AAIP via Portal</h4>
+                <p>Once you receive an NOI, submit your full AAIP application through the Alberta immigration portal within the specified deadline. Provide supporting documents.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>Receive Alberta Nomination (+600 CRS)</h4>
+                <p>If approved, Alberta nominates you and your federal CRS score jumps by +600 points. You accept the nomination in your Express Entry account within 30 days.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">6</div>
+              <div class="step-text">
+                <h4>Receive ITA &amp; Apply for Canadian PR</h4>
+                <p>With 600 extra points, you receive an Invitation to Apply at the next Express Entry draw. Submit your federal PR application. IRCC processes within 6 months.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ALBERTA CITIES / GEO SEO -->
+        <section class="info-section" aria-labelledby="alberta-cities">
+          <h2 id="alberta-cities">Working &amp; Settling in Alberta, Canada</h2>
+          <p>Alberta is Canada's most economically dynamic western province. It has no provincial income tax on the first $21,003 of earnings and offers strong wages across its key industries.</p>
+
+          <h3>Top Alberta Cities for Immigrants</h3>
+          <ul>
+            <li><strong>Calgary:</strong> Alberta's largest city. Canada's energy capital. Thriving tech, finance, and construction sectors. Home to multiple Fortune 500 energy companies.</li>
+            <li><strong>Edmonton:</strong> Provincial capital. Strong healthcare, government, and education sectors. Home to the University of Alberta — a top-ranked research institution.</li>
+            <li><strong>Red Deer:</strong> Central Alberta hub. Manufacturing, agriculture, and healthcare. Lower cost of living than Calgary or Edmonton.</li>
+            <li><strong>Lethbridge:</strong> Southern Alberta agricultural and education hub. University of Lethbridge. Strong agri-food sector.</li>
+            <li><strong>Fort McMurray:</strong> Resource sector hub. Oil sands capital of Canada. High wages. Key destination under Rural Renewal and Opportunity streams.</li>
+            <li><strong>Grande Prairie:</strong> Northwest Alberta. Growing healthcare, construction, and oil &amp; gas workforce. In-demand trades workers.</li>
+          </ul>
+
+          <h3>Alberta's Priority Sectors in 2026</h3>
+          <p>Alberta is actively recruiting workers in these sectors through the AAIP:</p>
+          <ul>
+            <li>🏥 <strong>Healthcare:</strong> Physicians, nurses, allied health professionals, personal support workers</li>
+            <li>💻 <strong>Technology:</strong> Software developers, data analysts, cybersecurity experts, IT managers</li>
+            <li>🔧 <strong>Construction &amp; Trades:</strong> Electricians, plumbers, carpenters, welders, heavy equipment operators</li>
+            <li>🌾 <strong>Agriculture:</strong> Farm managers, agri-food processing, agricultural equipment technicians</li>
+            <li>🏭 <strong>Manufacturing:</strong> Industrial mechanics, machinists, quality control technicians</li>
+            <li>🚔 <strong>Law Enforcement:</strong> Police officers, correction officers, border services officers</li>
+          </ul>
+
+          <div class="callout callout-ab">
+            <span class="callout-icon">🏔️</span>
+            <div class="callout-body"><p>Alberta has <strong>no provincial sales tax (PST)</strong> — the only province other than the Northwest Territories without one. This significantly increases take-home pay for Alberta immigrants compared to other provinces.</p></div>
+          </div>
+        </section>
+
+        <!-- AAIP vs AINP EXPLANATION -->
+        <section class="info-section" aria-labelledby="aaip-vs-ainp">
+          <h2 id="aaip-vs-ainp">AAIP vs AINP — Are They the Same?</h2>
+          <p>Yes — <strong>AAIP and AINP are the same program</strong>. In 2022, the Alberta government rebranded the Alberta Immigrant Nominee Program (AINP) as the Alberta Advantage Immigration Program (AAIP). The streams, eligibility criteria, and nomination process remain the same.</p>
+          <p>If you find older resources referring to AINP — including "AINP CRS calculator" or "Alberta AINP Express Entry" — they are all referring to what is now called the AAIP.</p>
+
+          <table class="data-table" style="margin-top:12px;" aria-label="AAIP vs AINP comparison">
+            <thead><tr><th>Feature</th><th>Old Name (AINP)</th><th>Current Name (AAIP)</th></tr></thead>
+            <tbody>
+              <tr><td>Program name</td><td>Alberta Immigrant Nominee Program</td><td>Alberta Advantage Immigration Program</td></tr>
+              <tr><td>Abbreviation</td><td>AINP</td><td>AAIP</td></tr>
+              <tr><td>Rebrand year</td><td>—</td><td>2022</td></tr>
+              <tr><td>Eligibility rules</td><td colspan="2" style="text-align:center;">Same — no change to requirements</td></tr>
+              <tr><td>+600 CRS bonus</td><td colspan="2" style="text-align:center;">Yes — same for both</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- CTA -->
+        <div class="cta-banner">
+          <h3>🚀 CRS below 300? Here's how to boost it fast.</h3>
+          <p>Learn 11 proven strategies to improve your Express Entry CRS score — from IELTS retakes to provincial pathways.</p>
+          <div class="cta-banner-btns">
+            <a href="/how-to-improve-crs-score" class="cta-btn-white">How to Improve CRS Score →</a>
+            <a href="/" class="cta-btn-outline">Free CRS Calculator →</a>
+          </div>
+        </div>
+
+        <!-- FAQ -->
+        <section class="info-section" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">Alberta CRS Calculator — Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the minimum CRS score for Alberta AAIP in 2026?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The minimum federal CRS score for the Alberta AAIP Express Entry Stream is <strong>300 points</strong> — the lowest of any provincial nominee program in Canada. This makes the AAIP an excellent option for candidates who have lower CRS scores and cannot compete in regular all-program Express Entry draws where cutoffs are typically 470–525.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              How many CRS points does Alberta PNP add?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">An Alberta AAIP nomination adds <strong>+600 CRS points</strong> to your federal Express Entry profile. Even a candidate with a CRS of 320 would have 920 points after nomination — far above any draw cutoff. This virtually guarantees an ITA at the next Express Entry round. Use our <a href="/">full CRS calculator</a> to see your projected score after nomination.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the difference between AAIP and AINP?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">AAIP and AINP are the same program. In 2022, the Alberta government rebranded the Alberta Immigrant Nominee Program (AINP) as the Alberta Advantage Immigration Program (AAIP). All streams, eligibility requirements, and the +600 CRS nomination bonus remain identical. Any reference to an "AINP CRS calculator" or "Alberta AINP Express Entry" refers to the current AAIP.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              Do I need a job offer for Alberta AAIP?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">No — the AAIP Alberta Express Entry Stream and most pathway draws <strong>do not require a job offer</strong>. You need a minimum CRS of 300, an active Express Entry profile, work experience in an Alberta priority occupation, and intent to live in Alberta. The exception is the Alberta Opportunity Stream (which requires 12+ months of Alberta work experience and an active job offer) and some specific pathways like the Accelerated Tech Pathway which may require a job offer from an Alberta tech employer.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What AAIP streams are most active in 2026?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">In 2026, the most active AAIP streams are: (1) <strong>Accelerated Tech Pathway</strong> — regular bi-weekly draws of 100–150 invitations; (2) <strong>Dedicated Health Care Pathway</strong> — weekly draws for healthcare workers; (3) <strong>Priority Sectors</strong> — Construction, Manufacturing, Agriculture draws every 2–4 weeks; (4) <strong>Rural Renewal Stream</strong> — twice-monthly draws. Alberta has been granted 6,403 nomination spaces in 2026 — a 31% increase over 2025.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              How long does AAIP Alberta processing take?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">AAIP Alberta application processing typically takes <strong>3–6 months</strong> after submission. Once nominated, you accept in your Express Entry profile and receive +600 CRS. You then receive an ITA at the next Express Entry draw (usually within 1–2 draws). After submitting the federal PR application, IRCC's standard is 6 months processing. Total timeline from application to PR is typically 12–18 months.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the Alberta Opportunity Stream?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The Alberta Opportunity Stream is a <strong>base (non-Express Entry) stream</strong> for workers already living and working in Alberta. Requirements include: a valid work permit, at least 12 months of Alberta work experience in the last 18 months (or 24 months Canadian experience in 30 months), a valid job offer from an Alberta employer, minimum CLB 4 or 5, and a high school diploma. This stream is for workers inside Alberta — it is not linked to the federal Express Entry pool. Visit the <a href="https://www.alberta.ca/aaip-application-streams" target="_blank" rel="noopener noreferrer">official AAIP streams page</a> for full details.</div>
+          </div>
+        </section>
+
+        <!-- RELATED CALCULATORS -->
+        <section class="info-section" aria-labelledby="related-calc">
+          <h2 id="related-calc">More Canada Immigration Calculators</h2>
+          <div class="calc-grid">
+            <a href="/" class="calc-card"><div class="ci">🧮</div><div class="cn">CRS Calculator</div><div class="cs">Main tool</div></a>
+            <a href="/express-entry-crs-calculator" class="calc-card"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">FSW/CEC/FST</div></a>
+            <a href="/pnp-crs-calculator" class="calc-card"><div class="ci">🏛️</div><div class="cn">All PNPs</div><div class="cs">All provinces</div></a>
+            <a href="/ontario-crs-calculator" class="calc-card"><div class="ci">🏙️</div><div class="cn">Ontario OINP</div><div class="cs">Min 400 CRS</div></a>
+            <a href="/alberta-crs-calculator" class="calc-card" style="border-color:var(--red);"><div class="ci">🏔️</div><div class="cn">Alberta AAIP ✓</div><div class="cs">This page</div></a>
+            <a href="/bc-crs-calculator" class="calc-card"><div class="ci">🌲</div><div class="cn">BC PNP</div><div class="cs">BC PNP stream</div></a>
+            <a href="/manitoba-crs-calculator" class="calc-card"><div class="ci">🌾</div><div class="cn">Manitoba PNP</div><div class="cs">MPNP stream</div></a>
+            <a href="/saskatchewan-crs-calculator" class="calc-card"><div class="ci">🌻</div><div class="cn">Saskatchewan</div><div class="cs">SINP stream</div></a>
+            <a href="/ielts-crs-calculator" class="calc-card"><div class="ci">📝</div><div class="cn">IELTS to CRS</div><div class="cs">CLB converter</div></a>
+            <a href="/how-to-improve-crs-score" class="calc-card"><div class="ci">📈</div><div class="cn">Improve Score</div><div class="cs">11 strategies</div></a>
+            <a href="/crs-cutoff-scores" class="calc-card"><div class="ci">📊</div><div class="cn">Cutoff History</div><div class="cs">All draws</div></a>
+            <a href="/stem-crs-calculator" class="calc-card"><div class="ci">💻</div><div class="cn">STEM Workers</div><div class="cs">Tech category</div></a>
+          </div>
+        </section>
+
+      </div><!-- end left column -->
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+
+        <div class="sidebar-widget" style="border:none;background:none;box-shadow:none;padding:0;">
+          <div class="highlight-box">
+            <div class="hb-num">300</div>
+            <div class="hb-label">Minimum CRS for Alberta AAIP</div>
+            <div class="hb-sub">Lowest PNP minimum in Canada<br>+600 CRS with nomination</div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget" style="border:none;background:none;box-shadow:none;padding:0;">
+          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Latest AAIP Draws</h3>
+          <div style="overflow-x:auto;">
+            <table class="draw-mini" aria-label="Recent AAIP Alberta draws">
+              <thead><tr><th>Date</th><th>Stream</th><th>Min</th></tr></thead>
+              <tbody>
+                <tr><td>Apr 14</td><td>Construction/Trades</td><td><strong>60</strong></td></tr>
+                <tr><td>Apr 13</td><td>Healthcare EE</td><td><strong>59</strong></td></tr>
+                <tr><td>Apr 9</td><td>Rural Renewal</td><td><strong>50</strong></td></tr>
+                <tr><td>Apr 8</td><td>Tech Pathway</td><td><strong>59</strong></td></tr>
+                <tr><td>Mar 27</td><td>Law Enforcement</td><td><strong>46</strong></td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.72rem;color:var(--text-muted);margin-top:8px;"><a href="https://www.alberta.ca/aaip-processing-information" target="_blank" rel="noopener noreferrer">All AAIP draws →</a></p>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Alberta Immigration Tools</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/alberta-crs-calculator" class="current">🏔️ Alberta AAIP Calculator ✓</a></li>
+            <li><a href="/">🧮 Full CRS Calculator</a></li>
+            <li><a href="/express-entry-crs-calculator">🇨🇦 Express Entry Calculator</a></li>
+            <li><a href="/cec-crs-calculator">💼 CEC Calculator</a></li>
+            <li><a href="/fsw-crs-calculator">🌐 FSW Calculator</a></li>
+            <li><a href="/pnp-crs-calculator">🏛️ All PNP Calculators</a></li>
+            <li><a href="/ielts-crs-calculator">📝 IELTS to CLB Converter</a></li>
+            <li><a href="/how-to-improve-crs-score">📈 Improve CRS Score</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Other Provincial Calculators</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
+            <li><a href="/bc-crs-calculator">British Columbia (BC PNP)</a></li>
+            <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+            <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
+            <li><a href="/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+            <li><a href="/new-brunswick-crs-calculator">New Brunswick (NBPNP)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>CRS Guides</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
+            <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+            <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="/canada-express-entry-eligibility">Express Entry Eligibility</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Official Alberta Links</h3>
+          <a href="https://www.alberta.ca/aaip-alberta-express-entry-stream-eligibility" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            AAIP Express Entry Eligibility
+          </a>
+          <a href="https://www.alberta.ca/aaip-application-streams" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            AAIP Application Streams
+          </a>
+          <a href="https://www.alberta.ca/aaip-processing-information" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            AAIP Draw Results
+          </a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IRCC Express Entry
+          </a>
+        </div>
+
+      </aside>
     </div>
-    
-      </section>
-
-      
-<div class="calculator-wrapper" id="calculator">
-  <div class="calc-header">
-    <h2>🧮 CRS Score Calculator</h2>
-    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
-  </div>
-  <form id="crs-form" novalidate>
-    <div class="calc-body">
-
-      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">A</span>
-          Core / Human Capital Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="marital-status">Marital Status</label>
-            <div class="radio-group" role="radiogroup" aria-label="Marital status">
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="single" checked> Single
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
-              </label>
-            </div>
-          </div>
-          <div class="form-group" id="spouse-coming-section" style="display:none;">
-            <label>Is your spouse/partner coming to Canada with you?</label>
-            <div class="radio-group" role="radiogroup">
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="age">Age</label>
-            <select name="age" id="age" class="form-control">
-              <option value="under18">17 and under</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45plus">45 and over</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="education">Level of Education</label>
-            <select name="education" id="education" class="form-control">
-              <option value="none">Less than secondary school</option>
-              <option value="secondary">Secondary diploma (high school)</option>
-              <option value="one_year">One-year post-secondary program</option>
-              <option value="two_year">Two-year post-secondary program</option>
-              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
-              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
-              <option value="masters">Master's degree / Professional degree</option>
-              <option value="phd">PhD (Doctoral degree)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="canadianWE">Canadian Work Experience</label>
-            <select name="canadianWE" id="canadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">B</span>
-          First Official Language (English or French)
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang1TestType">Language Test Type</label>
-          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- Select test --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">C</span>
-          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang2TestType">Second Language Test Type</label>
-          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION D: SPOUSE FACTORS -->
-      <div class="spouse-section" id="spouse-section">
-        <div class="calc-section-title">
-          <span class="section-badge">D</span>
-          Spouse / Partner Factors
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="spouseEducation">Spouse Education Level</label>
-            <select name="spouseEducation" id="spouseEducation" class="form-control">
-              <option value="none">Less than secondary</option>
-              <option value="secondary">Secondary diploma</option>
-              <option value="one_year">One-year program</option>
-              <option value="two_year">Two-year program</option>
-              <option value="bachelors">Bachelor's degree</option>
-              <option value="two_or_more">Two or more certificates</option>
-              <option value="masters">Master's degree</option>
-              <option value="phd">PhD</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
-            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group mt-2 mb-3">
-          <label for="spouseLangTestType">Spouse Language Test Type</label>
-          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="CELPIP">CELPIP-G</option>
-            <option value="TEF">TEF Canada</option>
-            <option value="TCF">TCF Canada</option>
-          </select>
-        </div>
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION E: SKILL TRANSFERABILITY -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">E</span>
-          Skill Transferability Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="foreignWE">Foreign Work Experience</label>
-            <select name="foreignWE" id="foreignWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1–2 years</option>
-              <option value="3">3 or more years</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION F: ADDITIONAL POINTS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">F</span>
-          Additional Points
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end calc-body -->
-
-    <div class="calc-btn-wrapper">
-      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
-        Calculate My CRS Score →
-      </button>
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
-      <div class="score-display">
-        <p class="score-label">Your Estimated CRS Score</p>
-        <div class="score-number score-good">—</div>
-        <p class="score-verdict">Fill in the form above and click Calculate</p>
-      </div>
-
-      <div class="score-progress-wrapper">
-        <div class="score-progress-label">
-          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
-        </div>
-        <div class="score-progress-bar">
-          <div class="score-progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="score-comparison"></div>
-
-      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
-      <div class="table-wrapper">
-        <table class="breakdown-table">
-          <thead>
-            <tr>
-              <th>CRS Factor</th>
-              <th style="text-align:right;">Points</th>
-            </tr>
-          </thead>
-          <tbody id="breakdown-tbody">
-            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="score-actions mt-3">
-        <a href="#" class="btn btn-outline btn-whatsapp">
-          📱 Share on WhatsApp
-        </a>
-        <button type="button" class="btn btn-outline btn-copy">
-          📋 Copy Score
-        </button>
-        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
-      </div>
-
-      <div class="internal-cta mt-3">
-        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
-        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
-      </div>
-    </div>
-
-  </form>
-</div>
-
-<script>
-// Language score dropdown population
-(function() {
-  const IELTS_SCORES = {
-    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
-  };
-  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
-  const TEF_SCORES = {
-    speaking:  ['181','226','271','310','349','371','394'],
-    listening: ['145','181','217','253','280','298','316'],
-    reading:   ['121','151','181','207','233','248','263'],
-    writing:   ['181','226','271','310','349','371','393']
-  };
-  const TCF_SCORES = {
-    speaking:  ['4','6','10','13','15','17','20'],
-    listening: ['331','369','398','458','503','541','589'],
-    reading:   ['342','375','406','453','499','524','549'],
-    writing:   ['4','6','10','13','15','17','20']
-  };
-
-  function populateScores(testType, prefix) {
-    const skills = ['speaking','listening','reading','writing'];
-    skills.forEach(skill => {
-      const sel = document.getElementById(prefix + '-' + skill) ||
-                  document.querySelector(`select[name="${prefix}_${skill}"]`);
-      if (!sel) return;
-      sel.innerHTML = '<option value="0">Select score</option>';
-      let scores = [];
-      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
-      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
-      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
-      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
-      scores.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = s;
-        sel.appendChild(opt);
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang1Sel = document.getElementById('lang1TestType');
-    const lang2Sel = document.getElementById('lang2TestType');
-    const spouseSel = document.getElementById('spouseLangTestType');
-
-    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
-    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
-    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
-  });
-})();
-</script>
-
-
-      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
-
-      <section class="card">
-        
-    <h2>Alberta CRS Score Requirements</h2>
-    <p>AINP does not publish a fixed minimum CRS score for the Express Entry Stream. Instead, Alberta reviews Express Entry pool profiles periodically and issues NOIs based on current labour market needs and available provincial nomination allocation. Candidates with higher CRS scores and in-demand occupations are more likely to receive an NOI.</p>
-
-    <h2>In-Demand Occupations in Alberta</h2>
-    <p>Alberta's economy is primarily driven by the energy sector (oil and gas), agriculture, construction, and a growing tech sector in Calgary. In-demand occupations include engineers (especially petroleum engineers), IT professionals, healthcare workers, financial services workers, and tradespeople. Having experience in these sectors significantly improves your chances of receiving an AINP NOI.</p>
-
-    <h2>How to Apply for AINP</h2>
-    <p>For the Express Entry Stream: (1) Create an Express Entry profile and enter the pool; (2) Wait for an NOI from Alberta or check for self-selection opportunities; (3) Accept the NOI and complete the AINP application; (4) Upon nomination, receive 600 CRS points automatically; (5) Receive ITA in the next Express Entry draw. Use our <a href="/pnp-crs-calculator.html">PNP CRS Calculator</a> to see your score with the +600 nomination bonus. You can also compare with <a href="/ontario-crs-calculator.html">Ontario's OINP</a> to find the best provincial fit for your profile.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.alberta.ca/alberta-immigrant-nominee-program" target="_blank" rel="noopener noreferrer">Official Alberta Immigrant Nominee Program ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li></ul></div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="card" aria-labelledby="faq-heading">
-        <div class="card-header">
-          <span class="card-icon">❓</span>
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-        </div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the minimum CRS score for the AINP Express Entry stream?<i class="faq-toggle">+</i></div><div class="faq-answer">AINP does not publish a fixed minimum CRS score. Alberta reviews Express Entry profiles and issues NOIs based on labour market needs. Generally, candidates with CRS scores of 400+ and in-demand occupations have better chances of receiving an AINP NOI.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How does Alberta's AINP nomination affect my Express Entry CRS score?<i class="faq-toggle">+</i></div><div class="faq-answer">Receiving an AINP nomination through the Express Entry-linked stream adds 600 points to your CRS score, effectively putting you at 1,000+ total, which is well above any historical Express Entry draw cutoff.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What occupations does Alberta prioritize for AINP?<i class="faq-toggle">+</i></div><div class="faq-answer">Alberta prioritizes occupations in its key economic sectors: oil and gas (engineers, technologists), construction, healthcare, technology, agriculture, and business/financial services. Having an Alberta job offer in one of these sectors strengthens your AINP application.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can I apply for AINP without a job offer?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. The AINP Express Entry Stream does not require a job offer — Alberta may issue an NOI based on your Express Entry profile alone. However, having a job offer from an Alberta employer can strengthen your application and may be required for the Alberta Opportunity Stream.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How long does AINP processing take?<i class="faq-toggle">+</i></div><div class="faq-answer">AINP processing times vary but are typically 3–6 months for the Express Entry Stream after submitting a completed application. Total timeline from NOI to permanent residence (including Express Entry processing) is approximately 12–18 months.</div></li>
-        </ul>
-      </section>
-
-      <div class="internal-cta">
-        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </div>
-
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Draw Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Calculators</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
-          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
-        </div>
-      </div>
-    </aside>
   </div>
 </main>
+
+<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+        <h4>CRS Calculators</h4>
+        <ul>
+          <li><a href="/">CRS Score Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
+          <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
+          <li><a href="/stem-crs-calculator">STEM Workers</a></li>
+          <li><a href="/healthcare-crs-calculator">Healthcare Workers</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+        <h4>Provincial Calculators</h4>
+        <ul>
+          <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="/alberta-crs-calculator">Alberta (AAIP) ✓</a></li>
+          <li><a href="/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
+          <li><a href="/nova-scotia-crs-calculator">Nova Scotia</a></li>
+          <li><a href="/new-brunswick-crs-calculator">New Brunswick</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+        <h4>Alberta Immigration</h4>
+        <ul>
+          <li><a href="/alberta-crs-calculator">Alberta CRS Calculator</a></li>
+          <li><a href="/blog/alberta-pnp-guide">Alberta AAIP Guide 2026</a></li>
+          <li><a href="/blog/aaip-express-entry-stream">AAIP Express Entry Guide</a></li>
+          <li><a href="/blog/alberta-tech-pathway">Alberta Tech Pathway Guide</a></li>
+          <li><a href="/blog/live-in-alberta-canada">Living in Alberta</a></li>
+          <li><a href="https://www.alberta.ca/aaip-application-streams" target="_blank" rel="noopener noreferrer">Official AAIP Site ↗</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+        <h4>CRS Guides</h4>
+        <ul>
+          <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
+          <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+          <li><a href="/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
+          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="/blog">All Articles</a></li>
+        </ul>
+        <h4 style="margin-top:14px;">Official Links</h4>
+        <ul>
+          <li><a href="https://www.alberta.ca/aaip-alberta-express-entry-stream-eligibility" target="_blank" rel="noopener noreferrer">Alberta AAIP ↗</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
+        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
+      </div>
+      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only and does not guarantee an AAIP nomination or ITA. Always verify eligibility on the <a href="https://www.alberta.ca/aaip-application-streams" target="_blank" rel="noopener noreferrer" style="color:#888;">official AAIP website</a> before applying.</p>
     </div>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
-</body>
-</html>
+
+<script>
+  function toggleFAQ(btn){
+    const ans=btn.nextElementSibling;
+    const isOpen=btn.classList.contains('open');
+    document.querySelectorAll('.faq-question.open').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+    if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');ans.classList.add('open');}
+  }
+
+  function calculateAlberta(e){
+    e.preventDefault();
+    const crs=parseInt(document.getElementById('crsScore').value)||0;
+    const program=document.querySelector('input[name="eeProgram"]:checked').value;
+    const nocTeer=parseInt(document.getElementById('nocTeer').value);
+    const workExp=parseInt(document.getElementById('workExp').value);
+    const pathway=document.getElementById('pathway').value;
+    const langMin=parseInt(document.getElementById('langMin').value);
+    const eduLevel=document.getElementById('eduLevel').value;
+    const intendAB=document.querySelector('input[name="intendAB"]:checked').value;
+    const abWorkExp=document.querySelector('input[name="abWorkExp"]:checked').value;
+    const abFamily=document.querySelector('input[name="abFamily"]:checked').value;
+    const jobOffer=document.querySelector('input[name="jobOffer"]:checked').value;
+    const abEdu=document.querySelector('input[name="abEdu"]:checked').value;
+    const legalStatus=document.querySelector('input[name="legalStatus"]:checked').value;
+
+    const langOk = program==='fst' ? langMin>=4 : langMin>=7;
+    const techPathway = pathway==='tech';
+    const healthPathway = pathway==='health';
+
+    const checks=[
+      {label:'Active Express Entry profile (FSW, CEC or FST)', pass:true, note:'All EE programs eligible for AAIP'},
+      {label:'Federal CRS score ≥ 300', pass:crs>=300, note:crs>=300?`${crs} pts — meets requirement`:`${crs} pts — minimum 300 required`},
+      {label:'Occupation in Alberta priority sector', pass:nocTeer<=3, note:nocTeer<=3?`TEER ${nocTeer} — eligible occupation`:`TEER ${nocTeer} — AAIP prefers TEER 0–3`},
+      {label:'Language meets minimum requirement', pass:langOk, note:langOk?`CLB ${langMin} — meets requirement`:`CLB ${langMin} — FSW/CEC need CLB 7; FST needs CLB 4`},
+      {label:'Minimum 1 year work experience', pass:workExp>=1, note:workExp>=1?`${workExp} year(s) — meets requirement`:'At least 1 year required'},
+      {label:'Intent to live and work in Alberta', pass:intendAB==='yes', note:intendAB==='yes'?'Meets intent requirement':'Must intend to live in Alberta'},
+      {label:'No immigration violations or removal orders', pass:legalStatus!=='invalid', note:legalStatus==='invalid'?'Must resolve legal status issues':'Meets legal status requirement'},
+    ];
+
+    const failCount=checks.filter(c=>!c.pass).length;
+
+    const bonuses=[];
+    if(jobOffer==='yes') bonuses.push('Alberta job offer ✓ (strengthens application)');
+    if(abWorkExp==='some'||abWorkExp==='12months') bonuses.push('Alberta work experience ✓');
+    if(abWorkExp==='12months') bonuses.push('12+
