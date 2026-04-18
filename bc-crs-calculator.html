@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <meta name="geo.region" content="CA">
+  <meta name="geo.placename" content="Canada">
+  <meta name="language" content="English">
+  <title>BC CRS Calculator – British Columbia PNP Express Entry Points Tool</title>
+  <meta name="description" content="Calculate your CRS score for British Columbia's Provincial Nominee Program (BC PNP). Free BC CRS calculator for Express Entry applicants.">
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/bc-crs-calculator.html">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="BC CRS Calculator – British Columbia PNP Express Entry Points Tool">
+  <meta property="og:description" content="Calculate your CRS score for British Columbia's Provincial Nominee Program (BC PNP). Free BC CRS calculator for Express Entry applicants.">
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/bc-crs-calculator.html">
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <meta property="og:site_name" content="CRS Score Calculator">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="BC CRS Calculator – British Columbia PNP Express Entry Points Tool">
+  <meta name="twitter:description" content="Calculate your CRS score for British Columbia's Provincial Nominee Program (BC PNP). Free BC CRS calculator for Express Entry applicants.">
+  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <!-- Favicon -->
+  <link rel="icon" href="/images/favicon.ico">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="/css/style.css">
+  <!-- Schema -->
+  <script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"British Columbia CRS Calculator – BC PNP Express Entry Stream","item":"https://crsscorecalculator.vercel.app/bc-crs-calculator.html"}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does BC PNP require a job offer?","acceptedAnswer":{"@type":"Answer","text":"Most BC PNP streams require a valid BC employer job offer in a qualifying NOC occupation. However, the requirements vary by stream — some streams may have exceptions for candidates in specific sectors or circumstances."}},{"@type":"Question","name":"What is the minimum score for BC PNP?","acceptedAnswer":{"@type":"Answer","text":"BC PNP uses its own scoring system separate from CRS. Minimum BC PNP scores vary by stream and change with each draw. Tech streams may have lower thresholds. Check the BC PNP website for current minimum scores by stream."}},{"@type":"Question","name":"Can international students apply for BC PNP?","acceptedAnswer":{"@type":"Answer","text":"Yes. The BC PNP International Graduate category targets recent graduates from eligible Canadian post-secondary institutions who have a BC job offer. This is an excellent pathway for international students who have studied in BC."}},{"@type":"Question","name":"How long does BC PNP processing take?","acceptedAnswer":{"@type":"Answer","text":"After receiving an invitation and submitting a complete application, BC PNP typically processes applications within 2–3 months. Once nominated, receiving an ITA through Express Entry can happen in the next draw, and IRCC PR processing takes approximately 6–12 months."}},{"@type":"Question","name":"Is BC a good province for tech workers to immigrate to?","acceptedAnswer":{"@type":"Answer","text":"Yes. British Columbia, particularly the Greater Vancouver and Victoria areas, is one of the top destinations for tech workers globally. The BC PNP tech streams are designed to fast-track tech professionals, and Vancouver's tech ecosystem offers strong career opportunities."}}]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebApplication","name":"BC CRS Calculator – British Columbia PNP Express Entry Points Tool","url":"https://crsscorecalculator.vercel.app/bc-crs-calculator.html","description":"Calculate your CRS score for British Columbia's Provincial Nominee Program (BC PNP). Free BC CRS calculator for Express Entry applicants.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
+</script>
+</head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
+<header class="site-header">
+  <nav class="nav-container" role="navigation" aria-label="Main navigation">
+    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
+      <span class="logo-icon">🍁</span>
+      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="main-nav" role="menubar">
+      <li class="nav-item" role="none">
+        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
+        <ul class="dropdown" role="menu">
+          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
+          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
+          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
+          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
+          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
+          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
+          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
+          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none">
+        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
+        <ul class="dropdown" role="menu">
+          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
+          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
+          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
+          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
+          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
+        </ul>
+      </li>
+      <li class="nav-item" role="none">
+        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
+        <ul class="dropdown" role="menu">
+          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
+          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
+          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
+          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
+          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
+          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
+        </ul>
+      </li>
+      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
+    </ul>
+    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
+  </nav>
+</header>
+
+<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+  <div class="container">
+    <ol class="breadcrumb">
+      <li><a href="/index.html">Home</a></li>
+      <li class="sep" aria-hidden="true">›</li>
+      <li class="current" aria-current="page">British Columbia CRS Calculator – BC PNP Express Entry Stream</li>
+    </ol>
+  </div>
+</nav>
+
+<div class="page-header">
+  <div class="container">
+    <h1>British Columbia CRS Calculator – BC PNP Express Entry Stream</h1>
+    <p>Calculate your CRS score for British Columbia's Provincial Nominee Program (BC PNP). Free BC CRS calculator for Express Entry applicants.</p>
+    <div class="meta-info">
+      <span>Updated: April 2026</span>
+      <span>Free Tool</span>
+      <span>No Registration</span>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
+</div>
+
+<main id="main-content" class="container">
+  <div class="page-layout">
+    <div class="main-content">
+      <section class="card">
+        
+    <h2>British Columbia Provincial Nominee Program (BC PNP)</h2>
+    <p>The British Columbia Provincial Nominee Program (BC PNP) is one of Canada's most popular and competitive provincial immigration programs. British Columbia, known for its stunning natural beauty, mild climate, and thriving technology sector, attracts tens of thousands of skilled immigrants annually. The BC PNP has multiple streams for skilled workers, international graduates, and entrepreneurs.</p>
+
+    <h2>BC PNP Express Entry BC (EEBC) Streams</h2>
+    <p>The Express Entry BC (EEBC) streams are BC PNP's Express Entry-linked immigration pathways:</p>
+    <ul>
+      <li><strong>Skilled Worker in BC:</strong> For candidates with a job offer from a BC employer in a NOC TEER 0, 1, 2, or 3 occupation and 2+ years of relevant work experience</li>
+      <li><strong>Healthcare Professional:</strong> For internationally trained healthcare workers with a BC job offer</li>
+      <li><strong>International Graduate:</strong> For recent graduates from eligible Canadian post-secondary institutions with a BC job offer</li>
+      <li><strong>Entry Level and Semi-Skilled Worker:</strong> For workers in tourism, food services, long-haul trucking, or Northeast BC industries</li>
+    </ul>
+
+    <h2>BC Tech Pilot Program</h2>
+    <p>British Columbia actively recruits technology workers through targeted streams within BC PNP. Tech occupations in BC (particularly Vancouver and Victoria) are in extremely high demand. The province regularly conducts tech draws with lower score thresholds to attract IT professionals.</p>
+
+    <div class="stat-grid">
+      <div class="stat-card"><div class="stat-value">600</div><div class="stat-label">CRS Points After BC PNP Nomination</div></div>
+      <div class="stat-card"><div class="stat-value">#3</div><div class="stat-label">BC Population Ranking in Canada</div></div>
+      <div class="stat-card"><div class="stat-value">100+</div><div class="stat-label">BC PNP Draws Per Year</div></div>
+      <div class="stat-card"><div class="stat-value">TEER 0-3</div><div class="stat-label">Eligible NOC Categories</div></div>
+    </div>
+    
+      </section>
+
+      
+<div class="calculator-wrapper" id="calculator">
+  <div class="calc-header">
+    <h2>🧮 CRS Score Calculator</h2>
+    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
+  </div>
+  <form id="crs-form" novalidate>
+    <div class="calc-body">
+
+      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
+      <div class="calc-section">
+        <div class="calc-section-title">
+          <span class="section-badge">A</span>
+          Core / Human Capital Factors
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="marital-status">Marital Status</label>
+            <div class="radio-group" role="radiogroup" aria-label="Marital status">
+              <label class="radio-option">
+                <input type="radio" name="maritalStatus" value="single" checked> Single
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
+              </label>
+            </div>
+          </div>
+          <div class="form-group" id="spouse-coming-section" style="display:none;">
+            <label>Is your spouse/partner coming to Canada with you?</label>
+            <div class="radio-group" role="radiogroup">
+              <label class="radio-option">
+                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="spouseComingToCanada" value="no" checked> No
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-grid mt-2">
+          <div class="form-group">
+            <label for="age">Age</label>
+            <select name="age" id="age" class="form-control">
+              <option value="under18">17 and under</option>
+              <option value="18">18</option>
+              <option value="19">19</option>
+              <option value="20">20</option>
+              <option value="21">21</option>
+              <option value="22">22</option>
+              <option value="23">23</option>
+              <option value="24">24</option>
+              <option value="25">25</option>
+              <option value="26">26</option>
+              <option value="27">27</option>
+              <option value="28">28</option>
+              <option value="29">29</option>
+              <option value="30" selected>30</option>
+              <option value="31">31</option>
+              <option value="32">32</option>
+              <option value="33">33</option>
+              <option value="34">34</option>
+              <option value="35">35</option>
+              <option value="36">36</option>
+              <option value="37">37</option>
+              <option value="38">38</option>
+              <option value="39">39</option>
+              <option value="40">40</option>
+              <option value="41">41</option>
+              <option value="42">42</option>
+              <option value="43">43</option>
+              <option value="44">44</option>
+              <option value="45plus">45 and over</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="education">Level of Education</label>
+            <select name="education" id="education" class="form-control">
+              <option value="none">Less than secondary school</option>
+              <option value="secondary">Secondary diploma (high school)</option>
+              <option value="one_year">One-year post-secondary program</option>
+              <option value="two_year">Two-year post-secondary program</option>
+              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
+              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
+              <option value="masters">Master's degree / Professional degree</option>
+              <option value="phd">PhD (Doctoral degree)</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-grid mt-2">
+          <div class="form-group">
+            <label for="canadianWE">Canadian Work Experience</label>
+            <select name="canadianWE" id="canadianWE" class="form-control">
+              <option value="0">None</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years or more</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
+      <div class="calc-section">
+        <div class="calc-section-title">
+          <span class="section-badge">B</span>
+          First Official Language (English or French)
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="lang1TestType">Language Test Type</label>
+          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
+            <option value="none">-- Select test --</option>
+            <option value="IELTS">IELTS (English)</option>
+            <option value="CELPIP">CELPIP-G (English)</option>
+            <option value="TEF">TEF Canada (French)</option>
+            <option value="TCF">TCF Canada (French)</option>
+          </select>
+        </div>
+
+        <div class="lang-grid">
+          <div class="lang-group">
+            <span class="lang-label">🗣️ Speaking</span>
+            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">👂 Listening</span>
+            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">📖 Reading</span>
+            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">✍️ Writing</span>
+            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
+      <div class="calc-section">
+        <div class="calc-section-title">
+          <span class="section-badge">C</span>
+          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
+        </div>
+
+        <div class="form-group mb-3">
+          <label for="lang2TestType">Second Language Test Type</label>
+          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
+            <option value="none">-- None / Not taken --</option>
+            <option value="IELTS">IELTS (English)</option>
+            <option value="CELPIP">CELPIP-G (English)</option>
+            <option value="TEF">TEF Canada (French)</option>
+            <option value="TCF">TCF Canada (French)</option>
+          </select>
+        </div>
+
+        <div class="lang-grid">
+          <div class="lang-group">
+            <span class="lang-label">🗣️ Speaking</span>
+            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">👂 Listening</span>
+            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">📖 Reading</span>
+            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">✍️ Writing</span>
+            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION D: SPOUSE FACTORS -->
+      <div class="spouse-section" id="spouse-section">
+        <div class="calc-section-title">
+          <span class="section-badge">D</span>
+          Spouse / Partner Factors
+        </div>
+
+        <div class="form-grid mt-2">
+          <div class="form-group">
+            <label for="spouseEducation">Spouse Education Level</label>
+            <select name="spouseEducation" id="spouseEducation" class="form-control">
+              <option value="none">Less than secondary</option>
+              <option value="secondary">Secondary diploma</option>
+              <option value="one_year">One-year program</option>
+              <option value="two_year">Two-year program</option>
+              <option value="bachelors">Bachelor's degree</option>
+              <option value="two_or_more">Two or more certificates</option>
+              <option value="masters">Master's degree</option>
+              <option value="phd">PhD</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
+            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
+              <option value="0">None</option>
+              <option value="1">1 year</option>
+              <option value="2">2 years</option>
+              <option value="3">3 years</option>
+              <option value="4">4 years</option>
+              <option value="5">5 years or more</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group mt-2 mb-3">
+          <label for="spouseLangTestType">Spouse Language Test Type</label>
+          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
+            <option value="none">-- None / Not taken --</option>
+            <option value="IELTS">IELTS</option>
+            <option value="CELPIP">CELPIP-G</option>
+            <option value="TEF">TEF Canada</option>
+            <option value="TCF">TCF Canada</option>
+          </select>
+        </div>
+        <div class="lang-grid">
+          <div class="lang-group">
+            <span class="lang-label">🗣️ Speaking</span>
+            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">👂 Listening</span>
+            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">📖 Reading</span>
+            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+          <div class="lang-group">
+            <span class="lang-label">✍️ Writing</span>
+            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
+              <option value="0">Select score</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION E: SKILL TRANSFERABILITY -->
+      <div class="calc-section">
+        <div class="calc-section-title">
+          <span class="section-badge">E</span>
+          Skill Transferability Factors
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="foreignWE">Foreign Work Experience</label>
+            <select name="foreignWE" id="foreignWE" class="form-control">
+              <option value="0">None</option>
+              <option value="1">1–2 years</option>
+              <option value="3">3 or more years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="tradeCertificate" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="tradeCertificate" value="no" checked> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- SECTION F: ADDITIONAL POINTS -->
+      <div class="calc-section">
+        <div class="calc-section-title">
+          <span class="section-badge">F</span>
+          Additional Points
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="pnp" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="pnp" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="jobOfferNOC00" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="jobOfferOther" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="jobOfferOther" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="sibling" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="sibling" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="canadianEdu1to2" value="no" checked> No
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
+            <div class="radio-group">
+              <label class="radio-option">
+                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
+              </label>
+              <label class="radio-option">
+                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
+              </label>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- end calc-body -->
+
+    <div class="calc-btn-wrapper">
+      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
+        Calculate My CRS Score →
+      </button>
+    </div>
+
+    <!-- RESULTS SECTION -->
+    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
+      <div class="score-display">
+        <p class="score-label">Your Estimated CRS Score</p>
+        <div class="score-number score-good">—</div>
+        <p class="score-verdict">Fill in the form above and click Calculate</p>
+      </div>
+
+      <div class="score-progress-wrapper">
+        <div class="score-progress-label">
+          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
+        </div>
+        <div class="score-progress-bar">
+          <div class="score-progress-fill" style="width:0%"></div>
+        </div>
+      </div>
+
+      <div class="score-comparison"></div>
+
+      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
+      <div class="table-wrapper">
+        <table class="breakdown-table">
+          <thead>
+            <tr>
+              <th>CRS Factor</th>
+              <th style="text-align:right;">Points</th>
+            </tr>
+          </thead>
+          <tbody id="breakdown-tbody">
+            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
+          </tbody>
+        </table>
+      </div>
+
+      <div class="score-actions mt-3">
+        <a href="#" class="btn btn-outline btn-whatsapp">
+          📱 Share on WhatsApp
+        </a>
+        <button type="button" class="btn btn-outline btn-copy">
+          📋 Copy Score
+        </button>
+        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
+          🖨️ Print / Save PDF
+        </button>
+      </div>
+
+      <div class="internal-cta mt-3">
+        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
+        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
+      </div>
+    </div>
+
+  </form>
+</div>
+
+<script>
+// Language score dropdown population
+(function() {
+  const IELTS_SCORES = {
+    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
+    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
+    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
+    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
+  };
+  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
+  const TEF_SCORES = {
+    speaking:  ['181','226','271','310','349','371','394'],
+    listening: ['145','181','217','253','280','298','316'],
+    reading:   ['121','151','181','207','233','248','263'],
+    writing:   ['181','226','271','310','349','371','393']
+  };
+  const TCF_SCORES = {
+    speaking:  ['4','6','10','13','15','17','20'],
+    listening: ['331','369','398','458','503','541','589'],
+    reading:   ['342','375','406','453','499','524','549'],
+    writing:   ['4','6','10','13','15','17','20']
+  };
+
+  function populateScores(testType, prefix) {
+    const skills = ['speaking','listening','reading','writing'];
+    skills.forEach(skill => {
+      const sel = document.getElementById(prefix + '-' + skill) ||
+                  document.querySelector(`select[name="${prefix}_${skill}"]`);
+      if (!sel) return;
+      sel.innerHTML = '<option value="0">Select score</option>';
+      let scores = [];
+      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
+      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
+      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
+      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
+      scores.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = s;
+        sel.appendChild(opt);
+      });
+    });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const lang1Sel = document.getElementById('lang1TestType');
+    const lang2Sel = document.getElementById('lang2TestType');
+    const spouseSel = document.getElementById('spouseLangTestType');
+
+    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
+    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
+    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
+  });
+})();
+</script>
+
+
+      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
+
+      <section class="card">
+        
+    <h2>BC PNP Registration Score System</h2>
+    <p>BC PNP uses its own BC PNP score system (separate from CRS) to rank candidates and issue invitations to apply. The BC PNP score is based on factors including job offer details, regional district, NOC code, and your Express Entry CRS score. Candidates with high BC PNP scores in their target category are invited to apply for provincial nomination.</p>
+
+    <h2>Vancouver and the Tech Corridor</h2>
+    <p>Vancouver consistently ranks among the world's most livable cities and has one of North America's fastest-growing technology ecosystems. The city is home to major tech companies including Amazon, Microsoft, Apple, EA Games, and hundreds of startups. For tech workers, BC PNP's tech pathway can be one of the fastest routes to Canadian permanent residence.</p>
+
+    <h2>How to Apply for BC PNP</h2>
+    <p>For the EEBC streams: (1) Ensure you have an active Express Entry profile; (2) Register on the BC PNP Online portal; (3) Receive an invitation to apply from BC based on your BC PNP score; (4) Complete the BC PNP application within the deadline; (5) Receive the nomination and +600 CRS points. Compare options with <a href="/alberta-crs-calculator.html">Alberta AINP</a> or our <a href="/pnp-crs-calculator.html">main PNP Calculator</a>.</p>
+    
+        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.welcomebc.ca/immigrate-to-b-c/bc-provincial-nominee-program" target="_blank" rel="noopener noreferrer">Official BC PNP Website ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li></ul></div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="card" aria-labelledby="faq-heading">
+        <div class="card-header">
+          <span class="card-icon">❓</span>
+          <h2 id="faq-heading">Frequently Asked Questions</h2>
+        </div>
+        <ul class="faq-list">
+          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">Does BC PNP require a job offer?<i class="faq-toggle">+</i></div><div class="faq-answer">Most BC PNP streams require a valid BC employer job offer in a qualifying NOC occupation. However, the requirements vary by stream — some streams may have exceptions for candidates in specific sectors or circumstances.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the minimum score for BC PNP?<i class="faq-toggle">+</i></div><div class="faq-answer">BC PNP uses its own scoring system separate from CRS. Minimum BC PNP scores vary by stream and change with each draw. Tech streams may have lower thresholds. Check the BC PNP website for current minimum scores by stream.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can international students apply for BC PNP?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. The BC PNP International Graduate category targets recent graduates from eligible Canadian post-secondary institutions who have a BC job offer. This is an excellent pathway for international students who have studied in BC.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How long does BC PNP processing take?<i class="faq-toggle">+</i></div><div class="faq-answer">After receiving an invitation and submitting a complete application, BC PNP typically processes applications within 2–3 months. Once nominated, receiving an ITA through Express Entry can happen in the next draw, and IRCC PR processing takes approximately 6–12 months.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Is BC a good province for tech workers to immigrate to?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. British Columbia, particularly the Greater Vancouver and Victoria areas, is one of the top destinations for tech workers globally. The BC PNP tech streams are designed to fast-track tech professionals, and Vancouver's tech ecosystem offers strong career opportunities.</div></li>
+        </ul>
+      </section>
+
+      <div class="internal-cta">
+        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
+      </div>
+      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
+    </div>
+
+    <aside class="sidebar">
+      <div class="sidebar-widget cutoff-widget">
+        <h3>🎯 Latest Draw Cutoffs</h3>
+        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
+        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
+        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
+        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
+      </div>
+      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
+      <div class="sidebar-widget">
+        <h3>🔗 Related Calculators</h3>
+        <div class="related-tools">
+          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
+          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
+          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
+          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h4>Calculators</h4>
+        <ul class="footer-links">
+          <li><a href="/index.html">CRS Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
+          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
+          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
+          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
+          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
+          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
+          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
+          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Provinces</h4>
+        <ul class="footer-links">
+          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
+          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
+          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
+          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
+          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Guides</h4>
+        <ul class="footer-links">
+          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
+          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
+          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
+          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
+          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
+          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
+          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Blog &amp; Resources</h4>
+        <ul class="footer-links">
+          <li><a href="/blog/index.html">Blog Home</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
+          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-bottom-inner">
+      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
+      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js" defer></script>
+<script src="/js/calculator.js" defer></script>
+</body>
+</html>
