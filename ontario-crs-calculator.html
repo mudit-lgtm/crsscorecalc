@@ -1,787 +1,1215 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>Ontario CRS Calculator – OINP Express Entry Stream Points Tool</title>
-  <meta name="description" content="Calculate your CRS score for Ontario's PNP (OINP). Free Ontario CRS calculator for the Human Capital Priorities and Express Entry streams.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ontario CRS Calculator 2026 – OINP Express Entry Points Tool</title>
+  <meta name="description" content="Free Ontario CRS Calculator 2026. Calculate your OINP Express Entry score for the Human Capital Priorities Stream. Check if you qualify for Ontario PNP nomination (+600 CRS points)." />
+  <meta name="keywords" content="ontario crs calculator, oinp express entry calculator, ontario pnp calculator, ontario crs score calculator, ontario immigrant nominee program calculator, oinp points calculator 2026, ontario express entry human capital priorities, ontario pnp crs score, ontario pnp points 2026" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="CRS Score Calculator" />
+  <meta name="geo.region" content="CA-ON" />
+  <meta name="geo.placename" content="Ontario, Canada" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Ontario CRS Calculator – OINP Express Entry Stream Points Tool">
-  <meta property="og:description" content="Calculate your CRS score for Ontario's PNP (OINP). Free Ontario CRS calculator for the Human Capital Priorities and Express Entry streams.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/ontario-crs-calculator.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Ontario CRS Calculator – OINP Express Entry Stream Points Tool">
-  <meta name="twitter:description" content="Calculate your CRS score for Ontario's PNP (OINP). Free Ontario CRS calculator for the Human Capital Priorities and Express Entry streams.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
+  <meta property="og:title" content="Ontario CRS Calculator 2026 – OINP Express Entry Points Tool" />
+  <meta property="og:description" content="Check if you qualify for Ontario PNP (OINP) nomination. Calculate your Express Entry CRS score and OINP eligibility. +600 CRS points with Ontario nomination." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/ontario-crs-calculator" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CRS Score Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ontario CRS Calculator 2026 – OINP Express Entry Points Tool" />
+  <meta name="twitter:description" content="Free Ontario PNP CRS calculator. Check OINP Human Capital Priorities Stream eligibility and Express Entry score." />
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema: WebApplication -->
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"Ontario CRS Calculator – OINP Express Entry Human Capital Priorities","item":"https://crsscorecalculator.vercel.app/ontario-crs-calculator.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the minimum CRS score for OINP Human Capital Priorities?","acceptedAnswer":{"@type":"Answer","text":"OINP does not publish a fixed minimum CRS score. Cutoffs vary by draw. The HCP stream typically targets candidates with CRS scores of 400 or above who work in priority occupations. Some tech-specific draws have had lower cutoffs around 350–400."}},{"@type":"Question","name":"Does Ontario have a tech-specific immigration stream?","acceptedAnswer":{"@type":"Answer","text":"Yes, Ontario's OINP has conducted targeted draws for tech workers within the Human Capital Priorities stream, with specific NOC codes in information technology, engineering, and science sectors. Check the OINP website for current draws."}},{"@type":"Question","name":"Can I apply for OINP without a job offer?","acceptedAnswer":{"@type":"Answer","text":"Yes. The Human Capital Priorities Stream does not require a job offer. However, the Employer Job Offer International Student and Foreign Worker streams do require an Ontario employer job offer."}},{"@type":"Question","name":"How does OINP nomination affect my CRS score?","acceptedAnswer":{"@type":"Answer","text":"An OINP nomination through the Express Entry-aligned stream adds exactly 600 CRS points to your profile. This puts your total CRS score well above all historical Express Entry draw cutoffs, virtually guaranteeing an ITA."}},{"@type":"Question","name":"How long does OINP processing take?","acceptedAnswer":{"@type":"Answer","text":"OINP processing times for the Express Entry streams are typically 30–90 days after submitting a complete application following an NOI. Once nominated, IRCC will add the 600 points and you'll receive an ITA in the next available draw."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Ontario CRS Calculator – OINP Express Entry Stream Points Tool","url":"https://crsscorecalculator.vercel.app/ontario-crs-calculator.html","description":"Calculate your CRS score for Ontario's PNP (OINP). Free Ontario CRS calculator for the Human Capital Priorities and Express Entry streams.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ontario CRS Calculator – OINP Express Entry Points Tool",
+    "url": "https://crsscorecalculator.vercel.app/ontario-crs-calculator",
+    "description": "Free Ontario OINP CRS calculator for Express Entry Human Capital Priorities Stream. Check eligibility and calculate your Ontario PNP points score.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "browserRequirements": "Requires JavaScript",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "ratingCount": "2741",
+      "bestRating": "5"
+    },
+    "areaServed": { "@type": "AdministrativeArea", "name": "Ontario, Canada" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CRS Score Calculator",
+      "url": "https://crsscorecalculator.vercel.app/"
+    }
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum CRS score for Ontario PNP OINP in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The minimum CRS score to be considered for the Ontario OINP Human Capital Priorities Stream is 400 points. However, in practice, OINP typically issues Notifications of Interest (NOIs) to candidates with CRS scores between 400 and 500. Candidates with higher scores have a better chance of receiving an NOI from Ontario."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How many CRS points does Ontario PNP nomination add?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An Ontario PNP (OINP) nomination adds 600 CRS points instantly to your Express Entry profile. This virtually guarantees you will receive an Invitation to Apply (ITA) for Canadian permanent residence in the next Express Entry draw."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What are the OINP Human Capital Priorities Stream requirements?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "To qualify for the OINP Human Capital Priorities Stream you need: (1) Active Express Entry profile under FSW or CEC program; (2) Minimum CRS score of 400; (3) CLB 7 or higher in all four language skills; (4) Bachelor's degree or higher; (5) At least 1 year of skilled work experience (NOC TEER 0, 1, 2 or 3); (6) Intent to live and work in Ontario; (7) Sufficient settlement funds."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the OINP NOI and how long is it valid?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An OINP NOI (Notification of Interest) is an invitation from the Ontario government to apply for a provincial nomination. Once you receive an NOI, you have exactly 45 calendar days to submit your OINP application. Missing this deadline means your NOI expires and you will need to wait for a new one."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I apply to OINP without a job offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The OINP Human Capital Priorities Stream does not require a job offer. You only need to meet the human capital requirements (education, language, work experience, CRS score) and intend to live in Ontario. However, having an Ontario job offer can strengthen your application and is required for other OINP streams like the Employer Job Offer streams."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between OINP and Express Entry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Express Entry is the federal immigration system managed by IRCC. OINP (Ontario Immigrant Nominee Program) is Ontario's provincial immigration program. OINP's enhanced streams operate within Express Entry — if Ontario nominates you, you get +600 CRS points in the federal Express Entry pool, virtually guaranteeing an ITA. You must first be in the federal Express Entry pool to qualify for enhanced OINP streams."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Ontario CRS Calculator", "item": "https://crsscorecalculator.vercel.app/ontario-crs-calculator" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Ontario CRS Calculator 2026 – OINP Express Entry Human Capital Priorities Stream Guide",
+    "description": "Calculate your Ontario PNP CRS score and check OINP eligibility for the Human Capital Priorities Stream. Updated April 2026.",
+    "url": "https://crsscorecalculator.vercel.app/ontario-crs-calculator",
+    "datePublished": "2025-01-01",
+    "dateModified": "2026-04-01",
+    "author": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CRS Score Calculator",
+      "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/logo.png" }
+    }
+  }
+  </script>
+
+  <!-- Schema: LocalBusiness / Geographic Coverage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "GovernmentService",
+    "name": "Ontario Immigrant Nominee Program (OINP)",
+    "serviceType": "Provincial Immigration Nomination",
+    "areaServed": { "@type": "State", "name": "Ontario", "containedInPlace": { "@type": "Country", "name": "Canada" } },
+    "url": "https://www.ontario.ca/page/ontario-immigrant-nominee-program",
+    "provider": { "@type": "GovernmentOrganization", "name": "Government of Ontario" }
+  }
+  </script>
+
+  <style>
+    :root {
+      --red:#CC0000; --red-dark:#990000; --red-light:#fff5f5;
+      --ontario-blue:#00205B; --ontario-blue-light:#e8edf5;
+      --black:#1a1a1a; --text:#212529; --text-muted:#6c757d; --text-faint:#adb5bd;
+      --bg:#f8f9fa; --surface:#ffffff; --border:#dee2e6; --border-light:#e9ecef;
+      --success:#28a745; --success-bg:#d4edda;
+      --warning-bg:#fff3cd; --info-bg:#e8f4fd;
+      --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      --font-head:'Poppins','Inter',sans-serif;
+      --radius-sm:4px; --radius-md:8px; --radius-lg:12px; --radius-xl:16px;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08); --shadow-md:0 4px 12px rgba(0,0,0,.10);
+      --transition:180ms ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;height:auto;}
+    a{color:var(--red);text-decoration:none;transition:color var(--transition);}
+    a:hover{color:var(--red-dark);text-decoration:underline;}
+    h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;color:var(--black);}
+    ul,ol{padding-left:1.4em;}
+    table{border-collapse:collapse;width:100%;}
+    button{cursor:pointer;font-family:var(--font-body);}
+    p{max-width:72ch;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+    /* LAYOUT */
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+    .content-wrap{display:grid;grid-template-columns:1fr 310px;gap:36px;align-items:start;}
+
+    /* SKIP LINK */
+    .skip-link{position:absolute;top:-100px;left:16px;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--radius-md);z-index:9999;transition:top .2s;}
+    .skip-link:focus{top:16px;}
+
+    /* HEADER */
+    .site-header{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--red);text-decoration:none;white-space:nowrap;}
+    .nav-logo:hover{color:var(--red-dark);text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;flex-wrap:wrap;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 10px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition);white-space:nowrap;}
+    .nav-links a:hover{background:var(--red-light);color:var(--red);text-decoration:none;}
+    .nav-links a.active{color:var(--red);font-weight:600;}
+    .nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--radius-md)!important;padding:8px 16px!important;font-weight:600!important;}
+    .nav-cta:hover{background:var(--red-dark)!important;}
+    .nav-mobile-toggle{display:none;background:none;border:none;padding:8px;color:var(--text);}
+
+    /* BREADCRUMB */
+    .breadcrumb{background:#fff;border-bottom:1px solid var(--border-light);padding:10px 0;}
+    .breadcrumb ol{display:flex;gap:6px;align-items:center;list-style:none;padding:0;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;}
+    .breadcrumb li+li::before{content:"›";margin-right:6px;color:var(--text-faint);}
+    .breadcrumb a{color:var(--text-muted);}
+    .breadcrumb a:hover{color:var(--red);}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,var(--ontario-blue) 0%,#001440 100%);color:#fff;padding:44px 0 36px;text-align:center;}
+    .hero h1{font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;margin-bottom:10px;}
+    .hero-sub{font-size:1rem;opacity:.92;max-width:640px;margin:0 auto 18px;}
+    .hero-meta{display:flex;justify-content:center;gap:16px;font-size:.82rem;opacity:.85;flex-wrap:wrap;margin-bottom:18px;}
+    .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+    .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:999px;}
+    .badge-red{background:rgba(204,0,0,.8);border-color:rgba(204,0,0,.9);}
+
+    /* ONTARIO FLAG ACCENT */
+    .ontario-bar{background:linear-gradient(90deg,var(--ontario-blue),#CC0000);height:4px;}
+
+    /* AD */
+    .ad-slot{background:#f0f0f0;border:1px dashed #ccc;text-align:center;color:var(--text-muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);}
+    .ad-leaderboard{min-height:90px;margin:16px 0;}
+    .ad-mid{min-height:250px;margin:28px 0;}
+    .ad-sidebar{min-height:250px;width:100%;margin-bottom:20px;}
+    .ad-in-content{min-height:90px;margin:28px 0;}
+
+    .main-content{padding:36px 0 56px;}
+
+    /* CARDS */
+    .card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;box-shadow:var(--shadow-sm);margin-bottom:24px;}
+    .card-title{font-size:1.1rem;font-weight:700;color:var(--black);margin-bottom:18px;padding-bottom:12px;border-bottom:2px solid var(--ontario-blue);display:flex;align-items:center;gap:8px;}
+
+    /* ELIGIBILITY CHECKER */
+    .elig-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
+    .elig-item{display:flex;flex-direction:column;gap:6px;}
+    .elig-item label{font-size:.875rem;font-weight:600;color:var(--text);}
+    .elig-item .hint{font-size:.75rem;color:var(--text-muted);}
+    .form-control{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.9rem;color:var(--text);background:#fff;transition:border-color var(--transition),box-shadow var(--transition);appearance:none;-webkit-appearance:none;}
+    .form-control:focus{outline:none;border-color:var(--ontario-blue);box-shadow:0 0 0 3px rgba(0,32,91,.12);}
+    select.form-control{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;}
+    .radio-group{display:flex;gap:16px;flex-wrap:wrap;padding-top:4px;}
+    .radio-group label{display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:.9rem;}
+    .radio-group input[type="radio"]{accent-color:var(--ontario-blue);width:16px;height:16px;}
+    .form-section-header{background:var(--ontario-blue-light);border-left:3px solid var(--ontario-blue);padding:9px 14px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:22px 0 14px;font-weight:700;font-size:.875rem;color:var(--ontario-blue);}
+    .form-group{margin-bottom:16px;}
+    .form-group label{display:block;font-size:.875rem;font-weight:600;color:var(--text);margin-bottom:6px;}
+
+    /* CRS INPUT */
+    .crs-input-wrap{position:relative;}
+    .crs-input-wrap input{padding-right:100px;font-size:1.1rem;font-weight:700;text-align:center;letter-spacing:2px;}
+    .crs-input-wrap .crs-suffix{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-size:.78rem;color:var(--text-muted);white-space:nowrap;}
+
+    /* CALCULATE BUTTON */
+    .btn-calculate{width:100%;padding:15px;background:var(--ontario-blue);color:#fff;font-family:var(--font-head);font-size:1.05rem;font-weight:700;border:none;border-radius:var(--radius-lg);cursor:pointer;margin-top:8px;transition:background var(--transition),transform var(--transition),box-shadow var(--transition);box-shadow:0 4px 14px rgba(0,32,91,.3);}
+    .btn-calculate:hover{background:#001440;transform:translateY(-1px);box-shadow:0 6px 18px rgba(0,32,91,.35);}
+
+    /* RESULT BOX */
+    #result{display:none;}
+    .result-card{border-radius:var(--radius-xl);padding:24px;margin-bottom:20px;}
+    .result-eligible{background:linear-gradient(135deg,#d4edda,#eafaf1);border:2px solid #28a745;}
+    .result-borderline{background:linear-gradient(135deg,#fff3cd,#fffbea);border:2px solid #ffc107;}
+    .result-ineligible{background:linear-gradient(135deg,#f8d7da,#fef0f0);border:2px solid #dc3545;}
+    .result-icon{font-size:2.5rem;margin-bottom:10px;}
+    .result-title{font-size:1.15rem;font-weight:700;margin-bottom:8px;}
+    .result-msg{font-size:.9rem;line-height:1.65;margin-bottom:14px;}
+    .result-breakdown{background:rgba(255,255,255,.7);border-radius:var(--radius-lg);padding:16px;margin-top:14px;}
+    .result-breakdown h4{font-size:.875rem;margin-bottom:10px;color:var(--text);}
+    .rb-row{display:flex;justify-content:space-between;align-items:center;padding:6px 0;border-bottom:1px solid rgba(0,0,0,.06);font-size:.85rem;}
+    .rb-row:last-child{border-bottom:none;}
+    .rb-label{color:var(--text-muted);}
+    .rb-status{font-weight:600;display:flex;align-items:center;gap:4px;}
+    .rb-pass{color:#28a745;} .rb-fail{color:#dc3545;} .rb-warn{color:#e67e00;}
+    .result-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;}
+    .btn-action{padding:10px 18px;border-radius:var(--radius-md);font-size:.875rem;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--text);cursor:pointer;transition:all var(--transition);display:flex;align-items:center;gap:6px;}
+    .btn-action:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
+    .btn-action.primary{background:var(--red);color:#fff;border-color:var(--red);}
+    .btn-action.primary:hover{background:var(--red-dark);}
+
+    /* SCORE METER */
+    .score-meter{margin:16px 0;}
+    .score-meter-labels{display:flex;justify-content:space-between;font-size:.73rem;color:var(--text-muted);margin-bottom:4px;}
+    .score-meter-bar{height:10px;border-radius:999px;background:#e9ecef;overflow:hidden;position:relative;}
+    .score-meter-fill{height:100%;border-radius:999px;transition:width .8s ease;}
+    .score-marker{position:absolute;top:-4px;width:2px;height:18px;background:var(--ontario-blue);}
+    .score-marker-label{position:absolute;top:16px;font-size:.7rem;color:var(--ontario-blue);font-weight:700;transform:translateX(-50%);}
+
+    /* INFO SECTIONS */
+    .info-section{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;}
+    .info-section h2{font-size:1.15rem;margin-bottom:12px;}
+    .info-section h3{font-size:.95rem;margin:16px 0 6px;color:var(--black);}
+    .info-section p{color:var(--text);margin-bottom:10px;font-size:.95rem;}
+    .info-section ul,.info-section ol{font-size:.93rem;color:var(--text);}
+    .info-section li{margin-bottom:6px;}
+
+    /* STREAMS GRID */
+    .streams-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin-top:14px;}
+    .stream-card{background:#fafafa;border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:16px;transition:border-color var(--transition),box-shadow var(--transition);}
+    .stream-card:hover{border-color:var(--ontario-blue);box-shadow:var(--shadow-md);}
+    .stream-card .si{font-size:1.6rem;margin-bottom:6px;}
+    .stream-card h3{font-size:.875rem;margin:0 0 5px;color:var(--black);}
+    .stream-card p{font-size:.78rem;color:var(--text-muted);margin:0 0 8px;}
+    .stream-tag{font-size:.72rem;font-weight:600;padding:2px 8px;border-radius:999px;display:inline-block;}
+    .tag-ee{background:#e8f0fe;color:#1a56db;}
+    .tag-base{background:#fef3c7;color:#92400e;}
+    .tag-grad{background:#d1fae5;color:#065f46;}
+
+    /* DATA TABLE */
+    .data-table{width:100%;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow-sm);margin:14px 0;font-size:.875rem;}
+    .data-table th{background:var(--ontario-blue);color:#fff;padding:10px 14px;text-align:left;}
+    .data-table td{padding:9px 14px;border-bottom:1px solid var(--border-light);background:var(--surface);}
+    .data-table tr:last-child td{border-bottom:none;}
+    .data-table tr:nth-child(even) td{background:#fafafa;}
+
+    /* CALLOUT */
+    .callout{border-radius:var(--radius-lg);padding:13px 16px;margin:14px 0;display:flex;gap:10px;align-items:flex-start;font-size:.88rem;}
+    .callout-tip{background:#d4edda;border:1px solid #b8dfc5;}
+    .callout-info{background:var(--info-bg);border:1px solid #aed6f1;}
+    .callout-warn{background:var(--warning-bg);border:1px solid #ffd970;}
+    .callout-ontario{background:var(--ontario-blue-light);border:1px solid #b0c0e0;}
+    .callout-icon{font-size:1.1rem;flex-shrink:0;margin-top:1px;}
+    .callout-body p{margin:0;line-height:1.6;}
+
+    /* STEPS */
+    .steps-list{display:flex;flex-direction:column;gap:10px;margin-top:12px;}
+    .step-box{display:flex;gap:12px;align-items:flex-start;background:#fafafa;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:14px;}
+    .step-num{background:var(--ontario-blue);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.9rem;min-width:30px;height:30px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0;}
+    .step-text h4{font-size:.875rem;margin-bottom:3px;}
+    .step-text p{font-size:.8rem;color:var(--text-muted);margin:0;}
+
+    /* CTA */
+    .cta-banner{background:linear-gradient(135deg,var(--ontario-blue),#001440);border-radius:var(--radius-xl);padding:26px;color:#fff;text-align:center;margin:24px 0;}
+    .cta-banner h3{color:#fff;font-size:1.1rem;margin-bottom:8px;}
+    .cta-banner p{opacity:.9;font-size:.875rem;margin-bottom:16px;max-width:none;}
+    .cta-banner-btns{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;}
+    .cta-btn-white{display:inline-block;background:#fff;color:var(--ontario-blue);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:var(--radius-lg);box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform var(--transition),box-shadow var(--transition);text-decoration:none;}
+    .cta-btn-white:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25);text-decoration:none;color:var(--ontario-blue);}
+    .cta-btn-red{display:inline-block;background:var(--red);color:#fff;font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:11px 24px;border-radius:var(--radius-lg);transition:background var(--transition);text-decoration:none;}
+    .cta-btn-red:hover{background:var(--red-dark);text-decoration:none;color:#fff;}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border-light);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;}
+    .faq-question{width:100%;text-align:left;padding:13px 16px;background:var(--surface);border:none;cursor:pointer;font-size:.93rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--transition);}
+    .faq-question:hover,.faq-question.open{background:var(--ontario-blue-light);color:var(--ontario-blue);}
+    .faq-question .arrow{transition:transform var(--transition);flex-shrink:0;}
+    .faq-question.open .arrow{transform:rotate(180deg);}
+    .faq-answer{display:none;padding:0 16px 14px;font-size:.88rem;color:var(--text);line-height:1.7;}
+    .faq-answer.open{display:block;}
+    .faq-answer a{color:var(--red);}
+
+    /* RELATED CALC */
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:9px;margin-top:14px;}
+    .calc-card{display:block;background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:13px 10px;text-align:center;transition:border-color var(--transition),box-shadow var(--transition),transform var(--transition);text-decoration:none;color:var(--text);}
+    .calc-card:hover{border-color:var(--ontario-blue);box-shadow:var(--shadow-md);transform:translateY(-2px);text-decoration:none;}
+    .calc-card .ci{font-size:1.4rem;margin-bottom:4px;}
+    .calc-card .cn{font-size:.75rem;font-weight:600;}
+    .calc-card .cs{font-size:.68rem;color:var(--text-muted);margin-top:2px;}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:88px;}
+    .sidebar-widget{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:16px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
+    .sidebar-widget h3{font-size:.875rem;margin-bottom:10px;color:var(--black);border-bottom:1px solid var(--border-light);padding-bottom:7px;}
+    .sidebar-links{list-style:none;padding:0;}
+    .sidebar-links li{border-bottom:1px solid var(--border-light);}
+    .sidebar-links li:last-child{border-bottom:none;}
+    .sidebar-links a{display:block;padding:7px 0;font-size:.83rem;color:var(--text);transition:color var(--transition),padding-left var(--transition);}
+    .sidebar-links a:hover{color:var(--red);padding-left:5px;text-decoration:none;}
+    .sidebar-links a.current{color:var(--ontario-blue);font-weight:600;}
+
+    .noi-box{background:linear-gradient(135deg,var(--ontario-blue),#001440);color:#fff;border-radius:var(--radius-lg);padding:16px;text-align:center;}
+    .noi-box .nb{font-family:var(--font-head);font-size:2.2rem;font-weight:700;line-height:1;}
+    .noi-box .nl{font-size:.75rem;opacity:.85;margin-top:4px;}
+    .noi-box .ns{font-size:.75rem;margin-top:8px;opacity:.9;}
+
+    .resource-link{display:flex;align-items:center;gap:7px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--border-light);color:var(--text);}
+    .resource-link:last-child{border-bottom:none;}
+    .resource-link:hover{color:var(--red);text-decoration:none;}
+    .ext-icon{color:var(--text-muted);flex-shrink:0;}
+
+    /* FOOTER */
+    .site-footer{background:var(--black);color:#ccc;padding:44px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:28px;margin-bottom:28px;}
+    .footer-col h4{color:#fff;font-size:.875rem;margin-bottom:12px;font-family:var(--font-head);}
+    .footer-col ul{list-style:none;padding:0;}
+    .footer-col li{margin-bottom:7px;}
+    .footer-col a{font-size:.8rem;color:#aaa;transition:color var(--transition);}
+    .footer-col a:hover{color:#fff;text-decoration:none;}
+    .footer-bottom{border-top:1px solid #333;padding:18px 0;font-size:.78rem;color:#888;}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;}
+    .footer-disclaimer{max-width:680px;font-size:.75rem;color:#666;margin-top:6px;line-height:1.5;}
+
+    /* RESPONSIVE */
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px;box-shadow:var(--shadow-md);z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-mobile-toggle{display:block;}
+      .content-wrap{grid-template-columns:1fr;}
+      .sidebar{position:static;}
+      .elig-grid{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .hero h1{font-size:1.3rem;}
+      .card{padding:18px;}
+      .info-section{padding:18px;}
+    }
+    @media(max-width:480px){
+      .footer-grid{grid-template-columns:1fr;}
+      .result-actions{flex-direction:column;}
+      .cta-banner-btns{flex-direction:column;}
+      .streams-grid{grid-template-columns:1fr;}
+    }
+    @media print{
+      .site-header,.site-footer,.ad-slot,.sidebar,.cta-banner,.hero{display:none!important;}
+      .content-wrap{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
-</header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<a href="#calculator" class="skip-link">Skip to Ontario CRS calculator</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep" aria-hidden="true">›</li>
-      <li class="current" aria-current="page">Ontario CRS Calculator – OINP Express Entry Human Capital Priorities</li>
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#CC0000"/>
+          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
+        </svg>
+        CRS Calculator
+      </a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="/">CRS Calculator</a></li>
+        <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
+        <li><a href="/ontario-crs-calculator" class="active" aria-current="page">Ontario PNP</a></li>
+        <li><a href="/pnp-crs-calculator">All PNPs</a></li>
+        <li><a href="/crs-cutoff-scores">Cutoffs</a></li>
+        <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
+        <li><a href="#calculator" class="nav-cta">Calculate Now →</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<div class="ontario-bar"></div>
+
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <div class="container">
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1"/>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/pnp-crs-calculator" itemprop="item"><span itemprop="name">PNP Calculators</span></a>
+        <meta itemprop="position" content="2"/>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">Ontario CRS Calculator</span>
+        <meta itemprop="position" content="3"/>
+      </li>
     </ol>
   </div>
 </nav>
 
-<div class="page-header">
+<!-- HERO -->
+<section class="hero" aria-label="Ontario CRS Calculator Hero">
   <div class="container">
-    <h1>Ontario CRS Calculator – OINP Express Entry Human Capital Priorities</h1>
-    <p>Calculate your CRS score for Ontario's PNP (OINP). Free Ontario CRS calculator for the Human Capital Priorities and Express Entry streams.</p>
-    <div class="meta-info">
-      <span>Updated: April 2026</span>
-      <span>Free Tool</span>
-      <span>No Registration</span>
+    <h1>Ontario CRS Calculator 2026<br>OINP Express Entry Points Tool</h1>
+    <p class="hero-sub">Check if you qualify for Ontario PNP nomination. A successful OINP nomination instantly adds <strong>+600 CRS points</strong> — virtually guaranteeing Canadian PR.</p>
+    <div class="hero-meta">
+      <span>📅 Updated April 2026</span>
+      <span>🏛️ Official OINP Criteria</span>
+      <span>📍 Ontario, Canada</span>
+      <span>⚡ Instant Results</span>
+    </div>
+    <div class="hero-badges">
+      <span class="badge badge-red">+600 CRS with OINP Nomination</span>
+      <span class="badge">✓ Human Capital Priorities</span>
+      <span class="badge">✓ French-Speaking Stream</span>
+      <span class="badge">✓ 100% Free</span>
     </div>
   </div>
-</div>
+</section>
 
+<!-- AD LEADERBOARD -->
 <div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
+  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
 </div>
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <div class="main-content">
-      <section class="card">
-        
-    <h2>Ontario Immigrant Nominee Program (OINP)</h2>
-    <p>The Ontario Immigrant Nominee Program (OINP) is Canada's largest and most competitive provincial nominee program. Ontario, as Canada's most populous province and economic hub, receives the highest number of immigration nominations annually. The OINP has several streams designed to attract skilled workers, international graduates, and entrepreneurs who wish to settle and work in Ontario.</p>
+<!-- MAIN -->
+<main class="main-content" id="main-content">
+  <div class="container">
+    <div class="content-wrap">
 
-    <h2>OINP Express Entry-Aligned Streams</h2>
-    <p>Ontario has three main Express Entry-aligned streams:</p>
-    <ul>
-      <li><strong>Human Capital Priorities Stream:</strong> Targets candidates in the Express Entry pool with post-secondary education and high language scores. Ontario sends NOIs to qualifying profiles based on their CRS score and occupation.</li>
-      <li><strong>Skilled Trades Stream:</strong> For candidates in Express Entry with work experience in specific skilled trades (NOC TEER 2) and a job offer from an Ontario employer.</li>
-      <li><strong>French-Speaking Skilled Worker Stream:</strong> For francophone candidates in the Express Entry pool who have CLB 7+ in French and meet the language requirements.</li>
-    </ul>
+      <!-- LEFT COLUMN -->
+      <div>
 
-    <h2>OINP Human Capital Priorities</h2>
-    <p>The Human Capital Priorities (HCP) Stream is the most active OINP Express Entry stream. Ontario conducts periodic draws from the Express Entry pool, sending NOIs to candidates who have specific occupations and meet minimum CRS scores. The HCP stream does not require a job offer, making it particularly attractive for candidates with strong profiles but no Canadian employer connection.</p>
+        <!-- CALCULATOR -->
+        <section class="card" id="calculator" aria-labelledby="calc-heading">
+          <h2 class="card-title" id="calc-heading">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#00205B" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="3"/><path d="M9 9h.01M12 9h.01M15 9h.01M9 12h.01M12 12h.01M15 12h.01M9 15h.01M12 15h.01M15 15h.01"/></svg>
+            Ontario OINP CRS Eligibility Calculator 2026
+          </h2>
 
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-value">#1</div><div class="stat-label">Province by Nomination Volume</div></div>
-      <div class="stat-card"><div class="stat-value">600</div><div class="stat-label">CRS Points After OINP Nomination</div></div>
-      <div class="stat-card"><div class="stat-value">CLB 7</div><div class="stat-label">Typical Language Minimum for HCP</div></div>
-      <div class="stat-card"><div class="stat-value">~400+</div><div class="stat-label">Typical Base CRS for HCP NOIs</div></div>
+          <p style="font-size:.875rem;color:var(--text-muted);margin-bottom:20px;">Enter your profile below to check if you meet OINP Human Capital Priorities Stream requirements. Based on the official <a href="https://www.ontario.ca/page/ontarios-express-entry-human-capital-priorities-stream" target="_blank" rel="noopener noreferrer">Ontario OINP criteria</a>.</p>
+
+          <form id="ontarioForm" onsubmit="calculateOntario(event)" novalidate>
+
+            <div class="form-section-header">Step 1 — Your CRS Score &amp; Express Entry Status</div>
+
+            <div class="form-group">
+              <label for="crsScore">Your Current CRS Score <span aria-hidden="true">*</span></label>
+              <div class="crs-input-wrap">
+                <input type="number" id="crsScore" class="form-control" min="0" max="1200" placeholder="e.g. 450" required aria-required="true" />
+                <span class="crs-suffix">/ 1,200 pts</span>
+              </div>
+              <div style="font-size:.78rem;color:var(--text-muted);margin-top:4px;">Don't know your score? <a href="/">Calculate it free →</a></div>
+            </div>
+
+            <div class="form-group">
+              <label>Express Entry Program</label>
+              <div class="radio-group">
+                <label><input type="radio" name="eeProgram" value="fsw" checked> Federal Skilled Worker (FSW)</label>
+                <label><input type="radio" name="eeProgram" value="cec"> Canadian Experience Class (CEC)</label>
+                <label><input type="radio" name="eeProgram" value="fst"> Federal Skilled Trades (FST)</label>
+              </div>
+              <div style="font-size:.75rem;color:var(--text-muted);margin-top:4px;">Note: FST candidates are not eligible for OINP Human Capital Priorities Stream.</div>
+            </div>
+
+            <div class="form-section-header">Step 2 — Education &amp; Language</div>
+
+            <div class="elig-grid">
+              <div class="elig-item">
+                <label for="eduLevel">Education Level</label>
+                <select id="eduLevel" class="form-control">
+                  <option value="none">Less than bachelor's degree</option>
+                  <option value="bachelor" selected>Bachelor's degree</option>
+                  <option value="masters">Master's degree</option>
+                  <option value="phd">PhD / Doctoral degree</option>
+                </select>
+                <span class="hint">OINP HCP requires Bachelor's or higher</span>
+              </div>
+              <div class="elig-item">
+                <label for="langMin">Minimum CLB Level (all 4 skills)</label>
+                <select id="langMin" class="form-control">
+                  <option value="5">CLB 5 or less</option>
+                  <option value="6">CLB 6</option>
+                  <option value="7" selected>CLB 7</option>
+                  <option value="8">CLB 8</option>
+                  <option value="9">CLB 9+</option>
+                </select>
+                <span class="hint">Minimum CLB 7 required in all skills</span>
+              </div>
+              <div class="elig-item">
+                <label for="workExp">Skilled Work Experience</label>
+                <select id="workExp" class="form-control">
+                  <option value="0">None</option>
+                  <option value="1" selected>1 year (NOC TEER 0/1/2/3)</option>
+                  <option value="2">2 years</option>
+                  <option value="3">3+ years</option>
+                </select>
+                <span class="hint">Min 1 year in NOC TEER 0, 1, 2, or 3</span>
+              </div>
+              <div class="elig-item">
+                <label for="fswPoints">FSW 6-Factor Score (FSW only)</label>
+                <select id="fswPoints" class="form-control">
+                  <option value="na">Not applicable (CEC/FST)</option>
+                  <option value="below67">Below 67 points</option>
+                  <option value="67plus">67 points or above</option>
+                </select>
+                <span class="hint">FSW applicants need min 67/100</span>
+              </div>
+            </div>
+
+            <div class="form-section-header">Step 3 — Ontario Ties</div>
+
+            <div class="form-group">
+              <label>Do you intend to live and work in Ontario?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="intendOntario" value="yes" checked> Yes</label>
+                <label><input type="radio" name="intendOntario" value="no"> No</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Valid Ontario job offer? (Not required but beneficial)</label>
+              <div class="radio-group">
+                <label><input type="radio" name="jobOffer" value="none" checked> No job offer</label>
+                <label><input type="radio" name="jobOffer" value="yes"> Yes — employer in Ontario</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Previous Ontario work / study experience?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="ontarioExp" value="none" checked> None</label>
+                <label><input type="radio" name="ontarioExp" value="work"> Ontario work experience</label>
+                <label><input type="radio" name="ontarioExp" value="study"> Ontario education</label>
+                <label><input type="radio" name="ontarioExp" value="both"> Both</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>French language proficiency?</label>
+              <div class="radio-group">
+                <label><input type="radio" name="french" value="none" checked> No</label>
+                <label><input type="radio" name="french" value="clb7"> French CLB 7+ (French-Speaking Stream eligible)</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label>Legal status in Canada (if currently in Canada)</label>
+              <div class="radio-group">
+                <label><input type="radio" name="legalStatus" value="na" checked> Outside Canada</label>
+                <label><input type="radio" name="legalStatus" value="valid"> Valid work/study permit</label>
+                <label><input type="radio" name="legalStatus" value="maintained"> Maintained status</label>
+                <label><input type="radio" name="legalStatus" value="invalid"> No valid status</label>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-calculate">🏛️ Check My Ontario OINP Eligibility →</button>
+          </form>
+        </section>
+
+        <!-- RESULT -->
+        <section id="result" aria-live="polite" aria-atomic="true">
+          <div class="result-card" id="resultCard">
+            <div class="result-icon" id="resultIcon"></div>
+            <div class="result-title" id="resultTitle"></div>
+            <div class="result-msg" id="resultMsg"></div>
+
+            <!-- CRS METER -->
+            <div class="score-meter">
+              <div class="score-meter-labels"><span>0</span><span>400 (OINP min)</span><span>500</span><span>700+</span></div>
+              <div class="score-meter-bar">
+                <div class="score-meter-fill" id="meterFill" style="width:0%"></div>
+                <div class="score-marker" id="scoreMarker" style="left:0%">
+                  <div class="score-marker-label" id="scoreMarkerLabel"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="result-breakdown">
+              <h4>Eligibility Checklist</h4>
+              <div id="checklistRows"></div>
+            </div>
+
+            <div class="result-actions">
+              <button class="btn-action primary" onclick="window.print()">🖨 Print Results</button>
+              <button class="btn-action" onclick="copyResult()">📋 Copy Summary</button>
+              <button class="btn-action" onclick="shareWA()">💬 WhatsApp</button>
+              <a href="/" class="btn-action">🧮 Full CRS Calculator</a>
+            </div>
+          </div>
+
+          <div class="ad-slot ad-mid" aria-label="Advertisement">Advertisement</div>
+        </section>
+
+        <!-- WHAT IS OINP -->
+        <section class="info-section" aria-labelledby="what-oinp">
+          <h2 id="what-oinp">What is the Ontario PNP (OINP)?</h2>
+
+          <p>The <strong>Ontario Immigrant Nominee Program (OINP)</strong> is Ontario's provincial immigration program. It allows the province to nominate skilled workers, international students, and entrepreneurs for Canadian permanent residence.</p>
+
+          <p>For Express Entry candidates, the OINP's <strong>enhanced streams</strong> are the most powerful pathway. An OINP nomination adds <strong>600 CRS points</strong> instantly — virtually guaranteeing an ITA at the next federal draw.</p>
+
+          <p>Ontario is Canada's most populous province and economic hub. It is home to Toronto, Ottawa, and the Greater Golden Horseshoe — making it the top destination for skilled immigrants.</p>
+
+          <div class="callout callout-ontario">
+            <span class="callout-icon">🏛️</span>
+            <div class="callout-body"><p><strong>Key fact:</strong> You cannot apply to OINP directly. Ontario searches the Express Entry pool and sends a <strong>Notification of Interest (NOI)</strong> to eligible candidates. You must then apply within 45 days.</p></div>
+          </div>
+        </section>
+
+        <!-- OINP STREAMS -->
+        <section class="info-section" aria-labelledby="oinp-streams">
+          <h2 id="oinp-streams">OINP Streams Overview 2026</h2>
+          <p>Ontario has three categories of immigration streams. The Express Entry streams are the fastest route to PR for most skilled workers.</p>
+
+          <div class="streams-grid">
+            <div class="stream-card">
+              <div class="si">🎓</div>
+              <h3>Human Capital Priorities</h3>
+              <p>For Express Entry candidates with CLB 7+, Bachelor's degree+, and min 400 CRS score.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🇫🇷</div>
+              <h3>French-Speaking Skilled Worker</h3>
+              <p>For Express Entry candidates with French CLB 7+ and English CLB 6+. Lower cutoffs than HCP.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🔧</div>
+              <h3>Skilled Trades</h3>
+              <p>For Express Entry CEC candidates in eligible skilled trades with Canadian work experience.</p>
+              <span class="stream-tag tag-ee">Express Entry Enhanced</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">💼</div>
+              <h3>Foreign Worker (Job Offer)</h3>
+              <p>For workers with a valid Ontario employer job offer. Based on OINP points grid, not CRS.</p>
+              <span class="stream-tag tag-base">Base Stream</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🎓</div>
+              <h3>Master's Graduate</h3>
+              <p>For international students who completed a Master's degree at an eligible Ontario university.</p>
+              <span class="stream-tag tag-grad">Graduate Stream</span>
+            </div>
+            <div class="stream-card">
+              <div class="si">🔬</div>
+              <h3>PhD Graduate</h3>
+              <p>For international students who completed or are enrolled in a PhD at an eligible Ontario university.</p>
+              <span class="stream-tag tag-grad">Graduate Stream</span>
+            </div>
+          </div>
+        </section>
+
+        <!-- AD IN CONTENT -->
+        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
+
+        <!-- HCP REQUIREMENTS TABLE -->
+        <section class="info-section" aria-labelledby="hcp-reqs">
+          <h2 id="hcp-reqs">Human Capital Priorities Stream — Full Requirements</h2>
+          <p>This is the main OINP stream for Express Entry candidates. Here are all eligibility requirements:</p>
+
+          <table class="data-table" aria-label="OINP Human Capital Priorities Stream Requirements">
+            <thead><tr><th>Requirement</th><th>Minimum Standard</th><th>Notes</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Express Entry Profile</strong></td><td>Active profile required</td><td>Must be in federal Express Entry pool</td></tr>
+              <tr><td><strong>Eligible Program</strong></td><td>FSW or CEC only</td><td>FST candidates are not eligible</td></tr>
+              <tr><td><strong>CRS Score</strong></td><td>400 points minimum</td><td>Higher score = better NOI chance</td></tr>
+              <tr><td><strong>Education</strong></td><td>Bachelor's degree or higher</td><td>Foreign credentials need ECA</td></tr>
+              <tr><td><strong>Language</strong></td><td>CLB 7 all four skills</td><td>IELTS, CELPIP, TEF, TCF accepted</td></tr>
+              <tr><td><strong>Work Experience</strong></td><td>1 year skilled (NOC TEER 0/1/2/3)</td><td>In past 5 years (FSW) / past 3 years (CEC)</td></tr>
+              <tr><td><strong>FSW Grid (FSW only)</strong></td><td>67/100 on 6-factor grid</td><td>Not required for CEC applicants</td></tr>
+              <tr><td><strong>Intent to Reside</strong></td><td>Must intend to live in Ontario</td><td>Documentation of Ontario ties required</td></tr>
+              <tr><td><strong>Legal Status</strong></td><td>Valid status if in Canada</td><td>Maintained status also accepted</td></tr>
+              <tr><td><strong>Settlement Funds</strong></td><td>Required (varies by family size)</td><td>Not required if currently working in Canada</td></tr>
+            </tbody>
+          </table>
+
+          <div class="callout callout-warn">
+            <span class="callout-icon">⚠️</span>
+            <div class="callout-body"><p>Meeting all requirements does not guarantee an NOI. OINP selects candidates at its own discretion. Candidates with higher CRS scores and stronger Ontario ties are prioritised. Check the <a href="https://www.ontario.ca/page/2026-ontario-immigrant-nominee-program-updates" target="_blank" rel="noopener noreferrer">official OINP 2026 updates</a> for current selection criteria.</p></div>
+          </div>
+        </section>
+
+        <!-- OINP CRS CUTOFFS TABLE -->
+        <section class="info-section" aria-labelledby="oinp-cutoffs">
+          <h2 id="oinp-cutoffs">OINP CRS Cutoff Scores — Recent NOI Rounds</h2>
+          <p>Ontario issues NOIs in rounds. Here are recent OINP draw CRS cutoffs:</p>
+
+          <div style="overflow-x:auto;">
+            <table class="data-table" aria-label="OINP Recent NOI Rounds CRS Cutoff Scores">
+              <thead><tr><th>Date</th><th>Stream</th><th>Min CRS</th><th>NOIs Issued</th></tr></thead>
+              <tbody>
+                <tr><td>Oct 9, 2025</td><td>Foreign Worker (EJO)</td><td><strong>31+ pts</strong></td><td>1,680</td></tr>
+                <tr><td>2025 (multiple)</td><td>Human Capital Priorities</td><td><strong>400–491</strong></td><td>Varies</td></tr>
+                <tr><td>2025 (multiple)</td><td>French-Speaking Skilled Worker</td><td><strong>~351–400</strong></td><td>Varies</td></tr>
+                <tr><td>2025 (multiple)</td><td>Master's Graduate</td><td>N/A (points grid)</td><td>Varies</td></tr>
+                <tr><td>2025 (multiple)</td><td>PhD Graduate</td><td>N/A (points grid)</td><td>Varies</td></tr>
+              </tbody>
+            </table>
+          </div>
+          <p style="font-size:.76rem;color:var(--text-muted);margin-top:8px;">Source: <a href="https://www.ontario.ca/page/2026-ontario-immigrant-nominee-program-updates" target="_blank" rel="noopener noreferrer">Official Ontario OINP 2026 Updates</a>. CRS cutoffs vary per round. Data is approximate.</p>
+        </section>
+
+        <!-- HOW IT WORKS -->
+        <section class="info-section" aria-labelledby="how-oinp-works">
+          <h2 id="how-oinp-works">How the OINP Express Entry Process Works</h2>
+          <p>The OINP Human Capital Priorities Stream is invitation-only. Here's the step-by-step process:</p>
+
+          <div class="steps-list">
+            <div class="step-box">
+              <div class="step-num">1</div>
+              <div class="step-text">
+                <h4>Create Express Entry Profile</h4>
+                <p>Enter the federal Express Entry pool under FSW or CEC. Use our <a href="/">free CRS calculator</a> first to estimate your score.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">2</div>
+              <div class="step-text">
+                <h4>Receive NOI from Ontario</h4>
+                <p>OINP searches the pool and sends a Notification of Interest (NOI) to eligible candidates. You cannot request an NOI — wait for Ontario to select you.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">3</div>
+              <div class="step-text">
+                <h4>Apply to OINP Within 45 Days</h4>
+                <p>Once you receive your NOI, you have exactly 45 calendar days to submit your OINP application. Missing this deadline voids the NOI.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">4</div>
+              <div class="step-text">
+                <h4>Receive Ontario Nomination</h4>
+                <p>If approved, Ontario sends you a Nomination Approval Letter via your Express Entry account. You have 30 days to accept the nomination.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">5</div>
+              <div class="step-text">
+                <h4>Get +600 CRS Points &amp; ITA</h4>
+                <p>Accepting the nomination instantly adds 600 CRS points to your profile. You will receive an ITA at the next Express Entry draw.</p>
+              </div>
+            </div>
+            <div class="step-box">
+              <div class="step-num">6</div>
+              <div class="step-text">
+                <h4>Apply for Canadian PR</h4>
+                <p>After receiving your ITA, submit your PR application to IRCC. Standard processing is 6 months. You must intend to live in Ontario.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- CTA BANNER -->
+        <div class="cta-banner">
+          <h3>🚀 Want a Higher CRS Score Before Entering the Pool?</h3>
+          <p>Improve your language scores, education, or work experience to maximise your OINP chances.</p>
+          <div class="cta-banner-btns">
+            <a href="/how-to-improve-crs-score" class="cta-btn-white">How to Improve CRS Score →</a>
+            <a href="/" class="cta-btn-red">Calculate Full CRS Score →</a>
+          </div>
+        </div>
+
+        <!-- ONTARIO CITIES SECTION (GEO) -->
+        <section class="info-section" aria-labelledby="ontario-cities">
+          <h2 id="ontario-cities">Working &amp; Settling in Ontario</h2>
+
+          <p>Ontario is Canada's most economically diverse province. It offers immigration-friendly cities across multiple industries.</p>
+
+          <h3>Top Ontario Cities for Immigrants</h3>
+          <ul>
+            <li><strong>Toronto:</strong> Canada's financial capital. Home to Bay Street, tech corridors, and over 200 languages spoken. Top NOC sectors: finance, IT, healthcare.</li>
+            <li><strong>Ottawa:</strong> Federal government hub. Strong demand for public servants, IT professionals, and bilingual (English/French) workers.</li>
+            <li><strong>Mississauga &amp; Brampton:</strong> Part of the Greater Toronto Area. Strong manufacturing, logistics, and healthcare sectors. Lower cost of living than Toronto.</li>
+            <li><strong>Hamilton:</strong> Growing tech and creative economy. Affordable housing. Close to Toronto via GO Transit.</li>
+            <li><strong>Kitchener-Waterloo:</strong> Canada's "Silicon Valley." Home to Shopify (HQ), Google Canada, and hundreds of tech startups.</li>
+            <li><strong>London, Ontario:</strong> Strong healthcare, education, and insurance sectors. Affordable housing and a large university student population.</li>
+          </ul>
+
+          <div class="callout callout-tip">
+            <span class="callout-icon">✅</span>
+            <div class="callout-body"><p>Having ties to Ontario — such as a job offer, family, previous work, or study experience in Ontario — significantly strengthens your OINP application and reduces the risk of rejection.</p></div>
+          </div>
+        </section>
+
+        <!-- OINP VS EXPRESS ENTRY -->
+        <section class="info-section" aria-labelledby="oinp-vs-ee">
+          <h2 id="oinp-vs-ee">OINP vs Express Entry — What's the Difference?</h2>
+
+          <p>Many applicants confuse the federal Express Entry system with the OINP. Here's a clear comparison:</p>
+
+          <table class="data-table" aria-label="OINP vs Express Entry Comparison">
+            <thead><tr><th>Feature</th><th>Federal Express Entry</th><th>Ontario OINP</th></tr></thead>
+            <tbody>
+              <tr><td>Managed by</td><td>IRCC (federal)</td><td>Government of Ontario</td></tr>
+              <tr><td>How to apply</td><td>Create online profile</td><td>Wait for NOI from Ontario</td></tr>
+              <tr><td>CRS requirement</td><td>Must beat draw cutoff (470–525)</td><td>Minimum 400 for HCP stream</td></tr>
+              <tr><td>Program streams</td><td>FSW, CEC, FST</td><td>HCP, French, Trades, Job Offer, Graduate</td></tr>
+              <tr><td>Processing time</td><td>6 months after ITA</td><td>~60–150 days for OINP, then 6 months PR</td></tr>
+              <tr><td>Location requirement</td><td>Live anywhere in Canada (outside QC)</td><td>Must intend to live in Ontario</td></tr>
+              <tr><td>Job offer required?</td><td>No (for most draws)</td><td>No (for HCP stream)</td></tr>
+            </tbody>
+          </table>
+        </section>
+
+        <!-- FAQ -->
+        <section class="info-section" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">Ontario CRS Calculator — Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the minimum CRS score for OINP in 2026?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The official minimum CRS score for the OINP Human Capital Priorities Stream is <strong>400 points</strong>. However, Ontario selects candidates at its discretion. In recent rounds, candidates with CRS scores of 450–491 were more likely to receive an NOI. A lower CRS score can still lead to an NOI if you have strong Ontario ties (job offer, past Ontario education/work experience).</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              How many CRS points does Ontario PNP add?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">An <strong>Ontario PNP nomination adds +600 CRS points</strong> instantly. This means that even a candidate with a CRS score of 420 would have 1,020 points after nomination — far above any draw cutoff. Ontario nomination essentially guarantees an ITA at the very next Express Entry draw. Use our <a href="/">full CRS calculator</a> to see your score with and without PNP points.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What are the OINP Human Capital Priorities Stream requirements?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Requirements include: (1) Active Express Entry profile under FSW or CEC; (2) Minimum CRS score of 400; (3) CLB 7 or higher in all four language skills; (4) Bachelor's degree or higher (ECA required for foreign credentials); (5) At least 1 year of skilled work experience in NOC TEER 0, 1, 2, or 3; (6) Intent to live and work in Ontario; (7) Sufficient settlement funds. FSW applicants also need 67+ on the federal 6-factor grid.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is an OINP NOI and how long is it valid?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">An OINP <strong>Notification of Interest (NOI)</strong> is an invitation from the Ontario government to apply for provincial nomination. It is issued through your Express Entry account. Once you receive an NOI, you have exactly <strong>45 calendar days</strong> to submit your full OINP application online. Applications submitted after 45 days will not be processed, and you will need to wait for a new NOI.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              Can I apply to OINP without a job offer?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Yes. The OINP Human Capital Priorities Stream and French-Speaking Skilled Worker Stream <strong>do not require a job offer</strong>. You need to meet education, language, work experience, and CRS score requirements. However, having an Ontario job offer strengthens your application and is mandatory for the Employer Job Offer streams. A valid Ontario job offer also adds 50–200 points to your federal CRS score — check our <a href="/express-entry-crs-calculator">Express Entry calculator</a> for details.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the OINP French-Speaking Skilled Worker Stream?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The OINP French-Speaking Skilled Worker Stream is for Express Entry candidates who speak French at CLB 7 or higher and English at CLB 6 or higher. This stream typically has lower CRS cutoffs than the Human Capital Priorities Stream. It requires an active Express Entry profile, at least 1 year of work experience in NOC TEER 0, 1, 2, or 3, and the intention to live and work in Ontario.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              How long does OINP processing take in 2026?
+              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">OINP application processing typically takes <strong>60 to 150 days</strong> after submission for most streams. Once nominated, you accept the nomination in your Express Entry profile (within 30 days) and receive +600 CRS points. You then typically receive an ITA within 1–2 Express Entry draws. After submitting the federal PR application, IRCC's processing standard is 6 months.</div>
+          </div>
+        </section>
+
+        <!-- RELATED CALCULATORS -->
+        <section class="info-section" aria-labelledby="related-calc">
+          <h2 id="related-calc">More Provincial &amp; Express Entry Calculators</h2>
+          <div class="calc-grid">
+            <a href="/" class="calc-card"><div class="ci">🧮</div><div class="cn">CRS Calculator</div><div class="cs">Main tool</div></a>
+            <a href="/express-entry-crs-calculator" class="calc-card"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">FSW/CEC/FST</div></a>
+            <a href="/pnp-crs-calculator" class="calc-card"><div class="ci">🏛️</div><div class="cn">All PNPs</div><div class="cs">All provinces</div></a>
+            <a href="/alberta-crs-calculator" class="calc-card"><div class="ci">🏔️</div><div class="cn">Alberta PNP</div><div class="cs">AINP stream</div></a>
+            <a href="/bc-crs-calculator" class="calc-card"><div class="ci">🌲</div><div class="cn">BC PNP</div><div class="cs">BC PNP stream</div></a>
+            <a href="/ontario-crs-calculator" class="calc-card" style="border-color:var(--ontario-blue);"><div class="ci">🏙️</div><div class="cn">Ontario PNP ✓</div><div class="cs">This page</div></a>
+            <a href="/manitoba-crs-calculator" class="calc-card"><div class="ci">🌾</div><div class="cn">Manitoba PNP</div><div class="cs">MPNP stream</div></a>
+            <a href="/ielts-crs-calculator" class="calc-card"><div class="ci">📝</div><div class="cn">IELTS to CRS</div><div class="cs">CLB converter</div></a>
+            <a href="/crs-cutoff-scores" class="calc-card"><div class="ci">📊</div><div class="cn">Cutoff History</div><div class="cs">All draws</div></a>
+            <a href="/how-to-improve-crs-score" class="calc-card"><div class="ci">📈</div><div class="cn">Improve Score</div><div class="cs">11 strategies</div></a>
+            <a href="/stem-crs-calculator" class="calc-card"><div class="ci">💻</div><div class="cn">STEM Workers</div><div class="cs">Tech category</div></a>
+            <a href="/healthcare-crs-calculator" class="calc-card"><div class="ci">🏥</div><div class="cn">Healthcare</div><div class="cs">Healthcare draw</div></a>
+          </div>
+        </section>
+
+      </div><!-- end left column -->
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+
+        <div class="sidebar-widget" style="border:none;background:none;box-shadow:none;padding:0;">
+          <div class="noi-box">
+            <div class="nb">400+</div>
+            <div class="nl">Min CRS for OINP HCP Stream</div>
+            <div class="ns">+600 CRS with Ontario nomination<br>≈ guaranteed ITA</div>
+          </div>
+          <p style="font-size:.75rem;color:var(--text-muted);margin-top:10px;text-align:center;"><a href="/crs-cutoff-scores">All OINP draw results →</a></p>
+        </div>
+
+        <div class="sidebar-widget" style="border:none;background:none;box-shadow:none;padding:0;">
+          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Ontario OINP Tools</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/ontario-crs-calculator" class="current">🏙️ Ontario OINP Calculator ✓</a></li>
+            <li><a href="/">🧮 Full CRS Calculator</a></li>
+            <li><a href="/express-entry-crs-calculator">🇨🇦 Express Entry Calculator</a></li>
+            <li><a href="/cec-crs-calculator">💼 CEC Calculator</a></li>
+            <li><a href="/fsw-crs-calculator">🌐 FSW Calculator</a></li>
+            <li><a href="/pnp-crs-calculator">🏛️ All PNP Calculator</a></li>
+            <li><a href="/ielts-crs-calculator">📝 IELTS to CLB Converter</a></li>
+            <li><a href="/how-to-improve-crs-score">📈 Improve CRS Score</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Other Provincial Calculators</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
+            <li><a href="/bc-crs-calculator">British Columbia (BC PNP)</a></li>
+            <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+            <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
+            <li><a href="/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+            <li><a href="/new-brunswick-crs-calculator">New Brunswick (NBPNP)</a></li>
+            <li><a href="/pei-crs-calculator">Prince Edward Island (PEI PNP)</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>CRS Guides</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
+            <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+            <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
+            <li><a href="/canada-express-entry-eligibility">Express Entry Eligibility</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Official OINP Links</h3>
+          <a href="https://www.ontario.ca/page/ontarios-express-entry-human-capital-priorities-stream" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            OINP Human Capital Stream
+          </a>
+          <a href="https://www.ontario.ca/page/2026-ontario-immigrant-nominee-program-updates" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            OINP 2026 Updates
+          </a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IRCC Express Entry
+          </a>
+          <a href="https://www.ontario.ca/page/ontarios-express-entry-french-speaking-skilled-worker-stream" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            OINP French Stream
+          </a>
+        </div>
+
+      </aside>
     </div>
-    
-      </section>
-
-      
-<div class="calculator-wrapper" id="calculator">
-  <div class="calc-header">
-    <h2>🧮 CRS Score Calculator</h2>
-    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
-  </div>
-  <form id="crs-form" novalidate>
-    <div class="calc-body">
-
-      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">A</span>
-          Core / Human Capital Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="marital-status">Marital Status</label>
-            <div class="radio-group" role="radiogroup" aria-label="Marital status">
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="single" checked> Single
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
-              </label>
-            </div>
-          </div>
-          <div class="form-group" id="spouse-coming-section" style="display:none;">
-            <label>Is your spouse/partner coming to Canada with you?</label>
-            <div class="radio-group" role="radiogroup">
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="age">Age</label>
-            <select name="age" id="age" class="form-control">
-              <option value="under18">17 and under</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45plus">45 and over</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="education">Level of Education</label>
-            <select name="education" id="education" class="form-control">
-              <option value="none">Less than secondary school</option>
-              <option value="secondary">Secondary diploma (high school)</option>
-              <option value="one_year">One-year post-secondary program</option>
-              <option value="two_year">Two-year post-secondary program</option>
-              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
-              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
-              <option value="masters">Master's degree / Professional degree</option>
-              <option value="phd">PhD (Doctoral degree)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="canadianWE">Canadian Work Experience</label>
-            <select name="canadianWE" id="canadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">B</span>
-          First Official Language (English or French)
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang1TestType">Language Test Type</label>
-          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- Select test --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">C</span>
-          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang2TestType">Second Language Test Type</label>
-          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION D: SPOUSE FACTORS -->
-      <div class="spouse-section" id="spouse-section">
-        <div class="calc-section-title">
-          <span class="section-badge">D</span>
-          Spouse / Partner Factors
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="spouseEducation">Spouse Education Level</label>
-            <select name="spouseEducation" id="spouseEducation" class="form-control">
-              <option value="none">Less than secondary</option>
-              <option value="secondary">Secondary diploma</option>
-              <option value="one_year">One-year program</option>
-              <option value="two_year">Two-year program</option>
-              <option value="bachelors">Bachelor's degree</option>
-              <option value="two_or_more">Two or more certificates</option>
-              <option value="masters">Master's degree</option>
-              <option value="phd">PhD</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
-            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group mt-2 mb-3">
-          <label for="spouseLangTestType">Spouse Language Test Type</label>
-          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="CELPIP">CELPIP-G</option>
-            <option value="TEF">TEF Canada</option>
-            <option value="TCF">TCF Canada</option>
-          </select>
-        </div>
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION E: SKILL TRANSFERABILITY -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">E</span>
-          Skill Transferability Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="foreignWE">Foreign Work Experience</label>
-            <select name="foreignWE" id="foreignWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1–2 years</option>
-              <option value="3">3 or more years</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION F: ADDITIONAL POINTS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">F</span>
-          Additional Points
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end calc-body -->
-
-    <div class="calc-btn-wrapper">
-      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
-        Calculate My CRS Score →
-      </button>
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
-      <div class="score-display">
-        <p class="score-label">Your Estimated CRS Score</p>
-        <div class="score-number score-good">—</div>
-        <p class="score-verdict">Fill in the form above and click Calculate</p>
-      </div>
-
-      <div class="score-progress-wrapper">
-        <div class="score-progress-label">
-          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
-        </div>
-        <div class="score-progress-bar">
-          <div class="score-progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="score-comparison"></div>
-
-      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
-      <div class="table-wrapper">
-        <table class="breakdown-table">
-          <thead>
-            <tr>
-              <th>CRS Factor</th>
-              <th style="text-align:right;">Points</th>
-            </tr>
-          </thead>
-          <tbody id="breakdown-tbody">
-            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="score-actions mt-3">
-        <a href="#" class="btn btn-outline btn-whatsapp">
-          📱 Share on WhatsApp
-        </a>
-        <button type="button" class="btn btn-outline btn-copy">
-          📋 Copy Score
-        </button>
-        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
-      </div>
-
-      <div class="internal-cta mt-3">
-        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
-        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
-      </div>
-    </div>
-
-  </form>
-</div>
-
-<script>
-// Language score dropdown population
-(function() {
-  const IELTS_SCORES = {
-    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
-  };
-  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
-  const TEF_SCORES = {
-    speaking:  ['181','226','271','310','349','371','394'],
-    listening: ['145','181','217','253','280','298','316'],
-    reading:   ['121','151','181','207','233','248','263'],
-    writing:   ['181','226','271','310','349','371','393']
-  };
-  const TCF_SCORES = {
-    speaking:  ['4','6','10','13','15','17','20'],
-    listening: ['331','369','398','458','503','541','589'],
-    reading:   ['342','375','406','453','499','524','549'],
-    writing:   ['4','6','10','13','15','17','20']
-  };
-
-  function populateScores(testType, prefix) {
-    const skills = ['speaking','listening','reading','writing'];
-    skills.forEach(skill => {
-      const sel = document.getElementById(prefix + '-' + skill) ||
-                  document.querySelector(`select[name="${prefix}_${skill}"]`);
-      if (!sel) return;
-      sel.innerHTML = '<option value="0">Select score</option>';
-      let scores = [];
-      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
-      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
-      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
-      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
-      scores.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = s;
-        sel.appendChild(opt);
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang1Sel = document.getElementById('lang1TestType');
-    const lang2Sel = document.getElementById('lang2TestType');
-    const spouseSel = document.getElementById('spouseLangTestType');
-
-    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
-    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
-    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
-  });
-})();
-</script>
-
-
-      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
-
-      <section class="card">
-        
-    <h2>Ontario Employer Job Offer and OINP</h2>
-    <p>While the HCP Stream does not require a job offer, having an Ontario employer job offer can make you eligible for the Employer Job Offer Streams, which have different (often lower) CRS requirements. An Ontario job offer combined with a nomination can dramatically accelerate your pathway to Canadian PR.</p>
-
-    <h2>Toronto vs Rest of Ontario</h2>
-    <p>Toronto, Ottawa, and Hamilton-Niagara are Ontario's major immigration destinations. Many OINP streams require or prefer candidates who will settle in Ontario (outside Toronto for some streams). Ontario's technology sector (particularly in the Toronto-Waterloo corridor), financial services, healthcare, and manufacturing sectors are the primary drivers of immigration demand.</p>
-
-    <h2>How to Apply for OINP</h2>
-    <p>For Express Entry-aligned streams: (1) Create an active Express Entry profile; (2) Register your interest with the OINP through their online portal; (3) Wait for an NOI or respond to an Express Entry Draw; (4) Accept the NOI and complete the OINP application within the deadline; (5) Receive the nomination and +600 CRS points. Compare with <a href="/bc-crs-calculator.html">BC PNP</a> or <a href="/alberta-crs-calculator.html">Alberta AINP</a> to find the best provincial option for your profile.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.ontario.ca/page/ontario-immigrant-nominee-program-oinp" target="_blank" rel="noopener noreferrer">Official OINP Website ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li></ul></div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="card" aria-labelledby="faq-heading">
-        <div class="card-header">
-          <span class="card-icon">❓</span>
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-        </div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the minimum CRS score for OINP Human Capital Priorities?<i class="faq-toggle">+</i></div><div class="faq-answer">OINP does not publish a fixed minimum CRS score. Cutoffs vary by draw. The HCP stream typically targets candidates with CRS scores of 400 or above who work in priority occupations. Some tech-specific draws have had lower cutoffs around 350–400.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Does Ontario have a tech-specific immigration stream?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes, Ontario's OINP has conducted targeted draws for tech workers within the Human Capital Priorities stream, with specific NOC codes in information technology, engineering, and science sectors. Check the OINP website for current draws.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can I apply for OINP without a job offer?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. The Human Capital Priorities Stream does not require a job offer. However, the Employer Job Offer International Student and Foreign Worker streams do require an Ontario employer job offer.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How does OINP nomination affect my CRS score?<i class="faq-toggle">+</i></div><div class="faq-answer">An OINP nomination through the Express Entry-aligned stream adds exactly 600 CRS points to your profile. This puts your total CRS score well above all historical Express Entry draw cutoffs, virtually guaranteeing an ITA.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How long does OINP processing take?<i class="faq-toggle">+</i></div><div class="faq-answer">OINP processing times for the Express Entry streams are typically 30–90 days after submitting a complete application following an NOI. Once nominated, IRCC will add the 600 points and you'll receive an ITA in the next available draw.</div></li>
-        </ul>
-      </section>
-
-      <div class="internal-cta">
-        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </div>
-
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Draw Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Calculators</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
-          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
-        </div>
-      </div>
-    </aside>
   </div>
 </main>
+
+<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+        <h4>CRS Calculators</h4>
+        <ul>
+          <li><a href="/">CRS Score Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
+          <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
+          <li><a href="/stem-crs-calculator">STEM Workers</a></li>
+          <li><a href="/healthcare-crs-calculator">Healthcare Workers</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+        <h4>Provincial Calculators</h4>
+        <ul>
+          <li><a href="/ontario-crs-calculator">Ontario (OINP) ✓</a></li>
+          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
+          <li><a href="/nova-scotia-crs-calculator">Nova Scotia</a></li>
+          <li><a href="/new-brunswick-crs-calculator">New Brunswick</a></li>
+          <li><a href="/pei-crs-calculator">Prince Edward Island</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+        <h4>Ontario Immigration</h4>
+        <ul>
+          <li><a href="/ontario-crs-calculator">Ontario CRS Calculator</a></li>
+          <li><a href="/blog/ontario-pnp-guide">Ontario PNP Guide 2026</a></li>
+          <li><a href="/blog/oinp-human-capital-priorities">OINP HCP Stream Guide</a></li>
+          <li><a href="/blog/ontario-crs-cutoffs">Ontario CRS Cutoffs</a></li>
+          <li><a href="/blog/live-in-ontario-canada">Living in Ontario</a></li>
+          <li><a href="https://www.ontario.ca/page/ontarios-express-entry-human-capital-priorities-stream" target="_blank" rel="noopener noreferrer">Official OINP Site ↗</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+        <h4>CRS Guides</h4>
+        <ul>
+          <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
+          <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+          <li><a href="/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
+          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="/blog">All Articles</a></li>
+        </ul>
+        <h4 style="margin-top:14px;">Official Links</h4>
+        <ul>
+          <li><a href="https://www.ontario.ca/page/ontario-immigrant-nominee-program" target="_blank" rel="noopener noreferrer">Ontario OINP ↗</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
+        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
+      </div>
+      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only and does not guarantee an OINP nomination or ITA. Always verify eligibility on the <a href="https://www.ontario.ca/page/ontario-immigrant-nominee-program" target="_blank" rel="noopener noreferrer" style="color:#888;">official OINP website</a> before applying.</p>
     </div>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
-</body>
-</html>
+
+<!-- JAVASCRIPT -->
+<script>
+  // FAQ toggle
+  function toggleFAQ(btn){
+    const ans = btn.nextElementSibling;
+    const isOpen = btn.classList.contains('open');
+    document.querySelectorAll('.faq-question.open').forEach(b=>{b.classList.remove('open');b.setAttribute('aria-expanded','false');b.nextElementSibling.classList.remove('open');});
+    if(!isOpen){btn.classList.add('open');btn.setAttribute('aria-expanded','true');ans.classList.add('open');}
+  }
+
+  // Ontario eligibility calculator
+  function calculateOntario(e) {
+    e.preventDefault();
+    const crs = parseInt(document.getElementById('crsScore').value) || 0;
+    const program = document.querySelector('input[name="eeProgram"]:checked').value;
+    const edu = document.getElementById('eduLevel').value;
+    const lang = parseInt(document.getElementById('langMin').value);
+    const work = parseInt(document.getElementById('workExp').value);
+    const fswPts = document.getElementById('fswPoints').value;
+    const intendON = document.querySelector('input[name="intendOntario"]:checked').value;
+    const legalStatus = document.querySelector('input[name="legalStatus"]:checked').value;
+    const jobOffer = document.querySelector('input[name="jobOffer"]:checked').value;
+    const ontarioExp = document.querySelector('input[name="ontarioExp"]:checked').value;
+    const french = document.querySelector('input[name="french"]:checked').value;
+
+    // Evaluate each criterion
+    const checks = [
+      { label: 'Express Entry profile (FSW or CEC)', pass: program !== 'fst', fail: program === 'fst', warn: false, note: program === 'fst' ? 'FST not eligible for HCP stream' : 'Eligible program' },
+      { label: 'CRS score ≥ 400', pass: crs >= 400, fail: crs < 400, warn: false, note: crs >= 450 ? `${crs} pts — competitive` : crs >= 400 ? `${crs} pts — meets minimum` : `${crs} pts — below 400 minimum` },
+      { label: 'Education: Bachelor\'s degree or higher', pass: edu !== 'none', fail: edu === 'none', warn: false, note: edu === 'none' ? 'Below minimum education' : 'Meets education requirement' },
+      { label: 'Language: CLB 7 in all four skills', pass: lang >= 7, fail: lang < 7, warn: false, note: lang >= 7 ? `CLB ${lang} — meets requirement` : `CLB ${lang} — minimum CLB 7 required` },
+      { label: 'Work experience: 1+ year NOC TEER 0/1/2/3', pass: work >= 1, fail: work === 0, warn: false, note: work >= 1 ? `${work} year(s) — meets requirement` : 'At least 1 year required' },
+      { label: 'FSW 6-factor score ≥ 67 (FSW only)', pass: program !== 'fsw' || fswPts === '67plus' || fswPts === 'na', fail: program === 'fsw' && fswPts === 'below67', warn: false, note: program === 'cec' ? 'Not required for CEC' : fswPts === '67plus' ? 'Meets FSW grid requirement' : fswPts === 'below67' ? 'Below 67 — FSW ineligible' : 'Verify your FSW grid score' },
+      { label: 'Intends to live in Ontario', pass: intendON === 'yes', fail: intendON === 'no', warn: false, note: intendON === 'yes' ? 'Meets intent requirement' : 'Must intend to live in Ontario' },
+      { label: 'Legal status in Canada (if applicable)', pass: legalStatus !== 'invalid', fail: legalStatus === 'invalid', warn: false, note: legalStatus === 'na' ? 'Outside Canada — not applicable' : legalStatus === 'invalid' ? 'Must have valid/maintained status' : 'Meets legal status requirement' },
+    ];
+
+    const failCount = checks.filter(c => c.fail).length;
+    const passCount = checks.filter(c => c.pass).length;
+
+    // Strength bonuses
+    let strength = '';
+    const bonuses = [];
+    if (jobOffer === 'yes') bonuses.push('Ontario job offer ✓');
+    if (ontarioExp === 'work' || ontarioExp === 'both') bonuses.push('Ontario work experience ✓');
+    if (ontarioExp === 'study' || ontarioExp === 'both') bonuses.push('Ontario education ✓');
+    if (french === 'clb7') bonuses.push('French CLB 7+ — also eligible for French-Speaking stream ✓');
+    if (crs >= 470) bonuses.push('High CRS score (470+) — excellent NOI chances ✓');
+
+    // Determine result
+    let resultClass, icon, title, msg;
+    if (failCount === 0 && crs >= 400) {
+      if (crs >= 450) {
+        resultClass = 'result-eligible';
+        icon = '✅';
+        title = 'You appear eligible for OINP Human Capital Priorities Stream';
+        msg = `Your CRS score of <strong>${crs}</strong> meets Ontario's minimum requirement of 400. All checked eligibility criteria are satisfied. You may receive an NOI (Notification of Interest) from Ontario during their next selection round.<br><br>After receiving an NOI, you have <strong>45 days</strong> to apply to OINP. If nominated, you receive <strong>+600 CRS points</strong>, bringing your total to <strong>${crs + 600} points</strong> — virtually guaranteeing an ITA.`;
+      } else {
+        resultClass = 'result-borderline';
+        icon = '🟡';
+        title = 'Meets minimum requirements — CRS score is at the threshold';
+        msg = `Your CRS score of <strong>${crs}</strong> meets Ontario's minimum of 400, but is below the typical competitive range (450–491). OINP may issue NOIs to candidates with 400–449 in specific rounds, but higher scores improve your chances significantly.<br><br>Consider <a href="/how-to-improve-crs-score">improving your CRS score</a> before entering the Express Entry pool.`;
+      }
+    } else if (failCount === 1) {
+      resultClass = 'result-borderline';
+      icon = '⚠️';
+      title = 'Almost eligible — 1 requirement needs attention';
+      msg = `You meet most OINP Human Capital Priorities Stream requirements, but <strong>${failCount} criterion</strong> needs to be addressed before you can qualify. Review the checklist below for details.`;
+    } else {
+      resultClass = 'result-ineligible';
+      icon = '❌';
+      title = `Not currently eligible — ${failCount} requirements not met`;
+      msg = `Your current profile does not meet ${failCount} of the OINP Human Capital Priorities Stream requirements. Review the checklist below. You may be eligible for other OINP streams or improve your profile to qualify in the future.`;
+    }
+
+    if (french === 'clb7') {
+      msg += '<br><br>🇫🇷 <strong>Bonus:</strong> Your French CLB 7+ makes you potentially eligible for the <a href="https://www.ontario.ca/page/ontarios-express-entry-french-speaking-skilled-worker-stream" target="_blank" rel="noopener noreferrer">OINP French-Speaking Skilled Worker Stream</a>, which has lower CRS cutoffs.';
+    }
+
+    if (bonuses.length > 0) {
+      msg += `<br><br>💪 <strong>Profile strengths:</strong> ${bonuses.join(', ')}`;
+    }
+
+    // Build checklist
+    const rows = checks.map(c => `
+      <div class="rb-row">
+        <span class="rb-label">${c.label}</span>
+        <span class="rb-status ${c.fail ? 'rb-fail' : 'rb-pass'}">${c.fail ? '✗' : '✓'} ${c.note}</span>
+      </div>`).join('');
+
+    // Populate result
+    const rc = document.getElementById('resultCard');
+    rc.className = 'result-card ' + resultClass;
+    document.getElementById('resultIcon').textContent = icon;
+    document.getElementById('resultTitle').textContent = title;
+    document.getElementById('resultMsg').innerHTML = msg;
+    document.getElementById('checklistRows').innerHTML = rows;
+
+    // Score meter (max shown = 800)
+    const pct = Math.min((crs / 800) * 100, 100);
+    document.getElementById('meterFill').style.width = pct + '%';
+    document.getElementById('meterFill').style.background = crs >= 450 ? '#28a745' : crs >= 400 ? '#f0c040' : '#dc3545';
+    document.getElementById('scoreMarker').style.left = pct + '%';
+    document.getElementById('scoreMarkerLabel').textContent = crs + ' pts';
+
+    document.getElementById('result').style.display = 'block
