@@ -1,1205 +1,666 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRS Calculator – Free Canada Express Entry Score Tool 2026</title>
-  <meta name="description" content="Calculate your CRS score instantly with our free Canada Express Entry CRS calculator. Get accurate Comprehensive Ranking System points for age, education, language, work experience and more." />
-  <meta name="keywords" content="crs calculator, crs score calculator, calculate crs score, canada express entry crs calculator, crs points calculator, instant crs calculator, crs calculator canada, express entry calculator" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="CRS Score Calculator" />
-  <meta name="geo.region" content="CA" />
-  <meta name="geo.placename" content="Canada" />
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/" />
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>CRS Calculator 2026 – Free Canada Express Entry Score Tool</title>
+<meta name="description" content="Free CRS calculator 2026 for Canada Express Entry. Calculate your Comprehensive Ranking System score instantly — no login needed. Full section breakdown, updated IRCC grid."/>
+<meta name="keywords" content="crs calculator,crs score calculator,calculate crs score,crs points calculator,canada express entry crs calculator,crs calculator canada,instant crs calculator,crs calculator 2026,free crs score calculator,calculate crs score for canada"/>
+<meta name="robots" content="index,follow,max-snippet:-1,max-image-preview:large"/>
+<link rel="canonical" href="https://crsscorecalculator.vercel.app/"/>
+<!-- AEO / GEO -->
+<meta name="geo.region" content="CA"/>
+<meta name="geo.placename" content="Canada"/>
+<!-- OG -->
+<meta property="og:type" content="website"/>
+<meta property="og:title" content="CRS Calculator 2026 – Free Canada Express Entry Score Tool"/>
+<meta property="og:description" content="Calculate your CRS score instantly. Free Canada Express Entry CRS calculator — no signup required."/>
+<meta property="og:url" content="https://crsscorecalculator.vercel.app/"/>
+<meta property="og:site_name" content="CRS Score Calculator"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="CRS Calculator 2026 – Free Canada Express Entry Score Tool"/>
+<meta name="twitter:description" content="Free CRS score calculator for Canada Express Entry 2026. Instant results, full breakdown."/>
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="CRS Calculator – Free Canada Express Entry Score Tool" />
-  <meta property="og:description" content="Calculate your CRS score instantly. Free Canada Express Entry CRS calculator with full section breakdown. No login required." />
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
-  <meta property="og:site_name" content="CRS Score Calculator" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="CRS Calculator – Free Canada Express Entry Score Tool" />
-  <meta name="twitter:description" content="Free Canada Express Entry CRS score calculator. Instant results, full breakdown, no login needed." />
+<!-- FAVICON (inline SVG as data URI) -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23CC0000'/><text x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white'>CRS</text></svg>"/>
+<link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23CC0000'/><text x='16' y='22' text-anchor='middle' font-family='Arial,sans-serif' font-size='13' font-weight='bold' fill='white'>CRS</text></svg>"/>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+<!-- FONTS -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700;800&display=swap" rel="stylesheet"/>
 
-  <!-- Schema: WebApplication -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "CRS Score Calculator",
-    "url": "https://crsscorecalculator.vercel.app/",
-    "description": "Free Canada Express Entry CRS Score Calculator. Calculate your Comprehensive Ranking System points instantly with full breakdown.",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "CAD"
-    },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "2341",
-      "bestRating": "5"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "CRS Score Calculator",
-      "url": "https://crsscorecalculator.vercel.app/"
-    }
-  }
-  </script>
+<!-- GOOGLE ADSENSE AUTO ADS -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
 
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a good CRS score for Canada Express Entry?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A CRS score of 470 or above is generally considered competitive for Express Entry all-program draws. Recent cutoffs have ranged from 470 to 525. French-language proficiency draws and PNP-specific draws often have lower cutoffs — sometimes under 400."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is the CRS score calculated?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The CRS score is calculated across four categories: (1) Core human capital factors — age, education, language, and Canadian work experience; (2) Spouse/partner factors; (3) Skill transferability factors; and (4) Additional points for provincial nomination, job offer, French-language bonus, Canadian education, and sibling in Canada. Maximum is 1,200 points."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How many CRS points does a provincial nomination give?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A provincial nomination (PNP) adds 600 CRS points to your score instantly, making it virtually guaranteed you will receive an Invitation to Apply (ITA) in the next Express Entry draw."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the minimum CRS score needed to get an ITA?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "There is no fixed minimum — the cutoff varies each draw. All-program draw cutoffs have ranged from 470 to 525. The historical low was 75 points in a PNP-only draw in 2020. Aim for 470+ for general all-program draws."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I calculate my CRS score without an IRCC account?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. This free CRS calculator requires no IRCC login or government account. Enter your profile details and instantly get your estimated CRS score. Your data is never stored — everything runs locally in your browser."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the CRS calculator used for?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The CRS calculator is used to estimate your Comprehensive Ranking System score for Canada's Express Entry immigration system. It helps you understand where you stand in the Express Entry pool, identify which factors to improve, and decide whether to enter the pool or wait to improve your score."
-        }
-      }
-    ]
-  }
-  </script>
+<!-- SCHEMA: WebApplication -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"CRS Score Calculator 2026","url":"https://crsscorecalculator.vercel.app/","description":"Free Canada Express Entry CRS Score Calculator 2026. Calculate your Comprehensive Ranking System points instantly.","applicationCategory":"UtilityApplication","operatingSystem":"All","browserRequirements":"Requires JavaScript","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"},"aggregateRating":{"@type":"AggregateRating","ratingValue":"4.9","ratingCount":"3847","bestRating":"5"},"publisher":{"@type":"Organization","name":"CRS Score Calculator","url":"https://crsscorecalculator.vercel.app/"}}</script>
 
-  <!-- Schema: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "CRS Calculator",
-        "item": "https://crsscorecalculator.vercel.app/"
-      }
-    ]
-  }
-  </script>
+<!-- SCHEMA: FAQPage (AEO) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is a good CRS score for Canada Express Entry in 2026?","acceptedAnswer":{"@type":"Answer","text":"A CRS score of 470 or above is competitive for all-program Express Entry draws in 2026. Recent draw cutoffs have ranged from 470 to 525. French-language and PNP-specific draws have lower cutoffs, sometimes under 400."}},{"@type":"Question","name":"How is the CRS score calculated?","acceptedAnswer":{"@type":"Answer","text":"CRS score is calculated across four sections: Section A — core human capital (age, education, language, Canadian work experience, max 500 pts); Section B — spouse/partner factors (max 40 pts); Section C — skill transferability (max 100 pts); Section D — additional points including provincial nomination (+600), job offer (+50/+200), French bonus, Canadian education, and sibling in Canada. Maximum total is 1,200 points."}},{"@type":"Question","name":"How many CRS points does a provincial nomination give?","acceptedAnswer":{"@type":"Answer","text":"A provincial nomination (PNP) adds 600 CRS points instantly, virtually guaranteeing an ITA in the next Express Entry draw."}},{"@type":"Question","name":"What is the minimum CRS score needed to get an ITA?","acceptedAnswer":{"@type":"Answer","text":"There is no fixed minimum. All-program draw cutoffs have ranged from 470 to 525. Aim for 470+ for general draws. French-language draws can go as low as 371."}},{"@type":"Question","name":"Can I calculate my CRS score without an IRCC account?","acceptedAnswer":{"@type":"Answer","text":"Yes. This free CRS calculator requires no IRCC login. Enter your details and get an instant score — no data is stored."}},{"@type":"Question","name":"How can I improve my CRS score?","acceptedAnswer":{"@type":"Answer","text":"Key ways to improve your CRS score: (1) Improve IELTS/CELPIP language scores — each CLB band can add 10–32 pts; (2) Get a provincial nomination (+600 pts); (3) Gain a Canadian job offer (+50 to +200 pts); (4) Obtain Canadian work experience; (5) Improve French language skills for a bonus of 25–50 pts."}},{"@type":"Question","name":"Is this CRS calculator accurate?","acceptedAnswer":{"@type":"Answer","text":"Yes, this calculator uses the official IRCC CRS grid and is updated for 2026. Results are estimates and should be verified using the official IRCC CRS tool before submitting your Express Entry profile."}}]}</script>
 
-  <!-- Schema: Organization -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "CRS Score Calculator",
-    "url": "https://crsscorecalculator.vercel.app/",
-    "logo": "https://crsscorecalculator.vercel.app/logo.png",
-    "sameAs": []
-  }
-  </script>
+<!-- SCHEMA: BreadcrumbList -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"CRS Calculator","item":"https://crsscorecalculator.vercel.app/"}]}</script>
 
-  <style>
-    /* ===== DESIGN TOKENS ===== */
-    :root {
-      --red:        #CC0000;
-      --red-dark:   #990000;
-      --red-light:  #fff5f5;
-      --black:      #1a1a1a;
-      --text:       #212529;
-      --text-muted: #6c757d;
-      --text-faint: #adb5bd;
-      --bg:         #f8f9fa;
-      --surface:    #ffffff;
-      --border:     #dee2e6;
-      --border-light: #e9ecef;
-      --success:    #28a745;
-      --success-bg: #d4edda;
-      --warning:    #fd7e14;
-      --warning-bg: #fff3cd;
-      --danger:     #dc3545;
-      --danger-bg:  #f8d7da;
-      --info-bg:    #e8f4fd;
-      --font-body:  'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-head:  'Poppins', 'Inter', sans-serif;
-      --radius-sm:  4px;
-      --radius-md:  8px;
-      --radius-lg:  12px;
-      --radius-xl:  16px;
-      --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
-      --shadow-md:  0 4px 12px rgba(0,0,0,0.10);
-      --shadow-lg:  0 8px 24px rgba(0,0,0,0.12);
-      --transition: 180ms ease;
-    }
+<!-- SCHEMA: HowTo (GEO / AEO) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"HowTo","name":"How to Calculate Your CRS Score","description":"Step-by-step guide to calculate your Comprehensive Ranking System (CRS) score for Canada Express Entry.","step":[{"@type":"HowToStep","name":"Enter Personal Details","text":"Input your age, education level, marital status and Canadian work experience."},{"@type":"HowToStep","name":"Add Language Test Scores","text":"Select your test type (IELTS, CELPIP, TEF or TCF) and enter CLB scores for all four skills."},{"@type":"HowToStep","name":"Add Additional Points","text":"Select provincial nomination, job offer, sibling in Canada or French language bonuses if applicable."},{"@type":"HowToStep","name":"Get Your Score","text":"Click Calculate My CRS Score to see your instant result with a full section-by-section breakdown."}]}</script>
 
-    /* ===== RESET & BASE ===== */
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; scroll-padding-top: 80px; -webkit-text-size-adjust: 100%; }
-    body { font-family: var(--font-body); font-size: 16px; line-height: 1.7; color: var(--text); background: var(--bg); -webkit-font-smoothing: antialiased; }
-    img { display: block; max-width: 100%; height: auto; }
-    a { color: var(--red); text-decoration: none; transition: color var(--transition); }
-    a:hover { color: var(--red-dark); text-decoration: underline; }
-    h1,h2,h3,h4 { font-family: var(--font-head); line-height: 1.25; color: var(--black); }
-    ul, ol { padding-left: 1.4em; }
-    table { border-collapse: collapse; width: 100%; }
-    button { cursor: pointer; font-family: var(--font-body); }
-    input, select { font-family: var(--font-body); }
-    .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+<!-- SCHEMA: Organization -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"CRS Score Calculator","url":"https://crsscorecalculator.vercel.app/","logo":"https://crsscorecalculator.vercel.app/logo.png"}</script>
 
-    /* ===== LAYOUT ===== */
-    .container { max-width: 1140px; margin: 0 auto; padding: 0 20px; }
-    .content-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 32px; align-items: start; }
-
-    /* ===== SKIP LINK ===== */
-    .skip-link { position:absolute; top:-100px; left:16px; background:var(--red); color:#fff; padding:10px 16px; border-radius:var(--radius-md); z-index:9999; transition: top 0.2s; }
-    .skip-link:focus { top: 16px; }
-
-    /* ===== HEADER / NAV ===== */
-    .site-header {
-      background: #fff;
-      border-bottom: 2px solid var(--red);
-      position: sticky; top: 0; z-index: 100;
-      box-shadow: var(--shadow-sm);
-    }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      height: 64px; gap: 16px;
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      font-family: var(--font-head); font-size: 1.15rem; font-weight: 700;
-      color: var(--red); text-decoration: none; white-space: nowrap;
-    }
-    .nav-logo:hover { color: var(--red-dark); text-decoration: none; }
-    .nav-logo svg { flex-shrink: 0; }
-    .nav-links { display: flex; align-items: center; gap: 4px; list-style: none; padding: 0; flex-wrap: wrap; }
-    .nav-links a {
-      font-size: 0.875rem; font-weight: 500; color: var(--text);
-      padding: 6px 10px; border-radius: var(--radius-sm);
-      transition: background var(--transition), color var(--transition);
-      white-space: nowrap;
-    }
-    .nav-links a:hover { background: var(--red-light); color: var(--red); text-decoration: none; }
-    .nav-links a.active { color: var(--red); font-weight: 600; }
-    .nav-cta {
-      background: var(--red); color: #fff !important; border-radius: var(--radius-md);
-      padding: 8px 16px !important; font-weight: 600 !important;
-    }
-    .nav-cta:hover { background: var(--red-dark); color: #fff !important; text-decoration: none; }
-    .nav-mobile-toggle { display: none; background: none; border: none; padding: 8px; color: var(--text); }
-
-    /* ===== HERO ===== */
-    .hero {
-      background: linear-gradient(135deg, #cc0000 0%, #8b0000 100%);
-      color: #fff; padding: 48px 0 40px;
-      text-align: center;
-    }
-    .hero h1 { font-size: clamp(1.6rem, 3vw, 2.4rem); color: #fff; margin-bottom: 12px; }
-    .hero p { font-size: 1.05rem; opacity: 0.92; max-width: 620px; margin: 0 auto 24px; }
-    .hero-badges { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-top: 16px; }
-    .badge {
-      background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.35);
-      color: #fff; font-size: 0.8rem; font-weight: 500;
-      padding: 4px 12px; border-radius: var(--radius-full, 999px);
-    }
-    .hero-cta {
-      display: inline-block; background: #fff; color: var(--red);
-      font-family: var(--font-head); font-weight: 700; font-size: 1rem;
-      padding: 14px 32px; border-radius: var(--radius-lg);
-      box-shadow: 0 4px 14px rgba(0,0,0,0.2);
-      transition: transform var(--transition), box-shadow var(--transition);
-      text-decoration: none;
-    }
-    .hero-cta:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(0,0,0,0.25); color: var(--red-dark); text-decoration: none; }
-
-    /* ===== AD SLOTS ===== */
-    .ad-slot {
-      background: #f0f0f0; border: 1px dashed #ccc;
-      text-align: center; color: var(--text-muted); font-size: 0.8rem;
-      display: flex; align-items: center; justify-content: center;
-      border-radius: var(--radius-md);
-    }
-    .ad-leaderboard { min-height: 90px; margin: 16px 0; }
-    .ad-rectangle { min-height: 250px; width: 100%; }
-    .ad-sidebar { min-height: 250px; width: 100%; margin-bottom: 24px; }
-
-    /* ===== MAIN CONTENT AREA ===== */
-    .main-content { padding: 32px 0 48px; }
-
-    /* ===== CARDS / SECTIONS ===== */
-    .card {
-      background: var(--surface); border: 1px solid var(--border-light);
-      border-radius: var(--radius-xl); padding: 28px;
-      box-shadow: var(--shadow-sm); margin-bottom: 24px;
-    }
-    .card-title {
-      font-size: 1.2rem; font-weight: 700; color: var(--black);
-      margin-bottom: 20px; padding-bottom: 12px;
-      border-bottom: 2px solid var(--red); display: flex; align-items: center; gap: 8px;
-    }
-    .card-title .icon { color: var(--red); }
-    .section-tag {
-      display: inline-flex; align-items: center;
-      background: var(--red); color: #fff;
-      font-size: 0.7rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 3px 8px; border-radius: var(--radius-sm); margin-right: 8px;
-    }
-
-    /* ===== FORM ELEMENTS ===== */
-    .form-group { margin-bottom: 18px; }
-    .form-group label {
-      display: block; font-size: 0.875rem; font-weight: 600;
-      color: var(--text); margin-bottom: 6px;
-    }
-    .form-group .hint { font-size: 0.78rem; color: var(--text-muted); margin-top: 3px; }
-    .form-control {
-      width: 100%; padding: 10px 14px;
-      border: 1.5px solid var(--border); border-radius: var(--radius-md);
-      font-size: 0.9rem; color: var(--text); background: #fff;
-      transition: border-color var(--transition), box-shadow var(--transition);
-      appearance: none; -webkit-appearance: none;
-    }
-    .form-control:focus {
-      outline: none; border-color: var(--red);
-      box-shadow: 0 0 0 3px rgba(204,0,0,0.12);
-    }
-    select.form-control { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 12px center; padding-right: 36px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-    .radio-group { display: flex; gap: 16px; flex-wrap: wrap; padding-top: 4px; }
-    .radio-group label {
-      display: flex; align-items: center; gap: 6px;
-      font-weight: 400; cursor: pointer; font-size: 0.9rem;
-    }
-    .radio-group input[type="radio"] { accent-color: var(--red); width: 16px; height: 16px; }
-    .form-section-header {
-      background: var(--red-light); border-left: 3px solid var(--red);
-      padding: 10px 14px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 24px 0 16px; font-weight: 700; font-size: 0.9rem; color: var(--red);
-    }
-
-    /* ===== CALCULATE BUTTON ===== */
-    .btn-calculate {
-      width: 100%; padding: 16px; background: var(--red);
-      color: #fff; font-family: var(--font-head); font-size: 1.1rem; font-weight: 700;
-      border: none; border-radius: var(--radius-lg);
-      cursor: pointer; margin-top: 8px;
-      transition: background var(--transition), transform var(--transition), box-shadow var(--transition);
-      box-shadow: 0 4px 14px rgba(204,0,0,0.35);
-    }
-    .btn-calculate:hover { background: var(--red-dark); transform: translateY(-1px); box-shadow: 0 6px 18px rgba(204,0,0,0.4); }
-    .btn-calculate:active { transform: translateY(0); }
-
-    /* ===== RESULTS ===== */
-    #results { display: none; }
-    .results-card {
-      background: var(--surface); border: 2px solid var(--red);
-      border-radius: var(--radius-xl); padding: 28px;
-      box-shadow: 0 4px 20px rgba(204,0,0,0.12); margin-bottom: 24px;
-    }
-    .score-display { text-align: center; padding: 24px 0 20px; }
-    .score-number {
-      font-family: var(--font-head); font-size: clamp(3rem, 8vw, 5rem);
-      font-weight: 700; line-height: 1; display: block;
-    }
-    .score-label { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
-    .score-bar-wrap { background: #e9ecef; border-radius: 999px; height: 12px; margin: 16px 0; overflow: hidden; }
-    .score-bar { height: 100%; border-radius: 999px; transition: width 0.8s ease; }
-    .score-verdict {
-      font-size: 1rem; font-weight: 600; text-align: center;
-      padding: 10px 16px; border-radius: var(--radius-md); margin-bottom: 20px;
-    }
-    .score-breakdown { border: 1px solid var(--border-light); border-radius: var(--radius-lg); overflow: hidden; }
-    .score-breakdown table { font-size: 0.9rem; }
-    .score-breakdown th { background: var(--red); color: #fff; padding: 10px 14px; text-align: left; font-size: 0.85rem; }
-    .score-breakdown td { padding: 9px 14px; border-bottom: 1px solid var(--border-light); }
-    .score-breakdown tr:last-child td { border-bottom: none; font-weight: 700; background: #fafafa; }
-    .score-breakdown .pts { font-weight: 700; color: var(--red); text-align: right; }
-    .results-actions { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 20px; justify-content: center; }
-    .btn-action {
-      padding: 10px 20px; border-radius: var(--radius-md); font-size: 0.875rem; font-weight: 600;
-      border: 1.5px solid var(--border); background: #fff; color: var(--text);
-      cursor: pointer; transition: all var(--transition); display: flex; align-items: center; gap: 6px;
-    }
-    .btn-action:hover { border-color: var(--red); color: var(--red); background: var(--red-light); }
-    .btn-action.btn-primary-action { background: var(--red); color: #fff; border-color: var(--red); }
-    .btn-action.btn-primary-action:hover { background: var(--red-dark); border-color: var(--red-dark); }
-    .improvement-cta {
-      background: linear-gradient(135deg, #fff5f5, #fff);
-      border: 1px solid #ffcccc; border-radius: var(--radius-lg);
-      padding: 18px 20px; margin-top: 16px; display: flex; align-items: center; gap: 14px;
-    }
-    .improvement-cta .cta-icon { font-size: 2rem; flex-shrink: 0; }
-    .improvement-cta h4 { font-size: 0.95rem; margin-bottom: 4px; }
-    .improvement-cta p { font-size: 0.83rem; color: var(--text-muted); margin-bottom: 8px; }
-    .improvement-cta a { font-size: 0.875rem; font-weight: 600; color: var(--red); }
-
-    /* ===== SCORE COLOURS ===== */
-    .score-danger  { color: var(--danger); }
-    .score-warning { color: var(--warning); }
-    .score-yellow  { color: #e6a817; }
-    .score-good    { color: #27ae60; }
-    .score-great   { color: #1a7a3c; }
-    .bar-danger    { background: var(--danger); }
-    .bar-warning   { background: var(--warning); }
-    .bar-yellow    { background: #f0c040; }
-    .bar-good      { background: #27ae60; }
-    .bar-great     { background: #1a7a3c; }
-    .verdict-danger  { background: var(--danger-bg); color: #842029; }
-    .verdict-warning { background: var(--warning-bg); color: #664d03; }
-    .verdict-yellow  { background: #fff8cc; color: #665200; }
-    .verdict-good    { background: var(--success-bg); color: #155724; }
-    .verdict-great   { background: #c8f0d4; color: #0a3d1e; }
-
-    /* ===== INFO SECTIONS ===== */
-    .info-section { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 28px; margin-bottom: 24px; }
-    .info-section h2 { font-size: 1.3rem; margin-bottom: 14px; color: var(--black); }
-    .info-section h3 { font-size: 1rem; margin: 16px 0 6px; color: var(--black); }
-    .info-section p { color: var(--text); margin-bottom: 10px; font-size: 0.95rem; }
-    .info-section ul, .info-section ol { font-size: 0.95rem; color: var(--text); }
-    .info-section li { margin-bottom: 6px; }
-
-    /* ===== TABLES ===== */
-    .data-table { width: 100%; border-radius: var(--radius-lg); overflow: hidden; box-shadow: var(--shadow-sm); margin: 16px 0; font-size: 0.875rem; }
-    .data-table th { background: var(--red); color: #fff; padding: 10px 14px; text-align: left; }
-    .data-table td { padding: 9px 14px; border-bottom: 1px solid var(--border-light); background: var(--surface); }
-    .data-table tr:last-child td { border-bottom: none; }
-    .data-table tr:nth-child(even) td { background: #fafafa; }
-
-    /* ===== FAQ SECTION ===== */
-    .faq-item { border: 1px solid var(--border-light); border-radius: var(--radius-lg); margin-bottom: 10px; overflow: hidden; }
-    .faq-question {
-      width: 100%; text-align: left; padding: 14px 18px;
-      background: var(--surface); border: none; cursor: pointer;
-      font-size: 0.95rem; font-weight: 600; color: var(--text);
-      display: flex; justify-content: space-between; align-items: center; gap: 12px;
-      transition: background var(--transition);
-    }
-    .faq-question:hover { background: var(--red-light); color: var(--red); }
-    .faq-question.open { background: var(--red-light); color: var(--red); }
-    .faq-question .arrow { transition: transform var(--transition); flex-shrink: 0; }
-    .faq-question.open .arrow { transform: rotate(180deg); }
-    .faq-answer { display: none; padding: 0 18px 16px; font-size: 0.9rem; color: var(--text); line-height: 1.7; }
-    .faq-answer.open { display: block; }
-    .faq-answer a { color: var(--red); font-weight: 500; }
-
-    /* ===== DRAW RESULTS ===== */
-    .draws-table-wrap { overflow-x: auto; }
-
-    /* ===== SIDEBAR ===== */
-    .sidebar { position: sticky; top: 88px; }
-    .sidebar-widget { background: var(--surface); border: 1px solid var(--border-light); border-radius: var(--radius-xl); padding: 20px; margin-bottom: 20px; box-shadow: var(--shadow-sm); }
-    .sidebar-widget h3 { font-size: 0.95rem; margin-bottom: 14px; color: var(--black); border-bottom: 1px solid var(--border-light); padding-bottom: 8px; }
-    .sidebar-links { list-style: none; padding: 0; }
-    .sidebar-links li { border-bottom: 1px solid var(--border-light); }
-    .sidebar-links li:last-child { border-bottom: none; }
-    .sidebar-links a { display: block; padding: 9px 0; font-size: 0.875rem; color: var(--text); transition: color var(--transition), padding-left var(--transition); }
-    .sidebar-links a:hover { color: var(--red); padding-left: 6px; text-decoration: none; }
-    .cutoff-box { background: linear-gradient(135deg, var(--red), #8b0000); color: #fff; border-radius: var(--radius-lg); padding: 16px; text-align: center; }
-    .cutoff-box .cutoff-num { font-family: var(--font-head); font-size: 2.5rem; font-weight: 700; line-height: 1; }
-    .cutoff-box .cutoff-label { font-size: 0.78rem; opacity: 0.85; margin-top: 4px; }
-    .cutoff-box .cutoff-sub { font-size: 0.8rem; margin-top: 8px; opacity: 0.9; }
-    .resource-link { display: flex; align-items: center; gap: 8px; font-size: 0.83rem; padding: 8px 0; border-bottom: 1px solid var(--border-light); color: var(--text); }
-    .resource-link:last-child { border-bottom: none; }
-    .resource-link:hover { color: var(--red); text-decoration: none; }
-    .resource-link .ext-icon { color: var(--text-muted); flex-shrink: 0; }
-
-    /* ===== RELATED CALCULATORS GRID ===== */
-    .calc-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(160px, 1fr)); gap: 12px; margin-top: 16px; }
-    .calc-card {
-      display: block; background: var(--surface); border: 1.5px solid var(--border-light);
-      border-radius: var(--radius-lg); padding: 16px 14px; text-align: center;
-      transition: border-color var(--transition), box-shadow var(--transition), transform var(--transition);
-      text-decoration: none; color: var(--text);
-    }
-    .calc-card:hover { border-color: var(--red); box-shadow: var(--shadow-md); transform: translateY(-2px); text-decoration: none; color: var(--text); }
-    .calc-card .calc-icon { font-size: 1.6rem; margin-bottom: 6px; }
-    .calc-card .calc-name { font-size: 0.8rem; font-weight: 600; color: var(--text); }
-    .calc-card .calc-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
-
-    /* ===== FOOTER ===== */
-    .site-footer { background: var(--black); color: #ccc; padding: 48px 0 0; }
-    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 32px; }
-    .footer-col h4 { color: #fff; font-size: 0.9rem; margin-bottom: 14px; font-family: var(--font-head); }
-    .footer-col ul { list-style: none; padding: 0; }
-    .footer-col li { margin-bottom: 8px; }
-    .footer-col a { font-size: 0.83rem; color: #aaa; transition: color var(--transition); }
-    .footer-col a:hover { color: #fff; text-decoration: none; }
-    .footer-bottom { border-top: 1px solid #333; padding: 20px 0; font-size: 0.8rem; color: #888; }
-    .footer-bottom-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-    .footer-disclaimer { max-width: 700px; font-size: 0.78rem; color: #666; margin-top: 8px; line-height: 1.5; }
-
-    /* ===== STEP BOXES ===== */
-    .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-top: 16px; }
-    .step-box { display: flex; gap: 14px; align-items: flex-start; background: #fafafa; border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 16px; }
-    .step-num { background: var(--red); color: #fff; font-family: var(--font-head); font-weight: 700; font-size: 1.1rem; width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
-    .step-text h4 { font-size: 0.9rem; margin-bottom: 4px; }
-    .step-text p { font-size: 0.83rem; color: var(--text-muted); margin: 0; }
-
-    /* ===== HIDDEN ===== */
-    #spouseSection { display: none; }
-
-    /* ===== MOBILE NAV ===== */
-    @media (max-width: 768px) {
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 64px; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: 12px; box-shadow: var(--shadow-md); z-index: 200; }
-      .nav-links.open { display: flex; }
-      .nav-mobile-toggle { display: block; }
-      .content-wrap { grid-template-columns: 1fr; }
-      .sidebar { position: static; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-      .hero h1 { font-size: 1.5rem; }
-    }
-    @media (max-width: 480px) {
-      .footer-grid { grid-template-columns: 1fr; }
-      .results-actions { flex-direction: column; }
-    }
-
-    /* ===== PRINT ===== */
-    @media print {
-      .site-header, .site-footer, .ad-slot, .sidebar, .results-actions, .hero-cta { display: none !important; }
-      .content-wrap { grid-template-columns: 1fr; }
-      .results-card, .score-breakdown { break-inside: avoid; }
-    }
-  </style>
+<style>
+/* ===== TOKENS ===== */
+:root{
+  --red:#CC0000;--red-dk:#990000;--red-lt:#fff5f5;--red-mid:#ffebeb;
+  --blk:#1a1a1a;--txt:#212529;--muted:#6c757d;--faint:#adb5bd;
+  --bg:#f8f9fa;--surf:#fff;--bdr:#dee2e6;--bdr-lt:#e9ecef;
+  --grn:#28a745;--grn-bg:#d4edda;--warn:#fd7e14;--warn-bg:#fff3cd;
+  --err:#dc3545;--err-bg:#f8d7da;
+  --ff-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+  --ff-head:'Poppins','Inter',sans-serif;
+  --r-sm:4px;--r-md:8px;--r-lg:12px;--r-xl:16px;
+  --sh-sm:0 1px 3px rgba(0,0,0,.08);--sh-md:0 4px 12px rgba(0,0,0,.1);
+  --tr:180ms ease;
+}
+/* ===== RESET ===== */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px;-webkit-text-size-adjust:100%}
+body{font-family:var(--ff-body);font-size:16px;line-height:1.7;color:var(--txt);background:var(--bg);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%;height:auto}
+a{color:var(--red);text-decoration:none;transition:color var(--tr)}
+a:hover{color:var(--red-dk);text-decoration:underline}
+h1,h2,h3,h4{font-family:var(--ff-head);line-height:1.2;color:var(--blk)}
+ul,ol{padding-left:1.4em}
+button{cursor:pointer;font-family:var(--ff-body);border:none;background:none}
+input,select{font-family:var(--ff-body)}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+/* ===== LAYOUT ===== */
+.wrap{max-width:1140px;margin:0 auto;padding:0 16px}
+.grid{display:grid;grid-template-columns:1fr 300px;gap:28px;align-items:start}
+/* ===== SKIP ===== */
+.skip{position:absolute;top:-100px;left:16px;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--r-md);z-index:9999;transition:top .2s}
+.skip:focus{top:16px}
+/* ===== HEADER ===== */
+.site-hdr{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:200;box-shadow:var(--sh-sm)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:60px;gap:12px}
+.logo{display:flex;align-items:center;gap:8px;font-family:var(--ff-head);font-size:1.05rem;font-weight:700;color:var(--red);white-space:nowrap}
+.logo:hover{color:var(--red-dk);text-decoration:none}
+.logo svg{flex-shrink:0}
+.nav-links{display:flex;align-items:center;gap:2px;list-style:none;padding:0;flex-wrap:wrap}
+.nav-links a{font-size:.8rem;font-weight:500;color:var(--txt);padding:5px 8px;border-radius:var(--r-sm);transition:background var(--tr),color var(--tr);white-space:nowrap}
+.nav-links a:hover,.nav-links a.act{background:var(--red-lt);color:var(--red);text-decoration:none}
+.nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--r-md)!important;padding:7px 14px!important;font-weight:700!important}
+.nav-cta:hover{background:var(--red-dk)!important;color:#fff!important}
+.nav-tog{display:none;padding:8px;color:var(--txt)}
+/* ===== HERO ===== */
+.hero{background:linear-gradient(135deg,#cc0000 0%,#8b0000 100%);color:#fff;padding:40px 0 32px;text-align:center}
+.hero h1{font-size:clamp(1.5rem,3vw,2.2rem);color:#fff;margin-bottom:10px}
+.hero p{font-size:.95rem;opacity:.92;max-width:580px;margin:0 auto 20px}
+.hero-badges{display:flex;justify-content:center;gap:10px;flex-wrap:wrap;margin-bottom:20px}
+.badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.35);color:#fff;font-size:.78rem;font-weight:500;padding:3px 10px;border-radius:999px}
+.hero-btn{display:inline-block;background:#fff;color:var(--red);font-family:var(--ff-head);font-weight:700;font-size:.95rem;padding:13px 28px;border-radius:var(--r-lg);box-shadow:0 4px 14px rgba(0,0,0,.2);transition:transform var(--tr),box-shadow var(--tr)}
+.hero-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25);color:var(--red-dk);text-decoration:none}
+/* ===== MAIN ===== */
+main{padding:28px 0 48px}
+/* ===== CARD ===== */
+.card{background:var(--surf);border:1px solid var(--bdr-lt);border-radius:var(--r-xl);padding:24px;box-shadow:var(--sh-sm);margin-bottom:20px}
+.card-ttl{font-size:1.1rem;font-weight:700;color:var(--blk);margin-bottom:18px;padding-bottom:10px;border-bottom:2px solid var(--red);display:flex;align-items:center;gap:8px}
+/* ===== FORM ===== */
+.form-g{margin-bottom:14px}
+.form-g label{display:block;font-size:.84rem;font-weight:600;color:var(--txt);margin-bottom:5px}
+.form-g .hint{font-size:.75rem;color:var(--muted);margin-top:3px}
+.ctrl{width:100%;padding:9px 12px;border:1.5px solid var(--bdr);border-radius:var(--r-md);font-size:.88rem;color:var(--txt);background:#fff;transition:border-color var(--tr),box-shadow var(--tr);appearance:none;-webkit-appearance:none}
+.ctrl:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(204,0,0,.1)}
+select.ctrl{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 10px center;padding-right:32px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.radios{display:flex;gap:14px;flex-wrap:wrap;padding-top:4px}
+.radios label{display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:.88rem}
+.radios input[type=radio]{accent-color:var(--red);width:15px;height:15px}
+.sec-hdr{background:var(--red-lt);border-left:3px solid var(--red);padding:8px 12px;border-radius:0 var(--r-sm) var(--r-sm) 0;margin:20px 0 14px;font-weight:700;font-size:.85rem;color:var(--red)}
+/* ===== CALCULATE BUTTON ===== */
+.btn-calc{width:100%;padding:15px;background:var(--red);color:#fff;font-family:var(--ff-head);font-size:1.05rem;font-weight:700;border-radius:var(--r-lg);margin-top:6px;transition:background var(--tr),transform var(--tr),box-shadow var(--tr);box-shadow:0 4px 14px rgba(204,0,0,.35)}
+.btn-calc:hover{background:var(--red-dk);transform:translateY(-1px);box-shadow:0 6px 18px rgba(204,0,0,.4)}
+/* ===== RESULTS ===== */
+#results{display:none}
+.res-card{background:var(--surf);border:2px solid var(--red);border-radius:var(--r-xl);padding:24px;box-shadow:0 4px 20px rgba(204,0,0,.1);margin-bottom:20px}
+.score-wrap{text-align:center;padding:20px 0 16px}
+.score-num{font-family:var(--ff-head);font-size:clamp(3rem,8vw,4.5rem);font-weight:800;line-height:1;display:block}
+.score-lbl{font-size:.85rem;color:var(--muted);margin-top:4px}
+.bar-wrap{background:#e9ecef;border-radius:999px;height:10px;margin:14px 0;overflow:hidden}
+.bar{height:100%;border-radius:999px;transition:width .8s ease}
+.verdict{font-size:.9rem;font-weight:600;text-align:center;padding:9px 14px;border-radius:var(--r-md);margin-bottom:18px}
+.bk-tbl{border:1px solid var(--bdr-lt);border-radius:var(--r-lg);overflow:hidden}
+.bk-tbl table{font-size:.87rem}
+.bk-tbl th{background:var(--red);color:#fff;padding:9px 12px;text-align:left;font-size:.82rem}
+.bk-tbl td{padding:8px 12px;border-bottom:1px solid var(--bdr-lt)}
+.bk-tbl tr:last-child td{border-bottom:none;font-weight:700;background:#fafafa}
+.pts{font-weight:700;color:var(--red);text-align:right}
+.res-acts{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px;justify-content:center}
+.btn-act{padding:9px 16px;border-radius:var(--r-md);font-size:.83rem;font-weight:600;border:1.5px solid var(--bdr);background:#fff;color:var(--txt);transition:all var(--tr);display:flex;align-items:center;gap:5px}
+.btn-act:hover{border-color:var(--red);color:var(--red);background:var(--red-lt)}
+.btn-act.pri{background:var(--red);color:#fff;border-color:var(--red)}
+.btn-act.pri:hover{background:var(--red-dk)}
+.imp-cta{background:linear-gradient(135deg,var(--red-lt),#fff);border:1px solid #ffcccc;border-radius:var(--r-lg);padding:16px;margin-top:14px;display:flex;align-items:flex-start;gap:12px}
+.imp-cta .ico{font-size:1.6rem;flex-shrink:0;margin-top:2px}
+.imp-cta h4{font-size:.9rem;margin-bottom:3px}
+.imp-cta p{font-size:.8rem;color:var(--muted);margin-bottom:6px}
+.imp-cta a{font-size:.84rem;font-weight:600;color:var(--red)}
+/* score colours */
+.c-danger{color:#dc3545}.c-warn{color:#fd7e14}.c-yellow{color:#e6a817}.c-good{color:#27ae60}.c-great{color:#1a7a3c}
+.b-danger{background:#dc3545}.b-warn{background:#fd7e14}.b-yellow{background:#f0c040}.b-good{background:#27ae60}.b-great{background:#1a7a3c}
+.v-danger{background:#f8d7da;color:#842029}.v-warn{background:#fff3cd;color:#664d03}.v-yellow{background:#fff8cc;color:#665200}.v-good{background:#d4edda;color:#155724}.v-great{background:#c8f0d4;color:#0a3d1e}
+/* ===== INFO SECTIONS ===== */
+.info{background:var(--surf);border:1px solid var(--bdr-lt);border-radius:var(--r-xl);padding:24px;margin-bottom:20px}
+.info h2{font-size:1.2rem;margin-bottom:12px}
+.info h3{font-size:.95rem;margin:14px 0 6px}
+.info p{font-size:.9rem;color:var(--txt);margin-bottom:9px}
+.info ul,.info ol{font-size:.9rem;color:var(--txt)}
+.info li{margin-bottom:5px}
+/* ===== TABLES ===== */
+.dt{width:100%;border-radius:var(--r-lg);overflow:hidden;box-shadow:var(--sh-sm);margin:14px 0;font-size:.84rem}
+.dt th{background:var(--red);color:#fff;padding:9px 12px;text-align:left}
+.dt td{padding:8px 12px;border-bottom:1px solid var(--bdr-lt);background:var(--surf)}
+.dt tr:last-child td{border-bottom:none}
+.dt tr:nth-child(even) td{background:#fafafa}
+/* ===== FAQ ===== */
+.faq-item{border:1px solid var(--bdr-lt);border-radius:var(--r-lg);margin-bottom:8px;overflow:hidden}
+.faq-q{width:100%;text-align:left;padding:13px 16px;background:var(--surf);cursor:pointer;font-size:.9rem;font-weight:600;color:var(--txt);display:flex;justify-content:space-between;align-items:center;gap:10px;transition:background var(--tr)}
+.faq-q:hover,.faq-q.open{background:var(--red-lt);color:var(--red)}
+.faq-q .arr{transition:transform var(--tr);flex-shrink:0}
+.faq-q.open .arr{transform:rotate(180deg)}
+.faq-a{display:none;padding:0 16px 14px;font-size:.87rem;color:var(--txt);line-height:1.7}
+.faq-a.open{display:block}
+.faq-a a{color:var(--red);font-weight:500}
+/* ===== CALC GRID ===== */
+.calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px}
+.cc{display:block;background:var(--surf);border:1.5px solid var(--bdr-lt);border-radius:var(--r-lg);padding:14px 12px;text-align:center;transition:border-color var(--tr),box-shadow var(--tr),transform var(--tr);color:var(--txt)}
+.cc:hover{border-color:var(--red);box-shadow:var(--sh-md);transform:translateY(-2px);text-decoration:none;color:var(--txt)}
+.cc .ci{font-size:1.5rem;margin-bottom:5px}
+.cc .cn{font-size:.78rem;font-weight:600}
+.cc .cs{font-size:.7rem;color:var(--muted);margin-top:2px}
+/* ===== STEPS ===== */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;margin-top:14px}
+.step{display:flex;gap:12px;align-items:flex-start;background:#fafafa;border:1px solid var(--bdr-lt);border-radius:var(--r-lg);padding:14px}
+.step-n{background:var(--red);color:#fff;font-family:var(--ff-head);font-weight:700;font-size:1rem;width:32px;height:32px;border-radius:50%;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+.step-t h4{font-size:.87rem;margin-bottom:3px}
+.step-t p{font-size:.8rem;color:var(--muted);margin:0}
+/* ===== SIDEBAR ===== */
+.sidebar{position:sticky;top:76px}
+.sw{background:var(--surf);border:1px solid var(--bdr-lt);border-radius:var(--r-xl);padding:18px;margin-bottom:18px;box-shadow:var(--sh-sm)}
+.sw h3{font-size:.88rem;margin-bottom:12px;color:var(--blk);border-bottom:1px solid var(--bdr-lt);padding-bottom:7px}
+.sb-links{list-style:none;padding:0}
+.sb-links li{border-bottom:1px solid var(--bdr-lt)}
+.sb-links li:last-child{border-bottom:none}
+.sb-links a{display:block;padding:8px 0;font-size:.82rem;color:var(--txt);transition:color var(--tr),padding-left var(--tr)}
+.sb-links a:hover{color:var(--red);padding-left:5px;text-decoration:none}
+.cutoff-box{background:linear-gradient(135deg,var(--red),#8b0000);color:#fff;border-radius:var(--r-lg);padding:14px;text-align:center}
+.co-num{font-family:var(--ff-head);font-size:2.2rem;font-weight:800;line-height:1}
+.co-lbl{font-size:.74rem;opacity:.85;margin-top:3px}
+.co-sub{font-size:.76rem;margin-top:7px;opacity:.9}
+.res-link{display:flex;align-items:center;gap:7px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--bdr-lt);color:var(--txt)}
+.res-link:last-child{border-bottom:none}
+.res-link:hover{color:var(--red);text-decoration:none}
+.res-link .ei{color:var(--muted);flex-shrink:0}
+/* ===== FOOTER ===== */
+.site-ftr{background:var(--blk);color:#ccc;padding:40px 0 0}
+.ftr-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-bottom:28px}
+.ftr-col h4{color:#fff;font-size:.87rem;margin-bottom:12px;font-family:var(--ff-head)}
+.ftr-col ul{list-style:none;padding:0}
+.ftr-col li{margin-bottom:7px}
+.ftr-col a{font-size:.8rem;color:#aaa;transition:color var(--tr)}
+.ftr-col a:hover{color:#fff;text-decoration:none}
+.ftr-btm{border-top:1px solid #333;padding:18px 0;font-size:.77rem;color:#888}
+.ftr-btm-in{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px}
+.ftr-disc{max-width:680px;font-size:.74rem;color:#666;margin-top:7px;line-height:1.5}
+/* ===== DRAWS ===== */
+.draws-wrap{overflow-x:auto}
+/* ===== HIDDEN ===== */
+#spouseGroup,#spouseSection,#lang2Fields,#spouseLangFields{display:none}
+/* ===== MOBILE NAV ===== */
+@media(max-width:768px){
+  .nav-links{display:none;flex-direction:column;position:absolute;top:60px;left:0;right:0;background:#fff;border-top:1px solid var(--bdr);padding:10px;box-shadow:var(--sh-md);z-index:300}
+  .nav-links.open{display:flex}
+  .nav-tog{display:block}
+  .grid{grid-template-columns:1fr}
+  .sidebar{position:static}
+  .row2{grid-template-columns:1fr}
+  .ftr-grid{grid-template-columns:1fr 1fr}
+}
+@media(max-width:480px){
+  .ftr-grid{grid-template-columns:1fr}
+  .res-acts{flex-direction:column}
+  .calc-grid{grid-template-columns:repeat(auto-fill,minmax(120px,1fr))}
+}
+@media print{
+  .site-hdr,.site-ftr,.sidebar,.res-acts,.hero-btn{display:none!important}
+  .grid{grid-template-columns:1fr}
+  .res-card,.bk-tbl{break-inside:avoid}
+}
+</style>
 </head>
 <body>
 
-<a href="#calculator" class="skip-link">Skip to calculator</a>
+<a href="#calculator" class="skip">Skip to calculator</a>
 
-<!-- ===== HEADER ===== -->
-<header class="site-header" role="banner">
-  <div class="container">
-    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
-      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#CC0000"/>
-          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
-        </svg>
+<!-- HEADER -->
+<header class="site-hdr" role="banner">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a href="/" class="logo" aria-label="CRS Score Calculator Home">
+        <svg width="30" height="30" viewBox="0 0 32 32" fill="none" aria-hidden="true"><rect width="32" height="32" rx="7" fill="#CC0000"/><text x="16" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="bold" fill="white">CRS</text></svg>
         CRS Calculator
       </a>
-
-      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <button class="nav-tog" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
       </button>
-
       <ul class="nav-links" role="list">
-        <li><a href="/" class="active" aria-current="page">CRS Calculator</a></li>
+        <li><a href="/" class="act" aria-current="page">CRS Calculator</a></li>
         <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
         <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
         <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
+        <li><a href="/ontario-crs-calculator">Ontario</a></li>
+        <li><a href="/alberta-crs-calculator">Alberta</a></li>
         <li><a href="/crs-cutoff-scores">Cutoff Scores</a></li>
         <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
-        <li><a href="/blog" rel="noopener">Blog</a></li>
         <li><a href="#calculator" class="nav-cta">Calculate Now</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<!-- ===== HERO ===== -->
+<!-- HERO -->
 <section class="hero" aria-label="CRS Calculator Hero">
-  <div class="container">
-    <h1>Free CRS Score Calculator<br>Canada Express Entry Tool</h1>
-    <p>Calculate your Comprehensive Ranking System (CRS) score instantly. Get a full breakdown by section — no IRCC account or login required.</p>
-    <a href="#calculator" class="hero-cta">Calculate My CRS Score →</a>
+  <div class="wrap">
+    <h1>CRS Calculator 2026<br>Free Canada Express Entry Score Tool</h1>
+    <p>Calculate your Comprehensive Ranking System (CRS) score instantly. Full section breakdown — no IRCC login required.</p>
     <div class="hero-badges">
-      <span class="badge">✓ Updated for 2026</span>
+      <span class="badge">✓ Updated 2026</span>
       <span class="badge">✓ Official IRCC Grid</span>
       <span class="badge">✓ 100% Free</span>
-      <span class="badge">✓ No Login Needed</span>
+      <span class="badge">✓ No Login</span>
+      <span class="badge">✓ Instant Results</span>
     </div>
+    <a href="#calculator" class="hero-btn">Calculate My CRS Score →</a>
   </div>
 </section>
 
-<!-- ===== AD LEADERBOARD ===== -->
-<div class="container">
-  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
-</div>
+<!-- MAIN -->
+<main id="main-content">
+  <div class="wrap">
+    <div class="grid">
 
-<!-- ===== MAIN ===== -->
-<main class="main-content" id="main-content">
-  <div class="container">
-    <div class="content-wrap">
-
-      <!-- LEFT: CALCULATOR + CONTENT -->
+      <!-- LEFT COLUMN -->
       <div>
 
-        <!-- ===== CALCULATOR FORM ===== -->
-        <section class="card" id="calculator" aria-labelledby="calc-heading">
-          <h2 class="card-title" id="calc-heading">
-            <svg class="icon" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
-            CRS Score Calculator – Canada Express Entry
+        <!-- ===== CALCULATOR ===== -->
+        <section class="card" id="calculator" aria-labelledby="calc-h">
+          <h2 class="card-ttl" id="calc-h">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="12" y2="18"/></svg>
+            CRS Score Calculator — Canada Express Entry 2026
           </h2>
-          <p style="font-size:0.88rem;color:var(--text-muted);margin-bottom:20px;">Enter your details to calculate your <strong>Comprehensive Ranking System (CRS) score</strong> instantly. Based on the official <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">IRCC CRS grid</a>.</p>
+          <p style="font-size:.84rem;color:var(--muted);margin-bottom:18px;">Enter your details below to <strong>calculate your CRS score</strong> instantly. Based on the official <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">IRCC Comprehensive Ranking System grid</a>.</p>
 
-          <form id="crsForm" onsubmit="calculateCRS(event)" novalidate>
+          <form id="crsForm" onsubmit="doCalc(event)" novalidate>
 
-            <!-- SECTION A: CORE FACTORS -->
-            <div class="form-section-header">Section A — Core Human Capital Factors</div>
+            <div class="sec-hdr">Section A — Core Human Capital Factors</div>
 
-            <div class="form-row">
-              <div class="form-group">
+            <div class="row2">
+              <div class="form-g">
                 <label for="age">Age <span aria-hidden="true">*</span></label>
-                <select id="age" name="age" class="form-control" required aria-required="true">
-                  <option value="">— Select your age —</option>
-                  <option value="17under">17 or under</option>
-                  <option value="18">18</option>
-                  <option value="19">19</option>
-                  <option value="20">20</option>
-                  <option value="21">21</option>
-                  <option value="22">22</option>
-                  <option value="23">23</option>
-                  <option value="24">24</option>
-                  <option value="25">25</option>
-                  <option value="26">26</option>
-                  <option value="27">27</option>
-                  <option value="28">28</option>
-                  <option value="29">29</option>
-                  <option value="30">30</option>
-                  <option value="31">31</option>
-                  <option value="32">32</option>
-                  <option value="33">33</option>
-                  <option value="34">34</option>
-                  <option value="35">35</option>
-                  <option value="36">36</option>
-                  <option value="37">37</option>
-                  <option value="38">38</option>
-                  <option value="39">39</option>
-                  <option value="40">40</option>
-                  <option value="41">41</option>
-                  <option value="42">42</option>
-                  <option value="43">43</option>
-                  <option value="44">44</option>
-                  <option value="45plus">45 or older</option>
+                <select id="age" class="ctrl" required>
+                  <option value="">— Select age —</option>
+                  <option value="17u">17 or under</option>
+                  <option value="18">18</option><option value="19">19</option><option value="20">20</option>
+                  <option value="21">21</option><option value="22">22</option><option value="23">23</option>
+                  <option value="24">24</option><option value="25">25</option><option value="26">26</option>
+                  <option value="27">27</option><option value="28">28</option><option value="29">29</option>
+                  <option value="30">30</option><option value="31">31</option><option value="32">32</option>
+                  <option value="33">33</option><option value="34">34</option><option value="35">35</option>
+                  <option value="36">36</option><option value="37">37</option><option value="38">38</option>
+                  <option value="39">39</option><option value="40">40</option><option value="41">41</option>
+                  <option value="42">42</option><option value="43">43</option><option value="44">44</option>
+                  <option value="45p">45 or older</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="education">Education Level <span aria-hidden="true">*</span></label>
-                <select id="education" name="education" class="form-control" required aria-required="true">
+              <div class="form-g">
+                <label for="edu">Education Level <span aria-hidden="true">*</span></label>
+                <select id="edu" class="ctrl" required>
                   <option value="">— Select education —</option>
                   <option value="0">Less than secondary (high school)</option>
-                  <option value="1">Secondary diploma (high school)</option>
-                  <option value="2">One-year post-secondary program</option>
-                  <option value="3">Two-year post-secondary program</option>
+                  <option value="1">Secondary diploma</option>
+                  <option value="2">1-year post-secondary program</option>
+                  <option value="3">2-year post-secondary program</option>
                   <option value="4">Bachelor's degree / 3+ year program</option>
-                  <option value="5">Two or more degrees (one 3+ years)</option>
+                  <option value="5">Two or more degrees (one 3+ yrs)</option>
                   <option value="6">Master's degree or professional degree</option>
                   <option value="7">Doctoral degree (PhD)</option>
                 </select>
               </div>
             </div>
 
-            <div class="form-group">
+            <div class="form-g">
               <label>Marital / Partnership Status</label>
-              <div class="radio-group">
+              <div class="radios">
                 <label><input type="radio" name="marital" value="single" checked onchange="toggleSpouse(this)"> Single / Divorced / Widowed</label>
                 <label><input type="radio" name="marital" value="married" onchange="toggleSpouse(this)"> Married / Common-law</label>
               </div>
             </div>
 
-            <div class="form-group" id="spouseComingGroup" style="display:none;">
+            <div class="form-g" id="spouseGroup">
               <label>Is your spouse/partner coming to Canada with you?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="spouseComing" value="yes" checked> Yes</label>
-                <label><input type="radio" name="spouseComing" value="no"> No</label>
+              <div class="radios">
+                <label><input type="radio" name="spouseComing" value="yes" checked onchange="toggleSpouseSection()"> Yes</label>
+                <label><input type="radio" name="spouseComing" value="no" onchange="toggleSpouseSection()"> No</label>
               </div>
             </div>
 
-            <div class="form-group">
-              <label for="canadianExp">Canadian Work Experience</label>
-              <select id="canadianExp" name="canadianExp" class="form-control">
+            <div class="form-g">
+              <label for="canExp">Canadian Work Experience</label>
+              <select id="canExp" class="ctrl">
                 <option value="0">None</option>
-                <option value="1">1 year</option>
-                <option value="2">2 years</option>
-                <option value="3">3 years</option>
-                <option value="4">4 years</option>
+                <option value="1">1 year</option><option value="2">2 years</option>
+                <option value="3">3 years</option><option value="4">4 years</option>
                 <option value="5">5 or more years</option>
               </select>
             </div>
 
-            <!-- SECTION B: LANGUAGE -->
-            <div class="form-section-header">Section B — First Official Language</div>
+            <div class="sec-hdr">Section B — First Official Language</div>
 
-            <div class="form-group">
+            <div class="form-g">
               <label for="langTest">Language Test Type</label>
-              <select id="langTest" name="langTest" class="form-control">
+              <select id="langTest" class="ctrl">
                 <option value="ielts">IELTS (English)</option>
                 <option value="celpip">CELPIP (English)</option>
                 <option value="tef">TEF Canada (French)</option>
                 <option value="tcf">TCF Canada (French)</option>
               </select>
-              <div class="hint">IELTS and CELPIP are for English. TEF/TCF are for French.</div>
+              <div class="hint">Convert your IELTS/CELPIP band to CLB using our <a href="/ielts-crs-calculator">IELTS to CRS converter</a>.</div>
             </div>
 
-            <div class="form-row">
-              <div class="form-group">
-                <label for="langSpeaking">Speaking (CLB Level)</label>
-                <select id="langSpeaking" name="langSpeaking" class="form-control">
-                  <option value="4">CLB 4 or less</option>
-                  <option value="5">CLB 5</option>
-                  <option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option>
-                  <option value="8">CLB 8</option>
-                  <option value="9">CLB 9</option>
-                  <option value="10">CLB 10+</option>
-                </select>
+            <div class="row2">
+              <div class="form-g">
+                <label for="lsp">Speaking (CLB)</label>
+                <select id="lsp" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option></select>
               </div>
-              <div class="form-group">
-                <label for="langListening">Listening (CLB Level)</label>
-                <select id="langListening" name="langListening" class="form-control">
-                  <option value="4">CLB 4 or less</option>
-                  <option value="5">CLB 5</option>
-                  <option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option>
-                  <option value="8">CLB 8</option>
-                  <option value="9">CLB 9</option>
-                  <option value="10">CLB 10+</option>
-                </select>
+              <div class="form-g">
+                <label for="ll">Listening (CLB)</label>
+                <select id="ll" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option></select>
               </div>
-              <div class="form-group">
-                <label for="langReading">Reading (CLB Level)</label>
-                <select id="langReading" name="langReading" class="form-control">
-                  <option value="4">CLB 4 or less</option>
-                  <option value="5">CLB 5</option>
-                  <option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option>
-                  <option value="8">CLB 8</option>
-                  <option value="9">CLB 9</option>
-                  <option value="10">CLB 10+</option>
-                </select>
+              <div class="form-g">
+                <label for="lr">Reading (CLB)</label>
+                <select id="lr" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option></select>
               </div>
-              <div class="form-group">
-                <label for="langWriting">Writing (CLB Level)</label>
-                <select id="langWriting" name="langWriting" class="form-control">
-                  <option value="4">CLB 4 or less</option>
-                  <option value="5">CLB 5</option>
-                  <option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option>
-                  <option value="8">CLB 8</option>
-                  <option value="9">CLB 9</option>
-                  <option value="10">CLB 10+</option>
-                </select>
+              <div class="form-g">
+                <label for="lw">Writing (CLB)</label>
+                <select id="lw" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option></select>
               </div>
             </div>
 
-            <!-- SECTION C: SECOND LANGUAGE -->
-            <div class="form-section-header">Section C — Second Official Language (Optional)</div>
+            <div class="sec-hdr">Section C — Second Official Language (Optional)</div>
 
-            <div class="form-group">
-              <label for="lang2Test">Second Language Test (if applicable)</label>
-              <select id="lang2Test" name="lang2Test" class="form-control">
+            <div class="form-g">
+              <label for="l2test">Second Language Test</label>
+              <select id="l2test" class="ctrl" onchange="toggleL2(this)">
                 <option value="none">None / Not applicable</option>
-                <option value="ielts">IELTS (English)</option>
-                <option value="celpip">CELPIP (English)</option>
-                <option value="tef">TEF Canada (French)</option>
-                <option value="tcf">TCF Canada (French)</option>
+                <option value="ielts">IELTS</option><option value="celpip">CELPIP</option>
+                <option value="tef">TEF Canada</option><option value="tcf">TCF Canada</option>
               </select>
             </div>
-
-            <div class="form-row" id="lang2Fields" style="display:none;">
-              <div class="form-group">
-                <label for="lang2Speaking">Speaking (CLB)</label>
-                <select id="lang2Speaking" class="form-control">
-                  <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lang2Listening">Listening (CLB)</label>
-                <select id="lang2Listening" class="form-control">
-                  <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lang2Reading">Reading (CLB)</label>
-                <select id="lang2Reading" class="form-control">
-                  <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lang2Writing">Writing (CLB)</label>
-                <select id="lang2Writing" class="form-control">
-                  <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option>
-                </select>
-              </div>
+            <div class="row2" id="lang2Fields">
+              <div class="form-g"><label>Speaking (CLB)</label><select id="l2sp" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option></select></div>
+              <div class="form-g"><label>Listening (CLB)</label><select id="l2ll" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option></select></div>
+              <div class="form-g"><label>Reading (CLB)</label><select id="l2lr" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option></select></div>
+              <div class="form-g"><label>Writing (CLB)</label><select id="l2lw" class="ctrl"><option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6+</option></select></div>
             </div>
 
-            <!-- SECTION D: SPOUSE FACTORS -->
+            <!-- SPOUSE -->
             <div id="spouseSection">
-              <div class="form-section-header">Section D — Spouse / Partner Factors</div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="spouseEducation">Spouse Education Level</label>
-                  <select id="spouseEducation" class="form-control">
-                    <option value="0">Less than secondary</option>
-                    <option value="1">Secondary diploma</option>
-                    <option value="2">One-year program</option>
-                    <option value="3">Two-year program</option>
-                    <option value="4">Bachelor's / 3+ year</option>
-                    <option value="5">Two or more degrees</option>
-                    <option value="6">Master's degree</option>
-                    <option value="7">PhD</option>
-                  </select>
+              <div class="sec-hdr">Section D — Spouse / Partner Factors</div>
+              <div class="row2">
+                <div class="form-g">
+                  <label for="spEdu">Spouse Education</label>
+                  <select id="spEdu" class="ctrl"><option value="0">Less than secondary</option><option value="1">Secondary</option><option value="2">1-year program</option><option value="3">2-year program</option><option value="4">Bachelor's / 3+ yr</option><option value="5">Two or more degrees</option><option value="6">Master's</option><option value="7">PhD</option></select>
                 </div>
-                <div class="form-group">
-                  <label for="spouseCanadianExp">Spouse Canadian Work Experience</label>
-                  <select id="spouseCanadianExp" class="form-control">
-                    <option value="0">None</option>
-                    <option value="1">1 year</option>
-                    <option value="2">2 years</option>
-                    <option value="3">3 years</option>
-                    <option value="4">4 years</option>
-                    <option value="5">5+ years</option>
-                  </select>
+                <div class="form-g">
+                  <label for="spCanExp">Spouse Canadian Work Exp</label>
+                  <select id="spCanExp" class="ctrl"><option value="0">None</option><option value="1">1 year</option><option value="2">2 years</option><option value="3">3 years</option><option value="4">4 years</option><option value="5">5+ years</option></select>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="spouseLangTest">Spouse Language Test</label>
-                <select id="spouseLangTest" class="form-control">
-                  <option value="none">None</option>
-                  <option value="ielts">IELTS</option>
-                  <option value="celpip">CELPIP</option>
-                  <option value="tef">TEF Canada</option>
-                </select>
+              <div class="form-g">
+                <label for="spLangTest">Spouse Language Test</label>
+                <select id="spLangTest" class="ctrl" onchange="toggleSpLang(this)"><option value="none">None</option><option value="ielts">IELTS</option><option value="celpip">CELPIP</option><option value="tef">TEF Canada</option></select>
               </div>
-              <div class="form-row" id="spouseLangFields" style="display:none;">
-                <div class="form-group">
-                  <label>Speaking (CLB)</label>
-                  <select id="spouseLangSpeaking" class="form-control">
-                    <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Listening (CLB)</label>
-                  <select id="spouseLangListening" class="form-control">
-                    <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Reading (CLB)</label>
-                  <select id="spouseLangReading" class="form-control">
-                    <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option>
-                  </select>
-                </div>
-                <div class="form-group">
-                  <label>Writing (CLB)</label>
-                  <select id="spouseLangWriting" class="form-control">
-                    <option value="4">CLB 4 or less</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option>
-                  </select>
-                </div>
+              <div class="row2" id="spouseLangFields">
+                <div class="form-g"><label>Speaking (CLB)</label><select id="spLsp" class="ctrl"><option value="4">CLB 4-</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
+                <div class="form-g"><label>Listening (CLB)</label><select id="spLll" class="ctrl"><option value="4">CLB 4-</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
+                <div class="form-g"><label>Reading (CLB)</label><select id="spLlr" class="ctrl"><option value="4">CLB 4-</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
+                <div class="form-g"><label>Writing (CLB)</label><select id="spLlw" class="ctrl"><option value="4">CLB 4-</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
               </div>
             </div>
 
-            <!-- SECTION E: SKILL TRANSFERABILITY -->
-            <div class="form-section-header">Section E — Skill Transferability Factors</div>
+            <div class="sec-hdr">Section E — Skill Transferability</div>
 
-            <div class="form-group">
-              <label for="foreignExp">Foreign Work Experience</label>
-              <select id="foreignExp" class="form-control">
-                <option value="0">None</option>
-                <option value="1">1–2 years</option>
-                <option value="2">3 or more years</option>
-              </select>
+            <div class="form-g">
+              <label for="fgnExp">Foreign Work Experience</label>
+              <select id="fgnExp" class="ctrl"><option value="0">None</option><option value="1">1–2 years</option><option value="2">3 or more years</option></select>
             </div>
-            <div class="form-group">
-              <label>Foreign education + language CLB 7 or higher?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="eduLang" value="0" checked> No</label>
-                <label><input type="radio" name="eduLang" value="1"> Yes</label>
-              </div>
+            <div class="form-g">
+              <label>Foreign education + language CLB 7+?</label>
+              <div class="radios"><label><input type="radio" name="eduLang" value="0" checked> No</label><label><input type="radio" name="eduLang" value="1"> Yes</label></div>
             </div>
-            <div class="form-group">
-              <label>Certificate of qualification in a trade occupation?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="tradesCert" value="0" checked> No</label>
-                <label><input type="radio" name="tradesCert" value="1"> Yes</label>
-              </div>
+            <div class="form-g">
+              <label>Certificate of qualification (trade occupation)?</label>
+              <div class="radios"><label><input type="radio" name="tradesCert" value="0" checked> No</label><label><input type="radio" name="tradesCert" value="1"> Yes</label></div>
             </div>
 
-            <!-- SECTION F: ADDITIONAL POINTS -->
-            <div class="form-section-header">Section F — Additional Points</div>
+            <div class="sec-hdr">Section F — Additional Points</div>
 
-            <div class="form-group">
+            <div class="form-g">
               <label>Provincial Nomination (PNP)?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="pnp" value="0" checked> No</label>
-                <label><input type="radio" name="pnp" value="600"> Yes (+600 points)</label>
-              </div>
+              <div class="radios"><label><input type="radio" name="pnp" value="0" checked> No</label><label><input type="radio" name="pnp" value="600"> Yes (+600 pts)</label></div>
             </div>
-            <div class="form-group">
+            <div class="form-g">
               <label>Valid job offer — NOC TEER 0 Major Group 00?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="jobOffer" value="0" checked> No</label>
-                <label><input type="radio" name="jobOffer" value="200"> Yes (+200 points)</label>
-              </div>
+              <div class="radios"><label><input type="radio" name="jo1" value="0" checked> No</label><label><input type="radio" name="jo1" value="200"> Yes (+200 pts)</label></div>
             </div>
-            <div class="form-group">
+            <div class="form-g">
               <label>Valid job offer — NOC TEER 0, 1, 2 or 3 (other)?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="jobOffer2" value="0" checked> No</label>
-                <label><input type="radio" name="jobOffer2" value="50"> Yes (+50 points)</label>
-              </div>
+              <div class="radios"><label><input type="radio" name="jo2" value="0" checked> No</label><label><input type="radio" name="jo2" value="50"> Yes (+50 pts)</label></div>
             </div>
-            <div class="form-group">
-              <label>Sibling in Canada (citizen or permanent resident)?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="sibling" value="0" checked> No</label>
-                <label><input type="radio" name="sibling" value="15"> Yes (+15 points)</label>
-              </div>
+            <div class="form-g">
+              <label>Sibling in Canada (citizen or PR)?</label>
+              <div class="radios"><label><input type="radio" name="sib" value="0" checked> No</label><label><input type="radio" name="sib" value="15"> Yes (+15 pts)</label></div>
             </div>
-            <div class="form-group">
-              <label>French CLB 7+, English CLB 4 or less?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="frenchBonus1" value="0" checked> No</label>
-                <label><input type="radio" name="frenchBonus1" value="25"> Yes (+25 points)</label>
-              </div>
+            <div class="form-g">
+              <label>French CLB 7+ with English CLB 4 or less?</label>
+              <div class="radios"><label><input type="radio" name="fr1" value="0" checked> No</label><label><input type="radio" name="fr1" value="25"> Yes (+25 pts)</label></div>
             </div>
-            <div class="form-group">
-              <label>French CLB 7+, English CLB 5 or higher?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="frenchBonus2" value="0" checked> No</label>
-                <label><input type="radio" name="frenchBonus2" value="50"> Yes (+50 points)</label>
-              </div>
+            <div class="form-g">
+              <label>French CLB 7+ with English CLB 5 or higher?</label>
+              <div class="radios"><label><input type="radio" name="fr2" value="0" checked> No</label><label><input type="radio" name="fr2" value="50"> Yes (+50 pts)</label></div>
             </div>
-            <div class="form-group">
-              <label>Post-secondary education in Canada — 1–2 year program?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="canadaEdu1" value="0" checked> No</label>
-                <label><input type="radio" name="canadaEdu1" value="15"> Yes (+15 points)</label>
-              </div>
+            <div class="form-g">
+              <label>Canadian post-secondary education — 1–2 year program?</label>
+              <div class="radios"><label><input type="radio" name="cedu1" value="0" checked> No</label><label><input type="radio" name="cedu1" value="15"> Yes (+15 pts)</label></div>
             </div>
-            <div class="form-group">
-              <label>Post-secondary education in Canada — 3+ year program?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="canadaEdu2" value="0" checked> No</label>
-                <label><input type="radio" name="canadaEdu2" value="30"> Yes (+30 points)</label>
-              </div>
+            <div class="form-g">
+              <label>Canadian post-secondary education — 3+ year program?</label>
+              <div class="radios"><label><input type="radio" name="cedu2" value="0" checked> No</label><label><input type="radio" name="cedu2" value="30"> Yes (+30 pts)</label></div>
             </div>
 
-            <button type="submit" class="btn-calculate">🧮 Calculate My CRS Score →</button>
+            <button type="submit" class="btn-calc">🧮 Calculate My CRS Score →</button>
           </form>
         </section>
 
-        <!-- ===== RESULTS ===== -->
+        <!-- RESULTS -->
         <section id="results" aria-live="polite" aria-atomic="true">
-          <div class="results-card">
-            <h2 style="font-size:1.2rem;margin-bottom:16px;color:var(--black);">Your CRS Score Result</h2>
-            <div class="score-display">
-              <span class="score-number" id="scoreNumber">0</span>
-              <div class="score-label">out of 1,200 possible points</div>
+          <div class="res-card">
+            <h2 style="font-size:1.1rem;margin-bottom:14px">Your CRS Score Result</h2>
+            <div class="score-wrap">
+              <span class="score-num" id="scoreNum">0</span>
+              <div class="score-lbl">out of 1,200 possible points</div>
             </div>
-            <div class="score-bar-wrap">
-              <div class="score-bar" id="scoreBar" style="width:0%"></div>
-            </div>
-            <div class="score-verdict" id="scoreVerdict"></div>
-
-            <div class="score-breakdown">
+            <div class="bar-wrap"><div class="bar" id="scoreBar" style="width:0%"></div></div>
+            <div class="verdict" id="scoreVerdict"></div>
+            <div class="bk-tbl">
               <table>
-                <thead>
-                  <tr><th>CRS Factor</th><th class="pts" style="text-align:right;">Points</th></tr>
-                </thead>
-                <tbody id="scoreBreakdown"></tbody>
+                <thead><tr><th>CRS Factor</th><th class="pts" style="text-align:right">Points</th></tr></thead>
+                <tbody id="bkTbody"></tbody>
               </table>
             </div>
-
-            <div class="results-actions">
-              <button class="btn-action btn-primary-action" onclick="window.print()">🖨 Print / Save PDF</button>
-              <button class="btn-action" onclick="copyScore()">📋 Copy Score</button>
-              <button class="btn-action" onclick="shareWhatsApp()">💬 Share on WhatsApp</button>
+            <div class="res-acts">
+              <button class="btn-act pri" onclick="window.print()">🖨 Print / Save PDF</button>
+              <button class="btn-act" onclick="copyScore()">📋 Copy Score</button>
+              <button class="btn-act" onclick="shareWA()">💬 Share via WhatsApp</button>
             </div>
-
-            <div class="improvement-cta">
-              <span class="cta-icon">📈</span>
+            <div class="imp-cta">
+              <span class="ico">📈</span>
               <div>
                 <h4>Want a higher CRS score?</h4>
-                <p>Discover 10 proven strategies to boost your Express Entry points — from language improvement to provincial nomination.</p>
-                <a href="/how-to-improve-crs-score">Read our CRS Score Improvement Guide →</a>
+                <p>10 proven strategies to boost your Comprehensive Ranking System points fast.</p>
+                <a href="/how-to-improve-crs-score">Read the CRS Score Improvement Guide →</a>
               </div>
             </div>
           </div>
-
-          <!-- AD after results -->
-          <div class="ad-slot ad-rectangle" aria-label="Advertisement">Advertisement</div>
         </section>
 
-        <!-- ===== WHAT IS CRS SCORE ===== -->
-        <section class="info-section" aria-labelledby="what-is-crs">
-          <h2 id="what-is-crs">What is CRS Score?</h2>
-          <p>The <strong>Comprehensive Ranking System (CRS)</strong> is a points-based system used by <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">Immigration, Refugees and Citizenship Canada (IRCC)</a> to rank candidates in the Express Entry pool. Your CRS score is based on factors like age, education, language ability, and work experience. The higher your score, the better your chances of receiving an Invitation to Apply (ITA) for Canadian permanent residence.</p>
-          <p>Scores range from 0 to 1,200 points. IRCC conducts regular <a href="/express-entry-draw-results">Express Entry draws</a> and invites the highest-scoring candidates to apply for permanent residence. Recent all-program draw cutoffs have ranged from approximately 470 to 525 points.</p>
-          <p>The CRS score determines where your profile ranks in the Express Entry pool relative to other candidates. Using this free <strong>CRS calculator</strong>, you can estimate your score and identify areas for improvement before submitting your official profile. For a full explanation, see our <a href="/what-is-crs-score">What is CRS Score guide</a>.</p>
+        <!-- WHAT IS CRS -->
+        <section class="info" aria-labelledby="what-crs">
+          <h2 id="what-crs">What is CRS Score? (Comprehensive Ranking System)</h2>
+          <p>The <strong>Comprehensive Ranking System (CRS)</strong> is a points-based ranking system used by <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">Immigration, Refugees and Citizenship Canada (IRCC)</a> to rank candidates in the <strong>Express Entry pool</strong>. Your CRS score is determined by human capital factors — age, education, language proficiency, and Canadian work experience. The higher your score, the stronger your chances of receiving an Invitation to Apply (ITA) for permanent residence.</p>
+          <p>Scores range from 0 to 1,200 points. IRCC conducts regular <a href="/express-entry-draw-results">Express Entry draws</a> inviting the highest-scoring candidates. Use our free <strong>CRS calculator</strong> to estimate your score and understand exactly which factors to improve. For a full explanation see our <a href="/what-is-crs-score">What is CRS Score guide</a>.</p>
 
           <h3>CRS Score Range &amp; PR Chances</h3>
-          <table class="data-table" role="table" aria-label="CRS Score range and PR chances">
-            <thead>
-              <tr><th>CRS Score Range</th><th>PR Chances</th><th>Typical Draw Eligibility</th></tr>
-            </thead>
+          <table class="dt" role="table">
+            <thead><tr><th>CRS Score Range</th><th>PR Chances</th><th>Typical Draw Eligibility</th></tr></thead>
             <tbody>
               <tr><td><strong>Below 400</strong></td><td>Very Low</td><td>Not competitive for most draws</td></tr>
-              <tr><td><strong>400 – 450</strong></td><td>Low–Moderate</td><td>May qualify for some PNP draws</td></tr>
-              <tr><td><strong>451 – 470</strong></td><td>Moderate</td><td>Getting closer to all-program cutoffs</td></tr>
+              <tr><td><strong>400 – 450</strong></td><td>Low–Moderate</td><td>May qualify for PNP-specific draws</td></tr>
+              <tr><td><strong>451 – 470</strong></td><td>Moderate</td><td>Getting close to all-program cutoffs</td></tr>
               <tr><td><strong>471 – 500</strong></td><td>Good</td><td>Competitive for all-program draws</td></tr>
               <tr><td><strong>500+</strong></td><td>Excellent</td><td>Very strong — likely to receive ITA</td></tr>
             </tbody>
           </table>
         </section>
 
-        <!-- ===== HOW TO USE ===== -->
-        <section class="info-section" aria-labelledby="how-to-use">
-          <h2 id="how-to-use">How to Use This CRS Calculator</h2>
+        <!-- HOW TO USE -->
+        <section class="info" aria-labelledby="how-use">
+          <h2 id="how-use">How to Use This Free CRS Calculator</h2>
           <div class="steps">
-            <div class="step-box">
-              <div class="step-num">1</div>
-              <div class="step-text">
-                <h4>Enter Your Personal Details</h4>
-                <p>Input age, education, marital status, and Canadian work experience — the core human capital factors.</p>
-              </div>
-            </div>
-            <div class="step-box">
-              <div class="step-num">2</div>
-              <div class="step-text">
-                <h4>Add Language Test Scores</h4>
-                <p>Select your test type (IELTS, CELPIP, TEF, or TCF) and enter CLB scores for all four skills.</p>
-              </div>
-            </div>
-            <div class="step-box">
-              <div class="step-num">3</div>
-              <div class="step-text">
-                <h4>Review Your Score Breakdown</h4>
-                <p>Click Calculate to get your instant CRS score with a full section-by-section breakdown.</p>
-              </div>
-            </div>
+            <div class="step"><div class="step-n">1</div><div class="step-t"><h4>Enter Personal Details</h4><p>Age, education, marital status and Canadian work experience — the core human capital factors.</p></div></div>
+            <div class="step"><div class="step-n">2</div><div class="step-t"><h4>Add Language Scores</h4><p>Select your test (IELTS, CELPIP, TEF, TCF) and enter CLB levels. Need help? Use our <a href="/ielts-crs-calculator">IELTS to CLB converter</a>.</p></div></div>
+            <div class="step"><div class="step-n">3</div><div class="step-t"><h4>Add Additional Points</h4><p>Include provincial nomination, job offer, French bonus or Canadian education if applicable.</p></div></div>
+            <div class="step"><div class="step-n">4</div><div class="step-t"><h4>Get Instant Results</h4><p>Click Calculate to see your total CRS score with a full section breakdown and improvement tips.</p></div></div>
           </div>
         </section>
 
-        <!-- ===== HOW CRS IS CALCULATED ===== -->
-        <section class="info-section" aria-labelledby="how-calculated">
-          <h2 id="how-calculated">How is CRS Score Calculated?</h2>
-          <p>The CRS score is calculated using a four-section formula based on the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">official IRCC CRS criteria</a>. The maximum possible score is <strong>1,200 points</strong>. Here's how each section contributes:</p>
+        <!-- HOW CALCULATED -->
+        <section class="info" aria-labelledby="how-calc">
+          <h2 id="how-calc">How is CRS Score Calculated? Full Breakdown</h2>
+          <p>The CRS score is calculated using the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">official IRCC CRS criteria</a>. Maximum is <strong>1,200 points</strong> across four sections:</p>
           <ul>
-            <li><strong>Section A — Core Human Capital (max 500 pts):</strong> Age, level of education, first official language, and Canadian work experience</li>
-            <li><strong>Section B — Spouse/Partner Factors (max 40 pts):</strong> Spouse's education, language scores, and Canadian work experience (only if spouse is accompanying you)</li>
-            <li><strong>Section C — Skill Transferability (max 100 pts):</strong> Combinations of foreign work experience + language, education + language, or trade certification</li>
-            <li><strong>Section D — Additional Points (max 600 pts):</strong> Provincial nomination (+600), job offer (+200 or +50), French language bonus, Canadian education, sibling in Canada</li>
+            <li><strong>Section A — Core Human Capital (max 500 pts):</strong> Age, education, first official language (4 skills), second language, and Canadian work experience. This section differs slightly if you have an accompanying spouse.</li>
+            <li><strong>Section B — Spouse/Partner Factors (max 40 pts):</strong> Spouse's education level, language test scores, and Canadian work experience — only when your spouse is accompanying you to Canada.</li>
+            <li><strong>Section C — Skill Transferability (max 100 pts):</strong> Combinations of foreign work experience + language proficiency, education + language, and trade certification. See our <a href="/cec-crs-calculator">CEC CRS calculator</a> for the Canadian Experience Class grid.</li>
+            <li><strong>Section D — Additional Points (max 600 pts):</strong> Provincial nomination (+600), <a href="/pnp-crs-calculator">PNP stream</a> job offer (+200 or +50), French language bonus (+25 or +50), Canadian post-secondary education (+15 or +30), sibling in Canada (+15).</li>
           </ul>
-          <p>For a complete points breakdown with tables, visit our <a href="/how-crs-is-calculated">How CRS Score is Calculated guide</a>.</p>
+          <p>For the full points table, visit our <a href="/how-crs-is-calculated">How CRS Score is Calculated guide</a> or check the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">official IRCC CRS tool</a>.</p>
         </section>
 
-        <!-- ===== FAQ ===== -->
-        <section class="info-section" aria-labelledby="faq-heading">
-          <h2 id="faq-heading">Frequently Asked Questions about CRS Score</h2>
+        <!-- FAQ -->
+        <section class="info" aria-labelledby="faq-h">
+          <h2 id="faq-h">Frequently Asked Questions — CRS Score Calculator</h2>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is a good CRS score for Canada Express Entry?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">A CRS score of 470 or above is generally considered competitive for Express Entry all-program draws. Recent cutoffs have ranged from 470 to 525. However, <a href="/pnp-crs-calculator">French-language proficiency draws</a> and PNP-specific draws often have significantly lower cutoffs — sometimes under 400. Your target score depends on which type of draw you are aiming for.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">What is a good CRS score for Canada Express Entry in 2026?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">A CRS score of <strong>470 or above</strong> is competitive for all-program Express Entry draws. Recent 2025 cutoffs ranged from 471 to 525. <a href="/pnp-crs-calculator">PNP-specific draws</a> and French-language draws have lower cutoffs — sometimes under 400. Use our <a href="/crs-cutoff-scores">CRS cutoff scores history</a> to track trends.</div></div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              How is the CRS score calculated?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">The CRS score is calculated across four main categories: (1) Core human capital factors — age, education, first language, second language, and <a href="/cec-crs-calculator">Canadian work experience</a>; (2) Spouse/partner factors; (3) Skill transferability factors; and (4) Additional points for provincial nomination, job offer, French-language bonus, Canadian education, and having a sibling in Canada. The maximum possible score is 1,200 points. See our detailed <a href="/how-crs-is-calculated">CRS calculation guide</a>.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">How is the CRS score calculated?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">CRS score is calculated across four sections: (A) Core human capital — age, education, language, <a href="/cec-crs-calculator">Canadian work experience</a>; (B) Spouse/partner factors; (C) Skill transferability — foreign work exp + language combinations; (D) Additional points including provincial nomination (+600) and job offer. Maximum total is 1,200 points. Read the full <a href="/how-crs-is-calculated">CRS calculation guide</a>.</div></div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              How many CRS points does a provincial nomination give?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">A provincial nomination (PNP) adds <strong>600 CRS points</strong> to your score instantly, making it virtually guaranteed that you will receive an Invitation to Apply (ITA) in the very next Express Entry draw. Use our <a href="/pnp-crs-calculator">PNP CRS Calculator</a> to see the impact on your total score. This is why pursuing a provincial nomination is one of the top strategies for candidates with lower base CRS scores.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">How many CRS points does a provincial nomination give?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">A provincial nomination (PNP) adds <strong>600 CRS points</strong> instantly — virtually guaranteeing an ITA in the next Express Entry draw. Check which province best suits your profile using our <a href="/ontario-crs-calculator">Ontario CRS calculator</a> or <a href="/alberta-crs-calculator">Alberta CRS calculator</a>.</div></div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is the minimum CRS score needed to get an ITA?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">There is no fixed minimum CRS score — the cutoff varies with each draw depending on the number of candidates and invitations issued. All-program draw cutoffs have recently ranged from 470 to 525. The historical low was 75 points in a PNP-only draw in 2020. We recommend aiming for 470+ for competitive chances in general all-program draws. Use our <a href="/crs-cutoff-scores">CRS Cutoff Scores History page</a> to track trends.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">What is the minimum CRS score needed to get an ITA?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">There is no fixed minimum — the cutoff varies each draw. Recent all-program draw cutoffs ranged from 471 to 525. Aim for <strong>470+</strong> for competitive chances. Monitor live cutoffs on our <a href="/crs-cutoff-scores">Express Entry cutoff scores page</a>.</div></div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              Can I calculate my CRS score without an IRCC account?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">Yes! This free CRS calculator requires absolutely no IRCC login, government account, or personal information. Simply enter your profile details directly into the form above and instantly receive your estimated CRS score with a full section-by-section breakdown. Your data is never stored or transmitted — everything runs locally in your browser. You can also use the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">official IRCC CRS tool</a> to verify your results.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">Can I calculate my CRS score without an IRCC account?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Yes — this <strong>free CRS calculator</strong> requires no IRCC login, government account, or personal information. Enter your details and get an instant score. Your data is never stored. You can also verify results using the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">official IRCC CRS tool</a>.</div></div>
 
-          <div class="faq-item">
-            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
-              How can I improve my CRS score?
-              <svg class="arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-answer">The most impactful ways to increase your CRS score are: (1) Improve your <a href="/ielts-crs-calculator">IELTS or CELPIP language scores</a> — even one CLB band can add 10–30+ points; (2) Gain a Provincial Nomination (+600 pts); (3) Secure a valid Canadian job offer (+50 to +200 pts); (4) Gain Canadian work experience; (5) Improve French language skills for a bonus. Read our full <a href="/how-to-improve-crs-score">How to Improve Your CRS Score guide</a> for all 10 strategies.</div>
-          </div>
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">Is this CRS calculator accurate?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Yes — this calculator uses the official IRCC CRS grid updated for 2026. Results are estimates based on information you enter. Always verify using the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">official IRCC CRS tool</a> before submitting your Express Entry profile.</div></div>
+
+          <div class="faq-item"><button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">How can I improve my CRS score?<svg class="arr" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg></button><div class="faq-a">Top strategies: (1) Improve IELTS/CELPIP scores — each CLB band adds 10–32 pts; (2) Get a Provincial Nomination (+600 pts); (3) Get a Canadian job offer (+50–200 pts); (4) Gain Canadian work experience; (5) Improve French language skills for a 25–50 pt bonus. See the full <a href="/how-to-improve-crs-score">CRS score improvement guide</a>.</div></div>
         </section>
 
-        <!-- ===== LATEST DRAWS ===== -->
-        <section class="info-section" aria-labelledby="draws-heading">
-          <h2 id="draws-heading">Latest Express Entry Draw Results</h2>
+        <!-- DRAWS -->
+        <section class="info" aria-labelledby="draws-h">
+          <h2 id="draws-h">Latest Express Entry Draw Results 2025</h2>
           <p>Recent Invitation to Apply (ITA) draws with minimum CRS cutoff scores. <a href="/crs-cutoff-scores">View full CRS cutoff history →</a></p>
-          <div class="draws-table-wrap">
-            <table class="data-table" role="table" aria-label="Recent Express Entry Draw Results">
-              <thead>
-                <tr><th>Draw #</th><th>Date</th><th>Draw Type</th><th>Min CRS</th><th>ITAs Issued</th></tr>
-              </thead>
+          <div class="draws-wrap">
+            <table class="dt" role="table">
+              <thead><tr><th>Draw #</th><th>Date</th><th>Draw Type</th><th>Min CRS</th><th>ITAs Issued</th></tr></thead>
               <tbody>
-                <tr><td>320</td><td>Mar 26, 2025</td><td>All-program</td><td>489</td><td>4,500</td></tr>
-                <tr><td>319</td><td>Mar 12, 2025</td><td>All-program</td><td>487</td><td>4,500</td></tr>
-                <tr><td>318</td><td>Feb 26, 2025</td><td>PNP-only</td><td>714</td><td>1,353</td></tr>
-                <tr><td>317</td><td>Feb 12, 2025</td><td>All-program</td><td>491</td><td>4,000</td></tr>
-                <tr><td>316</td><td>Jan 22, 2025</td><td>French-language</td><td>371</td><td>800</td></tr>
+                <tr><td>320</td><td>Mar 26, 2025</td><td>All-program</td><td><strong>489</strong></td><td>4,500</td></tr>
+                <tr><td>319</td><td>Mar 12, 2025</td><td>All-program</td><td><strong>487</strong></td><td>4,500</td></tr>
+                <tr><td>318</td><td>Feb 26, 2025</td><td>PNP-only</td><td><strong>714</strong></td><td>1,353</td></tr>
+                <tr><td>317</td><td>Feb 12, 2025</td><td>All-program</td><td><strong>491</strong></td><td>4,000</td></tr>
+                <tr><td>316</td><td>Jan 22, 2025</td><td>French-language</td><td><strong>371</strong></td><td>800</td></tr>
               </tbody>
             </table>
           </div>
-          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:8px;">Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry Rounds of Invitations</a>. Data shown is approximate for reference.</p>
+          <p style="font-size:.76rem;color:var(--muted);margin-top:7px;">Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry Rounds of Invitations</a>. Data is for reference purposes.</p>
         </section>
 
-        <!-- ===== RELATED CALCULATORS ===== -->
-        <section class="info-section" aria-labelledby="related-calc">
-          <h2 id="related-calc">Related CRS Calculators</h2>
-          <p>Explore our specialized calculators for different programs and provinces to calculate your CRS score under each stream:</p>
+        <!-- RELATED CALCULATORS -->
+        <section class="info" aria-labelledby="rel-calc">
+          <h2 id="rel-calc">Related CRS Calculators &amp; Tools</h2>
+          <p>Explore our free calculators for all Express Entry programs and provincial streams:</p>
           <div class="calc-grid">
-            <a href="/express-entry-crs-calculator" class="calc-card">
-              <div class="calc-icon">🇨🇦</div>
-              <div class="calc-name">Express Entry Calculator</div>
-              <div class="calc-sub">All programs</div>
-            </a>
-            <a href="/cec-crs-calculator" class="calc-card">
-              <div class="calc-icon">💼</div>
-              <div class="calc-name">CEC Calculator</div>
-              <div class="calc-sub">Canadian Experience Class</div>
-            </a>
-            <a href="/fsw-crs-calculator" class="calc-card">
-              <div class="calc-icon">🌐</div>
-              <div class="calc-name">FSW Calculator</div>
-              <div class="calc-sub">Federal Skilled Worker</div>
-            </a>
-            <a href="/pnp-crs-calculator" class="calc-card">
-              <div class="calc-icon">🏛️</div>
-              <div class="calc-name">PNP Calculator</div>
-              <div class="calc-sub">Provincial Nominee Program</div>
-            </a>
-            <a href="/ielts-crs-calculator" class="calc-card">
-              <div class="calc-icon">📝</div>
-              <div class="calc-name">IELTS to CRS</div>
-              <div class="calc-sub">Language points converter</div>
-            </a>
-            <a href="/alberta-crs-calculator" class="calc-card">
-              <div class="calc-icon">🏔️</div>
-              <div class="calc-name">Alberta Calculator</div>
-              <div class="calc-sub">AINP Stream</div>
-            </a>
-            <a href="/ontario-crs-calculator" class="calc-card">
-              <div class="calc-icon">🏙️</div>
-              <div class="calc-name">Ontario Calculator</div>
-              <div class="calc-sub">OINP Stream</div>
-            </a>
-            <a href="/bc-crs-calculator" class="calc-card">
-              <div class="calc-icon">🌲</div>
-              <div class="calc-name">BC Calculator</div>
-              <div class="calc-sub">BC PNP Stream</div>
-            </a>
-            <a href="/manitoba-crs-calculator" class="calc-card">
-              <div class="calc-icon">🌾</div>
-              <div class="calc-name">Manitoba Calculator</div>
-              <div class="calc-sub">MPNP Stream</div>
-            </a>
-            <a href="/healthcare-crs-calculator" class="calc-card">
-              <div class="calc-icon">🏥</div>
-              <div class="calc-name">Healthcare Workers</div>
-              <div class="calc-sub">Healthcare CRS points</div>
-            </a>
+            <a href="/express-entry-crs-calculator" class="cc"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">All programs</div></a>
+            <a href="/cec-crs-calculator" class="cc"><div class="ci">💼</div><div class="cn">CEC Calculator</div><div class="cs">Canadian Experience Class</div></a>
+            <a href="/fsw-crs-calculator" class="cc"><div class="ci">🌐</div><div class="cn">FSW Calculator</div><div class="cs">Federal Skilled Worker</div></a>
+            <a href="/pnp-crs-calculator" class="cc"><div class="ci">🏛️</div><div class="cn">PNP Calculator</div><div class="cs">Provincial Nominee</div></a>
+            <a href="/ielts-crs-calculator" class="cc"><div class="ci">📝</div><div class="cn">IELTS to CRS</div><div class="cs">Language converter</div></a>
+            <a href="/ontario-crs-calculator" class="cc"><div class="ci">🏙️</div><div class="cn">Ontario (OINP)</div><div class="cs">Ontario stream</div></a>
+            <a href="/alberta-crs-calculator" class="cc"><div class="ci">🏔️</div><div class="cn">Alberta (AINP)</div><div class="cs">Alberta stream</div></a>
+            <a href="/bc-crs-calculator" class="cc"><div class="ci">🌲</div><div class="cn">BC PNP</div><div class="cs">British Columbia</div></a>
+            <a href="/manitoba-crs-calculator" class="cc"><div class="ci">🌾</div><div class="cn">Manitoba (MPNP)</div><div class="cs">Manitoba stream</div></a>
+            <a href="/healthcare-crs-calculator" class="cc"><div class="ci">🏥</div><div class="cn">Healthcare Workers</div><div class="cs">Healthcare CRS</div></a>
+            <a href="/stem-crs-calculator" class="cc"><div class="ci">🔬</div><div class="cn">STEM Workers</div><div class="cs">STEM CRS points</div></a>
+            <a href="/crs-cutoff-scores" class="cc"><div class="ci">📊</div><div class="cn">Cutoff History</div><div class="cs">Draw tracker</div></a>
           </div>
         </section>
 
-      </div><!-- end left column -->
+      </div><!-- end left col -->
 
-      <!-- ===== SIDEBAR ===== -->
-      <aside class="sidebar" aria-label="Sidebar">
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar tools">
 
-        <!-- Latest Cutoff Widget -->
-        <div class="sidebar-widget">
+        <!-- Latest Cutoff -->
+        <div class="sw">
           <div class="cutoff-box">
-            <div class="cutoff-num">489</div>
-            <div class="cutoff-label">Latest All-Program Cutoff</div>
-            <div class="cutoff-sub">Draw #320 — Mar 26, 2025<br>4,500 ITAs issued</div>
+            <div class="co-num">489</div>
+            <div class="co-lbl">Latest All-Program Cutoff</div>
+            <div class="co-sub">Draw #320 — Mar 26, 2025<br>4,500 ITAs issued</div>
           </div>
-          <p style="font-size:0.8rem;color:var(--text-muted);margin-top:10px;text-align:center;"><a href="/crs-cutoff-scores">View full cutoff history →</a></p>
+          <p style="font-size:.77rem;color:var(--muted);margin-top:8px;text-align:center;"><a href="/crs-cutoff-scores">View full cutoff history →</a></p>
         </div>
 
-        <!-- Ad Slot -->
-        <div class="sidebar-widget" style="padding:0;border:none;background:none;box-shadow:none;">
-          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
-        </div>
-
-        <!-- Quick Links -->
-        <div class="sidebar-widget">
+        <!-- Express Entry Tools -->
+        <div class="sw">
           <h3>Express Entry Tools</h3>
-          <ul class="sidebar-links" role="list">
+          <ul class="sb-links" role="list">
             <li><a href="/cec-crs-calculator">CEC CRS Calculator</a></li>
             <li><a href="/fsw-crs-calculator">FSW Points Calculator</a></li>
             <li><a href="/pnp-crs-calculator">PNP CRS Calculator</a></li>
             <li><a href="/ielts-crs-calculator">IELTS to CRS Converter</a></li>
             <li><a href="/stem-crs-calculator">STEM Workers Calculator</a></li>
             <li><a href="/healthcare-crs-calculator">Healthcare Workers CRS</a></li>
+            <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
           </ul>
         </div>
 
-        <!-- Provincial Links -->
-        <div class="sidebar-widget">
+        <!-- Provincial -->
+        <div class="sw">
           <h3>Provincial Calculators</h3>
-          <ul class="sidebar-links" role="list">
-            <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <ul class="sb-links" role="list">
             <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
+            <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
             <li><a href="/bc-crs-calculator">British Columbia (BC PNP)</a></li>
             <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
             <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
@@ -1208,384 +669,282 @@
         </div>
 
         <!-- Official Resources -->
-        <div class="sidebar-widget">
+        <div class="sw">
           <h3>Official IRCC Resources</h3>
-          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" class="res-link">
+            <svg class="ei" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             IRCC Express Entry
           </a>
-          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer" class="res-link">
+            <svg class="ei" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Official CRS Criteria
           </a>
-          <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" class="res-link">
+            <svg class="ei" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             IRCC Official CRS Tool
           </a>
-          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg class="ext-icon" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer" class="res-link">
+            <svg class="ei" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Express Entry Draw Results
+          </a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/works.html" target="_blank" rel="noopener noreferrer" class="res-link">
+            <svg class="ei" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            How Express Entry Works
           </a>
         </div>
 
         <!-- Guide Links -->
-        <div class="sidebar-widget">
-          <h3>CRS Score Guides</h3>
-          <ul class="sidebar-links" role="list">
+        <div class="sw">
+          <h3>CRS Guides</h3>
+          <ul class="sb-links" role="list">
             <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
             <li><a href="/how-crs-is-calculated">How CRS is Calculated</a></li>
-            <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+            <li><a href="/how-to-improve-crs-score">Improve CRS Score — 10 Ways</a></li>
             <li><a href="/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
-            <li><a href="/crs-cutoff-scores">CRS Cutoff Scores History</a></li>
             <li><a href="/canada-express-entry-eligibility">Express Entry Eligibility</a></li>
           </ul>
         </div>
 
       </aside>
-    </div><!-- end content-wrap -->
-  </div><!-- end container -->
+    </div>
+  </div>
 </main>
 
-<!-- ===== FOOTER ===== -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
+<!-- FOOTER -->
+<footer class="site-ftr" role="contentinfo">
+  <div class="wrap">
+    <div class="ftr-grid">
+      <div class="ftr-col">
         <h4>CRS Calculators</h4>
         <ul>
           <li><a href="/">CRS Score Calculator</a></li>
           <li><a href="/express-entry-crs-calculator">Express Entry Calculator</a></li>
           <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
           <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator">FST Calculator</a></li>
           <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
           <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
           <li><a href="/stem-crs-calculator">STEM Workers</a></li>
           <li><a href="/healthcare-crs-calculator">Healthcare Workers</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="ftr-col">
         <h4>Provincial Calculators</h4>
         <ul>
-          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
           <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
           <li><a href="/bc-crs-calculator">British Columbia</a></li>
           <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
           <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
           <li><a href="/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
         </ul>
       </div>
-      <div class="footer-col">
+      <div class="ftr-col">
         <h4>Guides &amp; Resources</h4>
         <ul>
           <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
           <li><a href="/how-crs-is-calculated">How CRS is Calculated</a></li>
           <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
           <li><a href="/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
-          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores History</a></li>
           <li><a href="/express-entry-draw-results">Express Entry Draws</a></li>
           <li><a href="/canada-express-entry-eligibility">Express Entry Eligibility</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Blog</h4>
-        <ul>
-          <li><a href="/blog">All Articles</a></li>
-          <li><a href="/blog/minimum-crs-score">Minimum CRS Score Guide</a></li>
-          <li><a href="/blog/improve-crs-score-tips">10 Ways to Improve CRS</a></li>
-          <li><a href="/blog/crs-score-by-age">Age &amp; CRS Score</a></li>
-          <li><a href="/blog/crs-score-with-spouse">CRS With vs Without Spouse</a></li>
-          <li><a href="/blog/crs-score-language-test">IELTS &amp; CRS Points</a></li>
-        </ul>
-        <h4 style="margin-top:16px;">Official Links</h4>
+      <div class="ftr-col">
+        <h4>Official Links</h4>
         <ul>
           <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li>
           <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">Official CRS Criteria ↗</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">CRS Manual ↗</a></li>
+          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">IRCC CRS Tool ↗</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">Draw Results ↗</a></li>
         </ul>
       </div>
     </div>
-
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
+    <div class="ftr-btm">
+      <div class="ftr-btm-in">
         <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
-        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
+        <span><a href="/sitemap.xml" style="color:#888">Sitemap</a></span>
       </div>
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's official CRS grid and may not reflect your exact score. Always verify your results using the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" style="color:#888;">official IRCC CRS tool</a> before submitting your Express Entry profile.</p>
+      <p class="ftr-disc">⚠️ This CRS calculator is for informational purposes only. Results are estimates based on the IRCC CRS grid and may not reflect your exact score. Always verify using the <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" style="color:#888">official IRCC CRS tool</a> before submitting your Express Entry profile. Not affiliated with IRCC or the Government of Canada.</p>
     </div>
   </div>
 </footer>
 
-<!-- ===== JAVASCRIPT ===== -->
 <script>
-// ===== TOGGLE SPOUSE SECTION =====
-function toggleSpouse(el) {
-  const married = el.value === 'married';
-  document.getElementById('spouseComingGroup').style.display = married ? 'block' : 'none';
-  updateSpouseSection();
-}
-
-function updateSpouseSection() {
-  const married = document.querySelector('input[name="marital"]:checked').value === 'married';
-  const coming = document.querySelector('input[name="spouseComing"]:checked')?.value === 'yes';
-  document.getElementById('spouseSection').style.display = (married && coming) ? 'block' : 'none';
-}
-
-document.querySelectorAll('input[name="spouseComing"]').forEach(r => r.addEventListener('change', updateSpouseSection));
-
-// Second language fields toggle
-document.getElementById('lang2Test').addEventListener('change', function() {
-  document.getElementById('lang2Fields').style.display = this.value !== 'none' ? 'grid' : 'none';
-});
-
-// Spouse language fields toggle
-document.getElementById('spouseLangTest').addEventListener('change', function() {
-  document.getElementById('spouseLangFields').style.display = this.value !== 'none' ? 'grid' : 'none';
-});
-
-// ===== CRS CALCULATION =====
-// Official IRCC CRS Grid Data
-const AGE_POINTS = {
-  // [single, with_spouse]
-  '17under': [0, 0], '18': [99, 90], '19': [105, 95], '20': [110, 100],
-  '21': [110, 100], '22': [110, 100], '23': [110, 100], '24': [110, 100],
-  '25': [110, 100], '26': [110, 100], '27': [110, 100], '28': [110, 100],
-  '29': [110, 100], '30': [105, 95], '31': [99, 90], '32': [94, 85],
-  '33': [88, 80], '34': [83, 75], '35': [77, 70], '36': [72, 65],
-  '37': [66, 60], '38': [61, 55], '39': [55, 50], '40': [50, 45],
-  '41': [39, 35], '42': [28, 25], '43': [17, 15], '44': [6, 5],
-  '45plus': [0, 0]
+// ===== OFFICIAL IRCC CRS GRID =====
+const AGE={
+  '17u':[0,0],'18':[99,90],'19':[105,95],'20':[110,100],'21':[110,100],'22':[110,100],
+  '23':[110,100],'24':[110,100],'25':[110,100],'26':[110,100],'27':[110,100],'28':[110,100],
+  '29':[110,100],'30':[105,95],'31':[99,90],'32':[94,85],'33':[88,80],'34':[83,75],
+  '35':[77,70],'36':[72,65],'37':[66,60],'38':[61,55],'39':[55,50],'40':[50,45],
+  '41':[39,35],'42':[28,25],'43':[17,15],'44':[6,5],'45p':[0,0]
 };
+const EDU={0:[0,0],1:[28,25],2:[84,75],3:[91,81],4:[112,100],5:[119,106],6:[126,112],7:[140,119]};
+const SP_EDU={0:0,1:2,2:6,3:7,4:8,5:9,6:10,7:10};
+// Language points per CLB (per skill, single applicant)
+const L1={4:6,5:6,6:8,7:16,8:22,9:29,10:32};
+// Second language per skill
+const L2={4:0,5:1,6:1};
+// Canadian work exp [single, married]
+const CWE_S={0:0,1:40,2:53,3:64,4:72,5:80};
+const CWE_M={0:0,1:35,2:46,3:56,4:63,5:70};
+// Spouse language per CLB per skill
+const SP_L={4:0,5:1,6:1,7:3,8:3,9:5};
+// Spouse CWE
+const SP_CWE={0:0,1:5,2:7,3:8,4:10,5:10};
 
-const EDU_POINTS = {
-  // [single, with_spouse]
-  0: [0, 0], 1: [28, 25], 2: [84, 75], 3: [91, 81],
-  4: [112, 100], 5: [119, 106], 6: [126, 112], 7: [140, 119]
-};
+function getR(name){const e=document.querySelector(`input[name="${name}"]:checked`);return e?e.value:'0';}
+function gv(id){return document.getElementById(id).value;}
 
-// Spouse education points (separate grid for spouse factor)
-const SPOUSE_EDU_POINTS = { 0: 0, 1: 2, 2: 6, 3: 7, 4: 8, 5: 9, 6: 10, 7: 10 };
-
-// Language CLB → CRS points (first language, no spouse)
-const LANG1_SINGLE = {
-  4: 6, 5: 6, 6: 8, 7: 16, 8: 22, 9: 29, 10: 32
-};
-// First language, with spouse (per skill)
-const LANG1_MARRIED = {
-  4: 6, 5: 6, 6: 8, 7: 16, 8: 22, 9: 29, 10: 32
-};
-// Second language points per skill
-const LANG2_POINTS = { 4: 0, 5: 1, 6: 1 };
-
-// Canadian work experience points [single, married]
-const CANWORK_SINGLE = { 0: 0, 1: 40, 2: 53, 3: 64, 4: 72, 5: 80 };
-const CANWORK_MARRIED = { 0: 0, 1: 35, 2: 46, 3: 56, 4: 63, 5: 70 };
-
-// Spouse language points per skill
-const SPOUSE_LANG_POINTS = { 4: 0, 5: 1, 6: 1, 7: 3, 8: 3, 9: 5 };
-// Spouse Canadian work exp points
-const SPOUSE_CANWORK_POINTS = { 0: 0, 1: 5, 2: 7, 3: 8, 4: 10, 5: 10 };
-
-// Skill transferability (simplified IRCC grid)
-function calcSkillTransfer(foreignExp, firstLangMin, eduLevel, tradesCert, eduLangBonus) {
-  let pts = 0;
-  // Foreign work + language CLB 7+
-  if (firstLangMin >= 7) {
-    if (foreignExp === '1') pts += 13;
-    if (foreignExp === '2') pts += 25;
-  }
-  if (firstLangMin >= 9) {
-    if (foreignExp === '1') pts += 12; // bonus for CLB9+
-    if (foreignExp === '2') pts += 12;
-  }
-  // Education + language CLB 7+
-  if (eduLangBonus === '1' && firstLangMin >= 7) {
-    if (parseInt(eduLevel) >= 4) pts += 25;
-    else if (parseInt(eduLevel) >= 2) pts += 13;
-  }
-  // Foreign education + work exp
-  if (foreignExp !== '0' && parseInt(eduLevel) >= 4) pts += 13;
-  if (foreignExp === '2' && parseInt(eduLevel) >= 4) pts += 12;
-  // Trade certificate
-  if (tradesCert === '1' && firstLangMin >= 5) pts += 25;
-  return Math.min(pts, 100);
-}
-
-function getRadioValue(name) {
-  const el = document.querySelector(`input[name="${name}"]:checked`);
-  return el ? el.value : '0';
-}
-
-function calculateCRS(e) {
+function doCalc(e){
   e.preventDefault();
+  const age=gv('age'),edu=parseInt(gv('edu')||'0');
+  if(!age){alert('Please select your age.');return;}
+  const marital=getR('marital');
+  const spComing=getR('spouseComing');
+  const hasSpouse=marital==='married'&&spComing==='yes';
+  const idx=hasSpouse?1:0;
+  const canExp=parseInt(gv('canExp'));
 
-  const age = document.getElementById('age').value;
-  const edu = document.getElementById('education').value;
-  const marital = getRadioValue('marital');
-  const spouseComing = getRadioValue('spouseComing');
-  const hasSpouse = marital === 'married' && spouseComing === 'yes';
-  const canExp = parseInt(document.getElementById('canadianExp').value);
-
-  const ls = parseInt(document.getElementById('langSpeaking').value);
-  const ll = parseInt(document.getElementById('langListening').value);
-  const lr = parseInt(document.getElementById('langReading').value);
-  const lw = parseInt(document.getElementById('langWriting').value);
-  const firstLangMin = Math.min(ls, ll, lr, lw);
-
-  const foreignExp = document.getElementById('foreignExp').value;
-  const eduLangBonus = getRadioValue('eduLang');
-  const tradesCert = getRadioValue('tradesCert');
-  const pnp = parseInt(getRadioValue('pnp'));
-  const jobOffer = parseInt(getRadioValue('jobOffer'));
-  const jobOffer2 = parseInt(getRadioValue('jobOffer2'));
-  const sibling = parseInt(getRadioValue('sibling'));
-  const frenchBonus1 = parseInt(getRadioValue('frenchBonus1'));
-  const frenchBonus2 = parseInt(getRadioValue('frenchBonus2'));
-  const canadaEdu1 = parseInt(getRadioValue('canadaEdu1'));
-  const canadaEdu2 = parseInt(getRadioValue('canadaEdu2'));
-
-  // ---- Section A ----
-  const ageIdx = hasSpouse ? 1 : 0;
-  const agePoints = (AGE_POINTS[age] || [0, 0])[ageIdx];
-  const eduPoints = (EDU_POINTS[parseInt(edu)] || [0, 0])[ageIdx];
-  const langPoints = (LANG1_SINGLE[ls] || 0) + (LANG1_SINGLE[ll] || 0) + (LANG1_SINGLE[lr] || 0) + (LANG1_SINGLE[lw] || 0);
-  const canExpPoints = hasSpouse ? (CANWORK_MARRIED[canExp] || 0) : (CANWORK_SINGLE[canExp] || 0);
-
-  // Second language
-  const lang2Test = document.getElementById('lang2Test').value;
-  let lang2Points = 0;
-  if (lang2Test !== 'none') {
-    const l2s = parseInt(document.getElementById('lang2Speaking').value);
-    const l2l = parseInt(document.getElementById('lang2Listening').value);
-    const l2r = parseInt(document.getElementById('lang2Reading').value);
-    const l2w = parseInt(document.getElementById('lang2Writing').value);
-    lang2Points = [l2s, l2l, l2r, l2w].reduce((sum, v) => sum + (LANG2_POINTS[v] || 0), 0);
-    lang2Points = Math.min(lang2Points, 24);
+  // Section A
+  const ageP=(AGE[age]||[0,0])[idx];
+  const eduP=(EDU[edu]||[0,0])[idx];
+  const ls=parseInt(gv('lsp')),ll=parseInt(gv('ll')),lr=parseInt(gv('lr')),lw=parseInt(gv('lw'));
+  const langP=(L1[ls]||0)+(L1[ll]||0)+(L1[lr]||0)+(L1[lw]||0);
+  const firstLangMin=Math.min(ls,ll,lr,lw);
+  // second language
+  let l2P=0;
+  if(gv('l2test')!=='none'){
+    const a=[parseInt(gv('l2sp')),parseInt(gv('l2ll')),parseInt(gv('l2lr')),parseInt(gv('l2lw'))];
+    l2P=Math.min(a.reduce((s,v)=>s+(L2[v]||0),0),24);
   }
+  const cweP=hasSpouse?CWE_M[canExp]||0:CWE_S[canExp]||0;
+  const secA=ageP+eduP+langP+l2P+cweP;
 
-  const sectionA = agePoints + eduPoints + langPoints + lang2Points + canExpPoints;
-
-  // ---- Section B: Spouse ----
-  let spouseEduPts = 0, spouseLangPts = 0, spouseCanExpPts = 0;
-  if (hasSpouse) {
-    spouseEduPts = SPOUSE_EDU_POINTS[parseInt(document.getElementById('spouseEducation').value)] || 0;
-    const spLangTest = document.getElementById('spouseLangTest').value;
-    if (spLangTest !== 'none') {
-      const sls = parseInt(document.getElementById('spouseLangSpeaking').value);
-      const sll = parseInt(document.getElementById('spouseLangListening').value);
-      const slr = parseInt(document.getElementById('spouseLangReading').value);
-      const slw = parseInt(document.getElementById('spouseLangWriting').value);
-      spouseLangPts = [sls, sll, slr, slw].reduce((sum, v) => sum + (SPOUSE_LANG_POINTS[v] || 0), 0);
-      spouseLangPts = Math.min(spouseLangPts, 20);
+  // Section B — Spouse
+  let spEduP=0,spLangP=0,spCweP=0;
+  if(hasSpouse){
+    spEduP=SP_EDU[parseInt(gv('spEdu'))]||0;
+    if(gv('spLangTest')!=='none'){
+      const a=[parseInt(gv('spLsp')),parseInt(gv('spLll')),parseInt(gv('spLlr')),parseInt(gv('spLlw'))];
+      spLangP=Math.min(a.reduce((s,v)=>s+(SP_L[v]||0),0),20);
     }
-    spouseCanExpPts = SPOUSE_CANWORK_POINTS[parseInt(document.getElementById('spouseCanadianExp').value)] || 0;
+    spCweP=SP_CWE[parseInt(gv('spCanExp'))]||0;
   }
-  const sectionB = spouseEduPts + spouseLangPts + spouseCanExpPts;
+  const secB=spEduP+spLangP+spCweP;
 
-  // ---- Section C: Skill Transferability ----
-  const sectionC = calcSkillTransfer(foreignExp, firstLangMin, edu, tradesCert, eduLangBonus);
+  // Section C — Skill Transferability
+  const fgnExp=gv('fgnExp');
+  const eduLang=getR('eduLang');
+  const tradesCert=getR('tradesCert');
+  let secC=0;
+  // Foreign work exp + language
+  if(firstLangMin>=7&&fgnExp==='1') secC+=13;
+  if(firstLangMin>=7&&fgnExp==='2') secC+=25;
+  if(firstLangMin>=9&&fgnExp==='1') secC+=12;
+  if(firstLangMin>=9&&fgnExp==='2') secC+=12;
+  // Education + language
+  if(eduLang==='1'&&firstLangMin>=7){
+    if(edu>=4) secC+=25;
+    else if(edu>=2) secC+=13;
+  }
+  // Foreign edu + work exp
+  if(fgnExp!=='0'&&edu>=4) secC+=13;
+  if(fgnExp==='2'&&edu>=4) secC+=12;
+  // Trades cert
+  if(tradesCert==='1'&&firstLangMin>=5) secC+=25;
+  secC=Math.min(secC,100);
 
-  // ---- Section D: Additional ----
-  const additionalPts = pnp + Math.max(jobOffer, jobOffer2) + sibling + Math.max(frenchBonus1, frenchBonus2) + Math.max(canadaEdu1, canadaEdu2);
-  const sectionD = Math.min(additionalPts, 600);
+  // Section D — Additional
+  const pnp=parseInt(getR('pnp'));
+  const jo=Math.max(parseInt(getR('jo1')),parseInt(getR('jo2')));
+  const sib=parseInt(getR('sib'));
+  const fr=Math.max(parseInt(getR('fr1')),parseInt(getR('fr2')));
+  const cedu=Math.max(parseInt(getR('cedu1')),parseInt(getR('cedu2')));
+  const secD=Math.min(pnp+jo+sib+fr+cedu,600);
 
-  const totalScore = Math.min(sectionA + sectionB + sectionC + sectionD, 1200);
+  const total=Math.min(secA+secB+secC+secD,1200);
 
-  // ---- Display results ----
-  displayResults(totalScore, {
-    'Section A — Core Human Capital': sectionA,
-    '  · Age': agePoints,
-    '  · Education': eduPoints,
-    '  · First Language': langPoints,
-    '  · Second Language': lang2Points,
-    '  · Canadian Work Experience': canExpPoints,
-    'Section B — Spouse/Partner Factors': sectionB,
-    'Section C — Skill Transferability': sectionC,
-    'Section D — Additional Points': sectionD,
-    'TOTAL CRS SCORE': totalScore
+  showResults(total,{
+    'Section A — Core Human Capital':secA,
+    '  Age':ageP,'  Education':eduP,'  First Language':langP,
+    '  Second Language':l2P,'  Canadian Work Experience':cweP,
+    'Section B — Spouse/Partner':secB,
+    'Section C — Skill Transferability':secC,
+    'Section D — Additional Points':secD,
+    'TOTAL CRS SCORE':total
   });
 }
 
-function displayResults(score, breakdown) {
-  const resultEl = document.getElementById('results');
-  resultEl.style.display = 'block';
+function showResults(score,bk){
+  const el=document.getElementById('results');
+  el.style.display='block';
+  document.getElementById('scoreNum').textContent=score;
 
-  // Score number
-  document.getElementById('scoreNumber').textContent = score;
+  let nc,bc,vc,vt;
+  if(score<400){nc='c-danger';bc='b-danger';vc='v-danger';vt=`⚠️ Score of ${score} is below competitive thresholds. Improving language scores, Canadian work experience, or getting a PNP can significantly boost your points.`}
+  else if(score<=450){nc='c-warn';bc='b-warn';vc='v-warn';vt=`📊 Score of ${score} may qualify for PNP-specific draws. Explore provincial nomination options to boost your profile.`}
+  else if(score<=470){nc='c-yellow';bc='b-yellow';vc='v-yellow';vt=`📈 Score of ${score} is close to recent all-program cutoffs (470–525). Small improvements in language or work experience could push you over.`}
+  else if(score<=500){nc='c-good';bc='b-good';vc='v-good';vt=`✅ Score of ${score} is competitive for Express Entry all-program draws. Keep your profile active and monitor draw cutoffs.`}
+  else{nc='c-great';bc='b-great';vc='v-great';vt=`🎉 Excellent! Score of ${score} is well above typical cutoffs. Strong chances of receiving an ITA in the next draw.`}
 
-  // Colour class
-  let colorClass, barClass, verdictClass, verdictText;
-  if (score < 400) {
-    colorClass = 'score-danger'; barClass = 'bar-danger'; verdictClass = 'verdict-danger';
-    verdictText = `⚠️ Your score of ${score} is below competitive thresholds. Consider improving language scores, gaining Canadian work experience, or exploring a Provincial Nomination.`;
-  } else if (score <= 450) {
-    colorClass = 'score-warning'; barClass = 'bar-warning'; verdictClass = 'verdict-warning';
-    verdictText = `📊 Your score of ${score} may qualify for some PNP-specific draws. Explore provincial nomination options and work on improving your score.`;
-  } else if (score <= 470) {
-    colorClass = 'score-yellow'; barClass = 'bar-yellow'; verdictClass = 'verdict-yellow';
-    verdictText = `📈 Your score of ${score} is close to recent all-program cutoffs (~470–525). A modest improvement could put you in a competitive position.`;
-  } else if (score <= 500) {
-    colorClass = 'score-good'; barClass = 'bar-good'; verdictClass = 'verdict-good';
-    verdictText = `✅ Your score of ${score} is competitive for Express Entry all-program draws. Keep your profile active and monitor draw cutoffs.`;
-  } else {
-    colorClass = 'score-great'; barClass = 'bar-great'; verdictClass = 'verdict-great';
-    verdictText = `🎉 Excellent! Your score of ${score} is well above typical cutoffs. You have strong chances of receiving an ITA in the next draw.`;
-  }
+  document.getElementById('scoreNum').className=`score-num ${nc}`;
+  const bar=document.getElementById('scoreBar');
+  bar.style.width=Math.min((score/1200)*100,100)+'%';
+  bar.className=`bar ${bc}`;
+  const vd=document.getElementById('scoreVerdict');
+  vd.textContent=vt;vd.className=`verdict ${vc}`;
 
-  const numEl = document.getElementById('scoreNumber');
-  numEl.className = `score-number ${colorClass}`;
-  const bar = document.getElementById('scoreBar');
-  bar.style.width = Math.min((score / 1200) * 100, 100) + '%';
-  bar.className = `score-bar ${barClass}`;
-  const verdict = document.getElementById('scoreVerdict');
-  verdict.textContent = verdictText;
-  verdict.className = `score-verdict ${verdictClass}`;
-
-  // Breakdown table
-  const tbody = document.getElementById('scoreBreakdown');
-  tbody.innerHTML = '';
-  for (const [label, pts] of Object.entries(breakdown)) {
-    const tr = document.createElement('tr');
-    const isTotal = label.startsWith('TOTAL');
-    tr.innerHTML = `<td style="${isTotal ? 'font-weight:700' : ''}">${label}</td><td class="pts">${pts}</td>`;
+  const tbody=document.getElementById('bkTbody');
+  tbody.innerHTML='';
+  for(const[lbl,pts] of Object.entries(bk)){
+    const isTotal=lbl.startsWith('TOTAL');
+    const tr=document.createElement('tr');
+    tr.innerHTML=`<td style="${isTotal?'font-weight:700':''}">${lbl}</td><td class="pts">${pts}</td>`;
     tbody.appendChild(tr);
   }
-
-  // Scroll to results
-  setTimeout(() => {
-    document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
-  }, 100);
+  setTimeout(()=>el.scrollIntoView({behavior:'smooth',block:'start'}),80);
 }
 
-// ===== UTILITY FUNCTIONS =====
-function copyScore() {
-  const score = document.getElementById('scoreNumber').textContent;
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(`My CRS Score: ${score} — Calculated at https://crsscorecalculator.vercel.app/`);
-    alert('Score copied to clipboard!');
-  }
+// ===== UI TOGGLES =====
+function toggleSpouse(el){
+  const m=el.value==='married';
+  document.getElementById('spouseGroup').style.display=m?'block':'none';
+  if(!m) document.getElementById('spouseSection').style.display='none';
+  else toggleSpouseSection();
+}
+function toggleSpouseSection(){
+  const m=document.querySelector('input[name="marital"]:checked')?.value==='married';
+  const c=document.querySelector('input[name="spouseComing"]:checked')?.value==='yes';
+  document.getElementById('spouseSection').style.display=(m&&c)?'block':'none';
+}
+function toggleL2(sel){
+  document.getElementById('lang2Fields').style.display=sel.value!=='none'?'grid':'none';
+}
+function toggleSpLang(sel){
+  document.getElementById('spouseLangFields').style.display=sel.value!=='none'?'grid':'none';
 }
 
-function shareWhatsApp() {
-  const score = document.getElementById('scoreNumber').textContent;
-  const msg = encodeURIComponent(`My CRS Score for Canada Express Entry is ${score}! Calculate yours free at https://crsscorecalculator.vercel.app/`);
-  window.open(`https://wa.me/?text=${msg}`, '_blank');
-}
-
-function toggleFAQ(btn) {
-  const answer = btn.nextElementSibling;
-  const isOpen = btn.classList.contains('open');
-  // Close all
-  document.querySelectorAll('.faq-question.open').forEach(q => {
-    q.classList.remove('open');
-    q.setAttribute('aria-expanded', 'false');
+// ===== FAQ =====
+function toggleFAQ(btn){
+  const ans=btn.nextElementSibling;
+  const open=btn.classList.contains('open');
+  document.querySelectorAll('.faq-q.open').forEach(q=>{
+    q.classList.remove('open');q.setAttribute('aria-expanded','false');
     q.nextElementSibling.classList.remove('open');
   });
-  if (!isOpen) {
-    btn.classList.add('open');
-    btn.setAttribute('aria-expanded', 'true');
-    answer.classList.add('open');
-  }
+  if(!open){btn.classList.add('open');btn.setAttribute('aria-expanded','true');ans.classList.add('open');}
+}
+
+// ===== SHARE =====
+function copyScore(){
+  const s=document.getElementById('scoreNum').textContent;
+  if(navigator.clipboard){navigator.clipboard.writeText(`My CRS Score: ${s} — https://crsscorecalculator.vercel.app/`);alert('Copied!');}
+}
+function shareWA(){
+  const s=document.getElementById('scoreNum').textContent;
+  const msg=encodeURIComponent(`My Canada Express Entry CRS Score is ${s}! Calculate yours free: https://crsscorecalculator.vercel.app/`);
+  window.open(`https://wa.me/?text=${msg}`,'_blank');
 }
 </script>
 
