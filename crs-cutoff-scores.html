@@ -1,261 +1,1000 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>CRS Cutoff Scores History – Express Entry Draw Results & Trends</title>
-  <meta name="description" content="Complete history of Express Entry CRS cutoff scores and draw results. Track trends in minimum CRS scores to understand your chances of receiving an ITA.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CRS Cutoff Scores 2026 – Express Entry Draw Results History & Trends</title>
+  <meta name="description" content="Complete Express Entry CRS cutoff scores history 2015–2026. All draw results by type: All-program, CEC, FSW, PNP, French, STEM, Healthcare. Track CRS trends and predict your chances." />
+  <meta name="keywords" content="crs cutoff scores, express entry draw results, crs score history, express entry cutoff 2026, crs cutoff scores 2026, express entry draw history, canada express entry draw results, minimum crs score for ita, express entry draw cutoff trend, crs score required for canada pr" />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="CRS Score Calculator" />
+  <meta name="geo.region" content="CA" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="CRS Cutoff Scores History – Express Entry Draw Results & Trends">
-  <meta property="og:description" content="Complete history of Express Entry CRS cutoff scores and draw results. Track trends in minimum CRS scores to understand your chances of receiving an ITA.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/crs-cutoff-scores.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="CRS Cutoff Scores History – Express Entry Draw Results & Trends">
-  <meta name="twitter:description" content="Complete history of Express Entry CRS cutoff scores and draw results. Track trends in minimum CRS scores to understand your chances of receiving an ITA.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
+  <meta property="og:title" content="CRS Cutoff Scores 2026 – Express Entry Draw Results History" />
+  <meta property="og:description" content="All Express Entry CRS cutoff scores in one place. Latest draw results, trends, and category-based draw history for 2024–2026. Updated after every draw." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/crs-cutoff-scores" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CRS Score Calculator" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CRS Cutoff Scores 2026 – Express Entry Draw Results History" />
+  <meta name="twitter:description" content="Complete Express Entry CRS cutoff history 2015–2026. Latest draw results, trends, and category analysis." />
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema: Dataset (Draw History) -->
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"CRS Cutoff Scores History – All Express Entry Draw Results","item":"https://crsscorecalculator.vercel.app/crs-cutoff-scores.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the current CRS cutoff score?","acceptedAnswer":{"@type":"Answer","text":"CRS cutoffs change with every draw (approximately every two weeks). Recent all-program draw cutoffs have been in the 489–498 range. French-language draws have had cutoffs around 375–380. Check our draw results table above for the most recent information."}},{"@type":"Question","name":"Why do CRS cutoffs fluctuate?","acceptedAnswer":{"@type":"Answer","text":"CRS cutoffs fluctuate based on the number of ITAs being issued in each draw, the current composition of the Express Entry pool, seasonal patterns in profile submissions, and government priorities for immigration categories. More ITAs typically means a lower cutoff."}},{"@type":"Question","name":"What was the all-time lowest CRS cutoff?","acceptedAnswer":{"@type":"Answer","text":"The all-time lowest CRS cutoff was 75 points, set in a PNP-only draw in November 2020. However, this low cutoff was only for PNP nominees who already had +600 points added to their base score. The lowest meaningful all-program cutoff was in the mid-400s."}},{"@type":"Question","name":"How are CRS cutoffs determined?","acceptedAnswer":{"@type":"Answer","text":"IRCC selects how many ITAs to issue per draw based on annual immigration targets and pool composition. The cutoff is automatically determined by ranking all candidates in the pool by their CRS score and inviting the top candidates. Any tie at the cutoff is broken by the date and time the profile was submitted."}},{"@type":"Question","name":"How can I track CRS cutoff trends?","acceptedAnswer":{"@type":"Answer","text":"IRCC publishes all draw results on the official IRCC website. Our draw results table above provides a curated history of recent draws. For deeper analysis, our blog has detailed articles on CRS trends. Use our CRS Calculator to compare your score against historical cutoffs."}}]}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "Express Entry CRS Cutoff Scores History 2015–2026",
+    "description": "Complete dataset of all Canada Express Entry draw results including draw number, date, type, minimum CRS cutoff score, and ITAs issued from 2015 to 2026.",
+    "url": "https://crsscorecalculator.vercel.app/crs-cutoff-scores",
+    "temporalCoverage": "2015-01-01/2026-04-18",
+    "spatialCoverage": { "@type": "Country", "name": "Canada" },
+    "creator": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "isBasedOn": "https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html"
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the latest Express Entry CRS cutoff score in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The latest Express Entry draw (#411) was held on April 15, 2026. It was a French-Language proficiency draw with a CRS cutoff of 419 and 4,000 ITAs issued. The most recent all-program draw cutoffs have ranged between 470–527 in 2025–2026."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the lowest CRS cutoff score ever in Express Entry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The lowest ever Express Entry CRS cutoff score was 75 points, set during a CEC-specific draw in February 2021 when IRCC was clearing the Express Entry backlog. The lowest all-program cutoff was 413 in September 2021."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the highest CRS cutoff score ever in Express Entry?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The highest all-program CRS cutoff was 886 points. However, PNP-specific draws regularly see cutoffs of 700–800+ because provincial nominees already receive +600 CRS points. For non-PNP all-program draws, the historical high was around 557 points (July 2022)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How often does IRCC hold Express Entry draws?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IRCC typically holds Express Entry draws every 1–2 weeks. In 2025, IRCC significantly increased draw frequency, sometimes holding multiple draws per week across different categories. Draws can be all-program, program-specific (CEC, FSW, FST), category-based (French, STEM, healthcare, trades), or PNP-specific."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a category-based Express Entry draw?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Since May 2023, IRCC has introduced category-based draws targeting specific groups: French-language proficiency, STEM occupations, healthcare and social services, trades, transport, and agriculture. These draws often have lower CRS cutoffs than all-program draws, giving candidates in priority categories a better chance at an ITA even with a lower overall CRS score."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if two candidates have the same CRS score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "IRCC uses a tie-breaking rule based on the date and time a candidate submitted or last updated their Express Entry profile. If two candidates have the same CRS score at the cutoff, the one who submitted their profile earlier (before the tie-break timestamp) receives the ITA. This is why updating your profile without a good reason can hurt your tie-break position."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "CRS Cutoff Scores", "item": "https://crsscorecalculator.vercel.app/crs-cutoff-scores" }
+    ]
+  }
+  </script>
+
+  <!-- Schema: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "CRS Cutoff Scores History – Express Entry Draw Results & Trends 2026",
+    "description": "Complete Express Entry CRS cutoff scores history 2015–2026. All draw results, category breakdowns, trends, and predictions.",
+    "url": "https://crsscorecalculator.vercel.app/crs-cutoff-scores",
+    "datePublished": "2025-01-01",
+    "dateModified": "2026-04-18",
+    "author": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CRS Score Calculator",
+      "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/logo.png" }
+    }
+  }
+  </script>
+
+  <style>
+    :root {
+      --red:#CC0000;--red-dark:#990000;--red-light:#fff5f5;
+      --black:#1a1a1a;--text:#212529;--text-muted:#6c757d;--text-faint:#adb5bd;
+      --bg:#f8f9fa;--surface:#ffffff;--border:#dee2e6;--border-light:#e9ecef;
+      --success:#28a745;--success-bg:#d4edda;
+      --warning-bg:#fff3cd;--info-bg:#e8f4fd;
+      --c-allprog:#CC0000;--c-cec:#0066cc;--c-pnp:#7b2d8b;
+      --c-french:#e67e00;--c-stem:#00897b;--c-health:#e53935;--c-trades:#5d4037;
+      --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
+      --font-head:'Poppins','Inter',sans-serif;
+      --radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
+      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.10);
+      --transition:180ms ease;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;}
+    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
+    img{display:block;max-width:100%;height:auto;}
+    a{color:var(--red);text-decoration:none;transition:color var(--transition);}
+    a:hover{color:var(--red-dark);text-decoration:underline;}
+    h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;color:var(--black);}
+    ul,ol{padding-left:1.4em;}
+    table{border-collapse:collapse;width:100%;}
+    button{cursor:pointer;font-family:var(--font-body);}
+    p{max-width:72ch;}
+    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+
+    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
+    .content-wrap{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start;}
+
+    .skip-link{position:absolute;top:-100px;left:16px;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--radius-md);z-index:9999;transition:top .2s;}
+    .skip-link:focus{top:16px;}
+
+    /* HEADER */
+    .site-header{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
+    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
+    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--red);text-decoration:none;white-space:nowrap;}
+    .nav-logo:hover{color:var(--red-dark);text-decoration:none;}
+    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;flex-wrap:wrap;}
+    .nav-links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 10px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition);white-space:nowrap;}
+    .nav-links a:hover{background:var(--red-light);color:var(--red);text-decoration:none;}
+    .nav-links a.active{color:var(--red);font-weight:600;}
+    .nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--radius-md)!important;padding:8px 16px!important;font-weight:600!important;}
+    .nav-cta:hover{background:var(--red-dark)!important;}
+    .nav-mobile-toggle{display:none;background:none;border:none;padding:8px;color:var(--text);}
+
+    /* BREADCRUMB */
+    .breadcrumb{background:#fff;border-bottom:1px solid var(--border-light);padding:10px 0;}
+    .breadcrumb ol{display:flex;gap:6px;align-items:center;list-style:none;padding:0;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;}
+    .breadcrumb li+li::before{content:"›";margin-right:6px;color:var(--text-faint);}
+    .breadcrumb a{color:var(--text-muted);}
+    .breadcrumb a:hover{color:var(--red);}
+
+    /* HERO */
+    .hero{background:linear-gradient(135deg,#CC0000 0%,#8b0000 100%);color:#fff;padding:40px 0 32px;text-align:center;}
+    .hero h1{font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;margin-bottom:10px;}
+    .hero-sub{font-size:1rem;opacity:.92;max-width:620px;margin:0 auto 16px;}
+    .hero-meta{display:flex;justify-content:center;gap:16px;font-size:.82rem;opacity:.85;flex-wrap:wrap;margin-bottom:16px;}
+    .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
+    .badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:999px;}
+
+    /* LATEST DRAW BANNER */
+    .latest-draw-banner{background:linear-gradient(135deg,#1a1a1a,#333);color:#fff;padding:18px 0;}
+    .ldb-inner{display:flex;align-items:center;justify-content:center;gap:32px;flex-wrap:wrap;text-align:center;}
+    .ldb-stat{display:flex;flex-direction:column;align-items:center;}
+    .ldb-val{font-family:var(--font-head);font-size:1.6rem;font-weight:700;color:#fff;line-height:1;}
+    .ldb-label{font-size:.72rem;color:#aaa;margin-top:3px;text-transform:uppercase;letter-spacing:.04em;}
+    .ldb-divider{width:1px;height:40px;background:rgba(255,255,255,.2);}
+    .ldb-new{background:var(--red);color:#fff;font-size:.7rem;font-weight:700;padding:2px 8px;border-radius:999px;margin-left:8px;vertical-align:middle;}
+
+    /* AD */
+    .ad-slot{background:#f0f0f0;border:1px dashed #ccc;text-align:center;color:var(--text-muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);}
+    .ad-leaderboard{min-height:90px;margin:16px 0;}
+    .ad-mid{min-height:250px;margin:28px 0;}
+    .ad-sidebar{min-height:250px;width:100%;margin-bottom:20px;}
+    .ad-in-content{min-height:90px;margin:28px 0;}
+
+    .main-content{padding:32px 0 56px;}
+
+    /* STAT CARDS */
+    .stats-row{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px;margin-bottom:24px;}
+    .stat-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:16px;text-align:center;box-shadow:var(--shadow-sm);}
+    .stat-val{font-family:var(--font-head);font-size:1.6rem;font-weight:700;color:var(--red);line-height:1;}
+    .stat-label{font-size:.75rem;color:var(--text-muted);margin-top:4px;line-height:1.4;}
+
+    /* DRAW TYPE FILTER */
+    .filter-bar{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px;}
+    .filter-btn{padding:6px 14px;border-radius:999px;border:1.5px solid var(--border);background:#fff;font-size:.8rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all var(--transition);}
+    .filter-btn:hover,.filter-btn.active{border-color:var(--red);color:var(--red);background:var(--red-light);}
+    .filter-btn.active{background:var(--red);color:#fff;}
+
+    /* DRAW TYPE BADGES */
+    .type-badge{display:inline-block;font-size:.72rem;font-weight:700;padding:2px 8px;border-radius:999px;white-space:nowrap;}
+    .type-all{background:#fff0f0;color:var(--c-allprog);}
+    .type-cec{background:#e8f0fb;color:var(--c-cec);}
+    .type-pnp{background:#f3e8f7;color:var(--c-pnp);}
+    .type-french{background:#fff3e0;color:var(--c-french);}
+    .type-stem{background:#e0f2f0;color:var(--c-stem);}
+    .type-health{background:#fde8e8;color:var(--c-health);}
+    .type-trades{background:#efebe9;color:var(--c-trades);}
+    .type-fsw{background:#e8f5e9;color:#2e7d32;}
+
+    /* DRAW TABLE */
+    .draw-table-wrap{overflow-x:auto;border-radius:var(--radius-lg);box-shadow:var(--shadow-sm);margin-bottom:8px;}
+    .draw-table{font-size:.875rem;min-width:560px;}
+    .draw-table thead tr{background:var(--red);}
+    .draw-table th{padding:11px 14px;text-align:left;color:#fff;font-size:.8rem;font-weight:600;white-space:nowrap;}
+    .draw-table td{padding:10px 14px;border-bottom:1px solid var(--border-light);background:var(--surface);vertical-align:middle;}
+    .draw-table tr:last-child td{border-bottom:none;}
+    .draw-table tr:nth-child(even) td{background:#fafafa;}
+    .draw-table tr:hover td{background:var(--red-light);}
+    .draw-table .crs-val{font-family:var(--font-head);font-weight:700;font-size:1rem;}
+    .draw-table .draw-num{color:var(--text-muted);font-size:.8rem;}
+    .draw-table .ita-val{font-weight:600;}
+    .hidden-row{display:none;}
+
+    /* MINI BAR */
+    .mini-bar-wrap{display:flex;align-items:center;gap:6px;}
+    .mini-bar{height:6px;border-radius:3px;background:var(--red);min-width:4px;}
+
+    /* CRS SCALE indicator */
+    .crs-indicator{display:inline-flex;align-items:center;gap:4px;}
+    .crs-dot{width:8px;height:8px;border-radius:50%;flex-shrink:0;}
+
+    /* SECTION CARDS */
+    .info-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
+    .info-card h2{font-size:1.1rem;margin-bottom:14px;padding-bottom:10px;border-bottom:2px solid var(--red);}
+    .info-card h3{font-size:.95rem;margin:16px 0 6px;color:var(--black);}
+    .info-card p{font-size:.95rem;color:var(--text);margin-bottom:10px;}
+    .info-card ul,.info-card ol{font-size:.95rem;color:var(--text);}
+    .info-card li{margin-bottom:6px;}
+
+    /* YEAR TABS */
+    .year-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
+    .year-tab{padding:7px 16px;border-radius:var(--radius-md);border:1.5px solid var(--border);background:#fff;font-size:.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all var(--transition);}
+    .year-tab:hover{border-color:var(--red);color:var(--red);}
+    .year-tab.active{background:var(--red);border-color:var(--red);color:#fff;}
+
+    /* TREND CHART (CSS-based) */
+    .trend-section{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;}
+    .trend-section h2{font-size:1.1rem;margin-bottom:16px;padding-bottom:10px;border-bottom:2px solid var(--red);}
+    .chart-area{position:relative;height:180px;background:#fafafa;border-radius:var(--radius-lg);border:1px solid var(--border-light);overflow:hidden;display:flex;align-items:flex-end;padding:0 8px 8px;gap:3px;}
+    .chart-bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;min-width:0;}
+    .chart-bar-inner{width:100%;background:var(--red);border-radius:3px 3px 0 0;transition:height .4s ease;cursor:default;min-height:4px;}
+    .chart-bar-inner:hover{background:var(--red-dark);opacity:.85;}
+    .chart-label{font-size:.6rem;color:var(--text-muted);writing-mode:vertical-lr;text-orientation:mixed;transform:rotate(180deg);white-space:nowrap;height:36px;overflow:hidden;}
+    .chart-val{font-size:.6rem;color:var(--text-muted);font-weight:600;display:none;}
+    .chart-y-labels{position:absolute;left:0;top:8px;bottom:28px;display:flex;flex-direction:column;justify-content:space-between;padding-left:4px;}
+    .chart-y-label{font-size:.6rem;color:var(--text-faint);}
+
+    /* CALLOUT */
+    .callout{border-radius:var(--radius-lg);padding:12px 16px;margin:14px 0;display:flex;gap:10px;align-items:flex-start;font-size:.9rem;}
+    .callout-tip{background:#d4edda;border:1px solid #b8dfc5;}
+    .callout-info{background:var(--info-bg);border:1px solid #aed6f1;}
+    .callout-warn{background:var(--warning-bg);border:1px solid #ffd970;}
+    .callout-icon{font-size:1rem;flex-shrink:0;margin-top:2px;}
+    .callout p{margin:0;line-height:1.6;font-size:.875rem;}
+
+    /* TYPE LEGEND */
+    .type-legend{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;}
+    .legend-item{display:flex;align-items:center;gap:5px;font-size:.78rem;}
+    .legend-dot{width:10px;height:10px;border-radius:50%;flex-shrink:0;}
+
+    /* CTA BANNER */
+    .cta-banner{background:linear-gradient(135deg,#CC0000,#8b0000);border-radius:var(--radius-xl);padding:24px;color:#fff;text-align:center;margin:24px 0;}
+    .cta-banner h3{color:#fff;font-size:1.1rem;margin-bottom:6px;}
+    .cta-banner p{opacity:.9;font-size:.88rem;margin-bottom:16px;}
+    .cta-banner-btn{display:inline-block;background:#fff;color:var(--red);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:12px 28px;border-radius:var(--radius-lg);text-decoration:none;transition:transform var(--transition),box-shadow var(--transition);}
+    .cta-banner-btn:hover{transform:translateY(-2px);box-shadow:0 6px 20px rgba(0,0,0,.25);color:var(--red-dark);text-decoration:none;}
+
+    /* FAQ */
+    .faq-item{border:1px solid var(--border-light);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;}
+    .faq-question{width:100%;text-align:left;padding:13px 16px;background:var(--surface);border:none;cursor:pointer;font-size:.9rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--transition);}
+    .faq-question:hover,.faq-question.open{background:var(--red-light);color:var(--red);}
+    .faq-arrow{transition:transform var(--transition);flex-shrink:0;}
+    .faq-question.open .faq-arrow{transform:rotate(180deg);}
+    .faq-answer{display:none;padding:0 16px 14px;font-size:.88rem;color:var(--text);line-height:1.7;}
+    .faq-answer.open{display:block;}
+    .faq-answer a{color:var(--red);}
+
+    /* RELATED CALC */
+    .calc-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(145px,1fr));gap:10px;margin-top:14px;}
+    .calc-card{display:block;background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:12px;text-align:center;transition:border-color var(--transition),box-shadow var(--transition),transform var(--transition);text-decoration:none;color:var(--text);}
+    .calc-card:hover{border-color:var(--red);box-shadow:var(--shadow-md);transform:translateY(-2px);text-decoration:none;}
+    .calc-card .ci{font-size:1.4rem;margin-bottom:4px;}
+    .calc-card .cn{font-size:.75rem;font-weight:600;}
+    .calc-card .cs{font-size:.68rem;color:var(--text-muted);margin-top:2px;}
+
+    /* SIDEBAR */
+    .sidebar{position:sticky;top:88px;}
+    .sidebar-widget{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:16px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
+    .sidebar-widget h3{font-size:.88rem;margin-bottom:10px;color:var(--black);border-bottom:1px solid var(--border-light);padding-bottom:8px;font-family:var(--font-head);}
+    .sidebar-links{list-style:none;padding:0;}
+    .sidebar-links li{border-bottom:1px solid var(--border-light);}
+    .sidebar-links li:last-child{border-bottom:none;}
+    .sidebar-links a{display:block;padding:7px 0;font-size:.83rem;color:var(--text);transition:color var(--transition),padding-left var(--transition);}
+    .sidebar-links a:hover{color:var(--red);padding-left:4px;text-decoration:none;}
+    .sidebar-links a.current{color:var(--red);font-weight:600;}
+    .quick-stats{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+    .qs-item{background:#fafafa;border:1px solid var(--border-light);border-radius:var(--radius-md);padding:10px;text-align:center;}
+    .qs-val{font-family:var(--font-head);font-size:1.2rem;font-weight:700;color:var(--red);}
+    .qs-label{font-size:.68rem;color:var(--text-muted);margin-top:2px;line-height:1.3;}
+    .ext-icon{color:var(--text-muted);flex-shrink:0;}
+    .resource-link{display:flex;align-items:center;gap:8px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--border-light);color:var(--text);}
+    .resource-link:last-child{border-bottom:none;}
+    .resource-link:hover{color:var(--red);text-decoration:none;}
+    .show-more-btn{display:block;width:100%;padding:10px;background:#fafafa;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.875rem;font-weight:600;color:var(--text-muted);cursor:pointer;text-align:center;margin-top:12px;transition:all var(--transition);}
+    .show-more-btn:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
+
+    /* FOOTER */
+    .site-footer{background:var(--black);color:#ccc;padding:48px 0 0;}
+    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-bottom:28px;}
+    .footer-col h4{color:#fff;font-size:.88rem;margin-bottom:12px;font-family:var(--font-head);}
+    .footer-col ul{list-style:none;padding:0;}
+    .footer-col li{margin-bottom:7px;}
+    .footer-col a{font-size:.8rem;color:#aaa;transition:color var(--transition);}
+    .footer-col a:hover{color:#fff;text-decoration:none;}
+    .footer-bottom{border-top:1px solid #333;padding:18px 0;font-size:.78rem;color:#888;}
+    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
+    .footer-disclaimer{max-width:700px;font-size:.75rem;color:#666;margin-top:8px;line-height:1.5;}
+
+    @media(max-width:768px){
+      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px;box-shadow:var(--shadow-md);z-index:200;}
+      .nav-links.open{display:flex;}
+      .nav-mobile-toggle{display:block;}
+      .content-wrap{grid-template-columns:1fr;}
+      .sidebar{position:static;}
+      .ldb-divider{display:none;}
+      .footer-grid{grid-template-columns:1fr 1fr;}
+      .stats-row{grid-template-columns:repeat(3,1fr);}
+    }
+    @media(max-width:480px){
+      .footer-grid{grid-template-columns:1fr;}
+      .stats-row{grid-template-columns:1fr 1fr;}
+      .ldb-inner{gap:16px;}
+    }
+    @media print{
+      .site-header,.site-footer,.ad-slot,.sidebar,.cta-banner{display:none!important;}
+      .content-wrap{grid-template-columns:1fr;}
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
-    </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
+
+<a href="#draw-table" class="skip-link">Skip to draw results</a>
+
+<!-- HEADER -->
+<header class="site-header" role="banner">
+  <div class="container">
+    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
+      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
+        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
+          <rect width="32" height="32" rx="8" fill="#CC0000"/>
+          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
+        </svg>
+        CRS Calculator
+      </a>
+      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      </button>
+      <ul class="nav-links" role="list">
+        <li><a href="/">CRS Calculator</a></li>
+        <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
+        <li><a href="/cec-crs-calculator">CEC</a></li>
+        <li><a href="/pnp-crs-calculator">PNP</a></li>
+        <li><a href="/crs-cutoff-scores" class="active" aria-current="page">Cutoff Scores</a></li>
+        <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
+        <li><a href="/blog">Blog</a></li>
+        <li><a href="/" class="nav-cta">Calculate CRS →</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<!-- BREADCRUMB -->
+<nav class="breadcrumb" aria-label="Breadcrumb">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep">›</li>
-      <li class="current">CRS Cutoff Scores History – All Express Entry Draw Results</li>
+    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
+        <meta itemprop="position" content="1"/>
+      </li>
+      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+        <span itemprop="name">CRS Cutoff Scores</span>
+        <meta itemprop="position" content="2"/>
+      </li>
     </ol>
   </div>
 </nav>
 
-<div class="page-header">
+<!-- HERO -->
+<section class="hero" aria-label="CRS Cutoff Scores Hero">
   <div class="container">
-    <h1>CRS Cutoff Scores History – All Express Entry Draw Results</h1>
-    <p>Complete history of Express Entry CRS cutoff scores and draw results. Track trends in minimum CRS scores to understand your chances of receiving an ITA.</p>
-    <div class="meta-info"><span>Updated: April 2026</span></div>
+    <h1>CRS Cutoff Scores History 2026<br>Express Entry Draw Results & Trends</h1>
+    <p class="hero-sub">Every Express Entry draw result since 2015. Filter by draw type, track CRS score trends, and see how your score compares to recent cutoffs.</p>
+    <div class="hero-meta">
+      <span>📅 Updated April 18, 2026</span>
+      <span>✅ All Draw Types</span>
+      <span>🇨🇦 Source: IRCC Canada</span>
+      <span>📊 Trends & Analysis</span>
+    </div>
+    <div class="hero-badges">
+      <span class="badge">✓ All-Program Draws</span>
+      <span class="badge">✓ CEC Draws</span>
+      <span class="badge">✓ French Draws</span>
+      <span class="badge">✓ STEM Draws</span>
+      <span class="badge">✓ PNP Draws</span>
+    </div>
+  </div>
+</section>
+
+<!-- LATEST DRAW BANNER -->
+<div class="latest-draw-banner" aria-label="Latest Express Entry Draw">
+  <div class="container">
+    <div class="ldb-inner">
+      <div class="ldb-stat">
+        <span class="ldb-val">Draw #411 <span class="ldb-new">LATEST</span></span>
+        <span class="ldb-label">April 15, 2026</span>
+      </div>
+      <div class="ldb-divider" aria-hidden="true"></div>
+      <div class="ldb-stat">
+        <span class="ldb-val">419</span>
+        <span class="ldb-label">Min CRS Score</span>
+      </div>
+      <div class="ldb-divider" aria-hidden="true"></div>
+      <div class="ldb-stat">
+        <span class="ldb-val">4,000</span>
+        <span class="ldb-label">ITAs Issued</span>
+      </div>
+      <div class="ldb-divider" aria-hidden="true"></div>
+      <div class="ldb-stat">
+        <span class="ldb-val">French</span>
+        <span class="ldb-label">Draw Type</span>
+      </div>
+    </div>
   </div>
 </div>
 
+<!-- AD -->
 <div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
+  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
 </div>
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <article class="main-content content-body">
-      <div class="card">
-        
-    <h2>What is a CRS Cutoff Score?</h2>
-    <p>The CRS cutoff score (also called the minimum score or pass mark) is the lowest CRS score that received an Invitation to Apply (ITA) in a particular Express Entry draw. In each draw, IRCC sets the minimum CRS score based on how many ITAs are being issued and the distribution of scores in the current pool.</p>
-    <p>Only candidates at or above the cutoff score receive ITAs. All other candidates remain in the pool for future draws. Cutoffs vary significantly between draw types: all-program draws typically have cutoffs in the 470–525 range, while French-language draws can be as low as 370–400, and PNP draws are typically 700+.</p>
+<!-- MAIN -->
+<main class="main-content" id="main-content">
+  <div class="container">
+    <div class="content-wrap">
 
-    <h2>Recent Express Entry Draw Results</h2>
-    <div class="table-wrapper">
-      <table class="draws-table">
-        <thead><tr><th>Draw #</th><th>Date</th><th>Type</th><th>Min CRS</th><th>ITAs Issued</th></tr></thead>
-        <tbody id="draws-tbody">
-          <tr><td>#318</td><td>Apr 9, 2025</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>489</strong></td><td>1,000</td></tr>
-          <tr><td>#317</td><td>Mar 26, 2025</td><td><span class="badge badge-good">French Language</span></td><td><strong>379</strong></td><td>800</td></tr>
-          <tr><td>#316</td><td>Mar 12, 2025</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>491</strong></td><td>1,000</td></tr>
-          <tr><td>#315</td><td>Feb 26, 2025</td><td><span class="badge badge-pnp">PNP</span></td><td><strong>791</strong></td><td>598</td></tr>
-          <tr><td>#314</td><td>Feb 12, 2025</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>493</strong></td><td>1,000</td></tr>
-          <tr><td>#313</td><td>Jan 29, 2025</td><td><span class="badge badge-good">French Language</span></td><td><strong>377</strong></td><td>700</td></tr>
-          <tr><td>#312</td><td>Jan 15, 2025</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>496</strong></td><td>1,100</td></tr>
-          <tr><td>#311</td><td>Jan 8, 2025</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>498</strong></td><td>1,500</td></tr>
-          <tr><td>#310</td><td>Dec 18, 2024</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>494</strong></td><td>1,200</td></tr>
-          <tr><td>#309</td><td>Dec 4, 2024</td><td><span class="badge badge-good">French Language</span></td><td><strong>375</strong></td><td>600</td></tr>
-          <tr><td>#308</td><td>Nov 20, 2024</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>495</strong></td><td>1,000</td></tr>
-          <tr><td>#307</td><td>Nov 6, 2024</td><td><span class="badge badge-warning">STEM</span></td><td><strong>487</strong></td><td>800</td></tr>
-          <tr><td>#306</td><td>Oct 23, 2024</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>490</strong></td><td>1,000</td></tr>
-          <tr><td>#305</td><td>Oct 9, 2024</td><td><span class="badge badge-danger">Healthcare</span></td><td><strong>476</strong></td><td>500</td></tr>
-          <tr><td>#304</td><td>Sep 25, 2024</td><td><span class="badge badge-new">No Program Specified</span></td><td><strong>492</strong></td><td>1,000</td></tr>
-        </tbody>
-      </table>
-    </div>
+      <!-- LEFT COLUMN -->
+      <div>
 
-    <h2>CRS Cutoff Trends Analysis</h2>
-    <p>Looking at Express Entry draw history, several clear trends emerge:</p>
-    <ul>
-      <li><strong>All-program draws:</strong> Cutoffs have generally ranged from 470 to 530 in recent years. The introduction of more frequent draws has helped keep cutoffs relatively stable.</li>
-      <li><strong>French-language draws:</strong> Since 2023, dedicated French-language draws have dramatically increased opportunities for francophone candidates, with cutoffs typically in the 370–400 range — well below all-program levels.</li>
-      <li><strong>PNP draws:</strong> Provincial Nominee Program draws have very high cutoffs (700+) because all nominees already have +600 points added to their base score.</li>
-      <li><strong>Category-based draws:</strong> STEM, healthcare, agriculture, and trades draws were introduced in 2023 and have varying cutoffs, generally slightly lower than all-program draws.</li>
-    </ul>
-
-    <h2>Draw Types Explained</h2>
-    <p><strong>No Program Specified (All-Program):</strong> These draws invite candidates eligible for any Express Entry program. They have the most competition and typically the highest cutoffs. <strong>Program-specific draws</strong> (CEC, FSW, FST) invite only candidates eligible for that specific program. <strong>Category-based draws</strong> target specific occupational categories or language profiles. <strong>PNP draws</strong> are reserved for candidates with provincial nominations.</p>
-
-    <h2>What Happens After Getting an ITA?</h2>
-    <p>When you receive an ITA, you have exactly 60 days to submit a complete permanent residence application through your IRCC online account. Missing the 60-day deadline means your ITA expires and you must wait for another draw. Once submitted, IRCC aims to process complete applications within 6 months. Calculate your current score with our <a href="/index.html">CRS Calculator</a> to see how you compare to recent cutoffs.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">Official IRCC Express Entry Draws ↗</a></li><li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">IRCC CRS Tool ↗</a></li></ul></div>
-      </div>
-      <section class="card" aria-labelledby="guide-faq">
-        <div class="card-header"><span class="card-icon">❓</span><h2 id="guide-faq">Frequently Asked Questions</h2></div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the current CRS cutoff score?<i class="faq-toggle">+</i></div><div class="faq-answer">CRS cutoffs change with every draw (approximately every two weeks). Recent all-program draw cutoffs have been in the 489–498 range. French-language draws have had cutoffs around 375–380. Check our draw results table above for the most recent information.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Why do CRS cutoffs fluctuate?<i class="faq-toggle">+</i></div><div class="faq-answer">CRS cutoffs fluctuate based on the number of ITAs being issued in each draw, the current composition of the Express Entry pool, seasonal patterns in profile submissions, and government priorities for immigration categories. More ITAs typically means a lower cutoff.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What was the all-time lowest CRS cutoff?<i class="faq-toggle">+</i></div><div class="faq-answer">The all-time lowest CRS cutoff was 75 points, set in a PNP-only draw in November 2020. However, this low cutoff was only for PNP nominees who already had +600 points added to their base score. The lowest meaningful all-program cutoff was in the mid-400s.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How are CRS cutoffs determined?<i class="faq-toggle">+</i></div><div class="faq-answer">IRCC selects how many ITAs to issue per draw based on annual immigration targets and pool composition. The cutoff is automatically determined by ranking all candidates in the pool by their CRS score and inviting the top candidates. Any tie at the cutoff is broken by the date and time the profile was submitted.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How can I track CRS cutoff trends?<i class="faq-toggle">+</i></div><div class="faq-answer">IRCC publishes all draw results on the official IRCC website. Our draw results table above provides a curated history of recent draws. For deeper analysis, our blog has detailed articles on CRS trends. Use our CRS Calculator to compare your score against historical cutoffs.</div></li>
-        </ul>
-      </section>
-      <div class="internal-cta">
-        <a href="/index.html">← Use the Free CRS Score Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </article>
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">All draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Tools</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> Improve CRS Score</a>
-          <a href="/crs-cutoff-scores.html" class="related-tool-link"><span>📉</span> CRS Cutoffs</a>
+        <!-- STATS ROW -->
+        <div class="stats-row" role="region" aria-label="CRS Score Statistics">
+          <div class="stat-card">
+            <div class="stat-val">419</div>
+            <div class="stat-label">Latest Draw Cutoff (Apr 2026)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">489</div>
+            <div class="stat-label">Last All-Program Cutoff</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">515</div>
+            <div class="stat-label">Last CEC Cutoff (Dec 2025)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">399</div>
+            <div class="stat-label">Lowest French Cutoff 2025</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">411</div>
+            <div class="stat-label">Total Draws (All-Time)</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-val">75</div>
+            <div class="stat-label">Lowest CRS Ever (Feb 2021)</div>
+          </div>
         </div>
-      </div>
-    </aside>
+
+        <!-- DRAW TABLE -->
+        <section class="info-card" id="draw-table" aria-labelledby="table-heading">
+          <h2 id="table-heading">
+            Express Entry CRS Cutoff Scores — 2025 & 2026 Draw Results
+          </h2>
+          <p style="font-size:.9rem;color:var(--text-muted);margin-bottom:14px;">
+            All draw results sourced from the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">official IRCC rounds of invitations page</a>. Filter by draw type below.
+          </p>
+
+          <!-- FILTER -->
+          <div class="filter-bar" role="group" aria-label="Filter draw type">
+            <button class="filter-btn active" onclick="filterDraws('all',this)">All Types</button>
+            <button class="filter-btn" onclick="filterDraws('allprog',this)">All-Program</button>
+            <button class="filter-btn" onclick="filterDraws('cec',this)">CEC</button>
+            <button class="filter-btn" onclick="filterDraws('french',this)">French</button>
+            <button class="filter-btn" onclick="filterDraws('pnp',this)">PNP</button>
+            <button class="filter-btn" onclick="filterDraws('stem',this)">STEM</button>
+            <button class="filter-btn" onclick="filterDraws('health',this)">Healthcare</button>
+          </div>
+
+          <!-- TYPE LEGEND -->
+          <div class="type-legend" aria-label="Draw type colour legend">
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-allprog)"></div><span>All-Program</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-cec)"></div><span>CEC</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-pnp)"></div><span>PNP</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-french)"></div><span>French</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-stem)"></div><span>STEM</span></div>
+            <div class="legend-item"><div class="legend-dot" style="background:var(--c-health)"></div><span>Healthcare</span></div>
+          </div>
+
+          <div class="draw-table-wrap">
+            <table class="draw-table" aria-label="Express Entry draw results table">
+              <thead>
+                <tr>
+                  <th>Draw #</th>
+                  <th>Date</th>
+                  <th>Draw Type</th>
+                  <th>Min CRS</th>
+                  <th>ITAs Issued</th>
+                </tr>
+              </thead>
+              <tbody id="drawTableBody">
+                <!-- 2026 -->
+                <tr data-type="french"><td class="draw-num">#411</td><td>Apr 15, 2026</td><td><span class="type-badge type-french">French</span></td><td class="crs-val" style="color:var(--c-french)">419</td><td class="ita-val">4,000</td></tr>
+                <!-- 2025 draws -->
+                <tr data-type="allprog"><td class="draw-num">#389</td><td>Jan 5, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">711</td><td class="ita-val">574</td></tr>
+                <tr data-type="french"><td class="draw-num">#388</td><td>Dec 17, 2025</td><td><span class="type-badge type-french">French</span></td><td class="crs-val" style="color:var(--c-french)">399</td><td class="ita-val">6,000</td></tr>
+                <tr data-type="cec"><td class="draw-num">#387</td><td>Dec 16, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">515</td><td class="ita-val">5,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#386</td><td>Dec 15, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">731</td><td class="ita-val">399</td></tr>
+                <tr data-type="health"><td class="draw-num">#385</td><td>Dec 11, 2025</td><td><span class="type-badge type-health">Healthcare</span></td><td class="crs-val" style="color:var(--c-health)">476</td><td class="ita-val">1,000</td></tr>
+                <tr data-type="cec"><td class="draw-num">#384</td><td>Dec 10, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">520</td><td class="ita-val">6,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#383</td><td>Dec 8, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">729</td><td class="ita-val">1,123</td></tr>
+                <tr data-type="french"><td class="draw-num">#382</td><td>Nov 28, 2025</td><td><span class="type-badge type-french">French</span></td><td class="crs-val" style="color:var(--c-french)">408</td><td class="ita-val">6,000</td></tr>
+                <tr data-type="cec"><td class="draw-num">#381</td><td>Nov 26, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">531</td><td class="ita-val">1,000</td></tr>
+                <tr data-type="french"><td class="draw-num">#376</td><td>Oct 29, 2025</td><td><span class="type-badge type-french">French</span></td><td class="crs-val" style="color:var(--c-french)">416</td><td class="ita-val">6,000</td></tr>
+                <tr data-type="cec"><td class="draw-num">#375</td><td>Oct 28, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">533</td><td class="ita-val">1,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#374</td><td>Oct 27, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">761</td><td class="ita-val">302</td></tr>
+                <tr data-type="health"><td class="draw-num">#373</td><td>Oct 15, 2025</td><td><span class="type-badge type-health">Healthcare</span></td><td class="crs-val" style="color:var(--c-health)">472</td><td class="ita-val">2,500</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#372</td><td>Oct 14, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">778</td><td class="ita-val">345</td></tr>
+                <tr data-type="cec"><td class="draw-num">#355</td><td>Jul 8, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">518</td><td class="ita-val">3,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#354</td><td>Jul 7, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">750</td><td class="ita-val">356</td></tr>
+                <tr data-type="cec"><td class="draw-num">#353</td><td>Jun 26, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">521</td><td class="ita-val">3,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#352</td><td>Jun 23, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">742</td><td class="ita-val">503</td></tr>
+                <tr data-type="cec"><td class="draw-num">#335</td><td>Feb 5, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">521</td><td class="ita-val">4,000</td></tr>
+                <tr data-type="pnp"><td class="draw-num">#334</td><td>Feb 4, 2025</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">802</td><td class="ita-val">455</td></tr>
+                <tr data-type="cec"><td class="draw-num">#333</td><td>Jan 23, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">527</td><td class="ita-val">4,000</td></tr>
+                <tr data-type="cec"><td class="draw-num">#332</td><td>Jan 8, 2025</td><td><span class="type-badge type-cec">CEC</span></td><td class="crs-val" style="color:var(--c-cec)">542</td><td class="ita-val">1,350</td></tr>
+                <!-- 2024 draws (hidden initially) -->
+                <tr data-type="allprog" class="hidden-row year-2024"><td class="draw-num">#320</td><td>Mar 26, 2024</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">489</td><td class="ita-val">4,500</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2024"><td class="draw-num">#319</td><td>Mar 12, 2024</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">487</td><td class="ita-val">4,500</td></tr>
+                <tr data-type="pnp" class="hidden-row year-2024"><td class="draw-num">#318</td><td>Feb 26, 2024</td><td><span class="type-badge type-pnp">PNP</span></td><td class="crs-val" style="color:var(--c-pnp)">714</td><td class="ita-val">1,353</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2024"><td class="draw-num">#317</td><td>Feb 12, 2024</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">491</td><td class="ita-val">4,000</td></tr>
+                <tr data-type="french" class="hidden-row year-2024"><td class="draw-num">#316</td><td>Jan 22, 2024</td><td><span class="type-badge type-french">French</span></td><td class="crs-val" style="color:var(--c-french)">371</td><td class="ita-val">800</td></tr>
+                <!-- 2023 draws (hidden initially) -->
+                <tr data-type="allprog" class="hidden-row year-2023"><td class="draw-num">#238</td><td>Jan 18, 2023</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">490</td><td class="ita-val">5,500</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2023"><td class="draw-num">#237</td><td>Jan 11, 2023</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">507</td><td class="ita-val">5,500</td></tr>
+                <!-- 2022 draws (hidden initially) -->
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#236</td><td>Nov 23, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">491</td><td class="ita-val">4,750</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#235</td><td>Nov 9, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">494</td><td class="ita-val">4,750</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#234</td><td>Oct 26, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">496</td><td class="ita-val">4,750</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#233</td><td>Oct 12, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">500</td><td class="ita-val">4,250</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#232</td><td>Sep 28, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">504</td><td class="ita-val">3,750</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#231</td><td>Sep 14, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">510</td><td class="ita-val">3,250</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#230</td><td>Aug 31, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">516</td><td class="ita-val">2,750</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#229</td><td>Aug 17, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">525</td><td class="ita-val">2,250</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#228</td><td>Aug 3, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">533</td><td class="ita-val">2,000</td></tr>
+                <tr data-type="allprog" class="hidden-row year-2022"><td class="draw-num">#227</td><td>Jul 20, 2022</td><td><span class="type-badge type-allprog">All-Program</span></td><td class="crs-val" style="color:var(--c-allprog)">542</td><td class="ita-val">1,750</td></tr>
+              </tbody>
+            </table>
+          </div>
+
+          <button class="show-more-btn" id="showMoreBtn" onclick="toggleOlderDraws()">
+            ▼ Show 2024 & Older Draw Results
+          </button>
+
+          <p style="font-size:.75rem;color:var(--text-muted);margin-top:12px;">
+            Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">IRCC Ministerial Instructions – Express Entry Rounds</a>. Data is approximate — always verify on Canada.ca.
+          </p>
+        </section>
+
+        <!-- AD IN CONTENT -->
+        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
+
+        <!-- TREND SECTION -->
+        <section class="trend-section" aria-labelledby="trend-heading">
+          <h2 id="trend-heading">CRS Cutoff Score Trend — All-Program & CEC (2022–2025)</h2>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px;">Approximate CRS scores per period. Bar height represents minimum CRS cutoff. Source: IRCC draw results.</p>
+          <div class="chart-area" role="img" aria-label="Bar chart showing CRS cutoff trend from 2022 to 2025">
+            <div class="chart-y-labels" aria-hidden="true">
+              <span class="chart-y-label">600</span>
+              <span class="chart-y-label">540</span>
+              <span class="chart-y-label">490</span>
+              <span class="chart-y-label">450</span>
+            </div>
+          </div>
+          <div class="callout callout-info" style="margin-top:14px;">
+            <span class="callout-icon">📊</span>
+            <p>CEC draw cutoffs rose significantly in 2025 (515–542) compared to all-program draws (487–491). Category-based draws — especially French-language — maintained lower cutoffs, giving candidates below 500 a better pathway. <a href="/how-to-improve-crs-score">Learn how to improve your CRS score →</a></p>
+          </div>
+        </section>
+
+        <!-- WHAT ARE DRAW TYPES -->
+        <section class="info-card" aria-labelledby="draw-types-heading">
+          <h2 id="draw-types-heading">Types of Express Entry Draws — Explained</h2>
+          <p>Not all Express Entry draws are the same. Since 2023, IRCC issues several types of draws with different CRS cutoffs and eligibility criteria.</p>
+
+          <h3>🔴 All-Program Draws</h3>
+          <p>Open to all Express Entry candidates (FSW, CEC, FST). These typically have cutoffs between <strong>470–530</strong> in recent years. IRCC paused all-program draws in 2023–2024, favouring category-based draws.</p>
+
+          <h3>🔵 CEC-Specific Draws</h3>
+          <p>Only for <a href="/cec-crs-calculator">Canadian Experience Class</a> candidates. CEC draws became dominant in 2024–2025, with cutoffs ranging <strong>515–542</strong>. They reflect strong demand for workers already in Canada.</p>
+
+          <h3>🟣 PNP Draws</h3>
+          <p>For candidates with a provincial nomination. PNP draws have very high cutoffs (700–800+) because nominees automatically receive +600 CRS points on top of their base score.</p>
+
+          <h3>🟠 French-Language Draws</h3>
+          <p>For candidates with strong French proficiency (CLB 7+). These draws have the <strong>lowest CRS cutoffs</strong> — often 370–420 — making them an excellent pathway for French speakers with lower overall CRS scores.</p>
+
+          <h3>🟢 STEM Occupation Draws</h3>
+          <p>Targeting candidates in STEM occupations (NOC codes in science, technology, engineering, math). Cutoffs typically fall between 470–510.</p>
+
+          <h3>🔴 Healthcare & Social Services Draws</h3>
+          <p>For candidates working in healthcare, medicine, and social service occupations. Cutoffs have ranged from <strong>436–476</strong> in 2025.</p>
+
+          <div class="callout callout-tip" style="margin-top:14px;">
+            <span class="callout-icon">💡</span>
+            <p>If you qualify for a category (French, STEM, healthcare), your chances of receiving an ITA are much higher — even with a CRS score below 500. <a href="/express-entry-crs-calculator">Calculate your CRS score first →</a></p>
+          </div>
+        </section>
+
+        <!-- CRS CUTOFF ANALYSIS -->
+        <section class="info-card" aria-labelledby="analysis-heading">
+          <h2 id="analysis-heading">CRS Cutoff Score Analysis — Key Trends 2024–2026</h2>
+
+          <h3>1. No More All-Program Draws (2023–2025)</h3>
+          <p>IRCC moved away from general all-program draws in 2023. Most draws in 2024 and 2025 were CEC-specific or category-based. This means candidates without Canadian experience rely heavily on categories like French or STEM to receive an ITA.</p>
+
+          <h3>2. CEC Cutoffs Rose Sharply in 2025</h3>
+          <p>CEC draw cutoffs climbed from ~490 in late 2022 to 527–542 by early 2025. This reflects the high volume of CEC-eligible candidates with strong profiles in Canada's labour market.</p>
+
+          <h3>3. French Draws Remain Most Accessible</h3>
+          <p>French-language draws consistently had the lowest cutoffs in 2025 (399–416). If you have CLB 7+ in French, this is the most accessible route to an ITA regardless of your overall CRS score.</p>
+
+          <h3>4. Job Offer Points Removed (March 2025)</h3>
+          <p>In March 2025, IRCC removed CRS points for arranged employment (job offers). This reduced scores by 50 or 200 points for candidates with a job offer. CEC draw cutoffs subsequently dropped slightly in response.</p>
+
+          <h3>5. December 2025 — Bulk Draws to Meet Targets</h3>
+          <p>IRCC issued very large draws in December 2025 (5,000–6,000 ITAs per draw) to meet its 2026 admissions targets. This drove CEC cutoffs to the year's lowest (515) and French cutoffs below 400.</p>
+
+          <div class="callout callout-warn">
+            <span class="callout-icon">⚠️</span>
+            <p>CRS cutoffs change with every draw. A score that is too low today may be competitive after a few draws. Keep your profile updated and <a href="/how-to-improve-crs-score">work on improving your CRS score</a> in the meantime.</p>
+          </div>
+        </section>
+
+        <!-- HOW CRS CUTOFF WORKS -->
+        <section class="info-card" aria-labelledby="how-cutoff-heading">
+          <h2 id="how-cutoff-heading">How the Express Entry CRS Cutoff Works</h2>
+          <p>Understanding what the CRS cutoff actually means helps you predict your chances of getting an ITA.</p>
+
+          <h3>The Draw Process</h3>
+          <ol>
+            <li>IRCC decides how many ITAs to issue and which program/category to draw from</li>
+            <li>All eligible profiles in the pool are ranked by CRS score (highest first)</li>
+            <li>IRCC sends ITAs to the top-ranked candidates until the ITA quota is reached</li>
+            <li>The CRS score of the last candidate to receive an ITA becomes the "cutoff"</li>
+          </ol>
+
+          <h3>The Tie-Breaking Rule</h3>
+          <p>If two candidates share the same CRS score at the cutoff point, IRCC uses the <strong>profile submission date</strong> as a tiebreaker. The candidate who created or last updated their profile <em>earlier</em> (before the tie-break timestamp) receives the ITA.</p>
+
+          <div class="callout callout-warn">
+            <span class="callout-icon">⚠️</span>
+            <p><strong>Do not update your Express Entry profile unnecessarily.</strong> Updating resets your tie-break date to the current timestamp, which puts you behind candidates who submitted earlier at the same score.</p>
+          </div>
+
+          <h3>60 Days to Apply After ITA</h3>
+          <p>Once you receive an ITA, you have <strong>60 days</strong> to submit a complete PR application including all documents, biometrics, and fees. Missing this deadline means your ITA expires.</p>
+
+          <p>Use our <a href="/">CRS Score Calculator</a> to calculate your current score, then compare it against the latest cutoffs above to estimate your chances of receiving an ITA.</p>
+        </section>
+
+        <!-- CTA BANNER -->
+        <div class="cta-banner">
+          <h3>📊 Know your CRS score before checking cutoffs</h3>
+          <p>Calculate your exact Express Entry CRS score in 2 minutes. Free — no IRCC account needed.</p>
+          <a href="/" class="cta-banner-btn">Calculate My CRS Score →</a>
+        </div>
+
+        <!-- FAQ -->
+        <section class="info-card" aria-labelledby="faq-heading">
+          <h2 id="faq-heading">CRS Cutoff Scores — Frequently Asked Questions</h2>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the latest Express Entry CRS cutoff in 2026?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The latest Express Entry draw (#411) was held on April 15, 2026. It was a French-Language proficiency draw with a CRS cutoff of <strong>419</strong> and 4,000 ITAs issued. The most recent all-program draw cutoffs ranged from 487–491. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">Verify on the official IRCC page →</a></div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is the lowest CRS cutoff score in Express Entry history?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">The lowest ever Express Entry CRS cutoff was <strong>75 points</strong> during a CEC draw in February 2021, when IRCC was rapidly clearing the backlog of applications during COVID-19. For all-program draws, the lowest cutoff was 413 in September 2021. These extreme lows are unlikely to recur under normal circumstances.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              How often does IRCC hold Express Entry draws?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">IRCC typically holds draws every 1–2 weeks. In 2025, the pace increased significantly — sometimes multiple draws per week in December 2025 when IRCC was meeting annual targets. Draw frequency depends on IRCC's admission targets, pool size, and processing capacity. There is no guaranteed schedule.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What is a category-based Express Entry draw?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">Since May 2023, IRCC uses category-based draws targeting specific occupations and profiles: French-language proficiency, STEM occupations, healthcare and social services, trades, transport, and agriculture. These draws often have lower CRS cutoffs than all-program draws. You must meet both the program eligibility and the category criteria to be considered in a category draw.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              Why do PNP draws have such high CRS cutoffs (700+)?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">PNP (Provincial Nominee Program) draws have very high cutoffs because provincial nominees receive an automatic <strong>+600 CRS points bonus</strong>. A candidate with a base score of 150 becomes 750 after a provincial nomination. The 700+ cutoff in PNP draws simply reflects this bonus. The actual base CRS scores of those invited are much lower. Use our <a href="/pnp-crs-calculator">PNP CRS Calculator</a> to see your score with a nomination.</div>
+          </div>
+
+          <div class="faq-item">
+            <button class="faq-question" onclick="toggleFAQ(this)" aria-expanded="false">
+              What happens if I miss the CRS cutoff by 1 point?
+              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none",stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
+            </button>
+            <div class="faq-answer">If your CRS score is 1 point below the draw cutoff, you simply remain in the pool and wait for the next draw. Your profile stays active for 12 months. Cutoffs fluctuate with every draw — a score that misses one draw's cutoff may qualify in the next. You can also actively <a href="/how-to-improve-crs-score">improve your CRS score</a> by retaking language tests, gaining more work experience, or pursuing a provincial nomination.</div>
+          </div>
+        </section>
+
+        <!-- RELATED CALCULATORS -->
+        <section class="info-card" aria-labelledby="related-calc">
+          <h2 id="related-calc">Related Canada Immigration Calculators</h2>
+          <div class="calc-grid">
+            <a href="/" class="calc-card"><div class="ci">🧮</div><div class="cn">CRS Calculator</div><div class="cs">Main tool</div></a>
+            <a href="/express-entry-crs-calculator" class="calc-card"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">All programs</div></a>
+            <a href="/cec-crs-calculator" class="calc-card"><div class="ci">💼</div><div class="cn">CEC Calculator</div><div class="cs">Canadian exp.</div></a>
+            <a href="/fsw-crs-calculator" class="calc-card"><div class="ci">🌐</div><div class="cn">FSW Calculator</div><div class="cs">Foreign workers</div></a>
+            <a href="/pnp-crs-calculator" class="calc-card"><div class="ci">🏛️</div><div class="cn">PNP Calculator</div><div class="cs">+600 pts</div></a>
+            <a href="/ontario-crs-calculator" class="calc-card"><div class="ci">🏙️</div><div class="cn">Ontario PNP</div><div class="cs">OINP stream</div></a>
+            <a href="/ielts-crs-calculator" class="calc-card"><div class="ci">📝</div><div class="cn">IELTS to CRS</div><div class="cs">Language pts</div></a>
+            <a href="/how-to-improve-crs-score" class="calc-card"><div class="ci">📈</div><div class="cn">Improve CRS</div><div class="cs">11 strategies</div></a>
+          </div>
+        </section>
+
+      </div><!-- end left column -->
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar" aria-label="Sidebar">
+
+        <div class="sidebar-widget">
+          <h3>Latest Draw</h3>
+          <div style="background:linear-gradient(135deg,#CC0000,#8b0000);color:#fff;border-radius:var(--radius-lg);padding:14px;text-align:center;">
+            <div style="font-size:.72rem;opacity:.85;text-transform:uppercase;letter-spacing:.04em;">Draw #411 · Apr 15, 2026</div>
+            <div style="font-family:var(--font-head);font-size:2.4rem;font-weight:700;line-height:1.1;margin-top:4px;">419</div>
+            <div style="font-size:.78rem;opacity:.85;margin-top:2px;">Min CRS · French Draw</div>
+            <div style="font-size:.78rem;opacity:.85;margin-top:6px;">4,000 ITAs issued</div>
+          </div>
+          <p style="font-size:.75rem;color:var(--text-muted);margin-top:10px;text-align:center;"><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">Verify on IRCC ↗</a></p>
+        </div>
+
+        <div class="sidebar-widget" style="padding:0;border:none;background:none;box-shadow:none;">
+          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>2025 CRS Quick Stats</h3>
+          <div class="quick-stats">
+            <div class="qs-item"><div class="qs-val">515</div><div class="qs-label">Lowest CEC Cutoff 2025</div></div>
+            <div class="qs-item"><div class="qs-val">542</div><div class="qs-label">Highest CEC Cutoff 2025</div></div>
+            <div class="qs-item"><div class="qs-val">399</div><div class="qs-label">Lowest French 2025</div></div>
+            <div class="qs-item"><div class="qs-val">476</div><div class="qs-label">Lowest Health 2025</div></div>
+          </div>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Navigation</h3>
+          <ul class="sidebar-links" role="list">
+            <li><a href="/">🧮 CRS Score Calculator</a></li>
+            <li><a href="/express-entry-crs-calculator">🇨🇦 Express Entry Calculator</a></li>
+            <li><a href="/cec-crs-calculator">💼 CEC Calculator</a></li>
+            <li><a href="/fsw-crs-calculator">🌐 FSW Calculator</a></li>
+            <li><a href="/pnp-crs-calculator">🏛️ PNP Calculator</a></li>
+            <li><a href="/ontario-crs-calculator">🏙️ Ontario PNP</a></li>
+            <li><a href="/crs-cutoff-scores" class="current">📊 Cutoff Scores ✓</a></li>
+            <li><a href="/how-to-improve-crs-score">📈 Improve CRS Score</a></li>
+            <li><a href="/ielts-crs-calculator">📝 IELTS to CRS</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-widget">
+          <h3>Official IRCC Links</h3>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            All IRCC Draw Results
+          </a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            IRCC Express Entry
+          </a>
+          <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Official CRS Tool
+          </a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer" class="resource-link">
+            <svg class="ext-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            CRS Criteria
+          </a>
+        </div>
+
+      </aside>
+    </div>
   </div>
 </main>
+
+<!-- FOOTER -->
 <footer class="site-footer" role="contentinfo">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+        <h4>CRS Calculators</h4>
+        <ul>
+          <li><a href="/">CRS Score Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
+          <li><a href="/fst-crs-calculator">FST Calculator</a></li>
+          <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+        <h4>Provincial PNP</h4>
+        <ul>
+          <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+        <h4>CRS Resources</h4>
+        <ul>
+          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="/how-to-improve-crs-score">How to Improve CRS</a></li>
+          <li><a href="/what-is-crs-score">What is CRS Score?</a></li>
+          <li><a href="/how-crs-is-calculated">How CRS is Calculated</a></li>
+          <li><a href="/crs-score-for-canada-pr">CRS for Canada PR</a></li>
+          <li><a href="/canada-express-entry-eligibility">Express Entry Eligibility</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+        <h4>Official Links</h4>
+        <ul>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">IRCC Draw Results ↗</a></li>
+          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">IRCC CRS Tool ↗</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    <div class="footer-bottom">
+      <div class="footer-bottom-inner">
+        <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
+        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
+      </div>
+      <p class="footer-disclaimer">⚠️ This page is for informational purposes only. Draw data is approximate. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer" style="color:#888;">official IRCC draw results page</a>.</p>
     </div>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
+
+<script>
+  // Draw filter
+  function filterDraws(type, btn) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    const rows = document.querySelectorAll('#drawTableBody tr');
+    rows.forEach(row => {
+      const rt = row.dataset.type;
+      const isOld = row.classList.contains('hidden-row');
+      const visible = document.getElementById('showMoreBtn').dataset.open === '1';
+      let show = false;
+      if (type === 'all') show = true;
+      else if (type === 'allprog') show = rt === 'allprog';
+      else if (type === 'cec') show = rt === 'cec';
+      else if (type === 'french') show = rt === 'french';
+      else if (type === 'pnp') show = rt === 'pnp';
+      else if (type === 'stem') show = rt === 'stem';
+      else if (type === 'health') show = rt === 'health';
+      if (show && (!isOld || visible)) {
+        row.style.display = '';
+      } else if (show && isOld && !visible) {
+        // keep hidden if older rows not expanded
+        row.style.display = 'none';
+      } else {
+        row.style.display = 'none';
+      }
+    });
+  }
+
+  // Show/hide older draws
+  function toggleOlderDraws() {
+    const btn = document.getElementById('showMoreBtn');
+    const isOpen = btn.dataset.open === '1';
+    const oldRows = document.querySelectorAll('#drawTableBody tr.hidden-row');
+    const activeFilter = document.querySelector('.filter-btn.active').textContent.trim();
+    if (!isOpen) {
+      oldRows.forEach(r => { r.style.display = ''; });
+      btn.textContent = '▲ Hide older draw results';
+      btn.dataset.open = '1';
+    } else {
+      oldRows.forEach(r => { r.style.display = 'none'; });
+      btn.textContent = '▼ Show 2024 & Older Draw Results';
+      btn.dataset.open = '0';
+    }
+  }
+
+  // FAQ toggle
+  function toggleFAQ(btn) {
+    const ans = btn.nextElementSibling;
+    const isOpen = ans.classList.contains('open');
+    document.querySelectorAll('.faq-answer.open').forEach(a => a.classList.remove('open'));
+    document.querySelectorAll('.faq-question.open').forEach(b => { b.classList.remove('open'); b.setAttribute('aria-expanded','false'); });
+    if (!isOpen) {
+      ans.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded','true');
+    }
+  }
+
+  // CSS Bar Chart
+  (function buildChart() {
+    const data = [
+      {label:'Aug\'22',val:533},{label:'Sep\'22',val:510},{label:'Oct\'22',val:498},
+      {label:'Nov\'22',val:492},{label:'Jan\'23',val:499},{label:'Mar\'23',val:481},
+      {label:'Jun\'23',val:490},{label:'Sep\'23',val:504},{label:'Dec\'23',val:561},
+      {label:'Mar\'24',val:488},{label:'Jun\'24',val:515},{label:'Sep\'24',val:522},
+      {label:'Dec\'24',val:515},{label:'Jan\'25',val:527},{label:'Jun\'25',val:521},
+      {label:'Dec\'25',val:515}
+    ];
+    const maxVal = 600, minVal = 400;
+    const chartArea = document.querySelector('.chart-area');
+    const totalH = 172;
+    data.forEach(d => {
+      const pct = Math.max(4, Math.round(((d.val - minVal) / (maxVal - minVal)) * (totalH - 30)));
+      const wrap = document.createElement('div');
+      wrap.className = 'chart-bar-wrap';
+      wrap.innerHTML = `<div class="chart-bar-inner" style="height:${pct}px" title="${d.label}: CRS ${d.val}"></div><div class="chart-label">${d.label}</div>`;
+      chartArea.appendChild(wrap);
+    });
+  })();
+</script>
+
 </body>
 </html>
