@@ -1112,7 +1112,7 @@
   </footer>
 
   <!-- ═══ JAVASCRIPT ═══ -->
-  <script>
+    <script>
     function toggleNav(btn) {
       const nav = document.getElementById('navLinks');
       const open = nav.classList.toggle('open');
@@ -1125,7 +1125,7 @@
       if (!body) return;
       const expanded = btn.getAttribute('aria-expanded') === 'true';
       btn.setAttribute('aria-expanded', String(!expanded));
-      body.style.display = !expanded ? '' : 'none';
+      body.style.display = expanded ? 'none' : '';
     }
 
     function toggleSpouse(cb) {
@@ -1134,22 +1134,19 @@
       sf.setAttribute('aria-hidden', String(!cb.checked));
     }
 
-    function handleMarital() {
-      // Sync marital with spouse toggle optionally
-    }
-
     function updateLangHints() {
       const t = document.getElementById('langTest').value;
       const hints = {
-        ielts: 'IELTS: CLB 9 = 8.5 (L), 7.0 (W/S), 7.0 (R) — CLB 7 = 6.0 all skills',
-        celpip: 'CELPIP: CLB 9 = Level 9, CLB 7 = Level 7',
-        tef: 'TEF Canada: NCLC 7 = 249-279 (L), 207-232 (R)',
-        tcf: 'TCF Canada: NCLC 7 = 458-502 (L), 375-405 (R)'
+        ielts:  'CLB 9 = L:8.5 R:7.0 W:7.0 S:7.0 | CLB 7 = all 6.0',
+        celpip: 'CLB 9 = Level 9 | CLB 7 = Level 7',
+        tef:    'NCLC 7 = L:249-279 | R:207-232 | W:225-270 | S:225-270',
+        tcf:    'NCLC 7 = L:458-502 | R:375-405 | W:14-15 | S:10-11'
       };
       const h = document.getElementById('ls-hint');
       if (h) h.textContent = hints[t] || '';
     }
 
+    /* ── IELTS/CELPIP → CLB conversion ── */
     function ieltsToClb(score, skill) {
       const maps = {
         listening: [[8.5,12],[8.0,10],[7.5,9],[6.0,8],[5.5,7],[5.0,6],[4.5,5],[4.0,4]],
@@ -1162,42 +1159,253 @@
       return 3;
     }
 
-    function clbToLangPts(clb, hasSpouse) {
-      const spouseMap  = {3:0,4:6,5:6,6:8,7:16,8:22,9:29,10:32,11:32,12:32};
-      const singleMap  = {3:0,4:6,5:6,6:9,7:17,8:23,9:31,10:34,11:34,12:34};
-      const c = Math.min(clb, 12);
-      return (hasSpouse ? spouseMap[c] : singleMap[c]) || 0;
+    /* ── TEF/TCF → NCLC (approx) ── */
+    function tefToNclc(score, skill) {
+      const maps = {
+        listening: [[316,12],[298,11],[280,10],[249,9],[217,8],[181,7],[145,6],[109,5]],
+        reading:   [[263,12],[248,11],[233,10],[207,9],[181,8],[151,7],[121,6],[96,5]],
+        writing:   [[393,12],[370,11],[348,10],[310,9],[271,8],[226,7],[181,6],[136,5]],
+        speaking:  [[393,12],[370,11],[348,10],[310,9],[271,8],[226,7],[181,6],[136,5]]
+      };
+      const map = maps[skill] || maps.reading;
+      for (const [thresh, nclc] of map) { if (score >= thresh) return nclc; }
+      return 3;
     }
 
+    function tcfToNclc(score, skill) {
+      const maps = {
+        listening: [[549,12],[523,11],[503,10],[458,9],[398,8],[331,7],[271,6],[226,5]],
+        reading:   [[549,12],[524,11],[499,10],[375,9],[342,8],[306,7],[271,6],[226,5]],
+        writing:   [[20,12],[19,11],[18,10],[16,9],[14,8],[12,7],[10,6],[7,5]],
+        speaking:  [[20,12],[19,11],[18,10],[16,9],[14,8],[12,7],[10,6],[7,5]]
+      };
+      const map = maps[skill] || maps.reading;
+      for (const [thresh, nclc] of map) { if (score >= thresh) return nclc; }
+      return 3;
+    }
+
+    /* ── CLB → CRS language points (first official language) ── */
+    function clbToLangPts(clb, hasSpouse) {
+      const s = Math.min(Math.max(clb, 0), 12);
+      const singleMap = {4:6,5:6,6:9,7:17,8:23,9:31,10:34,11:34,12:34};
+      const spouseMap = {4:6,5:6,6:8,7:16,8:22,9:29,10:32,11:32,12:32};
+      return (hasSpouse ? spouseMap[s] : singleMap[s]) || 0;
+    }
+
+    /* ── SKILL TRANSFERABILITY (max 100 pts) ── */
+    function calcSkillTransfer(canExpPts, foreignExpVal, avgClb, eduPts, nocLevel) {
+      let pts = 0;
+      const canYrs  = canExpPts > 0 ? (canExpPts >= 80 ? 5 : canExpPts >= 72 ? 4 : canExpPts >= 64 ? 3 : canExpPts >= 53 ? 2 : 1) : 0;
+      const forYrs  = foreignExpVal > 0 ? (foreignExpVal >= 25 ? 3 : 1) : 0;
+      const clb9    = avgClb >= 9;
+      const clb7    = avgClb >= 7;
+      const hasEdu  = eduPts >= 84;
+      const skilled = nocLevel === 'skilled';
+
+      // Education + Language
+      if (hasEdu && clb9) pts += 50;
+      else if (hasEdu && clb7) pts += 25;
+
+      // Education + Canadian exp
+      if (hasEdu && canYrs >= 1) pts += 25;
+      else if (hasEdu && canYrs >= 2) pts += 50;
+
+      // Foreign exp + Language
+      if (forYrs >= 1 && skilled) {
+        if (clb9) pts += 50;
+        else if (clb7) pts += 25;
+      }
+
+      // Foreign exp + Canadian exp
+      if (forYrs >= 1 && canYrs >= 1 && skilled) pts += 25;
+      if (forYrs >= 3 && canYrs >= 2 && skilled) pts += 25;
+
+      // Trade cert
+      if (!skilled && clb5) pts += 25;
+
+      return Math.min(pts, 100);
+    }
+
+    /* ── MAIN CALCULATOR ── */
     function calculateCRS() {
       const hasSpouse = document.getElementById('spouseToggle').checked;
 
-      // Ages (single/spouse-adjusted)
-      const ageBase = parseInt(document.getElementById('age').value) || 0;
-      const agePts = hasSpouse ? Math.max(0, ageBase - 10) : ageBase;
-
-      // Education
-      const eduPts = parseInt(document.getElementById('education').value) || 0;
-
-      // Canadian work experience
+      // A: Core
+      const ageRaw  = parseInt(document.getElementById('age').value) || 0;
+      const agePts  = hasSpouse ? Math.max(0, ageRaw - 10) : ageRaw;
+      const eduPts  = parseInt(document.getElementById('education').value) || 0;
       const canExpPts = parseInt(document.getElementById('canadaExp').value) || 0;
 
-      // Language
+      // Spouse
+      const spouseEduPts    = hasSpouse ? (parseInt(document.getElementById('spouseEdu').value) || 0) : 0;
+      const spouseCanExpPts = hasSpouse ? (parseInt(document.getElementById('spouseCanExp').value) || 0) : 0;
+
+      // B: Language
       const testType = document.getElementById('langTest').value;
       const lsV = parseFloat(document.getElementById('ls').value) || 0;
       const rsV = parseFloat(document.getElementById('rs').value) || 0;
       const wsV = parseFloat(document.getElementById('ws').value) || 0;
       const ssV = parseFloat(document.getElementById('ss').value) || 0;
 
-      let langPts = 0, avgClb = 0;
+      let clbL, clbR, clbW, clbS;
       if (testType === 'ielts' || testType === 'celpip') {
-        const clbL = ieltsToClb(lsV, 'listening');
-        const clbR = ieltsToClb(rsV, 'reading');
-        const clbW = ieltsToClb(wsV, 'writing');
-        const clbS = ieltsToClb(ssV, 'speaking');
-        avgClb = Math.round((clbL + clbR + clbW + clbS) / 4);
-        langPts = clbToLangPts(clbL, hasSpouse) + clbToLangPts(clbR, hasSpouse)
-                + clbToLangPts(clbW, hasSpouse) + clbToLangPts(clbS, hasSpouse);
+        clbL = ieltsToClb(lsV, 'listening');
+        clbR = ieltsToClb(rsV, 'reading');
+        clbW = ieltsToClb(wsV, 'writing');
+        clbS = ieltsToClb(ssV, 'speaking');
+      } else if (testType === 'tef') {
+        clbL = tefToNclc(lsV, 'listening');
+        clbR = tefToNclc(rsV, 'reading');
+        clbW = tefToNclc(wsV, 'writing');
+        clbS = tefToNclc(ssV, 'speaking');
       } else {
-        const avg = (lsV + rsV + wsV + ssV) / 4;
-        avgClb = Math.min(12, Math.max(4, Math.round(avg / 100 * 5 + 5
+        clbL = tcfToNclc(lsV, 'listening');
+        clbR = tcfToNclc(rsV, 'reading');
+        clbW = tcfToNclc(wsV, 'writing');
+        clbS = tcfToNclc(ssV, 'speaking');
+      }
+
+      const avgClb  = Math.round((clbL + clbR + clbW + clbS) / 4);
+      const langPts = clbToLangPts(clbL, hasSpouse)
+                    + clbToLangPts(clbR, hasSpouse)
+                    + clbToLangPts(clbW, hasSpouse)
+                    + clbToLangPts(clbS, hasSpouse);
+
+      // C: Foreign exp + Skill Transferability
+      const foreignExpVal = parseInt(document.getElementById('foreignExp').value) || 0;
+      const nocLevel      = document.getElementById('nocLevel').value;
+      const skillPts      = calcSkillTransfer(canExpPts, foreignExpVal, avgClb, eduPts, nocLevel);
+
+      // D: Additional
+      const bcpnpPts    = parseInt(document.getElementById('bcpnp').value) || 0;
+      const jobOfferPts = parseInt(document.getElementById('jobOffer').value) || 0;
+      const canEduPts   = parseInt(document.getElementById('canadaEdu').value) || 0;
+      const siblingPts  = parseInt(document.getElementById('sibling').value) || 0;
+      const frenchPts   = parseInt(document.getElementById('frenchBonus').value) || 0;
+      const additionalPts = bcpnpPts + jobOfferPts + canEduPts + siblingPts + frenchPts;
+
+      // SECTION TOTALS
+      const coreTotal   = agePts + eduPts + langPts + canExpPts + spouseEduPts + spouseCanExpPts;
+      const totalScore  = Math.min(1200, coreTotal + skillPts + additionalPts);
+
+      // VERDICT
+      let verdict, verdictColor;
+      if (bcpnpPts === 600) {
+        verdict = '🏔️ BC PNP Nominated — ITA Guaranteed!';
+        verdictColor = '#2e7d32';
+      } else if (totalScore >= 490) {
+        verdict = '🟢 Excellent – Draw Ready';
+        verdictColor = '#2e7d32';
+      } else if (totalScore >= 460) {
+        verdict = '🟡 Good – Close to Cutoff';
+        verdictColor = '#e65100';
+      } else if (totalScore >= 420) {
+        verdict = '🟠 Fair – Improve Score';
+        verdictColor = '#e65100';
+      } else {
+        verdict = '🔴 Low – Apply to BCPNP First';
+        verdictColor = '#c62828';
+      }
+
+      // DISPLAY RESULT
+      document.getElementById('totalScore').textContent = totalScore;
+      const v = document.getElementById('verdict');
+      v.textContent = verdict;
+      v.style.background = 'rgba(0,0,0,0.2)';
+
+      const resultBox = document.querySelector('.result-box');
+      resultBox.style.borderColor = verdictColor;
+      resultBox.querySelector('.result-header').style.background = verdictColor;
+
+      // BREAKDOWN BARS
+      const maxMap = {
+        'Age': 110,
+        'Education': 140,
+        'Language (CLB)': 136,
+        'Canadian Exp.': 80,
+        'Spouse Factors': 40,
+        'Skill Transfer': 100,
+        'Additional Pts': 700
+      };
+      const rows = [
+        ['Age', agePts, 110],
+        ['Education', eduPts, 140],
+        ['Language (CLB)', langPts, hasSpouse ? 128 : 136],
+        ['Canadian Exp.', canExpPts, 80],
+        ['Spouse Factors', spouseEduPts + spouseCanExpPts, 40],
+        ['Skill Transfer', skillPts, 100],
+        ['Additional Pts', additionalPts, 700]
+      ];
+
+      const br = document.getElementById('breakdownRows');
+      br.innerHTML = rows.map(([label, pts, max]) => `
+        <div class="br-row">
+          <span class="br-label">${label}</span>
+          <div class="br-bar-wrap">
+            <div class="br-bar" style="width:${max > 0 ? Math.min(100, Math.round(pts/max*100)) : 0}%"></div>
+          </div>
+          <span class="br-pts">${pts} / ${max}</span>
+        </div>
+      `).join('');
+
+      // TIPS
+      const tips = [];
+      if (bcpnpPts === 0) tips.push('🏔️ Apply to BC PNP — a nomination adds +600 CRS, virtually guaranteeing an ITA.');
+      if (avgClb < 9)     tips.push('📝 Improving to CLB 9 in all skills adds significant language points.');
+      if (canExpPts === 0) tips.push('🍁 1 year of Canadian work experience adds 40 CRS points directly.');
+      if (eduPts < 123)   tips.push('🎓 A Master\'s or PhD adds up to 140 education points.');
+      if (frenchPts === 0) tips.push('🇫🇷 French CLB 7+ with English CLB 5+ adds 50 bonus points.');
+
+      const tipsBox = document.getElementById('tipsBox');
+      if (tips.length > 0) {
+        tipsBox.style.display = 'block';
+        tipsBox.innerHTML = `<h3>💡 Tips to Improve Your BC CRS Score</h3><ul>${tips.map(t => `<li>${t}</li>`).join('')}</ul>`;
+      } else {
+        tipsBox.style.display = 'none';
+      }
+
+      const result = document.getElementById('result');
+      result.style.display = 'block';
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    function resetCalc() {
+      document.getElementById('result').style.display = 'none';
+      document.getElementById('age').value = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function shareResult() {
+      const score = document.getElementById('totalScore').textContent;
+      const url   = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: 'My BC CRS Score 2026',
+          text:  `My BC PNP CRS score is ${score}/1200 — calculated at CRS Score Calculator`,
+          url
+        });
+      } else {
+        navigator.clipboard.writeText(`My BC CRS Score: ${score}/1200 — ${url}`)
+          .then(() => alert('Score link copied to clipboard!'));
+      }
+    }
+
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    }
+
+    /* Close nav on outside click */
+    document.addEventListener('click', function(e) {
+      const nav = document.getElementById('navLinks');
+      const toggle = document.querySelector('.nav-toggle');
+      if (nav.classList.contains('open') && !nav.contains(e.target) && !toggle.contains(e.target)) {
+        nav.classList.remove('open');
+        if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
+    
