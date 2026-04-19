@@ -1,351 +1,1136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>How CRS Score is Calculated – Express Entry Points Breakdown</title>
-  <meta name="description" content="Detailed breakdown of how the CRS score is calculated in Canada Express Entry. Every section explained with exact IRCC point values and worked examples.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/how-crs-is-calculated.html">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="How CRS Score is Calculated – Express Entry Points Breakdown">
-  <meta property="og:description" content="Detailed breakdown of how the CRS score is calculated in Canada Express Entry. Every section explained with exact IRCC point values and worked examples.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/how-crs-is-calculated.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="How CRS Score is Calculated – Express Entry Points Breakdown">
-  <meta name="twitter:description" content="Detailed breakdown of how the CRS score is calculated in Canada Express Entry. Every section explained with exact IRCC point values and worked examples.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>How CRS Score is Calculated 2026 – Full Express Entry Breakdown</title>
+  <meta name="description" content="How is the CRS score calculated in 2026? Full breakdown of all CRS factors — age, education, language CLB, Canadian work experience, spouse points, skill transferability and bonus points. With free calculator." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#c40000" />
+  <meta name="author" content="CRS Calculator" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/how-crs-is-calculated" />
+
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"How is CRS Score Calculated? Complete Points Breakdown","item":"https://crsscorecalculator.vercel.app/how-crs-is-calculated.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the maximum CRS score for a single applicant without PNP?","acceptedAnswer":{"@type":"Answer","text":"The maximum CRS score for a single applicant without a PNP or job offer is 600 points: 500 core human capital + 100 skill transferability. A PhD holder, age 20-29, with CLB 10+ in all language skills and 5+ years Canadian WE can achieve this."}},{"@type":"Question","name":"How are language scores converted to CRS points?","acceptedAnswer":{"@type":"Answer","text":"Language test scores (IELTS, CELPIP, TEF, TCF) are first converted to Canadian Language Benchmark (CLB) levels, then each CLB level maps to specific CRS points. CLB 9 per skill = 29 points, CLB 10+ per skill = 32 points. Four skills total a maximum of 128 points."}},{"@type":"Question","name":"Why do CRS points differ with and without a spouse?","acceptedAnswer":{"@type":"Answer","text":"The CRS system gives slightly lower core points to married/common-law applicants because they receive additional points in Section B for their spouse's factors. This balances the total between single and married applicants, preventing married candidates from getting double-counted advantages."}},{"@type":"Question","name":"Do I get CRS points for foreign education?","acceptedAnswer":{"@type":"Answer","text":"Yes, your educational credentials are recognized through an Educational Credential Assessment (ECA). A foreign degree equivalent to a Canadian bachelor's degree earns 120 CRS points (single applicant). The ECA determines your education level for CRS purposes."}},{"@type":"Question","name":"How does skill transferability work in the CRS?","acceptedAnswer":{"@type":"Answer","text":"Skill transferability rewards combinations of factors. If you have strong language skills (CLB 7+) AND a degree, you earn 13-25 bonus points. If you have foreign work experience AND strong language, you earn additional points. The maximum is 100 skill transferability points across all combinations."}}]}
-</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c40000'/%3E%3Cpath d='M18 20h28v6H18zm0 9h20v6H18zm0 9h28v6H18z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23c40000'/%3E%3Cpath d='M42 52h96v18H42zm0 30h68v18H42zm0 30h96v18H42z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="article" />
+  <meta property="og:title" content="How CRS Score is Calculated 2026 – Full Express Entry Breakdown" />
+  <meta property="og:description" content="How is CRS calculated? Full breakdown of all Express Entry CRS factors: age, education, language, Canadian experience, spouse, skill transferability, job offer, PNP nomination." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/how-crs-is-calculated" />
+  <meta property="og:site_name" content="CRS Calculator" />
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+  <meta property="article:published_time" content="2026-01-01T00:00:00+00:00" />
+  <meta property="article:modified_time" content="2026-04-01T00:00:00+00:00" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="How CRS Score is Calculated 2026 – Full Express Entry Breakdown" />
+  <meta name="twitter:description" content="How is CRS calculated? Full breakdown of all Express Entry factors — age, education, language, experience, spouse, PNP and bonus points." />
+  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #c40000;
+      --primary-dark: #a80000;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --shadow: 0 2px 8px rgba(0,0,0,.06);
+      --radius: 12px;
+      --max: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; height: auto; }
+    .container { max-width: var(--max); margin: auto; padding: 0 14px; }
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 1000; border-radius: 8px; }
+
+    /* ── Header ── */
+    .topbar { background: #fff; border-bottom: 1px solid #efefef; position: sticky; top: 0; z-index: 999; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #111; white-space: nowrap; }
+    .brand-badge { width: 24px; height: 24px; border-radius: 5px; background: var(--primary); display: grid; place-items: center; color: #fff; font-size: 12px; font-weight: 700; }
+    .nav-links { display: flex; gap: 14px; flex-wrap: wrap; align-items: center; font-size: 13px; }
+    .nav-links a { color: #374151; }
+    .nav-cta { background: var(--primary); color: #fff !important; padding: 8px 12px; border-radius: 8px; font-weight: 700; }
+    .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
+    .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; background: none; border: none; padding: 4px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #374151; border-radius: 2px; }
+    .mobile-menu { display: none; background: #fff; border-top: 1px solid #efefef; padding: 10px 14px; }
+    .mobile-menu a { display: block; padding: 10px 0; font-size: 14px; color: #374151; border-bottom: 1px solid #f5f5f5; }
+    .mobile-menu.open { display: block; }
+
+    /* ── Hero ── */
+    .hero { background: linear-gradient(180deg,#c40000 0%,#b20000 100%); color: #fff; padding: 34px 0 28px; text-align: center; }
+    .hero h1 { margin: 0 auto 8px; font-size: clamp(24px,4vw,42px); line-height: 1.15; max-width: 900px; font-weight: 800; }
+    .hero p { margin: 0 auto 16px; max-width: 860px; color: #ffeaea; font-size: 15px; }
+    .pill-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+    .pill { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); color: #fff; padding: 7px 10px; font-size: 12px; border-radius: 999px; }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; gap: 8px; border: none; border-radius: 10px; padding: 12px 18px; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none !important; transition: background .18s; }
+    .btn-white { background: #fff; color: var(--primary); }
+    .btn-white:hover { background: #f0f0f0; }
+    .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .btn-outline:hover { background: rgba(255,255,255,.08); }
+    .btn-red { background: var(--primary); color: #fff; }
+    .btn-red:hover { background: var(--primary-dark); }
+
+    /* ── Layout ── */
+    main { padding: 18px 0 28px; }
+    .grid { display: grid; grid-template-columns: minmax(0,1.65fr) 300px; gap: 18px; align-items: start; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card-head { padding: 14px 16px; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+    .card-body { padding: 16px; }
+
+    /* ── Article ── */
+    .article-meta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+    .article-meta .badge { background: #fef2f2; color: var(--primary); border: 1px solid #fecaca; border-radius: 999px; padding: 3px 10px; font-size: 12px; font-weight: 700; }
+    .post-title { font-size: clamp(22px,3vw,30px); font-weight: 800; color: #111827; line-height: 1.2; margin-bottom: 10px; }
+    .post-lead { font-size: 15px; color: #4b5563; line-height: 1.65; margin-bottom: 16px; max-width: 72ch; }
+
+    /* ── TOC ── */
+    .toc { background: #fff8f8; border: 1px solid #fecaca; border-radius: 12px; padding: 16px; margin-bottom: 20px; }
+    .toc h2 { font-size: 14px; margin-bottom: 10px; color: var(--primary); font-weight: 700; }
+    .toc ol { padding-left: 18px; margin: 0; }
+    .toc li { padding: 4px 0; font-size: 13px; }
+    .toc a { color: #374151; }
+    .toc a:hover { color: var(--primary); }
+
+    /* ── Section label ── */
+    .section-label { background: #fff0f0; border: 1px solid #ffd4d4; color: #8b0000; font-size: 13px; font-weight: 700; padding: 9px 10px; border-radius: 8px; margin: 0 0 14px; }
+
+    /* ── Info boxes ── */
+    .info-box { border-radius: 10px; padding: 14px 16px; margin: 14px 0; }
+    .info-box.green { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .info-box.blue { background: #eff6ff; border: 1px solid #bfdbfe; }
+    .info-box.amber { background: #fffbeb; border: 1px solid #fde68a; }
+    .info-box.red { background: #fff0f0; border: 1px solid #fecaca; }
+    .info-box p { margin: 0; font-size: 14px; color: #374151; }
+    .info-box.green strong { color: #166534; }
+    .info-box.blue strong { color: #1d4ed8; }
+    .info-box.amber strong { color: #92400e; }
+    .info-box.red strong { color: #b91c1c; }
+
+    /* ── Content ── */
+    .content p { margin: 0 0 12px; color: #4b5563; font-size: 14px; max-width: 75ch; }
+    .content h2 { font-size: 20px; font-weight: 800; color: #111827; margin: 24px 0 10px; line-height: 1.2; scroll-margin-top: 80px; }
+    .content h3 { font-size: 16px; font-weight: 700; color: #111827; margin: 18px 0 8px; }
+    .content ul, .content ol { padding-left: 20px; margin: 0 0 14px; }
+    .content li { font-size: 14px; color: #4b5563; padding: 4px 0; max-width: 70ch; }
+    .content strong { color: #111827; }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 12px; margin: 14px 0; }
+    table { width: 100%; border-collapse: collapse; background: #fff; min-width: 480px; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); font-size: 14px; text-align: left; vertical-align: top; }
+    th { background: #b60000; color: #fff; font-size: 13px; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: #fafafa; }
+    .green-t { color: #15803d; font-weight: 700; }
+    .orange-t { color: #b45309; font-weight: 700; }
+    .red-t { color: #dc2626; font-weight: 700; }
+
+    /* ── Section score bands ── */
+    .score-band { display: flex; flex-wrap: wrap; gap: 10px; margin: 14px 0; }
+    .band { border-radius: 10px; padding: 12px 16px; border: 1px solid var(--border); background: #fff; flex: 1 1 120px; text-align: center; }
+    .band .bv { font-size: 22px; font-weight: 800; color: var(--primary); line-height: 1; }
+    .band .bl { font-size: 12px; color: #6b7280; margin-top: 4px; }
+
+    /* ── Point builder / interactive ── */
+    .builder { background: #fff8f8; border: 2px solid #fecaca; border-radius: 14px; overflow: hidden; margin: 20px 0; }
+    .builder-head { background: linear-gradient(135deg,#c40000,#9e0000); color: #fff; padding: 14px 16px; font-weight: 700; font-size: 15px; }
+    .builder-body { padding: 16px; }
+    .builder-row { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+    .builder-row label { flex: 1; font-size: 13px; font-weight: 700; color: #111827; }
+    .builder-row select { width: 200px; min-height: 40px; border: 1px solid #d1d5db; border-radius: 8px; padding: 8px 10px; font-size: 13px; color: #111827; background: #fff; -webkit-appearance: none; }
+    .builder-row select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(196,0,0,.12); }
+    .pts-pill { background: #fef2f2; border: 1px solid #fecaca; color: var(--primary); border-radius: 999px; padding: 4px 10px; font-size: 12px; font-weight: 700; min-width: 64px; text-align: center; white-space: nowrap; }
+    .builder-total { background: linear-gradient(135deg,#c40000,#9e0000); color: #fff; border-radius: 12px; padding: 16px; text-align: center; margin-top: 10px; }
+    .builder-total .big { font-size: 46px; font-weight: 800; line-height: 1; margin: 4px 0 6px; }
+    .builder-total .sub { font-size: 13px; color: #ffe4e4; }
+    .builder-total .verdict { font-size: 14px; font-weight: 700; margin-top: 10px; }
+
+    /* ── CTA box ── */
+    .cta-box { background: linear-gradient(135deg,#c40000 0%,#9e0000 100%); border-radius: 12px; padding: 18px; text-align: center; color: #fff; margin: 20px 0; }
+    .cta-box h3 { font-size: 16px; margin-bottom: 8px; }
+    .cta-box p { font-size: 13px; color: #ffeaea; margin-bottom: 14px; max-width: 100%; }
+
+    /* ── Horizontal section steps ── */
+    .section-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px,1fr)); gap: 12px; margin: 14px 0; }
+    .section-card { border: 1px solid var(--border); border-radius: 12px; background: #fff; padding: 14px 12px; }
+    .section-card .sc-pts { background: var(--primary); color: #fff; border-radius: 8px; padding: 4px 10px; font-size: 11px; font-weight: 700; display: inline-block; margin-bottom: 8px; }
+    .section-card strong { display: block; font-size: 14px; margin-bottom: 4px; }
+    .section-card p { font-size: 12px; color: #6b7280; margin: 0; }
+
+    /* ── FAQ ── */
+    .faq details { border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .faq summary { cursor: pointer; font-weight: 700; list-style: none; position: relative; padding-right: 24px; font-size: 14px; color: #111827; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--primary); font-weight: 800; font-size: 16px; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq p { margin: 10px 0 0; color: #4b5563; font-size: 14px; max-width: 70ch; }
+
+    /* ── Tool grid ── */
+    .tool-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 10px; }
+    .tool { border: 1px solid var(--border); border-radius: 12px; padding: 12px 8px; text-align: center; background: #fff; transition: box-shadow .18s; display: block; }
+    .tool:hover { box-shadow: 0 4px 14px rgba(196,0,0,.1); text-decoration: none; }
+    .tool-icon { width: 32px; height: 32px; margin: 0 auto 8px; border-radius: 999px; background: #fef2f2; color: var(--primary); display: grid; place-items: center; font-weight: 700; font-size: 11px; }
+    .tool strong { display: block; font-size: 13px; color: #111827; }
+    .tool span { display: block; font-size: 11px; color: #6b7280; margin-top: 3px; }
+
+    /* ── Breadcrumbs ── */
+    .breadcrumbs { font-size: 12px; color: #6b7280; margin: 0 0 14px; }
+    .breadcrumbs a { color: #6b7280; }
+
+    /* ── Sidebar ── */
+    .side-list { display: grid; gap: 14px; position: sticky; top: 74px; }
+    .side-card { padding: 14px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
+    .side-card h3 { margin: 0 0 10px; font-size: 14px; font-weight: 700; }
+    .side-card ul { list-style: none; padding: 0; margin: 0; }
+    .side-card li { padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+    .side-card li:last-child { border-bottom: none; }
+    .score-highlight { background: linear-gradient(180deg,#c40000,#ae0000); color: #fff; border-radius: 12px; padding: 16px; text-align: center; }
+    .score-highlight .lbl { font-size: 12px; color: #ffe4e4; margin-bottom: 4px; }
+    .score-highlight .val { font-size: 22px; font-weight: 800; margin-bottom: 6px; }
+    .score-highlight .sub { font-size: 12px; color: #ffd4d4; }
+    .tiny { font-size: 12px; }
+    .muted { color: var(--muted); }
+
+    /* ── Progress bars ── */
+    .prog-row { display: flex; align-items: center; gap: 8px; margin: 6px 0; font-size: 13px; }
+    .prog-label { min-width: 160px; font-weight: 600; color: #374151; font-size: 12px; }
+    .prog-bar { flex: 1; background: #f3f4f6; border-radius: 999px; height: 12px; overflow: hidden; }
+    .prog-fill { height: 100%; border-radius: 999px; }
+    .prog-val { min-width: 36px; font-weight: 700; color: #111827; font-size: 12px; text-align: right; }
+
+    /* ── Footer ── */
+    footer { background: #101418; color: #d1d5db; margin-top: 28px; padding: 30px 0; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    footer h3 { color: #fff; font-size: 14px; margin: 0 0 10px; }
+    footer ul { list-style: none; padding: 0; margin: 0; }
+    footer li { margin: 8px 0; font-size: 13px; }
+    footer a { color: #d1d5db; }
+    footer a:hover { color: #fff; }
+    .copyright { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.08); font-size: 12px; color: #9ca3af; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    /* ── Responsive ── */
+    @media (max-width:1024px) {
+      .grid { grid-template-columns: 1fr; }
+      .side-list { position: static; }
+      .tool-grid { grid-template-columns: repeat(3,1fr); }
+      .footer-grid { grid-template-columns: repeat(2,1fr); }
+      .builder-row { flex-direction: column; align-items: flex-start; }
+      .builder-row select { width: 100%; }
+    }
+    @media (max-width:680px) {
+      .nav-links { display: none; }
+      .hamburger { display: flex; }
+      .hero { padding: 24px 0 20px; }
+      .tool-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      th, td { font-size: 13px; padding: 9px 8px; }
+      .content h2 { font-size: 18px; }
+      .prog-label { min-width: 110px; }
+      .section-cards { grid-template-columns: repeat(2,1fr); }
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ── Header ── -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="https://crsscorecalculator.vercel.app/" aria-label="CRS Calculator home">
+      <span class="brand-badge">CRS</span>
+      <span>CRS Calculator</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry</a>
+      <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario</a>
+      <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta</a>
+      <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">Cutoff Scores</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Draw Results</a>
+      <a class="nav-cta" href="https://crsscorecalculator.vercel.app/">Calculate Now</a>
+    </nav>
+    <button class="hamburger" id="menuBtn" aria-label="Open menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a>
+    <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a>
+    <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a>
+    <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>
+    <a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator">Saskatchewan CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a>
+    <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a>
+    <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a>
+    <a href="https://crsscorecalculator.vercel.app/canada-express-entry-eligibility">EE Eligibility Guide</a>
+    <a href="https://crsscorecalculator.vercel.app/crs-score-for-canada-pr">CRS Score for PR</a>
+    <a href="https://crsscorecalculator.vercel.app/" style="color:#c40000;font-weight:700;">Calculate My CRS Score →</a>
+  </div>
 </header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<!-- ── Hero ── -->
+<section class="hero">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep">›</li>
-      <li class="current">How is CRS Score Calculated? Complete Points Breakdown</li>
-    </ol>
+    <h1>How is CRS Score Calculated? 2026</h1>
+    <p>The complete breakdown of how Canada's Comprehensive Ranking System (CRS) calculates your Express Entry score — every factor, every points table, and a free interactive score builder.</p>
+    <div class="pill-row">
+      <span class="pill">Updated April 2026</span>
+      <span class="pill">All 4 CRS Sections</span>
+      <span class="pill">Official IRCC Criteria</span>
+      <span class="pill">Free Score Builder</span>
+      <span class="pill">AEO Optimised</span>
+    </div>
+    <div class="hero-actions">
+      <a href="https://crsscorecalculator.vercel.app/" class="btn btn-white">Calculate My CRS Score →</a>
+      <a href="#score-builder" class="btn btn-outline">Interactive Score Builder</a>
+    </div>
   </div>
-</nav>
+</section>
 
-<div class="page-header">
+<!-- ── Main ── -->
+<main id="main-content">
   <div class="container">
-    <h1>How is CRS Score Calculated? Complete Points Breakdown</h1>
-    <p>Detailed breakdown of how the CRS score is calculated in Canada Express Entry. Every section explained with exact IRCC point values and worked examples.</p>
-    <div class="meta-info"><span>Updated: April 2026</span></div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
-</div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="https://crsscorecalculator.vercel.app/">Home</a> ›
+      <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry</a> ›
+      <span>How CRS is Calculated 2026</span>
+    </nav>
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <article class="main-content content-body">
-      <div class="card">
-        
-    <h2>CRS Score Calculation Overview</h2>
-    <p>The Comprehensive Ranking System (CRS) score is calculated by adding points across four major categories. This guide breaks down each category with the exact IRCC point values so you can understand precisely how your score is determined. For the quickest estimate, use our free <a href="/index.html">CRS Score Calculator</a>.</p>
+    <div class="grid">
 
-    <h2>Section A: Core Human Capital Factors</h2>
-    <p>This section makes up the largest portion of your CRS score for most applicants. The point values differ depending on whether your spouse or common-law partner is accompanying you to Canada.</p>
+      <!-- ── Article ── -->
+      <article itemscope itemtype="https://schema.org/Article">
+        <div class="card">
+          <div class="card-body">
 
-    <h3>Age Points Table</h3>
-    <div class="table-wrapper">
-      <table>
-        <thead><tr><th>Age</th><th>Without Accompanying Spouse/CL Partner</th><th>With Accompanying Spouse/CL Partner</th></tr></thead>
-        <tbody>
-          <tr><td>17 or under</td><td>0</td><td>0</td></tr>
-          <tr><td>18–19</td><td>99–105</td><td>90–95</td></tr>
-          <tr><td>20–29</td><td>110</td><td>100</td></tr>
-          <tr><td>30</td><td>105</td><td>95</td></tr>
-          <tr><td>31</td><td>99</td><td>90</td></tr>
-          <tr><td>32</td><td>94</td><td>85</td></tr>
-          <tr><td>33</td><td>88</td><td>80</td></tr>
-          <tr><td>34</td><td>83</td><td>75</td></tr>
-          <tr><td>35</td><td>77</td><td>70</td></tr>
-          <tr><td>36</td><td>72</td><td>65</td></tr>
-          <tr><td>37</td><td>66</td><td>60</td></tr>
-          <tr><td>38</td><td>61</td><td>55</td></tr>
-          <tr><td>39</td><td>55</td><td>50</td></tr>
-          <tr><td>40</td><td>50</td><td>45</td></tr>
-          <tr><td>41</td><td>39</td><td>35</td></tr>
-          <tr><td>42</td><td>28</td><td>25</td></tr>
-          <tr><td>43</td><td>17</td><td>15</td></tr>
-          <tr><td>44</td><td>6</td><td>5</td></tr>
-          <tr><td>45 or older</td><td>0</td><td>0</td></tr>
-        </tbody>
-      </table>
-    </div>
+            <div class="article-meta">
+              <span class="badge">Full Guide</span>
+              <span>Updated: <strong>April 2026</strong></span>
+              <span>📖 10 min read</span>
+              <span>🇨🇦 Based on official IRCC CRS criteria</span>
+            </div>
+            <h1 class="post-title" itemprop="headline">How is the CRS Score Calculated? Complete 2026 Breakdown</h1>
+            <p class="post-lead" itemprop="description">The Comprehensive Ranking System (CRS) assigns each Express Entry candidate a score out of 1,200 points. IRCC uses this score to rank all candidates and invite the highest-ranked profiles to apply for Canadian permanent residence.</p>
 
-    <h3>Education Points Table</h3>
-    <div class="table-wrapper">
-      <table>
-        <thead><tr><th>Education Level</th><th>Without Spouse/CL</th><th>With Accompanying Spouse/CL</th></tr></thead>
-        <tbody>
-          <tr><td>Less than secondary school</td><td>0</td><td>0</td></tr>
-          <tr><td>Secondary diploma</td><td>30</td><td>28</td></tr>
-          <tr><td>One-year post-secondary program</td><td>90</td><td>84</td></tr>
-          <tr><td>Two-year post-secondary program</td><td>98</td><td>91</td></tr>
-          <tr><td>Bachelor's degree (3+ years)</td><td>120</td><td>112</td></tr>
-          <tr><td>Two or more certificates (one 3+ yrs)</td><td>128</td><td>119</td></tr>
-          <tr><td>Master's degree / Professional degree</td><td>135</td><td>126</td></tr>
-          <tr><td>PhD</td><td>150</td><td>140</td></tr>
-        </tbody>
-      </table>
-    </div>
+            <!-- TOC -->
+            <nav class="toc" aria-label="Table of contents">
+              <h2>📋 Table of Contents</h2>
+              <ol>
+                <li><a href="#what-is-crs">What is the CRS and how does it work?</a></li>
+                <li><a href="#four-sections">CRS is divided into 4 sections</a></li>
+                <li><a href="#section-a">Section A — Core Human Capital (No Spouse)</a></li>
+                <li><a href="#section-b">Section B — Spouse / Common-Law Partner Factors</a></li>
+                <li><a href="#section-c">Section C — Skill Transferability</a></li>
+                <li><a href="#section-d">Section D — Additional Points (Job Offer, PNP, French)</a></li>
+                <li><a href="#language-points">How Language Points Are Calculated</a></li>
+                <li><a href="#score-builder">Interactive CRS Score Builder</a></li>
+                <li><a href="#what-crs-do-i-need">What CRS Score Do You Need for an ITA?</a></li>
+                <li><a href="#improve-crs">How to Increase Your CRS Score</a></li>
+                <li><a href="#faq">FAQ</a></li>
+              </ol>
+            </nav>
 
-    <h3>First Language Points (per skill)</h3>
-    <div class="table-wrapper">
-      <table>
-        <thead><tr><th>CLB Level</th><th>Points per Skill</th><th>Max for 4 Skills</th></tr></thead>
-        <tbody>
-          <tr><td>CLB 4</td><td>6</td><td>24</td></tr>
-          <tr><td>CLB 5</td><td>6</td><td>24</td></tr>
-          <tr><td>CLB 6</td><td>8</td><td>32</td></tr>
-          <tr><td>CLB 7</td><td>16</td><td>64</td></tr>
-          <tr><td>CLB 8</td><td>22</td><td>88</td></tr>
-          <tr><td>CLB 9</td><td>29</td><td>116</td></tr>
-          <tr><td>CLB 10+</td><td>32</td><td>128</td></tr>
-        </tbody>
-      </table>
-    </div>
+            <!-- 1 -->
+            <div class="content" id="what-is-crs">
+              <div class="section-label">What is the CRS and How Does It Work?</div>
+              <p>The <strong>Comprehensive Ranking System (CRS)</strong> is a points-based ranking tool used by <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer">Immigration, Refugees and Citizenship Canada (IRCC)</a> to rank candidates in the Express Entry pool.</p>
+              <p>Every Express Entry candidate receives a CRS score based on their age, education, language ability, work experience, and other factors. Candidates with the highest CRS scores receive an <strong>Invitation to Apply (ITA)</strong> for Canadian permanent residence.</p>
+              <p>Your CRS score is calculated automatically when you submit your Express Entry profile. Use the <a href="https://crsscorecalculator.vercel.app/">free CRS Calculator</a> to estimate your score before creating your profile.</p>
 
-    <h3>Canadian Work Experience Points</h3>
-    <div class="table-wrapper">
-      <table>
-        <thead><tr><th>Canadian WE</th><th>Without Spouse/CL</th><th>With Accompanying Spouse/CL</th></tr></thead>
-        <tbody>
-          <tr><td>None</td><td>0</td><td>0</td></tr>
-          <tr><td>1 year</td><td>40</td><td>35</td></tr>
-          <tr><td>2 years</td><td>53</td><td>46</td></tr>
-          <tr><td>3 years</td><td>64</td><td>56</td></tr>
-          <tr><td>4 years</td><td>72</td><td>63</td></tr>
-          <tr><td>5+ years</td><td>80</td><td>70</td></tr>
-        </tbody>
-      </table>
-    </div>
+              <div class="info-box blue">
+                <p><strong>AEO answer:</strong> The CRS score is calculated out of a maximum of <strong>1,200 points</strong> across four sections: core human capital (up to 500 pts), spouse factors (up to 40 pts), skill transferability (up to 100 pts), and additional points including PNP nomination (up to 600 pts) and job offers (up to 200 pts).</p>
+              </div>
+            </div>
 
-    <h2>Section B: Spouse/Partner Factors (max 40 pts)</h2>
-    <p>If your accompanying spouse/common-law partner is coming to Canada with you:</p>
-    <ul>
-      <li>Education: up to 10 points (PhD = 10 pts, Master's = 10 pts, Bachelor's = 10 pts)</li>
-      <li>Language (first language, each skill): CLB 9+ = 5 pts, CLB 7–8 = 3 pts, CLB 5–6 = 1 pt, CLB 4 = 0 pts (max 20 pts total)</li>
-      <li>Canadian Work Experience: 1 yr = 5 pts, 2 yrs = 7 pts, 3 yrs = 8 pts, 4 yrs = 9 pts, 5+ yrs = 10 pts</li>
-    </ul>
+            <!-- 2 -->
+            <div class="content" id="four-sections">
+              <h2>CRS is Divided into 4 Sections</h2>
+              <p>The 1,200-point CRS score is split into four distinct sections. Each section has its own maximum and sub-factors.</p>
 
-    <h2>Section C: Skill Transferability (max 100 pts)</h2>
-    <ul>
-      <li>Education + CLB 7–8: 13 pts | Education + CLB 9+: 25 pts</li>
-      <li>Education + 1–2 yrs foreign WE: 13 pts | Education + 3+ yrs: 25 pts</li>
-      <li>Foreign WE (1–2 yrs) + CLB 7–8: 13 pts | CLB 9+: 25 pts</li>
-      <li>Foreign WE (3+ yrs) + CLB 7–8: 13 pts | CLB 9+: 25 pts</li>
-      <li>Trade certificate + CLB 5–6: 13 pts | CLB 7+: 25 pts</li>
-    </ul>
+              <div class="section-cards">
+                <div class="section-card">
+                  <span class="sc-pts">Up to 500 pts (no spouse) / 460 pts (with spouse)</span>
+                  <strong>Section A — Core Human Capital</strong>
+                  <p>Age, education, official language proficiency, Canadian work experience</p>
+                </div>
+                <div class="section-card">
+                  <span class="sc-pts">Up to 40 pts</span>
+                  <strong>Section B — Spouse Factors</strong>
+                  <p>Spouse/partner education, language skills, Canadian work experience</p>
+                </div>
+                <div class="section-card">
+                  <span class="sc-pts">Up to 100 pts</span>
+                  <strong>Section C — Skill Transferability</strong>
+                  <p>Combinations of education + language, experience + language, certificates</p>
+                </div>
+                <div class="section-card">
+                  <span class="sc-pts">Up to 600 pts (PNP)</span>
+                  <strong>Section D — Additional Points</strong>
+                  <p>Provincial nomination (+600), job offer (+50/+200), French bonus (+50), Canadian study, siblings</p>
+                </div>
+              </div>
 
-    <h2>Section D: Additional Points</h2>
-    <div class="table-wrapper">
-      <table>
-        <thead><tr><th>Factor</th><th>Points</th></tr></thead>
-        <tbody>
-          <tr><td>Provincial Nomination (PNP)</td><td>+600</td></tr>
-          <tr><td>Job offer — NOC TEER 0 Major Group 00</td><td>+200</td></tr>
-          <tr><td>Job offer — Other NOC TEER 0/1/2/3</td><td>+50</td></tr>
-          <tr><td>Post-secondary in Canada (3+ year program)</td><td>+30</td></tr>
-          <tr><td>Post-secondary in Canada (1–2 year program)</td><td>+15</td></tr>
-          <tr><td>French CLB 7+ with English CLB 5+</td><td>+50</td></tr>
-          <tr><td>French CLB 7+ with English CLB 4 or less</td><td>+25</td></tr>
-          <tr><td>Sibling in Canada (citizen or PR)</td><td>+15</td></tr>
-        </tbody>
-      </table>
-    </div>
+              <!-- Total score bar overview -->
+              <h3>CRS Points Distribution at a Glance</h3>
+              <div style="margin:14px 0;">
+                <div class="prog-row">
+                  <span class="prog-label">Core Human Capital (A)</span>
+                  <div class="prog-bar"><div class="prog-fill" style="width:42%;background:#c40000;"></div></div>
+                  <span class="prog-val">500 pts</span>
+                </div>
+                <div class="prog-row">
+                  <span class="prog-label">Spouse Factors (B)</span>
+                  <div class="prog-bar"><div class="prog-fill" style="width:3%;background:#c40000;"></div></div>
+                  <span class="prog-val">40 pts</span>
+                </div>
+                <div class="prog-row">
+                  <span class="prog-label">Skill Transferability (C)</span>
+                  <div class="prog-bar"><div class="prog-fill" style="width:8%;background:#c40000;"></div></div>
+                  <span class="prog-val">100 pts</span>
+                </div>
+                <div class="prog-row">
+                  <span class="prog-label">Additional Points (D)</span>
+                  <div class="prog-bar"><div class="prog-fill" style="width:47%;background:#e07c00;"></div></div>
+                  <span class="prog-val">560 pts</span>
+                </div>
+              </div>
+              <p class="tiny muted">Total maximum = 1,200 points. Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer">IRCC CRS Grid</a>.</p>
+            </div>
 
-    <h2>Worked Example: CRS Score Calculation</h2>
-    <div class="highlight-box">
-      <h4>Example Profile: Single applicant, age 29, Master's degree, IELTS CLB 9 all skills, 2 years Canadian WE</h4>
-      <ul>
-        <li>Age (29, single): <strong>110 pts</strong></li>
-        <li>Education (Master's, single): <strong>135 pts</strong></li>
-        <li>Language (CLB 9 × 4 skills): <strong>116 pts</strong></li>
-        <li>Canadian WE (2 years, single): <strong>53 pts</strong></li>
-        <li>Skill Transfer (Master's + CLB 9): <strong>25 pts</strong></li>
-        <li>Skill Transfer (2 yr Canadian WE + CLB 9 foreign WE interaction): <strong>0 pts</strong> (no foreign WE)</li>
-        <li><strong>Total: 439 pts</strong></li>
-      </ul>
-      <p>Adding a PNP nomination (+600) would put this candidate at 1,039 points.</p>
-    </div>
+            <!-- 3 -->
+            <div class="content" id="section-a">
+              <h2>Section A — Core Human Capital Factors</h2>
+              <p>Section A is the largest section and covers four core factors. The maximum depends on whether you have a spouse or common-law partner accompanying you to Canada.</p>
 
-    <p>To calculate your own score accurately, use our free <a href="/index.html">CRS Score Calculator</a>. For strategies to improve your score, visit <a href="/how-to-improve-crs-score.html">How to Improve Your CRS Score</a>.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">Official CRS Criteria — IRCC ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" target="_blank" rel="noopener noreferrer">CRS Operations Manual ↗</a></li></ul></div>
-      </div>
-      <section class="card" aria-labelledby="guide-faq">
-        <div class="card-header"><span class="card-icon">❓</span><h2 id="guide-faq">Frequently Asked Questions</h2></div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the maximum CRS score for a single applicant without PNP?<i class="faq-toggle">+</i></div><div class="faq-answer">The maximum CRS score for a single applicant without a PNP or job offer is 600 points: 500 core human capital + 100 skill transferability. A PhD holder, age 20-29, with CLB 10+ in all language skills and 5+ years Canadian WE can achieve this.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How are language scores converted to CRS points?<i class="faq-toggle">+</i></div><div class="faq-answer">Language test scores (IELTS, CELPIP, TEF, TCF) are first converted to Canadian Language Benchmark (CLB) levels, then each CLB level maps to specific CRS points. CLB 9 per skill = 29 points, CLB 10+ per skill = 32 points. Four skills total a maximum of 128 points.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Why do CRS points differ with and without a spouse?<i class="faq-toggle">+</i></div><div class="faq-answer">The CRS system gives slightly lower core points to married/common-law applicants because they receive additional points in Section B for their spouse's factors. This balances the total between single and married applicants, preventing married candidates from getting double-counted advantages.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Do I get CRS points for foreign education?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes, your educational credentials are recognized through an Educational Credential Assessment (ECA). A foreign degree equivalent to a Canadian bachelor's degree earns 120 CRS points (single applicant). The ECA determines your education level for CRS purposes.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How does skill transferability work in the CRS?<i class="faq-toggle">+</i></div><div class="faq-answer">Skill transferability rewards combinations of factors. If you have strong language skills (CLB 7+) AND a degree, you earn 13-25 bonus points. If you have foreign work experience AND strong language, you earn additional points. The maximum is 100 skill transferability points across all combinations.</div></li>
-        </ul>
-      </section>
-      <div class="internal-cta">
-        <a href="/index.html">← Use the Free CRS Score Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </article>
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">All draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Tools</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> Improve CRS Score</a>
-          <a href="/crs-cutoff-scores.html" class="related-tool-link"><span>📉</span> CRS Cutoffs</a>
+              <div class="score-band">
+                <div class="band"><div class="bv">110</div><div class="bl">Max Age<br>(no spouse)</div></div>
+                <div class="band"><div class="bv">150</div><div class="bl">Max Education<br>(no spouse)</div></div>
+                <div class="band"><div class="bv">136</div><div class="bl">Max 1st Language<br>(no spouse)</div></div>
+                <div class="band"><div class="bv">80</div><div class="bl">Max Canadian<br>Work Exp.</div></div>
+                <div class="band" style="border-color:#c40000;"><div class="bv" style="color:#c40000;">500</div><div class="bl">Total Section A<br>(no spouse)</div></div>
+              </div>
+
+              <h3>Age Points (Section A)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Age</th><th>With Spouse (pts)</th><th>Without Spouse (pts)</th></tr></thead>
+                  <tbody>
+                    <tr><td>17 or younger</td><td>0</td><td>0</td></tr>
+                    <tr><td>18</td><td>90</td><td>99</td></tr>
+                    <tr><td>19</td><td>95</td><td>105</td></tr>
+                    <tr><td>20–29</td><td class="green-t">100</td><td class="green-t">110</td></tr>
+                    <tr><td>30</td><td>95</td><td>105</td></tr>
+                    <tr><td>31</td><td>90</td><td>99</td></tr>
+                    <tr><td>32</td><td>85</td><td>94</td></tr>
+                    <tr><td>33</td><td>80</td><td>88</td></tr>
+                    <tr><td>34</td><td>75</td><td>83</td></tr>
+                    <tr><td>35</td><td>70</td><td>77</td></tr>
+                    <tr><td>36</td><td>65</td><td>72</td></tr>
+                    <tr><td>37</td><td>60</td><td>66</td></tr>
+                    <tr><td>38</td><td>55</td><td>61</td></tr>
+                    <tr><td>39</td><td>50</td><td>55</td></tr>
+                    <tr><td>40</td><td>45</td><td>50</td></tr>
+                    <tr><td>41</td><td>35</td><td>39</td></tr>
+                    <tr><td>42</td><td>25</td><td>28</td></tr>
+                    <tr><td>43</td><td>15</td><td>17</td></tr>
+                    <tr><td>44</td><td>5</td><td>6</td></tr>
+                    <tr><td>45 or older</td><td class="red-t">0</td><td class="red-t">0</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <h3>Education Points (Section A)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Education Level</th><th>With Spouse (pts)</th><th>Without Spouse (pts)</th></tr></thead>
+                  <tbody>
+                    <tr><td>Less than secondary school diploma</td><td>0</td><td>0</td></tr>
+                    <tr><td>Secondary diploma</td><td>28</td><td>30</td></tr>
+                    <tr><td>One-year post-secondary diploma</td><td>84</td><td>90</td></tr>
+                    <tr><td>Two-year post-secondary diploma</td><td>91</td><td>98</td></tr>
+                    <tr><td>Bachelor's degree</td><td>112</td><td>120</td></tr>
+                    <tr><td>Two or more post-secondary credentials (at least one 3-year)</td><td>119</td><td>128</td></tr>
+                    <tr><td>Master's degree or professional degree (law, medicine, dentistry, vet, optometry)</td><td class="green-t">126</td><td class="green-t">135</td></tr>
+                    <tr><td>Doctoral degree (PhD)</td><td class="green-t">140</td><td class="green-t">150</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>If your education was completed outside Canada, you need an <strong>Educational Credential Assessment (ECA)</strong> from a <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/documents/education-assessed/who.html" target="_blank" rel="noopener noreferrer">IRCC-approved ECA organization</a>.</p>
+
+              <h3>Canadian Work Experience Points (Section A)</h3>
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Years of Canadian Experience</th><th>With Spouse (pts)</th><th>Without Spouse (pts)</th></tr></thead>
+                  <tbody>
+                    <tr><td>None</td><td>0</td><td>0</td></tr>
+                    <tr><td>1 year</td><td>35</td><td class="green-t">40</td></tr>
+                    <tr><td>2 years</td><td>46</td><td class="green-t">53</td></tr>
+                    <tr><td>3 years</td><td>56</td><td class="green-t">64</td></tr>
+                    <tr><td>4 years</td><td>63</td><td class="green-t">72</td></tr>
+                    <tr><td>5 or more years</td><td>70</td><td class="green-t">80</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Canadian work experience must be in a NOC TEER 0, 1, 2, or 3 occupation, obtained in the last 10 years on a valid work permit, as a PR or citizen. Use the <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a> if you have Canadian work experience.</p>
+            </div>
+
+            <!-- 4 -->
+            <div class="content" id="section-b">
+              <h2>Section B — Spouse / Common-Law Partner Factors</h2>
+              <p>If your spouse or common-law partner is accompanying you to Canada, they contribute up to <strong>40 additional CRS points</strong> from their education, language ability, and Canadian work experience.</p>
+
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Spouse Factor</th><th>Maximum Points</th></tr></thead>
+                  <tbody>
+                    <tr><td>Education</td><td class="green-t">10</td></tr>
+                    <tr><td>Official language proficiency (1st language)</td><td class="green-t">20</td></tr>
+                    <tr><td>Canadian work experience</td><td class="green-t">10</td></tr>
+                    <tr><td><strong>Total</strong></td><td class="green-t"><strong>40</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="info-box amber">
+                <p><strong>Note:</strong> When a spouse is included, your own core Section A factors have slightly lower maximums (e.g., age max drops from 110 to 100, language max drops from 136 to 128). The combined total still reaches 500 when Section B is added.</p>
+              </div>
+            </div>
+
+            <!-- 5 -->
+            <div class="content" id="section-c">
+              <h2>Section C — Skill Transferability Factors</h2>
+              <p>Section C rewards <strong>combinations</strong> of strong education + good language, or strong experience + education. It has a maximum of <strong>100 points</strong>.</p>
+
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Combination</th><th>CLB / Experience Level</th><th>Points</th></tr></thead>
+                  <tbody>
+                    <tr><td rowspan="2">Post-secondary education + CLB language</td><td>CLB 7–8 + post-secondary diploma or above</td><td>13</td></tr>
+                    <tr><td>CLB 9+ + post-secondary diploma or above</td><td class="green-t">25</td></tr>
+                    <tr><td rowspan="2">Post-secondary education + Canadian work experience</td><td>1 yr Canadian exp + post-secondary diploma or above</td><td>13</td></tr>
+                    <tr><td>2+ yrs Canadian exp + post-secondary diploma or above</td><td class="green-t">25</td></tr>
+                    <tr><td rowspan="2">Foreign work experience + CLB language</td><td>CLB 7–8 + 1–2 yrs foreign experience</td><td>13</td></tr>
+                    <tr><td>CLB 9+ + 3+ yrs foreign experience</td><td class="green-t">25</td></tr>
+                    <tr><td rowspan="2">Foreign work experience + Canadian work experience</td><td>1 yr Canadian + 1–2 yrs foreign experience</td><td>13</td></tr>
+                    <tr><td>2+ yrs Canadian + 3+ yrs foreign experience</td><td class="green-t">25</td></tr>
+                    <tr><td>Certificate of qualification in trade (FST)</td><td>CLB 5 or higher</td><td class="green-t">25</td></tr>
+                    <tr><td><strong>Maximum</strong></td><td></td><td><strong>100</strong></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>You can earn Section C points from multiple combinations, but the total is capped at 100. Use the <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a> to see your exact skill transferability score.</p>
+            </div>
+
+            <!-- 6 -->
+            <div class="content" id="section-d">
+              <h2>Section D — Additional Points</h2>
+              <p>Section D is where the largest point bonuses are awarded. A <strong>provincial nomination alone adds +600 CRS points</strong>, which virtually guarantees an ITA.</p>
+
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>Additional Factor</th><th>Points</th><th>Notes</th></tr></thead>
+                  <tbody>
+                    <tr><td>Provincial nomination (Enhanced PNP)</td><td class="green-t">+600</td><td>Guarantees ITA — use <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></td></tr>
+                    <tr><td>Job offer — NOC TEER 00</td><td class="green-t">+200</td><td>Senior manager / CEO roles with LMIA or exempt</td></tr>
+                    <tr><td>Job offer — NOC TEER 0, 1, 2, 3</td><td class="green-t">+50</td><td>Skilled worker job offer with LMIA or exempt</td></tr>
+                    <tr><td>Canadian study (3-year+ credential)</td><td>+30</td><td>Post-secondary in Canada</td></tr>
+                    <tr><td>Canadian study (1–2 year credential)</td><td>+15</td><td>College diploma in Canada</td></tr>
+                    <tr><td>French + English bilingualism bonus</td><td>+50 or +25</td><td>CLB 7+ French & CLB 5+ English = +50 pts; CLB 7+ French only = +25 pts</td></tr>
+                    <tr><td>Sibling in Canada (PR or citizen)</td><td>+15</td><td>Brother or sister residing in Canada</td></tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <div class="cta-box">
+                <h3>See Your Full CRS Score with All Sections</h3>
+                <p>Enter all details including job offer, PNP and spouse factors for a complete score estimate.</p>
+                <a href="https://crsscorecalculator.vercel.app/" class="btn btn-white">Full CRS Calculator</a>
+                <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator" class="btn btn-white">PNP Calculator (+600 pts)</a>
+              </div>
+            </div>
+
+            <!-- 7 -->
+            <div class="content" id="language-points">
+              <h2>How Language Points Are Calculated in the CRS</h2>
+              <p>Language is the single highest-weighted factor in Section A. It uses <strong>CLB (Canadian Language Benchmark)</strong> levels converted from IELTS, CELPIP or TEF Canada scores.</p>
+
+              <div class="table-wrap">
+                <table>
+                  <thead><tr><th>CLB Level</th><th>First Language (No Spouse)</th><th>Second Official Language</th><th>IELTS Equivalent (R/L/W/S)</th></tr></thead>
+                  <tbody>
+                    <tr><td>CLB 4 or below</td><td class="red-t">0</td><td>0</td><td>Below 4.5/4.5/3.5/4.0</td></tr>
+                    <tr><td>CLB 5</td><td>6</td><td>1</td><td>4.0–5.0 range</td></tr>
+                    <tr><td>CLB 6</td><td>9</td><td>3</td><td>5.0–5.5 range</td></tr>
+                    <tr><td>CLB 7</td><td>17</td><td>6</td><td>6.0 per band</td></tr>
+                    <tr><td>CLB 8</td><td>23</td><td>6</td><td>6.5–7.0 range</td></tr>
+                    <tr><td>CLB 9</td><td class="green-t">31</td><td>6</td><td>7.0–7.5 range</td></tr>
+                    <tr><td>CLB 10+</td><td class="green-t">34</td><td>6</td><td>8.0+ per band</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p>Points shown are <em>per skill</em> (reading, listening, writing, speaking). Maximum first language = 4 skills × 34 pts = <strong>136 pts</strong>. Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS Calculator</a> to convert your IELTS scores to exact CLB and CRS points.</p>
+
+              <div class="info-box green">
+                <p><strong>High-value tip:</strong> Improving your IELTS overall from 6.0 (CLB 7) to 7.0 (CLB 9) can add up to <strong>56 additional CRS points</strong> (4 skills × 14 pts difference). This is often the fastest single improvement available without a major life change.</p>
+              </div>
+            </div>
+
+            <!-- 8 — Interactive Score Builder -->
+            <section id="score-builder" class="builder">
+              <div class="builder-head">🔢 CRS Section-by-Section Score Builder</div>
+              <div class="builder-body">
+                <p style="font-size:14px;color:#4b5563;margin-bottom:16px;">Select your profile details to see an estimated CRS score built section by section — just like IRCC calculates it.</p>
+
+                <div class="builder-row">
+                  <label>Age</label>
+                  <select id="bAge">
+                    <option value="">— Select —</option>
+                    <option value="110">20–29 years (110 pts)</option>
+                    <option value="105">19 years (105 pts)</option>
+                    <option value="99">18 years (99 pts)</option>
+                    <option value="99">30 years (99 pts)</option>
+                    <option value="94">31 years (94 pts)</option>
+                    <option value="88">32 years (88 pts)</option>
+                    <option value="83">33 years (83 pts)</option>
+                    <option value="77">34 years (77 pts)</option>
+                    <option value="72">35 years (72 pts)</option>
+                    <option value="66">36 years (66 pts)</option>
+                    <option value="61">37 years (61 pts)</option>
+                    <option value="55">38 years (55 pts)</option>
+                    <option value="50">39 years (50 pts)</option>
+                    <option value="39">40 years (39 pts)</option>
+                    <option value="28">41 years (28 pts)</option>
+                    <option value="17">42 years (17 pts)</option>
+                    <option value="6">43 years (6 pts)</option>
+                    <option value="0">45+ years (0 pts)</option>
+                  </select>
+                  <span class="pts-pill" id="bAgePts">— pts</span>
+                </div>
+
+                <div class="builder-row">
+                  <label>Highest Education</label>
+                  <select id="bEdu">
+                    <option value="">— Select —</option>
+                    <option value="0">Less than secondary (0 pts)</option>
+                    <option value="30">Secondary diploma (30 pts)</option>
+                    <option value="90">1-year post-secondary (90 pts)</option>
+                    <option value="98">2-year post-secondary (98 pts)</option>
+                    <option value="120">Bachelor's degree (120 pts)</option>
+                    <option value="128">Two+ credentials (128 pts)</option>
+                    <option value="135">Master's degree (135 pts)</option>
+                    <option value="150">Doctoral / PhD (150 pts)</option>
+                  </select>
+                  <span class="pts-pill" id="bEduPts">— pts</span>
+                </div>
+
+                <div class="builder-row">
+                  <label>First Official Language (all 4 skills avg CLB)</label>
+                  <select id="bLang">
+                    <option value="">— Select —</option>
+                    <option value="0">CLB 4 or below (0 pts)</option>
+                    <option value="24">CLB 5 avg (~24 pts)</option>
+                    <option value="36">CLB 6 avg (~36 pts)</option>
+                    <option value="68">CLB 7 (~68 pts)</option>
+                    <option value="92">CLB 8 (~92 pts)</option>
+                    <option value="124">CLB 9 (~124 pts)</option>
+                    <option value="136">CLB 10+ (136 pts max)</option>
+                  </select>
+                  <span class="pts-pill" id="bLangPts">— pts</span>
+                </div>
+
+                <div class="builder-row">
+                  <label>Canadian Work Experience</label>
+                  <select id="bExp">
+                    <option value="">— Select —</option>
+                    <option value="0">None (0 pts)</option>
+                    <option value="40">1 year (40 pts)</option>
+                    <option value="53">2 years (53 pts)</option>
+                    <option value="64">3 years (64 pts)</option>
+                    <option value="72">4 years (72 pts)</option>
+                    <option value="80">5+ years (80 pts)</option>
+                  </select>
+                  <span class="pts-pill" id="bExpPts">— pts</span>
+                </div>
+
+                <div class="builder-row">
+                  <label>Skill Transferability (Section C)</label>
+                  <select id="bST">
+                    <option value="">— Select —</option>
+                    <option value="0">None qualify (0 pts)</option>
+                    <option value="13">One combination, low CLB (13 pts)</option>
+                    <option value="25">One combination, high CLB (25 pts)</option>
+                    <option value="50">Two combinations (50 pts)</option>
+                    <option value="75">Three combinations (75 pts)</option>
+                    <option value="100">Maximum (100 pts)</option>
+                  </select>
+                  <span class="pts-pill" id="bSTPts">— pts</span>
+                </div>
+
+                <div class="builder-row">
+                  <label>Additional Points (Section D)</label>
+                  <select id="bExtra">
+                    <option value="">— Select —</option>
+                    <option value="0">None (0 pts)</option>
+                    <option value="15">Sibling in Canada (15 pts)</option>
+                    <option value="15">1–2 yr Canadian study (15 pts)</option>
+                    <option value="30">3+ yr Canadian study (30 pts)</option>
+                    <option value="25">French CLB 7+ only (25 pts)</option>
+                    <option value="50">French + English bilingualism (50 pts)</option>
+                    <option value="50">Skilled job offer TEER 0/1/2/3 (50 pts)</option>
+                    <option value="200">Senior manager job offer NOC TEER 00 (200 pts)</option>
+                    <option value="600">Provincial Nomination — PNP (+600 pts)</option>
+                  </select>
+                  <span class="pts-pill" id="bExtraPts">— pts</span>
+                </div>
+
+                <button type="button" id="buildBtn" class="btn btn-red" style="width:100%;margin-top:6px;min-height:46px;font-size:15px;">Build My CRS Score →</button>
+
+                <div class="builder-total" id="buildResult" style="display:none;">
+                  <div style="font-size:13px;color:#ffe4e4;">Your Estimated CRS Score</div>
+                  <div class="big" id="buildScore">0</div>
+                  <div class="sub">Sections A + C + D (core factors, no spouse)</div>
+                  <div class="verdict" id="buildVerdict"></div>
+                </div>
+
+                <p class="tiny muted" style="margin-top:12px;">This builder uses core factors only. Your full score includes spouse factors and may differ. Use the <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a> for a complete estimate, then verify with <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC</a>.</p>
+              </div>
+            </section>
+
+            <!-- 9 -->
+            <div class="content" id="what-crs-do-i-need">
+              <h2>What CRS Score Do You Need for a Canada PR ITA?</h2>
+              <p>There is no fixed minimum CRS score for Canada PR. IRCC sets the cutoff each draw. All-program draw cutoffs in 2025–2026 ranged from <strong>470 to 525</strong>.</p>
+              <p>PNP-only draws typically cut off around <strong>700–800</strong> (which includes the +600 nomination bonus). French-language draws have cut off as low as <strong>300–380</strong>. Category-based draws for healthcare, trades and STEM range from <strong>430–490</strong>.</p>
+              <p>Track the latest cutoffs on the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores page</a> and compare with your estimated score. See also: <a href="https://crsscorecalculator.vercel.app/crs-score-for-canada-pr">CRS Score for Canada PR — full guide</a>.</p>
+            </div>
+
+            <!-- 10 -->
+            <div class="content" id="improve-crs">
+              <h2>How to Increase Your CRS Score</h2>
+              <p>The five highest-impact ways to improve your CRS score are:</p>
+              <ul>
+                <li><strong>Improve language scores (IELTS/CELPIP to CLB 9+):</strong> adds up to 56 CRS points. Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS Calculator</a> to set your target.</li>
+                <li><strong>Gain Canadian work experience:</strong> 1 year = +40 pts, 2 years = +53 pts. Also qualifies you for CEC — use the <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a>.</li>
+                <li><strong>Get a provincial nomination (PNP):</strong> adds +600 CRS instantly. Compare province options with the <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP CRS Calculator</a>.</li>
+                <li><strong>Learn French to CLB 7+:</strong> earns a +50 French bilingualism bonus AND qualifies for French-language draws with cutoffs as low as 300–380.</li>
+                <li><strong>Add a valid job offer:</strong> +50 for TEER 0/1/2/3 roles or +200 for TEER 00 senior manager roles.</li>
+              </ul>
+              <p>For a full strategy, read the <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS Score Improvement Guide</a>.</p>
+            </div>
+
+            <!-- FAQ -->
+            <section class="card faq" style="margin-top:20px;" id="faq">
+              <div class="card-head">Frequently Asked Questions — How CRS is Calculated</div>
+              <div class="card-body">
+                <details open>
+                  <summary>What is the maximum CRS score possible?</summary>
+                  <p>The maximum possible CRS score is <strong>1,200 points</strong>. This includes up to 500 from core human capital (Section A), 40 from spouse factors (Section B), 100 from skill transferability (Section C), and 560 from additional points including a +600 PNP nomination (Section D).</p>
+                </details>
+                <details>
+                  <summary>How is the CRS score calculated for a single applicant?</summary>
+                  <p>For a single applicant with no spouse, CRS = Section A (up to 500 pts: age + education + language + Canadian work experience) + Section C (up to 100 pts: skill transferability) + Section D (up to 560 pts: job offer, PNP, French bonus, Canadian study, siblings). Use the <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a> for an exact estimate.</p>
+                </details>
+                <details>
+                  <summary>How does a spouse affect the CRS score calculation?</summary>
+                  <p>When a spouse accompanies you, your own Section A maximum drops slightly (e.g., age max from 110 to 100), but your spouse adds up to 40 points from their education (10), language (20) and Canadian work experience (10). Total Section A + B maximum remains 500.</p>
+                </details>
+                <details>
+                  <summary>How many CRS points does language add?</summary>
+                  <p>Language can add up to <strong>136 points</strong> for your first official language alone (34 pts × 4 skills at CLB 10+). A second official language can add up to 24 more points. Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS Calculator</a> to see your exact language points.</p>
+                </details>
+                <details>
+                  <summary>Does foreign work experience add CRS points?</summary>
+                  <p>Foreign work experience adds points in two ways: directly (up to 25 pts in Section C skill transferability) and indirectly through score combinations. It does not add points in Section A directly — only <em>Canadian</em> work experience adds Section A points.</p>
+                </details>
+                <details>
+                  <summary>How do I calculate my skill transferability score?</summary>
+                  <p>Skill transferability in Section C rewards combinations — for example, CLB 9+ language + a post-secondary diploma = 25 pts. Multiple qualifying combinations can be added up to the 100-point cap. The <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a> calculates your Section C score automatically.</p>
+                </details>
+                <details>
+                  <summary>Where can I verify my official CRS score?</summary>
+                  <p>Create or update your Express Entry profile on <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC's official website</a>. Your official CRS score is calculated automatically by IRCC when you submit your profile. Use the <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a> to estimate first.</p>
+                </details>
+              </div>
+            </section>
+
+            <!-- Related Tools -->
+            <section class="card" style="margin-top:18px;">
+              <div class="card-head">Related CRS Calculators & Tools</div>
+              <div class="card-body">
+                <div class="tool-grid">
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/"><div class="tool-icon">CA</div><strong>CRS Calculator</strong><span>Full federal score</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator"><div class="tool-icon">EE</div><strong>Express Entry</strong><span>CRS tool</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/cec-crs-calculator"><div class="tool-icon">CE</div><strong>CEC Calculator</strong><span>Canadian experience</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/pnp-crs-calculator"><div class="tool-icon">PN</div><strong>PNP Calculator</strong><span>+600 pts</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/ielts-crs-calculator"><div class="tool-icon">IL</div><strong>IELTS to CRS</strong><span>Language points</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator"><div class="tool-icon">ON</div><strong>Ontario CRS</strong><span>OINP stream</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator"><div class="tool-icon">AB</div><strong>Alberta CRS</strong><span>AINP stream</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/bc-crs-calculator"><div class="tool-icon">BC</div><strong>BC PNP CRS</strong><span>British Columbia</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores"><div class="tool-icon">CS</div><strong>Cutoff Scores</strong><span>Draw history</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-draws"><div class="tool-icon">DR</div><strong>Draw Results</strong><span>Latest rounds</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/crs-score-for-canada-pr"><div class="tool-icon">PR</div><strong>CRS for PR</strong><span>Minimum scores</span></a>
+                  <a class="tool" href="https://crsscorecalculator.vercel.app/canada-express-entry-eligibility"><div class="tool-icon">EL</div><strong>EE Eligibility</strong><span>Requirements guide</span></a>
+                </div>
+              </div>
+            </section>
+
+            <p class="tiny muted" style="margin-top:16px;">Disclaimer: CRS points tables are based on official IRCC criteria as of April 2026. Always verify your score with <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC's official tool</a> before submitting an Express Entry profile.</p>
+
+          </div>
         </div>
-      </div>
-    </aside>
-  </div>
+      </article>
+
+      <!-- ── Sidebar ── -->
+      <aside>
+        <div class="side-list">
+
+          <div class="score-highlight">
+            <div class="lbl">Calculate Your CRS Score Free</div>
+            <div class="val">Free Tool</div>
+            <div class="sub">Updated April 2026 • Instant Results</div>
+            <a href="https://crsscorecalculator.vercel.app/" style="display:block;margin-top:12px;background:#fff;color:#c40000;border-radius:8px;padding:10px 14px;font-weight:700;font-size:14px;text-decoration:none;text-align:center;">Calculate My CRS →</a>
+          </div>
+
+          <div class="side-card">
+            <h3>CRS Score Maximums</h3>
+            <ul>
+              <li>Age: <strong>110 pts</strong></li>
+              <li>Education: <strong>150 pts</strong></li>
+              <li>First language: <strong>136 pts</strong></li>
+              <li>Canadian work exp: <strong>80 pts</strong></li>
+              <li>Spouse factors: <strong>40 pts</strong></li>
+              <li>Skill transferability: <strong>100 pts</strong></li>
+              <li>PNP nomination: <strong>600 pts</strong></li>
+              <li>Job offer TEER 00: <strong>200 pts</strong></li>
+              <li>French bilingualism: <strong>50 pts</strong></li>
+              <li><strong>Total maximum: 1,200</strong></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Express Entry Tools</h3>
+            <ul>
+              <li><a href="https://crsscorecalculator.vercel.app/">Full CRS Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry CRS</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Draw Results</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/crs-score-for-canada-pr">CRS Score for PR</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/canada-express-entry-eligibility">EE Eligibility Guide</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Provincial Calculators</h3>
+            <ul>
+              <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator">Saskatchewan</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Official IRCC Links</h3>
+            <ul>
+              <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer">Official CRS Grid</a></li>
+              <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC CRS Check Tool</a></li>
+              <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </aside>
+
+    </div><!-- /grid -->
+  </div><!-- /container -->
 </main>
-<footer class="site-footer" role="contentinfo">
+
+<!-- ── Footer ── -->
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+      <div>
+        <h3>CRS Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/">CRS Score Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+      <div>
+        <h3>Provincial Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator">Saskatchewan</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+      <div>
+        <h3>Guides & Resources</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/how-crs-is-calculated">How CRS is Calculated</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-score-for-canada-pr">CRS Score for Canada PR</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/canada-express-entry-eligibility">EE Eligibility Guide</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+      <div>
+        <h3>Official Links</h3>
+        <ul>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer">IRCC CRS Grid</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Score Checker</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+          <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Canada.ca</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    <div class="copyright">
+      <span>© 2026 CRS Calculator. For informational purposes only. Always verify with <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC</a> before submitting an immigration application.</span>
+      <a href="https://crsscorecalculator.vercel.app/">Home</a>
     </div>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
+
+<!-- ── Scripts ── -->
+<script>
+// Mobile menu toggle
+(function(){
+  var btn = document.getElementById('menuBtn');
+  var menu = document.getElementById('mobileMenu');
+  btn.addEventListener('click', function(){
+    var open = menu.classList.toggle('open');
+    btn.setAttribute('aria-expanded', String(open));
+  });
+})();
+
+// Score builder — live pill update + total calculation
+(function(){
+  var fields = [
+    { sel: 'bAge',   pill: 'bAgePts'   },
+    { sel: 'bEdu',   pill: 'bEduPts'   },
+    { sel: 'bLang',  pill: 'bLangPts'  },
+    { sel: 'bExp',   pill: 'bExpPts'   },
+    { sel: 'bST',    pill: 'bSTPts'    },
+    { sel: 'bExtra', pill: 'bExtraPts' }
+  ];
+
+  fields.forEach(function(f){
+    document.getElementById(f.sel).addEventListener('change', function(){
+      var v = this.value;
+      document.getElementById(f.pill).textContent = v !== '' ? v + ' pts' : '— pts';
+    });
+  });
+
+  document.getElementById('buildBtn').addEventListener('click', function(){
+    var allFilled = fields.every(function(f){ return document.getElementById(f.sel).value !== ''; });
+    if (!allFilled) {
+      alert('Please complete all six sections to build your CRS score.');
+      return;
+    }
+    var total = fields.reduce(function(sum, f){
+      return sum + (parseInt(document.getElementById(f.sel).value) || 0);
+    }, 0);
+
+    document.getElementById('buildScore').textContent = total;
+
+    var v = '';
+    if (total >= 600) {
+      v = '✅ Outstanding! You likely have a PNP nomination. An ITA is virtually guaranteed at the next PNP draw.';
+    } else if (total >= 525) {
+      v = '✅ Excellent! This score is highly competitive for all-program Express Entry draws.';
+    } else if (total >= 490) {
+      v = '✅ Competitive. Within range of recent all-program draw cutoffs (~470–525).';
+    } else if (total >= 450) {
+      v = '⚠️ Close. Consider improving IELTS to CLB 9+ or targeting a category-based or PNP draw.';
+    } else if (total >= 400) {
+      v = '⚠️ Below all-program cutoffs. A PNP nomination (+600) or French-language draw is your best path.';
+    } else {
+      v = '❗ Needs improvement. Focus on language (CLB 9+) and Canadian work experience for the biggest gains.';
+    }
+    document.getElementById('buildVerdict').textContent = v;
+    document.getElementById('buildResult').style.display = 'block';
+  });
+})();
+</script>
+
+<!-- ── Schema Markup ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "How is the CRS Score Calculated? Complete 2026 Breakdown",
+  "description": "How is CRS calculated? Full breakdown of all Express Entry CRS factors including age, education, language CLB, Canadian work experience, spouse points, skill transferability, job offer, PNP nomination and bonus points.",
+  "url": "https://crsscorecalculator.vercel.app/how-crs-is-calculated",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-04-01",
+  "author": { "@type": "Organization", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+  "publisher": {
+    "@type": "Organization",
+    "name": "CRS Calculator",
+    "url": "https://crsscorecalculator.vercel.app/",
+    "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/og-image.jpg" }
+  },
+  "mainEntityOfPage": { "@type": "WebPage", "@id": "https://crsscorecalculator.vercel.app/how-crs-is-calculated" },
+  "about": [
+    { "@type": "Thing", "name": "how is CRS calculated" },
+    { "@type": "Thing", "name": "CRS score calculation 2026" },
+    { "@type": "Thing", "name": "Comprehensive Ranking System breakdown" },
+    { "@type": "Thing", "name": "Express Entry CRS factors" }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".post-lead", ".info-box", ".faq summary", ".section-label"]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "Express Entry Calculator", "item": "https://crsscorecalculator.vercel.app/express-entry-crs-calculator" },
+    { "@type": "ListItem", "position": 3, "name": "How CRS is Calculated 2026", "item": "https://crsscorecalculator.vercel.app/how-crs-is-calculated" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the maximum CRS score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "The maximum possible CRS score is 1,200 points, including up to 500 from core human capital (Section A), 40 from spouse factors (Section B), 100 from skill transferability (Section C), and 560 from additional points including a +600 PNP nomination." }
+    },
+    {
+      "@type": "Question",
+      "name": "How is the CRS score calculated for a single applicant?",
+      "acceptedAnswer": { "@type": "Answer", "text": "For a single applicant, CRS = Section A (age + education + language + Canadian work experience, max 500 pts) + Section C (skill transferability, max 100 pts) + Section D (job offer, PNP nomination, French bonus, Canadian study, siblings, max 560 pts)." }
+    },
+    {
+      "@type": "Question",
+      "name": "How many CRS points does language add?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Language can add up to 136 points for the first official language (34 pts × 4 skills at CLB 10+) and up to 24 points for a second official language." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a spouse affect CRS score calculation?",
+      "acceptedAnswer": { "@type": "Answer", "text": "When a spouse is included, your Section A maximums decrease slightly (e.g., age drops from 110 to 100 pts), but your spouse adds up to 40 points from education (10), language (20) and Canadian work experience (10). The combined A + B maximum remains 500 pts." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is Section C skill transferability in the CRS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Section C rewards combinations of strong factors — for example, CLB 9+ language + post-secondary education = 25 pts. Multiple qualifying combinations can be added up to the 100-point cap." }
+    },
+    {
+      "@type": "Question",
+      "name": "How does a PNP nomination affect the CRS score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A provincial nomination (Enhanced PNP stream) adds exactly +600 CRS points in Section D, virtually guaranteeing an ITA at the next PNP-only draw regardless of your base score." }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I verify my official CRS score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Create or update your Express Entry profile on the official IRCC website at canada.ca. Your official CRS score is calculated automatically by IRCC when you submit your profile." }
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "HowTo",
+  "name": "How to Calculate Your CRS Score for Canada Express Entry",
+  "description": "Step-by-step guide to calculating your Comprehensive Ranking System (CRS) score for Canada Express Entry 2026.",
+  "totalTime": "PT10M",
+  "step": [
+    {
+      "@type": "HowToStep",
+      "position": 1,
+      "name": "Calculate Section A — Core Human Capital",
+      "text": "Add points for age (max 110), education (max 150), first official language CLB (max 136), and Canadian work experience (max 80). Section A total = up to 500 pts without a spouse."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 2,
+      "name": "Add Section B — Spouse Factors (if applicable)",
+      "text": "If your spouse accompanies you, add up to 40 points from their education (10), language (20) and Canadian work experience (10)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 3,
+      "name": "Calculate Section C — Skill Transferability",
+      "text": "Identify qualifying combinations of education + language, experience + language, or experience + education. Each combination earns 13–25 pts, capped at 100 total."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 4,
+      "name": "Add Section D — Additional Points",
+      "text": "Add points for provincial nomination (+600), valid job offer (+50 or +200), French bilingualism (+25 or +50), Canadian education (+15 or +30), and sibling in Canada (+15)."
+    },
+    {
+      "@type": "HowToStep",
+      "position": 5,
+      "name": "Sum all sections for your CRS score",
+      "text": "CRS total = Section A + Section B + Section C + Section D. Maximum is 1,200 points. Compare with the latest Express Entry draw cutoffs to assess your invitation likelihood."
+    }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CRS Calculator",
+  "url": "https://crsscorecalculator.vercel.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://crsscorecalculator.vercel.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
 </body>
 </html>
