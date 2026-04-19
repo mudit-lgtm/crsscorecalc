@@ -1,1151 +1,1304 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>IELTS to CRS Points Calculator 2026 – Express Entry Language Score Converter</title>
-  <meta name="description" content="Convert IELTS, CELPIP, TEF and TCF scores to CLB and CRS points instantly. Free Express Entry language score calculator. See exactly how many CRS points your IELTS score is worth in 2026." />
-  <meta name="keywords" content="ielts to crs points, ielts crs calculator, ielts clb converter, ielts express entry points, ielts to clb conversion table, celpip to clb, tef to clb, clb crs points calculator, ielts score for canada pr 2026, ielts 7 crs points, ielts 8 crs points, ielts 8.5 crs points, ielts 9 crs points, language points express entry, crs language points calculator" />
-  <meta name="robots" content="index, follow" />
-  <meta name="author" content="CRS Score Calculator" />
-  <meta name="geo.region" content="CA" />
+  <meta name="description" content="Use this free IELTS to CRS points calculator to convert IELTS bands into CLB levels and estimate Express Entry CRS language points for Canada PR in 2026. Mobile-friendly, fast and updated." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#c40000" />
+  <meta name="author" content="CRS Calculator" />
+  <meta name="format-detection" content="telephone=no" />
   <link rel="canonical" href="https://crsscorecalculator.vercel.app/ielts-crs-calculator" />
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c40000'/%3E%3Cpath d='M18 20h28v6H18zm0 9h20v6H18zm0 9h28v6H18z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23c40000'/%3E%3Cpath d='M42 52h96v18H42zm0 30h68v18H42zm0 30h96v18H42z' fill='white'/%3E%3C/svg%3E" />
+
   <!-- Open Graph -->
-  <meta property="og:title" content="IELTS to CRS Points Calculator 2026 – Express Entry Language Score" />
-  <meta property="og:description" content="Find out exactly how many Express Entry CRS points your IELTS, CELPIP, TEF or TCF score is worth. Free IELTS to CLB to CRS converter — all 4 skills included." />
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/ielts-crs-calculator" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CRS Score Calculator" />
+  <meta property="og:title" content="IELTS to CRS Points Calculator 2026 – Express Entry Language Score Converter" />
+  <meta property="og:description" content="Convert IELTS scores to CLB and estimate CRS language points for Canada Express Entry." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/ielts-crs-calculator" />
+  <meta property="og:site_name" content="CRS Calculator" />
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="IELTS to CRS Calculator 2026 – Express Entry Language Points" />
-  <meta name="twitter:description" content="Convert IELTS/CELPIP/TEF/TCF to CLB and CRS points. See your Express Entry language score instantly — free, no login required." />
+  <meta name="twitter:title" content="IELTS to CRS Points Calculator 2026 – Express Entry Language Score Converter" />
+  <meta name="twitter:description" content="Free IELTS to CRS points calculator updated for Canada Express Entry 2026." />
+  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <!-- AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
 
-  <!-- Schema: WebApplication -->
+  <style>
+    :root{
+      --primary:#c40000;
+      --primary-dark:#a80000;
+      --primary-soft:#ffe8e8;
+      --text:#1f2937;
+      --muted:#6b7280;
+      --border:#e5e7eb;
+      --bg:#f3f4f6;
+      --white:#ffffff;
+      --card:#ffffff;
+      --dark:#111827;
+      --success:#15803d;
+      --warning:#b45309;
+      --shadow:0 2px 8px rgba(0,0,0,.06);
+      --radius:12px;
+      --radius-sm:8px;
+      --max:1200px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      color:var(--text);
+      background:var(--bg);
+      line-height:1.5;
+    }
+
+    a{color:var(--primary);text-decoration:none}
+    a:hover{text-decoration:underline}
+    img{max-width:100%;display:block}
+    .container{max-width:var(--max);margin:auto;padding:0 14px}
+    .skip-link{
+      position:absolute;left:-9999px;top:auto
+    }
+    .skip-link:focus{
+      left:12px;top:12px;background:#fff;padding:10px 14px;z-index:1000;border-radius:8px
+    }
+
+    /* Header */
+    .topbar{
+      background:#fff;
+      border-bottom:1px solid #efefef;
+      position:sticky;
+      top:0;
+      z-index:999;
+    }
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:16px;
+      min-height:58px;
+    }
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-weight:700;
+      color:#111;
+      white-space:nowrap;
+    }
+    .brand-badge{
+      width:24px;height:24px;border-radius:5px;background:var(--primary);display:grid;place-items:center;color:#fff;font-size:12px;font-weight:700;
+    }
+    .nav-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      align-items:center;
+      font-size:13px;
+    }
+    .nav-links a{
+      color:#374151;
+    }
+    .nav-cta{
+      background:var(--primary);
+      color:#fff !important;
+      padding:8px 12px;
+      border-radius:8px;
+      font-weight:700;
+    }
+
+    /* Hero */
+    .hero{
+      background:linear-gradient(180deg, #c40000 0%, #b20000 100%);
+      color:#fff;
+      padding:34px 0 28px;
+      text-align:center;
+    }
+    .hero h1{
+      margin:0 auto 8px;
+      font-size:clamp(28px,4vw,44px);
+      line-height:1.15;
+      max-width:900px;
+      font-weight:800;
+    }
+    .hero p{
+      margin:0 auto 16px;
+      max-width:860px;
+      color:#ffeaea;
+      font-size:15px;
+    }
+    .pill-row{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:8px;
+      margin:0 0 18px;
+    }
+    .pill{
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.22);
+      color:#fff;
+      padding:7px 10px;
+      font-size:12px;
+      border-radius:999px;
+    }
+    .hero-actions{
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:10px;
+    }
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:8px;
+      border:none;
+      border-radius:10px;
+      padding:12px 18px;
+      font-size:14px;
+      font-weight:700;
+      cursor:pointer;
+      text-decoration:none !important;
+    }
+    .btn-primary{
+      background:#fff;
+      color:var(--primary);
+    }
+    .btn-secondary{
+      background:transparent;
+      color:#fff;
+      border:1px solid rgba(255,255,255,.35);
+    }
+
+    /* Layout */
+    main{padding:18px 0 28px}
+    .grid{
+      display:grid;
+      grid-template-columns:minmax(0, 1.65fr) 320px;
+      gap:18px;
+      align-items:start;
+    }
+    .card{
+      background:var(--card);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+    .card-head{
+      padding:14px 16px;
+      border-bottom:1px solid var(--border);
+      font-weight:700;
+      font-size:15px;
+      display:flex;
+      align-items:center;
+      gap:8px;
+    }
+    .card-body{padding:16px}
+    .soft-section-title{
+      background:#fff2f2;
+      border:1px solid #ffd4d4;
+      color:#8b0000;
+      font-size:13px;
+      font-weight:700;
+      padding:9px 10px;
+      border-radius:8px;
+      margin:0 0 14px;
+    }
+
+    .form-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:14px;
+    }
+    .field{
+      display:flex;
+      flex-direction:column;
+      gap:6px;
+    }
+    .field label{
+      font-size:13px;
+      font-weight:700;
+      color:#374151;
+    }
+    .field small{
+      color:var(--muted);
+      font-size:12px;
+    }
+    select,input{
+      width:100%;
+      min-height:44px;
+      border:1px solid #d1d5db;
+      border-radius:10px;
+      background:#fff;
+      padding:10px 12px;
+      font-size:14px;
+      color:#111827;
+    }
+    select:focus,input:focus{
+      outline:none;
+      border-color:var(--primary);
+      box-shadow:0 0 0 3px rgba(196,0,0,.12);
+    }
+
+    .radio-row{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:4px;
+    }
+    .radio{
+      display:flex;
+      align-items:center;
+      gap:8px;
+      font-size:14px;
+    }
+    .radio input{width:auto;min-height:auto}
+
+    .actions{
+      margin-top:14px;
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+    }
+    .btn-red{
+      background:var(--primary);
+      color:#fff;
+      width:100%;
+      min-height:46px;
+    }
+    .btn-red:hover{background:var(--primary-dark)}
+    .btn-light{
+      background:#fff;
+      color:#111;
+      border:1px solid var(--border);
+    }
+
+    .result-card{
+      background:linear-gradient(180deg, #c40000 0%, #ae0000 100%);
+      color:#fff;
+      padding:16px;
+      border-radius:12px;
+      text-align:center;
+      box-shadow:var(--shadow);
+    }
+    .score{
+      font-size:48px;
+      line-height:1;
+      font-weight:800;
+      margin:4px 0 8px;
+    }
+    .score-sub{
+      font-size:13px;
+      color:#ffe4e4;
+    }
+    .muted{color:var(--muted)}
+    .tiny{font-size:12px}
+    .side-list{
+      display:grid;
+      gap:8px;
+    }
+    .side-card{
+      padding:14px;
+      background:#fff;
+      border:1px solid var(--border);
+      border-radius:12px;
+      box-shadow:var(--shadow);
+    }
+    .side-card h3{
+      margin:0 0 10px;
+      font-size:14px;
+    }
+    .side-card ul{
+      list-style:none;
+      padding:0;margin:0;
+    }
+    .side-card li{
+      padding:7px 0;
+      border-bottom:1px solid #f0f0f0;
+      font-size:13px;
+    }
+    .side-card li:last-child{border-bottom:none}
+
+    .summary-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+      margin-top:14px;
+    }
+    .mini{
+      border:1px solid var(--border);
+      border-radius:10px;
+      padding:12px;
+      background:#fff;
+    }
+    .mini .num{
+      font-size:22px;
+      font-weight:800;
+      color:var(--primary);
+      margin-bottom:4px;
+    }
+
+    .table-wrap{
+      overflow:auto;
+      border:1px solid var(--border);
+      border-radius:12px;
+    }
+    table{
+      width:100%;
+      border-collapse:collapse;
+      background:#fff;
+    }
+    th,td{
+      padding:12px 10px;
+      border-bottom:1px solid var(--border);
+      text-align:left;
+      font-size:14px;
+    }
+    th{
+      background:#b60000;
+      color:#fff;
+      font-size:13px;
+      white-space:nowrap;
+    }
+
+    .steps{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .step{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px;
+      background:#fff;
+    }
+    .step-no{
+      width:28px;height:28px;border-radius:999px;background:var(--primary);color:#fff;display:grid;place-items:center;font-weight:700;font-size:13px;margin-bottom:10px;
+    }
+
+    .faq details{
+      border-bottom:1px solid var(--border);
+      padding:12px 0;
+    }
+    .faq summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+      position:relative;
+      padding-right:24px;
+      font-size:14px;
+    }
+    .faq summary::-webkit-details-marker{display:none}
+    .faq summary::after{
+      content:"+";
+      position:absolute;
+      right:0;top:0;
+      color:var(--primary);
+      font-weight:800;
+    }
+    .faq details[open] summary::after{content:"−"}
+    .faq p{margin:10px 0 0;color:#4b5563;font-size:14px}
+
+    .tool-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:12px;
+    }
+    .tool{
+      border:1px solid var(--border);
+      border-radius:12px;
+      padding:14px 10px;
+      text-align:center;
+      background:#fff;
+    }
+    .tool .icon{
+      width:34px;height:34px;margin:0 auto 10px;border-radius:999px;background:#fef2f2;color:var(--primary);display:grid;place-items:center;font-weight:700;
+    }
+    .tool strong{
+      display:block;
+      font-size:14px;
+      color:#111827;
+    }
+    .tool span{
+      display:block;
+      font-size:12px;
+      color:#6b7280;
+      margin-top:4px;
+    }
+
+    .content p{
+      margin:0 0 12px;
+      color:#4b5563;
+      font-size:14px;
+    }
+
+    .breadcrumbs{
+      font-size:12px;
+      color:#6b7280;
+      margin:0 0 14px;
+    }
+    .breadcrumbs a{color:#6b7280}
+
+    footer{
+      background:#101418;
+      color:#d1d5db;
+      margin-top:28px;
+      padding:30px 0;
+    }
+    .footer-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+    footer h3{
+      color:#fff;
+      font-size:14px;
+      margin:0 0 10px;
+    }
+    footer ul{
+      list-style:none;
+      padding:0;margin:0;
+    }
+    footer li{
+      margin:8px 0;
+      font-size:13px;
+    }
+    footer a{color:#d1d5db}
+    .copyright{
+      margin-top:18px;
+      padding-top:18px;
+      border-top:1px solid rgba(255,255,255,.08);
+      font-size:12px;
+      color:#9ca3af;
+      display:flex;
+      justify-content:space-between;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    @media (max-width: 1024px){
+      .grid{grid-template-columns:1fr}
+      .summary-grid{grid-template-columns:repeat(2,1fr)}
+      .tool-grid{grid-template-columns:repeat(3,1fr)}
+      .steps{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:repeat(2,1fr)}
+    }
+
+    @media (max-width: 680px){
+      .nav{min-height:auto;padding:10px 0}
+      .nav-links{
+        display:none;
+      }
+      .hero{padding:26px 0 22px}
+      .hero p{font-size:14px}
+      .form-grid{grid-template-columns:1fr}
+      .summary-grid{grid-template-columns:1fr}
+      .steps{grid-template-columns:1fr}
+      .tool-grid{grid-template-columns:repeat(2,1fr)}
+      .footer-grid{grid-template-columns:1fr}
+      .card-head,.card-body,.side-card{padding:14px}
+      .score{font-size:42px}
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <header class="topbar">
+    <div class="container nav">
+      <a class="brand" href="https://crsscorecalculator.vercel.app/" aria-label="CRS Calculator home">
+        <span class="brand-badge">CRS</span>
+        <span>CRS Calculator</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Primary">
+        <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a>
+        <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a>
+        <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry</a>
+        <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a>
+        <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario</a>
+        <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta</a>
+        <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">Cutoff Scores</a>
+        <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a>
+        <a class="nav-cta" href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Calculate Now</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h1>IELTS to CRS Points Calculator 2026</h1>
+      <p>Convert IELTS band scores into CLB levels and estimate your Express Entry language points instantly for Canada PR. Fast, mobile-friendly and based on the official CRS language framework.</p>
+
+      <div class="pill-row">
+        <span class="pill">Updated 2026</span>
+        <span class="pill">IELTS to CLB</span>
+        <span class="pill">CRS Language Points</span>
+        <span class="pill">No Login</span>
+        <span class="pill">Mobile Ready</span>
+      </div>
+
+      <div class="hero-actions">
+        <a href="#calculator" class="btn btn-primary">Calculate IELTS to CRS →</a>
+        <a href="https://crsscorecalculator.vercel.app/" class="btn btn-secondary">Full CRS Calculator</a>
+      </div>
+    </div>
+  </section>
+
+  <main id="main-content">
+    <div class="container">
+      <div class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="https://crsscorecalculator.vercel.app/">Home</a> ›
+        <a href="https://crsscorecalculator.vercel.app/tools">Tools</a> ›
+        <span>IELTS to CRS Calculator</span>
+      </div>
+
+      <div class="grid">
+        <!-- Main -->
+        <div>
+          <section id="calculator" class="card">
+            <div class="card-head">📝 IELTS to CRS Calculator — Express Entry Language Score Converter</div>
+            <div class="card-body">
+              <div class="soft-section-title">Enter your IELTS scores below to convert them into CLB levels and estimated CRS points for Canada Express Entry.</div>
+
+              <form id="ieltsForm">
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="testType">IELTS Test Type</label>
+                    <select id="testType">
+                      <option value="general">IELTS General Training</option>
+                      <option value="academic">IELTS Academic</option>
+                    </select>
+                    <small>Express Entry language eligibility is usually assessed using IELTS General Training.</small>
+                  </div>
+
+                  <div class="field">
+                    <label for="maritalStatus">Marital Status</label>
+                    <select id="maritalStatus">
+                      <option value="single">Single / No Accompanying Spouse</option>
+                      <option value="spouse">Married / Accompanying Spouse</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="listening">Listening Band</label>
+                    <select id="listening"></select>
+                  </div>
+
+                  <div class="field">
+                    <label for="reading">Reading Band</label>
+                    <select id="reading"></select>
+                  </div>
+
+                  <div class="field">
+                    <label for="writing">Writing Band</label>
+                    <select id="writing"></select>
+                  </div>
+
+                  <div class="field">
+                    <label for="speaking">Speaking Band</label>
+                    <select id="speaking"></select>
+                  </div>
+                </div>
+
+                <div class="soft-section-title" style="margin-top:16px;">Optional skill transferability hint</div>
+                <div class="form-grid">
+                  <div class="field">
+                    <label for="education">Highest Education</label>
+                    <select id="education">
+                      <option value="none">Select education</option>
+                      <option value="secondary">Secondary school</option>
+                      <option value="one-year">One-year post-secondary</option>
+                      <option value="two-year">Two-year post-secondary</option>
+                      <option value="bachelor">Bachelor or 3+ year credential</option>
+                      <option value="two-or-more">Two or more credentials</option>
+                      <option value="masters">Master’s / professional degree</option>
+                      <option value="phd">PhD</option>
+                    </select>
+                  </div>
+
+                  <div class="field">
+                    <label for="foreignExp">Foreign Work Experience</label>
+                    <select id="foreignExp">
+                      <option value="0">None</option>
+                      <option value="1">1 year</option>
+                      <option value="2">2 years</option>
+                      <option value="3">3 years or more</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="actions">
+                  <button type="button" class="btn btn-red" id="calcBtn">Calculate My IELTS CRS Points →</button>
+                  <button type="reset" class="btn btn-light" id="resetBtn">Reset</button>
+                </div>
+              </form>
+
+              <div class="summary-grid" aria-live="polite" style="margin-top:18px;">
+                <div class="mini">
+                  <div class="muted tiny">Estimated CRS language points</div>
+                  <div class="num" id="langPoints">0</div>
+                  <div class="tiny muted">First official language only</div>
+                </div>
+                <div class="mini">
+                  <div class="muted tiny">Lowest CLB</div>
+                  <div class="num" id="lowestClb">0</div>
+                  <div class="tiny muted">Across all 4 abilities</div>
+                </div>
+                <div class="mini">
+                  <div class="muted tiny">Highest CLB</div>
+                  <div class="num" id="highestClb">0</div>
+                  <div class="tiny muted">Best scoring ability</div>
+                </div>
+                <div class="mini">
+                  <div class="muted tiny">Transferability hint</div>
+                  <div class="num" id="transferHint">0</div>
+                  <div class="tiny muted">Up to estimated bonus trigger</div>
+                </div>
+              </div>
+
+              <div style="margin-top:18px" class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>Ability</th>
+                      <th>IELTS Band</th>
+                      <th>CLB Level</th>
+                      <th>CRS Points</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Listening</td>
+                      <td id="rListenBand">-</td>
+                      <td id="rListenClb">-</td>
+                      <td id="rListenPts">-</td>
+                    </tr>
+                    <tr>
+                      <td>Reading</td>
+                      <td id="rReadBand">-</td>
+                      <td id="rReadClb">-</td>
+                      <td id="rReadPts">-</td>
+                    </tr>
+                    <tr>
+                      <td>Writing</td>
+                      <td id="rWriteBand">-</td>
+                      <td id="rWriteClb">-</td>
+                      <td id="rWritePts">-</td>
+                    </tr>
+                    <tr>
+                      <td>Speaking</td>
+                      <td id="rSpeakBand">-</td>
+                      <td id="rSpeakClb">-</td>
+                      <td id="rSpeakPts">-</td>
+                    </tr>
+                    <tr>
+                      <td><strong>Total</strong></td>
+                      <td colspan="2"><strong>Estimated CRS Language Score</strong></td>
+                      <td id="rTotalPts"><strong>0</strong></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+
+              <p class="tiny muted" style="margin-top:12px;">
+                This calculator estimates first official language CRS points and gives a transferability hint. For your complete Comprehensive Ranking System score, use the
+                <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a>.
+              </p>
+            </div>
+          </section>
+
+          <section class="card" style="margin-top:18px;">
+            <div class="card-head">What this IELTS to CRS calculator does</div>
+            <div class="card-body content">
+              <p>This page is designed to capture search intent around terms such as <strong>IELTS to CRS calculator</strong>, <strong>IELTS CRS score calculator</strong> and <strong>IELTS score to CRS points calculator</strong> while keeping content thin, helpful and easy to scan on mobile devices. Those keyword themes appear in your attached keyword files and align with the existing calculator ecosystem on your domain. [file:23][web:210]</p>
+              <p>Users first need to understand how IELTS bands map to CLB because Express Entry language points are awarded through the CRS grid, not directly by raw IELTS band scores. Your homepage already explains that language test scores are a core human capital factor and recommends using the IELTS to CLB converter before full CRS calculation. [web:210][page:1]</p>
+              <p>For official validation, candidates can compare results with Immigration, Refugees and Citizenship Canada’s own Express Entry score tool after using your page. [web:217]</p>
+            </div>
+          </section>
+
+          <section class="card" style="margin-top:18px;">
+            <div class="card-head">IELTS band to CLB reference</div>
+            <div class="card-body">
+              <div class="table-wrap">
+                <table>
+                  <thead>
+                    <tr>
+                      <th>CLB</th>
+                      <th>Listening</th>
+                      <th>Reading (General)</th>
+                      <th>Writing</th>
+                      <th>Speaking</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><td>10</td><td>8.5+</td><td>8.0+</td><td>7.5+</td><td>7.5+</td></tr>
+                    <tr><td>9</td><td>8.0</td><td>7.0</td><td>7.0</td><td>7.0</td></tr>
+                    <tr><td>8</td><td>7.5</td><td>6.5</td><td>6.5</td><td>6.5</td></tr>
+                    <tr><td>7</td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td></tr>
+                    <tr><td>6</td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.5</td></tr>
+                    <tr><td>5</td><td>5.0</td><td>4.0</td><td>5.0</td><td>5.0</td></tr>
+                    <tr><td>4</td><td>4.5</td><td>3.5</td><td>4.0</td><td>4.0</td></tr>
+                    <tr><td>Below 4</td><td>Less than 4.5</td><td>Less than 3.5</td><td>Less than 4.0</td><td>Less than 4.0</td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <p class="tiny muted" style="margin-top:12px;">Use IELTS General Training for standard Express Entry language conversion. For complete CRS scoring, combine these CLB levels with age, education and work experience. [page:1][web:217]</p>
+            </div>
+          </section>
+
+          <section class="card" style="margin-top:18px;">
+            <div class="card-head">How to use this tool</div>
+            <div class="card-body">
+              <div class="steps">
+                <div class="step">
+                  <div class="step-no">1</div>
+                  <strong>Select IELTS type</strong>
+                  <p class="tiny muted">Choose General or Academic, although Express Entry candidates normally rely on IELTS General Training.</p>
+                </div>
+                <div class="step">
+                  <div class="step-no">2</div>
+                  <strong>Enter four band scores</strong>
+                  <p class="tiny muted">Add Listening, Reading, Writing and Speaking exactly as shown on your IELTS TRF.</p>
+                </div>
+                <div class="step">
+                  <div class="step-no">3</div>
+                  <strong>Check CLB conversion</strong>
+                  <p class="tiny muted">See your minimum and maximum CLB level instantly across all language abilities.</p>
+                </div>
+                <div class="step">
+                  <div class="step-no">4</div>
+                  <strong>Open full CRS tool</strong>
+                  <p class="tiny muted">Continue to the main CRS score calculator for age, spouse, work experience and additional points.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="card" style="margin-top:18px;">
+            <div class="card-head">Why CLB 9 matters for Express Entry</div>
+            <div class="card-body content">
+              <p>Your existing homepage already highlights that improving IELTS or CELPIP scores can add meaningful CRS points, and CLB 9 is the level many candidates target because it can unlock stronger language points and skill transferability combinations. [web:210][page:1]</p>
+              <p>That is why this page should not only convert IELTS to CLB, but also push users toward adjacent internal tools such as the <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a>, <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS calculator</a>, and your <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS improvement guide</a>. Those links create tighter internal relevance around Express Entry, CRS language points and Canada PR scoring. [web:210][page:1]</p>
+              <p>For official policy context and result verification, add clear contextual references to the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry score tool</a> and to the <a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Government of Canada immigration website</a>. The official IRCC tool confirms that candidates can calculate their Comprehensive Ranking System score based on entered answers. [web:217]</p>
+            </div>
+          </section>
+
+          <section class="card faq" style="margin-top:18px;">
+            <div class="card-head">Frequently asked questions — IELTS to CRS points</div>
+            <div class="card-body">
+              <details open>
+                <summary>How do I convert IELTS to CRS points?</summary>
+                <p>First convert each IELTS band to a CLB level, then apply the CRS language points table based on whether you are applying with or without an accompanying spouse. For full Express Entry ranking, combine language points with age, education, work history and additional factors. [page:1][web:217]</p>
+              </details>
+              <details>
+                <summary>Is IELTS General or Academic used for Canada Express Entry?</summary>
+                <p>Express Entry applicants usually rely on IELTS General Training rather than IELTS Academic for language assessment under immigration programs. Official score validation should always be checked with IRCC. [web:217]</p>
+              </details>
+              <details>
+                <summary>What IELTS score is equal to CLB 9?</summary>
+                <p>CLB 9 generally means Listening 8.0, Reading 7.0, Writing 7.0 and Speaking 7.0 in IELTS General Training. Even one lower module can reduce the overall value of your language profile. [page:1]</p>
+              </details>
+              <details>
+                <summary>Does this calculator show my full CRS score?</summary>
+                <p>No. This tool estimates language points only. Use the <a href="https://crsscorecalculator.vercel.app/">main CRS calculator</a> for a complete Canada Express Entry CRS score. [web:210][page:1]</p>
+              </details>
+              <details>
+                <summary>Can I compare the result with the official CRS calculator?</summary>
+                <p>Yes. After checking your language estimate here, compare it with the official IRCC Express Entry score tool before final submission. [web:217]</p>
+              </details>
+            </div>
+          </section>
+
+          <section class="card" style="margin-top:18px;">
+            <div class="card-head">Related CRS calculators & tools</div>
+            <div class="card-body">
+              <div class="tool-grid">
+                <a class="tool" href="https://crsscorecalculator.vercel.app/">
+                  <div class="icon">CA</div>
+                  <strong>CRS Calculator</strong>
+                  <span>All programs</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/cec-crs-calculator">
+                  <div class="icon">CE</div>
+                  <strong>CEC Calculator</strong>
+                  <span>Canadian Experience Class</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">
+                  <div class="icon">EE</div>
+                  <strong>Express Entry</strong>
+                  <span>CRS points tool</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">
+                  <div class="icon">PN</div>
+                  <strong>PNP Calculator</strong>
+                  <span>Provincial nominee</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">
+                  <div class="icon">ON</div>
+                  <strong>Ontario CRS</strong>
+                  <span>OINP stream</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">
+                  <div class="icon">AB</div>
+                  <strong>Alberta CRS</strong>
+                  <span>AINP stream</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/bc-crs-calculator">
+                  <div class="icon">BC</div>
+                  <strong>BC PNP</strong>
+                  <span>British Columbia</span>
+                </a>
+                <a class="tool" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">
+                  <div class="icon">CS</div>
+                  <strong>Cutoff Scores</strong>
+                  <span>Draw trends</span>
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside class="side-list">
+          <div class="result-card" aria-live="polite">
+            <div class="tiny">Estimated IELTS Language CRS</div>
+            <div class="score" id="sidebarScore">0</div>
+            <div class="score-sub">Lowest CLB: <span id="sidebarClb">0</span> • Based on 4 language abilities</div>
+          </div>
+
+          <div class="side-card">
+            <h3>Express Entry tools</h3>
+            <ul>
+              <li><a href="https://crsscorecalculator.vercel.app/">Full CRS Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP CRS Calculator</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Provincial calculators</h3>
+            <ul>
+              <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+              <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>Official resources</h3>
+            <ul>
+              <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC CRS Tool</a></li>
+              <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Immigration</a></li>
+              <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Government of Canada</a></li>
+            </ul>
+          </div>
+
+          <div class="side-card">
+            <h3>AEO-friendly quick answers</h3>
+            <ul>
+              <li>CLB 9 usually starts at IELTS 8.0 listening and 7.0 in the other three modules.</li>
+              <li>Higher language scores can increase both core CRS points and transferability value.</li>
+              <li>Use the main CRS calculator after this tool for full Express Entry score estimation.</li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h3>CRS Calculators</h3>
+          <ul>
+            <li><a href="https://crsscorecalculator.vercel.app/">CRS Score Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Provincial calculators</h3>
+          <ul>
+            <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Guides & resources</h3>
+          <ul>
+            <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-education.html">CRS & Education</a></li>
+          </ul>
+        </div>
+        <div>
+          <h3>Official links</h3>
+          <ul>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry</a></li>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+            <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Canada.ca</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 CRS Calculator. This tool is for informational purposes only and should be verified with official IRCC sources.</span>
+        <span><a href="https://crsscorecalculator.vercel.app/">Homepage</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const bandOptions = ["9.0","8.5","8.0","7.5","7.0","6.5","6.0","5.5","5.0","4.5","4.0","3.5","3.0","2.5","2.0","1.5","1.0","0.5","0.0"];
+    const selects = ["listening","reading","writing","speaking"];
+
+    function fillBandSelects() {
+      selects.forEach(id => {
+        const el = document.getElementById(id);
+        if (!el.options.length) {
+          bandOptions.forEach(v => {
+            const opt = document.createElement("option");
+            opt.value = v;
+            opt.textContent = v;
+            el.appendChild(opt);
+          });
+        }
+      });
+
+      document.getElementById("listening").value = "8.0";
+      document.getElementById("reading").value = "7.0";
+      document.getElementById("writing").value = "7.0";
+      document.getElementById("speaking").value = "7.0";
+    }
+
+    function clbListening(score) {
+      score = parseFloat(score);
+      if (score >= 8.5) return 10;
+      if (score >= 8.0) return 9;
+      if (score >= 7.5) return 8;
+      if (score >= 6.0) return 7;
+      if (score >= 5.5) return 6;
+      if (score >= 5.0) return 5;
+      if (score >= 4.5) return 4;
+      return 0;
+    }
+
+    function clbReadingGeneral(score) {
+      score = parseFloat(score);
+      if (score >= 8.0) return 10;
+      if (score >= 7.0) return 9;
+      if (score >= 6.5) return 8;
+      if (score >= 6.0) return 7;
+      if (score >= 5.0) return 6;
+      if (score >= 4.0) return 5;
+      if (score >= 3.5) return 4;
+      return 0;
+    }
+
+    function clbReadingAcademic(score) {
+      score = parseFloat(score);
+      if (score >= 8.0) return 10;
+      if (score >= 7.5) return 9;
+      if (score >= 6.5) return 8;
+      if (score >= 6.0) return 7;
+      if (score >= 5.0) return 6;
+      if (score >= 4.0) return 5;
+      if (score >= 3.5) return 4;
+      return 0;
+    }
+
+    function clbWriting(score) {
+      score = parseFloat(score);
+      if (score >= 7.5) return 10;
+      if (score >= 7.0) return 9;
+      if (score >= 6.5) return 8;
+      if (score >= 6.0) return 7;
+      if (score >= 5.5) return 6;
+      if (score >= 5.0) return 5;
+      if (score >= 4.0) return 4;
+      return 0;
+    }
+
+    function clbSpeaking(score) {
+      score = parseFloat(score);
+      if (score >= 7.5) return 10;
+      if (score >= 7.0) return 9;
+      if (score >= 6.5) return 8;
+      if (score >= 6.0) return 7;
+      if (score >= 5.5) return 6;
+      if (score >= 5.0) return 5;
+      if (score >= 4.0) return 4;
+      return 0;
+    }
+
+    function crsPerAbility(clb, marital) {
+      if (marital === "single") {
+        if (clb >= 10) return 34;
+        if (clb === 9) return 31;
+        if (clb === 8) return 23;
+        if (clb === 7) return 17;
+        if (clb <= 6 && clb >= 5) return 6;
+        if (clb === 4) return 0;
+        return 0;
+      } else {
+        if (clb >= 10) return 32;
+        if (clb === 9) return 29;
+        if (clb === 8) return 22;
+        if (clb === 7) return 16;
+        if (clb <= 6 && clb >= 5) return 6;
+        if (clb === 4) return 0;
+        return 0;
+      }
+    }
+
+    function estimateTransferability(minClb, education, foreignExp) {
+      let points = 0;
+
+      const eduStrong = ["two-year","bachelor","two-or-more","masters","phd"].includes(education);
+      const eduVeryStrong = ["bachelor","two-or-more","masters","phd"].includes(education);
+
+      if (minClb >= 9) {
+        if (eduVeryStrong) points += 50;
+        else if (eduStrong) points += 25;
+
+        if (foreignExp === "3") points += 50;
+        else if (foreignExp === "2" || foreignExp === "1") points += 25;
+      } else if (minClb >= 7) {
+        if (eduVeryStrong) points += 25;
+        if (foreignExp === "3") points += 25;
+      }
+
+      return Math.min(points, 100);
+    }
+
+    function calculate() {
+      const testType = document.getElementById("testType").value;
+      const marital = document.getElementById("maritalStatus").value;
+      const listening = document.getElementById("listening").value;
+      const reading = document.getElementById("reading").value;
+      const writing = document.getElementById("writing").value;
+      const speaking = document.getElementById("speaking").value;
+      const education = document.getElementById("education").value;
+      const foreignExp = document.getElementById("foreignExp").value;
+
+      const clbL = clbListening(listening);
+      const clbR = testType === "general" ? clbReadingGeneral(reading) : clbReadingAcademic(reading);
+      const clbW = clbWriting(writing);
+      const clbS = clbSpeaking(speaking);
+
+      const ptsL = crsPerAbility(clbL, marital);
+      const ptsR = crsPerAbility(clbR, marital);
+      const ptsW = crsPerAbility(clbW, marital);
+      const ptsS = crsPerAbility(clbS, marital);
+
+      const total = ptsL + ptsR + ptsW + ptsS;
+      const minClb = Math.min(clbL, clbR, clbW, clbS);
+      const maxClb = Math.max(clbL, clbR, clbW, clbS);
+      const transfer = estimateTransferability(minClb, education, foreignExp);
+
+      document.getElementById("langPoints").textContent = total;
+      document.getElementById("lowestClb").textContent = minClb;
+      document.getElementById("highestClb").textContent = maxClb;
+      document.getElementById("transferHint").textContent = transfer;
+      document.getElementById("sidebarScore").textContent = total;
+      document.getElementById("sidebarClb").textContent = minClb;
+
+      document.getElementById("rListenBand").textContent = listening;
+      document.getElementById("rListenClb").textContent = "CLB " + clbL;
+      document.getElementById("rListenPts").textContent = ptsL;
+
+      document.getElementById("rReadBand").textContent = reading;
+      document.getElementById("rReadClb").textContent = "CLB " + clbR;
+      document.getElementById("rReadPts").textContent = ptsR;
+
+      document.getElementById("rWriteBand").textContent = writing;
+      document.getElementById("rWriteClb").textContent = "CLB " + clbW;
+      document.getElementById("rWritePts").textContent = ptsW;
+
+      document.getElementById("rSpeakBand").textContent = speaking;
+      document.getElementById("rSpeakClb").textContent = "CLB " + clbS;
+      document.getElementById("rSpeakPts").textContent = ptsS;
+
+      document.getElementById("rTotalPts").innerHTML = "<strong>" + total + "</strong>";
+    }
+
+    document.getElementById("calcBtn").addEventListener("click", calculate);
+    document.getElementById("resetBtn").addEventListener("click", function(){
+      setTimeout(() => {
+        fillBandSelects();
+        document.getElementById("testType").value = "general";
+        document.getElementById("maritalStatus").value = "single";
+        document.getElementById("education").value = "none";
+        document.getElementById("foreignExp").value = "0";
+        calculate();
+      }, 0);
+    });
+
+    fillBandSelects();
+    calculate();
+  </script>
+
+  <!-- Structured Data -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "IELTS to CRS Points Calculator – Express Entry Language Score Converter",
-    "url": "https://crsscorecalculator.vercel.app/ielts-crs-calculator",
-    "description": "Free IELTS to CLB to CRS points converter for Express Entry 2026. Supports IELTS, CELPIP, TEF Canada, and TCF Canada with full CRS points breakdown.",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "6241",
-      "bestRating": "5"
-    },
-    "publisher": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" }
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"CRS Calculator",
+    "url":"https://crsscorecalculator.vercel.app/",
+    "potentialAction":{
+      "@type":"SearchAction",
+      "target":"https://crsscorecalculator.vercel.app/?q={search_term_string}",
+      "query-input":"required name=search_term_string"
+    }
   }
   </script>
 
-  <!-- Schema: FAQPage -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@context":"https://schema.org",
+    "@type":"BreadcrumbList",
+    "itemListElement":[
       {
-        "@type": "Question",
-        "name": "How many CRS points is IELTS 7 in all bands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An IELTS General Training score of 7.0 in all four skills (Listening, Reading, Writing, Speaking) equals CLB 9 in Listening, CLB 8 in Writing and Speaking, and CLB 9 in Reading. This gives approximately 116–124 CRS language points (first language, no spouse). Specifically: Listening 7.0 = CLB 9 = 31 pts, Reading 7.0 = CLB 9 = 31 pts, Writing 7.0 = CLB 9 = 31 pts, Speaking 7.0 = CLB 9 = 31 pts — total 124 CRS points."
-        }
+        "@type":"ListItem",
+        "position":1,
+        "name":"Home",
+        "item":"https://crsscorecalculator.vercel.app/"
       },
       {
-        "@type": "Question",
-        "name": "How many CRS points is IELTS 8 in all bands?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "IELTS General Training 8.0 in all four skills converts to: Listening 8.0 = CLB 10 (34 pts), Reading 8.0 = CLB 10 (34 pts), Writing 8.0 = CLB 10 (34 pts), Speaking 8.0 = CLB 10 (34 pts). Total: 136 CRS language points — the maximum possible for first language (without spouse). IELTS 8.0+ in all bands maximises your language CRS score."
-        }
+        "@type":"ListItem",
+        "position":2,
+        "name":"Tools",
+        "item":"https://crsscorecalculator.vercel.app/tools"
       },
       {
-        "@type": "Question",
-        "name": "What IELTS score do I need for Express Entry?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The minimum IELTS General Training score for Express Entry Federal Skilled Worker is CLB 7, which equals: Listening 6.0, Reading 6.0, Writing 6.0, Speaking 6.0. For Canadian Experience Class (TEER 0/1), the minimum is also CLB 7. For CEC TEER 2/3, the minimum is CLB 5 (IELTS 5.0 in all skills). Higher IELTS scores dramatically increase your CRS points: IELTS 6.0 = 68 CRS points, IELTS 7.0 = 124 CRS points, IELTS 8.0 = 136 CRS points."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is CELPIP equivalent to IELTS for Express Entry?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes. Both IELTS General Training and CELPIP-General are accepted for Express Entry. CELPIP has a unique advantage: its scores map 1:1 to CLB levels (CELPIP 7 = CLB 7, CELPIP 9 = CLB 9), while IELTS requires a conversion table. CELPIP is Canada-based and the test is entirely computer-based, which many candidates find more convenient."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use IELTS Academic for Express Entry?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Express Entry requires IELTS General Training (GT), not IELTS Academic. The two tests have different scoring scales and only General Training is accepted by IRCC for immigration purposes. However, if you took IELTS Academic and want to immigrate to Canada, you can retake the General Training version."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does improving IELTS from 7 to 8 increase CRS score?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Improving all four IELTS GT skills from 7.0 (CLB 9, 124 CRS pts) to 8.0 (CLB 10, 136 CRS pts) adds 12 CRS points. However, the bigger gains are from CLB 7 to CLB 9: going from IELTS 6.0 (CLB 7, 68 pts) to IELTS 7.0 (CLB 9, 124 pts) adds 56 CRS points — enough to cross the typical Express Entry cutoff threshold. Even improving one weak skill from CLB 7 to CLB 9 adds 14 CRS points."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is the TEF Canada to CLB conversion for Express Entry?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "TEF Canada CLB conversion: CLB 10+ = Listening 316–360, Reading 263–300, Writing 393–450, Speaking 393–450. CLB 9 = Listening 298–315, Reading 248–262, Writing 371–392, Speaking 371–392. CLB 8 = Listening 280–297, Reading 233–247, Writing 349–370, Speaking 349–370. CLB 7 = Listening 249–279, Reading 207–232, Writing 310–348, Speaking 310–348. French-language candidates scoring NCLC 7+ in TEF can also earn a 25–50 CRS bonus under the French-language proficiency additional points."
-        }
+        "@type":"ListItem",
+        "position":3,
+        "name":"IELTS to CRS Points Calculator 2026",
+        "item":"https://crsscorecalculator.vercel.app/ielts-crs-calculator"
       }
     ]
   }
   </script>
 
-  <!-- Schema: BreadcrumbList -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "IELTS CRS Calculator", "item": "https://crsscorecalculator.vercel.app/ielts-crs-calculator" }
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"IELTS to CRS Points Calculator 2026 – Express Entry Language Score Converter",
+    "url":"https://crsscorecalculator.vercel.app/ielts-crs-calculator",
+    "description":"Convert IELTS scores to CLB levels and estimate Express Entry CRS language points for Canada PR in 2026.",
+    "isPartOf":{
+      "@type":"WebSite",
+      "name":"CRS Calculator",
+      "url":"https://crsscorecalculator.vercel.app/"
+    },
+    "about":[
+      {"@type":"Thing","name":"IELTS to CRS calculator"},
+      {"@type":"Thing","name":"IELTS CRS score calculator"},
+      {"@type":"Thing","name":"IELTS score to CRS points calculator"},
+      {"@type":"Thing","name":"Canada Express Entry language points"}
+    ],
+    "primaryImageOfPage":"https://crsscorecalculator.vercel.app/og-image.jpg",
+    "speakable":{
+      "@type":"SpeakableSpecification",
+      "cssSelector":["h1",".hero p",".faq summary"]
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"SoftwareApplication",
+    "name":"IELTS to CRS Points Calculator 2026",
+    "applicationCategory":"CalculatorApplication",
+    "operatingSystem":"Web",
+    "url":"https://crsscorecalculator.vercel.app/ielts-crs-calculator",
+    "description":"Free online calculator to convert IELTS bands to CLB levels and estimate CRS language points for Canada Express Entry.",
+    "offers":{
+      "@type":"Offer",
+      "price":"0",
+      "priceCurrency":"USD"
+    },
+    "publisher":{
+      "@type":"Organization",
+      "name":"CRS Calculator",
+      "url":"https://crsscorecalculator.vercel.app/"
+    },
+    "featureList":[
+      "IELTS to CLB conversion",
+      "CRS language points estimate",
+      "Single and spouse modes",
+      "Mobile-friendly calculator",
+      "Internal links to CRS tools"
     ]
   }
   </script>
 
-  <!-- Schema: Article -->
   <script type="application/ld+json">
   {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "IELTS to CRS Points Calculator 2026 – Express Entry Language Score Guide",
-    "description": "Complete guide to converting IELTS, CELPIP, TEF and TCF scores to CLB and CRS points for Express Entry Canada 2026.",
-    "url": "https://crsscorecalculator.vercel.app/ielts-crs-calculator",
-    "datePublished": "2025-01-01",
-    "dateModified": "2026-04-18",
-    "author": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "CRS Score Calculator",
-      "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/logo.png" }
-    }
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"How do I convert IELTS to CRS points?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Convert each IELTS band to a CLB level first, then apply CRS language points according to whether you have an accompanying spouse."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Is IELTS General or Academic used for Express Entry?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Express Entry applicants generally use IELTS General Training for immigration language scoring."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"What IELTS score equals CLB 9?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"CLB 9 usually means Listening 8.0, Reading 7.0, Writing 7.0 and Speaking 7.0 in IELTS General Training."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Does this page show my full CRS score?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"No. This page estimates first official language CRS points only. Use the full CRS calculator for total Express Entry score estimation."
+        }
+      }
+    ]
   }
   </script>
-
-  <style>
-    :root {
-      --red:#CC0000;--red-dark:#990000;--red-light:#fff5f5;
-      --lang-blue:#0055a5;--lang-blue-light:#e8f0fb;--lang-green:#1a7a3c;
-      --black:#1a1a1a;--text:#212529;--text-muted:#6c757d;--text-faint:#adb5bd;
-      --bg:#f8f9fa;--surface:#ffffff;--border:#dee2e6;--border-light:#e9ecef;
-      --success:#28a745;--success-bg:#d4edda;--warning-bg:#fff3cd;--info-bg:#e8f4fd;
-      --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-      --font-head:'Poppins','Inter',sans-serif;
-      --radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
-      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.10);
-      --transition:180ms ease;
-    }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;}
-    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
-    img{display:block;max-width:100%;height:auto;}
-    a{color:var(--red);text-decoration:none;transition:color var(--transition);}
-    a:hover{color:var(--red-dark);text-decoration:underline;}
-    h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;color:var(--black);}
-    ul,ol{padding-left:1.4em;}
-    table{border-collapse:collapse;width:100%;}
-    button{cursor:pointer;font-family:var(--font-body);}
-    p{max-width:72ch;}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
-    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
-    .content-wrap{display:grid;grid-template-columns:1fr 310px;gap:36px;align-items:start;}
-    .skip-link{position:absolute;top:-100px;left:16px;background:var(--red);color:#fff;padding:10px 16px;border-radius:var(--radius-md);z-index:9999;transition:top .2s;}
-    .skip-link:focus{top:16px;}
-
-    /* HEADER */
-    .site-header{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
-    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--red);text-decoration:none;white-space:nowrap;}
-    .nav-logo:hover{color:var(--red-dark);text-decoration:none;}
-    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;flex-wrap:wrap;}
-    .nav-links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 10px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition);white-space:nowrap;}
-    .nav-links a:hover{background:var(--red-light);color:var(--red);text-decoration:none;}
-    .nav-links a.active{color:var(--red);font-weight:600;}
-    .nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--radius-md)!important;padding:8px 16px!important;font-weight:600!important;}
-    .nav-cta:hover{background:var(--red-dark)!important;}
-    .nav-mobile-toggle{display:none;background:none;border:none;padding:8px;color:var(--text);}
-
-    /* BREADCRUMB */
-    .breadcrumb{background:#fff;border-bottom:1px solid var(--border-light);padding:10px 0;}
-    .breadcrumb ol{display:flex;gap:6px;align-items:center;list-style:none;padding:0;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;}
-    .breadcrumb li+li::before{content:"›";margin-right:6px;color:var(--text-faint);}
-    .breadcrumb a{color:var(--text-muted);}
-    .breadcrumb a:hover{color:var(--red);}
-
-    /* HERO */
-    .hero{background:linear-gradient(135deg,#CC0000 0%,#8b0000 100%);color:#fff;padding:40px 0 32px;text-align:center;}
-    .hero h1{font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;margin-bottom:10px;}
-    .hero-sub{font-size:1rem;opacity:.92;max-width:640px;margin:0 auto 16px;}
-    .hero-meta{display:flex;justify-content:center;gap:16px;font-size:.82rem;opacity:.85;flex-wrap:wrap;margin-bottom:16px;}
-    .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
-    .badge{background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.3);color:#fff;font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:999px;}
-
-    /* MAX POINTS BANNER */
-    .max-pts-bar{background:var(--lang-blue);color:#fff;padding:11px 0;}
-    .mpb-inner{display:flex;align-items:center;justify-content:center;gap:24px;flex-wrap:wrap;text-align:center;}
-    .mpb-stat{display:flex;flex-direction:column;align-items:center;}
-    .mpb-val{font-family:var(--font-head);font-size:1.4rem;font-weight:700;line-height:1;}
-    .mpb-label{font-size:.68rem;opacity:.85;text-transform:uppercase;letter-spacing:.04em;margin-top:2px;}
-    .mpb-div{width:1px;height:34px;background:rgba(255,255,255,.25);}
-
-    /* AD */
-    .ad-slot{background:#f0f0f0;border:1px dashed #ccc;text-align:center;color:var(--text-muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);}
-    .ad-leaderboard{min-height:90px;margin:16px 0;}
-    .ad-mid{min-height:250px;margin:28px 0;}
-    .ad-sidebar{min-height:250px;width:100%;margin-bottom:20px;}
-    .ad-in-content{min-height:90px;margin:28px 0;}
-    .main-content{padding:32px 0 56px;}
-
-    /* TABS */
-    .calc-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
-    .card-title{font-size:1.05rem;font-weight:700;color:var(--black);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--red);display:flex;align-items:center;gap:8px;}
-    .test-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:20px;}
-    .test-tab{padding:9px 16px;border:1.5px solid var(--border);background:#fff;border-radius:var(--radius-lg);font-size:.85rem;font-weight:600;color:var(--text-muted);cursor:pointer;transition:all var(--transition);}
-    .test-tab:hover{border-color:var(--red);color:var(--red);}
-    .test-tab.active{background:var(--red);color:#fff;border-color:var(--red);}
-    .test-panel{display:none;}
-    .test-panel.active{display:block;}
-
-    /* SCORE INPUTS */
-    .score-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:20px;}
-    .score-input-box{display:flex;flex-direction:column;gap:6px;}
-    .score-input-box label{font-size:.8rem;font-weight:600;color:var(--text);text-align:center;}
-    .score-input-box .score-icon{font-size:1.2rem;text-align:center;}
-    .score-select{width:100%;padding:10px 8px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.9rem;font-weight:600;color:var(--text);background:#fff;text-align:center;transition:border-color var(--transition),box-shadow var(--transition);appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M1 1l4 4 4-4' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center;padding-right:24px;}
-    .score-select:focus{outline:none;border-color:var(--red);box-shadow:0 0 0 3px rgba(204,0,0,.12);}
-    .clb-preview{font-size:.72rem;color:var(--text-muted);text-align:center;margin-top:2px;min-height:16px;}
-    .marital-row{display:flex;gap:16px;flex-wrap:wrap;margin-bottom:18px;align-items:center;}
-    .marital-row label{font-size:.875rem;font-weight:600;color:var(--text);}
-    .radio-group{display:flex;gap:14px;flex-wrap:wrap;}
-    .radio-group label{display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:.875rem;}
-    .radio-group input[type="radio"]{accent-color:var(--red);width:15px;height:15px;}
-    .btn-calc{width:100%;padding:15px;background:var(--red);color:#fff;font-family:var(--font-head);font-size:1.05rem;font-weight:700;border:none;border-radius:var(--radius-lg);cursor:pointer;margin-top:4px;transition:background var(--transition),transform var(--transition);box-shadow:0 4px 14px rgba(204,0,0,.35);}
-    .btn-calc:hover{background:var(--red-dark);transform:translateY(-1px);}
-    .btn-calc:active{transform:translateY(0);}
-
-    /* RESULTS */
-    #results{display:none;}
-    .results-wrap{background:var(--surface);border:2px solid var(--red);border-radius:var(--radius-xl);padding:24px;box-shadow:0 4px 20px rgba(204,0,0,.1);margin-bottom:24px;}
-    .result-header{text-align:center;padding:8px 0 16px;}
-    .result-title{font-size:.85rem;color:var(--text-muted);margin-bottom:4px;}
-    .result-pts{font-family:var(--font-head);font-size:clamp(2.8rem,8vw,4.2rem);font-weight:700;line-height:1;color:var(--red);}
-    .result-max{font-size:.8rem;color:var(--text-muted);}
-    .score-bar-bg{background:#e9ecef;border-radius:999px;height:10px;margin:12px 0;overflow:hidden;}
-    .score-bar-fill{height:100%;border-radius:999px;background:var(--red);transition:width .8s ease;}
-
-    /* CLB RESULT GRID */
-    .clb-result-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:16px 0;}
-    .clb-result-box{background:var(--bg);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:12px 8px;text-align:center;}
-    .clb-result-box .skill-name{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em;color:var(--text-muted);margin-bottom:4px;}
-    .clb-result-box .clb-val{font-family:var(--font-head);font-size:1.3rem;font-weight:700;}
-    .clb-result-box .clb-pts{font-size:.75rem;font-weight:600;margin-top:3px;}
-    .clb-result-box.clb4{border-color:#dc3545;}.clb-result-box.clb4 .clb-val{color:#dc3545;}
-    .clb-result-box.clb5,.clb-result-box.clb6{border-color:#fd7e14;}.clb-result-box.clb5 .clb-val,.clb-result-box.clb6 .clb-val{color:#fd7e14;}
-    .clb-result-box.clb7,.clb-result-box.clb8{border-color:#e6a817;}.clb-result-box.clb7 .clb-val,.clb-result-box.clb8 .clb-val{color:#e6a817;}
-    .clb-result-box.clb9{border-color:#27ae60;}.clb-result-box.clb9 .clb-val{color:#27ae60;}
-    .clb-result-box.clb10{border-color:#1a7a3c;}.clb-result-box.clb10 .clb-val{color:#1a7a3c;}
-
-    .pts-breakdown{border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;margin-bottom:16px;}
-    .pts-breakdown table{font-size:.875rem;}
-    .pts-breakdown th{background:var(--red);color:#fff;padding:9px 13px;text-align:left;font-size:.78rem;}
-    .pts-breakdown td{padding:9px 13px;border-bottom:1px solid var(--border-light);}
-    .pts-breakdown tr:last-child td{border-bottom:none;font-weight:700;background:#fafafa;}
-    .pts-num{font-weight:700;color:var(--red);text-align:right;}
-
-    .tip-banner{background:var(--red-light);border:1px solid #ffcccc;border-radius:var(--radius-lg);padding:14px 16px;display:flex;gap:12px;margin-top:14px;}
-    .tip-banner .ti{font-size:1.5rem;flex-shrink:0;}
-    .tip-banner h4{font-size:.875rem;margin-bottom:2px;}
-    .tip-banner p{font-size:.8rem;color:var(--text-muted);margin:0 0 4px;}
-    .tip-banner a{font-size:.85rem;font-weight:600;color:var(--red);}
-    .results-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px;justify-content:center;}
-    .btn-action{padding:10px 18px;border-radius:var(--radius-md);font-size:.85rem;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--text);cursor:pointer;transition:all var(--transition);}
-    .btn-action:hover{border-color:var(--red);color:var(--red);}
-    .btn-action.primary{background:var(--red);color:#fff;border-color:var(--red);}
-    .btn-action.primary:hover{background:var(--red-dark);}
-
-    /* INFO CARDS */
-    .info-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
-    .info-card h2{font-size:1.1rem;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--red);}
-    .info-card h3{font-size:.95rem;margin:16px 0 6px;}
-    .info-card p{font-size:.9rem;margin-bottom:10px;}
-    .info-card ul,.info-card ol{font-size:.9rem;}
-    .info-card li{margin-bottom:6px;}
-
-    /* CONVERSION TABLES */
-    .conv-table{width:100%;border-radius:var(--radius-lg);overflow:hidden;font-size:.82rem;margin:12px 0;}
-    .conv-table th{background:var(--red);color:#fff;padding:9px 11px;text-align:center;font-size:.75rem;}
-    .conv-table th:first-child{text-align:left;}
-    .conv-table td{padding:8px 11px;border-bottom:1px solid var(--border-light);text-align:center;}
-    .conv-table td:first-child{font-weight:700;text-align:left;}
-    .conv-table tr:last-child td{border-bottom:none;}
-    .conv-table tr:nth-child(even) td{background:#fafafa;}
-    .clb-badge{display:inline-block;padding:2px 8px;border-radius:999px;font-weight:700;font-size:.75rem;}
-    .clb-b4{background:#fce8e8;color:#c0392b;}
-    .clb-b5,.clb-b6{background:#fff0e0;color:#e07000;}
-    .clb-b7,.clb-b8{background:#fff8e0;color:#9a6500;}
-    .clb-b9{background:#e8f5e9;color:#1e7e34;}
-    .clb-b10{background:#d4efdf;color:#146b2f;}
-
-    /* CRS POINTS TABLE */
-    .crs-pts-table{width:100%;border-radius:var(--radius-lg);overflow:hidden;font-size:.82rem;margin:12px 0;}
-    .crs-pts-table th{background:var(--lang-blue);color:#fff;padding:9px 11px;font-size:.75rem;text-align:center;}
-    .crs-pts-table th:first-child{text-align:left;}
-    .crs-pts-table td{padding:8px 11px;border-bottom:1px solid var(--border-light);text-align:center;}
-    .crs-pts-table td:first-child{font-weight:700;text-align:left;}
-    .crs-pts-table tr:last-child td{border-bottom:none;}
-    .crs-pts-table tr:nth-child(even) td{background:#fafafa;}
-    .pts-cell{font-weight:700;color:var(--lang-blue);}
-    .pts-max{font-weight:700;color:var(--lang-green);background:#e8f5e9!important;}
-
-    /* CALLOUT */
-    .callout{border-radius:var(--radius-lg);padding:12px 15px;margin:14px 0;display:flex;gap:10px;align-items:flex-start;}
-    .callout-tip{background:var(--success-bg);border:1px solid #b8dfc5;}
-    .callout-info{background:var(--info-bg);border:1px solid #aed6f1;}
-    .callout-warn{background:var(--warning-bg);border:1px solid #ffd970;}
-    .callout-icon{font-size:1rem;flex-shrink:0;margin-top:2px;}
-    .callout p{margin:0;font-size:.875rem;}
-
-    /* SCORE IMPACT */
-    .impact-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px;margin-top:12px;}
-    .impact-box{background:#fafafa;border:1px solid var(--border-light);border-radius:var(--radius-lg);padding:12px;text-align:center;}
-    .impact-score{font-size:.8rem;color:var(--text-muted);margin-bottom:4px;}
-    .impact-val{font-family:var(--font-head);font-size:1.5rem;font-weight:700;color:var(--lang-blue);line-height:1;}
-    .impact-label{font-size:.72rem;color:var(--text-muted);margin-top:3px;}
-    .impact-box.best{border-color:var(--lang-green);background:#f0fff4;}
-    .impact-box.best .impact-val{color:var(--lang-green);}
-
-    /* CTA BANNER */
-    .cta-banner{background:linear-gradient(135deg,#CC0000,#8b0000);border-radius:var(--radius-xl);padding:24px;color:#fff;text-align:center;margin:24px 0;}
-    .cta-banner h3{color:#fff;font-size:1.1rem;margin-bottom:6px;}
-    .cta-banner p{opacity:.9;font-size:.88rem;margin-bottom:16px;}
-    .cta-btn{display:inline-block;background:#fff;color:var(--red);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:12px 28px;border-radius:var(--radius-lg);text-decoration:none;transition:transform var(--transition);}
-    .cta-btn:hover{transform:translateY(-2px);color:var(--red-dark);text-decoration:none;}
-
-    /* FAQ */
-    .faq-item{border:1px solid var(--border-light);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;}
-    .faq-q{width:100%;text-align:left;padding:13px 16px;background:var(--surface);border:none;cursor:pointer;font-size:.9rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--transition);}
-    .faq-q:hover,.faq-q.open{background:var(--red-light);color:var(--red);}
-    .faq-arrow{transition:transform var(--transition);flex-shrink:0;}
-    .faq-q.open .faq-arrow{transform:rotate(180deg);}
-    .faq-a{display:none;padding:0 16px 14px;font-size:.875rem;line-height:1.7;}
-    .faq-a.open{display:block;}
-
-    /* CALC GRID */
-    .calc-link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
-    .calc-link-card{display:block;background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:12px;text-align:center;transition:border-color var(--transition),transform var(--transition);text-decoration:none;color:var(--text);}
-    .calc-link-card:hover{border-color:var(--red);transform:translateY(-2px);text-decoration:none;}
-    .calc-link-card .ci{font-size:1.4rem;margin-bottom:4px;}
-    .calc-link-card .cn{font-size:.75rem;font-weight:600;}
-    .calc-link-card .cs{font-size:.68rem;color:var(--text-muted);margin-top:2px;}
-
-    /* SIDEBAR */
-    .sidebar{position:sticky;top:88px;}
-    .sw{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:16px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
-    .sw h3{font-size:.875rem;margin-bottom:10px;color:var(--black);border-bottom:1px solid var(--border-light);padding-bottom:8px;font-family:var(--font-head);}
-    .sl{list-style:none;padding:0;}
-    .sl li{border-bottom:1px solid var(--border-light);}
-    .sl li:last-child{border-bottom:none;}
-    .sl a{display:block;padding:7px 0;font-size:.82rem;color:var(--text);transition:color var(--transition),padding-left var(--transition);}
-    .sl a:hover{color:var(--red);padding-left:4px;text-decoration:none;}
-    .sl a.cur{color:var(--red);font-weight:600;}
-
-    /* QUICK REF WIDGET */
-    .quick-ref{background:linear-gradient(135deg,var(--lang-blue),#003d80);color:#fff;border-radius:var(--radius-lg);padding:14px;}
-    .qr-row{display:flex;justify-content:space-between;align-items:center;font-size:.8rem;padding:5px 0;border-bottom:1px solid rgba(255,255,255,.15);}
-    .qr-row:last-child{border-bottom:none;}
-    .qr-score{font-weight:700;font-size:.9rem;}
-    .resource-link{display:flex;align-items:center;gap:8px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--border-light);color:var(--text);}
-    .resource-link:last-child{border-bottom:none;}
-    .resource-link:hover{color:var(--red);text-decoration:none;}
-
-    /* FOOTER */
-    .site-footer{background:var(--black);color:#ccc;padding:44px 0 0;}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-bottom:28px;}
-    .footer-col h4{color:#fff;font-size:.875rem;margin-bottom:12px;font-family:var(--font-head);}
-    .footer-col ul{list-style:none;padding:0;}
-    .footer-col li{margin-bottom:7px;}
-    .footer-col a{font-size:.8rem;color:#aaa;transition:color var(--transition);}
-    .footer-col a:hover{color:#fff;text-decoration:none;}
-    .footer-bottom{border-top:1px solid #333;padding:18px 0;font-size:.78rem;color:#888;}
-    .footer-bottom-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
-    .footer-disclaimer{font-size:.74rem;color:#666;margin-top:8px;line-height:1.5;max-width:700px;}
-
-    @media(max-width:768px){
-      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px;box-shadow:var(--shadow-md);z-index:200;}
-      .nav-links.open{display:flex;}
-      .nav-mobile-toggle{display:block;}
-      .content-wrap{grid-template-columns:1fr;}
-      .sidebar{position:static;}
-      .score-grid{grid-template-columns:repeat(2,1fr);}
-      .clb-result-grid{grid-template-columns:repeat(2,1fr);}
-      .mpb-div{display:none;}
-      .footer-grid{grid-template-columns:1fr 1fr;}
-    }
-    @media(max-width:480px){
-      .footer-grid{grid-template-columns:1fr;}
-      .score-grid{grid-template-columns:1fr 1fr;}
-      .results-actions{flex-direction:column;}
-    }
-    @media print{
-      .site-header,.site-footer,.ad-slot,.sidebar,.cta-banner,.hero{display:none!important;}
-      .content-wrap{grid-template-columns:1fr;}
-    }
-  </style>
-</head>
-<body>
-
-<a href="#ielts-calculator" class="skip-link">Skip to IELTS CRS calculator</a>
-
-<!-- HEADER -->
-<header class="site-header" role="banner">
-  <div class="container">
-    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
-      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#CC0000"/>
-          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
-        </svg>
-        CRS Calculator
-      </a>
-      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-      </button>
-      <ul class="nav-links" role="list">
-        <li><a href="/">CRS Calculator</a></li>
-        <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
-        <li><a href="/cec-crs-calculator">CEC</a></li>
-        <li><a href="/pnp-crs-calculator">PNP</a></li>
-        <li><a href="/crs-cutoff-scores">Cutoff Scores</a></li>
-        <li><a href="/ielts-crs-calculator" class="active" aria-current="page">IELTS to CRS</a></li>
-        <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
-        <li><a href="#ielts-calculator" class="nav-cta">Convert Now →</a></li>
-      </ul>
-    </nav>
-  </div>
-</header>
-
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1"/>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">IELTS to CRS Calculator</span>
-        <meta itemprop="position" content="2"/>
-      </li>
-    </ol>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" aria-label="IELTS to CRS Calculator Hero">
-  <div class="container">
-    <h1>IELTS to CRS Points Calculator 2026 – Express Entry Language Score</h1>
-    <p class="hero-sub">Convert your IELTS, CELPIP, TEF Canada or TCF Canada scores to CLB and CRS language points instantly. See exactly how many points each skill is worth — for both first and second language.</p>
-    <div class="hero-meta">
-      <span>📅 Updated April 2026</span>
-      <span>✅ Official IRCC Conversion Tables</span>
-      <span>🇨🇦 All 4 Tests Supported</span>
-      <span>⚡ Instant Results</span>
-    </div>
-    <div class="hero-badges">
-      <span class="badge">✓ IELTS GT → CLB → CRS</span>
-      <span class="badge">✓ CELPIP Supported</span>
-      <span class="badge">✓ TEF / TCF (French)</span>
-      <span class="badge">✓ Skill Transferability Bonus</span>
-    </div>
-  </div>
-</section>
-
-<!-- MAX POINTS BAR -->
-<div class="max-pts-bar" aria-label="Maximum language CRS points">
-  <div class="container">
-    <div class="mpb-inner">
-      <div class="mpb-stat"><span class="mpb-val">136</span><span class="mpb-label">Max 1st Language Pts (No Spouse)</span></div>
-      <div class="mpb-div" aria-hidden="true"></div>
-      <div class="mpb-stat"><span class="mpb-val">128</span><span class="mpb-label">Max 1st Language Pts (With Spouse)</span></div>
-      <div class="mpb-div" aria-hidden="true"></div>
-      <div class="mpb-stat"><span class="mpb-val">24</span><span class="mpb-label">Max 2nd Language Pts</span></div>
-      <div class="mpb-div" aria-hidden="true"></div>
-      <div class="mpb-stat"><span class="mpb-val">CLB 9+</span><span class="mpb-label">= IELTS GT 7.0 All Skills</span></div>
-      <div class="mpb-div" aria-hidden="true"></div>
-      <div class="mpb-stat"><span class="mpb-val">CLB 10+</span><span class="mpb-label">= IELTS GT 8.0/7.5/8.5/7.5</span></div>
-    </div>
-  </div>
-</div>
-
-<!-- AD -->
-<div class="container">
-  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
-</div>
-
-<!-- MAIN -->
-<main class="main-content" id="main-content">
-  <div class="container">
-    <div class="content-wrap">
-
-      <!-- LEFT COLUMN -->
-      <div>
-
-        <!-- CALCULATOR -->
-        <section class="calc-card" id="ielts-calculator" aria-labelledby="calc-heading">
-          <h2 class="card-title" id="calc-heading">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#CC0000" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
-            IELTS / CELPIP / TEF / TCF → CLB → CRS Points Converter
-          </h2>
-          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:18px;">Select your language test and enter your scores for all four skills. Language points contribute up to <strong>136 CRS points</strong> for your first language — the single largest component of your CRS score.</p>
-
-          <!-- TEST SELECTOR TABS -->
-          <div class="test-tabs" role="tablist" aria-label="Language test selector">
-            <button class="test-tab active" role="tab" aria-selected="true" aria-controls="panel-ielts" onclick="switchTest('ielts',this)">IELTS General</button>
-            <button class="test-tab" role="tab" aria-selected="false" aria-controls="panel-celpip" onclick="switchTest('celpip',this)">CELPIP-General</button>
-            <button class="test-tab" role="tab" aria-selected="false" aria-controls="panel-tef" onclick="switchTest('tef',this)">TEF Canada 🇫🇷</button>
-            <button class="test-tab" role="tab" aria-selected="false" aria-controls="panel-tcf" onclick="switchTest('tcf',this)">TCF Canada 🇫🇷</button>
-          </div>
-
-          <!-- IELTS PANEL -->
-          <div id="panel-ielts" class="test-panel active" role="tabpanel">
-            <div class="callout callout-warn"><span class="callout-icon">⚠️</span><p>Use <strong>IELTS General Training</strong> scores only. IELTS Academic is NOT accepted for Express Entry. Enter your band score for each skill.</p></div>
-            <div class="score-grid">
-              <div class="score-input-box">
-                <div class="score-icon">👂</div>
-                <label for="i_L">Listening</label>
-                <select id="i_L" class="score-select" onchange="updateCLBPreview('ielts')">
-                  <option value="">Score</option>
-                  <option value="4.0">4.0</option><option value="4.5">4.5</option>
-                  <option value="5.0">5.0</option><option value="5.5">5.5</option>
-                  <option value="6.0">6.0</option><option value="6.5">6.5</option>
-                  <option value="7.0">7.0</option><option value="7.5">7.5</option>
-                  <option value="8.0">8.0</option><option value="8.5">8.5</option><option value="9.0">9.0</option>
-                </select>
-                <div class="clb-preview" id="prev_i_L"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">📖</div>
-                <label for="i_R">Reading</label>
-                <select id="i_R" class="score-select" onchange="updateCLBPreview('ielts')">
-                  <option value="">Score</option>
-                  <option value="2.5">2.5</option><option value="3.0">3.0</option><option value="3.5">3.5</option>
-                  <option value="4.0">4.0</option><option value="4.5">4.5</option>
-                  <option value="5.0">5.0</option><option value="5.5">5.5</option>
-                  <option value="6.0">6.0</option><option value="6.5">6.5</option>
-                  <option value="7.0">7.0</option><option value="7.5">7.5</option>
-                  <option value="8.0">8.0</option><option value="8.5">8.5</option><option value="9.0">9.0</option>
-                </select>
-                <div class="clb-preview" id="prev_i_R"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">✍️</div>
-                <label for="i_W">Writing</label>
-                <select id="i_W" class="score-select" onchange="updateCLBPreview('ielts')">
-                  <option value="">Score</option>
-                  <option value="4.0">4.0</option><option value="4.5">4.5</option>
-                  <option value="5.0">5.0</option><option value="5.5">5.5</option>
-                  <option value="6.0">6.0</option><option value="6.5">6.5</option>
-                  <option value="7.0">7.0</option><option value="7.5">7.5</option>
-                  <option value="8.0">8.0</option><option value="8.5">8.5</option><option value="9.0">9.0</option>
-                </select>
-                <div class="clb-preview" id="prev_i_W"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">🗣️</div>
-                <label for="i_S">Speaking</label>
-                <select id="i_S" class="score-select" onchange="updateCLBPreview('ielts')">
-                  <option value="">Score</option>
-                  <option value="4.0">4.0</option><option value="4.5">4.5</option>
-                  <option value="5.0">5.0</option><option value="5.5">5.5</option>
-                  <option value="6.0">6.0</option><option value="6.5">6.5</option>
-                  <option value="7.0">7.0</option><option value="7.5">7.5</option>
-                  <option value="8.0">8.0</option><option value="8.5">8.5</option><option value="9.0">9.0</option>
-                </select>
-                <div class="clb-preview" id="prev_i_S"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- CELPIP PANEL -->
-          <div id="panel-celpip" class="test-panel" role="tabpanel">
-            <div class="callout callout-tip"><span class="callout-icon">✅</span><p>CELPIP scores map <strong>directly 1:1 to CLB levels</strong> — CELPIP 9 = CLB 9. No conversion needed. Only CELPIP-General (not CELPIP-General LS) is accepted for Express Entry.</p></div>
-            <div class="score-grid">
-              <div class="score-input-box">
-                <div class="score-icon">👂</div>
-                <label for="c_L">Listening</label>
-                <select id="c_L" class="score-select" onchange="updateCLBPreview('celpip')">
-                  <option value="">Score</option>
-                  <option value="4">4 (CLB 4)</option><option value="5">5 (CLB 5)</option>
-                  <option value="6">6 (CLB 6)</option><option value="7">7 (CLB 7)</option>
-                  <option value="8">8 (CLB 8)</option><option value="9">9 (CLB 9)</option>
-                  <option value="10">10 (CLB 10)</option><option value="11">11 (CLB 11)</option><option value="12">12 (CLB 12)</option>
-                </select>
-                <div class="clb-preview" id="prev_c_L"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">📖</div>
-                <label for="c_R">Reading</label>
-                <select id="c_R" class="score-select" onchange="updateCLBPreview('celpip')">
-                  <option value="">Score</option>
-                  <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
-                  <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
-                </select>
-                <div class="clb-preview" id="prev_c_R"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">✍️</div>
-                <label for="c_W">Writing</label>
-                <select id="c_W" class="score-select" onchange="updateCLBPreview('celpip')">
-                  <option value="">Score</option>
-                  <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
-                  <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
-                </select>
-                <div class="clb-preview" id="prev_c_W"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">🗣️</div>
-                <label for="c_S">Speaking</label>
-                <select id="c_S" class="score-select" onchange="updateCLBPreview('celpip')">
-                  <option value="">Score</option>
-                  <option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option>
-                  <option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option>
-                </select>
-                <div class="clb-preview" id="prev_c_S"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TEF PANEL -->
-          <div id="panel-tef" class="test-panel" role="tabpanel">
-            <div class="callout callout-info"><span class="callout-icon">🇫🇷</span><p>TEF Canada is used for French-language Express Entry. French speakers can earn a <strong>25–50 additional CRS point bonus</strong>. Enter your TEF score for each skill.</p></div>
-            <div class="score-grid">
-              <div class="score-input-box">
-                <div class="score-icon">👂</div>
-                <label for="t_L">Listening</label>
-                <select id="t_L" class="score-select" onchange="updateCLBPreview('tef')">
-                  <option value="">Score</option>
-                  <option value="L4">145–180 (CLB 4)</option><option value="L5">181–216 (CLB 5)</option>
-                  <option value="L6">217–248 (CLB 6)</option><option value="L7">249–279 (CLB 7)</option>
-                  <option value="L8">280–297 (CLB 8)</option><option value="L9">298–315 (CLB 9)</option>
-                  <option value="L10">316–360 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_t_L"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">📖</div>
-                <label for="t_R">Reading</label>
-                <select id="t_R" class="score-select" onchange="updateCLBPreview('tef')">
-                  <option value="">Score</option>
-                  <option value="R4">121–150 (CLB 4)</option><option value="R5">151–180 (CLB 5)</option>
-                  <option value="R6">181–206 (CLB 6)</option><option value="R7">207–232 (CLB 7)</option>
-                  <option value="R8">233–247 (CLB 8)</option><option value="R9">248–262 (CLB 9)</option>
-                  <option value="R10">263–300 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_t_R"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">✍️</div>
-                <label for="t_W">Writing</label>
-                <select id="t_W" class="score-select" onchange="updateCLBPreview('tef')">
-                  <option value="">Score</option>
-                  <option value="W4">181–225 (CLB 4)</option><option value="W5">226–270 (CLB 5)</option>
-                  <option value="W6">271–309 (CLB 6)</option><option value="W7">310–348 (CLB 7)</option>
-                  <option value="W8">349–370 (CLB 8)</option><option value="W9">371–392 (CLB 9)</option>
-                  <option value="W10">393–450 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_t_W"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">🗣️</div>
-                <label for="t_S">Speaking</label>
-                <select id="t_S" class="score-select" onchange="updateCLBPreview('tef')">
-                  <option value="">Score</option>
-                  <option value="S4">181–225 (CLB 4)</option><option value="S5">226–270 (CLB 5)</option>
-                  <option value="S6">271–309 (CLB 6)</option><option value="S7">310–348 (CLB 7)</option>
-                  <option value="S8">349–370 (CLB 8)</option><option value="S9">371–392 (CLB 9)</option>
-                  <option value="S10">393–450 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_t_S"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- TCF PANEL -->
-          <div id="panel-tcf" class="test-panel" role="tabpanel">
-            <div class="callout callout-info"><span class="callout-icon">🇫🇷</span><p>TCF Canada is an alternative French language test accepted by IRCC. Enter your TCF score for each section below.</p></div>
-            <div class="score-grid">
-              <div class="score-input-box">
-                <div class="score-icon">👂</div>
-                <label for="tc_L">Listening</label>
-                <select id="tc_L" class="score-select" onchange="updateCLBPreview('tcf')">
-                  <option value="">Score</option>
-                  <option value="L4">331–368 (CLB 4)</option><option value="L5">369–397 (CLB 5)</option>
-                  <option value="L6">398–457 (CLB 6)</option><option value="L7">458–502 (CLB 7)</option>
-                  <option value="L8">503–522 (CLB 8)</option><option value="L9">523–548 (CLB 9)</option>
-                  <option value="L10">549–699 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_tc_L"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">📖</div>
-                <label for="tc_R">Reading</label>
-                <select id="tc_R" class="score-select" onchange="updateCLBPreview('tcf')">
-                  <option value="">Score</option>
-                  <option value="R4">342–374 (CLB 4)</option><option value="R5">375–405 (CLB 5)</option>
-                  <option value="R6">406–452 (CLB 6)</option><option value="R7">453–498 (CLB 7)</option>
-                  <option value="R8">499–523 (CLB 8)</option><option value="R9">524–548 (CLB 9)</option>
-                  <option value="R10">549–699 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_tc_R"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">✍️</div>
-                <label for="tc_W">Writing</label>
-                <select id="tc_W" class="score-select" onchange="updateCLBPreview('tcf')">
-                  <option value="">Score</option>
-                  <option value="W4">4–5 (CLB 4)</option><option value="W5">6–9 (CLB 5)</option>
-                  <option value="W6">10–11 (CLB 6)</option><option value="W7">12–13 (CLB 7)</option>
-                  <option value="W8">14–15 (CLB 8)</option><option value="W9">16–19 (CLB 9)</option>
-                  <option value="W10">20 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_tc_W"></div>
-              </div>
-              <div class="score-input-box">
-                <div class="score-icon">🗣️</div>
-                <label for="tc_S">Speaking</label>
-                <select id="tc_S" class="score-select" onchange="updateCLBPreview('tcf')">
-                  <option value="">Score</option>
-                  <option value="S4">4–5 (CLB 4)</option><option value="S5">6–9 (CLB 5)</option>
-                  <option value="S6">10–11 (CLB 6)</option><option value="S7">12–13 (CLB 7)</option>
-                  <option value="S8">14–15 (CLB 8)</option><option value="S9">16–19 (CLB 9)</option>
-                  <option value="S10">20 (CLB 10+)</option>
-                </select>
-                <div class="clb-preview" id="prev_tc_S"></div>
-              </div>
-            </div>
-          </div>
-
-          <!-- MARITAL STATUS + LANGUAGE TYPE -->
-          <div class="marital-row">
-            <label>Marital status:</label>
-            <div class="radio-group">
-              <label><input type="radio" name="calc_marital" value="single" checked> Single / No accompanying spouse</label>
-              <label><input type="radio" name="calc_marital" value="married"> Married / Common-law (spouse accompanying)</label>
-            </div>
-          </div>
-          <div class="marital-row">
-            <label>This test is for:</label>
-            <div class="radio-group">
-              <label><input type="radio" name="lang_type" value="first" checked> First language</label>
-              <label><input type="radio" name="lang_type" value="second"> Second language</label>
-            </div>
-          </div>
-
-          <button class="btn-calc" onclick="calculateLangCRS()">📊 Convert to CLB & Calculate CRS Points →</button>
-        </section>
-
-        <!-- RESULTS -->
-        <section id="results" aria-live="polite" aria-atomic="true">
-          <div class="results-wrap">
-            <div class="result-header">
-              <div class="result-title" id="resultTitle">First Language CRS Points (No Spouse)</div>
-              <div class="result-pts" id="resultPts">0</div>
-              <div class="result-max" id="resultMax">out of 136 maximum</div>
-            </div>
-            <div class="score-bar-bg"><div class="score-bar-fill" id="scoreBarFill" style="width:0%"></div></div>
-
-            <h3 style="font-size:.9rem;margin-bottom:10px;">CLB Levels by Skill</h3>
-            <div class="clb-result-grid" id="clbResultGrid"></div>
-
-            <h3 style="font-size:.9rem;margin:16px 0 8px;">CRS Points Breakdown</h3>
-            <div class="pts-breakdown">
-              <table>
-                <thead><tr><th>Skill</th><th>CLB Level</th><th>CRS Points</th></tr></thead>
-                <tbody id="ptsBreakdownBody"></tbody>
-              </table>
-            </div>
-
-            <div id="eligNotice" style="margin-bottom:12px;"></div>
-
-            <div class="results-actions">
-              <button class="btn-action primary" onclick="window.print()">🖨 Print / Save PDF</button>
-              <button class="btn-action" onclick="copyResult()">📋 Copy Result</button>
-              <button class="btn-action" onclick="shareWA()">💬 WhatsApp</button>
-            </div>
-
-            <div class="tip-banner">
-              <span class="ti">🎯</span>
-              <div>
-                <h4>Want to see your full CRS score?</h4>
-                <p>Your language score is just one component. Calculate your complete CRS including age, education, work experience and more.</p>
-                <a href="/">Calculate Full CRS Score →</a>
-              </div>
-            </div>
-          </div>
-          <div class="ad-slot ad-mid" aria-label="Advertisement">Advertisement</div>
-        </section>
-
-        <!-- IELTS TO CLB TABLE -->
-        <section class="info-card" aria-labelledby="ielts-clb-table">
-          <h2 id="ielts-clb-table">IELTS General Training to CLB Conversion Table 2026</h2>
-          <p>This is the official <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility/language-results.html" target="_blank" rel="noopener noreferrer">IRCC IELTS to CLB conversion table</a> used for all Express Entry applications. Each skill is converted independently.</p>
-          <div style="overflow-x:auto;">
-            <table class="conv-table" aria-label="IELTS General Training to CLB conversion">
-              <thead>
-                <tr><th>CLB Level</th><th>Listening</th><th>Reading</th><th>Writing</th><th>Speaking</th><th>CRS Pts (No Spouse)</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><span class="clb-badge clb-b10">CLB 10+</span></td><td>8.5–9.0</td><td>8.0–9.0</td><td>7.5–9.0</td><td>7.5–9.0</td><td class="pts-max">34 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b9">CLB 9</span></td><td>8.0</td><td>7.0</td><td>7.0</td><td>7.0</td><td class="pts-cell">31 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b7">CLB 8</span></td><td>7.5</td><td>6.5</td><td>6.5</td><td>6.5</td><td class="pts-cell">23 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b7">CLB 7</span></td><td>6.0</td><td>6.0</td><td>6.0</td><td>6.0</td><td class="pts-cell">17 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b5">CLB 6</span></td><td>5.5</td><td>5.0</td><td>5.5</td><td>5.5</td><td class="pts-cell">9 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b5">CLB 5</span></td><td>5.0</td><td>4.0</td><td>5.0</td><td>5.0</td><td class="pts-cell">6 pts/skill</td></tr>
-                <tr><td><span class="clb-badge clb-b4">CLB 4</span></td><td>4.5</td><td>3.0</td><td>4.0</td><td>4.0</td><td class="pts-cell">6 pts/skill</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="font-size:.75rem;color:var(--text-muted);margin-top:8px;">Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility/language-results.html" target="_blank" rel="noopener noreferrer">IRCC Language Results — Canada.ca</a></p>
-
-          <div class="callout callout-warn" style="margin-top:12px;">
-            <span class="callout-icon">⚠️</span>
-            <p><strong>Important:</strong> CRS points are calculated per skill, not on your overall IELTS band. Your weakest skill determines your minimum CLB for eligibility, but higher individual skills still earn more CRS points.</p>
-          </div>
-        </section>
-
-        <!-- AD IN CONTENT -->
-        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
-
-        <!-- CRS POINTS TABLE -->
-        <section class="info-card" aria-labelledby="crs-pts-table">
-          <h2 id="crs-pts-table">CRS Language Points by CLB Level 2026</h2>
-          <p>The table below shows the official IRCC CRS points assigned to each CLB level. Language is the <strong>single biggest contributor to your CRS score</strong> — up to 136 points for first language without a spouse.</p>
-          <div style="overflow-x:auto;">
-            <table class="crs-pts-table" aria-label="CRS language points by CLB level">
-              <thead>
-                <tr><th>CLB Level</th><th>1st Lang / Skill (No Spouse)</th><th>1st Lang / Skill (Spouse)</th><th>2nd Lang / Skill</th><th>Max 4 Skills (No Sp.)</th></tr>
-              </thead>
-              <tbody>
-                <tr><td><span class="clb-badge clb-b10">CLB 10+</span></td><td class="pts-max">34</td><td>32</td><td>6</td><td class="pts-max">136</td></tr>
-                <tr><td><span class="clb-badge clb-b9">CLB 9</span></td><td class="pts-cell">31</td><td>29</td><td>6</td><td class="pts-cell">124</td></tr>
-                <tr><td><span class="clb-badge clb-b7">CLB 8</span></td><td class="pts-cell">23</td><td>22</td><td>3</td><td class="pts-cell">92</td></tr>
-                <tr><td><span class="clb-badge clb-b7">CLB 7</span></td><td class="pts-cell">17</td><td>16</td><td>—</td><td class="pts-cell">68</td></tr>
-                <tr><td><span class="clb-badge clb-b5">CLB 6</span></td><td class="pts-cell">9</td><td>8</td><td>—</td><td class="pts-cell">36</td></tr>
-                <tr><td><span class="clb-badge clb-b5">CLB 5</span></td><td class="pts-cell">6</td><td>6</td><td>—</td><td class="pts-cell">24</td></tr>
-                <tr><td><span class="clb-badge clb-b4">CLB 4 or less</span></td><td class="pts-cell">6</td><td>6</td><td>—</td><td class="pts-cell">24</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="font-size:.75rem;color:var(--text-muted);margin-top:8px;">Second language points require minimum CLB 5 in each skill to earn any points. Maximum second language = 24 pts (CLB 9+ in all skills).</p>
-
-          <!-- SCORE IMPACT GRID -->
-          <h3 style="margin-top:18px;">CRS Points by IELTS Band (All 4 Skills Equal)</h3>
-          <p style="font-size:.9rem;">Here's how your total CRS language points change based on your IELTS GT band score (assuming all 4 skills are equal):</p>
-          <div class="impact-grid">
-            <div class="impact-box"><div class="impact-score">IELTS 6.0 = CLB 7</div><div class="impact-val">68</div><div class="impact-label">CRS pts (no spouse)</div></div>
-            <div class="impact-box"><div class="impact-score">IELTS 6.5 = CLB 8</div><div class="impact-val">92</div><div class="impact-label">CRS pts (no spouse)</div></div>
-            <div class="impact-box"><div class="impact-score">IELTS 7.0 = CLB 9</div><div class="impact-val">124</div><div class="impact-label">CRS pts (no spouse)</div></div>
-            <div class="impact-box best"><div class="impact-score">IELTS 8.0 = CLB 10</div><div class="impact-val">136</div><div class="impact-label">Max CRS pts ✓</div></div>
-          </div>
-
-          <div class="callout callout-tip" style="margin-top:16px;">
-            <span class="callout-icon">💡</span>
-            <p><strong>Key insight:</strong> Improving from IELTS 6.0 to 7.0 (CLB 7→9) adds <strong>56 CRS points</strong> — enough to cross the typical Express Entry cutoff. This is often the most cost-effective way to boost your CRS score. See our <a href="/how-to-improve-crs-score">CRS improvement guide</a> for all strategies.</p>
-          </div>
-        </section>
-
-        <!-- CELPIP TABLE -->
-        <section class="info-card" aria-labelledby="celpip-table">
-          <h2 id="celpip-table">CELPIP to CLB to CRS Points Conversion</h2>
-          <p>CELPIP-General scores map directly 1:1 to CLB levels, making conversion straightforward. <a href="https://www.celpip.ca/" target="_blank" rel="noopener noreferrer">CELPIP</a> is available only in Canada and is entirely computer-based.</p>
-          <div style="overflow-x:auto;">
-            <table class="conv-table" aria-label="CELPIP to CLB conversion">
-              <thead><tr><th>CELPIP Score</th><th>= CLB Level</th><th>CRS Pts / Skill (No Spouse)</th><th>Min Required For</th></tr></thead>
-              <tbody>
-                <tr><td>10, 11, 12</td><td><span class="clb-badge clb-b10">CLB 10+</span></td><td class="pts-max">34</td><td>Maximum points</td></tr>
-                <tr><td>9</td><td><span class="clb-badge clb-b9">CLB 9</span></td><td class="pts-cell">31</td><td>Skill transferability bonus</td></tr>
-                <tr><td>8</td><td><span class="clb-badge clb-b7">CLB 8</span></td><td class="pts-cell">23</td><td>—</td></tr>
-                <tr><td>7</td><td><span class="clb-badge clb-b7">CLB 7</span></td><td class="pts-cell">17</td><td>FSW/CEC min (TEER 0/1)</td></tr>
-                <tr><td>6</td><td><span class="clb-badge clb-b5">CLB 6</span></td><td class="pts-cell">9</td><td>—</td></tr>
-                <tr><td>5</td><td><span class="clb-badge clb-b5">CLB 5</span></td><td class="pts-cell">6</td><td>CEC min (TEER 2/3)</td></tr>
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <!-- SKILL TRANSFERABILITY -->
-        <section class="info-card" aria-labelledby="skill-trans">
-          <h2 id="skill-trans">How Language Affects Skill Transferability Bonus Points</h2>
-          <p>CLB 9+ in your first language doesn't just add language points — it also <strong>unlocks additional Skill Transferability bonus points</strong> of up to 50 extra CRS points:</p>
-          <ul>
-            <li><strong>CLB 9+ + post-secondary degree:</strong> up to 25 additional CRS points</li>
-            <li><strong>CLB 9+ + 3+ years Canadian work experience:</strong> up to 25 additional CRS points</li>
-            <li><strong>CLB 9+ + 3+ years foreign work experience:</strong> up to 25 additional CRS points</li>
-          </ul>
-          <div class="callout callout-info" style="margin-top:10px;">
-            <span class="callout-icon">📊</span>
-            <p>Reaching CLB 9 (IELTS 7.0) could add up to <strong>50 + 56 = 106 total CRS points</strong> when counting both the direct language increase and the newly unlocked skill transferability bonuses. Calculate your <a href="/">full CRS score</a> to see your complete picture.</p>
-          </div>
-        </section>
-
-        <!-- CTA BANNER -->
-        <div class="cta-banner">
-          <h3>🍁 Want your full CRS score, not just language points?</h3>
-          <p>Add your age, education, work experience, and other factors to get your complete Express Entry CRS score and compare it against the latest draw cutoffs.</p>
-          <a href="/" class="cta-btn">Calculate My Full CRS Score →</a>
-        </div>
-
-        <!-- FAQ -->
-        <section class="info-card" aria-labelledby="faq-heading">
-          <h2 id="faq-heading">IELTS to CRS — Frequently Asked Questions</h2>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How many CRS points is IELTS 7 (all bands)?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">IELTS GT 7.0 in all four skills converts to: Listening 7.0 = CLB 9 (31 pts), Reading 7.0 = CLB 9 (31 pts), Writing 7.0 = CLB 9 (31 pts), Speaking 7.0 = CLB 9 (31 pts). Total: <strong>124 CRS language points</strong> (first language, no spouse). If you have a spouse, it's 116 pts (29 pts × 4).</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How many CRS points is IELTS 8.5 in Listening?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">IELTS GT Listening 8.5 = <strong>CLB 10</strong> = <strong>34 CRS points</strong> for that skill (first language, no spouse). This is the maximum possible for any single skill. Note: Listening 8.5 is CLB 10, but Listening 8.0 is also CLB 10 since the threshold is 8.5 only for CLB 10+. Listening 7.5 = CLB 8 = 23 pts. Listening 8.0 = CLB 10 = 34 pts.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is the minimum IELTS score for Express Entry?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">The minimum IELTS GT scores for Express Entry programs are: <br/>
-            • <strong>FSW (Federal Skilled Worker):</strong> CLB 7 = L:6.0, R:6.0, W:6.0, S:6.0<br/>
-            • <strong>CEC (TEER 0/1):</strong> CLB 7 = L:6.0, R:6.0, W:6.0, S:6.0<br/>
-            • <strong>CEC (TEER 2/3):</strong> CLB 5 = L:5.0, R:4.0, W:5.0, S:5.0<br/>
-            • <strong>FST (Federal Skilled Trades):</strong> CLB 5 reading/writing, CLB 4 listening/speaking<br/>
-            These are minimums to enter the pool, but competitive scores are CLB 9+ (IELTS 7.0) for most draws.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              Is IELTS Academic accepted for Express Entry?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">No. IRCC only accepts <strong>IELTS General Training</strong> for Express Entry immigration applications. IELTS Academic is not accepted. This is one of the most common mistakes applicants make. If you've already taken IELTS Academic, you must retake the General Training version for your Express Entry application. Visit <a href="https://www.ielts.org/" target="_blank" rel="noopener noreferrer">IELTS.org</a> to register for IELTS GT.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How much does improving IELTS improve my CRS score?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">
-              <strong>CLB 7 → CLB 9</strong> (IELTS 6.0 → 7.0 all skills): +56 CRS points (68→124)<br/>
-              <strong>CLB 8 → CLB 9</strong> (IELTS 6.5 → 7.0): +32 CRS points (92→124)<br/>
-              <strong>CLB 9 → CLB 10</strong> (IELTS 7.0 → 8.0): +12 CRS points (124→136)<br/>
-              Plus, CLB 9+ unlocks Skill Transferability bonuses worth up to 50 additional CRS points. The jump from CLB 7 to CLB 9 is the most impactful single improvement you can make to your CRS score.
-            </div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How do French language scores add CRS points?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">French language proficiency adds CRS points in two ways: (1) <strong>Second language points:</strong> If French is your second language (English being first), scoring CLB 9+ in French earns 6 pts per skill × 4 = 24 pts. (2) <strong>French proficiency bonus:</strong> Scoring NCLC 7+ in all French skills AND CLB 5+ in English earns a <strong>+25 CRS point bonus</strong>. If you also have strong English (CLB 5+), this becomes a <strong>+50 CRS point bonus</strong>. This bonus makes French speakers competitive even with lower overall CRS scores. See IRCC's <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/submit-profile/federal-skilled-workers/six-selection-factors-federal-skilled-workers.html" target="_blank" rel="noopener noreferrer">Express Entry French proficiency page</a>.</div>
-          </div>
-        </section>
-
-        <!-- RELATED CALCULATORS -->
-        <section class="info-card" aria-labelledby="related-tools">
-          <h2 id="related-tools">Related Canada Immigration Tools</h2>
-          <div class="calc-link-grid">
-            <a href="/" class="calc-link-card"><div class="ci">🧮</div><div class="cn">CRS Calculator</div><div class="cs">Full score</div></a>
-            <a href="/express-entry-crs-calculator" class="calc-link-card"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">All programs</div></a>
-            <a href="/cec-crs-calculator" class="calc-link-card"><div class="ci">💼</div><div class="cn">CEC Calculator</div><div class="cs">Canadian exp.</div></a>
-            <a href="/fsw-crs-calculator" class="calc-link-card"><div class="ci">🌐</div><div class="cn">FSW Calculator</div><div class="cs">Skilled workers</div></a>
-            <a href="/pnp-crs-calculator" class="calc-link-card"><div class="ci">🏛️</div><div class="cn">PNP Calculator</div><div class="cs">+600 pts</div></a>
-            <a href="/crs-cutoff-scores" class="calc-link-card"><div class="ci">📊</div><div class="cn">Cutoff Scores</div><div class="cs">Draw history</div></a>
-            <a href="/how-to-improve-crs-score" class="calc-link-card"><div class="ci">📈</div><div class="cn">Improve CRS</div><div class="cs">11 strategies</div></a>
-            <a href="/stem-crs-calculator" class="calc-link-card"><div class="ci">💻</div><div class="cn">STEM Workers</div><div class="cs">Tech category</div></a>
-          </div>
-        </section>
-
-      </div><!-- end left -->
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar" aria-label="Sidebar">
-
-        <div class="sw" style="padding:0;border:none;box-shadow:none;">
-          <div class="quick-ref">
-            <div style="font-size:.78rem;font-weight:700;margin-bottom:10px;">⚡ IELTS GT Quick Reference</div>
-            <div class="qr-row"><span>IELTS 6.0 all = CLB 7</span><span class="qr-score">68 pts</span></div>
-            <div class="qr-row"><span>IELTS 6.5 all = CLB 8</span><span class="qr-score">92 pts</span></div>
-            <div class="qr-row"><span>IELTS 7.0 all = CLB 9</span><span class="qr-score">124 pts</span></div>
-            <div class="qr-row"><span>IELTS 8.0+ = CLB 10</span><span class="qr-score" style="color:#6dd49e;">136 pts ✓</span></div>
-          </div>
-        </div>
-
-        <div class="sw" style="padding:0;border:none;box-shadow:none;margin-top:12px;">
-          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
-        </div>
-
-        <div class="sw">
-          <h3>Language Test Minimums</h3>
-          <ul style="list-style:none;padding:0;font-size:.82rem;">
-            <li style="padding:5px 0;border-bottom:1px solid var(--border-light);"><strong>FSW:</strong> CLB 7 (IELTS 6.0)</li>
-            <li style="padding:5px 0;border-bottom:1px solid var(--border-light);"><strong>CEC TEER 0/1:</strong> CLB 7</li>
-            <li style="padding:5px 0;border-bottom:1px solid var(--border-light);"><strong>CEC TEER 2/3:</strong> CLB 5 (IELTS 5.0)</li>
-            <li style="padding:5px 0;border-bottom:1px solid var(--border-light);"><strong>FST Reading/Writing:</strong> CLB 5</li>
-            <li style="padding:5px 0;border-bottom:1px solid var(--border-light);"><strong>FST Listen/Speak:</strong> CLB 4</li>
-            <li style="padding:5px 0;"><strong>French bonus:</strong> NCLC 7+ all skills</li>
-          </ul>
-        </div>
-
-        <div class="sw">
-          <h3>All Calculators</h3>
-          <ul class="sl" role="list">
-            <li><a href="/">🧮 CRS Calculator</a></li>
-            <li><a href="/express-entry-crs-calculator">🇨🇦 Express Entry</a></li>
-            <li><a href="/cec-crs-calculator">💼 CEC Calculator</a></li>
-            <li><a href="/fsw-crs-calculator">🌐 FSW Calculator</a></li>
-            <li><a href="/pnp-crs-calculator">🏛️ PNP Calculator</a></li>
-            <li><a href="/ielts-crs-calculator" class="cur">📝 IELTS to CRS ✓</a></li>
-            <li><a href="/crs-cutoff-scores">📊 Cutoff Scores</a></li>
-            <li><a href="/how-to-improve-crs-score">📈 Improve CRS</a></li>
-          </ul>
-        </div>
-
-        <div class="sw">
-          <h3>Official Links</h3>
-          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/study-canada/work/after-graduation/eligibility/language-results.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            IRCC Language Results Page
-          </a>
-          <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            Official CRS Tool
-          </a>
-          <a href="https://www.ielts.org/for-test-takers/ielts-for-migration/ielts-for-migration-to-canada" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            IELTS for Canada Migration
-          </a>
-          <a href="https://www.celpip.ca/" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            CELPIP Official Site
-          </a>
-          <a href="https://www.lefrancaisdesaffaires.fr/en/tests-certifications/tef-canada/" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            TEF Canada Official
-          </a>
-        </div>
-
-      </aside>
-    </div>
-  </div>
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>CRS Calculators</h4>
-        <ul>
-          <li><a href="/">CRS Score Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
-          <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Provincial PNP</h4>
-        <ul>
-          <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
-          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
-          <li><a href="/bc-crs-calculator">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator">Saskatchewan</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Resources</h4>
-        <ul>
-          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score">Improve CRS Score</a></li>
-          <li><a href="/what-is-crs-score">What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated">How CRS is Calculated</a></li>
-          <li><a href="/blog">Immigration Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Language Tests</h4>
-        <ul>
-          <li><a href="https://www.ielts.org/" target="_blank" rel="noopener noreferrer">IELTS ↗</a></li>
-          <li><a href="https://www.celpip.ca/" target="_blank" rel="noopener noreferrer">CELPIP ↗</a></li>
-          <li><a href="https://www.lefrancaisdesaffaires.fr/en/tests-certifications/tef-canada/" target="_blank" rel="noopener noreferrer">TEF Canada ↗</a></li>
-          <li><a href="https://www.france-education-international.fr/en/node/7" target="_blank" rel="noopener noreferrer">TCF Canada ↗</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
-        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
-      </div>
-      <p class="footer-disclaimer">This tool uses the official IRCC IELTS to CLB conversion table and CRS points grid. Results are for information purposes only. Always verify on <a href="https://www.canada.ca" target="_blank" rel="noopener noreferrer" style="color:#888;">Canada.ca</a>. Not legal immigration advice.</p>
-    </div>
-  </div>
-</footer>
-
-<script>
-  // ─── IELTS → CLB CONVERSION ───────────────────────────────────────────────
-  const ieltsCLB = {
-    L:[[4.5,4],[5.0,5],[5.5,6],[6.0,7],[7.5,8],[8.0,9],[8.5,10]],
-    R:[[3.0,4],[4.0,5],[5.0,6],[6.0,7],[6.5,8],[7.0,9],[8.0,10]],
-    W:[[4.0,4],[5.0,5],[5.5,6],[6.0,7],[6.5,8],[7.0,9],[7.5,10]],
-    S:[[4.0,4],[5.0,5],[5.5,6],[6.0,7],[6.5,8],[7.0,9],[7.5,10]]
-  };
-  function ieltsToClb(skill, score) {
-    const tbl = ieltsCLB[skill];
-    let clb = 4;
-    for (let [min, lvl] of tbl) { if (parseFloat(score) >= min) clb = lvl; }
-    return clb;
-  }
-
-  // TEF/TCF select value → CLB number
-  function selectToClb(val) {
-    if (!val) return 0;
-    const n = parseInt(val.replace(/[A-Z]/g, ''));
-    return n;
-  }
-
-  // ─── CRS LANGUAGE POINTS ─────────────────────────────────────────────────
-  // Points per CLB per skill (first
+</body>
+</html>
