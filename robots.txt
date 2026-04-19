@@ -1,5 +1,45 @@
+# ================================================
+# robots.txt — crsscorecalculator.vercel.app
+# Last updated: 2026-04-20
+# ================================================
+
 User-agent: *
+
+# Allow all crawlable content
 Allow: /
-Sitemap: https://crsscorecalculator.vercel.app/sitemap.xml
+
+# Block admin, API, and internal paths (common Vercel/Next.js patterns)
+Disallow: /api/
+Disallow: /_next/
+Disallow: /cdn-cgi/
 Disallow: /admin/
-Disallow: /drafts/
+Disallow: /.vercel/
+
+# Block duplicate/parameter-based URLs that could cause crawl waste
+Disallow: /*?*utm_
+Disallow: /*?*ref=
+Disallow: /*?*source=
+Disallow: /*?*fbclid=
+Disallow: /*?*gclid=
+
+# Block non-canonical query parameters
+Disallow: /*?*sort=
+Disallow: /*?*page=
+Disallow: /*?*filter=
+
+# ------------------------------------------------
+# Google AdsBot (AdSense crawler) — allow
+# ------------------------------------------------
+User-agent: AdsBot-Google
+Allow: /
+
+# ------------------------------------------------
+# Google Image Bot — allow
+# ------------------------------------------------
+User-agent: Googlebot-Image
+Allow: /
+
+# ------------------------------------------------
+# Sitemap location
+# ------------------------------------------------
+Sitemap: https://crsscorecalculator.vercel.app/sitemap.xml
