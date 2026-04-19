@@ -3,30 +3,30 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool</title>
-  <meta name="description" content="Free Saskatchewan CRS calculator 2026. Estimate your SINP Express Entry Stream CRS score with age, education, language CLB, and work experience points. Instant results, mobile-friendly." />
+  <title>Nova Scotia CRS Calculator 2026 – NSNP Express Entry Stream Points Tool</title>
+  <meta name="description" content="Free Nova Scotia CRS calculator 2026. Estimate your NSNP Express Entry Stream CRS score with age, education, language CLB, and work experience points. Mobile-friendly, instant results." />
   <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
   <meta name="theme-color" content="#c40000" />
   <meta name="author" content="CRS Calculator" />
   <meta name="format-detection" content="telephone=no" />
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" />
 
-  <!-- Favicon -->
+  <!-- Favicon SVG -->
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c40000'/%3E%3Cpath d='M18 20h28v6H18zm0 9h20v6H18zm0 9h28v6H18z' fill='white'/%3E%3C/svg%3E" />
   <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23c40000'/%3E%3Cpath d='M42 52h96v18H42zm0 30h68v18H42zm0 30h96v18H42z' fill='white'/%3E%3C/svg%3E" />
 
   <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool" />
-  <meta property="og:description" content="Estimate your Saskatchewan SINP Express Entry Stream CRS score. Free, instant, mobile-friendly." />
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" />
+  <meta property="og:title" content="Nova Scotia CRS Calculator 2026 – NSNP Express Entry Stream Points Tool" />
+  <meta property="og:description" content="Estimate your Nova Scotia PNP Express Entry Stream CRS score free. Updated 2026, instant and mobile-friendly." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" />
   <meta property="og:site_name" content="CRS Calculator" />
   <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
 
-  <!-- Twitter -->
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool" />
-  <meta name="twitter:description" content="Free SINP CRS calculator updated for Canada Express Entry 2026." />
+  <meta name="twitter:title" content="Nova Scotia CRS Calculator 2026 – NSNP Express Entry Stream Points Tool" />
+  <meta name="twitter:description" content="Free NSNP CRS calculator updated for Canada Express Entry 2026." />
   <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
 
   <!-- AdSense Auto Ads — replace publisher ID -->
@@ -36,6 +36,7 @@
     :root {
       --primary: #c40000;
       --primary-dark: #a80000;
+      --primary-soft: #fff0f0;
       --text: #1f2937;
       --muted: #6b7280;
       --border: #e5e7eb;
@@ -47,14 +48,22 @@
     }
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
     a { color: var(--primary); text-decoration: none; }
     a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
     .container { max-width: var(--max); margin: auto; padding: 0 14px; }
+
     .skip-link { position: absolute; left: -9999px; top: auto; }
     .skip-link:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 1000; border-radius: 8px; }
 
-    /* Header */
+    /* ── Header ── */
     .topbar { background: #fff; border-bottom: 1px solid #efefef; position: sticky; top: 0; z-index: 999; }
     .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; }
     .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #111; white-space: nowrap; }
@@ -64,7 +73,7 @@
     .nav-cta { background: var(--primary); color: #fff !important; padding: 8px 12px; border-radius: 8px; font-weight: 700; }
     .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
 
-    /* Hero */
+    /* ── Hero ── */
     .hero { background: linear-gradient(180deg,#c40000 0%,#b20000 100%); color: #fff; padding: 34px 0 28px; text-align: center; }
     .hero h1 { margin: 0 auto 8px; font-size: clamp(26px,4vw,42px); line-height: 1.15; max-width: 900px; font-weight: 800; }
     .hero p { margin: 0 auto 16px; max-width: 860px; color: #ffeaea; font-size: 15px; }
@@ -77,7 +86,7 @@
     .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
     .btn-outline:hover { background: rgba(255,255,255,.08); }
 
-    /* Layout */
+    /* ── Layout ── */
     main { padding: 18px 0 28px; }
     .grid { display: grid; grid-template-columns: minmax(0,1.65fr) 320px; gap: 18px; align-items: start; }
     .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
@@ -85,31 +94,35 @@
     .card-body { padding: 16px; }
 
     .section-label { background: #fff0f0; border: 1px solid #ffd4d4; color: #8b0000; font-size: 13px; font-weight: 700; padding: 9px 10px; border-radius: 8px; margin: 0 0 14px; }
+
     .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
     .field { display: flex; flex-direction: column; gap: 6px; }
     .field label { font-size: 13px; font-weight: 700; color: #374151; }
     .field small { color: var(--muted); font-size: 12px; }
 
-    select { width: 100%; min-height: 44px; border: 1px solid #d1d5db; border-radius: 10px; background: #fff; padding: 10px 12px; font-size: 14px; color: #111827; -webkit-appearance: none; }
-    select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(196,0,0,.12); }
+    select, input[type="number"] {
+      width: 100%; min-height: 44px; border: 1px solid #d1d5db; border-radius: 10px;
+      background: #fff; padding: 10px 12px; font-size: 14px; color: #111827; -webkit-appearance: none;
+    }
+    select:focus, input[type="number"]:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(196,0,0,.12); }
 
     .actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
-    .btn-red { background: var(--primary); color: #fff; flex: 1; min-height: 46px; }
-    .btn-red:hover { background: var(--primary-dark); }
-    .btn-light { background: #fff; color: #111; border: 1px solid var(--border); padding: 12px 18px; }
+    .btn-red { background: var(--primary); color: #fff; width: 100%; min-height: 46px; border-radius: 10px; font-size: 14px; font-weight: 700; }
+    .btn-red:hover { background: var(--primary-dark); text-decoration: none; }
+    .btn-light { background: #fff; color: #111; border: 1px solid var(--border); border-radius: 10px; padding: 12px 18px; font-size: 14px; font-weight: 700; }
 
-    /* Score card */
+    /* ── Score Card ── */
     .result-box { background: linear-gradient(180deg,#c40000 0%,#ae0000 100%); color: #fff; padding: 16px; border-radius: 12px; text-align: center; box-shadow: var(--shadow); }
     .score-big { font-size: 52px; line-height: 1; font-weight: 800; margin: 4px 0 8px; }
     .score-sub { font-size: 13px; color: #ffe4e4; }
 
-    /* Summary grid */
+    /* ── Summary Grid ── */
     .summary-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px; }
     .mini { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fff; }
     .mini .num { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
     .mini .lbl { font-size: 12px; color: var(--muted); }
 
-    /* Table */
+    /* ── Table ── */
     .table-wrap { overflow: auto; border: 1px solid var(--border); border-radius: 12px; }
     table { width: 100%; border-collapse: collapse; background: #fff; }
     th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); font-size: 14px; text-align: left; }
@@ -118,14 +131,14 @@
     .green { color: #15803d; font-weight: 700; }
     .orange { color: #b45309; font-weight: 700; }
 
-    /* Steps */
+    /* ── Steps ── */
     .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
     .step { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: #fff; }
     .step-no { width: 28px; height: 28px; border-radius: 999px; background: var(--primary); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13px; margin-bottom: 10px; }
     .step strong { display: block; margin-bottom: 6px; font-size: 14px; }
     .step p { font-size: 13px; color: var(--muted); margin: 0; }
 
-    /* FAQ */
+    /* ── FAQ ── */
     .faq details { border-bottom: 1px solid var(--border); padding: 12px 0; }
     .faq summary { cursor: pointer; font-weight: 700; list-style: none; position: relative; padding-right: 24px; font-size: 14px; }
     .faq summary::-webkit-details-marker { display: none; }
@@ -133,7 +146,7 @@
     .faq details[open] summary::after { content: "−"; }
     .faq p { margin: 10px 0 0; color: #4b5563; font-size: 14px; }
 
-    /* Tool grid */
+    /* ── Tool Grid ── */
     .tool-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
     .tool { border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; background: #fff; transition: box-shadow .18s; display: block; }
     .tool:hover { box-shadow: 0 4px 14px rgba(196,0,0,.1); text-decoration: none; }
@@ -141,7 +154,7 @@
     .tool strong { display: block; font-size: 14px; color: #111827; }
     .tool span { display: block; font-size: 12px; color: #6b7280; margin-top: 4px; }
 
-    /* Sidebar */
+    /* ── Sidebar ── */
     .side-list { display: grid; gap: 14px; }
     .side-card { padding: 14px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
     .side-card h3 { margin: 0 0 10px; font-size: 14px; }
@@ -149,20 +162,20 @@
     .side-card li { padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
     .side-card li:last-child { border-bottom: none; }
 
-    /* Breadcrumbs */
+    /* ── Breadcrumbs ── */
     .breadcrumbs { font-size: 12px; color: #6b7280; margin: 0 0 14px; }
     .breadcrumbs a { color: #6b7280; }
 
-    /* Content */
+    /* ── Content ── */
     .content p { margin: 0 0 12px; color: #4b5563; font-size: 14px; }
     .tiny { font-size: 12px; }
     .muted { color: var(--muted); }
 
-    /* Eligibility banners */
+    /* ── Eligibility Banner ── */
     .elig-good { background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-weight: 700; font-size: 14px; padding: 14px; border-radius: 10px; margin-top: 14px; }
     .elig-warn { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; font-weight: 700; font-size: 14px; padding: 14px; border-radius: 10px; margin-top: 14px; }
 
-    /* Footer */
+    /* ── Footer ── */
     footer { background: #101418; color: #d1d5db; margin-top: 28px; padding: 30px 0; }
     .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
     footer h3 { color: #fff; font-size: 14px; margin: 0 0 10px; }
@@ -172,7 +185,7 @@
     footer a:hover { color: #fff; }
     .copyright { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.08); font-size: 12px; color: #9ca3af; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
 
-    /* Responsive */
+    /* ── Responsive ── */
     @media (max-width:1024px) {
       .grid { grid-template-columns: 1fr; }
       .summary-grid { grid-template-columns: repeat(2,1fr); }
@@ -198,7 +211,7 @@
 <body>
 <a class="skip-link" href="#main-content">Skip to content</a>
 
-<!-- Header -->
+<!-- ── Header ── -->
 <header class="topbar">
   <div class="container nav">
     <a class="brand" href="https://crsscorecalculator.vercel.app/" aria-label="CRS Calculator home">
@@ -219,48 +232,48 @@
   </div>
 </header>
 
-<!-- Hero -->
+<!-- ── Hero ── -->
 <section class="hero">
   <div class="container">
-    <h1>Saskatchewan CRS Calculator 2026</h1>
-    <p>Free SINP Express Entry Stream CRS score estimator. Enter your age, education, language CLB and work experience to instantly estimate your Saskatchewan PNP CRS points. No login required.</p>
+    <h1>Nova Scotia CRS Calculator 2026</h1>
+    <p>Free NSNP Express Entry Stream CRS score estimator. Enter your age, education, language CLB and work experience to instantly estimate your Nova Scotia PNP CRS points. No login required.</p>
     <div class="pill-row">
       <span class="pill">Updated 2026</span>
-      <span class="pill">SINP Express Entry</span>
+      <span class="pill">NSNP Express Entry</span>
       <span class="pill">Instant Results</span>
       <span class="pill">100% Free</span>
       <span class="pill">No Login Required</span>
       <span class="pill">Mobile Friendly</span>
     </div>
     <div class="hero-actions">
-      <a href="#calculator" class="btn btn-white">Calculate Saskatchewan CRS →</a>
+      <a href="#calculator" class="btn btn-white">Calculate Nova Scotia CRS →</a>
       <a href="https://crsscorecalculator.vercel.app/" class="btn btn-outline">Full CRS Calculator</a>
     </div>
   </div>
 </section>
 
-<!-- Main -->
+<!-- ── Main ── -->
 <main id="main-content">
   <div class="container">
 
     <nav class="breadcrumbs" aria-label="Breadcrumb">
       <a href="https://crsscorecalculator.vercel.app/">Home</a> ›
       <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculators</a> ›
-      <span>Saskatchewan CRS Calculator</span>
+      <span>Nova Scotia CRS Calculator</span>
     </nav>
 
     <div class="grid">
 
-      <!-- Main Column -->
+      <!-- ── Main Column ── -->
       <div>
 
-        <!-- Calculator -->
+        <!-- Calculator Card -->
         <section id="calculator" class="card">
-          <div class="card-head">📝 Saskatchewan CRS Calculator — SINP Express Entry Stream Points</div>
+          <div class="card-head">📝 Nova Scotia CRS Calculator — NSNP Express Entry Stream Points</div>
           <div class="card-body">
 
             <div class="section-label">Section A — Core Human Capital Factors</div>
-            <form id="skForm" novalidate>
+            <form id="nsForm" novalidate>
               <div class="form-grid">
 
                 <div class="field">
@@ -332,7 +345,7 @@
                     <option value="tef">TEF Canada (French)</option>
                     <option value="tcf">TCF Canada (French)</option>
                   </select>
-                  <small>Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> to convert IELTS bands to CLB first.</small>
+                  <small>Need to convert IELTS bands? Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a>.</small>
                 </div>
                 <div class="field">
                   <label for="clbLevel">CLB Level (First Official Language)</label>
@@ -364,7 +377,7 @@
                 <div class="field">
                   <label for="frenchLevel">French Bilingualism Bonus</label>
                   <select id="frenchLevel">
-                    <option value="0">None / Below CLB 5 French</option>
+                    <option value="0">None / Below CLB 5</option>
                     <option value="15">CLB 5–6 French + English CLB 4+</option>
                     <option value="25">CLB 7–8 French + English CLB 4+</option>
                     <option value="50">CLB 7–8 French + English CLB 5+</option>
@@ -407,7 +420,7 @@
                   </select>
                 </div>
                 <div class="field">
-                  <label for="canadaStudy">Canadian Post-Secondary Credential</label>
+                  <label for="canadaStudy">Canadian Post-Secondary Education</label>
                   <select id="canadaStudy">
                     <option value="0">None</option>
                     <option value="15">1–2 year credential</option>
@@ -426,10 +439,10 @@
                   </select>
                 </div>
                 <div class="field">
-                  <label for="nomineeBonus">Saskatchewan SINP Nomination Received?</label>
+                  <label for="nomineeBonus">Nova Scotia PNP Nomination Received?</label>
                   <select id="nomineeBonus">
                     <option value="0">Not nominated yet</option>
-                    <option value="600">Yes — SINP nomination (+600 pts)</option>
+                    <option value="600">Yes — NSNP nomination (+600 pts)</option>
                   </select>
                 </div>
                 <div class="field">
@@ -437,23 +450,22 @@
                   <select id="jobOffer">
                     <option value="0">No job offer</option>
                     <option value="200">Senior Manager / NOC 00 (+200 pts)</option>
-                    <option value="50">Skilled worker / NOC A or B (+50 pts)</option>
-                    <option value="50">Other skilled occupation (+50 pts)</option>
+                    <option value="50">Skilled worker / NOC A, B (+50 pts)</option>
+                    <option value="50">Other skilled NOC (+50 pts)</option>
                   </select>
                 </div>
                 <div class="field">
-                  <label for="saskConnection">Saskatchewan Connection</label>
-                  <select id="saskConnection">
-                    <option value="0">No direct connection</option>
-                    <option value="10">Family in Saskatchewan (+10 pts)</option>
-                    <option value="10">Previous work/study in SK (+10 pts)</option>
+                  <label for="phdBonus">PhD in Canada bonus</label>
+                  <select id="phdBonus">
+                    <option value="0">No</option>
+                    <option value="30">Yes — PhD studied in Canada (+30 pts)</option>
                   </select>
                 </div>
               </div>
 
               <div class="actions">
-                <button type="button" class="btn btn-red btn" id="calcBtn">Calculate My Saskatchewan CRS Score →</button>
-                <button type="reset" class="btn btn-light btn" id="resetBtn">Reset</button>
+                <button type="button" class="btn-red btn" id="calcBtn">Calculate My Nova Scotia CRS Score →</button>
+                <button type="reset" class="btn-light btn" id="resetBtn">Reset</button>
               </div>
             </form>
 
@@ -481,8 +493,8 @@
                   <tr><td>French bilingualism bonus</td><td id="tFrench">0</td><td>50</td></tr>
                   <tr><td>Canadian post-secondary study</td><td id="tStudy">0</td><td>30</td></tr>
                   <tr><td>Sibling in Canada</td><td id="tSibling">0</td><td>15</td></tr>
-                  <tr><td>SINP nomination / Job offer</td><td id="tBonus">0</td><td>600</td></tr>
-                  <tr><td>Saskatchewan connection bonus</td><td id="tSaskConn">0</td><td>10</td></tr>
+                  <tr><td>NSNP nomination / Job offer</td><td id="tBonus">0</td><td>600</td></tr>
+                  <tr><td>PhD in Canada bonus</td><td id="tPhd">0</td><td>30</td></tr>
                   <tr><td><strong>Total CRS Score</strong></td><td id="tTotal"><strong>0</strong></td><td><strong>1,200</strong></td></tr>
                 </tbody>
               </table>
@@ -492,135 +504,131 @@
             <div id="eligBanner" style="display:none;" aria-live="polite"></div>
 
             <p class="tiny muted" style="margin-top:12px;">
-              This Saskatchewan CRS calculator estimates your SINP Express Entry score. For the complete federal CRS score, use the <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a>. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">official IRCC tool</a>.
+              This Nova Scotia CRS calculator estimates your NSNP Express Entry Stream score. For a complete federal score, use the <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a>. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">official IRCC tool</a>.
             </p>
           </div>
         </section>
 
-        <!-- What is Saskatchewan CRS -->
+        <!-- What is Nova Scotia CRS -->
         <section class="card" style="margin-top:18px;">
-          <div class="card-head">What is the Saskatchewan CRS Calculator?</div>
+          <div class="card-head">What is the Nova Scotia CRS Calculator?</div>
           <div class="card-body content">
-            <p>The <strong>Saskatchewan CRS Calculator</strong> estimates your Comprehensive Ranking System score for the <strong>SINP Express Entry Sub-Category</strong> — the pathway through which Saskatchewan nominates Express Entry candidates for Canada PR via the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC federal Express Entry pool</a>.</p>
-            <p>Saskatchewan targets candidates from the Express Entry pool whose skills match provincial labour market needs. A successful <strong>SINP nomination adds 600 CRS points</strong>, virtually guaranteeing a federal Invitation to Apply (ITA). Check <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">current CRS cutoff scores</a> to see how your score compares to recent draw thresholds.</p>
-            <p>To compare Saskatchewan with other provinces, use the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>, or the <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia CRS Calculator</a>.</p>
+            <p>The <strong>Nova Scotia CRS Calculator</strong> estimates your Comprehensive Ranking System score for the <strong>NSNP Express Entry Stream</strong> — the pathway through which Nova Scotia nominates federal Express Entry candidates for Canada PR via the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry pool</a>.</p>
+            <p>Nova Scotia issues Notifications of Interest (NOIs) to candidates in the federal pool who meet provincial criteria. A successful NSNP nomination adds <strong>600 CRS points</strong>, virtually guaranteeing an Invitation to Apply (ITA). Check the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">latest CRS cutoff scores</a> to benchmark your score against recent draws.</p>
+            <p>Compare Nova Scotia with other provinces using the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, or the <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>.</p>
           </div>
         </section>
 
         <!-- CRS Score Ranges -->
         <section class="card" style="margin-top:18px;">
-          <div class="card-head">Saskatchewan SINP CRS Score Ranges & PR Chances</div>
+          <div class="card-head">Nova Scotia NSNP CRS Score Ranges & PR Chances</div>
           <div class="card-body">
             <div class="table-wrap">
               <table>
                 <thead>
-                  <tr><th>CRS Score Range</th><th>PR Chances (SINP)</th><th>Typical Eligibility</th></tr>
+                  <tr><th>CRS Score Range</th><th>PR Chances (NSNP)</th><th>Typical Eligibility</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>Below 400</td><td class="orange">Very Low</td><td>Unlikely without SINP nomination</td></tr>
-                  <tr><td>400–449</td><td class="orange">Low–Moderate</td><td>May qualify for SINP Expression of Interest pool</td></tr>
-                  <tr><td>450–490</td><td class="green">Moderate</td><td>Strong SINP Express Entry candidate</td></tr>
-                  <tr><td>491–520</td><td class="green">Good</td><td>Approaching all-program draw range</td></tr>
+                  <tr><td>Below 400</td><td class="orange">Very Low</td><td>Unlikely without NSNP nomination</td></tr>
+                  <tr><td>400–449</td><td class="orange">Low–Moderate</td><td>May be eligible for Nova Scotia NOI pool</td></tr>
+                  <tr><td>450–490</td><td class="green">Moderate</td><td>Strong candidate for NSNP Express Entry stream</td></tr>
+                  <tr><td>491–520</td><td class="green">Good</td><td>Approaching competitive all-program draw range</td></tr>
                   <tr><td>521+</td><td class="green">Excellent</td><td>Competitive for all Express Entry programs</td></tr>
-                  <tr><td>Any + 600</td><td class="green">Very Strong</td><td>SINP nomination adds 600 CRS bonus points</td></tr>
+                  <tr><td>Any + 600</td><td class="green">Very Strong</td><td>NSNP nomination adds 600 CRS bonus points</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="tiny muted" style="margin-top:10px;">Source: <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry draw results 2025–2026</a>. For reference purposes only.</p>
+            <p class="tiny muted" style="margin-top:10px;">Source: <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry draw results 2025–2026</a>. For reference only.</p>
           </div>
         </section>
 
         <!-- How to Use -->
         <section class="card" style="margin-top:18px;">
-          <div class="card-head">How to use this Saskatchewan CRS Calculator</div>
+          <div class="card-head">How to use this Nova Scotia CRS Calculator</div>
           <div class="card-body">
             <div class="steps">
               <div class="step">
                 <div class="step-no">1</div>
                 <strong>Enter personal details</strong>
-                <p>Select your age, highest education and marital status — the core CRS human capital factors assessed by IRCC.</p>
+                <p>Select age, education level and marital status — the core human capital factors in the CRS framework used by IRCC.</p>
               </div>
               <div class="step">
                 <div class="step-no">2</div>
-                <strong>Add language CLB scores</strong>
-                <p>Select your CLB level. Not sure? Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> to convert your IELTS bands to CLB first.</p>
+                <strong>Add language scores</strong>
+                <p>Select your CLB level. Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> first if you need to convert IELTS bands to CLB.</p>
               </div>
               <div class="step">
                 <div class="step-no">3</div>
                 <strong>Add work experience</strong>
-                <p>Canadian work experience carries much higher CRS weight than foreign experience — enter both for an accurate estimate.</p>
+                <p>Enter Canadian and foreign work experience. Canadian experience adds significantly more CRS weight than foreign experience.</p>
               </div>
               <div class="step">
                 <div class="step-no">4</div>
-                <strong>Get instant CRS score</strong>
-                <p>See your Saskatchewan CRS score breakdown, then open the <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a> for a complete federal score.</p>
+                <strong>Get instant results</strong>
+                <p>See your Nova Scotia CRS score by section, then open the <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a> for your complete federal score.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- How CRS is Calculated for SINP -->
+        <!-- How CRS is Calculated for NSNP -->
         <section class="card" style="margin-top:18px;">
-          <div class="card-head">How is CRS calculated for Saskatchewan SINP?</div>
+          <div class="card-head">How is CRS calculated for Nova Scotia NSNP?</div>
           <div class="card-body content">
-            <p>The Saskatchewan PNP Express Entry Sub-Category operates within the federal <strong>Comprehensive Ranking System (CRS)</strong>. Your score out of 1,200 covers core human capital (age, education, language, Canadian work experience), spouse factors, skill transferability, and additional points including nominations, job offers, siblings in Canada, and Canadian study credentials.</p>
-            <p>The single biggest CRS boost is the <strong>+600 SINP nomination bonus</strong>. Saskatchewan targets workers in high-demand occupations including agriculture, healthcare, trucking, and skilled trades. Review <a href="https://crsscorecalculator.vercel.app/express-entry-draws">recent Express Entry draws</a> and the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS cutoff score history</a> to understand current ITA thresholds.</p>
-            <p>Always cross-check criteria with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">Government of Canada immigration portal</a> before filing your Express Entry profile.</p>
+            <p>Nova Scotia's Express Entry stream operates within the federal <strong>Comprehensive Ranking System (CRS)</strong>. Your score out of 1,200 covers core human capital (age, education, language, Canadian work experience), spouse factors, skill transferability, and additional points including nominations, job offers, siblings in Canada, and Canadian study.</p>
+            <p>The strongest single boost in any provincial CRS calculation is the <strong>+600 NSNP nomination bonus</strong>. Even a baseline score of 400 becomes highly competitive once Nova Scotia issues a nomination. Review <a href="https://crsscorecalculator.vercel.app/express-entry-draws">recent Express Entry draw results</a> and the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS cutoff history</a> to understand what score has led to ITAs.</p>
+            <p>For official criteria, always cross-check with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">Government of Canada immigration portal</a> before filing your Express Entry profile.</p>
           </div>
         </section>
 
-        <!-- SINP Streams Table -->
+        <!-- Nova Scotia NSNP Streams -->
         <section class="card" style="margin-top:18px;">
-          <div class="card-head">Saskatchewan SINP — Express Entry Sub-Category Streams</div>
+          <div class="card-head">Nova Scotia NSNP — Express Entry Streams Overview</div>
           <div class="card-body">
             <div class="table-wrap">
               <table>
                 <thead>
-                  <tr><th>SINP Stream</th><th>Federal Program</th><th>Occupation Focus</th><th>Min. CRS (Base)</th></tr>
+                  <tr><th>NSNP Stream</th><th>Federal Program</th><th>NOI Issued?</th><th>Min. CRS Needed</th></tr>
                 </thead>
                 <tbody>
-                  <tr><td>SINP Express Entry Sub-Category (general)</td><td>FSW / CEC / FST</td><td>Broad labour market needs</td><td>~450–480</td></tr>
-                  <tr><td>Occupations In-Demand</td><td>FSW / CEC</td><td>Skilled trades, healthcare, agriculture</td><td>~440–470</td></tr>
-                  <tr><td>Saskatchewan Experience Category</td><td>CEC</td><td>Current SK workers</td><td>Lower threshold</td></tr>
-                  <tr><td>International Skilled Worker – EE</td><td>FSW</td><td>Points-based skilled worker</td><td>~460–490</td></tr>
+                  <tr><td>Nova Scotia Express Entry (general)</td><td>FSW / CEC / FST</td><td>Yes — NOI from IRCC pool</td><td>~450–480 base</td></tr>
+                  <tr><td>Nova Scotia Demand: Express Entry</td><td>FSW / CEC</td><td>Yes</td><td>~460–490 base</td></tr>
+                  <tr><td>French-speaking Skilled Workers</td><td>FSW</td><td>Yes</td><td>Lower threshold (French draw)</td></tr>
+                  <tr><td>Healthcare Occupations EE</td><td>FSW / CEC</td><td>Yes</td><td>Occupation-targeted draw</td></tr>
                 </tbody>
               </table>
             </div>
-            <p class="tiny muted" style="margin-top:10px;">Stream eligibility changes frequently. Verify current requirements with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">official IRCC portal</a>.</p>
+            <p class="tiny muted" style="margin-top:10px;">Stream criteria change frequently. Verify current requirements with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC official portal</a>.</p>
           </div>
         </section>
 
         <!-- FAQ -->
         <section class="card faq" style="margin-top:18px;">
-          <div class="card-head">Frequently Asked Questions — Saskatchewan CRS Calculator</div>
+          <div class="card-head">Frequently Asked Questions — Nova Scotia CRS Calculator</div>
           <div class="card-body">
             <details open>
-              <summary>What is the Saskatchewan CRS calculator?</summary>
-              <p>It estimates your CRS score for the SINP Express Entry Sub-Category to assess your chances of receiving a Saskatchewan provincial nomination for Canada PR through the federal Express Entry system.</p>
+              <summary>What is the Nova Scotia CRS calculator used for?</summary>
+              <p>It estimates your CRS score for the NSNP Express Entry Stream so you can assess your chances of receiving a Nova Scotia provincial nomination for Canada PR through the federal Express Entry system.</p>
             </details>
             <details>
-              <summary>What is a good CRS score for Saskatchewan?</summary>
-              <p>A score above 450 is generally competitive for the SINP Express Entry pool. A SINP nomination adds 600 CRS points — making almost any base score competitive for a federal ITA. See the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">latest CRS cutoff scores</a> for current draw context.</p>
+              <summary>What is a good CRS score for Nova Scotia?</summary>
+              <p>A score above 450 is generally competitive for the NSNP Express Entry pool. With a nomination, Nova Scotia adds 600 CRS points — making even mid-range scores highly competitive for a federal ITA. See the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">latest CRS cutoff scores</a>.</p>
             </details>
             <details>
-              <summary>Does Saskatchewan use the federal CRS?</summary>
-              <p>Yes. The SINP Express Entry Sub-Category operates within the federal CRS framework. Saskatchewan adds 600 CRS points when it nominates a candidate from the Express Entry pool.</p>
+              <summary>Does Nova Scotia use the federal CRS points system?</summary>
+              <p>Yes. The NSNP Express Entry Stream runs inside the federal pool and uses the standard federal CRS framework. Nova Scotia adds 600 CRS bonus points when it nominates a candidate.</p>
             </details>
             <details>
-              <summary>What occupations does Saskatchewan target through SINP?</summary>
-              <p>Saskatchewan prioritises workers in healthcare, agriculture, trucking and transportation, skilled trades, and technology occupations. The province targets candidates whose skills align with its current labour market needs.</p>
+              <summary>How can I improve my Nova Scotia CRS score?</summary>
+              <p>The most impactful improvements are: raise your IELTS score to CLB 9+, gain Canadian work experience, complete a Canadian credential, or obtain an LMIA-backed job offer in Nova Scotia. Read the full <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS improvement guide</a>.</p>
             </details>
             <details>
-              <summary>How can I improve my Saskatchewan CRS score?</summary>
-              <p>Raise your IELTS score to CLB 9+, gain Canadian work experience, complete a Canadian credential, or secure an LMIA-backed Saskatchewan job offer. See the full <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS improvement guide</a>.</p>
+              <summary>How does Nova Scotia compare to other PNP streams?</summary>
+              <p>Compare using the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>, and the <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP CRS Calculator</a>.</p>
             </details>
             <details>
-              <summary>How does Saskatchewan compare to other PNP streams?</summary>
-              <p>Compare using the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>, and the <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia CRS Calculator</a>.</p>
-            </details>
-            <details>
-              <summary>Is this Saskatchewan CRS calculator accurate?</summary>
-              <p>This tool uses the official IRCC CRS points grid and SINP guidelines for a reliable estimate. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC official CRS tool</a> before submitting your Express Entry profile.</p>
+              <summary>Is this Nova Scotia CRS calculator accurate?</summary>
+              <p>This tool uses the official IRCC CRS points grid and NSNP guidelines for a reliable estimate. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC official CRS tool</a> before filing.</p>
             </details>
           </div>
         </section>
@@ -638,7 +646,7 @@
               <a class="tool" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator"><div class="tool-icon">AB</div><strong>Alberta CRS</strong><span>AINP stream</span></a>
               <a class="tool" href="https://crsscorecalculator.vercel.app/bc-crs-calculator"><div class="tool-icon">BC</div><strong>BC PNP CRS</strong><span>British Columbia</span></a>
               <a class="tool" href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator"><div class="tool-icon">MB</div><strong>Manitoba CRS</strong><span>MPNP stream</span></a>
-              <a class="tool" href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator"><div class="tool-icon">NS</div><strong>Nova Scotia CRS</strong><span>NSNP stream</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html"><div class="tool-icon">SK</div><strong>Saskatchewan</strong><span>SINP stream</span></a>
               <a class="tool" href="https://crsscorecalculator.vercel.app/ielts-crs-calculator"><div class="tool-icon">IL</div><strong>IELTS to CRS</strong><span>Language points</span></a>
               <a class="tool" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores"><div class="tool-icon">CS</div><strong>Cutoff Scores</strong><span>Draw trends</span></a>
               <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-draws"><div class="tool-icon">DR</div><strong>Draw Results</strong><span>2025–2026 history</span></a>
@@ -648,13 +656,13 @@
 
       </div><!-- /main column -->
 
-      <!-- Sidebar -->
+      <!-- ── Sidebar ── -->
       <aside class="side-list">
 
         <div class="result-box" aria-live="polite">
-          <div class="tiny">Estimated Saskatchewan CRS Score</div>
+          <div class="tiny">Estimated Nova Scotia CRS Score</div>
           <div class="score-big" id="sideScore">0</div>
-          <div class="score-sub">Updated 2026 • SINP Express Entry Stream</div>
+          <div class="score-sub">Updated 2026 • NSNP Express Entry Stream</div>
         </div>
 
         <div class="side-card">
@@ -674,12 +682,12 @@
         <div class="side-card">
           <h3>Provincial Calculators</h3>
           <ul>
-            <li><strong>Saskatchewan (SINP)</strong> — this page</li>
+            <li><strong>Nova Scotia (NSNP)</strong> — this page</li>
             <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
             <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
             <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
             <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
-            <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
           </ul>
         </div>
 
@@ -695,11 +703,11 @@
         <div class="side-card">
           <h3>AEO Quick Answers</h3>
           <ul>
-            <li>SINP nomination adds <strong>600 CRS points</strong> instantly.</li>
-            <li>Saskatchewan uses the <strong>federal CRS framework</strong> — no separate points system.</li>
-            <li>CLB 9 across all abilities = up to <strong>128 language CRS points</strong> (single applicant).</li>
+            <li>NSNP nomination adds <strong>600 CRS points</strong> instantly.</li>
+            <li>Nova Scotia uses the <strong>federal CRS framework</strong> — no separate points system.</li>
+            <li>CLB 9 across all 4 abilities = up to <strong>128 language CRS points</strong> (single applicant).</li>
             <li>Canadian work experience adds up to <strong>80 CRS points</strong>.</li>
-            <li>Saskatchewan prioritises <strong>healthcare, agriculture, and trades</strong> occupations.</li>
+            <li>French speakers may gain up to <strong>50 extra CRS points</strong>.</li>
           </ul>
         </div>
 
@@ -708,124 +716,83 @@
   </div><!-- /container -->
 </main>
 
-<!-- Footer -->
-<!-- ============================================================
-  UNIVERSAL FOOTER — crsscorecalculator.vercel.app
-  Copy this exact block into every page, replacing the old footer
-  ============================================================ -->
-<footer style="background:#101418;color:#d1d5db;margin-top:0;padding:36px 0 0">
-  <div style="max-width:1200px;margin:auto;padding:0 16px">
-
-    <!-- Top: Brand + tagline -->
-    <div style="display:flex;align-items:center;gap:10px;margin-bottom:22px">
-      <span style="width:32px;height:32px;background:#c40000;border-radius:7px;display:grid;place-items:center;color:#fff;font-weight:800;font-size:13px;flex-shrink:0">CRS</span>
+<!-- ── Footer ── -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
       <div>
-        <div style="color:#fff;font-weight:700;font-size:15px;line-height:1.2">CRS Score Calculator</div>
-        <div style="color:#9ca3af;font-size:12px">Free Canada Express Entry Tools &amp; Guides</div>
+        <h3>CRS Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/">CRS Score Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Provincial Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Guides & Resources</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Official Links</h3>
+        <ul>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+          <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Canada.ca</a></li>
+        </ul>
       </div>
     </div>
-
-    <!-- Link columns grid -->
-    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding-bottom:28px;border-bottom:1px solid rgba(255,255,255,.07)">
-
-      <!-- Column 1: Calculators -->
-      <div>
-        <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.02em">CRS Calculators</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
-          <li><a href="https://crsscorecalculator.vercel.app/" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">CRS Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Express Entry CRS Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">CEC Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/fsw-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">FSW Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">PNP Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">IELTS to CRS</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 2: Provincial Tools -->
-      <div>
-        <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.02em">Provincial Tools</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
-          <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Ontario CRS (OINP)</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Alberta CRS (AINP)</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">BC PNP Calculator</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Manitoba CRS (MPNP)</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Nova Scotia CRS</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/healthcare-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Healthcare CRS</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/stem-crs-calculator" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">STEM CRS</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 3: Guides & Blog -->
-      <div>
-        <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.02em">Guides &amp; Blog</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
-          <li><a href="https://crsscorecalculator.vercel.app/what-is-crs-score" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">What is CRS Score</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Blog Archive</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/improve-crs-score-tips" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">How to Improve CRS Score</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/minimum-crs-score" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Minimum CRS Score</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-language-test" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Language Test Guide</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-education" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Education Points Guide</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-with-spouse" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">CRS with Spouse</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-by-age" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">CRS by Age</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Draw Tracking + Official -->
-      <div>
-        <div style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;letter-spacing:.02em">Draw Tracking</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
-          <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Express Entry Draws</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">CRS Cutoff Scores</a></li>
-          <li><a href="https://crsscorecalculator.vercel.app/blog/express-entry-cutoff-history" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">Cutoff History 2015–2026</a></li>
-        </ul>
-        <div style="color:#fff;font-size:13px;font-weight:700;margin:18px 0 12px;letter-spacing:.02em">Official Sources</div>
-        <ul style="list-style:none;padding:0;margin:0;display:grid;gap:8px">
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">IRCC Express Entry ↗</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html" target="_blank" rel="noopener noreferrer" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">IRCC Draw Results ↗</a></li>
-          <li><a href="https://noc.esdc.gc.ca/" target="_blank" rel="noopener noreferrer" style="color:#d1d5db;font-size:13px;text-decoration:none" onmouseover="this.style.color='#fff'" onmouseout="this.style.color='#d1d5db'">NOC Database ↗</a></li>
-        </ul>
-      </div>
-
+    <div class="copyright">
+      <span>© 2026 CRS Calculator. For informational purposes only. Verify all results with official IRCC sources before filing an immigration application.</span>
+      <a href="https://crsscorecalculator.vercel.app/">Home</a>
     </div>
-
-    <!-- Copyright bar -->
-    <div style="display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:16px 0">
-      <p style="font-size:12px;color:#6b7280;margin:0">© 2026 CRS Score Calculator. For informational purposes only. Always verify with <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer" style="color:#9ca3af;text-decoration:underline">official IRCC sources</a>.</p>
-      <a href="https://crsscorecalculator.vercel.app/" style="background:#c40000;color:#fff;padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;text-decoration:none">Calculate CRS →</a>
-    </div>
-
   </div>
 </footer>
-<!-- ============================================================
-  END UNIVERSAL FOOTER
-  ============================================================ -->
 
-<!-- Calculator JavaScript -->
+<!-- ── Calculator JavaScript ── -->
 <script>
 (function () {
   function g(id) { return document.getElementById(id); }
   function v(id) { return parseInt(g(id).value) || 0; }
 
   function calculate() {
-    var age        = v('age');
-    var edu        = v('education');
-    var lang       = v('clbLevel');
-    var french     = v('frenchLevel');
-    var canExp     = v('canadaExp');
-    var forExp     = v('foreignExp');
-    var study      = v('canadaStudy');
-    var sibling    = v('sibling');
-    var nomBonus   = v('nomineeBonus');
-    var jobOffer   = v('jobOffer');
-    var saskConn   = v('saskConnection');
-    var isSpouse   = g('marital').value === 'spouse';
-    var spEdu      = isSpouse ? v('spouseEducation') : 0;
-    var spLang     = isSpouse ? v('clbSpouse') : 0;
-    var spExp      = isSpouse ? v('spouseExp') : 0;
-    var spouse     = spEdu + spLang + spExp;
-    var work       = canExp + forExp;
-    var bonus      = nomBonus + jobOffer;
-    var total      = age + edu + lang + french + work + study + sibling + bonus + saskConn + spouse;
+    var age       = v('age');
+    var edu       = v('education');
+    var lang      = v('clbLevel');
+    var french    = v('frenchLevel');
+    var canExp    = v('canadaExp');
+    var forExp    = v('foreignExp');
+    var study     = v('canadaStudy');
+    var sibling   = v('sibling');
+    var nomBonus  = v('nomineeBonus');
+    var jobOffer  = v('jobOffer');
+    var phd       = v('phdBonus');
+
+    var isSpouse  = g('marital').value === 'spouse';
+    var spEdu     = isSpouse ? v('spouseEducation') : 0;
+    var spLang    = isSpouse ? v('clbSpouse')       : 0;
+    var spExp     = isSpouse ? v('spouseExp')        : 0;
+    var spouse    = spEdu + spLang + spExp;
+
+    var work      = canExp + forExp;
+    var bonus     = nomBonus + jobOffer;
+    var total     = age + edu + lang + french + work + study + sibling + bonus + phd + spouse;
 
     // Mini summary cards
     g('totalScore').textContent = total;
@@ -834,55 +801,55 @@
     g('workPts').textContent    = work;
 
     // Breakdown table
-    g('tAge').textContent     = age;
-    g('tEdu').textContent     = edu;
-    g('tLang').textContent    = lang;
-    g('tCanExp').textContent  = canExp;
-    g('tSpouse').textContent  = spouse;
-    g('tForeign').textContent = forExp;
-    g('tFrench').textContent  = french;
-    g('tStudy').textContent   = study;
-    g('tSibling').textContent = sibling;
-    g('tBonus').textContent   = bonus;
-    g('tSaskConn').textContent= saskConn;
-    g('tTotal').innerHTML     = '<strong>' + total + '</strong>';
+    g('tAge').textContent    = age;
+    g('tEdu').textContent    = edu;
+    g('tLang').textContent   = lang;
+    g('tCanExp').textContent = canExp;
+    g('tSpouse').textContent = spouse;
+    g('tForeign').textContent= forExp;
+    g('tFrench').textContent = french;
+    g('tStudy').textContent  = study;
+    g('tSibling').textContent= sibling;
+    g('tBonus').textContent  = bonus;
+    g('tPhd').textContent    = phd;
+    g('tTotal').innerHTML    = '<strong>' + total + '</strong>';
 
-    // Sidebar score
+    // Sidebar
     g('sideScore').textContent = total;
 
     // Eligibility banner
     var banner = g('eligBanner');
     if (total >= 520) {
-      banner.className    = 'elig-good';
-      banner.style.display= 'block';
-      banner.textContent  = '✅ Excellent! Your estimated CRS score is highly competitive for Saskatchewan SINP Express Entry and all-program federal draws.';
+      banner.className = 'elig-good';
+      banner.style.display = 'block';
+      banner.textContent = '✅ Excellent! Your estimated CRS score is highly competitive for Nova Scotia NSNP Express Entry and all-program federal draws.';
     } else if (total >= 450) {
-      banner.className    = 'elig-good';
-      banner.style.display= 'block';
-      banner.textContent  = '✅ Your estimated CRS score may qualify you for the Saskatchewan SINP Express Entry pool. A SINP nomination will add 600 bonus CRS points.';
+      banner.className = 'elig-good';
+      banner.style.display = 'block';
+      banner.textContent = '✅ Your estimated CRS score may qualify you for the Nova Scotia NSNP Express Entry pool. A nomination will add 600 bonus points.';
     } else if (total >= 400) {
-      banner.className    = 'elig-warn';
-      banner.style.display= 'block';
-      banner.textContent  = '⚠️ Your score is below typical SINP thresholds. Improving your IELTS/CLB score or gaining Canadian work experience will boost your CRS points significantly.';
+      banner.className = 'elig-warn';
+      banner.style.display = 'block';
+      banner.textContent = '⚠️ Your score is below typical NSNP thresholds. Consider improving your IELTS/CLB score or gaining Canadian work experience to boost your CRS points.';
     } else {
       banner.style.display = 'none';
     }
   }
 
-  // Button click
+  // Calculate on button click
   g('calcBtn').addEventListener('click', calculate);
 
-  // Auto-calculate on every dropdown change
-  document.querySelectorAll('#skForm select').forEach(function (el) {
+  // Auto-calculate on any dropdown change
+  document.querySelectorAll('#nsForm select').forEach(function (el) {
     el.addEventListener('change', calculate);
   });
 
-  // Reset
+  // Reset button
   g('resetBtn').addEventListener('click', function () {
     setTimeout(function () {
-      ['totalScore','langPts','eduPts','workPts'].forEach(function (id) { g(id).textContent = 0; });
-      ['tAge','tEdu','tLang','tCanExp','tSpouse','tForeign','tFrench','tStudy','tSibling','tBonus','tSaskConn'].forEach(function (id) { g(id).textContent = 0; });
-      g('tTotal').innerHTML      = '<strong>0</strong>';
+      ['totalScore','langPts','eduPts','workPts'].forEach(function(id){ g(id).textContent = 0; });
+      ['tAge','tEdu','tLang','tCanExp','tSpouse','tForeign','tFrench','tStudy','tSibling','tBonus','tPhd'].forEach(function(id){ g(id).textContent = 0; });
+      g('tTotal').innerHTML = '<strong>0</strong>';
       g('sideScore').textContent = 0;
       g('eligBanner').style.display = 'none';
     }, 0);
@@ -899,7 +866,7 @@
 })();
 </script>
 
-<!-- Schema Markup -->
+<!-- ── Schema Markup ── -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -921,7 +888,7 @@
   "itemListElement": [
     { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
     { "@type": "ListItem", "position": 2, "name": "PNP Calculators", "item": "https://crsscorecalculator.vercel.app/pnp-crs-calculator" },
-    { "@type": "ListItem", "position": 3, "name": "Saskatchewan CRS Calculator", "item": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" }
+    { "@type": "ListItem", "position": 3, "name": "Nova Scotia CRS Calculator", "item": "https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" }
   ]
 }
 </script>
@@ -930,15 +897,16 @@
 {
   "@context": "https://schema.org",
   "@type": "WebPage",
-  "name": "Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool",
-  "url": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator",
-  "description": "Free Saskatchewan SINP CRS calculator. Estimate your Canada PR score with education, language CLB, work experience and age points for the SINP Express Entry stream.",
+  "name": "Nova Scotia CRS Calculator 2026 – NSNP Express Entry Stream Points Tool",
+  "url": "https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator",
+  "description": "Free Nova Scotia CRS calculator for NSNP Express Entry Stream. Estimate your Canada PR CRS score with education, language CLB, work experience and age points.",
   "isPartOf": { "@type": "WebSite", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
   "about": [
-    { "@type": "Thing", "name": "Saskatchewan CRS calculator" },
-    { "@type": "Thing", "name": "SINP Express Entry Sub-Category" },
-    { "@type": "Thing", "name": "Saskatchewan PNP CRS score" },
-    { "@type": "Thing", "name": "Canada Express Entry CRS points" }
+    { "@type": "Thing", "name": "Nova Scotia CRS calculator" },
+    { "@type": "Thing", "name": "NSNP Express Entry Stream" },
+    { "@type": "Thing", "name": "Nova Scotia PNP CRS score" },
+    { "@type": "Thing", "name": "Canada Express Entry CRS points" },
+    { "@type": "Thing", "name": "Nova Scotia Nominee Program" }
   ],
   "speakable": {
     "@type": "SpeakableSpecification",
@@ -951,21 +919,20 @@
 {
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
-  "name": "Saskatchewan CRS Calculator 2026",
+  "name": "Nova Scotia CRS Calculator 2026",
   "applicationCategory": "CalculatorApplication",
   "operatingSystem": "Web",
-  "url": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator",
-  "description": "Free Saskatchewan SINP Express Entry CRS calculator. Estimate Canada PR CRS score instantly with age, education, language CLB and work experience.",
+  "url": "https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator",
+  "description": "Free Nova Scotia NSNP Express Entry Stream CRS calculator. Estimate your Canada PR score instantly with age, education, language CLB and work experience.",
   "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
   "publisher": { "@type": "Organization", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
   "featureList": [
-    "Saskatchewan SINP CRS score estimation",
-    "SINP Express Entry Sub-Category points",
+    "Nova Scotia NSNP CRS score estimation",
+    "NSNP Express Entry Stream points",
     "Language CLB to CRS conversion",
-    "600-point SINP nomination bonus",
-    "Saskatchewan connection bonus field",
+    "600-point NSNP nomination bonus",
     "Three-level eligibility banner",
-    "Auto-calculates on dropdown change"
+    "Mobile-friendly instant calculation"
   ]
 }
 </script>
@@ -977,28 +944,28 @@
   "mainEntity": [
     {
       "@type": "Question",
-      "name": "What is the Saskatchewan CRS calculator?",
-      "acceptedAnswer": { "@type": "Answer", "text": "It estimates your CRS score for the SINP Express Entry Sub-Category to assess your chances of receiving a Saskatchewan provincial nomination for Canada PR." }
+      "name": "What is the Nova Scotia CRS calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It estimates your CRS score for the NSNP Express Entry Stream to assess your chances of receiving a Nova Scotia provincial nomination for Canada PR." }
     },
     {
       "@type": "Question",
-      "name": "What is a good CRS score for Saskatchewan?",
-      "acceptedAnswer": { "@type": "Answer", "text": "A score above 450 is competitive for the SINP pool. A SINP nomination adds 600 CRS bonus points, making almost any profile competitive for a federal Invitation to Apply." }
+      "name": "What is a good CRS score for Nova Scotia?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A score above 450 is competitive for the NSNP pool. A provincial nomination adds 600 CRS points, making almost any candidate competitive for a federal Invitation to Apply." }
     },
     {
       "@type": "Question",
-      "name": "Does Saskatchewan use the federal CRS?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The SINP Express Entry Sub-Category uses the standard federal CRS. Saskatchewan adds 600 CRS points when it nominates a candidate." }
+      "name": "Does Nova Scotia use the federal CRS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The NSNP Express Entry Stream uses the standard federal CRS framework. Nova Scotia adds 600 CRS points when it nominates a candidate via the NSNP." }
     },
     {
       "@type": "Question",
-      "name": "What occupations does Saskatchewan target through SINP?",
-      "acceptedAnswer": { "@type": "Answer", "text": "Saskatchewan prioritises healthcare, agriculture, trucking and transportation, skilled trades, and technology workers whose skills match provincial labour market needs." }
+      "name": "How can I improve my Nova Scotia CRS score?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Improve your IELTS score to CLB 9+, gain Canadian work experience, complete a Canadian credential, or obtain an LMIA-backed job offer in Nova Scotia." }
     },
     {
       "@type": "Question",
-      "name": "Is this Saskatchewan CRS calculator accurate?",
-      "acceptedAnswer": { "@type": "Answer", "text": "This tool uses the official IRCC CRS points grid and SINP guidelines for a reliable estimate. Always verify with the IRCC official CRS tool before filing your Express Entry profile." }
+      "name": "Is this Nova Scotia CRS calculator accurate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool uses the official IRCC CRS points grid for a reliable estimate. Always verify with the IRCC official CRS tool before filing your Express Entry profile." }
     }
   ]
 }
