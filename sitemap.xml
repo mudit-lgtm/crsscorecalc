@@ -1,15 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-stylesheet type="text/xsl" href="/sitemap.xsl"?>
-<urlset
-  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-    http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- =============================================
-       CORE PAGES
-  ============================================= -->
-
+  <!-- HOME -->
   <url>
     <loc>https://crsscorecalculator.vercel.app/</loc>
     <lastmod>2026-04-20</lastmod>
@@ -17,20 +9,19 @@
     <priority>1.0</priority>
   </url>
 
+  <!-- CORE PAGES -->
   <url>
     <loc>https://crsscorecalculator.vercel.app/what-is-crs-score</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/express-entry-draws</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/crs-cutoff-scores</loc>
     <lastmod>2026-04-20</lastmod>
@@ -38,87 +29,73 @@
     <priority>0.9</priority>
   </url>
 
-  <!-- =============================================
-       CALCULATOR TOOLS
-  ============================================= -->
-
+  <!-- CALCULATORS -->
   <url>
     <loc>https://crsscorecalculator.vercel.app/express-entry-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/cec-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/fsw-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/pnp-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/ielts-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/ontario-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/alberta-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/bc-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/manitoba-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/healthcare-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/stem-crs-calculator</loc>
     <lastmod>2026-04-20</lastmod>
@@ -126,59 +103,49 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- =============================================
-       BLOG PAGES
-  ============================================= -->
-
+  <!-- BLOG -->
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/improve-crs-score-tips</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/minimum-crs-score</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.85</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/express-entry-cutoff-history</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/crs-score-language-test</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/crs-score-education</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/crs-score-with-spouse</loc>
     <lastmod>2026-04-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
-
   <url>
     <loc>https://crsscorecalculator.vercel.app/blog/crs-score-by-age</loc>
     <lastmod>2026-04-20</lastmod>
