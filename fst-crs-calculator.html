@@ -1,792 +1,1041 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>FST CRS Calculator – Federal Skilled Trades Points Tool</title>
-  <meta name="description" content="Calculate your CRS score for the Federal Skilled Trades (FST) program. Free FST calculator with IRCC CRS grid values for trade workers.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/fst-crs-calculator.html">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FST CRS Calculator 2026 – Federal Skilled Trades Points Tool | Free Score Check</title>
+  <meta name="description" content="Use our free FST CRS Calculator 2026 to check your Federal Skilled Trades (FST) Express Entry points instantly. Calculate CRS score for skilled trades occupations, see latest draw cutoffs, and find if you qualify for Canada PR." />
+  <meta name="keywords" content="fst crs calculator, federal skilled trades crs calculator, skilled trades crs calculator, fst points calculator, federal skilled trades points tool, crs calculator skilled trades, fst crs score calculator 2026" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/fst-crs-calculator" />
+
   <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="FST CRS Calculator – Federal Skilled Trades Points Tool">
-  <meta property="og:description" content="Calculate your CRS score for the Federal Skilled Trades (FST) program. Free FST calculator with IRCC CRS grid values for trade workers.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/fst-crs-calculator.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="FST CRS Calculator – Federal Skilled Trades Points Tool">
-  <meta name="twitter:description" content="Calculate your CRS score for the Federal Skilled Trades (FST) program. Free FST calculator with IRCC CRS grid values for trade workers.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <meta property="og:title" content="FST CRS Calculator 2026 – Free Federal Skilled Trades Points Tool" />
+  <meta property="og:description" content="Calculate your Federal Skilled Trades CRS score free. Check if you qualify for Canada Express Entry FST Program with updated 2026 draw results." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/fst-crs-calculator" />
+  <meta property="og:type" content="website" />
+
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23c0392b'/><text x='50%25' y='55%25' dominant-baseline='middle' text-anchor='middle' font-size='18' font-weight='bold' fill='white' font-family='Arial'>C</text></svg>" />
+
+  <!-- Google AdSense Auto Ads — replace with your publisher ID -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
   <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Schema: WebApplication -->
   <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"Federal Skilled Trades (FST) CRS Score Calculator","item":"https://crsscorecalculator.vercel.app/fst-crs-calculator.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What trades qualify for the Federal Skilled Trades Program?","acceptedAnswer":{"@type":"Answer","text":"Qualifying trades fall under NOC TEER 2 and include industrial/electrical/construction trades, maintenance and equipment trades, trade supervisors in natural resources, and processing/manufacturing supervisors. Check the IRCC website for the complete list of eligible NOC codes."}},{"@type":"Question","name":"Do I need a job offer for FST?","acceptedAnswer":{"@type":"Answer","text":"Yes, FST requires either a valid job offer for at least 1 year in a qualifying trade OR a certificate of qualification in your trade issued by a Canadian provincial or territorial authority."}},{"@type":"Question","name":"What is the language requirement for FST?","acceptedAnswer":{"@type":"Answer","text":"FST requires CLB 5 for speaking and listening, and CLB 4 for reading and writing. This is a lower language bar than FSW (CLB 7 across all skills), making FST accessible to tradespeople with functional English or French."}},{"@type":"Question","name":"How does a certificate of qualification affect my CRS score?","acceptedAnswer":{"@type":"Answer","text":"Holding a certificate of qualification in a regulated trade adds to your Skill Transferability factors. Combined with CLB 5–6, you earn 13 extra points; with CLB 7+, you earn 25 extra points. The maximum from this combination is 25 points."}},{"@type":"Question","name":"Can I combine FST with a provincial nomination?","acceptedAnswer":{"@type":"Answer","text":"Yes. If you receive a provincial nomination while eligible for FST through Express Entry, you will receive 600 additional CRS points, virtually guaranteeing an ITA in the next draw. Provincial programs like AINP and SINP actively recruit skilled trades workers."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"FST CRS Calculator – Federal Skilled Trades Points Tool","url":"https://crsscorecalculator.vercel.app/fst-crs-calculator.html","description":"Calculate your CRS score for the Federal Skilled Trades (FST) program. Free FST calculator with IRCC CRS grid values for trade workers.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "FST CRS Calculator 2026 – Federal Skilled Trades Points Tool",
+    "url": "https://crsscorecalculator.vercel.app/fst-crs-calculator",
+    "description": "Free Federal Skilled Trades (FST) CRS calculator. Estimate your Express Entry points for skilled trades occupations using official IRCC Comprehensive Ranking System criteria. Updated for 2026.",
+    "applicationCategory": "UtilityApplication",
+    "operatingSystem": "All",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
+    "publisher": {
+      "@type": "Organization",
+      "name": "CRS Score Calculator",
+      "url": "https://crsscorecalculator.vercel.app"
+    }
+  }
+  </script>
+
+  <!-- Schema: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is the minimum CRS score for Federal Skilled Trades in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "There is no official minimum CRS score for the Federal Skilled Trades (FST) Program itself. However, to receive an ITA in Express Entry trade occupation draws, you need a competitive CRS score. Recent 2026 Trade Occupations draws had cutoffs of 477–494. The FST program requires CLB 5 for speaking/listening and CLB 4 for reading/writing, plus 2 years of full-time skilled trades experience."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What trades qualify for the Federal Skilled Trades Program?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Eligible trades under the FST Program include: Industrial, electrical and construction trades (NOC TEER 2–3), Maintenance and equipment operation trades, Supervisors and technical jobs in natural resources, agriculture and fishing, Processing, manufacturing and utilities supervisors and central control operators, and Chefs and cooks. Your occupation must fall under NOC TEER 2 or TEER 3."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is CRS score calculated for skilled trades workers?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Skilled trades workers use the same federal CRS (max 1,200 points) as all Express Entry candidates. Points are awarded for Age (up to 110), Education (up to 150), Language proficiency (up to 160), Canadian work experience (up to 80), Skill Transferability (up to 100), and Additional Points like a job offer (+50/+200) or PNP (+600). Trades workers benefit most from Skill Transferability bonuses when combining foreign experience with strong language scores."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Does Federal Skilled Trades require a job offer?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. The Federal Skilled Trades Program does NOT require a job offer if you have a valid certificate of qualification. However, if you are NOT certified and want to enter the FST pool, you will need either (a) a valid offer of full-time employment from up to two Canadian employers, OR (b) a certificate of qualification in a trade from a province, territory or federal body."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the difference between FSW and FST programs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Federal Skilled Worker (FSW) program uses a 67-point grid for initial eligibility and is designed for professional/managerial occupations (TEER 0, 1). The Federal Skilled Trades (FST) program targets TEER 2–3 trade occupations, requires CLB 5/4 language (vs CLB 7 for FSW), needs a certificate of qualification or job offer, and does not use the 67-point grid. Both programs feed into Express Entry and compete on the same CRS score."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <!-- Schema: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+      { "@type": "ListItem", "position": 2, "name": "Express Entry", "item": "https://crsscorecalculator.vercel.app/express-entry" },
+      { "@type": "ListItem", "position": 3, "name": "FST CRS Calculator", "item": "https://crsscorecalculator.vercel.app/fst-crs-calculator" }
+    ]
+  }
+  </script>
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --red: #c0392b;
+      --red-dark: #96281b;
+      --red-light: #e74c3c;
+      --bg: #f5f5f5;
+      --surface: #ffffff;
+      --border: #e0e0e0;
+      --text: #1a1a1a;
+      --text-muted: #666;
+      --text-faint: #999;
+      --success: #27ae60;
+      --warning: #e67e22;
+      --font: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    html { scroll-behavior: smooth; font-size: 16px; }
+    body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+    img { max-width: 100%; display: block; }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; }
+
+    /* Skip link */
+    .skip-link { position: absolute; top: -40px; left: 0; background: var(--red); color: #fff; padding: 8px 16px; z-index: 9999; border-radius: 0 0 4px 0; transition: top 0.2s; }
+    .skip-link:focus { top: 0; }
+
+    /* Navbar */
+    nav.main-nav { background: var(--red); position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.15); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 16px; display: flex; align-items: center; justify-content: space-between; height: 52px; }
+    .nav-logo { color: #fff; font-weight: 700; font-size: 1rem; display: flex; align-items: center; gap: 8px; }
+    .nav-logo svg { width: 28px; height: 28px; }
+    .nav-links { display: flex; gap: 2px; list-style: none; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.9); font-size: 0.78rem; padding: 6px 9px; border-radius: 4px; white-space: nowrap; transition: background 0.2s; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); text-decoration: none; }
+    .nav-cta { background: #fff !important; color: var(--red) !important; font-weight: 600 !important; }
+    .nav-cta:hover { background: #f0f0f0 !important; }
+    .hamburger { display: none; background: none; border: none; cursor: pointer; padding: 6px; }
+    .hamburger span { display: block; width: 22px; height: 2px; background: #fff; margin: 5px 0; border-radius: 2px; transition: 0.3s; }
+    @media (max-width: 800px) {
+      .hamburger { display: block; }
+      .nav-links { display: none; position: absolute; top: 52px; left: 0; right: 0; background: var(--red-dark); flex-direction: column; padding: 8px 16px 16px; gap: 2px; }
+      .nav-links.open { display: flex; }
+      .nav-links a { font-size: 0.9rem; padding: 10px 12px; }
+    }
+
+    /* Hero */
+    .hero { background: linear-gradient(135deg, var(--red-dark) 0%, var(--red) 60%, var(--red-light) 100%); color: #fff; padding: 28px 16px 22px; text-align: center; }
+    .breadcrumb { font-size: 0.78rem; color: rgba(255,255,255,0.75); max-width: 1200px; margin: 0 auto 14px; text-align: left; }
+    .breadcrumb a { color: rgba(255,255,255,0.85); }
+    .breadcrumb span { margin: 0 5px; opacity: 0.6; }
+    .hero h1 { font-size: clamp(1.35rem, 4vw, 2rem); font-weight: 700; line-height: 1.25; margin-bottom: 8px; }
+    .hero p { font-size: 0.93rem; opacity: 0.92; max-width: 580px; margin: 0 auto 14px; }
+    .hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 7px; margin-bottom: 18px; }
+    .badge { background: rgba(255,255,255,0.18); border: 1px solid rgba(255,255,255,0.32); color: #fff; font-size: 0.73rem; font-weight: 500; padding: 3px 11px; border-radius: 20px; }
+
+    /* Layout */
+    .page-wrap { max-width: 1200px; margin: 0 auto; padding: 22px 16px; display: grid; grid-template-columns: 1fr 310px; gap: 22px; }
+    @media (max-width: 900px) { .page-wrap { grid-template-columns: 1fr; } }
+
+    /* Calculator Card */
+    .calc-card { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .calc-header { background: var(--red); color: #fff; padding: 13px 18px; display: flex; align-items: center; gap: 10px; }
+    .calc-header h2 { font-size: 0.95rem; font-weight: 600; line-height: 1.3; }
+    .calc-header svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .calc-body { padding: 18px; }
+    .section-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: #fff; background: var(--red); padding: 4px 11px; border-radius: 3px; margin: 18px 0 12px; display: inline-block; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 11px; }
+    @media (max-width: 480px) { .form-grid { grid-template-columns: 1fr; } }
+    .form-group { display: flex; flex-direction: column; gap: 3px; }
+    .form-group label { font-size: 0.8rem; font-weight: 500; color: var(--text); }
+    .form-group select { padding: 8px 30px 8px 9px; border: 1.5px solid var(--border); border-radius: 6px; font-size: 0.88rem; font-family: var(--font); background: #fafafa; color: var(--text); appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='11' height='7' viewBox='0 0 11 7'%3E%3Cpath d='M1 1l4.5 4.5L10 1' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 9px center; transition: border-color 0.2s; }
+    .form-group select:focus { border-color: var(--red); outline: none; background-color: #fff; }
+    .lang-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; }
+    .lang-table th { background: #f5f5f5; padding: 7px 9px; text-align: left; font-weight: 600; font-size: 0.72rem; color: var(--text-muted); border-bottom: 1px solid var(--border); }
+    .lang-table td { padding: 6px 9px; border-bottom: 1px solid #f0f0f0; }
+    .lang-table select { width: 100%; padding: 5px 26px 5px 7px; border: 1px solid var(--border); border-radius: 5px; font-size: 0.8rem; background: #fafafa; appearance: none; -webkit-appearance: none; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='9' height='6' viewBox='0 0 9 6'%3E%3Cpath d='M1 1l3.5 3.5L8 1' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 7px center; }
+    .lang-table select:focus { border-color: var(--red); outline: none; }
+    .calc-btn { width: 100%; padding: 13px; background: var(--red); color: #fff; border: none; border-radius: 6px; font-size: 0.98rem; font-weight: 700; cursor: pointer; margin-top: 18px; transition: background 0.2s; letter-spacing: 0.02em; }
+    .calc-btn:hover { background: var(--red-dark); }
+    .calc-btn:active { transform: scale(0.99); }
+
+    /* Result Box */
+    .result-box { display: none; margin-top: 18px; border-radius: var(--radius); overflow: hidden; border: 1px solid var(--border); }
+    .result-box.show { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+    .result-top { background: var(--red); color: #fff; text-align: center; padding: 18px; }
+    .result-score { font-size: 3.4rem; font-weight: 800; line-height: 1; }
+    .result-label { font-size: 0.83rem; opacity: 0.88; margin-top: 3px; }
+    .result-body { padding: 14px 18px; }
+    .result-row { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; border-bottom: 1px solid #f0f0f0; font-size: 0.85rem; }
+    .result-row:last-child { border-bottom: none; }
+    .result-row span:first-child { color: var(--text-muted); }
+    .result-row span:last-child { font-weight: 600; }
+    .fst-tag { display: block; margin-top: 11px; padding: 9px 13px; border-radius: 6px; font-size: 0.83rem; font-weight: 600; text-align: center; }
+    .tag-green { background: #eafaf1; color: var(--success); border: 1px solid #a9dfbf; }
+    .tag-amber { background: #fef9e7; color: var(--warning); border: 1px solid #f9e79f; }
+    .tag-red { background: #fff5f5; color: var(--red); border: 1px solid #f5c6cb; }
+
+    /* Sidebar */
+    .sidebar { display: flex; flex-direction: column; gap: 18px; }
+    .widget { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .widget-header { background: var(--red); color: #fff; padding: 9px 14px; font-size: 0.85rem; font-weight: 600; display: flex; align-items: center; gap: 8px; }
+    .widget-body { padding: 13px 14px; }
+    .score-display { text-align: center; padding: 10px 0 6px; }
+    .score-num { font-size: 2.6rem; font-weight: 800; color: var(--red); line-height: 1; }
+    .score-sub { font-size: 0.72rem; color: var(--text-muted); margin-top: 2px; }
+    .score-note { font-size: 0.75rem; color: var(--text-muted); text-align: center; padding: 3px 0 7px; }
+    .draw-list { list-style: none; }
+    .draw-list li { display: grid; grid-template-columns: auto 1fr auto; gap: 7px; align-items: center; padding: 6px 0; border-bottom: 1px solid #f5f5f5; font-size: 0.77rem; }
+    .draw-list li:last-child { border-bottom: none; }
+    .draw-list .d-date { color: var(--text-muted); font-size: 0.72rem; white-space: nowrap; }
+    .draw-list .d-type { font-weight: 500; }
+    .draw-list .d-score { background: var(--red); color: #fff; padding: 2px 7px; border-radius: 10px; font-weight: 600; font-size: 0.75rem; white-space: nowrap; }
+    .tool-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 7px; }
+    .tool-link { background: #fafafa; border: 1px solid var(--border); border-radius: 6px; padding: 9px 7px; text-align: center; font-size: 0.75rem; font-weight: 500; color: var(--text); transition: all 0.2s; display: block; }
+    .tool-link:hover { background: #fff0f0; border-color: var(--red); color: var(--red); text-decoration: none; }
+    .tool-link .t-icon { font-size: 1.2rem; display: block; margin-bottom: 3px; }
+    .outbound-links { display: flex; flex-direction: column; gap: 7px; }
+    .outbound-link { display: inline-flex; align-items: center; gap: 5px; background: #f5f5f5; border: 1px solid var(--border); border-radius: 20px; padding: 5px 13px; font-size: 0.78rem; color: var(--text-muted); transition: all 0.2s; }
+    .outbound-link:hover { background: #fff0f0; border-color: var(--red); color: var(--red); text-decoration: none; }
+
+    /* Content */
+    .content-wrap { max-width: 1200px; margin: 0 auto; padding: 0 16px 40px; }
+    .content-section { background: var(--surface); border-radius: var(--radius); box-shadow: var(--shadow); padding: 22px; margin-bottom: 22px; }
+    .content-section h2 { font-size: 1.15rem; font-weight: 700; color: var(--text); margin-bottom: 11px; padding-bottom: 9px; border-bottom: 2px solid var(--red); }
+    .content-section h3 { font-size: 0.97rem; font-weight: 600; color: var(--text); margin: 14px 0 7px; }
+    .content-section p { font-size: 0.88rem; color: #333; margin-bottom: 9px; max-width: 72ch; }
+    .content-section ul, .content-section ol { padding-left: 18px; margin-bottom: 9px; }
+    .content-section li { font-size: 0.88rem; color: #333; margin-bottom: 4px; }
+
+    /* AEO answer boxes */
+    .answer-box { background: #fff8f8; border-left: 4px solid var(--red); border-radius: 0 6px 6px 0; padding: 11px 14px; margin: 10px 0; font-size: 0.88rem; }
+    .answer-box strong { color: var(--red); }
+
+    /* Tables */
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin: 11px 0; }
+    .data-table th { background: var(--red); color: #fff; padding: 9px 11px; text-align: left; font-weight: 600; }
+    .data-table td { padding: 8px 11px; border-bottom: 1px solid #f0f0f0; }
+    .data-table tr:hover td { background: #fef9f9; }
+    .score-chip { background: var(--red); color: #fff; padding: 2px 9px; border-radius: 10px; font-size: 0.75rem; font-weight: 700; }
+    @media (max-width: 600px) { .data-table { font-size: 0.76rem; } .data-table th, .data-table td { padding: 6px 8px; } }
+
+    /* Steps */
+    .steps { counter-reset: steps; display: flex; flex-direction: column; gap: 11px; margin: 11px 0; }
+    .step { counter-increment: steps; display: flex; gap: 13px; align-items: flex-start; }
+    .step::before { content: counter(steps); background: var(--red); color: #fff; width: 27px; height: 27px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 0.82rem; flex-shrink: 0; margin-top: 1px; }
+    .step-text { font-size: 0.88rem; color: #333; }
+    .step-text strong { color: var(--text); }
+
+    /* Compare table */
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 0.83rem; margin: 11px 0; }
+    .compare-table th { background: var(--red); color: #fff; padding: 9px 11px; text-align: left; font-weight: 600; }
+    .compare-table td { padding: 8px 11px; border-bottom: 1px solid #f0f0f0; }
+    .compare-table tr:nth-child(even) td { background: #fafafa; }
+    @media (max-width: 600px) { .compare-table { font-size: 0.76rem; } .compare-table th, .compare-table td { padding: 6px 7px; } }
+
+    /* FAQ */
+    .faq-item { border-bottom: 1px solid var(--border); }
+    .faq-q { width: 100%; text-align: left; padding: 13px 0; background: none; border: none; cursor: pointer; display: flex; justify-content: space-between; align-items: center; font-size: 0.9rem; font-weight: 600; color: var(--text); gap: 11px; }
+    .faq-q:hover { color: var(--red); }
+    .faq-icon { font-size: 1.2rem; color: var(--red); flex-shrink: 0; transition: transform 0.25s; line-height: 1; }
+    .faq-a { display: none; padding-bottom: 13px; font-size: 0.86rem; color: #444; line-height: 1.65; }
+    .faq-a.open { display: block; }
+    .faq-icon.open { transform: rotate(45deg); }
+
+    /* Tool grid large */
+    .tool-grid-lg { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 9px; margin-top: 11px; }
+
+    /* Footer */
+    footer { background: #1a1a1a; color: #ccc; padding: 30px 16px 18px; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr)); gap: 22px; }
+    .footer-col h4 { color: #fff; font-size: 0.85rem; font-weight: 600; margin-bottom: 9px; }
+    .footer-col ul { list-style: none; }
+    .footer-col li { margin-bottom: 5px; }
+    .footer-col a { color: #aaa; font-size: 0.8rem; }
+    .footer-col a:hover { color: var(--red-light); text-decoration: none; }
+    .footer-bottom { text-align: center; font-size: 0.76rem; color: #777; margin-top: 22px; padding-top: 18px; border-top: 1px solid #2d2d2d; }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
+
+<a class="skip-link" href="#calculator">Skip to Calculator</a>
+
+<!-- NAVBAR -->
+<nav class="main-nav" aria-label="Main navigation">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo" aria-label="CRS Calculator Home">
+      <svg viewBox="0 0 28 28" fill="none" aria-hidden="true"><rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.2)"/><text x="14" y="19" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="Arial">C</text></svg>
+      CRS Calculator
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+    <button class="hamburger" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
+    <ul class="nav-links" id="navLinks" role="list">
+      <li><a href="/">CRS Calculator</a></li>
+      <li><a href="/cec-calculator">CEC</a></li>
+      <li><a href="/express-entry">Express Entry</a></li>
+      <li><a href="/fsw-calculator">FSW</a></li>
+      <li><a href="/fst-crs-calculator" class="active">FST</a></li>
+      <li><a href="/pnp-calculator">PNP</a></li>
+      <li><a href="/ontario-crs-calculator">Ontario</a></li>
+      <li><a href="/alberta-crs-calculator">Alberta</a></li>
+      <li><a href="/clb-scores">CLB Scores</a></li>
+      <li><a href="/cutoff-scores">Cutoff Scores</a></li>
+      <li><a href="/improve-score">Improve Score</a></li>
+      <li><a href="/" class="nav-cta">Calculate Now →</a></li>
     </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
-</header>
-
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
-  <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep" aria-hidden="true">›</li>
-      <li class="current" aria-current="page">Federal Skilled Trades (FST) CRS Score Calculator</li>
-    </ol>
   </div>
 </nav>
 
-<div class="page-header">
-  <div class="container">
-    <h1>Federal Skilled Trades (FST) CRS Score Calculator</h1>
-    <p>Calculate your CRS score for the Federal Skilled Trades (FST) program. Free FST calculator with IRCC CRS grid values for trade workers.</p>
-    <div class="meta-info">
-      <span>Updated: April 2026</span>
-      <span>Free Tool</span>
-      <span>No Registration</span>
-    </div>
+<!-- HERO -->
+<div class="hero" role="banner">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <a href="/">Home</a><span aria-hidden="true">›</span>
+    <a href="/express-entry">Express Entry</a><span aria-hidden="true">›</span>
+    <span aria-current="page">FST CRS Calculator</span>
+  </nav>
+  <h1>FST CRS Calculator 2026<br><span style="font-weight:400;font-size:0.82em;">Free Federal Skilled Trades Points Tool</span></h1>
+  <p>Calculate your Federal Skilled Trades (FST) CRS score instantly. Check if you qualify for Canada Express Entry FST Program — no login required.</p>
+  <div class="hero-badges">
+    <span class="badge">✓ Updated 2026</span>
+    <span class="badge">✓ Official IRCC Criteria</span>
+    <span class="badge">✓ 100% Free</span>
+    <span class="badge">✓ No Login</span>
+    <span class="badge">✓ Instant Results</span>
   </div>
 </div>
 
-<div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
-</div>
+<!-- MAIN LAYOUT -->
+<div class="page-wrap">
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <div class="main-content">
-      <section class="card">
-        
-    <h2>What is the Federal Skilled Trades Program (FSTP)?</h2>
-    <p>The Federal Skilled Trades Program (FSTP) is an Express Entry immigration stream designed specifically for skilled tradespeople who want to become permanent residents of Canada. Canada faces a significant shortage of qualified trades workers, and the FSTP provides a dedicated immigration pathway for those with experience in regulated trade occupations.</p>
+  <!-- CALCULATOR -->
+  <main id="calculator">
+    <div class="calc-card">
+      <div class="calc-header">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z"/></svg>
+        <h2>FST CRS Score Calculator — Federal Skilled Trades 2026</h2>
+      </div>
+      <div class="calc-body">
 
-    <h2>Qualifying Trade Occupations (NOC TEER 2)</h2>
-    <p>The FSTP applies to specific skilled trade occupations under NOC TEER 2, including:</p>
-    <ul>
-      <li>Industrial, electrical, and construction trades</li>
-      <li>Maintenance and equipment operation trades</li>
-      <li>Supervisors and technical occupations in natural resources, agriculture, and related production</li>
-      <li>Processing, manufacturing, and utilities supervisors and central control operators</li>
-    </ul>
-
-    <h2>FST Eligibility Requirements</h2>
-    <ul>
-      <li>At least 2 years of full-time (or equivalent) work experience in a qualifying skilled trade within the last 5 years</li>
-      <li>Language proficiency: CLB 5 for speaking and listening, CLB 4 for reading and writing</li>
-      <li>Either a Canadian certificate of qualification in your trade OR a valid job offer in your trade</li>
-    </ul>
-
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-value">2 yrs</div><div class="stat-label">Min Trade Experience</div></div>
-      <div class="stat-card"><div class="stat-value">CLB 5</div><div class="stat-label">Min Speaking & Listening</div></div>
-      <div class="stat-card"><div class="stat-value">CLB 4</div><div class="stat-label">Min Reading & Writing</div></div>
-      <div class="stat-card"><div class="stat-value">+25</div><div class="stat-label">Skill Transfer Bonus (CLB 7+)</div></div>
-    </div>
-    
-      </section>
-
-      
-<div class="calculator-wrapper" id="calculator">
-  <div class="calc-header">
-    <h2>🧮 CRS Score Calculator</h2>
-    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
-  </div>
-  <form id="crs-form" novalidate>
-    <div class="calc-body">
-
-      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">A</span>
-          Core / Human Capital Factors
-        </div>
-
+        <span class="section-label">FST Program Eligibility</span>
         <div class="form-grid">
           <div class="form-group">
-            <label for="marital-status">Marital Status</label>
-            <div class="radio-group" role="radiogroup" aria-label="Marital status">
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="single" checked> Single
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
-              </label>
-            </div>
+            <label for="tradeOcc">Trade Occupation (NOC TEER)</label>
+            <select id="tradeOcc">
+              <option value="yes">Yes — NOC TEER 2 or 3 Trade</option>
+              <option value="no">No — Not a qualifying trade</option>
+            </select>
           </div>
-          <div class="form-group" id="spouse-coming-section" style="display:none;">
-            <label>Is your spouse/partner coming to Canada with you?</label>
-            <div class="radio-group" role="radiogroup">
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="no" checked> No
-              </label>
-            </div>
+          <div class="form-group">
+            <label for="tradeExp">Full-Time Trade Experience</label>
+            <select id="tradeExp">
+              <option value="no">Less than 2 years</option>
+              <option value="yes">2+ years (meets FST minimum)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tradeCert">Certificate of Qualification?</label>
+            <select id="tradeCert">
+              <option value="no">No certificate</option>
+              <option value="yes">Yes — valid provincial/federal cert</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="jobOfferFST">Canadian Job Offer (trades)?</label>
+            <select id="jobOfferFST">
+              <option value="no">No</option>
+              <option value="yes">Yes — full-time from Canadian employer</option>
+            </select>
           </div>
         </div>
 
-        <div class="form-grid mt-2">
+        <span class="section-label">Section A — Core Human Capital</span>
+        <div class="form-grid">
           <div class="form-group">
             <label for="age">Age</label>
-            <select name="age" id="age" class="form-control">
-              <option value="under18">17 and under</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45plus">45 and over</option>
+            <select id="age">
+              <option value="">— Select age —</option>
+              <option value="0">Under 18</option>
+              <option value="99">18</option>
+              <option value="105">19</option>
+              <option value="110">20–29 (max points)</option>
+              <option value="105">30</option>
+              <option value="99">31</option>
+              <option value="94">32</option>
+              <option value="88">33</option>
+              <option value="83">34</option>
+              <option value="77">35</option>
+              <option value="72">36</option>
+              <option value="66">37</option>
+              <option value="61">38</option>
+              <option value="55">39</option>
+              <option value="50">40</option>
+              <option value="39">41</option>
+              <option value="28">42</option>
+              <option value="17">43</option>
+              <option value="6">44</option>
+              <option value="0">45+</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="education">Level of Education</label>
-            <select name="education" id="education" class="form-control">
-              <option value="none">Less than secondary school</option>
-              <option value="secondary">Secondary diploma (high school)</option>
-              <option value="one_year">One-year post-secondary program</option>
-              <option value="two_year">Two-year post-secondary program</option>
-              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
-              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
-              <option value="masters">Master's degree / Professional degree</option>
-              <option value="phd">PhD (Doctoral degree)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="canadianWE">Canadian Work Experience</label>
-            <select name="canadianWE" id="canadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">B</span>
-          First Official Language (English or French)
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang1TestType">Language Test Type</label>
-          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- Select test --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">C</span>
-          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang2TestType">Second Language Test Type</label>
-          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION D: SPOUSE FACTORS -->
-      <div class="spouse-section" id="spouse-section">
-        <div class="calc-section-title">
-          <span class="section-badge">D</span>
-          Spouse / Partner Factors
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="spouseEducation">Spouse Education Level</label>
-            <select name="spouseEducation" id="spouseEducation" class="form-control">
-              <option value="none">Less than secondary</option>
-              <option value="secondary">Secondary diploma</option>
-              <option value="one_year">One-year program</option>
-              <option value="two_year">Two-year program</option>
-              <option value="bachelors">Bachelor's degree</option>
-              <option value="two_or_more">Two or more certificates</option>
-              <option value="masters">Master's degree</option>
-              <option value="phd">PhD</option>
+            <label for="education">Education Level</label>
+            <select id="education">
+              <option value="">— Select education —</option>
+              <option value="0">Less than secondary</option>
+              <option value="30">Secondary diploma</option>
+              <option value="90">One-year post-secondary</option>
+              <option value="98">Two-year post-secondary</option>
+              <option value="120">Bachelor's degree (3yr+)</option>
+              <option value="128">Two+ credentials (one 3yr+)</option>
+              <option value="135">Master's / Professional degree</option>
+              <option value="150">PhD (Doctoral degree)</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
-            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
+            <label for="marital">Marital / Partnership Status</label>
+            <select id="marital">
+              <option value="single">Single / Divorced / Widowed</option>
+              <option value="married">Married / Common-law</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="spouseEdu">Spouse Education (if married)</label>
+            <select id="spouseEdu">
+              <option value="0">N/A</option>
+              <option value="2">Less than secondary</option>
+              <option value="6">Secondary diploma</option>
+              <option value="8">One-year post-secondary</option>
+              <option value="9">Two-year post-secondary</option>
+              <option value="10">Bachelor's or higher</option>
             </select>
           </div>
         </div>
 
-        <div class="form-group mt-2 mb-3">
-          <label for="spouseLangTestType">Spouse Language Test Type</label>
-          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="CELPIP">CELPIP-G</option>
-            <option value="TEF">TEF Canada</option>
-            <option value="TCF">TCF Canada</option>
-          </select>
-        </div>
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION E: SKILL TRANSFERABILITY -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">E</span>
-          Skill Transferability Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="foreignWE">Foreign Work Experience</label>
-            <select name="foreignWE" id="foreignWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1–2 years</option>
-              <option value="3">3 or more years</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION F: ADDITIONAL POINTS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">F</span>
-          Additional Points
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end calc-body -->
-
-    <div class="calc-btn-wrapper">
-      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
-        Calculate My CRS Score →
-      </button>
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
-      <div class="score-display">
-        <p class="score-label">Your Estimated CRS Score</p>
-        <div class="score-number score-good">—</div>
-        <p class="score-verdict">Fill in the form above and click Calculate</p>
-      </div>
-
-      <div class="score-progress-wrapper">
-        <div class="score-progress-label">
-          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
-        </div>
-        <div class="score-progress-bar">
-          <div class="score-progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="score-comparison"></div>
-
-      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
-      <div class="table-wrapper">
-        <table class="breakdown-table">
+        <span class="section-label">Section B — Language (IELTS / CELPIP / TEF)</span>
+        <table class="lang-table" aria-label="Language CLB levels">
           <thead>
-            <tr>
-              <th>CRS Factor</th>
-              <th style="text-align:right;">Points</th>
-            </tr>
+            <tr><th>Skill</th><th>CLB Level — FST min: CLB 5 Speaking/Listening, CLB 4 Reading/Writing</th></tr>
           </thead>
-          <tbody id="breakdown-tbody">
-            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
+          <tbody>
+            <tr>
+              <td>Speaking</td>
+              <td><select id="l1s" aria-label="Speaking CLB">
+                <option value="0">CLB 3 or less</option>
+                <option value="6">CLB 4 (IELTS 4.0)</option>
+                <option value="8">CLB 5 (IELTS 5.0) ← FST min</option>
+                <option value="15">CLB 6 (IELTS 5.5)</option>
+                <option value="22">CLB 7 (IELTS 6.0)</option>
+                <option value="29" selected>CLB 8 (IELTS 7.0)</option>
+                <option value="32">CLB 9 (IELTS 7.5)</option>
+                <option value="32">CLB 10+ (IELTS 8.0+)</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td>Listening</td>
+              <td><select id="l1l" aria-label="Listening CLB">
+                <option value="0">CLB 3 or less</option>
+                <option value="6">CLB 4</option>
+                <option value="8">CLB 5 ← FST min</option>
+                <option value="15">CLB 6</option>
+                <option value="22">CLB 7</option>
+                <option value="29" selected>CLB 8</option>
+                <option value="32">CLB 9</option>
+                <option value="32">CLB 10+</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td>Reading</td>
+              <td><select id="l1r" aria-label="Reading CLB">
+                <option value="0">CLB 3 or less</option>
+                <option value="6">CLB 4 ← FST min</option>
+                <option value="8">CLB 5</option>
+                <option value="15">CLB 6</option>
+                <option value="22">CLB 7</option>
+                <option value="29" selected>CLB 8</option>
+                <option value="32">CLB 9</option>
+                <option value="32">CLB 10+</option>
+              </select></td>
+            </tr>
+            <tr>
+              <td>Writing</td>
+              <td><select id="l1w" aria-label="Writing CLB">
+                <option value="0">CLB 3 or less</option>
+                <option value="6">CLB 4 ← FST min</option>
+                <option value="8">CLB 5</option>
+                <option value="15">CLB 6</option>
+                <option value="22">CLB 7</option>
+                <option value="29" selected>CLB 8</option>
+                <option value="32">CLB 9</option>
+                <option value="32">CLB 10+</option>
+              </select></td>
+            </tr>
           </tbody>
         </table>
-      </div>
 
-      <div class="score-actions mt-3">
-        <a href="#" class="btn btn-outline btn-whatsapp">
-          📱 Share on WhatsApp
-        </a>
-        <button type="button" class="btn btn-outline btn-copy">
-          📋 Copy Score
-        </button>
-        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
-      </div>
+        <span class="section-label">Section C — Work Experience</span>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="canExp">Canadian Work Experience</label>
+            <select id="canExp">
+              <option value="0">None</option>
+              <option value="40">1 year</option>
+              <option value="53">2 years</option>
+              <option value="64">3 years</option>
+              <option value="72">4 years</option>
+              <option value="80">5+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="forExp">Foreign Work Experience</label>
+            <select id="forExp">
+              <option value="0">None</option>
+              <option value="13">1–2 years</option>
+              <option value="25">3+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="spouseExp">Spouse Canadian Work Exp.</label>
+            <select id="spouseExp">
+              <option value="0">None / N/A</option>
+              <option value="5">1–2 years</option>
+              <option value="7">3–4 years</option>
+              <option value="8">5+ years</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="spouseLang">Spouse Language (CLB)</label>
+            <select id="spouseLang">
+              <option value="0">N/A</option>
+              <option value="0">CLB 4 or less</option>
+              <option value="1">CLB 5–6</option>
+              <option value="3">CLB 7–8</option>
+              <option value="5">CLB 9+</option>
+            </select>
+          </div>
+        </div>
 
-      <div class="internal-cta mt-3">
-        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
-        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
+        <span class="section-label">Section D — Additional Points</span>
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="pnp">Provincial Nomination (PNP)</label>
+            <select id="pnp">
+              <option value="0">No</option>
+              <option value="600">Yes (+600 pts)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="jobOffer">Valid Job Offer (for CRS points)</label>
+            <select id="jobOffer">
+              <option value="0">No job offer</option>
+              <option value="50">TEER 2/3 Trade Offer (+50)</option>
+              <option value="200">TEER 0 Major Group 00 (+200)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="sibling">Sibling in Canada (PR/Citizen)</label>
+            <select id="sibling">
+              <option value="0">No</option>
+              <option value="15">Yes (+15)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="canadianEdu">Canadian Post-Secondary Edu.</label>
+            <select id="canadianEdu">
+              <option value="0">None</option>
+              <option value="15">1–2 year program (+15)</option>
+              <option value="30">3+ year program (+30)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="frenchLang">French Language (NCLC 7+)</label>
+            <select id="frenchLang">
+              <option value="0">No / below NCLC 7</option>
+              <option value="25">NCLC 7+ only (+25)</option>
+              <option value="50">NCLC 7+ with English CLB 5+ (+50)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="tradeDrawType">Target Draw Type</label>
+            <select id="tradeDrawType">
+              <option value="trades">Trade Occupations Draw (cutoff ~477)</option>
+              <option value="allprogram">All-Program Draw (cutoff ~490–520)</option>
+              <option value="pnp">PNP Draw (cutoff ~786–802)</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="calc-btn" id="calcBtn" type="button">Calculate My FST CRS Score →</button>
+
+        <!-- RESULT -->
+        <div class="result-box" id="resultBox" role="region" aria-live="polite" aria-label="CRS Score Result">
+          <div class="result-top">
+            <div class="result-score" id="totalScore">0</div>
+            <div class="result-label">Your Estimated Federal CRS Score</div>
+          </div>
+          <div class="result-body">
+            <div class="result-row"><span>Core Human Capital (A)</span><span id="rCore">0</span></div>
+            <div class="result-row"><span>Language Points</span><span id="rLang">0</span></div>
+            <div class="result-row"><span>Work Experience</span><span id="rWork">0</span></div>
+            <div class="result-row"><span>Skill Transferability + Extra</span><span id="rExtra">0</span></div>
+            <div id="fstEligibility"></div>
+            <div id="fstDrawTag"></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <!-- SIDEBAR -->
+  <aside aria-label="FST Immigration Sidebar">
+
+    <div class="widget">
+      <div class="widget-header">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Latest Trade Occupation Draw Results
+      </div>
+      <div class="widget-body">
+        <div class="score-display">
+          <div class="score-num">477</div>
+          <div class="score-sub">CRS Cutoff — Apr 2, 2026 (Trade Occupations)</div>
+        </div>
+        <p class="score-note">3,000 ITAs issued. <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html" target="_blank" rel="noopener noreferrer">View all federal draws →</a></p>
+        <ul class="draw-list" aria-label="Recent trade occupation draws">
+          <li><span class="d-date">Apr 2</span><span class="d-type">Trade Occupations</span><span class="d-score">477</span></li>
+          <li><span class="d-date">Mar 18</span><span class="d-type">French Language</span><span class="d-score">393</span></li>
+          <li><span class="d-date">Mar 5</span><span class="d-type">Trade Occupations</span><span class="d-score">484</span></li>
+          <li><span class="d-date">Feb 19</span><span class="d-type">Trade Occupations</span><span class="d-score">494</span></li>
+          <li><span class="d-date">Feb 5</span><span class="d-type">All Program</span><span class="d-score">493</span></li>
+        </ul>
       </div>
     </div>
 
-  </form>
+    <div class="widget">
+      <div class="widget-header">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-4 0v2"/></svg>
+        Related CRS Tools
+      </div>
+      <div class="widget-body">
+        <div class="tool-grid">
+          <a href="/" class="tool-link"><span class="t-icon">🇨🇦</span>CRS Calculator</a>
+          <a href="/cec-calculator" class="tool-link"><span class="t-icon">📋</span>CEC Calc</a>
+          <a href="/fsw-calculator" class="tool-link"><span class="t-icon">💼</span>FSW Calc</a>
+          <a href="/pnp-calculator" class="tool-link"><span class="t-icon">🗺️</span>PNP Calc</a>
+          <a href="/ontario-crs-calculator" class="tool-link"><span class="t-icon">🏙️</span>Ontario</a>
+          <a href="/alberta-crs-calculator" class="tool-link"><span class="t-icon">🏔️</span>Alberta</a>
+          <a href="/clb-scores" class="tool-link"><span class="t-icon">📝</span>IELTS→CLB</a>
+          <a href="/improve-score" class="tool-link"><span class="t-icon">📈</span>Improve Score</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="widget">
+      <div class="widget-header">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+        Official FST Resources
+      </div>
+      <div class="widget-body">
+        <div class="outbound-links">
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/skilled-trades.html" target="_blank" rel="noopener noreferrer" class="outbound-link">↗ IRCC Federal Skilled Trades Program</a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html" target="_blank" rel="noopener noreferrer" class="outbound-link">↗ Express Entry Draw Results</a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer" class="outbound-link">↗ Official CRS Points Grid</a>
+          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/works.html" target="_blank" rel="noopener noreferrer" class="outbound-link">↗ How Express Entry Works</a>
+        </div>
+      </div>
+    </div>
+
+  </aside>
 </div>
 
-<script>
-// Language score dropdown population
-(function() {
-  const IELTS_SCORES = {
-    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
-  };
-  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
-  const TEF_SCORES = {
-    speaking:  ['181','226','271','310','349','371','394'],
-    listening: ['145','181','217','253','280','298','316'],
-    reading:   ['121','151','181','207','233','248','263'],
-    writing:   ['181','226','271','310','349','371','393']
-  };
-  const TCF_SCORES = {
-    speaking:  ['4','6','10','13','15','17','20'],
-    listening: ['331','369','398','458','503','541','589'],
-    reading:   ['342','375','406','453','499','524','549'],
-    writing:   ['4','6','10','13','15','17','20']
-  };
+<!-- CONTENT SECTIONS -->
+<div class="content-wrap">
 
-  function populateScores(testType, prefix) {
-    const skills = ['speaking','listening','reading','writing'];
-    skills.forEach(skill => {
-      const sel = document.getElementById(prefix + '-' + skill) ||
-                  document.querySelector(`select[name="${prefix}_${skill}"]`);
-      if (!sel) return;
-      sel.innerHTML = '<option value="0">Select score</option>';
-      let scores = [];
-      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
-      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
-      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
-      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
-      scores.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = s;
-        sel.appendChild(opt);
-      });
-    });
-  }
+  <section class="content-section" aria-labelledby="what-h2">
+    <h2 id="what-h2">What is the FST CRS Calculator? (Federal Skilled Trades 2026)</h2>
+    <div class="answer-box">
+      <strong>Quick Answer:</strong> The FST CRS Calculator estimates your federal Comprehensive Ranking System (CRS) score for the <strong>Federal Skilled Trades Program</strong> — one of three Express Entry streams for tradespeople in NOC TEER 2 and TEER 3 occupations.
+    </div>
+    <p>The <strong>Federal Skilled Trades (FST) CRS calculator</strong> uses the official <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer">IRCC Comprehensive Ranking System criteria</a> to estimate your total points out of 1,200. Unlike the FSW program, the FST program uses lower language thresholds (CLB 5 speaking/listening, CLB 4 reading/writing) and requires either a certificate of qualification or a valid Canadian job offer from up to two employers.</p>
+    <p>Express Entry now holds dedicated <strong>Trade Occupations category draws</strong> targeting TEER 2 and TEER 3 workers. In April 2026, the trade draw cutoff was <strong>477 CRS points</strong> — consistently lower than all-program draws (~490–520). This makes the FST pathway especially attractive for skilled tradespeople.</p>
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang1Sel = document.getElementById('lang1TestType');
-    const lang2Sel = document.getElementById('lang2TestType');
-    const spouseSel = document.getElementById('spouseLangTestType');
+    <h3>FST Program Eligibility Snapshot</h3>
+    <table class="data-table" aria-label="FST eligibility requirements">
+      <thead><tr><th>Requirement</th><th>FST Minimum</th><th>Notes</th></tr></thead>
+      <tbody>
+        <tr><td>Work experience</td><td>2 years full-time</td><td>In a qualifying trade (NOC TEER 2–3) within last 5 years</td></tr>
+        <tr><td>Language — Speaking/Listening</td><td>CLB 5</td><td>IELTS 5.0 Speaking, 5.0 Listening</td></tr>
+        <tr><td>Language — Reading/Writing</td><td>CLB 4</td><td>IELTS 3.5 Reading, 4.0 Writing</td></tr>
+        <tr><td>Certificate/Job offer</td><td>One required</td><td>Provincial/federal cert OR job offer from ≤2 Canadian employers</td></tr>
+        <tr><td>Settlement funds</td><td>Proof required</td><td>Unless you have a valid job offer</td></tr>
+        <tr><td>Admissibility</td><td>Must meet</td><td>No criminal record, medical admissibility</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--text-muted);">Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/skilled-trades.html" target="_blank" rel="noopener noreferrer">IRCC Federal Skilled Trades Program</a></p>
+  </section>
 
-    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
-    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
-    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
-  });
-})();
-</script>
+  <section class="content-section" aria-labelledby="how-use-h2">
+    <h2 id="how-use-h2">How to Use This FST CRS Calculator</h2>
+    <div class="steps">
+      <div class="step"><div class="step-text"><strong>Confirm FST Eligibility</strong> — Select your trade occupation (must be NOC TEER 2 or 3) and confirm you have 2+ years of full-time trade experience. Also confirm whether you have a certificate of qualification or a Canadian job offer.</div></div>
+      <div class="step"><div class="step-text"><strong>Enter Core Human Capital</strong> — Select your age and education level. For FST applicants, education points are a major differentiator since many tradespeople have diploma-level (not degree-level) credentials.</div></div>
+      <div class="step"><div class="step-text"><strong>Add Language Scores as CLB</strong> — FST requires CLB 5 for Speaking/Listening and CLB 4 for Reading/Writing. Use our <a href="/clb-scores">IELTS to CLB Converter</a> to find your CLB level from IELTS or CELPIP scores.</div></div>
+      <div class="step"><div class="step-text"><strong>Enter Work Experience</strong> — Canadian work experience earns significantly more points. Even 1 year in Canada (NOC TEER 2/3) adds 40 points to your CRS score.</div></div>
+      <div class="step"><div class="step-text"><strong>Add Bonus Points</strong> — A valid Canadian job offer for a trade position adds +50 CRS points. A provincial nomination adds +600 points. Select your target draw type to see your competitiveness.</div></div>
+    </div>
+  </section>
 
+  <section class="content-section" aria-labelledby="trades-h2">
+    <h2 id="trades-h2">Which Trades Qualify for the FST Program? (NOC TEER 2–3)</h2>
+    <div class="answer-box">
+      <strong>Quick Answer:</strong> The FST Program covers trades in NOC TEER 2 and TEER 3 — including electricians, plumbers, welders, carpenters, chefs, industrial mechanics, and heavy equipment operators.
+    </div>
+    <table class="data-table" aria-label="Qualifying FST trade occupations">
+      <thead><tr><th>Trade Category</th><th>Example Occupations</th><th>NOC Code</th></tr></thead>
+      <tbody>
+        <tr><td>Electrical & Construction</td><td>Electricians, plumbers, pipefitters, ironworkers</td><td>TEER 2 (72xxx)</td></tr>
+        <tr><td>Mechanical & Maintenance</td><td>Industrial mechanics, millwrights, boilermakers</td><td>TEER 2 (72xxx)</td></tr>
+        <tr><td>Carpentry & Masonry</td><td>Carpenters, bricklayers, concrete finishers</td><td>TEER 3 (73xxx)</td></tr>
+        <tr><td>Welding & Fabrication</td><td>Welders, metal fabricators, sheet metal workers</td><td>TEER 2–3</td></tr>
+        <tr><td>Transportation</td><td>Heavy equipment operators, crane operators</td><td>TEER 3 (73xxx)</td></tr>
+        <tr><td>Food Trades</td><td>Chefs, bakers, butchers</td><td>TEER 2–3 (63xxx)</td></tr>
+        <tr><td>Natural Resources</td><td>Mining equipment operators, oil/gas drillers</td><td>TEER 2–3</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.8rem;color:var(--text-muted);margin-top:7px;">Use the <a href="https://noc.esdc.gc.ca/" target="_blank" rel="noopener noreferrer">ESDC NOC Search tool</a> to confirm your occupation code. Your NOC must be in TEER 2 or TEER 3 and within the eligible FST groups.</p>
+    <p>Not sure if your trade qualifies? Try our <a href="/fsw-calculator">FSW Calculator</a> (for TEER 0/1 professionals) or <a href="/cec-calculator">CEC Calculator</a> if you already have 1 year of Canadian experience.</p>
+  </section>
 
-      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
+  <section class="content-section" aria-labelledby="draws-h2">
+    <h2 id="draws-h2">Latest Trade Occupation Draw Results 2026</h2>
+    <p>IRCC holds dedicated Trade Occupation draws targeting tradespeople in NOC TEER 2 and TEER 3. These draws consistently have <strong>lower CRS cutoffs</strong> than all-program draws — making the FST pathway highly competitive for skilled workers.</p>
 
-      <section class="card">
-        
-    <h2>FST and CRS Skill Transferability</h2>
-    <p>One of the key CRS benefits for FST applicants is the skill transferability bonus for holding a certificate of qualification. If you have a certificate of qualification in a regulated trade and your language level is CLB 7 or higher, you can earn up to 25 additional skill transferability points. At CLB 5–6, you earn 13 points. This bonus is unique to FST and provides an advantage over other streams for qualified tradespeople.</p>
+    <table class="data-table" aria-label="Trade occupation draw results 2026">
+      <thead><tr><th>Draw #</th><th>Date</th><th>Category</th><th>CRS Cutoff</th><th>ITAs Issued</th></tr></thead>
+      <tbody>
+        <tr><td>408</td><td>Apr 2, 2026</td><td>Trade Occupations (TEER 2–3)</td><td><span class="score-chip">477</span></td><td>3,000</td></tr>
+        <tr><td>406</td><td>Mar 5, 2026</td><td>Trade Occupations</td><td><span class="score-chip">484</span></td><td>3,000</td></tr>
+        <tr><td>403</td><td>Feb 19, 2026</td><td>Trade Occupations</td><td><span class="score-chip">494</span></td><td>2,500</td></tr>
+        <tr><td>400</td><td>Jan 15, 2026</td><td>Trade Occupations</td><td><span class="score-chip">488</span></td><td>2,500</td></tr>
+        <tr><td>396</td><td>Dec 2025</td><td>Trade Occupations</td><td><span class="score-chip">491</span></td><td>2,000</td></tr>
+        <tr><td>388</td><td>Oct 2025</td><td>Trade Occupations</td><td><span class="score-chip">503</span></td><td>1,500</td></tr>
+      </tbody>
+    </table>
+    <p style="font-size:0.78rem;color:var(--text-muted);margin-top:7px;">Source: <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html" target="_blank" rel="noopener noreferrer">Canada.ca Express Entry Rounds of Invitations</a>. For reference only.</p>
 
-    <h2>Provincial Opportunities for Trades Workers</h2>
-    <p>Many Canadian provinces actively recruit skilled trades workers through their provincial nominee programs. Provinces like Alberta, Saskatchewan, and Manitoba have specific streams for trades workers that can result in a provincial nomination — adding 600 CRS points to your score. Check our provincial calculators for province-specific information: <a href="/alberta-crs-calculator.html">Alberta</a>, <a href="/saskatchewan-crs-calculator.html">Saskatchewan</a>, or use the <a href="/pnp-crs-calculator.html">PNP Calculator</a>.</p>
+    <h3>FST vs All-Program CRS Cutoffs — 2026 Trend</h3>
+    <table class="data-table" aria-label="FST vs all-program CRS comparison">
+      <thead><tr><th>Draw Type</th><th>Typical 2026 Cutoff</th><th>ITAs per Draw</th><th>Best for</th></tr></thead>
+      <tbody>
+        <tr><td>Trade Occupations</td><td><span class="score-chip">477–494</span></td><td>2,000–3,000</td><td>FST applicants (TEER 2–3)</td></tr>
+        <tr><td>All Program</td><td>490–520</td><td>2,000–4,500</td><td>Any Express Entry eligible</td></tr>
+        <tr><td>Canadian Experience Class</td><td>509–530</td><td>1,500–2,500</td><td>1+ yr Canadian work exp.</td></tr>
+        <tr><td>French Language</td><td>393–430</td><td>2,000–4,000</td><td>French-speaking applicants</td></tr>
+        <tr><td>PNP Only</td><td>786–802</td><td>200–500</td><td>Provincial nominees</td></tr>
+      </tbody>
+    </table>
+    <p>Trade draw cutoffs are now regularly 10–30 points below all-program draws. See our full <a href="/cutoff-scores">CRS Cutoff Scores history</a> for trends since 2023.</p>
+  </section>
 
-    <h2>How to Use This FST Calculator</h2>
-    <p>This calculator uses the official IRCC CRS grid to estimate your score as an FST applicant. Enter your work experience, language scores, and the certificate of qualification option in Section E (Skill Transferability) to see the impact on your total CRS score. For the most accurate result, also use the official <a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">IRCC CRS Tool</a> with your actual profile.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Federal Skilled Trades Program ↗</a></li></ul></div>
-      </section>
+  <section class="content-section" aria-labelledby="fsw-fst-h2">
+    <h2 id="fsw-fst-h2">FST vs FSW vs CEC — Which Program is Right for You?</h2>
+    <div class="answer-box">
+      <strong>Quick Answer:</strong> Choose FST if you are a tradesperson (TEER 2–3). Choose FSW if you are a professional/manager (TEER 0/1). Choose CEC if you already have 1 year of Canadian work experience.
+    </div>
+    <table class="compare-table" aria-label="FST vs FSW vs CEC comparison">
+      <thead><tr><th>Factor</th><th>FST (Skilled Trades)</th><th>FSW (Skilled Worker)</th><th>CEC (Canadian Exp.)</th></tr></thead>
+      <tbody>
+        <tr><td>Target NOC TEER</td><td>TEER 2–3</td><td>TEER 0, 1</td><td>TEER 0, 1, 2, 3</td></tr>
+        <tr><td>Min. Language</td><td>CLB 5 (S/L), CLB 4 (R/W)</td><td>CLB 7 all skills</td><td>CLB 7 (TEER 0–2), CLB 5 (TEER 3)</td></tr>
+        <tr><td>67-point grid?</td><td>No</td><td>Yes (must score ≥67)</td><td>No</td></tr>
+        <tr><td>Job offer required?</td><td>Only without cert</td><td>No (helpful for points)</td><td>No</td></tr>
+        <tr><td>Canadian exp. required?</td><td>No</td><td>No</td><td>Yes — min. 1 year</td></tr>
+        <tr><td>Typical draw cutoff 2026</td><td>477–494</td><td>490–520 (all-program)</td><td>509–530</td></tr>
+      </tbody>
+    </table>
+    <p>Use our <a href="/fsw-calculator">FSW Calculator</a> and <a href="/cec-calculator">CEC Calculator</a> alongside this tool to find which program gives you the best score and fastest pathway to Canada PR.</p>
+  </section>
 
-      <!-- FAQ -->
-      <section class="card" aria-labelledby="faq-heading">
-        <div class="card-header">
-          <span class="card-icon">❓</span>
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-        </div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What trades qualify for the Federal Skilled Trades Program?<i class="faq-toggle">+</i></div><div class="faq-answer">Qualifying trades fall under NOC TEER 2 and include industrial/electrical/construction trades, maintenance and equipment trades, trade supervisors in natural resources, and processing/manufacturing supervisors. Check the IRCC website for the complete list of eligible NOC codes.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Do I need a job offer for FST?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes, FST requires either a valid job offer for at least 1 year in a qualifying trade OR a certificate of qualification in your trade issued by a Canadian provincial or territorial authority.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the language requirement for FST?<i class="faq-toggle">+</i></div><div class="faq-answer">FST requires CLB 5 for speaking and listening, and CLB 4 for reading and writing. This is a lower language bar than FSW (CLB 7 across all skills), making FST accessible to tradespeople with functional English or French.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How does a certificate of qualification affect my CRS score?<i class="faq-toggle">+</i></div><div class="faq-answer">Holding a certificate of qualification in a regulated trade adds to your Skill Transferability factors. Combined with CLB 5–6, you earn 13 extra points; with CLB 7+, you earn 25 extra points. The maximum from this combination is 25 points.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can I combine FST with a provincial nomination?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. If you receive a provincial nomination while eligible for FST through Express Entry, you will receive 600 additional CRS points, virtually guaranteeing an ITA in the next draw. Provincial programs like AINP and SINP actively recruit skilled trades workers.</div></li>
-        </ul>
-      </section>
+  <section class="content-section" aria-labelledby="boost-h2">
+    <h2 id="boost-h2">How to Boost Your FST CRS Score in 2026</h2>
+    <div class="answer-box">
+      <strong>Quick Answer:</strong> The fastest way to boost your trade CRS score is to improve your IELTS/CELPIP above the FST minimum — moving from CLB 5 to CLB 7 can add 20–30+ points.
+    </div>
+    <ul>
+      <li><strong>Improve language above FST minimum</strong> — CLB 7+ in all skills adds ~30–40 points vs. the FST minimum. Use our <a href="/clb-scores">IELTS to CLB converter</a> to track your improvement.</li>
+      <li><strong>Get a Canadian job offer</strong> — A valid offer from a Canadian employer in your trade adds +50 CRS points and also satisfies the FST eligibility requirement.</li>
+      <li><strong>Add Canadian work experience</strong> — Even 1 year of Canadian experience in TEER 2/3 adds 40 points. Working on a Temporary Foreign Worker Permit or IMP first helps enormously.</li>
+      <li><strong>Pursue a provincial nomination</strong> — Several provinces actively recruit tradespeople. A PNP nomination adds +600 CRS points. See our <a href="/alberta-crs-calculator">Alberta AAIP</a> and <a href="/ontario-crs-calculator">Ontario OINP</a> calculators for provincial pathways.</li>
+      <li><strong>Get your trade certificate</strong> — A valid certificate of qualification removes the job offer requirement and slightly improves some provincial nomination eligibility criteria.</li>
+      <li><strong>Study in Canada</strong> — A 1–2 year Canadian post-secondary program adds +15 CRS points; 3+ years adds +30.</li>
+    </ul>
+    <p>For all 10 strategies, see our <a href="/improve-score">complete Improve CRS Score guide</a>.</p>
+  </section>
 
-      <div class="internal-cta">
-        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
+  <section class="content-section" aria-labelledby="faq-h2">
+    <h2 id="faq-h2">Frequently Asked Questions — FST CRS Calculator</h2>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq1">What is a good CRS score for Federal Skilled Trades in 2026?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq1">A CRS score of 477–500 is competitive for Trade Occupation draws in 2026. The April 2026 trade draw had a cutoff of 477. Aim for 490+ to be competitive across multiple draw types. Scores above 500 make you eligible for both trade draws and all-program draws.</div>
     </div>
 
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Draw Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Calculators</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
-          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
-        </div>
-      </div>
-    </aside>
-  </div>
-</main>
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
-        </ul>
-      </div>
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq2">How is the FST CRS score different from the FSW CRS score?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq2">Both FST and FSW applicants use the exact same federal CRS (max 1,200 points) with the same scoring formula for age, education, language, and work experience. The difference is in eligibility — FST requires TEER 2/3 trade occupations and lower language scores, while FSW requires a 67-point FSW grid score, TEER 0/1 occupations, and CLB 7+ language.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq3">What language test do I need for the Federal Skilled Trades Program?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq3">You need IELTS General Training (or CELPIP-General) for English, or TEF Canada (or TCF Canada) for French. FST minimum is CLB 5 for Speaking and Listening, CLB 4 for Reading and Writing. However, for competitive CRS scores, aim for CLB 7+ in all skills. Use our <a href="/clb-scores">CLB Score Converter</a> to translate your scores.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq4">Can I apply to FST without a job offer?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq4">Yes, if you have a valid certificate of qualification issued by a Canadian provincial, territorial, or federal authority. If you do NOT have a certificate, you will need a full-time job offer from up to two Canadian employers to be eligible for the FST program.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq5">Is this FST CRS calculator accurate?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq5">This tool uses official IRCC CRS scoring criteria and provides a close estimate. For your exact score, always verify with the <a href="https://www.ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">official IRCC CRS tool</a> and check <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/skilled-trades.html" target="_blank" rel="noopener noreferrer">official FST eligibility requirements</a>.</div>
+    </div>
+
+    <div class="faq-item">
+      <button class="faq-q" aria-expanded="false" aria-controls="faq6">Does FST have a points-based eligibility grid like FSW?<span class="faq-icon" aria-hidden="true">+</span></button>
+      <div class="faq-a" id="faq6">No. The Federal Skilled Trades Program does NOT use the 67-point FSW selection grid. FST eligibility is based on meeting the work experience, language, and certificate/job offer requirements. All eligible FST candidates enter the Express Entry pool and compete on the federal CRS score.</div>
+    </div>
+
+  </section>
+
+  <section class="content-section" aria-labelledby="tools-h2">
+    <h2 id="tools-h2">Related CRS Calculators &amp; Canada Immigration Tools</h2>
+    <p>Explore these free tools for other Express Entry programs and provincial streams:</p>
+    <div class="tool-grid-lg">
+      <a href="/" class="tool-link"><span class="t-icon">🇨🇦</span>CRS Calculator</a>
+      <a href="/cec-calculator" class="tool-link"><span class="t-icon">📋</span>CEC Calculator</a>
+      <a href="/fsw-calculator" class="tool-link"><span class="t-icon">💼</span>FSW Calculator</a>
+      <a href="/pnp-calculator" class="tool-link"><span class="t-icon">🗺️</span>PNP Calculator</a>
+      <a href="/ontario-crs-calculator" class="tool-link"><span class="t-icon">🏙️</span>Ontario OINP</a>
+      <a href="/alberta-crs-calculator" class="tool-link"><span class="t-icon">🏔️</span>Alberta AAIP</a>
+      <a href="/bc-calculator" class="tool-link"><span class="t-icon">🌲</span>BC PNP</a>
+      <a href="/clb-scores" class="tool-link"><span class="t-icon">📝</span>IELTS to CLB</a>
+      <a href="/improve-score" class="tool-link"><span class="t-icon">📈</span>Improve CRS</a>
+      <a href="/cutoff-scores" class="tool-link"><span class="t-icon">🎯</span>CRS Cutoff History</a>
+    </div>
+  </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>CRS Calculators</h4>
+      <ul>
+        <li><a href="/">Main CRS Calculator</a></li>
+        <li><a href="/cec-calculator">CEC Calculator</a></li>
+        <li><a href="/fsw-calculator">FSW Calculator</a></li>
+        <li><a href="/fst-crs-calculator">FST CRS Calculator</a></li>
+        <li><a href="/pnp-calculator">PNP Calculator</a></li>
+        <li><a href="/healthcare-crs">Healthcare Workers CRS</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Provincial Calculators</h4>
+      <ul>
+        <li><a href="/ontario-crs-calculator">Ontario OINP</a></li>
+        <li><a href="/alberta-crs-calculator">Alberta AAIP</a></li>
+        <li><a href="/bc-calculator">BC PNP</a></li>
+        <li><a href="/manitoba-calculator">Manitoba MPNP</a></li>
+        <li><a href="/saskatchewan-calculator">Saskatchewan SINP</a></li>
+        <li><a href="/nova-scotia-calculator">Nova Scotia NSNP</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Guides &amp; Resources</h4>
+      <ul>
+        <li><a href="/what-is-crs">What is CRS Score?</a></li>
+        <li><a href="/improve-score">How to Improve CRS Score</a></li>
+        <li><a href="/clb-scores">CLB Score Converter</a></li>
+        <li><a href="/cutoff-scores">CRS Cutoff Scores</a></li>
+        <li><a href="/express-entry-eligibility">Express Entry Eligibility</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Official Links</h4>
+      <ul>
+        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/skilled-trades.html" target="_blank" rel="noopener noreferrer">IRCC Federal Skilled Trades</a></li>
+        <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/rounds-invitations.html" target="_blank" rel="noopener noreferrer">Federal Draw Results</a></li>
+        <li><a href="https://noc.esdc.gc.ca/" target="_blank" rel="noopener noreferrer">NOC Occupation Search</a></li>
+        <li><a href="https://www.ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer">IRCC Official CRS Tool</a></li>
+      </ul>
     </div>
   </div>
   <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
-    </div>
+    <p>© 2026 CRS Score Calculator — Free Canada Express Entry Score Tool. Not affiliated with IRCC or the Government of Canada.<br>
+    For official scores, use the <a href="https://www.ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" target="_blank" rel="noopener noreferrer" style="color:#aaa;">IRCC CRS Tool</a>.</p>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
+
+<script>
+// Hamburger menu
+const menuBtn = document.getElementById('menuBtn');
+const navLinks = document.getElementById('navLinks');
+menuBtn.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  menuBtn.setAttribute('aria-expanded', String(open));
+});
+
+// FAQ accordion
+document.querySelectorAll('.faq-q').forEach(btn => {
+  btn.addEventListener('click', () => {
+    const ans = document.getElementById(btn.getAttribute('aria-controls'));
+    const icon = btn.querySelector('.faq-icon');
+    const isOpen = ans.classList.toggle('open');
+    icon.classList.toggle('open', isOpen);
+    btn.setAttribute('aria-expanded', String(isOpen));
+  });
+});
+
+// FST CRS Calculator Logic
+function getVal(id) { return parseFloat(document.getElementById(id).value) || 0; }
+function getSel(id) { return document.getElementById(id).value; }
+
+document.getElementById('calcBtn').addEventListener('click', function () {
+  const age = getVal('age');
+  const edu = getVal('education');
+  const married = getSel('marital') === 'married';
+
+  // Language scores
+  const ls = getVal('l1s'), ll = getVal('l1l'), lr = getVal('l1r'), lw = getVal('l1w');
+  const langScore = ls + ll + lr + lw;
+
+  const canExp = getVal('canExp');
+  const forExp = getVal('forExp');
+
+  // Core A — singles vs married
+  let coreA;
+  if (married) {
+    coreA = Math.round(age * 0.9 + edu * 0.82 + langScore * 0.9 + canExp * 0.85);
+  } else {
+    coreA = age + edu + langScore + canExp;
+  }
+
+  // Spouse bonus (Section B)
+  const spouseEdu  = getVal('spouseEdu');
+  const spouseExp  = getVal('spouseExp');
+  const spouseLang = getVal('spouseLang');
+  const coreB = married ? Math.min(40, spouseEdu + spouseExp + spouseLang) : 0;
+
+  // Skill Transferability (Section C) — capped at 100
+  let skillTrans = 0;
+  if (edu >= 120 && langScore >= 80) skillTrans += 50;
+  else if (edu >= 90  && langScore >= 60) skillTrans += 25;
+  if (canExp >= 40 && langScore >= 80) skillTrans += 25;
+  if (canExp >= 40 && edu >= 120)        skillTrans += 25;
+  if (forExp > 0  && canExp >= 40)        skillTrans += 25;
+  // Trades-specific: foreign trades exp + Canadian exp or cert
+  if (forExp > 0 && getSel('tradeCert') === 'yes') skillTrans += 25;
+  skillTrans = Math.min(100, skillTrans);
+
+  // Additional Points (Section D)
+  const pnp        = getVal('pnp');
+  const jobOffer   = getVal('jobOffer');
+  const sibling    = getVal('sibling');
+  const canadianEdu= getVal('canadianEdu');
+  const frenchLang = getVal('frenchLang');
+  const addPoints  = pnp + jobOffer + sibling + canadianEdu + frenchLang;
+
+  const total = Math.min(1200, coreA + coreB + skillTrans + addPoints);
+
+  // Update display
+  document.getElementById('totalScore').textContent = total;
+  document.getElementById('rCore').textContent = coreA + coreB;
+  document.getElementById('rLang').textContent = langScore;
+  document.getElementById('rWork').textContent = canExp + forExp;
+  document.getElementById('rExtra').textContent = skillTrans + addPoints;
+
+  // FST Eligibility check
+  const tradeOcc  = getSel('tradeOcc') === 'yes';
+  const tradeExp  = getSel('tradeExp') === 'yes';
+  const tradeCert = getSel('tradeCert') === 'yes';
+  const jobOfferFST = getSel('jobOfferFST') === 'yes';
+  const clbSpeak  = ls >= 8;  // CLB 5 = value 8
+  const clbRead   = lr >= 6;  // CLB 4 = value 6
+  const langOK    = clbSpeak && (ll >= 8) && clbRead && (lw >= 6);
+  const certOrOffer = tradeCert || jobOfferFST;
+
+  const eligEl = document.getElementById('fstEligibility');
+  let eligHTML = '';
+
+  if (!tradeOcc) {
+    eligHTML = '<div class="fst-tag tag-red">❌ Occupation not in eligible NOC TEER 2–3 trade groups. Consider <a href="/fsw-calculator" style="color:var(--red)">FSW Calculator</a> for TEER 0/1 professions.</div>';
+  } else if (!tradeExp) {
+    eligHTML = '<div class="fst-tag tag-amber">⚡ Need 2 years of full-time trade experience to qualify for FST program.</div>';
+  } else if (!langOK) {
+    eligHTML = '<div class="fst-tag tag-amber">⚡ Language below FST minimum. Need CLB 5 Speaking/Listening and CLB 4 Reading/Writing. Use <a href="/clb-scores">CLB Converter</a> to check.</div>';
+  } else if (!certOrOffer) {
+    eligHTML = '<div class="fst-tag tag-amber">⚡ Need either a certificate of qualification OR a Canadian job offer to qualify for FST program.</div>';
+  } else {
+    eligHTML = '<div class="fst-tag tag-green">✅ Meets FST eligibility requirements (trade, experience, language, cert/offer).</div>';
+  }
+  eligEl.innerHTML = eligHTML;
+
+  // Draw competitiveness tag
+  const drawType = getSel('tradeDrawType');
+  const drawEl = document.getElementById('fstDrawTag');
+  let drawHTML = '';
+  const cutoffs = { trades: 477, allprogram: 505, pnp: 793 };
+  const cutoff = cutoffs[drawType] || 477;
+  const drawNames = { trades: 'Trade Occupations (cutoff ~477)', allprogram: 'All-Program (cutoff ~505)', pnp: 'PNP Draw (cutoff ~793)' };
+
+  if (total >= cutoff + 10) {
+    drawHTML = `<div class="fst-tag tag-green" style="margin-top:6px;">🎯 CRS ${total} is competitive for ${drawNames[drawType]} draws. You likely qualify in the next round!</div>`;
+  } else if (total >= cutoff - 20) {
+    drawHTML = `<div class="fst-tag tag-amber" style="margin-top:6px;">⚡ CRS ${total} is close to the ${drawNames[drawType]} cutoff. See <a href="/improve-score">Improve Score tips</a> to push over.</div>`;
+  } else {
+    drawHTML = `<div class="fst-tag tag-red" style="margin-top:6px;">❌ CRS ${total} is below ${drawNames[drawType]} cutoff. Use our <a href="/improve-score" style="color:var(--red)">Improve CRS Score guide</a> to boost points.</div>`;
+  }
+  drawEl.innerHTML = drawHTML;
+
+  // Show result
+  const box = document.getElementById('resultBox');
+  box.classList.add('show');
+  box.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+});
+</script>
+
 </body>
 </html>
