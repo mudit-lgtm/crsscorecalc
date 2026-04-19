@@ -1,787 +1,1151 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>Manitoba CRS Calculator – MPNP Express Entry Stream Points Tool</title>
-  <meta name="description" content="Calculate your CRS score for the Manitoba Provincial Nominee Program (MPNP). Free Manitoba CRS calculator for Express Entry stream applicants.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator.html">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Manitoba CRS Calculator – MPNP Express Entry Stream Points Tool">
-  <meta property="og:description" content="Calculate your CRS score for the Manitoba Provincial Nominee Program (MPNP). Free Manitoba CRS calculator for Express Entry stream applicants.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/manitoba-crs-calculator.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Manitoba CRS Calculator – MPNP Express Entry Stream Points Tool">
-  <meta name="twitter:description" content="Calculate your CRS score for the Manitoba Provincial Nominee Program (MPNP). Free Manitoba CRS calculator for Express Entry stream applicants.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Manitoba CRS Calculator 2026 – MPNP Express Entry Stream Points Tool</title>
+  <meta name="description" content="Free Manitoba CRS calculator 2026. Estimate your MPNP Express Entry Stream CRS score with education, language, work experience and age points. Mobile-friendly, instant results." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#c40000" />
+  <meta name="author" content="CRS Calculator" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator" />
+
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"Manitoba CRS Calculator – MPNP Express Entry Pathway","item":"https://crsscorecalculator.vercel.app/manitoba-crs-calculator.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the minimum CRS score for MPNP?","acceptedAnswer":{"@type":"Answer","text":"MPNP does not have a fixed minimum CRS score. However, candidates in the Express Entry pool typically need a minimum CRS score to be invited. Prairie province programs like MPNP often have lower effective cutoffs than BC or Ontario, making them accessible for candidates with mid-range scores."}},{"@type":"Question","name":"Do I need a Manitoba connection for MPNP?","acceptedAnswer":{"@type":"Answer","text":"A Manitoba connection (Manitoba job offer, family in Manitoba, or previous Manitoba work/study experience) significantly strengthens an MPNP application. The Skilled Workers Overseas stream specifically requires either a Manitoba job offer or a Manitoba connection through family."}},{"@type":"Question","name":"What sectors does Manitoba target for immigration?","acceptedAnswer":{"@type":"Answer","text":"Manitoba prioritizes healthcare workers (especially nurses and physicians for rural areas), skilled trades, agriculture/agribusiness, manufacturing, transportation, and information technology. These are the sectors with the most critical labour shortages in the province."}},{"@type":"Question","name":"Can international students apply for MPNP?","acceptedAnswer":{"@type":"Answer","text":"Yes. The MPNP International Education Stream allows graduates from eligible Manitoba post-secondary institutions to apply for provincial nomination if they have a Manitoba employer job offer after graduation."}},{"@type":"Question","name":"What is life like for immigrants in Manitoba?","acceptedAnswer":{"@type":"Answer","text":"Winnipeg has a strong and welcoming immigrant community, particularly from the Philippines, India, and Ukraine. The cost of living is significantly lower than in Toronto or Vancouver. Manitoba offers good public services, excellent schools, and growing economic opportunities."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Manitoba CRS Calculator – MPNP Express Entry Stream Points Tool","url":"https://crsscorecalculator.vercel.app/manitoba-crs-calculator.html","description":"Calculate your CRS score for the Manitoba Provincial Nominee Program (MPNP). Free Manitoba CRS calculator for Express Entry stream applicants.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c40000'/%3E%3Cpath d='M18 20h28v6H18zm0 9h20v6H18zm0 9h28v6H18z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23c40000'/%3E%3Cpath d='M42 52h96v18H42zm0 30h68v18H42zm0 30h96v18H42z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Manitoba CRS Calculator 2026 – MPNP Express Entry Stream Points Tool" />
+  <meta property="og:description" content="Estimate your Manitoba PNP Express Entry Stream CRS score. Free, instant and mobile-friendly." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/manitoba-crs-calculator" />
+  <meta property="og:site_name" content="CRS Calculator" />
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Manitoba CRS Calculator 2026 – MPNP Express Entry Stream Points Tool" />
+  <meta name="twitter:description" content="Free MPNP CRS calculator updated for Canada Express Entry 2026." />
+  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- AdSense Auto Ads -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX"
+    crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #c40000;
+      --primary-dark: #a80000;
+      --primary-soft: #fff0f0;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+      --white: #ffffff;
+      --card: #ffffff;
+      --dark: #111827;
+      --shadow: 0 2px 8px rgba(0,0,0,.06);
+      --radius: 12px;
+      --radius-sm: 8px;
+      --max: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.55;
+      -webkit-font-smoothing: antialiased;
+    }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    img { max-width: 100%; display: block; }
+    .container { max-width: var(--max); margin: auto; padding: 0 14px; }
+
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 1000; border-radius: 8px; }
+
+    /* ── Header ── */
+    .topbar {
+      background: #fff;
+      border-bottom: 1px solid #efefef;
+      position: sticky;
+      top: 0;
+      z-index: 999;
+    }
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      min-height: 58px;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: 700;
+      color: #111;
+      white-space: nowrap;
+    }
+    .brand-badge {
+      width: 24px; height: 24px;
+      border-radius: 5px;
+      background: var(--primary);
+      display: grid; place-items: center;
+      color: #fff; font-size: 12px; font-weight: 700;
+    }
+    .nav-links {
+      display: flex; gap: 16px; flex-wrap: wrap;
+      align-items: center; font-size: 13px;
+    }
+    .nav-links a { color: #374151; }
+    .nav-cta {
+      background: var(--primary);
+      color: #fff !important;
+      padding: 8px 12px;
+      border-radius: 8px;
+      font-weight: 700;
+    }
+    .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
+
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(180deg, #c40000 0%, #b20000 100%);
+      color: #fff;
+      padding: 34px 0 28px;
+      text-align: center;
+    }
+    .hero h1 {
+      margin: 0 auto 8px;
+      font-size: clamp(26px, 4vw, 42px);
+      line-height: 1.15;
+      max-width: 900px;
+      font-weight: 800;
+    }
+    .hero p {
+      margin: 0 auto 16px;
+      max-width: 860px;
+      color: #ffeaea;
+      font-size: 15px;
+    }
+    .pill-row {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 8px; margin: 0 0 18px;
+    }
+    .pill {
+      background: rgba(255,255,255,.12);
+      border: 1px solid rgba(255,255,255,.22);
+      color: #fff; padding: 7px 10px;
+      font-size: 12px; border-radius: 999px;
+    }
+    .hero-actions {
+      display: flex; justify-content: center;
+      flex-wrap: wrap; gap: 10px;
+    }
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center;
+      gap: 8px; border: none; border-radius: 10px;
+      padding: 12px 18px; font-size: 14px; font-weight: 700;
+      cursor: pointer; text-decoration: none !important;
+      transition: background 0.18s;
+    }
+    .btn-primary { background: #fff; color: var(--primary); }
+    .btn-primary:hover { background: #f0f0f0; }
+    .btn-secondary {
+      background: transparent; color: #fff;
+      border: 1px solid rgba(255,255,255,.35);
+    }
+    .btn-secondary:hover { background: rgba(255,255,255,.08); }
+
+    /* ── Layout ── */
+    main { padding: 18px 0 28px; }
+    .grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.65fr) 320px;
+      gap: 18px;
+      align-items: start;
+    }
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+    }
+    .card-head {
+      padding: 14px 16px;
+      border-bottom: 1px solid var(--border);
+      font-weight: 700;
+      font-size: 15px;
+      display: flex; align-items: center; gap: 8px;
+    }
+    .card-body { padding: 16px; }
+
+    .section-label {
+      background: #fff0f0;
+      border: 1px solid #ffd4d4;
+      color: #8b0000;
+      font-size: 13px; font-weight: 700;
+      padding: 9px 10px; border-radius: 8px;
+      margin: 0 0 14px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+    }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 13px; font-weight: 700; color: #374151; }
+    .field small { color: var(--muted); font-size: 12px; }
+
+    select, input[type="number"] {
+      width: 100%; min-height: 44px;
+      border: 1px solid #d1d5db;
+      border-radius: 10px;
+      background: #fff; padding: 10px 12px;
+      font-size: 14px; color: #111827;
+      -webkit-appearance: none;
+    }
+    select:focus, input[type="number"]:focus {
+      outline: none;
+      border-color: var(--primary);
+      box-shadow: 0 0 0 3px rgba(196,0,0,.12);
+    }
+    .radio-row { display: flex; gap: 16px; flex-wrap: wrap; margin-top: 4px; }
+    .radio { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+    .radio input { width: auto; min-height: auto; }
+
+    .actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-red {
+      background: var(--primary); color: #fff;
+      width: 100%; min-height: 46px;
+    }
+    .btn-red:hover { background: var(--primary-dark); }
+    .btn-light { background: #fff; color: #111; border: 1px solid var(--border); }
+
+    /* ── Score Card ── */
+    .result-box {
+      background: linear-gradient(180deg, #c40000 0%, #ae0000 100%);
+      color: #fff; padding: 16px; border-radius: 12px;
+      text-align: center; box-shadow: var(--shadow);
+    }
+    .score-big { font-size: 52px; line-height: 1; font-weight: 800; margin: 4px 0 8px; }
+    .score-sub { font-size: 13px; color: #ffe4e4; }
+
+    /* ── Summary Grid ── */
+    .summary-grid {
+      display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-top: 14px;
+    }
+    .mini { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fff; }
+    .mini .num { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .mini .lbl { font-size: 12px; color: var(--muted); }
+
+    /* ── Table ── */
+    .table-wrap { overflow: auto; border: 1px solid var(--border); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); font-size: 14px; text-align: left; }
+    th { background: #b60000; color: #fff; font-size: 13px; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    .green { color: #15803d; font-weight: 700; }
+    .orange { color: #b45309; font-weight: 700; }
+
+    /* ── Steps ── */
+    .steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .step { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: #fff; }
+    .step-no {
+      width: 28px; height: 28px; border-radius: 999px;
+      background: var(--primary); color: #fff;
+      display: grid; place-items: center;
+      font-weight: 700; font-size: 13px; margin-bottom: 10px;
+    }
+    .step strong { display: block; margin-bottom: 6px; font-size: 14px; }
+    .step p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* ── FAQ ── */
+    .faq details { border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .faq summary {
+      cursor: pointer; font-weight: 700;
+      list-style: none; position: relative;
+      padding-right: 24px; font-size: 14px;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--primary); font-weight: 800; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq p { margin: 10px 0 0; color: #4b5563; font-size: 14px; }
+
+    /* ── Tool Grid ── */
+    .tool-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+    .tool {
+      border: 1px solid var(--border); border-radius: 12px;
+      padding: 14px 10px; text-align: center; background: #fff;
+      transition: box-shadow 0.18s;
+    }
+    .tool:hover { box-shadow: 0 4px 14px rgba(196,0,0,.1); text-decoration: none; }
+    .tool-icon {
+      width: 34px; height: 34px; margin: 0 auto 10px; border-radius: 999px;
+      background: #fef2f2; color: var(--primary);
+      display: grid; place-items: center; font-weight: 700; font-size: 12px;
+    }
+    .tool strong { display: block; font-size: 14px; color: #111827; }
+    .tool span { display: block; font-size: 12px; color: #6b7280; margin-top: 4px; }
+
+    /* ── Sidebar ── */
+    .side-list { display: grid; gap: 14px; }
+    .side-card { padding: 14px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
+    .side-card h3 { margin: 0 0 10px; font-size: 14px; }
+    .side-card ul { list-style: none; padding: 0; margin: 0; }
+    .side-card li { padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+    .side-card li:last-child { border-bottom: none; }
+
+    /* ── Breadcrumbs ── */
+    .breadcrumbs { font-size: 12px; color: #6b7280; margin: 0 0 14px; }
+    .breadcrumbs a { color: #6b7280; }
+
+    /* ── Content ── */
+    .content p { margin: 0 0 12px; color: #4b5563; font-size: 14px; }
+    .tiny { font-size: 12px; }
+    .muted { color: var(--muted); }
+
+    /* ── Footer ── */
+    footer { background: #101418; color: #d1d5db; margin-top: 28px; padding: 30px 0; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
+    footer h3 { color: #fff; font-size: 14px; margin: 0 0 10px; }
+    footer ul { list-style: none; padding: 0; margin: 0; }
+    footer li { margin: 8px 0; font-size: 13px; }
+    footer a { color: #d1d5db; }
+    footer a:hover { color: #fff; }
+    .copyright {
+      margin-top: 18px; padding-top: 18px;
+      border-top: 1px solid rgba(255,255,255,.08);
+      font-size: 12px; color: #9ca3af;
+      display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 1024px) {
+      .grid { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: repeat(2, 1fr); }
+      .tool-grid { grid-template-columns: repeat(3, 1fr); }
+      .steps { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 680px) {
+      .nav { padding: 10px 0; min-height: auto; }
+      .nav-links { display: none; }
+      .hero { padding: 24px 0 20px; }
+      .hero p { font-size: 14px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .tool-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .score-big { font-size: 40px; }
+      th, td { font-size: 13px; padding: 9px 8px; }
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- ── Header ── -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="https://crsscorecalculator.vercel.app/" aria-label="CRS Calculator home">
+      <span class="brand-badge">CRS</span>
+      <span>CRS Calculator</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry</a>
+      <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario</a>
+      <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta</a>
+      <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">Cutoff Scores</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Draw Results</a>
+      <a class="nav-cta" href="https://crsscorecalculator.vercel.app/">Calculate Now</a>
+    </nav>
+  </div>
 </header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<!-- ── Hero ── -->
+<section class="hero">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep" aria-hidden="true">›</li>
-      <li class="current" aria-current="page">Manitoba CRS Calculator – MPNP Express Entry Pathway</li>
-    </ol>
+    <h1>Manitoba CRS Calculator 2026</h1>
+    <p>Free MPNP Express Entry Stream CRS score estimator. Enter your age, education, language test and work experience to instantly see your Manitoba PNP CRS points. No login required.</p>
+    <div class="pill-row">
+      <span class="pill">Updated 2026</span>
+      <span class="pill">MPNP Express Entry</span>
+      <span class="pill">Instant Results</span>
+      <span class="pill">100% Free</span>
+      <span class="pill">Mobile Friendly</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn btn-primary">Calculate Manitoba CRS →</a>
+      <a href="https://crsscorecalculator.vercel.app/" class="btn btn-secondary">Full CRS Calculator</a>
+    </div>
   </div>
-</nav>
+</section>
 
-<div class="page-header">
+<!-- ── Main ── -->
+<main id="main-content">
   <div class="container">
-    <h1>Manitoba CRS Calculator – MPNP Express Entry Pathway</h1>
-    <p>Calculate your CRS score for the Manitoba Provincial Nominee Program (MPNP). Free Manitoba CRS calculator for Express Entry stream applicants.</p>
-    <div class="meta-info">
-      <span>Updated: April 2026</span>
-      <span>Free Tool</span>
-      <span>No Registration</span>
-    </div>
-  </div>
-</div>
 
-<div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
-</div>
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="https://crsscorecalculator.vercel.app/">Home</a> ›
+      <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculators</a> ›
+      <span>Manitoba CRS Calculator</span>
+    </nav>
 
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <div class="main-content">
-      <section class="card">
-        
-    <h2>Manitoba Provincial Nominee Program (MPNP)</h2>
-    <p>The Manitoba Provincial Nominee Program (MPNP) is one of Canada's more accessible provincial immigration programs, particularly for skilled workers who have connections to Manitoba through family ties, previous work experience, or employer job offers. Manitoba actively recruits immigrants to address significant labour shortages in key sectors including healthcare, agriculture, manufacturing, and transportation.</p>
+    <div class="grid">
 
-    <h2>MPNP Skilled Worker Streams</h2>
-    <p>The MPNP has two main skilled worker pathways:</p>
-    <ul>
-      <li><strong>Skilled Workers in Manitoba (SWM):</strong> For foreign workers currently working in Manitoba with a permanent full-time job offer from a Manitoba employer and at least 6 months of Manitoba work experience</li>
-      <li><strong>Skilled Workers Overseas (SWO):</strong> For workers outside Canada who have either a Manitoba job offer OR a connection to Manitoba through family members who are Canadian citizens or PRs residing in Manitoba</li>
-      <li><strong>International Education Stream:</strong> For international graduates from Manitoba post-secondary institutions who have a Manitoba job offer</li>
-    </ul>
+      <!-- ── Main Column ── -->
+      <div>
 
-    <h2>MPNP and Express Entry</h2>
-    <p>The MPNP operates in conjunction with Express Entry. Candidates in the Express Entry pool may receive a Letter of Advice to Apply (LAA) from Manitoba, and successful nominees receive 600 additional CRS points. Manitoba conducts regular MPNP draws and frequently targets specific occupations in healthcare, engineering, and construction.</p>
+        <!-- Calculator -->
+        <section id="calculator" class="card">
+          <div class="card-head">📝 Manitoba CRS Calculator — MPNP Express Entry Stream Points Tool</div>
+          <div class="card-body">
+            <div class="section-label">Section A — Core Human Capital Factors</div>
+            <form id="mbForm" novalidate>
+              <div class="form-grid">
 
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-value">600</div><div class="stat-label">CRS Points After MPNP Nomination</div></div>
-      <div class="stat-card"><div class="stat-value">Lower</div><div class="stat-label">Cost of Living vs Toronto/Vancouver</div></div>
-      <div class="stat-card"><div class="stat-value">French</div><div class="stat-label">Bilingual Province (Manitoba)</div></div>
-      <div class="stat-card"><div class="stat-value">~300+</div><div class="stat-label">Typical Base CRS for MPNP Draws</div></div>
-    </div>
-    
-      </section>
+                <div class="field">
+                  <label for="age">Age</label>
+                  <select id="age">
+                    <option value="">— Select age —</option>
+                    <option value="0">17 or younger</option>
+                    <option value="99">18–35 (maximum)</option>
+                    <option value="95">36</option>
+                    <option value="90">37</option>
+                    <option value="85">38</option>
+                    <option value="80">39</option>
+                    <option value="75">40</option>
+                    <option value="70">41</option>
+                    <option value="65">42</option>
+                    <option value="60">43</option>
+                    <option value="55">44</option>
+                    <option value="50">45</option>
+                    <option value="45">46</option>
+                    <option value="0">47 or older</option>
+                  </select>
+                </div>
 
-      
-<div class="calculator-wrapper" id="calculator">
-  <div class="calc-header">
-    <h2>🧮 CRS Score Calculator</h2>
-    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
-  </div>
-  <form id="crs-form" novalidate>
-    <div class="calc-body">
+                <div class="field">
+                  <label for="education">Highest Education</label>
+                  <select id="education">
+                    <option value="">— Select education —</option>
+                    <option value="0">Less than secondary (high school)</option>
+                    <option value="28">Secondary diploma</option>
+                    <option value="84">One-year post-secondary</option>
+                    <option value="91">Two-year post-secondary</option>
+                    <option value="112">Bachelor's or 3+ year</option>
+                    <option value="119">Two or more credentials, one 3+ years</option>
+                    <option value="126">Master's or professional degree</option>
+                    <option value="140">Doctoral degree (PhD)</option>
+                  </select>
+                </div>
 
-      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">A</span>
-          Core / Human Capital Factors
-        </div>
+                <div class="field">
+                  <label for="marital">Marital Status</label>
+                  <select id="marital">
+                    <option value="single">Single / No accompanying spouse</option>
+                    <option value="spouse">Married / Accompanying spouse</option>
+                  </select>
+                </div>
 
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="marital-status">Marital Status</label>
-            <div class="radio-group" role="radiogroup" aria-label="Marital status">
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="single" checked> Single
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
-              </label>
+                <div class="field">
+                  <label for="spouseEducation">Spouse Education</label>
+                  <select id="spouseEducation">
+                    <option value="0">Not applicable / Less than secondary</option>
+                    <option value="2">Secondary diploma</option>
+                    <option value="6">One-year post-secondary</option>
+                    <option value="7">Two-year post-secondary</option>
+                    <option value="8">Bachelor's or 3+ year</option>
+                    <option value="9">Two or more credentials</option>
+                    <option value="10">Master's or PhD</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section B — First Official Language</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="langTest">Language Test Type</label>
+                  <select id="langTest">
+                    <option value="">— Select test —</option>
+                    <option value="ielts">IELTS General</option>
+                    <option value="celpip">CELPIP-G</option>
+                    <option value="tef">TEF Canada (French)</option>
+                    <option value="tcf">TCF Canada (French)</option>
+                  </select>
+                  <small>IELTS is most common. Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> for detailed band conversion.</small>
+                </div>
+                <div class="field">
+                  <label for="clbLevel">CLB Level (First Language)</label>
+                  <select id="clbLevel">
+                    <option value="">— Select CLB —</option>
+                    <option value="0">CLB 3 or below</option>
+                    <option value="0">CLB 4</option>
+                    <option value="6">CLB 5</option>
+                    <option value="8">CLB 6</option>
+                    <option value="16">CLB 7</option>
+                    <option value="22">CLB 8</option>
+                    <option value="29">CLB 9</option>
+                    <option value="32">CLB 10+</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="clbSpouse">CLB Level (Spouse, if applicable)</label>
+                  <select id="clbSpouse">
+                    <option value="0">Not applicable</option>
+                    <option value="0">CLB 4 or below</option>
+                    <option value="0">CLB 5</option>
+                    <option value="1">CLB 6</option>
+                    <option value="3">CLB 7</option>
+                    <option value="5">CLB 8</option>
+                    <option value="7">CLB 9</option>
+                    <option value="9">CLB 10+</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="frenchLevel">French Proficiency (CLB)</label>
+                  <select id="frenchLevel">
+                    <option value="0">None / Below CLB 5</option>
+                    <option value="15">CLB 5–6 (English CLB 4+)</option>
+                    <option value="25">CLB 7–8 (English CLB 4+)</option>
+                    <option value="50">CLB 7–8 (English CLB 5+)</option>
+                    <option value="50">CLB 9+ (English CLB 4+)</option>
+                    <option value="50">CLB 9+ (English CLB 5+)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section C — Canadian Work Experience</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="canadaExp">Canadian Work Experience</label>
+                  <select id="canadaExp">
+                    <option value="0">None</option>
+                    <option value="40">1 year</option>
+                    <option value="53">2 years</option>
+                    <option value="64">3 years</option>
+                    <option value="72">4 years</option>
+                    <option value="80">5 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="foreignExp">Foreign Work Experience</label>
+                  <select id="foreignExp">
+                    <option value="0">None</option>
+                    <option value="13">1–2 years</option>
+                    <option value="25">3 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="spouseExp">Spouse Canadian Work Experience</label>
+                  <select id="spouseExp">
+                    <option value="0">None / Not applicable</option>
+                    <option value="5">1 year</option>
+                    <option value="7">2 years</option>
+                    <option value="8">3 years</option>
+                    <option value="9">4 years</option>
+                    <option value="10">5 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="canadaStudy">Canadian Post-Secondary Study</label>
+                  <select id="canadaStudy">
+                    <option value="0">None</option>
+                    <option value="15">1–2 year program</option>
+                    <option value="30">3+ year program</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section D — Additional Points</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="sibling">Sibling in Canada (citizen or PR)?</label>
+                  <select id="sibling">
+                    <option value="0">No</option>
+                    <option value="15">Yes (+15 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="nomineeBonus">Manitoba PNP Nomination Bonus</label>
+                  <select id="nomineeBonus">
+                    <option value="0">Not nominated yet</option>
+                    <option value="600">Yes — nominated (+600 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="pnpJobOffer">Manitoba Job Offer (LMIA approved)?</label>
+                  <select id="pnpJobOffer">
+                    <option value="0">No job offer</option>
+                    <option value="50">Senior Manager / NOC 00 (+200 pts)</option>
+                    <option value="50">Skilled trade / NOC B (+50 pts)</option>
+                    <option value="50">All other occupations (+50 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="frenchCommunity">Destined for francophone community?</label>
+                  <select id="frenchCommunity">
+                    <option value="0">No</option>
+                    <option value="25">Yes (+25 pts)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button type="button" class="btn btn-red" id="calcBtn">Calculate My Manitoba CRS Score →</button>
+                <button type="reset" class="btn btn-light" id="resetBtn">Reset</button>
+              </div>
+            </form>
+
+            <!-- Summary Mini Cards -->
+            <div class="summary-grid" aria-live="polite">
+              <div class="mini">
+                <div class="lbl">Total CRS Score</div>
+                <div class="num" id="totalScore">0</div>
+              </div>
+              <div class="mini">
+                <div class="lbl">Language pts</div>
+                <div class="num" id="langPts">0</div>
+              </div>
+              <div class="mini">
+                <div class="lbl">Education pts</div>
+                <div class="num" id="eduPts">0</div>
+              </div>
+              <div class="mini">
+                <div class="lbl">Work exp pts</div>
+                <div class="num" id="workPts">0</div>
+              </div>
+            </div>
+
+            <!-- Breakdown Table -->
+            <div style="margin-top:18px;" class="table-wrap" aria-live="polite">
+              <table>
+                <thead>
+                  <tr>
+                    <th>CRS Factor</th>
+                    <th>Your Points</th>
+                    <th>Maximum</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Age</td><td id="tAge">0</td><td>110</td></tr>
+                  <tr><td>Education (applicant)</td><td id="tEdu">0</td><td>150</td></tr>
+                  <tr><td>First official language</td><td id="tLang">0</td><td>136</td></tr>
+                  <tr><td>Canadian work experience</td><td id="tCanExp">0</td><td>80</td></tr>
+                  <tr><td>Spouse factors</td><td id="tSpouse">0</td><td>40</td></tr>
+                  <tr><td>Foreign work experience</td><td id="tForeign">0</td><td>25</td></tr>
+                  <tr><td>French language bonus</td><td id="tFrench">0</td><td>50</td></tr>
+                  <tr><td>Canadian study</td><td id="tStudy">0</td><td>30</td></tr>
+                  <tr><td>Sibling in Canada</td><td id="tSibling">0</td><td>15</td></tr>
+                  <tr><td>PNP / Job offer bonus</td><td id="tBonus">0</td><td>600</td></tr>
+                  <tr><td><strong>Total CRS Score</strong></td><td id="tTotal"><strong>0</strong></td><td><strong>1,200</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Eligibility Banner -->
+            <div id="eligBanner" style="margin-top:14px;padding:14px;border-radius:10px;background:#f0fdf4;border:1px solid #bbf7d0;color:#15803d;font-weight:700;font-size:14px;display:none;">
+              ✅ Your estimated CRS score may make you eligible for an MPNP Expression of Interest (EOI) in the Manitoba Express Entry Stream.
+            </div>
+
+            <p class="tiny muted" style="margin-top:12px;">
+              This Manitoba CRS calculator estimates your Express Entry stream score. For a full CRS score including all sections, use the <a href="https://crsscorecalculator.vercel.app/">main CRS Calculator</a>. Always verify results with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">official IRCC tool</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- What is Manitoba CRS -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">What is the Manitoba CRS Calculator?</div>
+          <div class="card-body content">
+            <p>The <strong>Manitoba CRS Calculator</strong> estimates your Comprehensive Ranking System score for the <strong>MPNP Express Entry Stream</strong> — the pathway for foreign nationals to apply for Canada PR through the Manitoba Provincial Nominee Program. The calculation is based on the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">official IRCC CRS framework</a>.</p>
+            <p>Manitoba uses the federal CRS score plus its own provincial EOI points. Candidates who receive a provincial nomination through MPNP automatically receive an additional 600 CRS points, significantly boosting their chances of receiving an Invitation to Apply (ITA) from IRCC. Check <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">current CRS cutoff scores</a> to benchmark your result.</p>
+            <p>To compare Manitoba with other provincial streams, use the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, or the <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP CRS Calculator</a>. For the full federal Express Entry score, visit the <a href="https://crsscorecalculator.vercel.app/">main CRS Calculator</a>.</p>
+          </div>
+        </section>
+
+        <!-- CRS Score Ranges for Manitoba -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">Manitoba MPNP CRS Score Ranges & PR Chances</div>
+          <div class="card-body">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr>
+                    <th>CRS Score Range</th>
+                    <th>PR Chances (MPNP)</th>
+                    <th>Typical Eligibility</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Below 400</td><td class="orange">Very Low</td><td>Unlikely without PNP nomination</td></tr>
+                  <tr><td>400–450</td><td class="orange">Low–Moderate</td><td>May qualify for Manitoba EOI pool</td></tr>
+                  <tr><td>451–490</td><td class="green">Moderate</td><td>Strong EOI candidate for MPNP EE stream</td></tr>
+                  <tr><td>491–520</td><td class="green">Good</td><td>Getting close to all-program draws</td></tr>
+                  <tr><td>521+</td><td class="green">Excellent</td><td>Competitive for all Express Entry programs</td></tr>
+                  <tr><td>Any + 600</td><td class="green">Very Strong</td><td>MPNP nomination adds 600 CRS bonus points</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tiny muted" style="margin-top:10px;">Source: <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry draw results</a>. Data for reference purposes only.</p>
+          </div>
+        </section>
+
+        <!-- How to Use -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">How to use this Manitoba CRS Calculator</div>
+          <div class="card-body">
+            <div class="steps">
+              <div class="step">
+                <div class="step-no">1</div>
+                <strong>Enter personal details</strong>
+                <p>Select your age, highest education level, and marital status. These are core human capital factors in the CRS framework.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">2</div>
+                <strong>Add language scores</strong>
+                <p>Select your CLB level. Not sure? Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> to convert your IELTS bands to CLB first.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">3</div>
+                <strong>Add work experience</strong>
+                <p>Enter Canadian and foreign work experience years. Canadian experience carries significantly higher CRS weight.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">4</div>
+                <strong>Check results instantly</strong>
+                <p>See your Manitoba CRS score breakdown by section, then open the <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a> for a complete score.</p>
+              </div>
             </div>
           </div>
-          <div class="form-group" id="spouse-coming-section" style="display:none;">
-            <label>Is your spouse/partner coming to Canada with you?</label>
-            <div class="radio-group" role="radiogroup">
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="no" checked> No
-              </label>
+        </section>
+
+        <!-- How CRS is Calculated for Manitoba -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">How is CRS calculated for Manitoba MPNP?</div>
+          <div class="card-body content">
+            <p>The Manitoba PNP Express Entry stream uses the same federal <strong>Comprehensive Ranking System (CRS)</strong> as all other Express Entry programs. Your CRS score out of 1,200 covers four main factors: core human capital (age, education, language, Canadian work experience), spouse or common-law partner factors, skill transferability, and additional points such as provincial nominations, job offers, and siblings in Canada.</p>
+            <p>The key Manitoba-specific advantage is the <strong>600-point CRS bonus</strong> added when Manitoba nominates a candidate through the MPNP Express Entry Stream. This makes almost any candidate competitive for a federal Invitation to Apply (ITA). For official point criteria, always cross-check with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">Government of Canada immigration portal</a>.</p>
+            <p>For French-speaking candidates, speaking French at CLB 7 or higher combined with at least CLB 5 English can add up to 50 additional CRS points — making Manitoba an especially attractive destination for francophone newcomers targeting <a href="https://crsscorecalculator.vercel.app/express-entry-draws">French-language Express Entry draws</a>.</p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="card faq" style="margin-top:18px;">
+          <div class="card-head">Frequently Asked Questions — Manitoba CRS Calculator</div>
+          <div class="card-body">
+            <details open>
+              <summary>What is the Manitoba CRS calculator used for?</summary>
+              <p>It estimates your Comprehensive Ranking System score for the MPNP Express Entry Stream to help you understand your chances of receiving a provincial nomination from Manitoba for Canada PR.</p>
+            </details>
+            <details>
+              <summary>What is a good CRS score for Manitoba?</summary>
+              <p>A score above 450 gives you a reasonable chance in the MPNP EOI pool. If Manitoba nominates you, you gain 600 bonus CRS points, which almost guarantees a federal ITA. Check the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">latest CRS cutoff scores</a> for current draw thresholds.</p>
+            </details>
+            <details>
+              <summary>Does Manitoba use the same CRS as federal Express Entry?</summary>
+              <p>Yes. The MPNP Express Entry Stream runs inside the federal Express Entry pool and uses the standard federal CRS points system. Manitoba adds 600 CRS points when it issues a provincial nomination.</p>
+            </details>
+            <details>
+              <summary>Can I improve my CRS score for Manitoba?</summary>
+              <p>Yes. The most impactful ways include improving your IELTS score to CLB 9 or higher, gaining Canadian work experience, completing a Canadian study program, or obtaining an LMIA-supported job offer in Manitoba. See the full <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS score improvement guide</a>.</p>
+            </details>
+            <details>
+              <summary>How do I compare Manitoba with other PNP streams?</summary>
+              <p>Use the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP CRS calculator</a>, or the <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP CRS calculator</a> to compare options.</p>
+            </details>
+            <details>
+              <summary>Is this Manitoba CRS calculator accurate?</summary>
+              <p>This tool is based on the official IRCC CRS points grid and MPNP guidelines. It gives a reliable estimate, but you should always verify your score with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC official tool</a> before submitting your Express Entry profile.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">Related CRS Calculators & Tools</div>
+          <div class="card-body">
+            <div class="tool-grid">
+              <a class="tool" href="https://crsscorecalculator.vercel.app/">
+                <div class="tool-icon">CA</div>
+                <strong>CRS Calculator</strong>
+                <span>All programs</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">
+                <div class="tool-icon">EE</div>
+                <strong>Express Entry</strong>
+                <span>Federal CRS tool</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/cec-crs-calculator">
+                <div class="tool-icon">CE</div>
+                <strong>CEC Calculator</strong>
+                <span>Canadian Experience</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">
+                <div class="tool-icon">PN</div>
+                <strong>PNP Calculator</strong>
+                <span>All provinces</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">
+                <div class="tool-icon">ON</div>
+                <strong>Ontario CRS</strong>
+                <span>OINP stream</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">
+                <div class="tool-icon">AB</div>
+                <strong>Alberta CRS</strong>
+                <span>AINP stream</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/bc-crs-calculator">
+                <div class="tool-icon">BC</div>
+                <strong>BC PNP CRS</strong>
+                <span>British Columbia</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">
+                <div class="tool-icon">IL</div>
+                <strong>IELTS to CRS</strong>
+                <span>Language points</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">
+                <div class="tool-icon">SK</div>
+                <strong>Saskatchewan</strong>
+                <span>SINP CRS tool</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">
+                <div class="tool-icon">CS</div>
+                <strong>Cutoff Scores</strong>
+                <span>Latest draw trends</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-draws">
+                <div class="tool-icon">DR</div>
+                <strong>Draw Results</strong>
+                <span>2025 history</span>
+              </a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">
+                <div class="tool-icon">UP</div>
+                <strong>Improve CRS</strong>
+                <span>Tips &amp; guide</span>
+              </a>
             </div>
           </div>
+        </section>
+
+      </div><!-- /main column -->
+
+      <!-- ── Sidebar ── -->
+      <aside class="side-list">
+
+        <div class="result-box" aria-live="polite">
+          <div class="tiny">Estimated Manitoba CRS Score</div>
+          <div class="score-big" id="sideScore">0</div>
+          <div class="score-sub">Updated 2026 • MPNP Express Entry Stream</div>
         </div>
 
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="age">Age</label>
-            <select name="age" id="age" class="form-control">
-              <option value="under18">17 and under</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45plus">45 and over</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="education">Level of Education</label>
-            <select name="education" id="education" class="form-control">
-              <option value="none">Less than secondary school</option>
-              <option value="secondary">Secondary diploma (high school)</option>
-              <option value="one_year">One-year post-secondary program</option>
-              <option value="two_year">Two-year post-secondary program</option>
-              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
-              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
-              <option value="masters">Master's degree / Professional degree</option>
-              <option value="phd">PhD (Doctoral degree)</option>
-            </select>
-          </div>
+        <div class="side-card">
+          <h3>Express Entry Tools</h3>
+          <ul>
+            <li><a href="https://crsscorecalculator.vercel.app/">Full CRS Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+          </ul>
         </div>
 
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="canadianWE">Canadian Work Experience</label>
-            <select name="canadianWE" id="canadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">B</span>
-          First Official Language (English or French)
+        <div class="side-card">
+          <h3>Provincial Calculators</h3>
+          <ul>
+            <li><strong>Manitoba (MPNP)</strong> — this page</li>
+            <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
+          </ul>
         </div>
 
-        <div class="form-group mb-3">
-          <label for="lang1TestType">Language Test Type</label>
-          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- Select test --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
+        <div class="side-card">
+          <h3>Official IRCC Resources</h3>
+          <ul>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC CRS Check Tool</a></li>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Immigration Home</a></li>
+            <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Government of Canada</a></li>
+          </ul>
         </div>
 
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">C</span>
-          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
+        <div class="side-card">
+          <h3>Quick Answers (AEO)</h3>
+          <ul>
+            <li>Manitoba PNP nomination adds <strong>600 CRS points</strong>.</li>
+            <li>MPNP Express Entry uses the <strong>federal CRS framework</strong>.</li>
+            <li>CLB 9 in all 4 abilities = up to <strong>128 language CRS points</strong> (single).</li>
+            <li>Canadian work experience can add up to <strong>80 CRS points</strong>.</li>
+          </ul>
         </div>
 
-        <div class="form-group mb-3">
-          <label for="lang2TestType">Second Language Test Type</label>
-          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION D: SPOUSE FACTORS -->
-      <div class="spouse-section" id="spouse-section">
-        <div class="calc-section-title">
-          <span class="section-badge">D</span>
-          Spouse / Partner Factors
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="spouseEducation">Spouse Education Level</label>
-            <select name="spouseEducation" id="spouseEducation" class="form-control">
-              <option value="none">Less than secondary</option>
-              <option value="secondary">Secondary diploma</option>
-              <option value="one_year">One-year program</option>
-              <option value="two_year">Two-year program</option>
-              <option value="bachelors">Bachelor's degree</option>
-              <option value="two_or_more">Two or more certificates</option>
-              <option value="masters">Master's degree</option>
-              <option value="phd">PhD</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
-            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group mt-2 mb-3">
-          <label for="spouseLangTestType">Spouse Language Test Type</label>
-          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="CELPIP">CELPIP-G</option>
-            <option value="TEF">TEF Canada</option>
-            <option value="TCF">TCF Canada</option>
-          </select>
-        </div>
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION E: SKILL TRANSFERABILITY -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">E</span>
-          Skill Transferability Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="foreignWE">Foreign Work Experience</label>
-            <select name="foreignWE" id="foreignWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1–2 years</option>
-              <option value="3">3 or more years</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION F: ADDITIONAL POINTS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">F</span>
-          Additional Points
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end calc-body -->
-
-    <div class="calc-btn-wrapper">
-      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
-        Calculate My CRS Score →
-      </button>
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
-      <div class="score-display">
-        <p class="score-label">Your Estimated CRS Score</p>
-        <div class="score-number score-good">—</div>
-        <p class="score-verdict">Fill in the form above and click Calculate</p>
-      </div>
-
-      <div class="score-progress-wrapper">
-        <div class="score-progress-label">
-          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
-        </div>
-        <div class="score-progress-bar">
-          <div class="score-progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="score-comparison"></div>
-
-      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
-      <div class="table-wrapper">
-        <table class="breakdown-table">
-          <thead>
-            <tr>
-              <th>CRS Factor</th>
-              <th style="text-align:right;">Points</th>
-            </tr>
-          </thead>
-          <tbody id="breakdown-tbody">
-            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="score-actions mt-3">
-        <a href="#" class="btn btn-outline btn-whatsapp">
-          📱 Share on WhatsApp
-        </a>
-        <button type="button" class="btn btn-outline btn-copy">
-          📋 Copy Score
-        </button>
-        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
-      </div>
-
-      <div class="internal-cta mt-3">
-        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
-        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
-      </div>
-    </div>
-
-  </form>
-</div>
-
-<script>
-// Language score dropdown population
-(function() {
-  const IELTS_SCORES = {
-    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
-  };
-  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
-  const TEF_SCORES = {
-    speaking:  ['181','226','271','310','349','371','394'],
-    listening: ['145','181','217','253','280','298','316'],
-    reading:   ['121','151','181','207','233','248','263'],
-    writing:   ['181','226','271','310','349','371','393']
-  };
-  const TCF_SCORES = {
-    speaking:  ['4','6','10','13','15','17','20'],
-    listening: ['331','369','398','458','503','541','589'],
-    reading:   ['342','375','406','453','499','524','549'],
-    writing:   ['4','6','10','13','15','17','20']
-  };
-
-  function populateScores(testType, prefix) {
-    const skills = ['speaking','listening','reading','writing'];
-    skills.forEach(skill => {
-      const sel = document.getElementById(prefix + '-' + skill) ||
-                  document.querySelector(`select[name="${prefix}_${skill}"]`);
-      if (!sel) return;
-      sel.innerHTML = '<option value="0">Select score</option>';
-      let scores = [];
-      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
-      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
-      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
-      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
-      scores.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = s;
-        sel.appendChild(opt);
-      });
-    });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang1Sel = document.getElementById('lang1TestType');
-    const lang2Sel = document.getElementById('lang2TestType');
-    const spouseSel = document.getElementById('spouseLangTestType');
-
-    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
-    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
-    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
-  });
-})();
-</script>
-
-
-      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
-
-      <section class="card">
-        
-    <h2>Manitoba's Strategic Immigration Goals</h2>
-    <p>Manitoba uses immigration strategically to address its labour market challenges. The province prioritizes candidates with experience in healthcare (physicians, nurses, allied health), agriculture and agribusiness, manufacturing, construction trades, and information technology. Having experience in these fields or a Manitoba connection significantly improves your chances of receiving an MPNP LAA.</p>
-
-    <h2>Living in Manitoba</h2>
-    <p>Winnipeg, Manitoba's capital, is a diverse and growing city with a significantly lower cost of living compared to Toronto or Vancouver. Manitoba offers excellent public services, strong Indigenous cultural heritage, and growing career opportunities. The province has a rapidly expanding tech sector and is home to some of Canada's largest Indigenous business enterprises.</p>
-
-    <h2>How to Apply for MPNP</h2>
-    <p>For Express Entry-linked MPNP: (1) Create an Express Entry profile; (2) Register interest on the MPNP portal and indicate connections to Manitoba; (3) Receive a Letter of Advice to Apply from Manitoba; (4) Complete the MPNP application within the deadline; (5) Receive the nomination and +600 CRS points. Compare with <a href="/saskatchewan-crs-calculator.html">Saskatchewan SINP</a> for nearby prairie province options.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://immigratemanitoba.com/immigrate-to-manitoba/mpnp/" target="_blank" rel="noopener noreferrer">Official MPNP Website ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li></ul></div>
-      </section>
-
-      <!-- FAQ -->
-      <section class="card" aria-labelledby="faq-heading">
-        <div class="card-header">
-          <span class="card-icon">❓</span>
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-        </div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the minimum CRS score for MPNP?<i class="faq-toggle">+</i></div><div class="faq-answer">MPNP does not have a fixed minimum CRS score. However, candidates in the Express Entry pool typically need a minimum CRS score to be invited. Prairie province programs like MPNP often have lower effective cutoffs than BC or Ontario, making them accessible for candidates with mid-range scores.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Do I need a Manitoba connection for MPNP?<i class="faq-toggle">+</i></div><div class="faq-answer">A Manitoba connection (Manitoba job offer, family in Manitoba, or previous Manitoba work/study experience) significantly strengthens an MPNP application. The Skilled Workers Overseas stream specifically requires either a Manitoba job offer or a Manitoba connection through family.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What sectors does Manitoba target for immigration?<i class="faq-toggle">+</i></div><div class="faq-answer">Manitoba prioritizes healthcare workers (especially nurses and physicians for rural areas), skilled trades, agriculture/agribusiness, manufacturing, transportation, and information technology. These are the sectors with the most critical labour shortages in the province.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can international students apply for MPNP?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. The MPNP International Education Stream allows graduates from eligible Manitoba post-secondary institutions to apply for provincial nomination if they have a Manitoba employer job offer after graduation.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is life like for immigrants in Manitoba?<i class="faq-toggle">+</i></div><div class="faq-answer">Winnipeg has a strong and welcoming immigrant community, particularly from the Philippines, India, and Ukraine. The cost of living is significantly lower than in Toronto or Vancouver. Manitoba offers good public services, excellent schools, and growing economic opportunities.</div></li>
-        </ul>
-      </section>
-
-      <div class="internal-cta">
-        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </div>
-
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Draw Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Calculators</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
-          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
-        </div>
-      </div>
-    </aside>
-  </div>
+      </aside>
+    </div><!-- /grid -->
+  </div><!-- /container -->
 </main>
-<footer class="site-footer" role="contentinfo">
+
+<!-- ── Footer ── -->
+<footer>
   <div class="container">
     <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
+      <div>
+        <h3>CRS Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/">CRS Score Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
+      <div>
+        <h3>Provincial Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
+      <div>
+        <h3>Guides & Resources</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/blog/crs-score-education.html">CRS & Education</a></li>
         </ul>
       </div>
-      <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
+      <div>
+        <h3>Official Links</h3>
+        <ul>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+          <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Canada.ca</a></li>
         </ul>
       </div>
     </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
+    <div class="copyright">
+      <span>© 2026 CRS Calculator. This tool is for informational purposes only. Verify results with official IRCC sources before submitting an immigration application.</span>
+      <span><a href="https://crsscorecalculator.vercel.app/">Home</a></span>
     </div>
   </div>
 </footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
+
+<!-- ── Calculator Script ── -->
+<script>
+(function () {
+  function g(id) { return document.getElementById(id); }
+  function val(id) { return parseInt(g(id).value) || 0; }
+
+  function calculate() {
+    var age      = val('age');
+    var edu      = val('education');
+    var lang     = val('clbLevel');
+    var spEdu    = g('marital').value === 'spouse' ? val('spouseEducation') : 0;
+    var spLang   = g('marital').value === 'spouse' ? val('clbSpouse') : 0;
+    var canExp   = val('canadaExp');
+    var forExp   = val('foreignExp');
+    var spExp    = g('marital').value === 'spouse' ? val('spouseExp') : 0;
+    var study    = val('canadaStudy');
+    var sibling  = val('sibling');
+    var nomBonus = val('nomineeBonus');
+    var jobOffer = val('pnpJobOffer');
+    var french   = val('frenchLevel');
+    var francoComm = val('frenchCommunity');
+
+    var spouse   = spEdu + spLang + spExp;
+    var work     = canExp + forExp;
+    var total    = age + edu + lang + spouse + work + study + sibling + nomBonus + jobOffer + french + francoComm;
+
+    // Update summary mini cards
+    g('totalScore').textContent = total;
+    g('langPts').textContent    = lang;
+    g('eduPts').textContent     = edu;
+    g('workPts').textContent    = work;
+
+    // Update breakdown table
+    g('tAge').textContent    = age;
+    g('tEdu').textContent    = edu;
+    g('tLang').textContent   = lang;
+    g('tCanExp').textContent = canExp;
+    g('tSpouse').textContent = spouse;
+    g('tForeign').textContent= forExp;
+    g('tFrench').textContent = french;
+    g('tStudy').textContent  = study;
+    g('tSibling').textContent= sibling;
+    g('tBonus').textContent  = nomBonus + jobOffer;
+    g('tTotal').innerHTML    = '<strong>' + total + '</strong>';
+
+    // Sidebar score
+    g('sideScore').textContent = total;
+
+    // Eligibility banner
+    var banner = g('eligBanner');
+    if (total >= 400) {
+      banner.style.display = 'block';
+    } else {
+      banner.style.display = 'none';
+    }
+  }
+
+  g('calcBtn').addEventListener('click', calculate);
+
+  g('resetBtn').addEventListener('click', function () {
+    setTimeout(function () {
+      g('totalScore').textContent = 0;
+      g('langPts').textContent    = 0;
+      g('eduPts').textContent     = 0;
+      g('workPts').textContent    = 0;
+      g('tAge').textContent    = 0;
+      g('tEdu').textContent    = 0;
+      g('tLang').textContent   = 0;
+      g('tCanExp').textContent = 0;
+      g('tSpouse').textContent = 0;
+      g('tForeign').textContent= 0;
+      g('tFrench').textContent = 0;
+      g('tStudy').textContent  = 0;
+      g('tSibling').textContent= 0;
+      g('tBonus').textContent  = 0;
+      g('tTotal').innerHTML    = '<strong>0</strong>';
+      g('sideScore').textContent = 0;
+      g('eligBanner').style.display = 'none';
+    }, 0);
+  });
+
+  // Marital status toggle — hide/show spouse fields visually
+  g('marital').addEventListener('change', function () {
+    var isSpouse = this.value === 'spouse';
+    ['spouseEducation','clbSpouse','spouseExp'].forEach(function (id) {
+      g(id).closest('.field').style.opacity = isSpouse ? '1' : '0.4';
+    });
+  });
+
+  // Auto-calculate on any change
+  document.querySelectorAll('#mbForm select').forEach(function (el) {
+    el.addEventListener('change', calculate);
+  });
+
+})();
+</script>
+
+<!-- ── Schema Markup ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CRS Calculator",
+  "url": "https://crsscorecalculator.vercel.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://crsscorecalculator.vercel.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "PNP Calculators", "item": "https://crsscorecalculator.vercel.app/pnp-crs-calculator" },
+    { "@type": "ListItem", "position": 3, "name": "Manitoba CRS Calculator", "item": "https://crsscorecalculator.vercel.app/manitoba-crs-calculator" }
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Manitoba CRS Calculator 2026 – MPNP Express Entry Stream Points Tool",
+  "url": "https://crsscorecalculator.vercel.app/manitoba-crs-calculator",
+  "description": "Free Manitoba CRS calculator for MPNP Express Entry Stream. Estimate your CRS score with education, language, work experience and age points for Canada PR.",
+  "isPartOf": { "@type": "WebSite", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+  "about": [
+    { "@type": "Thing", "name": "Manitoba CRS calculator" },
+    { "@type": "Thing", "name": "MPNP Express Entry Stream" },
+    { "@type": "Thing", "name": "Manitoba PNP CRS score" },
+    { "@type": "Thing", "name": "Canada Express Entry CRS points" }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".hero p", ".faq summary"]
+  }
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Manitoba CRS Calculator 2026",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Web",
+  "url": "https://crsscorecalculator.vercel.app/manitoba-crs-calculator",
+  "description": "Free Manitoba PNP Express Entry Stream CRS calculator. Estimate your Canada PR CRS score instantly with age, education, language and work experience.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+  "featureList": [
+    "Manitoba MPNP CRS score estimation",
+    "MPNP Express Entry Stream points",
+    "Language CLB to CRS conversion",
+    "600-point PNP nomination bonus",
+    "Mobile-friendly instant calculation"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Manitoba CRS calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It estimates your Comprehensive Ranking System score for the MPNP Express Entry Stream to assess your chances of receiving a Manitoba provincial nomination for Canada PR." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good CRS score for Manitoba?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A score above 450 gives you a reasonable MPNP EOI pool chance. A Manitoba nomination adds 600 CRS points, making almost any profile competitive for a federal ITA." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Manitoba use the federal CRS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The MPNP Express Entry Stream uses the standard federal CRS framework. Manitoba adds 600 points when it nominates a candidate." }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I improve my CRS score for Manitoba?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Improve IELTS score to CLB 9+, gain Canadian work experience, complete a Canadian study program, or obtain an LMIA-supported Manitoba job offer." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Manitoba CRS calculator accurate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool is based on the official IRCC CRS points grid and MPNP guidelines. Always verify with the IRCC official tool before filing your Express Entry profile." }
+    }
+  ]
+}
+</script>
+
 </body>
 </html>
