@@ -1279,4 +1279,118 @@
       const jobPts      = parseInt(document.getElementById('jobOffer').value) || 0;
       const eduCanPts   = parseInt(document.getElementById('canadaEdu').value) || 0;
       const siblingPts  = parseInt(document.getElementById('sibling').value) || 0;
-      const frenchPts   = parseInt(document.getElementById('frenchBo
+              const frenchPts   = parseInt(document.getElementById('frenchBonus').value) || 0;
+      const sectionD = pnpPts + jobPts + eduCanPts + siblingPts + frenchPts;
+
+      /* ── TOTAL ── */
+      const totalScore = Math.min(1200, sectionA + sectionB + sectionC + sectionD);
+
+      /* ── VERDICT ── */
+      let verdict, verdictColor;
+      if (pnpPts === 600) {
+        verdict = '🏆 PNP Nominated — ITA Virtually Guaranteed!';
+        verdictColor = '#1b5e20';
+      } else if (totalScore >= 490) {
+        verdict = '🟢 Excellent — Draw Ready';
+        verdictColor = '#2e7d32';
+      } else if (totalScore >= 460) {
+        verdict = '🟡 Good — Competitive for CEC Draws';
+        verdictColor = '#e65100';
+      } else if (totalScore >= 430) {
+        verdict = '🟠 Fair — May Qualify for CEC Draws';
+        verdictColor = '#bf360c';
+      } else {
+        verdict = '🔴 Low — Improve Score First';
+        verdictColor = '#b71c1c';
+      }
+
+      /* ── DISPLAY ── */
+      document.getElementById('totalScore').textContent = totalScore;
+      document.getElementById('verdict').textContent = verdict;
+      const rh = document.getElementById('resultHeader');
+      rh.style.background = verdictColor;
+      document.querySelector('.result-box').style.borderColor = verdictColor;
+
+      /* ── BREAKDOWN BARS ── */
+      const rows = [
+        ['Age', agePts, 110],
+        ['Education', eduPts, 140],
+        ['Language (CLB)', langPts, hasSpouse ? 128 : 136],
+        ['Canadian Work Exp.', canExpPts, 80],
+        ['Spouse Factors', sectionB, 40],
+        ['Skill Transferability', sectionC, 100],
+        ['Additional Points', sectionD, 700]
+      ];
+      document.getElementById('breakdownRows').innerHTML = rows.map(([label, pts, max]) => `
+        <div class="br-row">
+          <span class="br-label">${label}</span>
+          <div class="br-bar-wrap">
+            <div class="br-bar" style="width:${max > 0 ? Math.min(100, Math.round(pts / max * 100)) : 0}%"></div>
+          </div>
+          <span class="br-pts">${pts} / ${max}</span>
+        </div>
+      `).join('');
+
+      /* ── TIPS ── */
+      const tips = [];
+      if (canExpPts === 0)  tips.push('🍁 You need at least 1 year of skilled Canadian work experience to qualify for CEC.');
+      if (pnpPts === 0)     tips.push('🏔️ Apply to a PNP stream — a nomination adds +600 CRS, virtually guaranteeing an ITA.');
+      if (avgClb < 9)       tips.push('📝 Improving to CLB 9 (IELTS 7.0+) adds 50–80 CRS points including transferability bonuses.');
+      if (canExpPts < 64)   tips.push('⏱️ More Canadian work experience (3+ years) adds up to 64 direct CRS points.');
+      if (frenchPts === 0)  tips.push('🇫🇷 Add French CLB 7+ with English CLB 5+ for +50 bonus points.');
+      if (eduPts < 112)     tips.push('🎓 Get an ECA for your foreign degree — a bachelor\'s adds 112 education CRS points.');
+
+      const tipsBox = document.getElementById('tipsBox');
+      if (tips.length > 0) {
+        tipsBox.style.display = 'block';
+        tipsBox.innerHTML = `<h3>💡 Tips to Improve Your CEC CRS Score</h3><ul>${tips.map(t => `<li>${t}</li>`).join('')}</ul>`;
+      } else {
+        tipsBox.style.display = 'none';
+      }
+
+      const result = document.getElementById('result');
+      result.style.display = 'block';
+      result.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+    }
+
+    /* RESET */
+    function resetCalc() {
+      document.getElementById('result').style.display = 'none';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    /* SHARE */
+    function shareResult() {
+      const score = document.getElementById('totalScore').textContent;
+      const url = window.location.href;
+      if (navigator.share) {
+        navigator.share({
+          title: 'My CEC CRS Score 2026',
+          text: `My CEC CRS score is ${score}/1200 — calculated free at CRS Score Calculator`,
+          url
+        });
+      } else {
+        navigator.clipboard.writeText(`My CEC CRS Score: ${score}/1200 — ${url}`)
+          .then(() => alert('Result link copied to clipboard!'));
+      }
+    }
+
+    /* FAQ TOGGLE */
+    function toggleFaq(btn) {
+      const item = btn.closest('.faq-item');
+      const open = item.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    }
+
+    /* CLOSE NAV ON OUTSIDE CLICK */
+    document.addEventListener('click', function(e) {
+      const nav = document.getElementById('navLinks');
+      const toggle = document.querySelector('.nav-toggle');
+      if (nav && nav.classList.contains('open') && !nav.contains(e.target) && toggle && !toggle.contains(e.target)) {
+        nav.classList.remove('open');
+        toggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  </script>
+</body>
+</html>
