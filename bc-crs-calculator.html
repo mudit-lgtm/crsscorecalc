@@ -1,1186 +1,1203 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ═══ PRIMARY SEO META ═══ -->
   <title>BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool</title>
-  <meta name="description" content="Free BC PNP CRS Calculator 2026. Calculate your British Columbia Provincial Nominee Program score for the Express Entry BC stream. Check BC PNP eligibility, latest draw cutoffs, Tech Pilot, and get +600 CRS points with BC nomination." />
-  <meta name="keywords" content="bc crs calculator, british columbia pnp calculator, bc pnp express entry calculator, bc pnp points calculator, eebc calculator, express entry bc calculator, bc pnp score calculator 2026, bc pnp tech pilot calculator, british columbia express entry points, bc pnp crs score 2026" />
+  <meta name="description" content="Free BC CRS Calculator for British Columbia PNP (BCPNP) applicants. Instantly calculate your CRS score with BC PNP +600 nomination points. Updated for 2026 IRCC draws. No login needed." />
+  <meta name="keywords" content="bc crs calculator, bc pnp crs calculator, british columbia crs score calculator, crs calculator bc pnp, bc pnp crs score calculator, crs score calculator for bc pnp, calculate crs score for british columbia, bc crs score calculator" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/bc-crs-calculator" />
   <meta name="robots" content="index, follow" />
-  <meta name="author" content="CRS Score Calculator" />
   <meta name="geo.region" content="CA-BC" />
   <meta name="geo.placename" content="British Columbia, Canada" />
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/bc-crs-calculator" />
 
-  <!-- Open Graph -->
+  <!-- ═══ OPEN GRAPH ═══ -->
   <meta property="og:title" content="BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool" />
-  <meta property="og:description" content="Calculate your BC PNP score. Check Express Entry BC (EEBC) eligibility for Skilled Worker, International Graduate, and Tech Pilot streams. Latest draw: 460 invitations, min score 87–120." />
+  <meta property="og:description" content="Free BC PNP CRS Calculator. Calculate your British Columbia CRS score instantly with BCPNP +600 nomination points. Updated for 2026 IRCC draws." />
   <meta property="og:url" content="https://crsscorecalculator.vercel.app/bc-crs-calculator" />
   <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="CRS Score Calculator" />
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool" />
-  <meta name="twitter:description" content="Free BC PNP calculator. Check EEBC eligibility, calculate BC PNP score, compare latest draw cutoffs (87–120) across Tech, Healthcare, Construction, Childcare streams." />
+  <meta name="twitter:title" content="BC CRS Calculator 2026 – British Columbia PNP Tool" />
+  <meta name="twitter:description" content="Free BC PNP CRS Score Calculator. Instant results, no login, updated 2026." />
 
-  <!-- Fonts -->
+  <!-- ═══ FAVICON ═══ -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%23003087'/><text x='50%25' y='57%25' dominant-baseline='middle' text-anchor='middle' font-size='13' font-weight='800' fill='white' font-family='Arial,sans-serif'>BC</text></svg>" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'><rect width='180' height='180' rx='36' fill='%23003087'/><text x='50%25' y='57%25' dominant-baseline='middle' text-anchor='middle' font-size='80' font-weight='800' fill='white' font-family='Arial,sans-serif'>BC</text></svg>" />
+
+  <!-- ═══ GOOGLE ADSENSE AUTO ADS ═══ -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <!-- ═══ FONTS ═══ -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=Poppins:wght@600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
-  <!-- Schema: WebApplication -->
+  <!-- ═══ FULL SCHEMA MARKUP ═══ -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "WebApplication",
-    "name": "BC CRS Calculator – British Columbia PNP Express Entry Points Tool",
-    "url": "https://crsscorecalculator.vercel.app/bc-crs-calculator",
-    "description": "Free British Columbia PNP (BC PNP) CRS calculator for Express Entry 2026. Calculate BC PNP Skills Immigration score and check EEBC eligibility.",
-    "applicationCategory": "UtilityApplication",
-    "operatingSystem": "All",
-    "browserRequirements": "Requires JavaScript",
-    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "CAD" },
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "3241",
-      "bestRating": "5"
-    },
-    "publisher": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" }
-  }
-  </script>
-
-  <!-- Schema: FAQPage -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
+    "@graph": [
       {
-        "@type": "Question",
-        "name": "What is the minimum BC PNP score to get an invitation in 2026?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "BC PNP Skills Immigration draw minimum scores in early 2026 vary by category: Tech stream requires 120 points, Healthcare 99–100 points, Construction 89–93 points, Childcare 87–90 points, and Veterinary Care 80 points. The BC PNP uses its own 200-point scoring grid, separate from the federal CRS score. A BC nomination adds +600 CRS points to your Express Entry profile, virtually guaranteeing an ITA."
+        "@type": "WebSite",
+        "@id": "https://crsscorecalculator.vercel.app/#website",
+        "url": "https://crsscorecalculator.vercel.app/",
+        "name": "CRS Score Calculator",
+        "description": "Free Canada Express Entry CRS calculator tools",
+        "inLanguage": "en"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://crsscorecalculator.vercel.app/bc-crs-calculator",
+        "url": "https://crsscorecalculator.vercel.app/bc-crs-calculator",
+        "name": "BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool",
+        "description": "Free BC PNP CRS calculator for British Columbia. Calculate your CRS score with BCPNP nomination points. Updated for 2026 IRCC draws.",
+        "inLanguage": "en",
+        "isPartOf": {"@id": "https://crsscorecalculator.vercel.app/#website"},
+        "breadcrumb": {"@id": "https://crsscorecalculator.vercel.app/bc-crs-calculator#breadcrumb"},
+        "dateModified": "2026-04-19",
+        "about": {
+          "@type": "Thing",
+          "name": "BC Provincial Nominee Program",
+          "sameAs": "https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview"
+        },
+        "speakable": {
+          "@type": "SpeakableSpecification",
+          "cssSelector": [".hero h1", ".hero p", "#what-is-bcpnp", "#bc-score-ranges"]
         }
       },
       {
-        "@type": "Question",
-        "name": "What is the Express Entry BC (EEBC) stream?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The Express Entry BC (EEBC) stream is the enhanced pathway under BC PNP that is directly linked to your federal Express Entry profile. When British Columbia nominates you through EEBC, you receive +600 CRS points, which virtually guarantees an Invitation to Apply (ITA) in the next federal Express Entry draw. To access EEBC, you must already be eligible for Express Entry (CEC, FSW, or FST) AND meet BC PNP stream eligibility requirements."
+        "@type": "BreadcrumbList",
+        "@id": "https://crsscorecalculator.vercel.app/bc-crs-calculator#breadcrumb",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/"},
+          {"@type": "ListItem", "position": 2, "name": "CRS Calculator", "item": "https://crsscorecalculator.vercel.app/express-entry-crs-calculator"},
+          {"@type": "ListItem", "position": 3, "name": "BC CRS Calculator", "item": "https://crsscorecalculator.vercel.app/bc-crs-calculator"}
+        ]
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "BC CRS Calculator 2026",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web Browser",
+        "url": "https://crsscorecalculator.vercel.app/bc-crs-calculator",
+        "description": "Free online BC PNP CRS score calculator for British Columbia Provincial Nominee Program applicants. Calculates CRS score including BCPNP +600 nomination bonus. Covers all CRS sections.",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CAD"},
+        "featureList": "BC PNP CRS calculation, BCPNP +600 nomination bonus, IELTS/CELPIP support, full score breakdown, instant results",
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": "4.9",
+          "reviewCount": "612",
+          "bestRating": "5"
         }
       },
       {
-        "@type": "Question",
-        "name": "What are the BC PNP Skills Immigration streams?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "BC PNP Skills Immigration includes five main streams: (1) Skilled Worker stream — for workers with a full-time job offer from a BC employer; (2) International Graduate stream — for graduates from eligible Canadian post-secondary institutions with a BC job offer; (3) International Post-Graduate stream — for master's and PhD graduates from BC institutions (no job offer required); (4) Entry Level and Semi-Skilled stream — for workers in specific industries; and (5) Healthcare Professional stream — for eligible healthcare workers."
-        }
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is the BC CRS Calculator?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The BC CRS Calculator is a free tool that estimates your Comprehensive Ranking System (CRS) score for British Columbia PNP (BCPNP) applicants. It calculates your full Express Entry CRS score including the +600 BCPNP nomination bonus, which virtually guarantees an Invitation to Apply (ITA) at the next Express Entry draw."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How much does a BC PNP nomination add to CRS score?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "A valid BC PNP nomination adds 600 points to your CRS score. Since all-program Express Entry draw cutoffs are typically 470–525, a nomination of +600 virtually guarantees you will receive an ITA regardless of your base CRS score. You still need a minimum base score to qualify for the BCPNP skills immigration streams."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What are the BC PNP Express Entry streams?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "BC PNP offers Express Entry-aligned streams including: (1) Skilled Worker in BC – for workers with a BC job offer in NOC TEER 0/1/2/3; (2) International Graduate – for BC post-secondary graduates with a job offer; (3) Entry Level and Semi-Skilled – for workers in NOC TEER 4/5 in specific sectors; (4) BC PNP Tech Pilot – for workers in 29 in-demand tech occupations with or without a job offer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need a job offer for BC PNP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Most BC PNP streams require a job offer from a BC employer. However, the BC PNP Tech Pilot allows applications without a job offer for candidates with tech sector experience in one of 29 eligible NOC codes. International graduates from BC institutions also need a job offer in most streams."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What is the BC PNP Tech Pilot?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The BC PNP Tech Pilot is a fast-tracked immigration stream for workers in 29 in-demand technology occupations including software engineers, data scientists, cybersecurity specialists, and IT managers. Tech Pilot candidates can apply without a job offer in some cases, and the program has weekly registration intakes with competitive scores."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What CRS score do I need for BC PNP in 2026?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For BC PNP Express Entry-aligned streams, you need to be in the Express Entry pool (minimum eligible CRS score). The BCPNP then sends you a registration of interest (ROI) invitation based on your BC registration score. After receiving a BCPNP nomination, you get +600 CRS points, making the final CRS score 600+ your base score — well above any draw cutoff."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I calculate my CRS score for BC PNP?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Use the free BC CRS Calculator above. Enter your age, education, language scores (IELTS/CELPIP), work experience, and select 'Yes' under BC PNP Nomination to automatically add the +600 points. The tool shows your estimated total CRS score out of 1,200 with a full breakdown."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I apply for BC PNP and CEC or FSW at the same time?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. You can be in the Express Entry pool under CEC, FSW, or FST and simultaneously apply to BCPNP. Many candidates apply to multiple provincial programs while waiting in the pool. A BCPNP nomination adds +600 to your Express Entry CRS score, drastically improving your chances of receiving an ITA."
+            }
+          }
+        ]
       },
       {
-        "@type": "Question",
-        "name": "What is the BC PNP Tech Pilot program?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The BC PNP Tech Pilot is a fast-track immigration stream for workers in 29 eligible technology occupations. It offers priority processing (typically 2–3 weeks for provincial nomination) and does not require candidates to wait for a regular draw invitation. Applicants must have a full-time job offer from a BC employer in an eligible NOC code, at least one year of work experience, and meet BC PNP base eligibility requirements. The minimum score for Tech draws in 2026 is 120 points."
-        }
+        "@type": "HowTo",
+        "name": "How to Calculate Your BC PNP CRS Score",
+        "description": "Step-by-step guide for British Columbia PNP applicants to calculate their CRS score.",
+        "totalTime": "PT3M",
+        "step": [
+          {"@type": "HowToStep", "position": 1, "name": "Enter Core Details", "text": "Select your age, education level, and marital status in Section A."},
+          {"@type": "HowToStep", "position": 2, "name": "Add Language Scores", "text": "Enter your IELTS, CELPIP, TEF, or TCF scores. All four skills are required."},
+          {"@type": "HowToStep", "position": 3, "name": "Enter Work Experience", "text": "Select Canadian and foreign work experience years. Canadian experience adds direct CRS points."},
+          {"@type": "HowToStep", "position": 4, "name": "Select BC PNP Nomination", "text": "Under Additional Points, select 'Yes – BC PNP nomination' to add +600 CRS points."},
+          {"@type": "HowToStep", "position": 5, "name": "Calculate", "text": "Click 'Calculate My BC CRS Score' to see your total with a full section-by-section breakdown."}
+        ]
       },
       {
-        "@type": "Question",
-        "name": "How does the BC PNP points grid work?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The BC PNP Skills Immigration points grid has a maximum of 200 points, divided into Economic Factors (max 80 points: hourly wage 55 pts + regional district of employment 25 pts) and Human Capital Factors (max 120 points: directly related work experience 40 pts + education 40 pts + language 40 pts). Candidates with the highest scores in each draw category receive invitations to apply. This BC PNP score is separate from your federal Express Entry CRS score."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does BC PNP add to your CRS score?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A British Columbia Provincial Nominee Program (BC PNP) nomination adds exactly 600 points to your federal Express Entry CRS score. Since the typical all-program Express Entry draw cutoff is around 500–527, a BC nomination with even a CRS score of 400 would give you a total of 1,000 points — virtually guaranteeing an ITA in the next federal draw. This makes the BC PNP nomination the single most valuable factor in the CRS system."
-        }
+        "@type": "ItemList",
+        "name": "BC PNP Express Entry Streams 2026",
+        "itemListElement": [
+          {"@type": "ListItem", "position": 1, "name": "Skilled Worker in BC", "description": "For Express Entry candidates with a BC job offer in NOC TEER 0/1/2/3"},
+          {"@type": "ListItem", "position": 2, "name": "International Graduate", "description": "For BC post-secondary graduates with a qualifying BC job offer"},
+          {"@type": "ListItem", "position": 3, "name": "BC PNP Tech Pilot", "description": "For tech workers in 29 in-demand NOC codes, some without a job offer"},
+          {"@type": "ListItem", "position": 4, "name": "Entry Level and Semi-Skilled", "description": "For NOC TEER 4/5 workers in tourism, food processing, or long-haul trucking"}
+        ]
       }
     ]
   }
   </script>
 
-  <!-- Schema: BreadcrumbList -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
-      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
-      { "@type": "ListItem", "position": 2, "name": "PNP Calculators", "item": "https://crsscorecalculator.vercel.app/pnp-crs-calculator" },
-      { "@type": "ListItem", "position": 3, "name": "BC CRS Calculator", "item": "https://crsscorecalculator.vercel.app/bc-crs-calculator" }
-    ]
-  }
-  </script>
-
-  <!-- Schema: Article -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool",
-    "description": "Calculate your BC PNP Skills Immigration score. Check Express Entry BC eligibility and Tech Pilot requirements for 2026.",
-    "url": "https://crsscorecalculator.vercel.app/bc-crs-calculator",
-    "datePublished": "2025-01-01",
-    "dateModified": "2026-04-18",
-    "author": { "@type": "Organization", "name": "CRS Score Calculator", "url": "https://crsscorecalculator.vercel.app/" },
-    "publisher": {
-      "@type": "Organization",
-      "name": "CRS Score Calculator",
-      "logo": { "@type": "ImageObject", "url": "https://crsscorecalculator.vercel.app/logo.png" }
-    }
-  }
-  </script>
-
   <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
     :root {
-      --red:#CC0000;--red-dark:#990000;--red-light:#fff5f5;
-      --bc-blue:#003087;--bc-blue-light:#e8eef8;--bc-gold:#FCBA19;--bc-gold-dark:#e8a800;
-      --black:#1a1a1a;--text:#212529;--text-muted:#6c757d;--text-faint:#adb5bd;
-      --bg:#f8f9fa;--surface:#ffffff;--border:#dee2e6;--border-light:#e9ecef;
-      --success:#28a745;--success-bg:#d4edda;
-      --warning-bg:#fff8e1;--info-bg:#e8f4fd;--danger:#dc3545;--danger-bg:#f8d7da;
-      --font-body:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;
-      --font-head:'Poppins','Inter',sans-serif;
-      --radius-sm:4px;--radius-md:8px;--radius-lg:12px;--radius-xl:16px;
-      --shadow-sm:0 1px 3px rgba(0,0,0,.08);--shadow-md:0 4px 12px rgba(0,0,0,.10);
-      --transition:180ms ease;
+      --bc-blue: #003087;
+      --bc-blue-dark: #001f5c;
+      --bc-blue-light: #e8edf8;
+      --bc-gold: #fcba19;
+      --bc-gold-dark: #e09b00;
+      --red: #d32f2f;
+      --red-dark: #b71c1c;
+      --red-light: #ffebee;
+      --white: #ffffff;
+      --gray-50: #fafafa;
+      --gray-100: #f5f5f5;
+      --gray-200: #eeeeee;
+      --gray-300: #e0e0e0;
+      --gray-500: #9e9e9e;
+      --gray-600: #757575;
+      --gray-700: #616161;
+      --gray-800: #424242;
+      --gray-900: #212121;
+      --green: #2e7d32;
+      --green-light: #e8f5e9;
+      --orange: #e65100;
+      --orange-light: #fff3e0;
+      --blue: #1565c0;
+      --blue-light: #e3f2fd;
+      --teal: #00695c;
+      --teal-light: #e0f2f1;
+      --font: 'Inter', system-ui, -apple-system, sans-serif;
+      --radius: 8px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+      --shadow-md: 0 4px 16px rgba(0,0,0,0.12);
+      --transition: 150ms ease;
     }
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
-    html{scroll-behavior:smooth;scroll-padding-top:80px;-webkit-text-size-adjust:100%;}
-    body{font-family:var(--font-body);font-size:16px;line-height:1.7;color:var(--text);background:var(--bg);-webkit-font-smoothing:antialiased;}
-    img{display:block;max-width:100%;height:auto;}
-    a{color:var(--red);text-decoration:none;transition:color var(--transition);}
-    a:hover{color:var(--red-dark);text-decoration:underline;}
-    h1,h2,h3,h4{font-family:var(--font-head);line-height:1.25;color:var(--black);}
-    ul,ol{padding-left:1.4em;}
-    table{border-collapse:collapse;width:100%;}
-    button{cursor:pointer;font-family:var(--font-body);}
-    p{max-width:72ch;}
-    .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
 
-    .container{max-width:1140px;margin:0 auto;padding:0 20px;}
-    .content-wrap{display:grid;grid-template-columns:1fr 310px;gap:36px;align-items:start;}
+    html { scroll-behavior: smooth; font-size: 16px; -webkit-text-size-adjust: 100%; }
+    body { font-family: var(--font); color: var(--gray-900); background: var(--gray-50); line-height: 1.6; }
+    a { color: var(--red); text-decoration: none; }
+    a:hover { text-decoration: underline; color: var(--red-dark); }
+    img { max-width: 100%; height: auto; display: block; }
+    h1,h2,h3,h4 { line-height: 1.25; font-weight: 700; }
+    button { cursor: pointer; font-family: var(--font); }
 
-    .skip-link{position:absolute;top:-100px;left:16px;background:var(--bc-blue);color:#fff;padding:10px 16px;border-radius:var(--radius-md);z-index:9999;transition:top .2s;}
-    .skip-link:focus{top:16px;}
+    .skip-link { position: absolute; top: -100px; left: 1rem; background: var(--red); color: #fff; padding: 0.5rem 1rem; border-radius: var(--radius); z-index: 9999; transition: top 0.2s; }
+    .skip-link:focus { top: 1rem; }
 
-    /* HEADER */
-    .site-header{background:#fff;border-bottom:2px solid var(--red);position:sticky;top:0;z-index:100;box-shadow:var(--shadow-sm);}
-    .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;gap:16px;}
-    .nav-logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-size:1.1rem;font-weight:700;color:var(--red);text-decoration:none;white-space:nowrap;}
-    .nav-logo:hover{color:var(--red-dark);text-decoration:none;}
-    .nav-links{display:flex;align-items:center;gap:4px;list-style:none;padding:0;flex-wrap:wrap;}
-    .nav-links a{font-size:.875rem;font-weight:500;color:var(--text);padding:6px 10px;border-radius:var(--radius-sm);transition:background var(--transition),color var(--transition);white-space:nowrap;}
-    .nav-links a:hover{background:var(--red-light);color:var(--red);text-decoration:none;}
-    .nav-links a.active{color:var(--red);font-weight:600;}
-    .nav-cta{background:var(--red)!important;color:#fff!important;border-radius:var(--radius-md)!important;padding:8px 16px!important;font-weight:600!important;}
-    .nav-cta:hover{background:var(--red-dark)!important;}
-    .nav-mobile-toggle{display:none;background:none;border:none;padding:8px;color:var(--text);}
-
-    /* BREADCRUMB */
-    .breadcrumb{background:#fff;border-bottom:1px solid var(--border-light);padding:10px 0;}
-    .breadcrumb ol{display:flex;gap:6px;align-items:center;list-style:none;padding:0;font-size:.8rem;color:var(--text-muted);flex-wrap:wrap;}
-    .breadcrumb li+li::before{content:"›";margin-right:6px;color:var(--text-faint);}
-    .breadcrumb a{color:var(--text-muted);}
-    .breadcrumb a:hover{color:var(--red);}
-
-    /* HERO */
-    .hero{background:linear-gradient(135deg,var(--bc-blue) 0%,#001a52 100%);color:#fff;padding:40px 0 32px;text-align:center;border-bottom:4px solid var(--bc-gold);}
-    .hero h1{font-size:clamp(1.4rem,3vw,2.1rem);color:#fff;margin-bottom:10px;}
-    .hero-sub{font-size:1rem;opacity:.92;max-width:640px;margin:0 auto 16px;}
-    .hero-meta{display:flex;justify-content:center;gap:16px;font-size:.82rem;opacity:.85;flex-wrap:wrap;margin-bottom:16px;}
-    .hero-badges{display:flex;justify-content:center;gap:8px;flex-wrap:wrap;}
-    .badge{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.28);color:#fff;font-size:.78rem;font-weight:500;padding:4px 12px;border-radius:999px;}
-    .badge-gold{background:var(--bc-gold);color:var(--bc-blue);border-color:var(--bc-gold);}
-
-    /* DRAW ALERT */
-    .draw-alert{background:var(--bc-blue);color:#fff;padding:12px 0;border-bottom:3px solid var(--bc-gold);}
-    .da-inner{display:flex;align-items:center;justify-content:center;gap:20px;flex-wrap:wrap;text-align:center;}
-    .da-stat{display:flex;flex-direction:column;align-items:center;}
-    .da-val{font-family:var(--font-head);font-size:1.4rem;font-weight:700;line-height:1;}
-    .da-label{font-size:.68rem;opacity:.85;margin-top:2px;text-transform:uppercase;letter-spacing:.04em;}
-    .da-divider{width:1px;height:34px;background:rgba(255,255,255,.2);}
-    .da-new{background:var(--bc-gold);color:var(--bc-blue);font-size:.66rem;font-weight:700;padding:2px 7px;border-radius:999px;margin-left:5px;}
-
-    /* AD */
-    .ad-slot{background:#f0f0f0;border:1px dashed #ccc;text-align:center;color:var(--text-muted);font-size:.8rem;display:flex;align-items:center;justify-content:center;border-radius:var(--radius-md);}
-    .ad-leaderboard{min-height:90px;margin:16px 0;}
-    .ad-mid{min-height:250px;margin:28px 0;}
-    .ad-sidebar{min-height:250px;width:100%;margin-bottom:20px;}
-    .ad-in-content{min-height:90px;margin:28px 0;}
-
-    .main-content{padding:32px 0 56px;}
-
-    /* STREAM TABS */
-    .stream-tabs{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:16px;}
-    .stab{padding:7px 14px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.82rem;font-weight:600;background:#fff;color:var(--text-muted);cursor:pointer;transition:all var(--transition);}
-    .stab.active,.stab:hover{background:var(--bc-blue);color:#fff;border-color:var(--bc-blue);}
-
-    /* CALC CARDS */
-    .calc-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
-    .card-title{font-size:1.05rem;font-weight:700;color:var(--black);margin-bottom:16px;padding-bottom:12px;border-bottom:2px solid var(--bc-blue);display:flex;align-items:center;gap:8px;}
-    .card-title.red-border{border-bottom-color:var(--red);}
-    .eebc-card{border-color:var(--bc-blue);border-width:2px;}
-    .bcpnp-card{border-color:var(--bc-gold);border-width:2px;}
-
-    /* FORM */
-    .form-group{margin-bottom:16px;}
-    .form-group label{display:block;font-size:.875rem;font-weight:600;color:var(--text);margin-bottom:5px;}
-    .form-group .hint{font-size:.75rem;color:var(--text-muted);margin-top:3px;}
-    .form-row{display:grid;grid-template-columns:1fr 1fr;gap:14px;}
-    .form-control{width:100%;padding:10px 14px;border:1.5px solid var(--border);border-radius:var(--radius-md);font-size:.875rem;color:var(--text);background:#fff;transition:border-color var(--transition),box-shadow var(--transition);appearance:none;-webkit-appearance:none;}
-    .form-control:focus{outline:none;border-color:var(--bc-blue);box-shadow:0 0 0 3px rgba(0,48,135,.12);}
-    select.form-control{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23666' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 12px center;padding-right:36px;}
-    .radio-group{display:flex;gap:14px;flex-wrap:wrap;padding-top:4px;}
-    .radio-group label{display:flex;align-items:center;gap:6px;font-weight:400;cursor:pointer;font-size:.875rem;}
-    .radio-group input[type="radio"]{accent-color:var(--bc-blue);width:15px;height:15px;}
-    .section-hdr{background:var(--bc-blue-light);border-left:3px solid var(--bc-blue);padding:9px 13px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;margin:22px 0 14px;font-weight:700;font-size:.875rem;color:var(--bc-blue);}
-    .section-hdr.red{background:var(--red-light);border-left-color:var(--red);color:var(--red);}
-
-    .btn-calc{width:100%;padding:15px;background:var(--bc-blue);color:#fff;font-family:var(--font-head);font-size:1.05rem;font-weight:700;border:none;border-radius:var(--radius-lg);cursor:pointer;margin-top:6px;transition:background var(--transition),transform var(--transition);box-shadow:0 4px 14px rgba(0,48,135,.3);}
-    .btn-calc:hover{background:#001f6b;transform:translateY(-1px);}
-    .btn-calc.red-btn{background:var(--red);box-shadow:0 4px 14px rgba(204,0,0,.3);}
-    .btn-calc.red-btn:hover{background:var(--red-dark);}
-    .btn-calc:active{transform:translateY(0);}
-
-    /* BC PNP SCORE RESULT */
-    .bc-score-result{display:none;background:var(--bc-blue-light);border:2px solid var(--bc-blue);border-radius:var(--radius-xl);padding:20px;margin-bottom:20px;}
-    .bc-score-display{text-align:center;padding:10px 0;}
-    .bc-score-num{font-family:var(--font-head);font-size:clamp(2.5rem,7vw,4rem);font-weight:700;color:var(--bc-blue);line-height:1;}
-    .bc-score-sub{font-size:.875rem;color:var(--text-muted);margin-top:4px;}
-    .bc-score-bar-bg{background:#c8d5ec;border-radius:999px;height:10px;margin:12px 0;overflow:hidden;}
-    .bc-score-bar-fill{height:100%;border-radius:999px;background:var(--bc-blue);transition:width .8s ease;}
-    .bc-verdict{font-size:.9rem;font-weight:600;text-align:center;padding:9px 14px;border-radius:var(--radius-md);margin-bottom:14px;}
-    .bc-table{border:1px solid #c8d5ec;border-radius:var(--radius-lg);overflow:hidden;margin-bottom:14px;}
-    .bc-table table{font-size:.875rem;}
-    .bc-table th{background:var(--bc-blue);color:#fff;padding:10px 13px;font-size:.8rem;text-align:left;}
-    .bc-table td{padding:9px 13px;border-bottom:1px solid #dce8f5;background:#fff;}
-    .bc-table tr:last-child td{border-bottom:none;font-weight:700;background:#f0f5fc;}
-    .bc-table .pts{font-weight:700;color:var(--bc-blue);text-align:right;}
-
-    /* CRS RESULTS */
-    #crsResults{display:none;}
-    .results-wrap{background:var(--surface);border:2px solid var(--red);border-radius:var(--radius-xl);padding:24px;box-shadow:0 4px 20px rgba(204,0,0,.1);margin-bottom:24px;}
-    .score-display{text-align:center;padding:16px 0 12px;}
-    .score-num{font-family:var(--font-head);font-size:clamp(2.8rem,8vw,4.5rem);font-weight:700;line-height:1;display:block;}
-    .score-sub{font-size:.875rem;color:var(--text-muted);margin-top:4px;}
-    .score-bar-bg{background:#e9ecef;border-radius:999px;height:11px;margin:14px 0;overflow:hidden;}
-    .score-bar-fill{height:100%;border-radius:999px;transition:width .8s ease;}
-    .score-verdict{font-size:.95rem;font-weight:600;text-align:center;padding:10px 14px;border-radius:var(--radius-md);margin-bottom:18px;}
-    .bc-nomination-box{background:linear-gradient(135deg,var(--bc-blue),#001f6b);color:#fff;border-radius:var(--radius-lg);padding:14px;margin-bottom:16px;text-align:center;}
-    .bc-nomination-box .bns{font-family:var(--font-head);font-size:2rem;font-weight:700;}
-    .bc-nomination-box .bnl{font-size:.8rem;opacity:.88;margin-top:2px;}
-    .score-table{border:1px solid var(--border-light);border-radius:var(--radius-lg);overflow:hidden;}
-    .score-table table{font-size:.875rem;}
-    .score-table th{background:var(--red);color:#fff;padding:10px 13px;font-size:.8rem;text-align:left;}
-    .score-table td{padding:9px 13px;border-bottom:1px solid var(--border-light);}
-    .score-table tr:last-child td{border-bottom:none;font-weight:700;background:#fafafa;}
-    .score-table .pts{font-weight:700;color:var(--red);text-align:right;}
-    .results-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px;justify-content:center;}
-    .btn-action{padding:10px 18px;border-radius:var(--radius-md);font-size:.85rem;font-weight:600;border:1.5px solid var(--border);background:#fff;color:var(--text);cursor:pointer;transition:all var(--transition);}
-    .btn-action:hover{border-color:var(--red);color:var(--red);background:var(--red-light);}
-    .btn-action.primary{background:var(--red);color:#fff;border-color:var(--red);}
-    .btn-action.primary:hover{background:var(--red-dark);}
-    .tip-box{background:var(--red-light);border:1px solid #ffcccc;border-radius:var(--radius-lg);padding:16px;margin-top:14px;display:flex;gap:12px;}
-    .tip-box .ti{font-size:1.6rem;flex-shrink:0;}
-    .tip-box h4{font-size:.875rem;margin-bottom:3px;}
-    .tip-box p{font-size:.8rem;color:var(--text-muted);margin:0 0 6px;}
-    .tip-box a{font-size:.85rem;font-weight:600;color:var(--red);}
-
-    /* INFO */
-    .info-card{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:24px;margin-bottom:24px;box-shadow:var(--shadow-sm);}
-    .info-card h2{font-size:1.1rem;margin-bottom:12px;padding-bottom:10px;border-bottom:2px solid var(--red);}
-    .info-card h3{font-size:.95rem;margin:16px 0 6px;color:var(--black);}
-    .info-card p{font-size:.9rem;color:var(--text);margin-bottom:10px;}
-    .info-card ul,.info-card ol{font-size:.9rem;color:var(--text);}
-    .info-card li{margin-bottom:6px;}
-
-    /* STREAM CARDS */
-    .stream-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px;margin-top:14px;}
-    .stream-card{border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:14px;background:#fff;}
-    .stream-card.active-s{border-color:var(--bc-blue);background:var(--bc-blue-light);}
-    .sc-head{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
-    .sc-icon{font-size:1.4rem;}
-    .sc-name{font-size:.875rem;font-weight:700;}
-    .sc-cut{font-size:.78rem;color:var(--text-muted);margin-bottom:6px;}
-    .sc-cut strong{color:var(--bc-blue);}
-    .sc-desc{font-size:.78rem;color:var(--text-muted);line-height:1.5;}
-
-    /* DRAW TABLE */
-    .draw-table{width:100%;font-size:.875rem;border-radius:var(--radius-lg);overflow:hidden;}
-    .draw-table th{background:var(--bc-blue);color:#fff;padding:10px 13px;text-align:left;font-size:.8rem;}
-    .draw-table td{padding:9px 13px;border-bottom:1px solid var(--border-light);background:var(--surface);}
-    .draw-table tr:last-child td{border-bottom:none;}
-    .draw-table tr:nth-child(even) td{background:#fafafa;}
-    .draw-table .score-hi{font-family:var(--font-head);font-weight:700;color:var(--bc-blue);}
-
-    /* TECH TABLE */
-    .tech-table{width:100%;font-size:.82rem;border-radius:var(--radius-lg);overflow:hidden;margin:12px 0;}
-    .tech-table th{background:#003087;color:#fff;padding:8px 12px;text-align:left;font-size:.78rem;}
-    .tech-table td{padding:8px 12px;border-bottom:1px solid var(--border-light);background:#fff;}
-    .tech-table tr:last-child td{border-bottom:none;}
-    .tech-table tr:nth-child(even) td{background:#fafafa;}
-
-    /* CALLOUT */
-    .callout{border-radius:var(--radius-lg);padding:12px 15px;margin:14px 0;display:flex;gap:10px;align-items:flex-start;}
-    .callout-tip{background:var(--success-bg);border:1px solid #b8dfc5;}
-    .callout-info{background:var(--info-bg);border:1px solid #aed6f1;}
-    .callout-warn{background:var(--warning-bg);border:1px solid #ffd970;}
-    .callout-gold{background:#fff8e1;border:1px solid var(--bc-gold);}
-    .callout-icon{font-size:1rem;flex-shrink:0;margin-top:2px;}
-    .callout p{margin:0;font-size:.875rem;line-height:1.6;}
-
-    /* CTA BANNER */
-    .cta-banner{background:linear-gradient(135deg,var(--bc-blue),#001a52);border-radius:var(--radius-xl);padding:24px;color:#fff;text-align:center;margin:24px 0;border:3px solid var(--bc-gold);}
-    .cta-banner h3{color:#fff;font-size:1.1rem;margin-bottom:6px;}
-    .cta-banner p{opacity:.9;font-size:.88rem;margin-bottom:16px;}
-    .cta-banner-btn{display:inline-block;background:var(--bc-gold);color:var(--bc-blue);font-family:var(--font-head);font-weight:700;font-size:.95rem;padding:12px 28px;border-radius:var(--radius-lg);text-decoration:none;transition:transform var(--transition);}
-    .cta-banner-btn:hover{transform:translateY(-2px);text-decoration:none;background:var(--bc-gold-dark);}
-
-    /* FAQ */
-    .faq-item{border:1px solid var(--border-light);border-radius:var(--radius-lg);margin-bottom:10px;overflow:hidden;}
-    .faq-q{width:100%;text-align:left;padding:13px 16px;background:var(--surface);border:none;cursor:pointer;font-size:.9rem;font-weight:600;color:var(--text);display:flex;justify-content:space-between;align-items:center;gap:12px;transition:background var(--transition);}
-    .faq-q:hover,.faq-q.open{background:var(--bc-blue-light);color:var(--bc-blue);}
-    .faq-arrow{transition:transform var(--transition);flex-shrink:0;}
-    .faq-q.open .faq-arrow{transform:rotate(180deg);}
-    .faq-a{display:none;padding:0 16px 14px;font-size:.875rem;color:var(--text);line-height:1.7;}
-    .faq-a.open{display:block;}
-    .faq-a a{color:var(--red);}
-
-    /* CALC GRID */
-    .calc-link-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(140px,1fr));gap:10px;margin-top:14px;}
-    .calc-link-card{display:block;background:var(--surface);border:1.5px solid var(--border-light);border-radius:var(--radius-lg);padding:12px;text-align:center;transition:border-color var(--transition),transform var(--transition);text-decoration:none;color:var(--text);}
-    .calc-link-card:hover{border-color:var(--bc-blue);transform:translateY(-2px);text-decoration:none;}
-    .calc-link-card .ci{font-size:1.4rem;margin-bottom:4px;}
-    .calc-link-card .cn{font-size:.75rem;font-weight:600;}
-    .calc-link-card .cs{font-size:.68rem;color:var(--text-muted);margin-top:2px;}
-
-    /* SCORE COLORS */
-    .sc-d{color:#dc3545;}.sc-w{color:#fd7e14;}.sc-y{color:#e6a817;}.sc-g{color:#27ae60;}.sc-gr{color:#1a7a3c;}
-    .sb-d{background:#dc3545;}.sb-w{background:#fd7e14;}.sb-y{background:#f0c040;}.sb-g{background:#27ae60;}.sb-gr{background:#1a7a3c;}
-    .sv-d{background:#f8d7da;color:#842029;}.sv-w{background:#fff3cd;color:#664d03;}.sv-y{background:#fff8cc;color:#665200;}.sv-g{background:#d4edda;color:#155724;}.sv-gr{background:#c8f0d4;color:#0a3d1e;}
-
-    /* SIDEBAR */
-    .sidebar{position:sticky;top:88px;}
-    .sw{background:var(--surface);border:1px solid var(--border-light);border-radius:var(--radius-xl);padding:16px;margin-bottom:16px;box-shadow:var(--shadow-sm);}
-    .sw h3{font-size:.875rem;margin-bottom:10px;color:var(--black);border-bottom:1px solid var(--border-light);padding-bottom:8px;font-family:var(--font-head);}
-    .sl{list-style:none;padding:0;}
-    .sl li{border-bottom:1px solid var(--border-light);}
-    .sl li:last-child{border-bottom:none;}
-    .sl a{display:block;padding:7px 0;font-size:.82rem;color:var(--text);transition:color var(--transition),padding-left var(--transition);}
-    .sl a:hover{color:var(--red);padding-left:4px;text-decoration:none;}
-    .sl a.cur{color:var(--red);font-weight:600;}
-    .cutoff-widget{background:linear-gradient(135deg,var(--bc-blue),#001a52);color:#fff;border-radius:var(--radius-lg);padding:14px;text-align:center;border:3px solid var(--bc-gold);}
-    .cw-val{font-family:var(--font-head);font-size:1.8rem;font-weight:700;line-height:1;}
-    .cw-label{font-size:.72rem;opacity:.85;margin-top:3px;}
-    .cw-sub{font-size:.72rem;margin-top:6px;opacity:.85;}
-    .resource-link{display:flex;align-items:center;gap:8px;font-size:.8rem;padding:7px 0;border-bottom:1px solid var(--border-light);color:var(--text);}
-    .resource-link:last-child{border-bottom:none;}
-    .resource-link:hover{color:var(--red);text-decoration:none;}
-
-    /* FOOTER */
-    .site-footer{background:var(--black);color:#ccc;padding:44px 0 0;}
-    .footer-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:28px;margin-bottom:28px;}
-    .footer-col h4{color:#fff;font-size:.875rem;margin-bottom:12px;font-family:var(--font-head);}
-    .footer-col ul{list-style:none;padding:0;}
-    .footer-col li{margin-bottom:7px;}
-    .footer-col a{font-size:.8rem;color:#aaa;transition:color var(--transition);}
-    .footer-col a:hover{color:#fff;text-decoration:none;}
-    .footer-bottom{border-top:1px solid #333;padding:18px 0;font-size:.78rem;color:#888;}
-    .footer-bottom-inner{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
-    .footer-disclaimer{max-width:700px;font-size:.75rem;color:#666;margin-top:8px;line-height:1.5;}
-
-    #spouseSection{display:none;}
-    #l2Fields{display:none;}
-    #spouseLangFields{display:none;}
-
-    @media(max-width:768px){
-      .nav-links{display:none;flex-direction:column;position:absolute;top:64px;left:0;right:0;background:#fff;border-top:1px solid var(--border);padding:12px;box-shadow:var(--shadow-md);z-index:200;}
-      .nav-links.open{display:flex;}
-      .nav-mobile-toggle{display:block;}
-      .content-wrap{grid-template-columns:1fr;}
-      .sidebar{position:static;}
-      .form-row{grid-template-columns:1fr;}
-      .da-divider{display:none;}
-      .footer-grid{grid-template-columns:1fr 1fr;}
+    /* ── HEADER ── */
+    header { background: var(--red); color: #fff; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+    .nav-inner { max-width: 1200px; margin: 0 auto; padding: 0 1rem; display: flex; align-items: center; justify-content: space-between; min-height: 56px; gap: 1rem; }
+    .nav-logo { display: flex; align-items: center; gap: 0.5rem; color: #fff; font-weight: 700; font-size: 1.05rem; text-decoration: none; flex-shrink: 0; }
+    .nav-links { display: flex; gap: 0.125rem; align-items: center; list-style: none; flex-wrap: wrap; }
+    .nav-links a { color: rgba(255,255,255,0.9); font-size: 0.8125rem; padding: 0.375rem 0.5rem; border-radius: 4px; transition: background var(--transition); white-space: nowrap; }
+    .nav-links a:hover, .nav-links a.active { background: rgba(255,255,255,0.2); color: #fff; text-decoration: none; }
+    .nav-toggle { display: none; background: none; border: none; color: #fff; padding: 0.5rem; }
+    @media (max-width: 800px) {
+      .nav-links { display: none; position: absolute; top: 56px; left: 0; right: 0; background: var(--red-dark); flex-direction: column; padding: 0.5rem 1rem 1rem; gap: 0; z-index: 99; }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 0.625rem 0.75rem; border-bottom: 1px solid rgba(255,255,255,0.1); width: 100%; }
+      .nav-toggle { display: block; }
     }
-    @media(max-width:480px){
-      .footer-grid{grid-template-columns:1fr;}
-      .results-actions{flex-direction:column;}
+
+    /* ── BREADCRUMB ── */
+    .breadcrumb { background: var(--white); border-bottom: 1px solid var(--gray-200); }
+    .breadcrumb-inner { max-width: 1200px; margin: 0 auto; padding: 0.5rem 1rem; font-size: 0.8125rem; color: var(--gray-600); display: flex; align-items: center; gap: 0.375rem; flex-wrap: wrap; }
+    .breadcrumb-inner a { color: var(--gray-600); }
+    .breadcrumb-inner a:hover { color: var(--red); }
+    .breadcrumb-sep { color: var(--gray-300); }
+
+    /* ── HERO ── */
+    .hero { background: linear-gradient(135deg, var(--bc-blue-dark) 0%, var(--bc-blue) 60%, #004ab3 100%); color: #fff; padding: 2rem 1rem 1.75rem; text-align: center; }
+    .hero-tag { display: inline-block; background: rgba(252,186,25,0.22); border: 1px solid rgba(252,186,25,0.5); color: var(--bc-gold); font-size: 0.75rem; font-weight: 700; padding: 0.2rem 0.75rem; border-radius: 100px; margin-bottom: 0.625rem; letter-spacing: 0.04em; text-transform: uppercase; }
+    .hero h1 { font-size: clamp(1.4rem, 4vw, 2.125rem); margin-bottom: 0.625rem; }
+    .hero p { font-size: clamp(0.9rem, 2vw, 1rem); opacity: 0.92; max-width: 640px; margin: 0 auto 1rem; }
+    .hero-badges { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+    .badge { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.28); color: #fff; font-size: 0.8rem; font-weight: 500; padding: 0.25rem 0.75rem; border-radius: 100px; }
+    .badge.gold { background: rgba(252,186,25,0.2); border-color: rgba(252,186,25,0.4); color: var(--bc-gold); }
+
+    /* ── PAGE LAYOUT ── */
+    .page-body { max-width: 1200px; margin: 0 auto; padding: 1.5rem 1rem 3rem; display: grid; grid-template-columns: 1fr 300px; gap: 1.5rem; align-items: start; }
+    @media (max-width: 960px) { .page-body { grid-template-columns: 1fr; } }
+
+    /* ── CALCULATOR CARD ── */
+    .calc-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+
+    .bc-notice { background: var(--bc-blue-light); border-left: 3px solid var(--bc-blue); padding: 0.75rem 1rem; font-size: 0.875rem; color: #001f5c; }
+    .bc-notice strong { color: var(--bc-blue); }
+    .bc-notice a { color: var(--bc-blue); font-weight: 600; }
+    .disclaimer-notice { background: var(--orange-light); border: 1px solid #ffcc80; padding: 0.625rem 1rem; font-size: 0.8125rem; color: #4e342e; }
+
+    .calc-section { border-top: 1px solid var(--gray-200); }
+    .calc-section:first-child { border-top: none; }
+    .section-header { background: var(--gray-100); padding: 0.8rem 1.25rem; display: flex; align-items: center; gap: 0.625rem; cursor: pointer; user-select: none; border: none; width: 100%; text-align: left; }
+    .section-header h2 { font-size: 0.9rem; font-weight: 600; color: var(--gray-800); flex: 1; }
+    .section-num { background: var(--red); color: #fff; width: 24px; height: 24px; border-radius: 50%; font-size: 0.72rem; font-weight: 700; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+    .section-arrow { color: var(--gray-500); transition: transform 0.2s; font-size: 0.875rem; }
+    .section-body { padding: 1.125rem 1.25rem; display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+    .section-body.single { grid-template-columns: 1fr; }
+    @media (max-width: 520px) { .section-body { grid-template-columns: 1fr; } }
+
+    .field { display: flex; flex-direction: column; gap: 0.3rem; }
+    .field label { font-size: 0.8125rem; font-weight: 600; color: var(--gray-800); }
+    .field label .opt { font-weight: 400; color: var(--gray-600); }
+    .field select, .field input[type="number"] {
+      width: 100%; padding: 0.5rem 0.75rem; border: 1.5px solid var(--gray-300); border-radius: var(--radius);
+      font-family: var(--font); font-size: 0.9375rem; color: var(--gray-900); background: var(--white);
+      transition: border-color var(--transition), box-shadow var(--transition);
+      -webkit-appearance: none; appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23757575' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+      background-repeat: no-repeat; background-position: right 0.75rem center;
     }
-    @media print{
-      .site-header,.site-footer,.ad-slot,.sidebar,.cta-banner,.hero{display:none!important;}
-      .content-wrap{grid-template-columns:1fr;}
-    }
+    .field input[type="number"] { background-image: none; }
+    .field select:focus, .field input:focus { outline: none; border-color: var(--red); box-shadow: 0 0 0 3px rgba(211,47,47,0.12); }
+    .field .hint { font-size: 0.75rem; color: var(--gray-600); line-height: 1.4; }
+
+    /* BC highlight section */
+    .bc-highlight .section-header { background: var(--bc-blue-light); }
+    .bc-highlight .section-num { background: var(--bc-blue); }
+
+    .lang-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0.875rem; }
+    @media (max-width: 520px) { .lang-grid { grid-template-columns: 1fr; } }
+
+    .toggle-row { display: flex; align-items: center; justify-content: space-between; padding: 0.75rem 1.25rem; border-top: 1px solid var(--gray-200); background: var(--gray-50); gap: 1rem; }
+    .toggle-row label { font-size: 0.875rem; font-weight: 500; color: var(--gray-800); }
+    .toggle { position: relative; display: inline-block; width: 42px; height: 23px; }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .slider { position: absolute; inset: 0; background: var(--gray-300); border-radius: 23px; cursor: pointer; transition: 0.2s; }
+    .slider:before { content: ''; position: absolute; width: 17px; height: 17px; left: 3px; bottom: 3px; background: #fff; border-radius: 50%; transition: 0.2s; }
+    input:checked + .slider { background: var(--red); }
+    input:checked + .slider:before { transform: translateX(19px); }
+
+    .calc-action { padding: 1.125rem 1.25rem; background: var(--gray-50); border-top: 1px solid var(--gray-200); }
+    .btn-calc { width: 100%; padding: 0.875rem; background: var(--red); color: #fff; border: none; border-radius: var(--radius); font-size: 1rem; font-weight: 700; cursor: pointer; transition: background var(--transition), transform 0.1s; display: flex; align-items: center; justify-content: center; gap: 0.5rem; }
+    .btn-calc:hover { background: var(--red-dark); }
+    .btn-calc:active { transform: scale(0.99); }
+
+    #result { display: none; }
+    .result-box { margin: 1.125rem; border-radius: var(--radius); overflow: hidden; border: 2px solid var(--green); }
+    .result-header { background: var(--green); color: #fff; padding: 1rem 1.125rem; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 0.5rem; }
+    .result-score-label { font-size: 0.8rem; opacity: 0.88; }
+    .result-score-num { font-size: 2.25rem; font-weight: 800; line-height: 1; }
+    .result-score-max { font-size: 0.8rem; opacity: 0.75; }
+    .result-verdict { background: rgba(0,0,0,0.18); border-radius: 4px; padding: 0.25rem 0.625rem; font-size: 0.8rem; font-weight: 600; }
+    .result-breakdown { padding: 1rem 1.125rem; background: var(--white); }
+    .result-breakdown h3 { font-size: 0.8125rem; font-weight: 600; color: var(--gray-700); margin-bottom: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; }
+    .breakdown-rows { display: flex; flex-direction: column; gap: 0.5rem; }
+    .br-row { display: flex; align-items: center; gap: 0.625rem; }
+    .br-label { font-size: 0.8125rem; color: var(--gray-700); flex: 1; min-width: 0; }
+    .br-bar-wrap { flex: 2; background: var(--gray-200); border-radius: 100px; height: 7px; overflow: hidden; min-width: 60px; }
+    .br-bar { height: 100%; background: var(--red); border-radius: 100px; transition: width 0.6s ease; }
+    .br-pts { font-size: 0.8125rem; font-weight: 600; color: var(--gray-900); min-width: 54px; text-align: right; white-space: nowrap; }
+    .result-actions { padding: 0.875rem 1.125rem; background: var(--gray-50); border-top: 1px solid var(--gray-200); display: flex; gap: 0.625rem; flex-wrap: wrap; }
+    .btn-sm { padding: 0.4375rem 0.875rem; border-radius: var(--radius); font-size: 0.8125rem; font-weight: 600; cursor: pointer; border: 1.5px solid var(--gray-300); background: var(--white); color: var(--gray-800); transition: 0.15s; }
+    .btn-sm:hover { border-color: var(--red); color: var(--red); }
+    .tips-box { margin: 0 1.125rem 1.125rem; padding: 0.875rem 1rem; background: var(--blue-light); border-radius: var(--radius); border-left: 3px solid var(--blue); }
+    .tips-box h3 { font-size: 0.8125rem; font-weight: 700; color: var(--blue); margin-bottom: 0.5rem; }
+    .tips-box ul { font-size: 0.875rem; color: var(--gray-800); padding-left: 1.125rem; display: flex; flex-direction: column; gap: 0.3rem; }
+
+    /* ── SIDEBAR ── */
+    .sidebar { display: flex; flex-direction: column; gap: 1.25rem; }
+    .widget { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); overflow: hidden; }
+    .widget-head { background: var(--red); color: #fff; padding: 0.625rem 1rem; font-size: 0.875rem; font-weight: 700; }
+    .widget-head.bc { background: var(--bc-blue); }
+    .widget-body { padding: 0.875rem; }
+    .score-table { width: 100%; border-collapse: collapse; font-size: 0.8125rem; }
+    .score-table th { background: var(--gray-100); padding: 0.4375rem 0.625rem; text-align: left; font-size: 0.75rem; color: var(--gray-600); font-weight: 600; text-transform: uppercase; letter-spacing: 0.03em; }
+    .score-table td { padding: 0.4375rem 0.625rem; border-top: 1px solid var(--gray-200); }
+    .pill { display: inline-block; padding: 0.1rem 0.5rem; border-radius: 100px; font-size: 0.73rem; font-weight: 600; }
+    .pill.low { background: #fce4e4; color: #b71c1c; }
+    .pill.mod { background: var(--orange-light); color: var(--orange); }
+    .pill.good { background: var(--green-light); color: var(--green); }
+    .pill.high { background: #e8f5e9; color: #1b5e20; }
+    .pill.bc { background: var(--bc-blue-light); color: var(--bc-blue); font-weight: 700; }
+    .tool-links { display: flex; flex-direction: column; gap: 0.3rem; }
+    .tool-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.5rem 0.625rem; border-radius: 6px; color: var(--gray-800); font-size: 0.8125rem; background: var(--gray-50); transition: background var(--transition); border: 1px solid transparent; }
+    .tool-link:hover { background: var(--red-light); color: var(--red); text-decoration: none; border-color: rgba(211,47,47,0.15); }
+    .tool-link.active-tool { background: var(--bc-blue-light); color: var(--bc-blue); font-weight: 600; border-color: rgba(0,48,135,0.2); }
+    .tool-link svg { flex-shrink: 0; color: var(--red); }
+    .tool-link.active-tool svg { color: var(--bc-blue); }
+    .outbound-links { display: flex; flex-direction: column; gap: 0.3rem; }
+    .outbound-link { display: flex; align-items: center; gap: 0.5rem; padding: 0.4375rem 0.625rem; border-radius: 6px; color: var(--gray-800); font-size: 0.8125rem; background: var(--gray-50); border: 1px solid var(--gray-200); transition: background var(--transition); }
+    .outbound-link:hover { background: var(--bc-blue-light); color: var(--bc-blue); text-decoration: none; }
+    .ext-icon { font-size: 0.65rem; color: var(--gray-500); flex-shrink: 0; margin-left: auto; }
+    .stream-list { display: flex; flex-direction: column; gap: 0.4rem; }
+    .stream-item { display: flex; align-items: flex-start; gap: 0.5rem; padding: 0.5rem; border-radius: 6px; background: var(--bc-blue-light); font-size: 0.8125rem; }
+    .stream-dot { width: 8px; height: 8px; border-radius: 50%; background: var(--bc-gold); flex-shrink: 0; margin-top: 0.3rem; }
+    .stream-name { font-weight: 600; color: var(--bc-blue); display: block; }
+    .stream-desc { color: var(--gray-700); font-size: 0.76rem; }
+
+    /* ── SEO CONTENT ── */
+    .content-wrap { max-width: 1200px; margin: 0 auto; padding: 0 1rem 3rem; }
+    .content-section { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow); padding: 1.375rem; margin-bottom: 1.125rem; }
+    .content-section h2 { font-size: 1.1875rem; color: var(--gray-900); margin-bottom: 0.875rem; padding-bottom: 0.5rem; border-bottom: 2px solid var(--bc-blue-light); }
+    .content-section h3 { font-size: 0.9375rem; color: var(--gray-800); margin: 0.875rem 0 0.4rem; font-weight: 600; }
+    .content-section p { font-size: 0.9375rem; color: var(--gray-700); margin-bottom: 0.625rem; max-width: 72ch; }
+    .content-section ul, .content-section ol { font-size: 0.9375rem; color: var(--gray-700); padding-left: 1.25rem; display: flex; flex-direction: column; gap: 0.3rem; margin-bottom: 0.625rem; }
+    .content-section li { line-height: 1.55; }
+    .points-table { width: 100%; border-collapse: collapse; font-size: 0.875rem; margin: 0.625rem 0; }
+    .points-table th { background: var(--bc-blue); color: #fff; padding: 0.5rem 0.75rem; text-align: left; }
+    .points-table td { padding: 0.4375rem 0.75rem; border-top: 1px solid var(--gray-200); }
+    .points-table tr:nth-child(even) td { background: var(--gray-50); }
+
+    .stat-cards { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0.625rem; margin-bottom: 0.875rem; }
+    @media (max-width: 600px) { .stat-cards { grid-template-columns: repeat(2, 1fr); } }
+    .stat-card { background: var(--gray-50); border: 1px solid var(--gray-200); border-radius: var(--radius); padding: 0.75rem; text-align: center; }
+    .stat-card .num { font-size: 1.375rem; font-weight: 800; color: var(--bc-blue); line-height: 1; margin-bottom: 0.2rem; }
+    .stat-card .lbl { font-size: 0.72rem; color: var(--gray-600); line-height: 1.3; }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 1.125rem; }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+    .faq-item { border: 1px solid var(--gray-200); border-radius: var(--radius); overflow: hidden; margin-bottom: 0.5rem; }
+    .faq-q { width: 100%; text-align: left; background: var(--white); border: none; padding: 0.8rem 1rem; font-family: var(--font); font-size: 0.9375rem; font-weight: 600; color: var(--gray-900); cursor: pointer; display: flex; justify-content: space-between; align-items: center; gap: 0.5rem; transition: background var(--transition); }
+    .faq-q:hover { background: var(--gray-50); }
+    .faq-icon { font-size: 1.125rem; color: var(--bc-blue); flex-shrink: 0; transition: transform 0.2s; }
+    .faq-a { display: none; padding: 0 1rem 0.8rem; font-size: 0.9375rem; color: var(--gray-700); line-height: 1.6; }
+    .faq-item.open .faq-a { display: block; }
+    .faq-item.open .faq-icon { transform: rotate(45deg); }
+
+    footer { background: var(--gray-900); color: var(--gray-300); padding: 2rem 1rem; }
+    .footer-inner { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 2rem; }
+    @media (max-width: 640px) { .footer-inner { grid-template-columns: 1fr; gap: 1.25rem; } }
+    .footer-brand p { font-size: 0.875rem; color: #757575; margin-top: 0.5rem; line-height: 1.55; max-width: 28ch; }
+    .footer-col h4 { color: var(--white); font-size: 0.875rem; font-weight: 600; margin-bottom: 0.75rem; }
+    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 0.375rem; }
+    .footer-col a { color: #757575; font-size: 0.8125rem; transition: color var(--transition); }
+    .footer-col a:hover { color: #fcba19; text-decoration: none; }
+    .footer-bottom { max-width: 1200px; margin: 1.5rem auto 0; padding-top: 1rem; border-top: 1px solid #333; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.5rem; font-size: 0.8125rem; color: #757575; }
+    .footer-bottom a { color: #757575; }
   </style>
 </head>
+
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
-<a href="#bc-calculator" class="skip-link">Skip to BC PNP calculator</a>
-
-<!-- HEADER -->
-<header class="site-header" role="banner">
-  <div class="container">
-    <nav class="nav-inner" role="navigation" aria-label="Main navigation">
-      <a href="/" class="nav-logo" aria-label="CRS Score Calculator Home">
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" aria-hidden="true">
-          <rect width="32" height="32" rx="8" fill="#CC0000"/>
-          <text x="16" y="22" text-anchor="middle" font-family="Poppins,sans-serif" font-size="14" font-weight="700" fill="white">CRS</text>
+  <!-- ═══ HEADER ═══ -->
+  <header role="banner">
+    <nav class="nav-inner" aria-label="Primary navigation">
+      <a href="/" class="nav-logo" aria-label="CRS Calculator Home">
+        <svg width="26" height="26" viewBox="0 0 28 28" fill="none" aria-hidden="true">
+          <rect width="28" height="28" rx="6" fill="rgba(255,255,255,0.2)"/>
+          <text x="14" y="19" text-anchor="middle" font-size="14" font-weight="800" fill="white" font-family="Arial,sans-serif">C</text>
         </svg>
         CRS Calculator
       </a>
-      <button class="nav-mobile-toggle" aria-label="Toggle navigation" onclick="document.querySelector('.nav-links').classList.toggle('open')">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false" onclick="toggleNav(this)" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </button>
-      <ul class="nav-links" role="list">
-        <li><a href="/">CRS Calculator</a></li>
-        <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
-        <li><a href="/cec-crs-calculator">CEC</a></li>
-        <li><a href="/pnp-crs-calculator">PNP</a></li>
-        <li><a href="/bc-crs-calculator" class="active" aria-current="page">BC PNP</a></li>
-        <li><a href="/ontario-crs-calculator">Ontario</a></li>
-        <li><a href="/crs-cutoff-scores">Cutoff Scores</a></li>
-        <li><a href="#bc-calculator" class="nav-cta">Calculate Now →</a></li>
+      <ul class="nav-links" id="navLinks" role="list">
+        <li><a href="/">🏠 Home</a></li>
+        <li><a href="/express-entry-crs-calculator">🧮 CRS Calculator</a></li>
+        <li><a href="/cec-crs-calculator">🍁 CEC Calculator</a></li>
+        <li><a href="/bc-crs-calculator" class="active" aria-current="page">🏔️ BC Calculator</a></li>
+        <li><a href="/crs-cutoff-scores">📊 Cutoffs</a></li>
+        <li><a href="/express-entry-draw-history">🗓️ Draw History</a></li>
+        <li><a href="/how-to-improve-crs-score">⬆️ Improve Score</a></li>
       </ul>
     </nav>
-  </div>
-</header>
+  </header>
 
-<!-- BREADCRUMB -->
-<nav class="breadcrumb" aria-label="Breadcrumb">
-  <div class="container">
-    <ol itemscope itemtype="https://schema.org/BreadcrumbList">
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="/" itemprop="item"><span itemprop="name">Home</span></a>
-        <meta itemprop="position" content="1"/>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <a href="/pnp-crs-calculator" itemprop="item"><span itemprop="name">PNP Calculators</span></a>
-        <meta itemprop="position" content="2"/>
-      </li>
-      <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-        <span itemprop="name">BC PNP Calculator</span>
-        <meta itemprop="position" content="3"/>
-      </li>
-    </ol>
-  </div>
-</nav>
-
-<!-- HERO -->
-<section class="hero" aria-label="BC CRS Calculator Hero">
-  <div class="container">
-    <h1>BC CRS Calculator 2026 – British Columbia PNP Express Entry Points Tool</h1>
-    <p class="hero-sub">Calculate your BC PNP Skills Immigration score and your Express Entry CRS score. Check eligibility for Skilled Worker, International Graduate, and Tech Pilot streams — updated with April 2026 draw data.</p>
-    <div class="hero-meta">
-      <span>📅 Updated April 2026</span>
-      <span>✅ BC PNP 200-point grid</span>
-      <span>🇨🇦 Express Entry BC (EEBC)</span>
-      <span>⚡ Instant Results</span>
+  <!-- ═══ BREADCRUMB ═══ -->
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <div class="breadcrumb-inner">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <a href="/express-entry-crs-calculator">CRS Calculator</a>
+      <span class="breadcrumb-sep" aria-hidden="true">›</span>
+      <span aria-current="page">BC CRS Calculator</span>
     </div>
+  </nav>
+
+  <!-- ═══ HERO ═══ -->
+  <section class="hero" aria-label="Page introduction">
+    <div class="hero-tag">🏔️ British Columbia PNP</div>
+    <h1>BC CRS Calculator 2026</h1>
+    <p>Instantly calculate your <strong>British Columbia PNP CRS score</strong> including BCPNP +600 nomination points. Free, no login needed.</p>
     <div class="hero-badges">
-      <span class="badge badge-gold">+600 CRS with BC Nomination</span>
-      <span class="badge">✓ BC PNP Score</span>
-      <span class="badge">✓ EEBC CRS Score</span>
-      <span class="badge">✓ Tech Pilot Check</span>
-      <span class="badge">✓ 100% Free</span>
+      <span class="badge gold">🏔️ BC PNP Optimised</span>
+      <span class="badge">✅ +600 PNP Points</span>
+      <span class="badge">⚡ Instant Results</span>
+      <span class="badge">🔒 No Data Stored</span>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- DRAW ALERT BAR -->
-<div class="draw-alert" aria-label="Latest BC PNP draw results">
-  <div class="container">
-    <div class="da-inner">
-      <div class="da-stat">
-        <span class="da-val">Mar 2026 <span class="da-new">LATEST</span></span>
-        <span class="da-label">BC PNP Draw</span>
-      </div>
-      <div class="da-divider" aria-hidden="true"></div>
-      <div class="da-stat"><span class="da-val">460</span><span class="da-label">Invitations Issued</span></div>
-      <div class="da-divider" aria-hidden="true"></div>
-      <div class="da-stat"><span class="da-val">120</span><span class="da-label">Tech Stream Min</span></div>
-      <div class="da-divider" aria-hidden="true"></div>
-      <div class="da-stat"><span class="da-val">87</span><span class="da-label">Childcare Min</span></div>
-      <div class="da-divider" aria-hidden="true"></div>
-      <div class="da-stat"><span class="da-val">+600</span><span class="da-label">CRS Pts (BC Nomination)</span></div>
-    </div>
-  </div>
-</div>
+  <!-- ═══ MAIN ═══ -->
+  <main id="main-content">
+    <div class="page-body">
 
-<!-- AD TOP -->
-<div class="container">
-  <div class="ad-slot ad-leaderboard" aria-label="Advertisement">Advertisement</div>
-</div>
+      <!-- ── CALCULATOR ── -->
+      <article aria-label="BC PNP CRS Score Calculator">
+        <div class="calc-card">
 
-<!-- MAIN -->
-<main class="main-content" id="main-content">
-  <div class="container">
-    <div class="content-wrap">
-
-      <!-- LEFT COLUMN -->
-      <div>
-
-        <!-- PART 1: BC PNP SCORE CALCULATOR -->
-        <section class="calc-card bcpnp-card" id="bc-calculator" aria-labelledby="bcpnp-heading">
-          <h2 class="card-title" id="bcpnp-heading" style="border-bottom-color:var(--bc-blue);">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--bc-blue)" stroke-width="2" aria-hidden="true"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/></svg>
-            Part 1 — Calculate BC PNP Skills Immigration Score (out of 200)
-          </h2>
-          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:18px;">The <strong>BC PNP Skills Immigration grid</strong> uses a 200-point system to rank candidates. Your score determines your invitation priority across Tech, Healthcare, Construction, and other draw categories. <a href="https://www.welcomebc.ca/immigrate-to-b-c/bc-pnp-si-program-guide-pdf" target="_blank" rel="noopener noreferrer">View BC PNP guide (PDF) ↗</a></p>
-
-          <!-- STREAM SELECTOR -->
-          <div class="form-group">
-            <label>Which BC PNP stream are you applying for?</label>
-            <div class="stream-tabs" role="tablist">
-              <button class="stab active" role="tab" aria-selected="true" onclick="selectStream('sw',this)">Skilled Worker</button>
-              <button class="stab" role="tab" onclick="selectStream('ig',this)">International Graduate</button>
-              <button class="stab" role="tab" onclick="selectStream('tech',this)">Tech Pilot</button>
-              <button class="stab" role="tab" onclick="selectStream('ipg',this)">Intl Post-Graduate</button>
-            </div>
+          <div class="bc-notice">
+            <strong>🏔️ BC PNP:</strong> The <strong>BC Provincial Nominee Program (BCPNP)</strong> adds <strong>+600 CRS points</strong> to your Express Entry profile — virtually guaranteeing an ITA. Select 'Yes' under BC PNP Nomination in Section D below.
+            <a href="https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview" target="_blank" rel="noopener noreferrer"> Check BCPNP requirements ↗</a>
+          </div>
+          <div class="disclaimer-notice">
+            <strong>⚠️ Disclaimer:</strong> Unofficial estimation tool only. Verify your official score at the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/come-canada-tool-immigration-express-entry.html" target="_blank" rel="noopener noreferrer">IRCC official CRS tool</a>.
           </div>
 
-          <div class="section-hdr">Economic Factors (Max 80 points)</div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="hourlyWage">Hourly Wage of BC Job Offer</label>
-              <select id="hourlyWage" class="form-control">
-                <option value="0">No job offer / Below minimum</option>
-                <option value="10">$15.00–$19.99/hr (10 pts)</option>
-                <option value="20">$20.00–$24.99/hr (20 pts)</option>
-                <option value="30">$25.00–$34.99/hr (30 pts)</option>
-                <option value="40">$35.00–$44.99/hr (40 pts)</option>
-                <option value="50">$45.00–$61.99/hr (50 pts)</option>
-                <option value="55">$62.00+/hr ($125k+/yr) (55 pts)</option>
-              </select>
-              <div class="hint">Max 55 points — highest-paid BC job offers get maximum points</div>
-            </div>
-            <div class="form-group">
-              <label for="regionalDistrict">Regional District of Employment</label>
-              <select id="regionalDistrict" class="form-control">
-                <option value="10">Metro Vancouver (10 pts)</option>
-                <option value="15">Capital (Victoria) (15 pts)</option>
-                <option value="20">Other urban areas (20 pts)</option>
-                <option value="25">Rural regions (25 pts)</option>
-              </select>
-              <div class="hint">Max 25 points — rural/smaller regions get higher scores</div>
-            </div>
-          </div>
-
-          <div class="section-hdr">Human Capital Factors (Max 120 points)</div>
-
-          <div class="form-row">
-            <div class="form-group">
-              <label for="bcWorkExp">Directly Related Work Experience</label>
-              <select id="bcWorkExp" class="form-control">
-                <option value="0">Less than 1 year (0 pts)</option>
-                <option value="10">1–2 years (10 pts)</option>
-                <option value="20">3–4 years (20 pts)</option>
-                <option value="30">5–9 years (30 pts)</option>
-                <option value="40">10+ years (40 pts)</option>
-              </select>
-              <div class="hint">Max 40 points — must be in the same or closely related occupation</div>
-            </div>
-            <div class="form-group">
-              <label for="bcEdu">Highest Level of Education</label>
-              <select id="bcEdu" class="form-control">
-                <option value="0">Less than secondary (0 pts)</option>
-                <option value="10">Secondary diploma (10 pts)</option>
-                <option value="20">1–2 year post-secondary (20 pts)</option>
-                <option value="30">3-year post-secondary / trades (30 pts)</option>
-                <option value="40">Bachelor's degree or higher (40 pts)</option>
-              </select>
-              <div class="hint">Max 40 points</div>
-            </div>
-          </div>
-
-          <div class="form-group">
-            <label for="bcLang">Language Proficiency (CLB Level)</label>
-            <select id="bcLang" class="form-control">
-              <option value="0">Below CLB 4 (0 pts)</option>
-              <option value="10">CLB 4–5 (10 pts)</option>
-              <option value="20">CLB 6–7 (20 pts)</option>
-              <option value="30">CLB 8–9 (30 pts)</option>
-              <option value="40">CLB 10+ (40 pts)</option>
-            </select>
-            <div class="hint">Max 40 points — based on best of IELTS, CELPIP, TEF, or TCF scores</div>
-          </div>
-
-          <button type="button" class="btn-calc" onclick="calculateBCPNP()">🏔️ Calculate BC PNP Score →</button>
-        </section>
-
-        <!-- BC PNP SCORE RESULT -->
-        <div class="bc-score-result" id="bcScoreResult" aria-live="polite">
-          <h3 style="font-size:1rem;margin-bottom:12px;color:var(--bc-blue);">Your BC PNP Skills Immigration Score</h3>
-          <div class="bc-score-display">
-            <div class="bc-score-num" id="bcScoreNum">0</div>
-            <div class="bc-score-sub">out of 200 BC PNP points</div>
-          </div>
-          <div class="bc-score-bar-bg"><div class="bc-score-bar-fill" id="bcScoreBar" style="width:0%"></div></div>
-          <div class="bc-verdict" id="bcVerdict"></div>
-          <div class="bc-table">
-            <table>
-              <thead><tr><th>BC PNP Factor</th><th class="pts" style="text-align:right">Points</th></tr></thead>
-              <tbody id="bcBreakdown"></tbody>
-            </table>
-          </div>
-          <div class="callout callout-gold">
-            <span class="callout-icon">🏆</span>
-            <p>A BC PNP nomination adds <strong>+600 CRS points</strong> to your Express Entry profile, virtually guaranteeing an ITA in the next federal draw regardless of your base CRS score.</p>
-          </div>
-        </div>
-
-        <!-- AD IN CONTENT -->
-        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
-
-        <!-- PART 2: EXPRESS ENTRY CRS CALCULATOR -->
-        <section class="calc-card eebc-card" aria-labelledby="eebc-heading">
-          <h2 class="card-title red-border" id="eebc-heading">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--red)" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-            Part 2 — Calculate Express Entry CRS Score (for EEBC Option)
-          </h2>
-          <p style="font-size:.85rem;color:var(--text-muted);margin-bottom:18px;">The <strong>Express Entry BC (EEBC)</strong> option links your BC PNP to your federal Express Entry profile. Calculate your federal CRS score here to see your full EEBC advantage including the +600 nomination bonus.</p>
-
-          <form id="cecForm" onsubmit="calculateCRS(event)" novalidate>
-            <div class="section-hdr red">Core Human Capital Factors</div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="age">Age <span aria-hidden="true">*</span></label>
-                <select id="age" class="form-control" required>
+          <!-- SECTION A -->
+          <div class="calc-section" id="sec-a">
+            <button class="section-header" onclick="toggleSection(this)" aria-expanded="true" aria-controls="body-a" type="button">
+              <span class="section-num" aria-hidden="true">A</span>
+              <h2>Core / Human Capital Factors</h2>
+              <span class="section-arrow" aria-hidden="true">▾</span>
+            </button>
+            <div class="section-body" id="body-a">
+              <div class="field">
+                <label for="age">Age</label>
+                <select id="age">
                   <option value="">— Select age —</option>
-                  <option value="17u">17 or under</option>
-                  <option value="18">18</option><option value="19">19</option><option value="20">20</option>
-                  <option value="21">21</option><option value="22">22</option><option value="23">23</option>
-                  <option value="24">24</option><option value="25">25</option><option value="26">26</option>
-                  <option value="27">27</option><option value="28">28</option><option value="29">29</option>
-                  <option value="30">30</option><option value="31">31</option><option value="32">32</option>
-                  <option value="33">33</option><option value="34">34</option><option value="35">35</option>
-                  <option value="36">36</option><option value="37">37</option><option value="38">38</option>
-                  <option value="39">39</option><option value="40">40</option><option value="41">41</option>
-                  <option value="42">42</option><option value="43">43</option><option value="44">44</option>
-                  <option value="45p">45 or older</option>
+                  <option value="0">17 or under</option>
+                  <option value="99">18</option><option value="105">19</option>
+                  <option value="110">20–29 (max)</option>
+                  <option value="110">20</option><option value="110">21</option><option value="110">22</option>
+                  <option value="110">23</option><option value="110">24</option><option value="110">25</option>
+                  <option value="110">26</option><option value="110">27</option><option value="110">28</option>
+                  <option value="110">29</option><option value="105">30</option><option value="99">31</option>
+                  <option value="94">32</option><option value="88">33</option><option value="83">34</option>
+                  <option value="77">35</option><option value="72">36</option><option value="66">37</option>
+                  <option value="61">38</option><option value="55">39</option><option value="50">40</option>
+                  <option value="39">41</option><option value="28">42</option><option value="17">43</option>
+                  <option value="6">44</option><option value="0">45+</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="edu">Education Level</label>
-                <select id="edu" class="form-control">
+              <div class="field">
+                <label for="education">Highest Education Level</label>
+                <select id="education">
                   <option value="0">Less than secondary</option>
-                  <option value="1">Secondary diploma</option>
-                  <option value="2">1-year post-secondary</option>
-                  <option value="3">2-year post-secondary</option>
-                  <option value="4">Bachelor's / 3+ years</option>
-                  <option value="5">Two or more degrees</option>
-                  <option value="6">Master's degree</option>
-                  <option value="7">PhD</option>
+                  <option value="28">Secondary school diploma</option>
+                  <option value="84">1-year post-secondary</option>
+                  <option value="91">2-year post-secondary</option>
+                  <option value="112">Bachelor's / 3-year diploma</option>
+                  <option value="119">Two or more certificates/degrees</option>
+                  <option value="123">Master's / professional degree</option>
+                  <option value="140">Doctoral (PhD)</option>
                 </select>
               </div>
-            </div>
-
-            <div class="form-group">
-              <label>Marital Status</label>
-              <div class="radio-group">
-                <label><input type="radio" name="marital" value="single" checked onchange="toggleSpouse(this)"> Single / Separated</label>
-                <label><input type="radio" name="marital" value="married" onchange="toggleSpouse(this)"> Married / Common-law</label>
-              </div>
-            </div>
-            <div id="spouseComingGroup" style="display:none;" class="form-group">
-              <label>Is your spouse/partner accompanying you to Canada?</label>
-              <div class="radio-group">
-                <label><input type="radio" name="spouseComing" value="yes" checked> Yes</label>
-                <label><input type="radio" name="spouseComing" value="no"> No</label>
-              </div>
-            </div>
-
-            <div class="form-row">
-              <div class="form-group">
-                <label for="canExp">Canadian Work Experience (NOC TEER 0–3)</label>
-                <select id="canExp" class="form-control">
+              <div class="field">
+                <label for="canadaExp">Canadian Work Experience</label>
+                <select id="canadaExp">
                   <option value="0">None</option>
-                  <option value="1">1 year</option><option value="2">2 years</option>
-                  <option value="3">3 years</option><option value="4">4 years</option>
-                  <option value="5">5+ years</option>
+                  <option value="40">1 year (+40 pts)</option>
+                  <option value="53">2 years (+53 pts)</option>
+                  <option value="64">3 years (+64 pts)</option>
+                  <option value="72">4 years (+72 pts)</option>
+                  <option value="80">5+ years (+80 pts)</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="foreignExp">Foreign Work Experience</label>
-                <select id="foreignExp" class="form-control">
-                  <option value="0">None</option><option value="1">1–2 years</option><option value="2">3+ years</option>
-                </select>
-              </div>
-            </div>
-
-            <div class="section-hdr red">First Official Language (English or French)</div>
-            <div class="form-row">
-              <div class="form-group">
-                <label for="lS">Speaking (CLB)</label>
-                <select id="lS" class="form-control">
-                  <option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lL">Listening (CLB)</label>
-                <select id="lL" class="form-control">
-                  <option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lR">Reading (CLB)</label>
-                <select id="lR" class="form-control">
-                  <option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option>
-                </select>
-              </div>
-              <div class="form-group">
-                <label for="lW">Writing (CLB)</label>
-                <select id="lW" class="form-control">
-                  <option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option>
-                  <option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9</option><option value="10">CLB 10+</option>
+              <div class="field">
+                <label for="marital">Marital Status</label>
+                <select id="marital" onchange="handleMarital()">
+                  <option value="single">Single / Separated</option>
+                  <option value="spouse">Married / Common-law</option>
                 </select>
               </div>
             </div>
-            <div class="callout callout-info" style="margin-top:-4px;margin-bottom:14px;">
-              <span class="callout-icon">ℹ️</span>
-              <p>Convert IELTS bands to CLB using our <a href="/ielts-crs-calculator">IELTS to CLB converter</a>.</p>
+            <div class="toggle-row">
+              <label for="spouseToggle">Include spouse / common-law partner?</label>
+              <label class="toggle" aria-label="Include spouse">
+                <input type="checkbox" id="spouseToggle" onchange="toggleSpouse(this)" />
+                <span class="slider"></span>
+              </label>
             </div>
-
-            <div class="section-hdr red">Additional Points</div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>BC PNP Nomination?</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="pnp" value="0" checked> Not yet</label>
-                  <label><input type="radio" name="pnp" value="600"> Yes (+600 pts) 🏆</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Sibling in Canada (citizen or PR)?</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="sibling" value="0" checked> No</label>
-                  <label><input type="radio" name="sibling" value="15"> Yes (+15 pts)</label>
-                </div>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-group">
-                <label>French CLB 7+ AND English CLB 5+?</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="frBonus" value="0" checked> No</label>
-                  <label><input type="radio" name="frBonus" value="50"> Yes (+50 pts)</label>
-                </div>
-              </div>
-              <div class="form-group">
-                <label>Canadian post-secondary (3+ yr program)?</label>
-                <div class="radio-group">
-                  <label><input type="radio" name="canEdu" value="0" checked> No</label>
-                  <label><input type="radio" name="canEdu" value="30"> Yes (+30 pts)</label>
-                </div>
-              </div>
-            </div>
-
-            <!-- SPOUSE SECTION -->
-            <div id="spouseSection">
-              <div class="section-hdr red">Spouse / Partner Factors</div>
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="spEdu">Spouse Education</label>
-                  <select id="spEdu" class="form-control">
-                    <option value="0">Less than secondary</option><option value="1">Secondary</option>
-                    <option value="2">1-year program</option><option value="3">2-year program</option>
-                    <option value="4">Bachelor's</option><option value="5">Two degrees</option>
-                    <option value="6">Master's</option><option value="7">PhD</option>
+            <div id="spouseFields" style="display:none;" aria-hidden="true">
+              <div class="section-body">
+                <div class="field">
+                  <label for="spouseEdu">Spouse's Education</label>
+                  <select id="spouseEdu">
+                    <option value="0">Less than secondary</option>
+                    <option value="2">Secondary diploma</option>
+                    <option value="6">1-year post-secondary</option>
+                    <option value="7">2-year post-secondary</option>
+                    <option value="8">Bachelor's / 3-year diploma</option>
+                    <option value="9">Two or more degrees</option>
+                    <option value="10">Master's / professional / PhD</option>
                   </select>
                 </div>
-                <div class="form-group">
-                  <label for="spCanExp">Spouse Canadian Work Exp.</label>
-                  <select id="spCanExp" class="form-control">
-                    <option value="0">None</option><option value="1">1 year</option><option value="2">2 years</option>
-                    <option value="3">3 years</option><option value="4">4 years</option><option value="5">5+ years</option>
+                <div class="field">
+                  <label for="spouseCanExp">Spouse's Canadian Work Exp.</label>
+                  <select id="spouseCanExp">
+                    <option value="0">None</option>
+                    <option value="5">1 year (+5)</option>
+                    <option value="7">2 years (+7)</option>
+                    <option value="8">3 years (+8)</option>
+                    <option value="9">4 years (+9)</option>
+                    <option value="10">5+ years (+10)</option>
                   </select>
                 </div>
               </div>
-              <div class="form-group">
-                <label for="spLangTest">Spouse Language Test</label>
-                <select id="spLangTest" class="form-control" onchange="toggleSpouseLang(this)">
-                  <option value="none">None</option>
-                  <option value="ielts">IELTS</option><option value="celpip">CELPIP</option><option value="tef">TEF Canada</option>
+            </div>
+          </div>
+
+          <!-- SECTION B: Language -->
+          <div class="calc-section" id="sec-lang">
+            <button class="section-header" onclick="toggleSection(this)" aria-expanded="true" aria-controls="body-lang" type="button">
+              <span class="section-num" aria-hidden="true">B</span>
+              <h2>Language Proficiency</h2>
+              <span class="section-arrow" aria-hidden="true">▾</span>
+            </button>
+            <div class="section-body single" id="body-lang">
+              <div class="field">
+                <label for="langTest">Test Type</label>
+                <select id="langTest" onchange="updateLangHints()">
+                  <option value="ielts">IELTS General / Academic</option>
+                  <option value="celpip">CELPIP-G</option>
+                  <option value="tef">TEF Canada (French)</option>
+                  <option value="tcf">TCF Canada (French)</option>
                 </select>
               </div>
-              <div class="form-row" id="spouseLangFields">
-                <div class="form-group"><label>Speaking (CLB)</label><select id="spLS" class="form-control"><option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
-                <div class="form-group"><label>Listening (CLB)</label><select id="spLL" class="form-control"><option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
-                <div class="form-group"><label>Reading (CLB)</label><select id="spLR" class="form-control"><option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
-                <div class="form-group"><label>Writing (CLB)</label><select id="spLW" class="form-control"><option value="4">CLB 4–</option><option value="5">CLB 5</option><option value="6">CLB 6</option><option value="7">CLB 7</option><option value="8">CLB 8</option><option value="9">CLB 9+</option></select></div>
+              <div class="lang-grid">
+                <div class="field">
+                  <label for="ls">Listening</label>
+                  <input type="number" id="ls" step="0.5" min="0" max="9" placeholder="e.g. 8.0" />
+                  <span class="hint" id="ls-hint">IELTS: CLB 9 = 8.5, CLB 8 = 7.5, CLB 7 = 6.0</span>
+                </div>
+                <div class="field">
+                  <label for="rs">Reading</label>
+                  <input type="number" id="rs" step="0.5" min="0" max="9" placeholder="e.g. 7.0" />
+                </div>
+                <div class="field">
+                  <label for="ws">Writing</label>
+                  <input type="number" id="ws" step="0.5" min="0" max="9" placeholder="e.g. 6.5" />
+                </div>
+                <div class="field">
+                  <label for="ss">Speaking</label>
+                  <input type="number" id="ss" step="0.5" min="0" max="9" placeholder="e.g. 7.0" />
+                </div>
               </div>
             </div>
+          </div>
 
-            <button type="submit" class="btn-calc red-btn">🇨🇦 Calculate Express Entry CRS Score →</button>
-          </form>
-        </section>
-
-        <!-- CRS RESULTS -->
-        <section id="crsResults" aria-live="polite" aria-atomic="true">
-          <div class="results-wrap">
-            <h2 style="font-size:1.05rem;margin-bottom:14px;">Your Express Entry CRS Score</h2>
-            <div class="score-display">
-              <span class="score-num" id="scoreNum">0</span>
-              <div class="score-sub">out of 1,200 possible CRS points</div>
+          <!-- SECTION C: Foreign Work Experience -->
+          <div class="calc-section" id="sec-work">
+            <button class="section-header" onclick="toggleSection(this)" aria-expanded="true" aria-controls="body-work" type="button">
+              <span class="section-num" aria-hidden="true">C</span>
+              <h2>Foreign Work Experience <span style="font-weight:400;font-size:0.8em;">(Skill Transferability)</span></h2>
+              <span class="section-arrow" aria-hidden="true">▾</span>
+            </button>
+            <div class="section-body" id="body-work">
+              <div class="field">
+                <label for="foreignExp">Foreign Skilled Work Experience</label>
+                <select id="foreignExp">
+                  <option value="0">None</option>
+                  <option value="13">1–2 years (+up to 13 pts)</option>
+                  <option value="25">3+ years (+up to 25 pts)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="nocLevel">NOC TEER Category</label>
+                <select id="nocLevel">
+                  <option value="skilled">TEER 0, 1, 2 or 3 (Skilled)</option>
+                  <option value="other">TEER 4 or 5</option>
+                </select>
+              </div>
             </div>
-            <div class="score-bar-bg"><div class="score-bar-fill" id="scoreBar" style="width:0%"></div></div>
-            <div class="score-verdict" id="scoreVerdict"></div>
+          </div>
 
-            <div class="bc-nomination-box">
-              <div style="font-size:.75rem;opacity:.85;text-transform:uppercase;letter-spacing:.04em;">With BC PNP Nomination (+600 pts)</div>
-              <div class="bns" id="bcNomScore">—</div>
-              <div class="bnl">Estimated score after BC nomination · Virtually guarantees federal ITA</div>
+          <!-- SECTION D: Additional Points (BC PNP highlighted) -->
+          <div class="calc-section bc-highlight" id="sec-extra">
+            <button class="section-header" onclick="toggleSection(this)" aria-expanded="true" aria-controls="body-extra" type="button">
+              <span class="section-num" aria-hidden="true">D</span>
+              <h2>Additional Points <span style="color:var(--bc-gold);font-size:0.82em;">← BC PNP HERE</span></h2>
+              <span class="section-arrow" aria-hidden="true">▾</span>
+            </button>
+            <div class="section-body" id="body-extra">
+              <div class="field" style="grid-column: 1/-1; background: var(--bc-blue-light); padding: 0.75rem; border-radius: var(--radius); border: 1.5px solid var(--bc-blue);">
+                <label for="bcpnp" style="color: var(--bc-blue);">🏔️ BC PNP Nomination (BCPNP)</label>
+                <select id="bcpnp">
+                  <option value="0">No nomination yet</option>
+                  <option value="600">Yes – BC PNP nomination received (+600 pts)</option>
+                </select>
+                <span class="hint" style="color: var(--bc-blue);">BC PNP nomination = +600 CRS → virtually guarantees ITA at next draw</span>
+              </div>
+              <div class="field">
+                <label for="jobOffer">Valid Job Offer (LMIA-approved)</label>
+                <select id="jobOffer">
+                  <option value="0">No</option>
+                  <option value="200">Yes – NOC 00 Senior Manager (+200)</option>
+                  <option value="50">Yes – Other NOC TEER 0/1/2/3 (+50)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="canadaEdu">Canadian Education Credential</label>
+                <select id="canadaEdu">
+                  <option value="0">None</option>
+                  <option value="15">1–2 year credential (+15)</option>
+                  <option value="30">3+ year / graduate degree (+30)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="sibling">Sibling in Canada (citizen or PR)</label>
+                <select id="sibling">
+                  <option value="0">No</option>
+                  <option value="15">Yes (+15 pts)</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="frenchBonus">French Language Bonus</label>
+                <select id="frenchBonus">
+                  <option value="0">No / Below NCLC 7</option>
+                  <option value="25">NCLC 7+ (English CLB &lt;5) (+25)</option>
+                  <option value="50">NCLC 7+ AND English CLB 5+ (+50)</option>
+                </select>
+              </div>
             </div>
+          </div>
 
-            <div class="score-table">
-              <table>
-                <thead><tr><th>CRS Factor</th><th class="pts" style="text-align:right">Points</th></tr></thead>
-                <tbody id="scoreBreakdown"></tbody>
+          <!-- CALCULATE BUTTON -->
+          <div class="calc-action">
+            <button class="btn-calc" onclick="calculateCRS()" type="button" aria-label="Calculate my BC PNP CRS score">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+              Calculate My BC CRS Score
+            </button>
+          </div>
+
+          <!-- RESULT -->
+          <div id="result" role="region" aria-live="polite" aria-label="Your BC CRS score result">
+            <div class="result-box">
+              <div class="result-header">
+                <div>
+                  <div class="result-score-label">Your Estimated BC PNP CRS Score</div>
+                  <div>
+                    <span class="result-score-num" id="totalScore">0</span>
+                    <span class="result-score-max"> / 1,200</span>
+                  </div>
+                </div>
+                <span class="result-verdict" id="verdict">—</span>
+              </div>
+              <div class="result-breakdown">
+                <h3>Score Breakdown</h3>
+                <div class="breakdown-rows" id="breakdownRows"></div>
+              </div>
+              <div class="result-actions">
+                <button class="btn-sm" onclick="window.print()" type="button">🖨️ Print</button>
+                <button class="btn-sm" onclick="shareResult()" type="button">📤 Share</button>
+                <button class="btn-sm" onclick="resetCalc()" type="button">🔄 Recalculate</button>
+              </div>
+            </div>
+            <div class="tips-box" id="tipsBox" style="display:none;"></div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- ── SIDEBAR ── -->
+      <aside aria-label="BC PNP tools and information">
+        <div class="sidebar">
+
+          <!-- BC Score Ranges -->
+          <div class="widget">
+            <div class="widget-head bc" id="bc-score-ranges">🎯 BC CRS Score & PR Chances 2026</div>
+            <div class="widget-body" style="padding:0;">
+              <table class="score-table" aria-label="BC CRS score ranges">
+                <thead><tr><th>Base CRS Score</th><th>With BC PNP</th><th>Chances</th></tr></thead>
+                <tbody>
+                  <tr><td>Any (400+)</td><td>1,000+</td><td><span class="pill bc">Guaranteed</span></td></tr>
+                  <tr><td>400–449</td><td>1,000+</td><td><span class="pill high">Excellent</span></td></tr>
+                  <tr><td>350–399</td><td>950+</td><td><span class="pill good">Very Good</span></td></tr>
+                  <tr><td>Below 350</td><td>950+</td><td><span class="pill good">Good</span></td></tr>
+                  <tr><td colspan="3" style="font-size:0.72rem;color:var(--gray-600);padding:0.375rem 0.625rem;">Without nomination: All-program cutoffs 470–525</td></tr>
+                </tbody>
               </table>
             </div>
-            <div class="results-actions">
-              <button class="btn-action primary" onclick="window.print()">🖨 Print / Save PDF</button>
-              <button class="btn-action" onclick="copyScore()">📋 Copy Score</button>
-              <button class="btn-action" onclick="shareWA()">💬 WhatsApp</button>
-            </div>
-            <div class="tip-box">
-              <span class="ti">📈</span>
-              <div>
-                <h4>Score below 507? Use BC PNP to boost it by +600.</h4>
-                <p>Even a base CRS of 400 becomes 1,000+ with a BC nomination. Read our strategies guide to maximise your chances.</p>
-                <a href="/how-to-improve-crs-score">How to Improve CRS Score — 11 Strategies →</a>
+          </div>
+
+          <!-- BC PNP Streams -->
+          <div class="widget">
+            <div class="widget-head bc">🏔️ BC PNP Express Entry Streams</div>
+            <div class="widget-body" style="padding:0.75rem;">
+              <div class="stream-list">
+                <div class="stream-item">
+                  <div class="stream-dot"></div>
+                  <div>
+                    <span class="stream-name">Skilled Worker in BC</span>
+                    <span class="stream-desc">NOC TEER 0/1/2/3, BC job offer required</span>
+                  </div>
+                </div>
+                <div class="stream-item">
+                  <div class="stream-dot"></div>
+                  <div>
+                    <span class="stream-name">International Graduate</span>
+                    <span class="stream-desc">BC post-secondary grad + BC job offer</span>
+                  </div>
+                </div>
+                <div class="stream-item">
+                  <div class="stream-dot" style="background: var(--red);"></div>
+                  <div>
+                    <span class="stream-name" style="color:var(--red);">BC PNP Tech Pilot 🔥</span>
+                    <span class="stream-desc">29 tech NOC codes, no job offer needed</span>
+                  </div>
+                </div>
+                <div class="stream-item">
+                  <div class="stream-dot"></div>
+                  <div>
+                    <span class="stream-name">Entry Level & Semi-Skilled</span>
+                    <span class="stream-desc">Tourism, food processing, trucking sectors</span>
+                  </div>
+                </div>
+              </div>
+              <div style="margin-top:0.625rem;">
+                <a href="https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview" target="_blank" rel="noopener noreferrer" style="font-size:0.8rem;color:var(--bc-blue);font-weight:600;">View all BC PNP streams →</a>
               </div>
             </div>
           </div>
-          <div class="ad-slot ad-mid" aria-label="Advertisement">Advertisement</div>
-        </section>
 
-        <!-- WHAT IS BC PNP -->
-        <section class="info-card" aria-labelledby="what-bcpnp">
-          <h2 id="what-bcpnp">What is the BC PNP (British Columbia Provincial Nominee Program)?</h2>
-          <p>The <strong>British Columbia Provincial Nominee Program (BC PNP)</strong> allows the province of British Columbia to nominate skilled workers and international graduates for Canadian permanent residence.</p>
-          <p>BC PNP is one of the most active provincial nominee programs in Canada. It holds regular draws across multiple occupational categories — Tech, Healthcare, Construction, Childcare, and more.</p>
-          <p>When BC nominates you, you receive <strong>+600 CRS points</strong> added to your federal Express Entry profile, making an Invitation to Apply (ITA) virtually guaranteed in the next federal draw.</p>
-          <div class="callout callout-gold">
-            <span class="callout-icon">⭐</span>
-            <p><strong>Key advantage:</strong> Even a CRS score of 400 becomes 1,000+ with a BC PNP nomination — well above any historical all-program draw cutoff.</p>
-          </div>
-        </section>
-
-        <!-- BC PNP STREAMS -->
-        <section class="info-card" aria-labelledby="bc-streams">
-          <h2 id="bc-streams">BC PNP Streams 2026 — Eligibility Overview</h2>
-          <p>BC PNP runs five main <strong>Skills Immigration</strong> streams, each with its own eligibility criteria and minimum score thresholds. All streams offer an Express Entry BC (EEBC) option.</p>
-          <div class="stream-grid">
-            <div class="stream-card active-s">
-              <div class="sc-head"><span class="sc-icon">👷</span><span class="sc-name">Skilled Worker</span></div>
-              <div class="sc-cut">Min Score: <strong>93–95</strong> (2026)</div>
-              <div class="sc-desc">Full-time BC job offer in NOC TEER 0–3. Minimum CLB 4. Most popular BC PNP stream.</div>
-            </div>
-            <div class="stream-card">
-              <div class="sc-head"><span class="sc-icon">🎓</span><span class="sc-name">International Graduate</span></div>
-              <div class="sc-cut">Min Score: <strong>90+</strong></div>
-              <div class="sc-desc">Recent graduate from eligible Canadian post-secondary with BC job offer in skilled occupation.</div>
-            </div>
-            <div class="stream-card">
-              <div class="sc-head"><span class="sc-icon">💻</span><span class="sc-name">Tech Pilot</span></div>
-              <div class="sc-cut">Min Score: <strong>120</strong> (2026)</div>
-              <div class="sc-desc">Fast-track for 29 eligible tech NOC codes. Priority processing (~2–3 weeks). BC job offer required.</div>
-            </div>
-            <div class="stream-card">
-              <div class="sc-head"><span class="sc-icon">🏥</span><span class="sc-name">Healthcare</span></div>
-              <div class="sc-cut">Min Score: <strong>99–100</strong> (2026)</div>
-              <div class="sc-desc">Targeted draws for eligible healthcare occupations with BC job offer.</div>
-            </div>
-            <div class="stream-card">
-              <div class="sc-head"><span class="sc-icon">🔬</span><span class="sc-name">Intl Post-Graduate</span></div>
-              <div class="sc-cut">No job offer required</div>
-              <div class="sc-desc">Master's and PhD graduates from eligible BC universities. No job offer needed. No regular draws.</div>
-            </div>
-            <div class="stream-card">
-              <div class="sc-head"><span class="sc-icon">🏗️</span><span class="sc-name">Construction</span></div>
-              <div class="sc-cut">Min Score: <strong>89–93</strong> (2026)</div>
-              <div class="sc-desc">Targeted draws for eligible construction trades and occupations with BC job offer.</div>
+          <!-- Internal Tools -->
+          <div class="widget">
+            <div class="widget-head">🛠️ All Free CRS Tools</div>
+            <div class="widget-body">
+              <nav class="tool-links" aria-label="Internal tools">
+                <a href="/" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+                  CRS Score Calculator
+                </a>
+                <a href="/express-entry-crs-calculator" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M8 12h8M12 8v8"/></svg>
+                  Express Entry CRS Calculator
+                </a>
+                <a href="/cec-crs-calculator" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01z"/></svg>
+                  CEC CRS Calculator
+                </a>
+                <a href="/bc-crs-calculator" class="tool-link active-tool" aria-current="page">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 18l9-14 9 14H3z"/></svg>
+                  BC CRS Calculator ← You are here
+                </a>
+                <a href="/ontario-crs-calculator" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  Ontario OINP CRS Calculator
+                </a>
+                <a href="/alberta-crs-calculator" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/></svg>
+                  Alberta AINP CRS Calculator
+                </a>
+                <a href="/fsw-points-calculator" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11"/></svg>
+                  FSW 67-Point Calculator
+                </a>
+                <a href="/ielts-to-clb-converter" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 16V4m0 0L3 8m4-4l4 4M17 8v12m0 0l4-4m-4 4l-4-4"/></svg>
+                  IELTS → CLB Converter
+                </a>
+                <a href="/crs-cutoff-scores" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                  CRS Cutoff Score History
+                </a>
+                <a href="/express-entry-draw-history" class="tool-link">
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                  Express Entry Draw History
+                </a>
+              </nav>
             </div>
           </div>
-        </section>
 
-        <!-- AD -->
-        <div class="ad-slot ad-in-content" aria-label="Advertisement">Advertisement</div>
-
-        <!-- LATEST DRAWS -->
-        <section class="info-card" aria-labelledby="bc-draws">
-          <h2 id="bc-draws">Latest BC PNP Draw Results 2025–2026</h2>
-          <p>BC PNP holds Skills Immigration draws regularly, typically every 2–4 weeks. <a href="/crs-cutoff-scores">View all provincial draw history →</a></p>
-          <div style="overflow-x:auto;">
-            <table class="draw-table" aria-label="BC PNP draw results 2025-2026">
-              <thead><tr><th>Date</th><th>Stream / Category</th><th>Min BC Score</th><th>ITAs</th></tr></thead>
-              <tbody>
-                <tr><td>Mar 2026</td><td>Skilled Worker / Intl Graduate</td><td class="score-hi">87–93</td><td>Various</td></tr>
-                <tr><td>Mar 2026</td><td>Healthcare</td><td class="score-hi">99</td><td>27</td></tr>
-                <tr><td>Mar 2026</td><td>Tech Pilot</td><td class="score-hi">120</td><td>45</td></tr>
-                <tr><td>Mar 2026</td><td>Construction</td><td class="score-hi">89</td><td>27</td></tr>
-                <tr><td>Mar 2026</td><td>Childcare</td><td class="score-hi">87</td><td>35</td></tr>
-                <tr><td>Feb 11, 2026</td><td>Skilled Worker / Intl Graduate</td><td class="score-hi">90–93</td><td>460 total</td></tr>
-                <tr><td>Feb 2026</td><td>Healthcare</td><td class="score-hi">100</td><td>12</td></tr>
-                <tr><td>Feb 2026</td><td>Tech Pilot</td><td class="score-hi">120</td><td>41</td></tr>
-                <tr><td>Feb 4, 2026</td><td>All Streams</td><td class="score-hi">87–120</td><td>429 total</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="font-size:.75rem;color:var(--text-muted);margin-top:8px;">Source: <a href="https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply" target="_blank" rel="noopener noreferrer">WelcomeBC.ca — BC PNP Invitations to Apply ↗</a></p>
-        </section>
-
-        <!-- BC PNP TECH PILOT -->
-        <section class="info-card" aria-labelledby="bc-tech">
-          <h2 id="bc-tech">BC PNP Tech Pilot — Eligible Occupations 2026</h2>
-          <p>The <strong>BC PNP Tech Pilot</strong> fast-tracks immigration for workers in 29 eligible technology NOC codes. Priority processing takes <strong>2–3 weeks</strong> for the provincial nomination (compared to 2–3 months for regular streams).</p>
-
-          <div class="callout callout-tip">
-            <span class="callout-icon">✅</span>
-            <p><strong>Tech Pilot advantage:</strong> No need to wait for a regular draw invitation. Candidates register directly and receive priority assessment once eligible. Minimum BC PNP score of 120 required.</p>
+          <!-- Official Resources -->
+          <div class="widget">
+            <div class="widget-head bc">🔗 Official BC PNP Resources</div>
+            <div class="widget-body">
+              <div class="outbound-links">
+                <a href="https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                  BCPNP Official Website
+                  <span class="ext-icon">↗</span>
+                </a>
+                <a href="https://www.welcomebc.ca/Immigrate-to-B-C/Provinces-Skills-Immigration/BC-PNP-Tech-Pilot" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                  BC PNP Tech Pilot Info
+                  <span class="ext-icon">↗</span>
+                </a>
+                <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M3 15h18M9 3v18"/></svg>
+                  Official CRS Points Grid
+                  <span class="ext-icon">↗</span>
+                </a>
+                <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/come-canada-tool-immigration-express-entry.html" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+                  IRCC Official CRS Tool
+                  <span class="ext-icon">↗</span>
+                </a>
+                <a href="https://www.canadavisa.com/british-columbia-provincial-nominee-program.html" target="_blank" rel="noopener noreferrer" class="outbound-link">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/></svg>
+                  BC PNP Guide – CanadaVisa
+                  <span class="ext-icon">↗</span>
+                </a>
+              </div>
+            </div>
           </div>
 
-          <div style="overflow-x:auto;">
-            <table class="tech-table" aria-label="BC PNP Tech Pilot eligible NOC codes">
-              <thead><tr><th>NOC Code</th><th>Occupation Title</th></tr></thead>
-              <tbody>
-                <tr><td>0131</td><td>Telecommunication carriers managers</td></tr>
-                <tr><td>0213</td><td>Computer and information systems managers</td></tr>
-                <tr><td>2147</td><td>Computer engineers (except software engineers)</td></tr>
-                <tr><td>2171</td><td>Information systems analysts and consultants</td></tr>
-                <tr><td>2172</td><td>Database analysts and data administrators</td></tr>
-                <tr><td>2173</td><td>Software engineers and designers</td></tr>
-                <tr><td>2174</td><td>Computer programmers and interactive media developers</td></tr>
-                <tr><td>2175</td><td>Web designers and developers</td></tr>
-                <tr><td>2131</td><td>Civil engineers</td></tr>
-                <tr><td>2132</td><td>Mechanical engineers</td></tr>
-                <tr><td>2133</td><td>Electrical and electronics engineers</td></tr>
-                <tr><td>2241</td><td>Electrical and electronics engineering technologists and technicians</td></tr>
-                <tr><td>2281</td><td>Computer network technicians</td></tr>
-                <tr><td>2282</td><td>User support technicians</td></tr>
-                <tr><td>2283</td><td>Information systems testing technicians</td></tr>
-              </tbody>
-            </table>
-          </div>
-          <p style="font-size:.78rem;color:var(--text-muted);margin-top:8px;">+ 14 more eligible NOC codes. <a href="https://www.welcomebc.ca/immigrate-to-b-c/bc-pnp-tech-pilot" target="_blank" rel="noopener noreferrer">View full list on WelcomeBC.ca ↗</a></p>
-        </section>
-
-        <!-- CTA BANNER -->
-        <div class="cta-banner">
-          <h3>🌲 CRS score below 500? BC PNP could be your fast track to PR.</h3>
-          <p>A BC nomination adds +600 CRS points — turning a 450 score into 1,050. Learn all 11 proven ways to boost your chances.</p>
-          <a href="/how-to-improve-crs-score" class="cta-banner-btn">How to Improve My CRS Score →</a>
         </div>
-
-        <!-- FAQ -->
-        <section class="info-card" aria-labelledby="faq-heading">
-          <h2 id="faq-heading">BC PNP Calculator — Frequently Asked Questions</h2>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is the minimum BC PNP score to get an invitation in 2026?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">BC PNP Skills Immigration minimum scores vary by draw category in 2026: <strong>Tech stream: 120</strong>, Healthcare: 99–100, Construction: 89–93, Childcare: 87–90, and Veterinary Care: 80. The overall BC PNP score grid has a maximum of 200 points. Your BC PNP score and your federal CRS score are separate — the BC PNP score determines if BC will invite you, while your CRS score determines your federal Express Entry ranking. See all draw results on <a href="https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply" target="_blank" rel="noopener noreferrer">WelcomeBC.ca</a>.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is the Express Entry BC (EEBC) stream?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">The Express Entry BC (EEBC) stream links your BC PNP application directly to your federal Express Entry profile. To access EEBC, you must be registered in the Express Entry pool (eligible for CEC, FSW, or FST) AND meet BC PNP stream eligibility requirements. When BC nominates you through EEBC, IRCC automatically adds +600 CRS points to your profile, virtually guaranteeing an ITA in the next federal draw regardless of your base score.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How much does BC PNP add to your CRS score?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">A British Columbia PNP nomination adds exactly <strong>+600 CRS points</strong> to your federal Express Entry profile. Since the typical all-program draw cutoff is around 500–527, even a base CRS of 400 becomes 1,000+ with a BC nomination — well above any historical cutoff. This makes BC PNP the single most powerful pathway for candidates with CRS scores below 500.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              What is the BC PNP Tech Pilot and who qualifies?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">The BC PNP Tech Pilot is a priority processing stream for workers in 29 eligible technology NOC codes (software engineers, developers, data analysts, IT managers, etc.). It offers 2–3 week provincial nomination processing. To qualify, you need: a full-time BC job offer in an eligible tech NOC, at least 1 year of directly related work experience, minimum CLB 4 language, and a minimum BC PNP score of 120. You must also be eligible for BC PNP's Skilled Worker or International Graduate stream.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              Do I need a job offer for BC PNP?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">Most BC PNP Skills Immigration streams require a full-time job offer from a BC employer. However, the <strong>International Post-Graduate stream</strong> (for master's and PhD graduates from BC universities) does not require a job offer. For all other streams — Skilled Worker, International Graduate, Tech Pilot, Healthcare, Construction — a valid, full-time job offer from an eligible BC employer in a skilled occupation is mandatory.</div>
-          </div>
-
-          <div class="faq-item">
-            <button class="faq-q" onclick="toggleFAQ(this)" aria-expanded="false">
-              How does the BC PNP 200-point scoring grid work?
-              <svg class="faq-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="6 9 12 15 18 9"/></svg>
-            </button>
-            <div class="faq-a">The BC PNP Skills Immigration grid assigns up to 200 points across two categories. <strong>Economic Factors (max 80 pts):</strong> Hourly wage of your BC job offer (max 55 pts) + Regional district of employment (max 25 pts — rural areas score higher). <strong>Human Capital Factors (max 120 pts):</strong> Directly related work experience (max 40 pts) + Education (max 40 pts) + Language proficiency (max 40 pts). In each draw, candidates with the highest scores in their stream category receive invitations to apply.</div>
-          </div>
-        </section>
-
-        <!-- RELATED CALCULATORS -->
-        <section class="info-card" aria-labelledby="related-calc">
-          <h2 id="related-calc">Canada Immigration Calculators</h2>
-          <div class="calc-link-grid">
-            <a href="/" class="calc-link-card"><div class="ci">🧮</div><div class="cn">CRS Calculator</div><div class="cs">Main tool</div></a>
-            <a href="/express-entry-crs-calculator" class="calc-link-card"><div class="ci">🇨🇦</div><div class="cn">Express Entry</div><div class="cs">All programs</div></a>
-            <a href="/cec-crs-calculator" class="calc-link-card"><div class="ci">💼</div><div class="cn">CEC Calculator</div><div class="cs">Canadian experience</div></a>
-            <a href="/pnp-crs-calculator" class="calc-link-card"><div class="ci">🏛️</div><div class="cn">PNP Calculator</div><div class="cs">+600 pts</div></a>
-            <a href="/ontario-crs-calculator" class="calc-link-card"><div class="ci">🏙️</div><div class="cn">Ontario PNP</div><div class="cs">OINP stream</div></a>
-            <a href="/alberta-crs-calculator" class="calc-link-card"><div class="ci">🏔️</div><div class="cn">Alberta PNP</div><div class="cs">AINP stream</div></a>
-            <a href="/ielts-crs-calculator" class="calc-link-card"><div class="ci">📝</div><div class="cn">IELTS to CRS</div><div class="cs">Language pts</div></a>
-            <a href="/crs-cutoff-scores" class="calc-link-card"><div class="ci">📊</div><div class="cn">Cutoff History</div><div class="cs">All draws</div></a>
-            <a href="/how-to-improve-crs-score" class="calc-link-card"><div class="ci">📈</div><div class="cn">Improve CRS</div><div class="cs">11 strategies</div></a>
-          </div>
-        </section>
-
-      </div><!-- end left -->
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar" aria-label="Sidebar">
-
-        <div class="sw" style="padding:0;border:none;background:none;box-shadow:none;">
-          <div class="cutoff-widget">
-            <div style="font-size:.7rem;opacity:.85;text-transform:uppercase;letter-spacing:.04em;">Latest BC PNP Draw · Mar 2026</div>
-            <div style="display:flex;justify-content:center;gap:16px;margin-top:8px;flex-wrap:wrap;">
-              <div style="text-align:center;"><div class="cw-val">120</div><div class="cw-label">Tech Min</div></div>
-              <div style="text-align:center;"><div class="cw-val">93</div><div class="cw-label">SW Min</div></div>
-              <div style="text-align:center;"><div class="cw-val">99</div><div class="cw-label">Health Min</div></div>
-            </div>
-            <div class="cw-sub" style="margin-top:10px;">460 total invitations issued</div>
-          </div>
-          <div style="background:var(--surface);border:1px solid var(--border-light);border-radius:0 0 var(--radius-xl) var(--radius-xl);padding:10px 14px;">
-            <div style="font-size:.78rem;color:var(--text-muted);text-align:center;padding-top:4px;">BC PNP nomination = <strong style="color:var(--bc-blue);">+600 CRS pts</strong></div>
-          </div>
-          <p style="font-size:.72rem;color:var(--text-muted);margin-top:8px;text-align:center;"><a href="https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply" target="_blank" rel="noopener noreferrer">Official BC PNP draw results ↗</a></p>
-        </div>
-
-        <div class="sw" style="padding:0;border:none;background:none;box-shadow:none;margin-top:4px;">
-          <div class="ad-slot ad-sidebar" aria-label="Advertisement">Advertisement</div>
-        </div>
-
-        <div class="sw">
-          <h3>BC PNP Quick Facts</h3>
-          <ul style="list-style:none;padding:0;font-size:.82rem;">
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>Score Grid:</strong> 200 points max</li>
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>Tech Min Score:</strong> 120 pts</li>
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>SW Min Score:</strong> 87–95 pts</li>
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>Healthcare Min:</strong> 99–100 pts</li>
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>Job Offer:</strong> Required (most streams)</li>
-            <li style="padding:6px 0;border-bottom:1px solid var(--border-light);"><strong>CRS Nomination Bonus:</strong> +600 pts</li>
-            <li style="padding:6px 0;"><strong>Tech Processing:</strong> ~2–3 weeks</li>
-          </ul>
-        </div>
-
-        <div class="sw">
-          <h3>All Calculators</h3>
-          <ul class="sl" role="list">
-            <li><a href="/">🧮 CRS Calculator</a></li>
-            <li><a href="/express-entry-crs-calculator">🇨🇦 Express Entry</a></li>
-            <li><a href="/cec-crs-calculator">💼 CEC Calculator</a></li>
-            <li><a href="/fsw-crs-calculator">🌐 FSW Calculator</a></li>
-            <li><a href="/pnp-crs-calculator">🏛️ PNP Calculator</a></li>
-            <li><a href="/ontario-crs-calculator">🏙️ Ontario PNP</a></li>
-            <li><a href="/bc-crs-calculator" class="cur">🌲 BC PNP ✓</a></li>
-            <li><a href="/alberta-crs-calculator">🏔️ Alberta PNP</a></li>
-            <li><a href="/ielts-crs-calculator">📝 IELTS to CRS</a></li>
-            <li><a href="/crs-cutoff-scores">📊 Cutoff History</a></li>
-            <li><a href="/how-to-improve-crs-score">📈 Improve CRS</a></li>
-          </ul>
-        </div>
-
-        <div class="sw">
-          <h3>Official BC PNP Links</h3>
-          <a href="https://www.welcomebc.ca/immigrate-to-b-c/for-workers" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            WelcomeBC — For Workers
-          </a>
-          <a href="https://www.welcomebc.ca/immigrate-to-b-c/about-the-bc-provincial-nominee-program/invitations-to-apply" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            BC PNP Draw Results
-          </a>
-          <a href="https://www.welcomebc.ca/immigrate-to-b-c/bc-pnp-tech-pilot" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            BC PNP Tech Pilot
-          </a>
-          <a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer" class="resource-link">
-            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            IRCC Draw Results
-          </a>
-        </div>
-
       </aside>
     </div>
-  </div>
-</main>
 
-<!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>CRS Calculators</h4>
-        <ul>
-          <li><a href="/">CRS Score Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator">FSW Calculator</a></li>
-          <li><a href="/pnp-crs-calculator">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator">IELTS to CRS</a></li>
-        </ul>
+    <!-- ═══ SEO CONTENT ═══ -->
+    <div class="content-wrap">
+
+      <section class="content-section" aria-labelledby="what-is-bcpnp">
+        <h2 id="what-is-bcpnp">What is the BC CRS Calculator?</h2>
+        <div class="stat-cards">
+          <div class="stat-card"><div class="num">+600</div><div class="lbl">BC PNP CRS Nomination Points</div></div>
+          <div class="stat-card"><div class="num">29</div><div class="lbl">BC Tech Pilot Eligible NOC Codes</div></div>
+          <div class="stat-card"><div class="num">Weekly</div><div class="lbl">BC PNP Tech Pilot Draws</div></div>
+          <div class="stat-card"><div class="num">Free</div><div class="lbl">No Login Needed</div></div>
+        </div>
+        <p>The <strong>BC CRS Calculator</strong> is a free online tool that estimates your <strong>Comprehensive Ranking System (CRS) score</strong> for <strong>British Columbia PNP (BCPNP)</strong> applicants. It calculates your full Express Entry CRS score and automatically applies the <strong>+600 nomination bonus</strong> when you have a BCPNP nomination.</p>
+        <p>British Columbia is one of Canada's most popular immigration destinations — home to Vancouver's thriving tech sector, diverse communities, and strong job market. The <a href="https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview" target="_blank" rel="noopener noreferrer">BC Provincial Nominee Program (BCPNP)</a> is the province's official immigration program, offering several pathways aligned with <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">Express Entry</a>.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="bcpnp-streams">
+        <h2 id="bcpnp-streams">BC PNP Express Entry Streams 2026</h2>
+        <p>The BCPNP has four main Express Entry-aligned streams. All lead to a +600 CRS nomination bonus:</p>
+        <div class="two-col">
+          <div>
+            <h3>🏢 Skilled Worker in BC</h3>
+            <ul>
+              <li>Must have a BC employer job offer</li>
+              <li>NOC TEER 0, 1, 2 or 3 occupation</li>
+              <li>Must be in Express Entry pool</li>
+              <li>Salary must meet provincial minimums</li>
+            </ul>
+            <h3>🎓 International Graduate</h3>
+            <ul>
+              <li>Graduated from a BC post-secondary institution</li>
+              <li>Must have a BC job offer (with some exceptions)</li>
+              <li>Eligible NOC TEER 0/1/2/3</li>
+            </ul>
+          </div>
+          <div>
+            <h3>💻 BC PNP Tech Pilot (Most Popular)</h3>
+            <ul>
+              <li>29 in-demand tech NOC codes</li>
+              <li>No job offer required for some applicants</li>
+              <li>Weekly intakes — fastest-moving stream</li>
+              <li>Open to candidates inside AND outside BC</li>
+              <li>Includes software engineers, data analysts, IT managers, cybersecurity specialists</li>
+            </ul>
+            <h3>🏨 Entry Level & Semi-Skilled</h3>
+            <ul>
+              <li>Tourism, hospitality, food processing, long-haul trucking</li>
+              <li>NOC TEER 4/5 occupations</li>
+              <li>Must have BC job offer and work in BC</li>
+            </ul>
+          </div>
+        </div>
+        <p>Not sure which stream applies to your NOC code? Use our <a href="/noc-code-finder">NOC Code Finder</a> to check your TEER category and BC PNP eligibility.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="bc-pnp-crs-points">
+        <h2 id="bc-pnp-crs-points">How BC PNP Affects Your CRS Score</h2>
+        <p>When you receive a <strong>BC PNP nomination</strong>, IRCC adds <strong>600 points</strong> to your Express Entry CRS score. Since all-program draw cutoffs are typically 470–525, even a base CRS score of 350–400 becomes 950–1,000+ — well above any cutoff — after a nomination.</p>
+        <table class="points-table" aria-label="BC PNP CRS impact table">
+          <thead><tr><th>Base CRS Score</th><th>After BC PNP +600</th><th>Typical ITA Draw Cutoff</th><th>Result</th></tr></thead>
+          <tbody>
+            <tr><td>350</td><td>950</td><td>470–525</td><td>✅ Guaranteed ITA</td></tr>
+            <tr><td>400</td><td>1,000</td><td>470–525</td><td>✅ Guaranteed ITA</td></tr>
+            <tr><td>450</td><td>1,050</td><td>470–525</td><td>✅ Guaranteed ITA</td></tr>
+            <tr><td>500</td><td>1,100</td><td>470–525</td><td>✅ Guaranteed ITA</td></tr>
+          </tbody>
+        </table>
+        <p>The key is to <strong>first get a BCPNP nomination</strong>. Your base CRS score matters for entering the Express Entry pool (minimum ~440 for CEC/FSW), but it becomes nearly irrelevant once you receive the +600 nomination.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="bc-how-to-use">
+        <h2 id="bc-how-to-use">How to Use This BC CRS Calculator</h2>
+        <ol>
+          <li><strong>Section A:</strong> Enter your age, education, Canadian work experience, and marital status.</li>
+          <li><strong>Spouse fields:</strong> Toggle on if applying with a spouse or common-law partner, then enter their education and Canadian work experience.</li>
+          <li><strong>Section B:</strong> Select your language test (IELTS, <a href="https://www.celpip.ca/" target="_blank" rel="noopener noreferrer">CELPIP-G</a>, TEF, or TCF) and enter all four skill scores.</li>
+          <li><strong>Section C:</strong> Add foreign work experience years for skill transferability bonus points.</li>
+          <li><strong>Section D:</strong> Select <strong>"Yes – BC PNP nomination received (+600 pts)"</strong> to include the nomination bonus. Also add any LMIA job offer, Canadian education, French bonus, or sibling in Canada.</li>
+          <li><strong>Calculate:</strong> Click "Calculate My BC CRS Score" for your instant total score with a full breakdown.</li>
+        </ol>
+      </section>
+
+      <section class="content-section" aria-labelledby="bc-vs-other-pnp">
+        <h2 id="bc-vs-other-pnp">BC PNP vs Other Provincial Programs</h2>
+        <table class="points-table" aria-label="BC PNP vs other PNP programs">
+          <thead><tr><th>Province</th><th>Program</th><th>CRS Bonus</th><th>Tech Stream?</th><th>Job Offer Needed?</th></tr></thead>
+          <tbody>
+            <tr><td><strong>British Columbia</strong></td><td>BCPNP</td><td>+600</td><td>✅ Tech Pilot (29 NOCs)</td><td>Not always (Tech)</td></tr>
+            <tr><td>Ontario</td><td>OINP</td><td>+600</td><td>✅ Tech Draw</td><td>Usually yes</td></tr>
+            <tr><td>Alberta</td><td>AINP</td><td>+600</td><td>Limited</td><td>Yes</td></tr>
+            <tr><td>Saskatchewan</td><td>SINP</td><td>+600</td><td>No dedicated</td><td>Usually yes</td></tr>
+            <tr><td>Manitoba</td><td>MPNP</td><td>+600</td><td>No dedicated</td><td>Yes</td></tr>
+          </tbody>
+        </table>
+        <p>BC PNP is particularly attractive for tech workers because the <strong>Tech Pilot stream</strong> has weekly draws, no job offer requirement for eligible NOCs, and covers Vancouver's massive tech industry. Compare other PNP options using our <a href="/pnp-crs-calculator">PNP CRS Calculator</a>.</p>
+      </section>
+
+      <section class="content-section" aria-labelledby="faq-bc">
+        <h2 id="faq-bc">Frequently Asked Questions – BC CRS Calculator</h2>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            How much does BC PNP nomination add to my CRS score?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">A BCPNP nomination adds exactly <strong>600 CRS points</strong> to your Express Entry profile. Since all-program draw cutoffs typically range from 470–525, even a base score of 350 becomes 950+ — virtually guaranteeing an Invitation to Apply (ITA) at the next regular or category-based draw.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            What is the BC PNP Tech Pilot and which NOC codes are eligible?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">The <strong>BC PNP Tech Pilot</strong> is a fast-tracked immigration stream for workers in 29 in-demand technology occupations. Eligible NOC codes include 20012 (computer and information systems managers), 21211 (data scientists), 21220 (cybersecurity specialists), 21230 (computer systems developers), 21232 (software developers), 21234 (web developers), and others. See the full list at <a href="https://www.welcomebc.ca/Immigrate-to-B-C/Provinces-Skills-Immigration/BC-PNP-Tech-Pilot" target="_blank" rel="noopener noreferrer">welcomebc.ca Tech Pilot page</a>.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            Do I need to live in BC to apply for BC PNP?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">For most BCPNP streams, you need a BC employer job offer, which generally means working in BC. However, for the <strong>BC PNP Tech Pilot</strong>, some candidates outside BC can apply if they work remotely for a BC-based tech employer. Always verify current requirements at <a href="https://www.welcomebc.ca" target="_blank" rel="noopener noreferrer">welcomebc.ca</a> as rules change frequently.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            What is the BCPNP registration score and how is it different from CRS?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">BCPNP uses its own <strong>registration score</strong> (separate from CRS) to invite candidates in draws. This BC score is based on your Express Entry CRS score plus BC-specific factors like the seniority of your BC job offer and your NOC skill level. Once you receive a BCPNP invitation to apply and submit a complete application, and upon nomination, you then receive +600 CRS points from IRCC.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            How long does BC PNP take from nomination to Canada PR?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">After BCPNP nomination, IRCC typically issues an ITA within 1–2 weeks since your CRS score (now 600+ your base) exceeds any draw cutoff. After submitting a complete Express Entry application, IRCC processing takes approximately <strong>6 months</strong> for most BC PNP applicants. Total timeline from BCPNP application to Canada PR is typically 12–18 months.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            Can international students in BC apply for BC PNP?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Yes. The <strong>International Graduate stream</strong> is specifically designed for graduates of BC post-secondary institutions who have a qualifying BC job offer. You must have a valid PGWP (Post-Graduation Work Permit) and a job offer in a NOC TEER 0/1/2/3 occupation. This stream is popular among UBC, SFU, and BCIT graduates who remain in BC after graduation.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-q" onclick="toggleFaq(this)" aria-expanded="false" type="button">
+            What language score do I need for BC PNP?
+            <span class="faq-icon" aria-hidden="true">+</span>
+          </button>
+          <div class="faq-a">Language requirements vary by BCPNP stream and underlying Express Entry stream. For the Skilled Worker stream via CEC, the minimum is <strong>CLB 7</strong> (IELTS 6.0). For FSW pathways, CLB 7 is also the minimum. However, scoring higher (CLB 9+ / IELTS 7.0+) significantly boosts your base CRS score, helping you get noticed in BCPNP draws which consider your Express Entry CRS score. Use our <a href="/ielts-to-clb-converter">IELTS to CLB converter</a> to check your CLB level.</div>
+        </div>
+      </section>
+
+      <section class="content-section" aria-labelledby="related-bc-tools">
+        <h2 id="related-bc-tools">Related Canada Immigration Calculators</h2>
+        <div class="two-col">
+          <div>
+            <h3>🧮 CRS & Express Entry Tools</h3>
+            <ul>
+              <li><a href="/">CRS Score Calculator</a> — Quick general CRS estimate</li>
+              <li><a href="/express-entry-crs-calculator">Express Entry CRS Calculator</a> — Full all-stream</li>
+              <li><a href="/cec-crs-calculator">CEC CRS Calculator</a> — Canadian Experience Class</li>
+              <li><a href="/bc-crs-calculator">BC CRS Calculator</a> — This page</li>
+              <li><a href="/ontario-crs-calculator">Ontario OINP CRS Calculator</a></li>
+              <li><a href="/alberta-crs-calculator">Alberta AINP CRS Calculator</a></li>
+              <li><a href="/fsw-points-calculator">FSW 67-Point Calculator</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3>📊 Data & Score Tools</h3>
+            <ul>
+              <li><a href="/ielts-to-clb-converter">IELTS to CLB Converter</a></li>
+              <li><a href="/celpip-to-clb-converter">CELPIP to CLB Converter</a></li>
+              <li><a href="/crs-cutoff-scores">CRS Cutoff Scores 2024–2026</a></li>
+              <li><a href="/express-entry-draw-history">Express Entry Draw History</a></li>
+              <li><a href="/how-to-improve-crs-score">How to Improve CRS Score</a></li>
+              <li><a href="/noc-code-finder">NOC Code Finder</a></li>
+            </ul>
+          </div>
+        </div>
+        <p style="margin-top:0.625rem;font-size:0.875rem;color:var(--gray-600);">
+          Useful external resources: <a href="https://www.welcomebc.ca/Immigrate-to-B-C/BC-PNP-Overview" target="_blank" rel="noopener noreferrer">BCPNP Official</a> · <a href="https://www.canadavisa.com/british-columbia-provincial-nominee-program.html" target="_blank" rel="noopener noreferrer">CanadaVisa BC PNP Guide</a> · <a href="https://www.reddit.com/r/ImmigrationCanada/" target="_blank" rel="noopener noreferrer">r/ImmigrationCanada</a> · <a href="https://moving2canada.com/bc-pnp/" target="_blank" rel="noopener noreferrer">Moving2Canada BC PNP</a>
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer role="contentinfo">
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <a href="/" style="color:#fff;font-weight:700;font-size:1.05rem;text-decoration:none;">🇨🇦 CRS Score Calculator</a>
+        <p>Free Canada Express Entry CRS tools. Updated for 2026. Not affiliated with IRCC or the Government of Canada.</p>
       </div>
       <div class="footer-col">
-        <h4>Provincial PNP</h4>
-        <ul>
-          <li><a href="/ontario-crs-calculator">Ontario (OINP)</a></li>
-          <li><a href="/alberta-crs-calculator">Alberta (AINP)</a></li>
-          <li><a href="/bc-crs-calculator">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator">Saskatchewan</a></li>
+        <h4>CRS Tools</h4>
+        <ul role="list">
+          <li><a href="/">CRS Calculator</a></li>
+          <li><a href="/express-entry-crs-calculator">Express Entry CRS</a></li>
+          <li><a href="/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="/bc-crs-calculator">BC Calculator</a></li>
+          <li><a href="/fsw-points-calculator">FSW Calculator</a></li>
+          <li><a href="/ielts-to-clb-converter">IELTS → CLB</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Resources</h4>
-        <ul>
-          <li><a href="/crs-cutoff-scores">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score">Improve CRS Score</a></li>
-          <li><a href="/what-is-crs-score">What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated">How CRS is Calculated</a></li>
-          <li><a href="/blog">Immigration Blog</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Official Links</h4>
-        <ul>
-          <li><a href="https://www.welcomebc.ca/immigrate-to-b-c/for-workers" target="_blank" rel="noopener noreferrer">WelcomeBC.ca ↗</a></li>
-          <li><a href="https://www.welcomebc.ca/immigrate-to-b-c/bc-pnp-tech-pilot" target="_blank" rel="noopener noreferrer">BC PNP Tech Pilot ↗</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/mandate/policies-operational-instructions-agreements/ministerial-instructions/express-entry-rounds.html" target="_blank" rel="noopener noreferrer">IRCC Draw Results ↗</a></li>
+        <ul role="list">
+          <li><a href="/crs-cutoff-scores">Cutoff History</a></li>
+          <li><a href="/express-entry-draw-history">Draw History</a></li>
+          <li><a href="/how-to-improve-crs-score">Improve Score</a></li>
+          <li><a href="https://www.welcomebc.ca" target="_blank" rel="noopener noreferrer">BCPNP Official</a></li>
+          <li><a href="/privacy-policy">Privacy Policy</a></li>
+          <li><a href="/disclaimer">Disclaimer</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <div class="footer-bottom-inner">
-        <span>© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</span>
-        <span><a href="/sitemap.xml" style="color:#888;">Sitemap</a></span>
-      </div>
-      <p class="footer-disclaimer">This tool is for informational purposes only. CRS scores are estimates based on publicly available IRCC data. Always verify your eligibility on <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer" style="color:#666;">Canada.ca</a> and consult a regulated Canadian immigration consultant (RCIC) for professional
+      <span>© 2026 CRS Score Calculator — Not affiliated with BCPNP, IRCC, or the Government of Canada.</span>
+      <span><a href="/privacy-policy">Privacy</a> · <a href="/disclaimer">Disclaimer</a></span>
+    </div>
+  </footer>
+
+  <!-- ═══ JAVASCRIPT ═══ -->
+  <script>
+    function toggleNav(btn) {
+      const nav = document.getElementById('navLinks');
+      const open = nav.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(open));
+    }
+
+    function toggleSection(btn) {
+      const bodyId = btn.getAttribute('aria-controls');
+      const body = bodyId ? document.getElementById(bodyId) : btn.nextElementSibling;
+      if (!body) return;
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', String(!expanded));
+      body.style.display = !expanded ? '' : 'none';
+    }
+
+    function toggleSpouse(cb) {
+      const sf = document.getElementById('spouseFields');
+      sf.style.display = cb.checked ? 'block' : 'none';
+      sf.setAttribute('aria-hidden', String(!cb.checked));
+    }
+
+    function handleMarital() {
+      // Sync marital with spouse toggle optionally
+    }
+
+    function updateLangHints() {
+      const t = document.getElementById('langTest').value;
+      const hints = {
+        ielts: 'IELTS: CLB 9 = 8.5 (L), 7.0 (W/S), 7.0 (R) — CLB 7 = 6.0 all skills',
+        celpip: 'CELPIP: CLB 9 = Level 9, CLB 7 = Level 7',
+        tef: 'TEF Canada: NCLC 7 = 249-279 (L), 207-232 (R)',
+        tcf: 'TCF Canada: NCLC 7 = 458-502 (L), 375-405 (R)'
+      };
+      const h = document.getElementById('ls-hint');
+      if (h) h.textContent = hints[t] || '';
+    }
+
+    function ieltsToClb(score, skill) {
+      const maps = {
+        listening: [[8.5,12],[8.0,10],[7.5,9],[6.0,8],[5.5,7],[5.0,6],[4.5,5],[4.0,4]],
+        reading:   [[8.5,12],[8.0,10],[7.0,9],[6.5,8],[6.0,7],[5.0,6],[4.0,5],[3.5,4]],
+        writing:   [[7.5,12],[7.0,10],[6.5,9],[6.0,8],[5.5,7],[5.0,6],[4.0,5],[3.5,4]],
+        speaking:  [[7.5,12],[7.0,10],[6.5,9],[6.0,8],[5.5,7],[5.0,6],[4.0,5],[3.5,4]]
+      };
+      const map = maps[skill] || maps.reading;
+      for (const [thresh, clb] of map) { if (score >= thresh) return clb; }
+      return 3;
+    }
+
+    function clbToLangPts(clb, hasSpouse) {
+      const spouseMap  = {3:0,4:6,5:6,6:8,7:16,8:22,9:29,10:32,11:32,12:32};
+      const singleMap  = {3:0,4:6,5:6,6:9,7:17,8:23,9:31,10:34,11:34,12:34};
+      const c = Math.min(clb, 12);
+      return (hasSpouse ? spouseMap[c] : singleMap[c]) || 0;
+    }
+
+    function calculateCRS() {
+      const hasSpouse = document.getElementById('spouseToggle').checked;
+
+      // Ages (single/spouse-adjusted)
+      const ageBase = parseInt(document.getElementById('age').value) || 0;
+      const agePts = hasSpouse ? Math.max(0, ageBase - 10) : ageBase;
+
+      // Education
+      const eduPts = parseInt(document.getElementById('education').value) || 0;
+
+      // Canadian work experience
+      const canExpPts = parseInt(document.getElementById('canadaExp').value) || 0;
+
+      // Language
+      const testType = document.getElementById('langTest').value;
+      const lsV = parseFloat(document.getElementById('ls').value) || 0;
+      const rsV = parseFloat(document.getElementById('rs').value) || 0;
+      const wsV = parseFloat(document.getElementById('ws').value) || 0;
+      const ssV = parseFloat(document.getElementById('ss').value) || 0;
+
+      let langPts = 0, avgClb = 0;
+      if (testType === 'ielts' || testType === 'celpip') {
+        const clbL = ieltsToClb(lsV, 'listening');
+        const clbR = ieltsToClb(rsV, 'reading');
+        const clbW = ieltsToClb(wsV, 'writing');
+        const clbS = ieltsToClb(ssV, 'speaking');
+        avgClb = Math.round((clbL + clbR + clbW + clbS) / 4);
+        langPts = clbToLangPts(clbL, hasSpouse) + clbToLangPts(clbR, hasSpouse)
+                + clbToLangPts(clbW, hasSpouse) + clbToLangPts(clbS, hasSpouse);
+      } else {
+        const avg = (lsV + rsV + wsV + ssV) / 4;
+        avgClb = Math.min(12, Math.max(4, Math.round(avg / 100 * 5 + 5
