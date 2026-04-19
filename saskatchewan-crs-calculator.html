@@ -1,786 +1,965 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <meta name="geo.region" content="CA">
-  <meta name="geo.placename" content="Canada">
-  <meta name="language" content="English">
-  <title>Saskatchewan CRS Calculator – SINP Express Entry Points Tool</title>
-  <meta name="description" content="Calculate your CRS score for the Saskatchewan Immigrant Nominee Program (SINP). Free Saskatchewan CRS calculator for Express Entry applicants.">
-  <link rel="canonical" href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Saskatchewan CRS Calculator – SINP Express Entry Points Tool">
-  <meta property="og:description" content="Calculate your CRS score for the Saskatchewan Immigrant Nominee Program (SINP). Free Saskatchewan CRS calculator for Express Entry applicants.">
-  <meta property="og:url" content="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html">
-  <meta property="og:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
-  <meta property="og:site_name" content="CRS Score Calculator">
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Saskatchewan CRS Calculator – SINP Express Entry Points Tool">
-  <meta name="twitter:description" content="Calculate your CRS score for the Saskatchewan Immigrant Nominee Program (SINP). Free Saskatchewan CRS calculator for Express Entry applicants.">
-  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/images/og-image.jpg">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool</title>
+  <meta name="description" content="Free Saskatchewan CRS calculator 2026. Estimate your SINP Express Entry Stream CRS score with age, education, language CLB, and work experience points. Instant results, mobile-friendly." />
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1" />
+  <meta name="theme-color" content="#c40000" />
+  <meta name="author" content="CRS Calculator" />
+  <meta name="format-detection" content="telephone=no" />
+  <link rel="canonical" href="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" />
+
   <!-- Favicon -->
-  <link rel="icon" href="/images/favicon.ico">
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="/css/style.css">
-  <!-- Schema -->
-  <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://crsscorecalculator.vercel.app/"},{"@type":"ListItem","position":2,"name":"Saskatchewan CRS Calculator – SINP Express Entry Category","item":"https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html"}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"What is the SINP points assessment?","acceptedAnswer":{"@type":"Answer","text":"SINP uses its own points assessment system for the International Skilled Worker category. Points are awarded for education, work experience, language ability, age, Saskatchewan connections, and adaptability factors. Candidates with the highest SINP points are invited to apply when SINP draws occur."}},{"@type":"Question","name":"Do I need a job offer for SINP?","acceptedAnswer":{"@type":"Answer","text":"A job offer from a Saskatchewan employer is not required for all SINP streams. The Occupations In-Demand stream does not require a job offer. However, having a Saskatchewan employer job offer strengthens your application significantly."}},{"@type":"Question","name":"What occupations does Saskatchewan prioritize?","acceptedAnswer":{"@type":"Answer","text":"Saskatchewan prioritizes agriculture and agri-food workers, healthcare professionals (especially for rural areas), oil/gas and mining workers, construction trades, and technology workers. Check the current SINP In-Demand Occupations List for specific NOC codes."}},{"@type":"Question","name":"Can I apply for SINP while living outside Canada?","acceptedAnswer":{"@type":"Answer","text":"Yes. The International Skilled Worker – Saskatchewan Express Entry and Occupations In-Demand streams are open to candidates living abroad. You do not need to be in Saskatchewan or Canada to apply."}},{"@type":"Question","name":"How does SINP nomination connect to Express Entry?","acceptedAnswer":{"@type":"Answer","text":"If you have an active Express Entry profile and receive an SINP nomination through the Saskatchewan Express Entry stream, IRCC will add 600 CRS points to your profile. You will then receive an ITA in the next Express Entry draw."}}]}
-</script>
-<script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebApplication","name":"Saskatchewan CRS Calculator – SINP Express Entry Points Tool","url":"https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator.html","description":"Calculate your CRS score for the Saskatchewan Immigrant Nominee Program (SINP). Free Saskatchewan CRS calculator for Express Entry applicants.","applicationCategory":"UtilityApplication","operatingSystem":"All","offers":{"@type":"Offer","price":"0","priceCurrency":"CAD"}}
-</script>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c40000'/%3E%3Cpath d='M18 20h28v6H18zm0 9h20v6H18zm0 9h28v6H18z' fill='white'/%3E%3C/svg%3E" />
+  <link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' rx='32' fill='%23c40000'/%3E%3Cpath d='M42 52h96v18H42zm0 30h68v18H42zm0 30h96v18H42z' fill='white'/%3E%3C/svg%3E" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool" />
+  <meta property="og:description" content="Estimate your Saskatchewan SINP Express Entry Stream CRS score. Free, instant, mobile-friendly." />
+  <meta property="og:url" content="https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" />
+  <meta property="og:site_name" content="CRS Calculator" />
+  <meta property="og:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool" />
+  <meta name="twitter:description" content="Free SINP CRS calculator updated for Canada Express Entry 2026." />
+  <meta name="twitter:image" content="https://crsscorecalculator.vercel.app/og-image.jpg" />
+
+  <!-- AdSense Auto Ads — replace publisher ID -->
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXXXXXXXX" crossorigin="anonymous"></script>
+
+  <style>
+    :root {
+      --primary: #c40000;
+      --primary-dark: #a80000;
+      --text: #1f2937;
+      --muted: #6b7280;
+      --border: #e5e7eb;
+      --bg: #f3f4f6;
+      --card: #ffffff;
+      --shadow: 0 2px 8px rgba(0,0,0,.06);
+      --radius: 12px;
+      --max: 1200px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: Arial, Helvetica, sans-serif; color: var(--text); background: var(--bg); line-height: 1.55; -webkit-font-smoothing: antialiased; }
+    a { color: var(--primary); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .container { max-width: var(--max); margin: auto; padding: 0 14px; }
+    .skip-link { position: absolute; left: -9999px; top: auto; }
+    .skip-link:focus { left: 12px; top: 12px; background: #fff; padding: 10px 14px; z-index: 1000; border-radius: 8px; }
+
+    /* Header */
+    .topbar { background: #fff; border-bottom: 1px solid #efefef; position: sticky; top: 0; z-index: 999; }
+    .nav { display: flex; align-items: center; justify-content: space-between; gap: 16px; min-height: 58px; }
+    .brand { display: flex; align-items: center; gap: 8px; font-weight: 700; color: #111; white-space: nowrap; }
+    .brand-badge { width: 24px; height: 24px; border-radius: 5px; background: var(--primary); display: grid; place-items: center; color: #fff; font-size: 12px; font-weight: 700; }
+    .nav-links { display: flex; gap: 16px; flex-wrap: wrap; align-items: center; font-size: 13px; }
+    .nav-links a { color: #374151; }
+    .nav-cta { background: var(--primary); color: #fff !important; padding: 8px 12px; border-radius: 8px; font-weight: 700; }
+    .nav-cta:hover { background: var(--primary-dark); text-decoration: none; }
+
+    /* Hero */
+    .hero { background: linear-gradient(180deg,#c40000 0%,#b20000 100%); color: #fff; padding: 34px 0 28px; text-align: center; }
+    .hero h1 { margin: 0 auto 8px; font-size: clamp(26px,4vw,42px); line-height: 1.15; max-width: 900px; font-weight: 800; }
+    .hero p { margin: 0 auto 16px; max-width: 860px; color: #ffeaea; font-size: 15px; }
+    .pill-row { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; margin: 0 0 18px; }
+    .pill { background: rgba(255,255,255,.12); border: 1px solid rgba(255,255,255,.22); color: #fff; padding: 7px 10px; font-size: 12px; border-radius: 999px; }
+    .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; border: none; border-radius: 10px; padding: 12px 18px; font-size: 14px; font-weight: 700; cursor: pointer; text-decoration: none !important; transition: background .18s; }
+    .btn-white { background: #fff; color: var(--primary); }
+    .btn-white:hover { background: #f0f0f0; }
+    .btn-outline { background: transparent; color: #fff; border: 1px solid rgba(255,255,255,.35); }
+    .btn-outline:hover { background: rgba(255,255,255,.08); }
+
+    /* Layout */
+    main { padding: 18px 0 28px; }
+    .grid { display: grid; grid-template-columns: minmax(0,1.65fr) 320px; gap: 18px; align-items: start; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); box-shadow: var(--shadow); }
+    .card-head { padding: 14px 16px; border-bottom: 1px solid var(--border); font-weight: 700; font-size: 15px; display: flex; align-items: center; gap: 8px; }
+    .card-body { padding: 16px; }
+
+    .section-label { background: #fff0f0; border: 1px solid #ffd4d4; color: #8b0000; font-size: 13px; font-weight: 700; padding: 9px 10px; border-radius: 8px; margin: 0 0 14px; }
+    .form-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .field { display: flex; flex-direction: column; gap: 6px; }
+    .field label { font-size: 13px; font-weight: 700; color: #374151; }
+    .field small { color: var(--muted); font-size: 12px; }
+
+    select { width: 100%; min-height: 44px; border: 1px solid #d1d5db; border-radius: 10px; background: #fff; padding: 10px 12px; font-size: 14px; color: #111827; -webkit-appearance: none; }
+    select:focus { outline: none; border-color: var(--primary); box-shadow: 0 0 0 3px rgba(196,0,0,.12); }
+
+    .actions { margin-top: 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+    .btn-red { background: var(--primary); color: #fff; flex: 1; min-height: 46px; }
+    .btn-red:hover { background: var(--primary-dark); }
+    .btn-light { background: #fff; color: #111; border: 1px solid var(--border); padding: 12px 18px; }
+
+    /* Score card */
+    .result-box { background: linear-gradient(180deg,#c40000 0%,#ae0000 100%); color: #fff; padding: 16px; border-radius: 12px; text-align: center; box-shadow: var(--shadow); }
+    .score-big { font-size: 52px; line-height: 1; font-weight: 800; margin: 4px 0 8px; }
+    .score-sub { font-size: 13px; color: #ffe4e4; }
+
+    /* Summary grid */
+    .summary-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; margin-top: 14px; }
+    .mini { border: 1px solid var(--border); border-radius: 10px; padding: 12px; background: #fff; }
+    .mini .num { font-size: 22px; font-weight: 800; color: var(--primary); margin-bottom: 4px; }
+    .mini .lbl { font-size: 12px; color: var(--muted); }
+
+    /* Table */
+    .table-wrap { overflow: auto; border: 1px solid var(--border); border-radius: 12px; }
+    table { width: 100%; border-collapse: collapse; background: #fff; }
+    th, td { padding: 11px 10px; border-bottom: 1px solid var(--border); font-size: 14px; text-align: left; }
+    th { background: #b60000; color: #fff; font-size: 13px; white-space: nowrap; }
+    tr:last-child td { border-bottom: none; }
+    .green { color: #15803d; font-weight: 700; }
+    .orange { color: #b45309; font-weight: 700; }
+
+    /* Steps */
+    .steps { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .step { border: 1px solid var(--border); border-radius: 12px; padding: 14px; background: #fff; }
+    .step-no { width: 28px; height: 28px; border-radius: 999px; background: var(--primary); color: #fff; display: grid; place-items: center; font-weight: 700; font-size: 13px; margin-bottom: 10px; }
+    .step strong { display: block; margin-bottom: 6px; font-size: 14px; }
+    .step p { font-size: 13px; color: var(--muted); margin: 0; }
+
+    /* FAQ */
+    .faq details { border-bottom: 1px solid var(--border); padding: 12px 0; }
+    .faq summary { cursor: pointer; font-weight: 700; list-style: none; position: relative; padding-right: 24px; font-size: 14px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after { content: "+"; position: absolute; right: 0; top: 0; color: var(--primary); font-weight: 800; }
+    .faq details[open] summary::after { content: "−"; }
+    .faq p { margin: 10px 0 0; color: #4b5563; font-size: 14px; }
+
+    /* Tool grid */
+    .tool-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 12px; }
+    .tool { border: 1px solid var(--border); border-radius: 12px; padding: 14px 10px; text-align: center; background: #fff; transition: box-shadow .18s; display: block; }
+    .tool:hover { box-shadow: 0 4px 14px rgba(196,0,0,.1); text-decoration: none; }
+    .tool-icon { width: 34px; height: 34px; margin: 0 auto 10px; border-radius: 999px; background: #fef2f2; color: var(--primary); display: grid; place-items: center; font-weight: 700; font-size: 12px; }
+    .tool strong { display: block; font-size: 14px; color: #111827; }
+    .tool span { display: block; font-size: 12px; color: #6b7280; margin-top: 4px; }
+
+    /* Sidebar */
+    .side-list { display: grid; gap: 14px; }
+    .side-card { padding: 14px; background: #fff; border: 1px solid var(--border); border-radius: 12px; box-shadow: var(--shadow); }
+    .side-card h3 { margin: 0 0 10px; font-size: 14px; }
+    .side-card ul { list-style: none; padding: 0; margin: 0; }
+    .side-card li { padding: 7px 0; border-bottom: 1px solid #f0f0f0; font-size: 13px; }
+    .side-card li:last-child { border-bottom: none; }
+
+    /* Breadcrumbs */
+    .breadcrumbs { font-size: 12px; color: #6b7280; margin: 0 0 14px; }
+    .breadcrumbs a { color: #6b7280; }
+
+    /* Content */
+    .content p { margin: 0 0 12px; color: #4b5563; font-size: 14px; }
+    .tiny { font-size: 12px; }
+    .muted { color: var(--muted); }
+
+    /* Eligibility banners */
+    .elig-good { background: #f0fdf4; border: 1px solid #bbf7d0; color: #15803d; font-weight: 700; font-size: 14px; padding: 14px; border-radius: 10px; margin-top: 14px; }
+    .elig-warn { background: #fffbeb; border: 1px solid #fde68a; color: #92400e; font-weight: 700; font-size: 14px; padding: 14px; border-radius: 10px; margin-top: 14px; }
+
+    /* Footer */
+    footer { background: #101418; color: #d1d5db; margin-top: 28px; padding: 30px 0; }
+    .footer-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    footer h3 { color: #fff; font-size: 14px; margin: 0 0 10px; }
+    footer ul { list-style: none; padding: 0; margin: 0; }
+    footer li { margin: 8px 0; font-size: 13px; }
+    footer a { color: #d1d5db; }
+    footer a:hover { color: #fff; }
+    .copyright { margin-top: 18px; padding-top: 18px; border-top: 1px solid rgba(255,255,255,.08); font-size: 12px; color: #9ca3af; display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+
+    /* Responsive */
+    @media (max-width:1024px) {
+      .grid { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: repeat(2,1fr); }
+      .tool-grid { grid-template-columns: repeat(3,1fr); }
+      .steps { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: repeat(2,1fr); }
+    }
+    @media (max-width:680px) {
+      .nav { padding: 10px 0; min-height: auto; }
+      .nav-links { display: none; }
+      .hero { padding: 24px 0 20px; }
+      .hero p { font-size: 14px; }
+      .form-grid { grid-template-columns: 1fr; }
+      .summary-grid { grid-template-columns: 1fr; }
+      .steps { grid-template-columns: 1fr; }
+      .tool-grid { grid-template-columns: repeat(2,1fr); }
+      .footer-grid { grid-template-columns: 1fr; }
+      .score-big { font-size: 40px; }
+      th, td { font-size: 13px; padding: 9px 8px; }
+    }
+  </style>
 </head>
 <body>
-<a class="skip-link" href="#main-content">Skip to main content</a>
-<header class="site-header">
-  <nav class="nav-container" role="navigation" aria-label="Main navigation">
-    <a href="/index.html" class="logo" aria-label="CRS Score Calculator Home">
-      <span class="logo-icon">🍁</span>
-      <span class="logo-text">CRS Score Calculator<span>Canada Express Entry</span></span>
+<a class="skip-link" href="#main-content">Skip to content</a>
+
+<!-- Header -->
+<header class="topbar">
+  <div class="container nav">
+    <a class="brand" href="https://crsscorecalculator.vercel.app/" aria-label="CRS Calculator home">
+      <span class="brand-badge">CRS</span>
+      <span>CRS Calculator</span>
     </a>
-    <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
-    <ul class="main-nav" role="menubar">
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Calculators <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/index.html" role="menuitem">🧮 CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html" role="menuitem">🇨🇦 Express Entry Calculator</a></li>
-          <li><a href="/cec-crs-calculator.html" role="menuitem">💼 CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html" role="menuitem">🌍 FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html" role="menuitem">🔧 FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html" role="menuitem">🏛️ PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html" role="menuitem">📝 IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html" role="menuitem">🔬 STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html" role="menuitem">🏥 Healthcare Workers</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Provinces <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/alberta-crs-calculator.html" role="menuitem">🏔️ Alberta</a></li>
-          <li><a href="/ontario-crs-calculator.html" role="menuitem">🏙️ Ontario</a></li>
-          <li><a href="/bc-crs-calculator.html" role="menuitem">🌲 British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html" role="menuitem">🌾 Manitoba</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html" role="menuitem">🌻 Saskatchewan</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html" role="menuitem">⛵ Nova Scotia</a></li>
-        </ul>
-      </li>
-      <li class="nav-item" role="none">
-        <button class="nav-link" role="menuitem" aria-haspopup="true">Learn <span class="arrow">▼</span></button>
-        <ul class="dropdown" role="menu">
-          <li><a href="/what-is-crs-score.html" role="menuitem">📖 What is CRS?</a></li>
-          <li><a href="/how-crs-is-calculated.html" role="menuitem">📊 How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html" role="menuitem">📉 CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html" role="menuitem">📈 How to Improve CRS</a></li>
-          <li><a href="/express-entry-draw-results.html" role="menuitem">🎯 Express Entry Draws</a></li>
-          <li><a href="/crs-score-for-canada-pr.html" role="menuitem">🍁 CRS Score for Canada PR</a></li>
-        </ul>
-      </li>
-      <li role="none"><a href="/blog/index.html" class="nav-link" role="menuitem">Blog</a></li>
-    </ul>
-    <a href="/index.html#calculator" class="nav-cta">Calculate Now</a>
-  </nav>
+    <nav class="nav-links" aria-label="Primary navigation">
+      <a href="https://crsscorecalculator.vercel.app/">CRS Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry</a>
+      <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a>
+      <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario</a>
+      <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta</a>
+      <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">Cutoff Scores</a>
+      <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Draw Results</a>
+      <a class="nav-cta" href="https://crsscorecalculator.vercel.app/">Calculate Now</a>
+    </nav>
+  </div>
 </header>
 
-<nav class="breadcrumb-nav" aria-label="Breadcrumb">
+<!-- Hero -->
+<section class="hero">
   <div class="container">
-    <ol class="breadcrumb">
-      <li><a href="/index.html">Home</a></li>
-      <li class="sep" aria-hidden="true">›</li>
-      <li class="current" aria-current="page">Saskatchewan CRS Calculator – SINP Express Entry Category</li>
-    </ol>
+    <h1>Saskatchewan CRS Calculator 2026</h1>
+    <p>Free SINP Express Entry Stream CRS score estimator. Enter your age, education, language CLB and work experience to instantly estimate your Saskatchewan PNP CRS points. No login required.</p>
+    <div class="pill-row">
+      <span class="pill">Updated 2026</span>
+      <span class="pill">SINP Express Entry</span>
+      <span class="pill">Instant Results</span>
+      <span class="pill">100% Free</span>
+      <span class="pill">No Login Required</span>
+      <span class="pill">Mobile Friendly</span>
+    </div>
+    <div class="hero-actions">
+      <a href="#calculator" class="btn btn-white">Calculate Saskatchewan CRS →</a>
+      <a href="https://crsscorecalculator.vercel.app/" class="btn btn-outline">Full CRS Calculator</a>
+    </div>
   </div>
-</nav>
+</section>
 
-<div class="page-header">
+<!-- Main -->
+<main id="main-content">
   <div class="container">
-    <h1>Saskatchewan CRS Calculator – SINP Express Entry Category</h1>
-    <p>Calculate your CRS score for the Saskatchewan Immigrant Nominee Program (SINP). Free Saskatchewan CRS calculator for Express Entry applicants.</p>
-    <div class="meta-info">
-      <span>Updated: April 2026</span>
-      <span>Free Tool</span>
-      <span>No Registration</span>
+
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="https://crsscorecalculator.vercel.app/">Home</a> ›
+      <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculators</a> ›
+      <span>Saskatchewan CRS Calculator</span>
+    </nav>
+
+    <div class="grid">
+
+      <!-- Main Column -->
+      <div>
+
+        <!-- Calculator -->
+        <section id="calculator" class="card">
+          <div class="card-head">📝 Saskatchewan CRS Calculator — SINP Express Entry Stream Points</div>
+          <div class="card-body">
+
+            <div class="section-label">Section A — Core Human Capital Factors</div>
+            <form id="skForm" novalidate>
+              <div class="form-grid">
+
+                <div class="field">
+                  <label for="age">Age</label>
+                  <select id="age">
+                    <option value="">— Select age —</option>
+                    <option value="0">17 or younger</option>
+                    <option value="99">18–35 (maximum points)</option>
+                    <option value="95">36</option>
+                    <option value="90">37</option>
+                    <option value="85">38</option>
+                    <option value="80">39</option>
+                    <option value="75">40</option>
+                    <option value="70">41</option>
+                    <option value="65">42</option>
+                    <option value="60">43</option>
+                    <option value="55">44</option>
+                    <option value="50">45</option>
+                    <option value="45">46</option>
+                    <option value="0">47 or older</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="education">Highest Education</label>
+                  <select id="education">
+                    <option value="">— Select education —</option>
+                    <option value="0">Less than secondary school</option>
+                    <option value="28">Secondary diploma</option>
+                    <option value="84">One-year post-secondary</option>
+                    <option value="91">Two-year post-secondary</option>
+                    <option value="112">Bachelor's or 3+ year credential</option>
+                    <option value="119">Two or more credentials (one 3+ yrs)</option>
+                    <option value="126">Master's or professional degree</option>
+                    <option value="140">Doctoral degree (PhD)</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="marital">Marital Status</label>
+                  <select id="marital">
+                    <option value="single">Single / No accompanying spouse</option>
+                    <option value="spouse">Married / Accompanying spouse</option>
+                  </select>
+                </div>
+
+                <div class="field">
+                  <label for="spouseEducation">Spouse Education</label>
+                  <select id="spouseEducation">
+                    <option value="0">Not applicable / Less than secondary</option>
+                    <option value="2">Secondary diploma</option>
+                    <option value="6">One-year post-secondary</option>
+                    <option value="7">Two-year post-secondary</option>
+                    <option value="8">Bachelor's or 3+ year</option>
+                    <option value="9">Two or more credentials</option>
+                    <option value="10">Master's or PhD</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section B — First Official Language (CLB)</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="langTest">Language Test Type</label>
+                  <select id="langTest">
+                    <option value="">— Select test —</option>
+                    <option value="ielts">IELTS General Training</option>
+                    <option value="celpip">CELPIP-G</option>
+                    <option value="tef">TEF Canada (French)</option>
+                    <option value="tcf">TCF Canada (French)</option>
+                  </select>
+                  <small>Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> to convert IELTS bands to CLB first.</small>
+                </div>
+                <div class="field">
+                  <label for="clbLevel">CLB Level (First Official Language)</label>
+                  <select id="clbLevel">
+                    <option value="">— Select CLB —</option>
+                    <option value="0">CLB 3 or below</option>
+                    <option value="0">CLB 4</option>
+                    <option value="6">CLB 5</option>
+                    <option value="8">CLB 6</option>
+                    <option value="16">CLB 7</option>
+                    <option value="22">CLB 8</option>
+                    <option value="29">CLB 9</option>
+                    <option value="32">CLB 10+</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="clbSpouse">Spouse CLB Level</label>
+                  <select id="clbSpouse">
+                    <option value="0">Not applicable</option>
+                    <option value="0">CLB 4 or below</option>
+                    <option value="0">CLB 5</option>
+                    <option value="1">CLB 6</option>
+                    <option value="3">CLB 7</option>
+                    <option value="5">CLB 8</option>
+                    <option value="7">CLB 9</option>
+                    <option value="9">CLB 10+</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="frenchLevel">French Bilingualism Bonus</label>
+                  <select id="frenchLevel">
+                    <option value="0">None / Below CLB 5 French</option>
+                    <option value="15">CLB 5–6 French + English CLB 4+</option>
+                    <option value="25">CLB 7–8 French + English CLB 4+</option>
+                    <option value="50">CLB 7–8 French + English CLB 5+</option>
+                    <option value="50">CLB 9+ French + English CLB 4+</option>
+                    <option value="50">CLB 9+ French + English CLB 5+</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section C — Work Experience</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="canadaExp">Canadian Work Experience</label>
+                  <select id="canadaExp">
+                    <option value="0">None</option>
+                    <option value="40">1 year</option>
+                    <option value="53">2 years</option>
+                    <option value="64">3 years</option>
+                    <option value="72">4 years</option>
+                    <option value="80">5 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="foreignExp">Foreign Work Experience</label>
+                  <select id="foreignExp">
+                    <option value="0">None</option>
+                    <option value="13">1–2 years</option>
+                    <option value="25">3 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="spouseExp">Spouse Canadian Work Experience</label>
+                  <select id="spouseExp">
+                    <option value="0">None / Not applicable</option>
+                    <option value="5">1 year</option>
+                    <option value="7">2 years</option>
+                    <option value="8">3 years</option>
+                    <option value="9">4 years</option>
+                    <option value="10">5 years or more</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="canadaStudy">Canadian Post-Secondary Credential</label>
+                  <select id="canadaStudy">
+                    <option value="0">None</option>
+                    <option value="15">1–2 year credential</option>
+                    <option value="30">3+ year credential</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="section-label" style="margin-top:16px;">Section D — Additional Points</div>
+              <div class="form-grid">
+                <div class="field">
+                  <label for="sibling">Sibling in Canada (citizen or PR)?</label>
+                  <select id="sibling">
+                    <option value="0">No</option>
+                    <option value="15">Yes (+15 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="nomineeBonus">Saskatchewan SINP Nomination Received?</label>
+                  <select id="nomineeBonus">
+                    <option value="0">Not nominated yet</option>
+                    <option value="600">Yes — SINP nomination (+600 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="jobOffer">Valid Job Offer (NOC)</label>
+                  <select id="jobOffer">
+                    <option value="0">No job offer</option>
+                    <option value="200">Senior Manager / NOC 00 (+200 pts)</option>
+                    <option value="50">Skilled worker / NOC A or B (+50 pts)</option>
+                    <option value="50">Other skilled occupation (+50 pts)</option>
+                  </select>
+                </div>
+                <div class="field">
+                  <label for="saskConnection">Saskatchewan Connection</label>
+                  <select id="saskConnection">
+                    <option value="0">No direct connection</option>
+                    <option value="10">Family in Saskatchewan (+10 pts)</option>
+                    <option value="10">Previous work/study in SK (+10 pts)</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="actions">
+                <button type="button" class="btn btn-red btn" id="calcBtn">Calculate My Saskatchewan CRS Score →</button>
+                <button type="reset" class="btn btn-light btn" id="resetBtn">Reset</button>
+              </div>
+            </form>
+
+            <!-- Summary Mini Cards -->
+            <div class="summary-grid" aria-live="polite">
+              <div class="mini"><div class="lbl">Total CRS Score</div><div class="num" id="totalScore">0</div></div>
+              <div class="mini"><div class="lbl">Language Points</div><div class="num" id="langPts">0</div></div>
+              <div class="mini"><div class="lbl">Education Points</div><div class="num" id="eduPts">0</div></div>
+              <div class="mini"><div class="lbl">Work Exp Points</div><div class="num" id="workPts">0</div></div>
+            </div>
+
+            <!-- Breakdown Table -->
+            <div style="margin-top:18px;" class="table-wrap" aria-live="polite">
+              <table>
+                <thead>
+                  <tr><th>CRS Factor</th><th>Your Points</th><th>Maximum</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Age</td><td id="tAge">0</td><td>110</td></tr>
+                  <tr><td>Education (applicant)</td><td id="tEdu">0</td><td>150</td></tr>
+                  <tr><td>First official language</td><td id="tLang">0</td><td>136</td></tr>
+                  <tr><td>Canadian work experience</td><td id="tCanExp">0</td><td>80</td></tr>
+                  <tr><td>Spouse factors</td><td id="tSpouse">0</td><td>40</td></tr>
+                  <tr><td>Foreign work experience</td><td id="tForeign">0</td><td>25</td></tr>
+                  <tr><td>French bilingualism bonus</td><td id="tFrench">0</td><td>50</td></tr>
+                  <tr><td>Canadian post-secondary study</td><td id="tStudy">0</td><td>30</td></tr>
+                  <tr><td>Sibling in Canada</td><td id="tSibling">0</td><td>15</td></tr>
+                  <tr><td>SINP nomination / Job offer</td><td id="tBonus">0</td><td>600</td></tr>
+                  <tr><td>Saskatchewan connection bonus</td><td id="tSaskConn">0</td><td>10</td></tr>
+                  <tr><td><strong>Total CRS Score</strong></td><td id="tTotal"><strong>0</strong></td><td><strong>1,200</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <!-- Eligibility Banner -->
+            <div id="eligBanner" style="display:none;" aria-live="polite"></div>
+
+            <p class="tiny muted" style="margin-top:12px;">
+              This Saskatchewan CRS calculator estimates your SINP Express Entry score. For the complete federal CRS score, use the <a href="https://crsscorecalculator.vercel.app/">full CRS Calculator</a>. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">official IRCC tool</a>.
+            </p>
+          </div>
+        </section>
+
+        <!-- What is Saskatchewan CRS -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">What is the Saskatchewan CRS Calculator?</div>
+          <div class="card-body content">
+            <p>The <strong>Saskatchewan CRS Calculator</strong> estimates your Comprehensive Ranking System score for the <strong>SINP Express Entry Sub-Category</strong> — the pathway through which Saskatchewan nominates Express Entry candidates for Canada PR via the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC federal Express Entry pool</a>.</p>
+            <p>Saskatchewan targets candidates from the Express Entry pool whose skills match provincial labour market needs. A successful <strong>SINP nomination adds 600 CRS points</strong>, virtually guaranteeing a federal Invitation to Apply (ITA). Check <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">current CRS cutoff scores</a> to see how your score compares to recent draw thresholds.</p>
+            <p>To compare Saskatchewan with other provinces, use the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>, or the <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia CRS Calculator</a>.</p>
+          </div>
+        </section>
+
+        <!-- CRS Score Ranges -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">Saskatchewan SINP CRS Score Ranges & PR Chances</div>
+          <div class="card-body">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>CRS Score Range</th><th>PR Chances (SINP)</th><th>Typical Eligibility</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>Below 400</td><td class="orange">Very Low</td><td>Unlikely without SINP nomination</td></tr>
+                  <tr><td>400–449</td><td class="orange">Low–Moderate</td><td>May qualify for SINP Expression of Interest pool</td></tr>
+                  <tr><td>450–490</td><td class="green">Moderate</td><td>Strong SINP Express Entry candidate</td></tr>
+                  <tr><td>491–520</td><td class="green">Good</td><td>Approaching all-program draw range</td></tr>
+                  <tr><td>521+</td><td class="green">Excellent</td><td>Competitive for all Express Entry programs</td></tr>
+                  <tr><td>Any + 600</td><td class="green">Very Strong</td><td>SINP nomination adds 600 CRS bonus points</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tiny muted" style="margin-top:10px;">Source: <a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry draw results 2025–2026</a>. For reference purposes only.</p>
+          </div>
+        </section>
+
+        <!-- How to Use -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">How to use this Saskatchewan CRS Calculator</div>
+          <div class="card-body">
+            <div class="steps">
+              <div class="step">
+                <div class="step-no">1</div>
+                <strong>Enter personal details</strong>
+                <p>Select your age, highest education and marital status — the core CRS human capital factors assessed by IRCC.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">2</div>
+                <strong>Add language CLB scores</strong>
+                <p>Select your CLB level. Not sure? Use the <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS tool</a> to convert your IELTS bands to CLB first.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">3</div>
+                <strong>Add work experience</strong>
+                <p>Canadian work experience carries much higher CRS weight than foreign experience — enter both for an accurate estimate.</p>
+              </div>
+              <div class="step">
+                <div class="step-no">4</div>
+                <strong>Get instant CRS score</strong>
+                <p>See your Saskatchewan CRS score breakdown, then open the <a href="https://crsscorecalculator.vercel.app/">full CRS calculator</a> for a complete federal score.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- How CRS is Calculated for SINP -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">How is CRS calculated for Saskatchewan SINP?</div>
+          <div class="card-body content">
+            <p>The Saskatchewan PNP Express Entry Sub-Category operates within the federal <strong>Comprehensive Ranking System (CRS)</strong>. Your score out of 1,200 covers core human capital (age, education, language, Canadian work experience), spouse factors, skill transferability, and additional points including nominations, job offers, siblings in Canada, and Canadian study credentials.</p>
+            <p>The single biggest CRS boost is the <strong>+600 SINP nomination bonus</strong>. Saskatchewan targets workers in high-demand occupations including agriculture, healthcare, trucking, and skilled trades. Review <a href="https://crsscorecalculator.vercel.app/express-entry-draws">recent Express Entry draws</a> and the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS cutoff score history</a> to understand current ITA thresholds.</p>
+            <p>Always cross-check criteria with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">Government of Canada immigration portal</a> before filing your Express Entry profile.</p>
+          </div>
+        </section>
+
+        <!-- SINP Streams Table -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">Saskatchewan SINP — Express Entry Sub-Category Streams</div>
+          <div class="card-body">
+            <div class="table-wrap">
+              <table>
+                <thead>
+                  <tr><th>SINP Stream</th><th>Federal Program</th><th>Occupation Focus</th><th>Min. CRS (Base)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>SINP Express Entry Sub-Category (general)</td><td>FSW / CEC / FST</td><td>Broad labour market needs</td><td>~450–480</td></tr>
+                  <tr><td>Occupations In-Demand</td><td>FSW / CEC</td><td>Skilled trades, healthcare, agriculture</td><td>~440–470</td></tr>
+                  <tr><td>Saskatchewan Experience Category</td><td>CEC</td><td>Current SK workers</td><td>Lower threshold</td></tr>
+                  <tr><td>International Skilled Worker – EE</td><td>FSW</td><td>Points-based skilled worker</td><td>~460–490</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p class="tiny muted" style="margin-top:10px;">Stream eligibility changes frequently. Verify current requirements with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">official IRCC portal</a>.</p>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="card faq" style="margin-top:18px;">
+          <div class="card-head">Frequently Asked Questions — Saskatchewan CRS Calculator</div>
+          <div class="card-body">
+            <details open>
+              <summary>What is the Saskatchewan CRS calculator?</summary>
+              <p>It estimates your CRS score for the SINP Express Entry Sub-Category to assess your chances of receiving a Saskatchewan provincial nomination for Canada PR through the federal Express Entry system.</p>
+            </details>
+            <details>
+              <summary>What is a good CRS score for Saskatchewan?</summary>
+              <p>A score above 450 is generally competitive for the SINP Express Entry pool. A SINP nomination adds 600 CRS points — making almost any base score competitive for a federal ITA. See the <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">latest CRS cutoff scores</a> for current draw context.</p>
+            </details>
+            <details>
+              <summary>Does Saskatchewan use the federal CRS?</summary>
+              <p>Yes. The SINP Express Entry Sub-Category operates within the federal CRS framework. Saskatchewan adds 600 CRS points when it nominates a candidate from the Express Entry pool.</p>
+            </details>
+            <details>
+              <summary>What occupations does Saskatchewan target through SINP?</summary>
+              <p>Saskatchewan prioritises workers in healthcare, agriculture, trucking and transportation, skilled trades, and technology occupations. The province targets candidates whose skills align with its current labour market needs.</p>
+            </details>
+            <details>
+              <summary>How can I improve my Saskatchewan CRS score?</summary>
+              <p>Raise your IELTS score to CLB 9+, gain Canadian work experience, complete a Canadian credential, or secure an LMIA-backed Saskatchewan job offer. See the full <a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">CRS improvement guide</a>.</p>
+            </details>
+            <details>
+              <summary>How does Saskatchewan compare to other PNP streams?</summary>
+              <p>Compare using the <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta CRS Calculator</a>, <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">BC PNP Calculator</a>, <a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba CRS Calculator</a>, and the <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia CRS Calculator</a>.</p>
+            </details>
+            <details>
+              <summary>Is this Saskatchewan CRS calculator accurate?</summary>
+              <p>This tool uses the official IRCC CRS points grid and SINP guidelines for a reliable estimate. Always verify with the <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC official CRS tool</a> before submitting your Express Entry profile.</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- Related Tools -->
+        <section class="card" style="margin-top:18px;">
+          <div class="card-head">Related CRS Calculators & Tools</div>
+          <div class="card-body">
+            <div class="tool-grid">
+              <a class="tool" href="https://crsscorecalculator.vercel.app/"><div class="tool-icon">CA</div><strong>CRS Calculator</strong><span>All programs</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator"><div class="tool-icon">EE</div><strong>Express Entry</strong><span>Federal CRS tool</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/cec-crs-calculator"><div class="tool-icon">CE</div><strong>CEC Calculator</strong><span>Canadian Experience</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/pnp-crs-calculator"><div class="tool-icon">PN</div><strong>PNP Calculator</strong><span>All provinces</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/ontario-crs-calculator"><div class="tool-icon">ON</div><strong>Ontario CRS</strong><span>OINP stream</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/alberta-crs-calculator"><div class="tool-icon">AB</div><strong>Alberta CRS</strong><span>AINP stream</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/bc-crs-calculator"><div class="tool-icon">BC</div><strong>BC PNP CRS</strong><span>British Columbia</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator"><div class="tool-icon">MB</div><strong>Manitoba CRS</strong><span>MPNP stream</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator"><div class="tool-icon">NS</div><strong>Nova Scotia CRS</strong><span>NSNP stream</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/ielts-crs-calculator"><div class="tool-icon">IL</div><strong>IELTS to CRS</strong><span>Language points</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/crs-cutoff-scores"><div class="tool-icon">CS</div><strong>Cutoff Scores</strong><span>Draw trends</span></a>
+              <a class="tool" href="https://crsscorecalculator.vercel.app/express-entry-draws"><div class="tool-icon">DR</div><strong>Draw Results</strong><span>2025–2026 history</span></a>
+            </div>
+          </div>
+        </section>
+
+      </div><!-- /main column -->
+
+      <!-- Sidebar -->
+      <aside class="side-list">
+
+        <div class="result-box" aria-live="polite">
+          <div class="tiny">Estimated Saskatchewan CRS Score</div>
+          <div class="score-big" id="sideScore">0</div>
+          <div class="score-sub">Updated 2026 • SINP Express Entry Stream</div>
+        </div>
+
+        <div class="side-card">
+          <h3>Express Entry Tools</h3>
+          <ul>
+            <li><a href="https://crsscorecalculator.vercel.app/">Full CRS Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC CRS Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>Provincial Calculators</h3>
+          <ul>
+            <li><strong>Saskatchewan (SINP)</strong> — this page</li>
+            <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+            <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>Official IRCC Resources</h3>
+          <ul>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC CRS Check Tool</a></li>
+            <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Immigration Home</a></li>
+            <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Government of Canada</a></li>
+          </ul>
+        </div>
+
+        <div class="side-card">
+          <h3>AEO Quick Answers</h3>
+          <ul>
+            <li>SINP nomination adds <strong>600 CRS points</strong> instantly.</li>
+            <li>Saskatchewan uses the <strong>federal CRS framework</strong> — no separate points system.</li>
+            <li>CLB 9 across all abilities = up to <strong>128 language CRS points</strong> (single applicant).</li>
+            <li>Canadian work experience adds up to <strong>80 CRS points</strong>.</li>
+            <li>Saskatchewan prioritises <strong>healthcare, agriculture, and trades</strong> occupations.</li>
+          </ul>
+        </div>
+
+      </aside>
+    </div><!-- /grid -->
+  </div><!-- /container -->
+</main>
+
+<!-- Footer -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>CRS Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/">CRS Score Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator">Express Entry Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/cec-crs-calculator">CEC Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator">PNP Calculator</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator">IELTS to CRS</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Provincial Calculators</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator">Ontario (OINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator">Alberta (AINP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/bc-crs-calculator">British Columbia</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/manitoba-crs-calculator">Manitoba (MPNP)</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator">Nova Scotia (NSNP)</a></li>
+          <li><a href="/saskatchewan-crs-calculator">Saskatchewan (SINP)</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Guides & Resources</h3>
+        <ul>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores">CRS Cutoff Scores</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/express-entry-draws">Express Entry Draws</a></li>
+          <li><a href="https://crsscorecalculator.vercel.app/crs-score-improvement-guide">Improve CRS Score</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>Official Links</h3>
+        <ul>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/check-score.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry</a></li>
+          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">IRCC Home</a></li>
+          <li><a href="https://www.canada.ca/" target="_blank" rel="noopener noreferrer">Canada.ca</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="copyright">
+      <span>© 2026 CRS Calculator. For informational purposes only. Verify all results with official IRCC sources before submitting an immigration application.</span>
+      <a href="https://crsscorecalculator.vercel.app/">Home</a>
     </div>
   </div>
-</div>
+</footer>
 
-<div class="container">
-  <div class="ad-slot ad-leaderboard"><!-- AdSense 728x90 Leaderboard --></div>
-</div>
-
-<main id="main-content" class="container">
-  <div class="page-layout">
-    <div class="main-content">
-      <section class="card">
-        
-    <h2>Saskatchewan Immigrant Nominee Program (SINP)</h2>
-    <p>The Saskatchewan Immigrant Nominee Program (SINP) is Saskatchewan's provincial immigration program designed to attract skilled workers, entrepreneurs, and farmers to support the province's growing economy. Saskatchewan, with its agricultural powerhouse, mining industry, and growing technology sector, offers strong immigration opportunities for a diverse range of skilled professionals.</p>
-
-    <h2>SINP International Skilled Worker Category</h2>
-    <p>The SINP International Skilled Worker (ISW) category has two streams:</p>
-    <ul>
-      <li><strong>Saskatchewan Express Entry:</strong> For candidates in the Express Entry pool who score high on SINP's points assessment and meet Saskatchewan's occupational needs. This stream uses the Saskatchewan Points Assessment to rank candidates.</li>
-      <li><strong>Occupations In-Demand:</strong> For workers in occupations on Saskatchewan's In-Demand Occupations List, with a minimum of one year of work experience in the target occupation in the past 10 years.</li>
-    </ul>
-
-    <h2>SINP Saskatchewan Experience Category</h2>
-    <p>The Saskatchewan Experience Category has multiple streams for workers already employed in Saskatchewan. It includes the Existing Work Permit, Health Professionals, and Students streams. These pathways are especially valuable for temporary foreign workers who have established themselves in Saskatchewan.</p>
-
-    <div class="stat-grid">
-      <div class="stat-card"><div class="stat-value">600</div><div class="stat-label">CRS Points After SINP Nomination</div></div>
-      <div class="stat-card"><div class="stat-value">60%</div><div class="stat-label">Canada's Agricultural Output from Prairies</div></div>
-      <div class="stat-card"><div class="stat-value">Low</div><div class="stat-label">Cost of Living vs Major Cities</div></div>
-      <div class="stat-card"><div class="stat-value">~300+</div><div class="stat-label">Typical Base CRS for SINP</div></div>
-    </div>
-    
-      </section>
-
-      
-<div class="calculator-wrapper" id="calculator">
-  <div class="calc-header">
-    <h2>🧮 CRS Score Calculator</h2>
-    <p>Enter your details to calculate your Comprehensive Ranking System score instantly</p>
-  </div>
-  <form id="crs-form" novalidate>
-    <div class="calc-body">
-
-      <!-- SECTION A: PERSONAL & MARITAL STATUS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">A</span>
-          Core / Human Capital Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="marital-status">Marital Status</label>
-            <div class="radio-group" role="radiogroup" aria-label="Marital status">
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="single" checked> Single
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="maritalStatus" value="married"> Married / Common-law
-              </label>
-            </div>
-          </div>
-          <div class="form-group" id="spouse-coming-section" style="display:none;">
-            <label>Is your spouse/partner coming to Canada with you?</label>
-            <div class="radio-group" role="radiogroup">
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="spouseComingToCanada" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="age">Age</label>
-            <select name="age" id="age" class="form-control">
-              <option value="under18">17 and under</option>
-              <option value="18">18</option>
-              <option value="19">19</option>
-              <option value="20">20</option>
-              <option value="21">21</option>
-              <option value="22">22</option>
-              <option value="23">23</option>
-              <option value="24">24</option>
-              <option value="25">25</option>
-              <option value="26">26</option>
-              <option value="27">27</option>
-              <option value="28">28</option>
-              <option value="29">29</option>
-              <option value="30" selected>30</option>
-              <option value="31">31</option>
-              <option value="32">32</option>
-              <option value="33">33</option>
-              <option value="34">34</option>
-              <option value="35">35</option>
-              <option value="36">36</option>
-              <option value="37">37</option>
-              <option value="38">38</option>
-              <option value="39">39</option>
-              <option value="40">40</option>
-              <option value="41">41</option>
-              <option value="42">42</option>
-              <option value="43">43</option>
-              <option value="44">44</option>
-              <option value="45plus">45 and over</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="education">Level of Education</label>
-            <select name="education" id="education" class="form-control">
-              <option value="none">Less than secondary school</option>
-              <option value="secondary">Secondary diploma (high school)</option>
-              <option value="one_year">One-year post-secondary program</option>
-              <option value="two_year">Two-year post-secondary program</option>
-              <option value="bachelors" selected>Bachelor's degree (3-year or more)</option>
-              <option value="two_or_more">Two or more certificates (one 3+ years)</option>
-              <option value="masters">Master's degree / Professional degree</option>
-              <option value="phd">PhD (Doctoral degree)</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="canadianWE">Canadian Work Experience</label>
-            <select name="canadianWE" id="canadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION B: FIRST OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">B</span>
-          First Official Language (English or French)
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang1TestType">Language Test Type</label>
-          <select name="lang1TestType" id="lang1TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- Select test --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang1_speaking" class="form-control lang-score" id="lang1-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang1_listening" class="form-control lang-score" id="lang1-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang1_reading" class="form-control lang-score" id="lang1-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang1_writing" class="form-control lang-score" id="lang1-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION C: SECOND OFFICIAL LANGUAGE -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">C</span>
-          Second Official Language <span style="font-weight:400;font-size:0.85rem;">(Optional — bonus up to 22 pts)</span>
-        </div>
-
-        <div class="form-group mb-3">
-          <label for="lang2TestType">Second Language Test Type</label>
-          <select name="lang2TestType" id="lang2TestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS (English)</option>
-            <option value="CELPIP">CELPIP-G (English)</option>
-            <option value="TEF">TEF Canada (French)</option>
-            <option value="TCF">TCF Canada (French)</option>
-          </select>
-        </div>
-
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="lang2_speaking" class="form-control lang-score" id="lang2-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="lang2_listening" class="form-control lang-score" id="lang2-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="lang2_reading" class="form-control lang-score" id="lang2-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="lang2_writing" class="form-control lang-score" id="lang2-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION D: SPOUSE FACTORS -->
-      <div class="spouse-section" id="spouse-section">
-        <div class="calc-section-title">
-          <span class="section-badge">D</span>
-          Spouse / Partner Factors
-        </div>
-
-        <div class="form-grid mt-2">
-          <div class="form-group">
-            <label for="spouseEducation">Spouse Education Level</label>
-            <select name="spouseEducation" id="spouseEducation" class="form-control">
-              <option value="none">Less than secondary</option>
-              <option value="secondary">Secondary diploma</option>
-              <option value="one_year">One-year program</option>
-              <option value="two_year">Two-year program</option>
-              <option value="bachelors">Bachelor's degree</option>
-              <option value="two_or_more">Two or more certificates</option>
-              <option value="masters">Master's degree</option>
-              <option value="phd">PhD</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="spouseCanadianWE">Spouse Canadian Work Experience</label>
-            <select name="spouseCanadianWE" id="spouseCanadianWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1 year</option>
-              <option value="2">2 years</option>
-              <option value="3">3 years</option>
-              <option value="4">4 years</option>
-              <option value="5">5 years or more</option>
-            </select>
-          </div>
-        </div>
-
-        <div class="form-group mt-2 mb-3">
-          <label for="spouseLangTestType">Spouse Language Test Type</label>
-          <select name="spouseLangTestType" id="spouseLangTestType" class="form-control" style="max-width:300px;">
-            <option value="none">-- None / Not taken --</option>
-            <option value="IELTS">IELTS</option>
-            <option value="CELPIP">CELPIP-G</option>
-            <option value="TEF">TEF Canada</option>
-            <option value="TCF">TCF Canada</option>
-          </select>
-        </div>
-        <div class="lang-grid">
-          <div class="lang-group">
-            <span class="lang-label">🗣️ Speaking</span>
-            <select name="spouseLang_speaking" class="form-control lang-score" id="spouse-speaking">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">👂 Listening</span>
-            <select name="spouseLang_listening" class="form-control lang-score" id="spouse-listening">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">📖 Reading</span>
-            <select name="spouseLang_reading" class="form-control lang-score" id="spouse-reading">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-          <div class="lang-group">
-            <span class="lang-label">✍️ Writing</span>
-            <select name="spouseLang_writing" class="form-control lang-score" id="spouse-writing">
-              <option value="0">Select score</option>
-            </select>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION E: SKILL TRANSFERABILITY -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">E</span>
-          Skill Transferability Factors
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label for="foreignWE">Foreign Work Experience</label>
-            <select name="foreignWE" id="foreignWE" class="form-control">
-              <option value="0">None</option>
-              <option value="1">1–2 years</option>
-              <option value="3">3 or more years</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label>Certificate of Qualification in Trade <span class="hint">(Federal Skilled Trades)</span></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="tradeCertificate" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- SECTION F: ADDITIONAL POINTS -->
-      <div class="calc-section">
-        <div class="calc-section-title">
-          <span class="section-badge">F</span>
-          Additional Points
-        </div>
-
-        <div class="form-grid">
-          <div class="form-group">
-            <label>Provincial Nomination (PNP) <strong class="text-primary">+600 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="pnp" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0 Major Group 00 <strong class="text-primary">+200 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferNOC00" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Job Offer — NOC TEER 0/1/2/3 (other) <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="jobOfferOther" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Sibling in Canada (citizen or PR) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="sibling" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 4 or less <strong class="text-primary">+25 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchWeakEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>French CLB 7+ with English CLB 5+ <strong class="text-primary">+50 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="frenchStrongEnglish" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (1–2 year program) <strong class="text-primary">+15 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu1to2" value="no" checked> No
-              </label>
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Post-secondary in Canada (3+ year program) <strong class="text-primary">+30 pts</strong></label>
-            <div class="radio-group">
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="yes"> Yes
-              </label>
-              <label class="radio-option">
-                <input type="radio" name="canadianEdu3Plus" value="no" checked> No
-              </label>
-            </div>
-          </div>
-        </div>
-      </div>
-
-    </div><!-- end calc-body -->
-
-    <div class="calc-btn-wrapper">
-      <button type="button" class="calculate-btn" aria-label="Calculate my CRS score">
-        Calculate My CRS Score →
-      </button>
-    </div>
-
-    <!-- RESULTS SECTION -->
-    <div class="results-section scroll-target" id="crs-results" aria-live="polite">
-      <div class="score-display">
-        <p class="score-label">Your Estimated CRS Score</p>
-        <div class="score-number score-good">—</div>
-        <p class="score-verdict">Fill in the form above and click Calculate</p>
-      </div>
-
-      <div class="score-progress-wrapper">
-        <div class="score-progress-label">
-          <span>0</span><span>CRS Score (max 1,200)</span><span>1200</span>
-        </div>
-        <div class="score-progress-bar">
-          <div class="score-progress-fill" style="width:0%"></div>
-        </div>
-      </div>
-
-      <div class="score-comparison"></div>
-
-      <h3 style="margin:20px 0 12px;">Score Breakdown</h3>
-      <div class="table-wrapper">
-        <table class="breakdown-table">
-          <thead>
-            <tr>
-              <th>CRS Factor</th>
-              <th style="text-align:right;">Points</th>
-            </tr>
-          </thead>
-          <tbody id="breakdown-tbody">
-            <tr><td colspan="2" style="text-align:center;color:var(--text-muted);">Calculate your score to see the breakdown</td></tr>
-          </tbody>
-        </table>
-      </div>
-
-      <div class="score-actions mt-3">
-        <a href="#" class="btn btn-outline btn-whatsapp">
-          📱 Share on WhatsApp
-        </a>
-        <button type="button" class="btn btn-outline btn-copy">
-          📋 Copy Score
-        </button>
-        <button type="button" class="btn btn-outline btn-print" onclick="window.print()">
-          🖨️ Print / Save PDF
-        </button>
-      </div>
-
-      <div class="internal-cta mt-3">
-        <p style="margin-bottom:8px;font-size:0.9rem;">Want a higher score?</p>
-        <a href="/how-to-improve-crs-score.html">Read our 10 proven strategies to improve your CRS score →</a>
-      </div>
-    </div>
-
-  </form>
-</div>
-
+<!-- Calculator JavaScript -->
 <script>
-// Language score dropdown population
-(function() {
-  const IELTS_SCORES = {
-    speaking:  ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    listening: ['3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    reading:   ['3.0','3.5','4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0'],
-    writing:   ['4.0','4.5','5.0','5.5','6.0','6.5','7.0','7.5','8.0','8.5','9.0']
-  };
-  const CELPIP_SCORES = ['4','5','6','7','8','9','10','11','12'];
-  const TEF_SCORES = {
-    speaking:  ['181','226','271','310','349','371','394'],
-    listening: ['145','181','217','253','280','298','316'],
-    reading:   ['121','151','181','207','233','248','263'],
-    writing:   ['181','226','271','310','349','371','393']
-  };
-  const TCF_SCORES = {
-    speaking:  ['4','6','10','13','15','17','20'],
-    listening: ['331','369','398','458','503','541','589'],
-    reading:   ['342','375','406','453','499','524','549'],
-    writing:   ['4','6','10','13','15','17','20']
-  };
+(function () {
+  function g(id) { return document.getElementById(id); }
+  function v(id) { return parseInt(g(id).value) || 0; }
 
-  function populateScores(testType, prefix) {
-    const skills = ['speaking','listening','reading','writing'];
-    skills.forEach(skill => {
-      const sel = document.getElementById(prefix + '-' + skill) ||
-                  document.querySelector(`select[name="${prefix}_${skill}"]`);
-      if (!sel) return;
-      sel.innerHTML = '<option value="0">Select score</option>';
-      let scores = [];
-      if (testType === 'IELTS') scores = IELTS_SCORES[skill] || [];
-      else if (testType === 'CELPIP') scores = CELPIP_SCORES;
-      else if (testType === 'TEF') scores = TEF_SCORES[skill] || [];
-      else if (testType === 'TCF') scores = TCF_SCORES[skill] || [];
-      scores.forEach(s => {
-        const opt = document.createElement('option');
-        opt.value = s;
-        opt.textContent = s;
-        sel.appendChild(opt);
-      });
-    });
+  function calculate() {
+    var age        = v('age');
+    var edu        = v('education');
+    var lang       = v('clbLevel');
+    var french     = v('frenchLevel');
+    var canExp     = v('canadaExp');
+    var forExp     = v('foreignExp');
+    var study      = v('canadaStudy');
+    var sibling    = v('sibling');
+    var nomBonus   = v('nomineeBonus');
+    var jobOffer   = v('jobOffer');
+    var saskConn   = v('saskConnection');
+    var isSpouse   = g('marital').value === 'spouse';
+    var spEdu      = isSpouse ? v('spouseEducation') : 0;
+    var spLang     = isSpouse ? v('clbSpouse') : 0;
+    var spExp      = isSpouse ? v('spouseExp') : 0;
+    var spouse     = spEdu + spLang + spExp;
+    var work       = canExp + forExp;
+    var bonus      = nomBonus + jobOffer;
+    var total      = age + edu + lang + french + work + study + sibling + bonus + saskConn + spouse;
+
+    // Mini summary cards
+    g('totalScore').textContent = total;
+    g('langPts').textContent    = lang + french;
+    g('eduPts').textContent     = edu;
+    g('workPts').textContent    = work;
+
+    // Breakdown table
+    g('tAge').textContent     = age;
+    g('tEdu').textContent     = edu;
+    g('tLang').textContent    = lang;
+    g('tCanExp').textContent  = canExp;
+    g('tSpouse').textContent  = spouse;
+    g('tForeign').textContent = forExp;
+    g('tFrench').textContent  = french;
+    g('tStudy').textContent   = study;
+    g('tSibling').textContent = sibling;
+    g('tBonus').textContent   = bonus;
+    g('tSaskConn').textContent= saskConn;
+    g('tTotal').innerHTML     = '<strong>' + total + '</strong>';
+
+    // Sidebar score
+    g('sideScore').textContent = total;
+
+    // Eligibility banner
+    var banner = g('eligBanner');
+    if (total >= 520) {
+      banner.className    = 'elig-good';
+      banner.style.display= 'block';
+      banner.textContent  = '✅ Excellent! Your estimated CRS score is highly competitive for Saskatchewan SINP Express Entry and all-program federal draws.';
+    } else if (total >= 450) {
+      banner.className    = 'elig-good';
+      banner.style.display= 'block';
+      banner.textContent  = '✅ Your estimated CRS score may qualify you for the Saskatchewan SINP Express Entry pool. A SINP nomination will add 600 bonus CRS points.';
+    } else if (total >= 400) {
+      banner.className    = 'elig-warn';
+      banner.style.display= 'block';
+      banner.textContent  = '⚠️ Your score is below typical SINP thresholds. Improving your IELTS/CLB score or gaining Canadian work experience will boost your CRS points significantly.';
+    } else {
+      banner.style.display = 'none';
+    }
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    const lang1Sel = document.getElementById('lang1TestType');
-    const lang2Sel = document.getElementById('lang2TestType');
-    const spouseSel = document.getElementById('spouseLangTestType');
+  // Button click
+  g('calcBtn').addEventListener('click', calculate);
 
-    if (lang1Sel) lang1Sel.addEventListener('change', () => populateScores(lang1Sel.value, 'lang1'));
-    if (lang2Sel) lang2Sel.addEventListener('change', () => populateScores(lang2Sel.value, 'lang2'));
-    if (spouseSel) spouseSel.addEventListener('change', () => populateScores(spouseSel.value, 'spouseLang'));
+  // Auto-calculate on every dropdown change
+  document.querySelectorAll('#skForm select').forEach(function (el) {
+    el.addEventListener('change', calculate);
+  });
+
+  // Reset
+  g('resetBtn').addEventListener('click', function () {
+    setTimeout(function () {
+      ['totalScore','langPts','eduPts','workPts'].forEach(function (id) { g(id).textContent = 0; });
+      ['tAge','tEdu','tLang','tCanExp','tSpouse','tForeign','tFrench','tStudy','tSibling','tBonus','tSaskConn'].forEach(function (id) { g(id).textContent = 0; });
+      g('tTotal').innerHTML      = '<strong>0</strong>';
+      g('sideScore').textContent = 0;
+      g('eligBanner').style.display = 'none';
+    }, 0);
+  });
+
+  // Spouse field opacity toggle
+  g('marital').addEventListener('change', function () {
+    var isSpouse = this.value === 'spouse';
+    ['spouseEducation','clbSpouse','spouseExp'].forEach(function (id) {
+      var field = g(id).closest('.field');
+      if (field) field.style.opacity = isSpouse ? '1' : '0.4';
+    });
   });
 })();
 </script>
 
+<!-- Schema Markup -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "CRS Calculator",
+  "url": "https://crsscorecalculator.vercel.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://crsscorecalculator.vercel.app/?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
 
-      <div class="ad-slot ad-rectangle"><!-- AdSense 336x280 Rectangle --></div>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://crsscorecalculator.vercel.app/" },
+    { "@type": "ListItem", "position": 2, "name": "PNP Calculators", "item": "https://crsscorecalculator.vercel.app/pnp-crs-calculator" },
+    { "@type": "ListItem", "position": 3, "name": "Saskatchewan CRS Calculator", "item": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator" }
+  ]
+}
+</script>
 
-      <section class="card">
-        
-    <h2>Saskatchewan's In-Demand Occupations</h2>
-    <p>Saskatchewan regularly updates its In-Demand Occupations List based on labour market data. High-priority sectors include: agriculture and agri-food, energy and resources (oil and mining), healthcare (physicians, nurses, and allied health professionals), construction and trades, and information technology. Checking the current SINP In-Demand Occupations List is an important first step for potential applicants.</p>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Saskatchewan CRS Calculator 2026 – SINP Express Entry Points Tool",
+  "url": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator",
+  "description": "Free Saskatchewan SINP CRS calculator. Estimate your Canada PR score with education, language CLB, work experience and age points for the SINP Express Entry stream.",
+  "isPartOf": { "@type": "WebSite", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+  "about": [
+    { "@type": "Thing", "name": "Saskatchewan CRS calculator" },
+    { "@type": "Thing", "name": "SINP Express Entry Sub-Category" },
+    { "@type": "Thing", "name": "Saskatchewan PNP CRS score" },
+    { "@type": "Thing", "name": "Canada Express Entry CRS points" }
+  ],
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["h1", ".hero p", ".faq summary"]
+  }
+}
+</script>
 
-    <h2>Living and Working in Saskatchewan</h2>
-    <p>Saskatoon and Regina are Saskatchewan's two main cities, both offering affordable housing, good public services, and growing career opportunities. Saskatchewan's economy is diversified across agriculture, mining, oil, and manufacturing, providing stable employment across multiple sectors. The province is known for its friendly communities and high quality of life.</p>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Saskatchewan CRS Calculator 2026",
+  "applicationCategory": "CalculatorApplication",
+  "operatingSystem": "Web",
+  "url": "https://crsscorecalculator.vercel.app/saskatchewan-crs-calculator",
+  "description": "Free Saskatchewan SINP Express Entry CRS calculator. Estimate Canada PR CRS score instantly with age, education, language CLB and work experience.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+  "publisher": { "@type": "Organization", "name": "CRS Calculator", "url": "https://crsscorecalculator.vercel.app/" },
+  "featureList": [
+    "Saskatchewan SINP CRS score estimation",
+    "SINP Express Entry Sub-Category points",
+    "Language CLB to CRS conversion",
+    "600-point SINP nomination bonus",
+    "Saskatchewan connection bonus field",
+    "Three-level eligibility banner",
+    "Auto-calculates on dropdown change"
+  ]
+}
+</script>
 
-    <h2>How to Apply for SINP</h2>
-    <p>For SINP Saskatchewan Express Entry: (1) Have an active Express Entry profile and meet basic Express Entry eligibility; (2) Create a SINP profile and complete the Saskatchewan Points Assessment; (3) Wait for SINP draws when higher-scoring candidates are issued invitations to apply; (4) Complete the SINP application; (5) Receive the nomination and +600 CRS points. Compare your options with <a href="/manitoba-crs-calculator.html">Manitoba MPNP</a> or use our main <a href="/pnp-crs-calculator.html">PNP CRS Calculator</a>.</p>
-    
-        <div class="highlight-box info"><h4>Official Resources</h4><ul><li><a href="https://www.saskatchewan.ca/residents/moving-to-saskatchewan/immigrating-to-saskatchewan" target="_blank" rel="noopener noreferrer">Official SINP Website ↗</a></li><li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" target="_blank" rel="noopener noreferrer">IRCC Express Entry ↗</a></li></ul></div>
-      </section>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the Saskatchewan CRS calculator?",
+      "acceptedAnswer": { "@type": "Answer", "text": "It estimates your CRS score for the SINP Express Entry Sub-Category to assess your chances of receiving a Saskatchewan provincial nomination for Canada PR." }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a good CRS score for Saskatchewan?",
+      "acceptedAnswer": { "@type": "Answer", "text": "A score above 450 is competitive for the SINP pool. A SINP nomination adds 600 CRS bonus points, making almost any profile competitive for a federal Invitation to Apply." }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Saskatchewan use the federal CRS?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Yes. The SINP Express Entry Sub-Category uses the standard federal CRS. Saskatchewan adds 600 CRS points when it nominates a candidate." }
+    },
+    {
+      "@type": "Question",
+      "name": "What occupations does Saskatchewan target through SINP?",
+      "acceptedAnswer": { "@type": "Answer", "text": "Saskatchewan prioritises healthcare, agriculture, trucking and transportation, skilled trades, and technology workers whose skills match provincial labour market needs." }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this Saskatchewan CRS calculator accurate?",
+      "acceptedAnswer": { "@type": "Answer", "text": "This tool uses the official IRCC CRS points grid and SINP guidelines for a reliable estimate. Always verify with the IRCC official CRS tool before filing your Express Entry profile." }
+    }
+  ]
+}
+</script>
 
-      <!-- FAQ -->
-      <section class="card" aria-labelledby="faq-heading">
-        <div class="card-header">
-          <span class="card-icon">❓</span>
-          <h2 id="faq-heading">Frequently Asked Questions</h2>
-        </div>
-        <ul class="faq-list">
-          <li class="faq-item"><div class="faq-question" role="button" tabindex="0">What is the SINP points assessment?<i class="faq-toggle">+</i></div><div class="faq-answer">SINP uses its own points assessment system for the International Skilled Worker category. Points are awarded for education, work experience, language ability, age, Saskatchewan connections, and adaptability factors. Candidates with the highest SINP points are invited to apply when SINP draws occur.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Do I need a job offer for SINP?<i class="faq-toggle">+</i></div><div class="faq-answer">A job offer from a Saskatchewan employer is not required for all SINP streams. The Occupations In-Demand stream does not require a job offer. However, having a Saskatchewan employer job offer strengthens your application significantly.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">What occupations does Saskatchewan prioritize?<i class="faq-toggle">+</i></div><div class="faq-answer">Saskatchewan prioritizes agriculture and agri-food workers, healthcare professionals (especially for rural areas), oil/gas and mining workers, construction trades, and technology workers. Check the current SINP In-Demand Occupations List for specific NOC codes.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">Can I apply for SINP while living outside Canada?<i class="faq-toggle">+</i></div><div class="faq-answer">Yes. The International Skilled Worker – Saskatchewan Express Entry and Occupations In-Demand streams are open to candidates living abroad. You do not need to be in Saskatchewan or Canada to apply.</div></li><li class="faq-item"><div class="faq-question" role="button" tabindex="0">How does SINP nomination connect to Express Entry?<i class="faq-toggle">+</i></div><div class="faq-answer">If you have an active Express Entry profile and receive an SINP nomination through the Saskatchewan Express Entry stream, IRCC will add 600 CRS points to your profile. You will then receive an ITA in the next Express Entry draw.</div></li>
-        </ul>
-      </section>
-
-      <div class="internal-cta">
-        <a href="/index.html">← Calculate Your CRS Score Free — Main Calculator</a>
-      </div>
-      <div class="ad-slot ad-rectangle"><!-- AdSense Bottom --></div>
-    </div>
-
-    <aside class="sidebar">
-      <div class="sidebar-widget cutoff-widget">
-        <h3>🎯 Latest Draw Cutoffs</h3>
-        <div class="cutoff-item"><span class="label">All-Program</span><span class="value">489</span></div>
-        <div class="cutoff-item"><span class="label">French Language</span><span class="value">379</span></div>
-        <div class="cutoff-item"><span class="label">PNP Draw</span><span class="value">791</span></div>
-        <a href="/express-entry-draw-results.html" style="color:rgba(255,255,255,0.8);font-size:0.82rem;display:block;margin-top:10px;">View all draws →</a>
-      </div>
-      <div class="ad-slot ad-sidebar"><!-- AdSense 300x250 --></div>
-      <div class="sidebar-widget">
-        <h3>🔗 Related Calculators</h3>
-        <div class="related-tools">
-          <a href="/index.html" class="related-tool-link"><span>🧮</span> Main CRS Calculator</a>
-          <a href="/pnp-crs-calculator.html" class="related-tool-link"><span>🏛️</span> PNP Calculator (+600 pts)</a>
-          <a href="/ielts-crs-calculator.html" class="related-tool-link"><span>📝</span> IELTS to CRS Points</a>
-          <a href="/how-to-improve-crs-score.html" class="related-tool-link"><span>📈</span> How to Improve CRS</a>
-        </div>
-      </div>
-    </aside>
-  </div>
-</main>
-<footer class="site-footer" role="contentinfo">
-  <div class="container">
-    <div class="footer-grid">
-      <div class="footer-col">
-        <h4>Calculators</h4>
-        <ul class="footer-links">
-          <li><a href="/index.html">CRS Calculator</a></li>
-          <li><a href="/express-entry-crs-calculator.html">Express Entry</a></li>
-          <li><a href="/cec-crs-calculator.html">CEC Calculator</a></li>
-          <li><a href="/fsw-crs-calculator.html">FSW Calculator</a></li>
-          <li><a href="/fst-crs-calculator.html">FST Calculator</a></li>
-          <li><a href="/pnp-crs-calculator.html">PNP Calculator</a></li>
-          <li><a href="/ielts-crs-calculator.html">IELTS to CRS</a></li>
-          <li><a href="/stem-crs-calculator.html">STEM Workers</a></li>
-          <li><a href="/healthcare-crs-calculator.html">Healthcare Workers</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Provinces</h4>
-        <ul class="footer-links">
-          <li><a href="/alberta-crs-calculator.html">Alberta (AINP)</a></li>
-          <li><a href="/ontario-crs-calculator.html">Ontario (OINP)</a></li>
-          <li><a href="/bc-crs-calculator.html">British Columbia</a></li>
-          <li><a href="/manitoba-crs-calculator.html">Manitoba (MPNP)</a></li>
-          <li><a href="/saskatchewan-crs-calculator.html">Saskatchewan (SINP)</a></li>
-          <li><a href="/nova-scotia-crs-calculator.html">Nova Scotia (NSNP)</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Guides</h4>
-        <ul class="footer-links">
-          <li><a href="/what-is-crs-score.html">What is CRS Score?</a></li>
-          <li><a href="/how-crs-is-calculated.html">How CRS is Calculated</a></li>
-          <li><a href="/crs-cutoff-scores.html">CRS Cutoff Scores</a></li>
-          <li><a href="/how-to-improve-crs-score.html">Improve Your CRS</a></li>
-          <li><a href="/express-entry-draw-results.html">Express Entry Draws</a></li>
-          <li><a href="/canada-express-entry-eligibility.html">Eligibility Requirements</a></li>
-          <li><a href="/crs-score-for-canada-pr.html">CRS Score for Canada PR</a></li>
-        </ul>
-      </div>
-      <div class="footer-col">
-        <h4>Blog &amp; Resources</h4>
-        <ul class="footer-links">
-          <li><a href="/blog/index.html">Blog Home</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry.html" class="external-link">IRCC Express Entry</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system.html" class="external-link">Official CRS Criteria</a></li>
-          <li><a href="https://ircc.canada.ca/english/immigrate/skilled/crs-tool.asp" class="external-link">IRCC CRS Tool</a></li>
-          <li><a href="https://www.canada.ca/en/immigration-refugees-citizenship/corporate/publications-manuals/operational-bulletins-manuals/permanent-residence/express-entry/criteria-comprehensive-ranking-system.html" class="external-link">CRS Operations Manual</a></li>
-        </ul>
-      </div>
-    </div>
-  </div>
-  <div class="footer-bottom">
-    <div class="footer-bottom-inner">
-      <p class="footer-disclaimer">⚠️ This calculator is for informational purposes only. Results are estimates based on IRCC's CRS grid. Always verify your score with official IRCC resources before making immigration decisions.</p>
-      <p class="footer-copyright">© 2026 CRS Score Calculator — crsscorecalculator.vercel.app</p>
-    </div>
-  </div>
-</footer>
-<script src="/js/main.js" defer></script>
-<script src="/js/calculator.js" defer></script>
 </body>
 </html>
