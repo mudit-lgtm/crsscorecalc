@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact Us – CRS Score Calculator</title>
-<meta name="description" content="Contact the CRS Score Calculator team. Send us your questions, feedback, or bug reports about our Canada Express Entry CRS calculator tools.">
-<link rel="canonical" href="https://crsscorecalculator.vercel.app/contact">
+<title>Privacy Policy – CRS Score Calculator</title>
+<meta name="description" content="Privacy Policy for CRS Score Calculator. Learn how we collect, use, and protect your information when you use our Canada Express Entry CRS tools.">
+<link rel="canonical" href="https://crsscorecalculator.vercel.app/privacy-policy">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#f9fafb;color:#1f2937;line-height:1.6}
@@ -97,110 +97,134 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
 </script>
 
 <div class="page-hero">
-  <h1>Contact Us</h1>
-  <p>Have a question, suggestion, or found a bug? We'd love to hear from you.</p>
+  <h1>Privacy Policy</h1>
+  <p>How we collect, use, and protect your information</p>
 </div>
 
 <div class="breadcrumb" style="max-width:900px;margin:0 auto;padding:10px 16px">
-  <a href="https://crsscorecalculator.vercel.app/">Home</a><span>›</span> Contact Us
+  <a href="https://crsscorecalculator.vercel.app/">Home</a><span>›</span> Privacy Policy
 </div>
 
 <div class="container">
+  <div class="last-updated">Last Updated: May 21, 2026</div>
 
-  <!-- Contact cards -->
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="icon">📧</div>
-      <h4>Email Us</h4>
-      <p><a href="mailto:contact@crsscorecalculator.vercel.app">contact@crsscorecalculator<br>.vercel.app</a></p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">⏱️</div>
-      <h4>Response Time</h4>
-      <p style="color:#374151">We typically respond within <strong>24–48 hours</strong> on business days</p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">🌐</div>
-      <h4>Official IRCC</h4>
-      <p><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">canada.ca/immigration</a></p>
-    </div>
+  <!-- TOC -->
+  <div class="toc">
+    <h4>Table of Contents</h4>
+    <ol>
+      <li><a href="#info-collect">Information We Collect</a></li>
+      <li><a href="#how-use">How We Use Your Information</a></li>
+      <li><a href="#cookies">Cookies &amp; Analytics</a></li>
+      <li><a href="#third-party">Third-Party Services</a></li>
+      <li><a href="#data-storage">Data Storage &amp; Security</a></li>
+      <li><a href="#your-rights">Your Rights</a></li>
+      <li><a href="#childrens">Children's Privacy</a></li>
+      <li><a href="#changes">Changes to This Policy</a></li>
+      <li><a href="#contact-priv">Contact Us</a></li>
+    </ol>
   </div>
 
-  <!-- Contact form -->
   <div class="card">
-    <div class="section-title">Send Us a Message</div>
-    <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div class="form-group">
-          <label for="fname">First Name *</label>
-          <input type="text" id="fname" placeholder="John" required>
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name *</label>
-          <input type="text" id="lname" placeholder="Smith" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" placeholder="john@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject *</label>
-        <select id="subject" required>
-          <option value="">— Select a topic —</option>
-          <option>Calculator accuracy issue</option>
-          <option>Bug report</option>
-          <option>Feature request</option>
-          <option>Content / blog feedback</option>
-          <option>Partnership inquiry</option>
-          <option>General question</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" placeholder="Describe your question or issue in detail..." required></textarea>
-      </div>
-      <button type="submit" class="btn-red">Send Message →</button>
-      <div id="formMsg" style="margin-top:14px;font-size:14px;text-align:center;display:none"></div>
-    </form>
+    <p>Welcome to CRS Score Calculator ("we," "our," or "us"). This Privacy Policy explains how we handle information when you visit <strong>crsscorecalculator.vercel.app</strong> (the "Site"). By using our Site, you agree to the practices described in this policy.</p>
+    <p>We are committed to protecting your privacy. We do <strong>not</strong> sell, rent, or trade your personal information to any third parties.</p>
   </div>
 
-  <!-- FAQ -->
-  <div class="card">
-    <div class="section-title">Frequently Asked Questions</div>
-    <h3>Is this calculator affiliated with IRCC or the Canadian government?</h3>
-    <p>No. CRS Score Calculator is an independent free tool. It is not affiliated with, endorsed by, or connected to Immigration, Refugees and Citizenship Canada (IRCC) or any government body.</p>
-    <h3>How accurate is the CRS score calculation?</h3>
-    <p>Our calculators are built on the official IRCC CRS grid and are updated whenever IRCC changes the scoring rules. The result is an estimate — your official score is only confirmed when you create an Express Entry profile on the IRCC portal.</p>
-    <h3>Can I use this tool for official immigration applications?</h3>
-    <p>No. This tool is for informational purposes only. Always verify your score through the official IRCC Express Entry system or consult a Regulated Canadian Immigration Consultant (RCIC).</p>
-    <h3>I found a bug — how do I report it?</h3>
-    <p>Use the contact form above and select "Bug report" as the subject. Please include the calculator name, your inputs, and the score you received so we can reproduce and fix the issue quickly.</p>
+  <div class="card" id="info-collect">
+    <div class="section-title">1. Information We Collect</div>
+    <h3>Information You Provide</h3>
+    <p>When you use our contact form, you may provide your name and email address. This information is used solely to respond to your inquiry and is never shared with third parties.</p>
+    <h3>Information Collected Automatically</h3>
+    <ul>
+      <li><strong>Log data:</strong> IP address, browser type, pages visited, time spent on pages, referral URLs</li>
+      <li><strong>Device information:</strong> Screen resolution, operating system, browser version</li>
+      <li><strong>Usage data:</strong> Which calculators you use, button clicks, general interaction patterns</li>
+    </ul>
+    <h3>Calculator Inputs</h3>
+    <p>When you use our CRS calculators, your inputs (age, education, language scores, etc.) are processed <strong>entirely in your browser</strong>. We do not store, transmit, or log any immigration data you enter into any calculator on this Site.</p>
   </div>
 
+  <div class="card" id="how-use">
+    <div class="section-title">2. How We Use Your Information</div>
+    <ul>
+      <li>To respond to contact form submissions and support requests</li>
+      <li>To analyse and improve the performance and usability of the Site</li>
+      <li>To monitor for technical errors and bugs</li>
+      <li>To understand which tools and pages are most useful to visitors</li>
+      <li>To comply with legal obligations if required</li>
+    </ul>
+    <p>We do <strong>not</strong> use your information for marketing purposes, and we do not send unsolicited emails or newsletters unless you have explicitly subscribed.</p>
+  </div>
+
+  <div class="card" id="cookies">
+    <div class="section-title">3. Cookies &amp; Analytics</div>
+    <h3>Google Analytics</h3>
+    <p>We use Google Analytics to understand how visitors use our Site. Google Analytics collects anonymised data such as page views, session duration, and geographic region. This data is aggregated and cannot be used to identify you personally. You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener noreferrer" style="color:#d32f2f">Google Analytics Opt-out Browser Add-on</a>.</p>
+    <h3>Google AdSense</h3>
+    <p>We may display advertisements through Google AdSense. Google may use cookies to serve ads based on your prior visits to our Site or other websites. You can opt out of personalised advertising by visiting <a href="https://www.google.com/settings/ads" target="_blank" rel="noopener noreferrer" style="color:#d32f2f">Google Ads Settings</a>.</p>
+    <h3>Essential Cookies</h3>
+    <p>We use minimal essential cookies required for the Site to function correctly, such as remembering your theme preference. These cookies do not track personal data.</p>
+  </div>
+
+  <div class="card" id="third-party">
+    <div class="section-title">4. Third-Party Services</div>
+    <p>Our Site may contain links to external websites including the official IRCC (Immigration, Refugees and Citizenship Canada) website. We are not responsible for the privacy practices of any third-party sites. We encourage you to review the privacy policies of any external sites you visit.</p>
+    <p>We use the following third-party services which may have their own privacy policies:</p>
+    <ul>
+      <li><strong>Vercel</strong> – Hosting and deployment platform</li>
+      <li><strong>Google Analytics</strong> – Anonymised traffic analytics</li>
+      <li><strong>Google AdSense</strong> – Advertising (if applicable)</li>
+      <li><strong>Google Fonts</strong> – Typography delivery</li>
+    </ul>
+  </div>
+
+  <div class="card" id="data-storage">
+    <div class="section-title">5. Data Storage &amp; Security</div>
+    <p>Contact form submissions are handled via secure HTTPS. We implement reasonable technical measures to protect any information we collect. However, no method of transmission over the Internet is 100% secure, and we cannot guarantee absolute security.</p>
+    <p>We do not store calculator input data on our servers. All CRS calculations happen client-side in your browser.</p>
+  </div>
+
+  <div class="card" id="your-rights">
+    <div class="section-title">6. Your Rights</div>
+    <p>Depending on your location, you may have the following rights regarding your personal data:</p>
+    <ul>
+      <li><strong>Access:</strong> Request a copy of any personal data we hold about you</li>
+      <li><strong>Correction:</strong> Request correction of inaccurate data</li>
+      <li><strong>Deletion:</strong> Request deletion of your personal data</li>
+      <li><strong>Objection:</strong> Object to processing of your data for certain purposes</li>
+      <li><strong>Portability:</strong> Request transfer of your data in a machine-readable format</li>
+    </ul>
+    <p>To exercise any of these rights, please contact us using the form on our <a href="https://crsscorecalculator.vercel.app/contact" style="color:#d32f2f">Contact page</a>.</p>
+  </div>
+
+  <div class="card" id="childrens">
+    <div class="section-title">7. Children's Privacy</div>
+    <p>Our Site is not directed to children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will promptly delete it.</p>
+  </div>
+
+  <div class="card" id="changes">
+    <div class="section-title">8. Changes to This Policy</div>
+    <p>We may update this Privacy Policy from time to time to reflect changes in our practices or legal requirements. We will update the "Last Updated" date at the top of this page. We encourage you to review this policy periodically. Continued use of the Site after changes constitutes acceptance of the updated policy.</p>
+  </div>
+
+  <div class="card" id="contact-priv">
+    <div class="section-title">9. Contact Us</div>
+    <p>If you have any questions about this Privacy Policy or how we handle your data, please <a href="https://crsscorecalculator.vercel.app/contact" style="color:#d32f2f;font-weight:600">contact us here</a>. We will respond within 48 business hours.</p>
+  </div>
 </div>
 
 <!-- UNIVERSAL FOOTER -->
-<!-- ============================================================
-  UNIVERSAL FOOTER — crsscorecalculator.vercel.app
-  Design: Dark navy bg | 5 columns | Red CRS badge logo
-  MARKER: UNIVERSAL FOOTER (do not remove this line)
-  ============================================================ -->
 <footer style="background:#1a1a2e;color:#ccc;padding:48px 16px 24px">
   <div style="max-width:1200px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;margin-bottom:40px">
-
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:40px">
       <div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-          <span style="background:#d32f2f;color:#fff;font-weight:800;font-size:11px;padding:4px 6px;border-radius:5px;letter-spacing:0.03em">CRS</span>
+          <span style="background:#d32f2f;color:#fff;font-weight:800;font-size:11px;padding:4px 6px;border-radius:5px">CRS</span>
           <span style="color:#fff;font-weight:700;font-size:14px">CRS Calculator</span>
         </div>
         <p style="font-size:13px;line-height:1.7;color:#9ca3af">Free Canada Express Entry CRS score calculator. Trusted by thousands of applicants.</p>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">CRS Calculators</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">CRS Calculators</h4>
         <a href="https://crsscorecalculator.vercel.app/" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">CRS Calculator</a>
         <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Express Entry</a>
         <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">CEC Calculator</a>
@@ -208,9 +232,8 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">PNP Calculator</a>
         <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">IELTS to CRS</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Provincial Tools</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Provincial Tools</h4>
         <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Ontario OINP</a>
         <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Alberta AINP</a>
         <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">British Columbia</a>
@@ -218,9 +241,8 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Nova Scotia</a>
         <a href="https://crsscorecalculator.vercel.app/healthcare-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Healthcare CRS</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Guides &amp; Blog</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Guides &amp; Blog</h4>
         <a href="https://crsscorecalculator.vercel.app/blog" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Blog</a>
         <a href="https://crsscorecalculator.vercel.app/what-is-crs-score" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">What is CRS Score?</a>
         <a href="https://crsscorecalculator.vercel.app/blog/improve-crs-score-tips" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Improve CRS Score</a>
@@ -228,47 +250,24 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/express-entry-draws" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Draw Results</a>
         <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Cutoff Scores</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Company</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Company</h4>
         <a href="https://crsscorecalculator.vercel.app/about" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">About Us</a>
         <a href="https://crsscorecalculator.vercel.app/contact" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Contact Us</a>
         <a href="https://crsscorecalculator.vercel.app/privacy-policy" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Privacy Policy</a>
         <a href="https://crsscorecalculator.vercel.app/terms-and-conditions" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Terms &amp; Conditions</a>
       </div>
-
     </div>
-
     <div style="border-top:1px solid #374151;padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
       <p style="font-size:12px;color:#6b7280;margin:0">© 2026 CRS Score Calculator. Free tool — not affiliated with IRCC.</p>
-      <div style="display:flex;gap:20px">
+      <div style="display:flex;gap:16px">
         <a href="https://crsscorecalculator.vercel.app/privacy-policy" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Privacy</a>
         <a href="https://crsscorecalculator.vercel.app/terms-and-conditions" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Terms</a>
         <a href="https://crsscorecalculator.vercel.app/contact" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Contact</a>
       </div>
     </div>
-
   </div>
 </footer>
-<!-- ============================================================
-  END UNIVERSAL FOOTER
-  ============================================================ -->
-
-<style>
-@media(max-width:600px){
-  #contactForm > div[style*="grid"]{display:block !important}
-}
-</style>
-<script>
-function handleSubmit(e){
-  e.preventDefault();
-  var msg = document.getElementById('formMsg');
-  msg.style.display='block';
-  msg.style.color='#16a34a';
-  msg.innerHTML='✅ Thank you! Your message has been sent. We'll get back to you within 24–48 hours.';
-  e.target.reset();
-}
-</script>
 
 </body>
 </html>

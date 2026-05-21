@@ -3,9 +3,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Contact Us – CRS Score Calculator</title>
-<meta name="description" content="Contact the CRS Score Calculator team. Send us your questions, feedback, or bug reports about our Canada Express Entry CRS calculator tools.">
-<link rel="canonical" href="https://crsscorecalculator.vercel.app/contact">
+<title>About Us – CRS Score Calculator</title>
+<meta name="description" content="Learn about CRS Score Calculator – a free, accurate Canada Express Entry CRS score tool trusted by thousands of applicants worldwide.">
+<link rel="canonical" href="https://crsscorecalculator.vercel.app/about">
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
 body{font-family:'Inter',system-ui,sans-serif;background:#f9fafb;color:#1f2937;line-height:1.6}
@@ -96,111 +96,87 @@ textarea{resize:vertical;min-height:130px}
 function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=document.getElementById('crsMenuIcon'),ci=document.getElementById('crsCloseIcon'),btn=document.getElementById('crsHamburger'),open=m.style.display==='block';m.style.display=open?'none':'block';mi.style.display=open?'block':'none';ci.style.display=open?'none':'block';btn.setAttribute('aria-expanded',String(!open));}
 </script>
 
+<!-- Hero -->
 <div class="page-hero">
-  <h1>Contact Us</h1>
-  <p>Have a question, suggestion, or found a bug? We'd love to hear from you.</p>
+  <h1>About CRS Score Calculator</h1>
+  <p>Your free, accurate Canada Express Entry CRS score tool — trusted by thousands of applicants worldwide</p>
 </div>
 
+<!-- Breadcrumb -->
 <div class="breadcrumb" style="max-width:900px;margin:0 auto;padding:10px 16px">
-  <a href="https://crsscorecalculator.vercel.app/">Home</a><span>›</span> Contact Us
+  <a href="https://crsscorecalculator.vercel.app/">Home</a><span>›</span> About Us
 </div>
 
 <div class="container">
 
-  <!-- Contact cards -->
-  <div class="contact-grid">
-    <div class="contact-card">
-      <div class="icon">📧</div>
-      <h4>Email Us</h4>
-      <p><a href="mailto:contact@crsscorecalculator.vercel.app">contact@crsscorecalculator<br>.vercel.app</a></p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">⏱️</div>
-      <h4>Response Time</h4>
-      <p style="color:#374151">We typically respond within <strong>24–48 hours</strong> on business days</p>
-    </div>
-    <div class="contact-card">
-      <div class="icon">🌐</div>
-      <h4>Official IRCC</h4>
-      <p><a href="https://www.canada.ca/en/immigration-refugees-citizenship.html" target="_blank" rel="noopener noreferrer">canada.ca/immigration</a></p>
-    </div>
+  <!-- Stats -->
+  <div class="stat-grid">
+    <div class="stat-box"><span class="num">50K+</span><div class="lbl">Monthly Users</div></div>
+    <div class="stat-box"><span class="num">100%</span><div class="lbl">Free Forever</div></div>
+    <div class="stat-box"><span class="num">15+</span><div class="lbl">CRS Calculators</div></div>
+    <div class="stat-box"><span class="num">2024</span><div class="lbl">Updated Rules</div></div>
   </div>
 
-  <!-- Contact form -->
+  <!-- Who we are -->
   <div class="card">
-    <div class="section-title">Send Us a Message</div>
-    <form id="contactForm" onsubmit="handleSubmit(event)" novalidate>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:16px">
-        <div class="form-group">
-          <label for="fname">First Name *</label>
-          <input type="text" id="fname" placeholder="John" required>
-        </div>
-        <div class="form-group">
-          <label for="lname">Last Name *</label>
-          <input type="text" id="lname" placeholder="Smith" required>
-        </div>
-      </div>
-      <div class="form-group">
-        <label for="email">Email Address *</label>
-        <input type="email" id="email" placeholder="john@example.com" required>
-      </div>
-      <div class="form-group">
-        <label for="subject">Subject *</label>
-        <select id="subject" required>
-          <option value="">— Select a topic —</option>
-          <option>Calculator accuracy issue</option>
-          <option>Bug report</option>
-          <option>Feature request</option>
-          <option>Content / blog feedback</option>
-          <option>Partnership inquiry</option>
-          <option>General question</option>
-          <option>Other</option>
-        </select>
-      </div>
-      <div class="form-group">
-        <label for="message">Message *</label>
-        <textarea id="message" placeholder="Describe your question or issue in detail..." required></textarea>
-      </div>
-      <button type="submit" class="btn-red">Send Message →</button>
-      <div id="formMsg" style="margin-top:14px;font-size:14px;text-align:center;display:none"></div>
-    </form>
+    <div class="section-title">Who We Are</div>
+    <p>CRS Score Calculator is a free online tool designed to help Canadian immigration applicants accurately calculate their Comprehensive Ranking System (CRS) score for Canada's Express Entry immigration system. Our platform is built by immigration enthusiasts and developers who understand the complexity and stress of the immigration journey.</p>
+    <p>We are not a licensed immigration consultant or law firm. We are an independent informational resource dedicated to making the CRS scoring process transparent, simple, and accessible to everyone — regardless of budget or location.</p>
   </div>
 
-  <!-- FAQ -->
+  <!-- Mission -->
   <div class="card">
-    <div class="section-title">Frequently Asked Questions</div>
-    <h3>Is this calculator affiliated with IRCC or the Canadian government?</h3>
-    <p>No. CRS Score Calculator is an independent free tool. It is not affiliated with, endorsed by, or connected to Immigration, Refugees and Citizenship Canada (IRCC) or any government body.</p>
-    <h3>How accurate is the CRS score calculation?</h3>
-    <p>Our calculators are built on the official IRCC CRS grid and are updated whenever IRCC changes the scoring rules. The result is an estimate — your official score is only confirmed when you create an Express Entry profile on the IRCC portal.</p>
-    <h3>Can I use this tool for official immigration applications?</h3>
-    <p>No. This tool is for informational purposes only. Always verify your score through the official IRCC Express Entry system or consult a Regulated Canadian Immigration Consultant (RCIC).</p>
-    <h3>I found a bug — how do I report it?</h3>
-    <p>Use the contact form above and select "Bug report" as the subject. Please include the calculator name, your inputs, and the score you received so we can reproduce and fix the issue quickly.</p>
+    <div class="section-title">Our Mission</div>
+    <p>Our mission is simple: <strong>make Canada's Express Entry CRS score calculation free, accurate, and easy to understand</strong> for every applicant around the world.</p>
+    <p>We believe that immigration information should not be locked behind expensive consultancy fees. Every person deserves to know their CRS score before spending thousands of dollars on the actual immigration process.</p>
+  </div>
+
+  <!-- What we offer -->
+  <div class="card">
+    <div class="section-title">What We Offer</div>
+    <ul>
+      <li><strong>CRS Calculator</strong> – Full Comprehensive Ranking System score calculator based on official IRCC criteria</li>
+      <li><strong>Express Entry Calculator</strong> – Specific tool for general Express Entry pool scoring</li>
+      <li><strong>CEC Calculator</strong> – Canadian Experience Class specific scoring tool</li>
+      <li><strong>FSW Calculator</strong> – Federal Skilled Worker program calculator</li>
+      <li><strong>PNP Calculator</strong> – Provincial Nominee Program scoring</li>
+      <li><strong>IELTS to CRS Converter</strong> – Convert your IELTS band scores to CRS points instantly</li>
+      <li><strong>Provincial Calculators</strong> – Ontario, Alberta, BC, Manitoba, Nova Scotia, Healthcare &amp; STEM</li>
+      <li><strong>Express Entry Draws Tracker</strong> – Latest draw results with minimum CRS cutoff history</li>
+      <li><strong>CRS Cutoff Score History</strong> – Historical cutoff trends to plan your Express Entry strategy</li>
+      <li><strong>Immigration Blog</strong> – Practical guides on improving your CRS score, language tests, education points, and more</li>
+    </ul>
+  </div>
+
+  <!-- Accuracy note -->
+  <div class="card">
+    <div class="section-title">Accuracy &amp; Disclaimer</div>
+    <p>Our calculators are built based on the official <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/immigrate-canada/express-entry/eligibility/criteria-comprehensive-ranking-system/grid.html" target="_blank" rel="noopener noreferrer" style="color:#d32f2f">IRCC Comprehensive Ranking System grid</a>. We update our scoring formulas whenever IRCC announces changes to ensure you always get the most accurate estimate.</p>
+    <p>However, please note that this tool provides an <strong>estimate only</strong>. Final CRS scores are calculated by IRCC when you create your official Express Entry profile. We strongly recommend verifying your score through your official IRCC account or by consulting a Regulated Canadian Immigration Consultant (RCIC).</p>
+  </div>
+
+  <!-- Contact CTA -->
+  <div class="card" style="text-align:center;background:#fef2f2;border-color:#fecaca">
+    <h3 style="font-size:1.2rem;margin-top:0;color:#d32f2f">Have Questions or Suggestions?</h3>
+    <p style="margin-bottom:20px">We'd love to hear from you. Whether it's a bug report, a feature request, or a general inquiry — reach out to us.</p>
+    <a href="https://crsscorecalculator.vercel.app/contact" style="background:#d32f2f;color:#fff;font-size:14px;font-weight:700;padding:12px 28px;border-radius:8px;text-decoration:none;display:inline-block" onmouseover="this.style.background='#b71c1c'" onmouseout="this.style.background='#d32f2f'">Contact Us →</a>
   </div>
 
 </div>
 
 <!-- UNIVERSAL FOOTER -->
-<!-- ============================================================
-  UNIVERSAL FOOTER — crsscorecalculator.vercel.app
-  Design: Dark navy bg | 5 columns | Red CRS badge logo
-  MARKER: UNIVERSAL FOOTER (do not remove this line)
-  ============================================================ -->
 <footer style="background:#1a1a2e;color:#ccc;padding:48px 16px 24px">
   <div style="max-width:1200px;margin:0 auto">
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:32px;margin-bottom:40px">
-
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:32px;margin-bottom:40px">
       <div>
         <div style="display:flex;align-items:center;gap:8px;margin-bottom:14px">
-          <span style="background:#d32f2f;color:#fff;font-weight:800;font-size:11px;padding:4px 6px;border-radius:5px;letter-spacing:0.03em">CRS</span>
+          <span style="background:#d32f2f;color:#fff;font-weight:800;font-size:11px;padding:4px 6px;border-radius:5px">CRS</span>
           <span style="color:#fff;font-weight:700;font-size:14px">CRS Calculator</span>
         </div>
         <p style="font-size:13px;line-height:1.7;color:#9ca3af">Free Canada Express Entry CRS score calculator. Trusted by thousands of applicants.</p>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">CRS Calculators</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">CRS Calculators</h4>
         <a href="https://crsscorecalculator.vercel.app/" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">CRS Calculator</a>
         <a href="https://crsscorecalculator.vercel.app/express-entry-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Express Entry</a>
         <a href="https://crsscorecalculator.vercel.app/cec-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">CEC Calculator</a>
@@ -208,9 +184,8 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/pnp-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">PNP Calculator</a>
         <a href="https://crsscorecalculator.vercel.app/ielts-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">IELTS to CRS</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Provincial Tools</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Provincial Tools</h4>
         <a href="https://crsscorecalculator.vercel.app/ontario-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Ontario OINP</a>
         <a href="https://crsscorecalculator.vercel.app/alberta-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Alberta AINP</a>
         <a href="https://crsscorecalculator.vercel.app/bc-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">British Columbia</a>
@@ -218,9 +193,8 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/nova-scotia-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Nova Scotia</a>
         <a href="https://crsscorecalculator.vercel.app/healthcare-crs-calculator" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Healthcare CRS</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Guides &amp; Blog</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Guides &amp; Blog</h4>
         <a href="https://crsscorecalculator.vercel.app/blog" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Blog</a>
         <a href="https://crsscorecalculator.vercel.app/what-is-crs-score" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">What is CRS Score?</a>
         <a href="https://crsscorecalculator.vercel.app/blog/improve-crs-score-tips" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Improve CRS Score</a>
@@ -228,47 +202,24 @@ function crsToggleMenu(){var m=document.getElementById('crsMobileMenu'),mi=docum
         <a href="https://crsscorecalculator.vercel.app/express-entry-draws" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Draw Results</a>
         <a href="https://crsscorecalculator.vercel.app/crs-cutoff-scores" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Cutoff Scores</a>
       </div>
-
       <div>
-        <h4 style="color:#fff;font-size:12px;font-weight:700;margin-bottom:14px;text-transform:uppercase;letter-spacing:0.08em">Company</h4>
+        <h4 style="color:#fff;font-size:13px;font-weight:700;margin-bottom:12px;text-transform:uppercase;letter-spacing:0.05em">Company</h4>
         <a href="https://crsscorecalculator.vercel.app/about" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">About Us</a>
         <a href="https://crsscorecalculator.vercel.app/contact" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Contact Us</a>
         <a href="https://crsscorecalculator.vercel.app/privacy-policy" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Privacy Policy</a>
         <a href="https://crsscorecalculator.vercel.app/terms-and-conditions" style="display:block;color:#9ca3af;font-size:13px;padding:3px 0;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#9ca3af'">Terms &amp; Conditions</a>
       </div>
-
     </div>
-
     <div style="border-top:1px solid #374151;padding-top:20px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:12px">
       <p style="font-size:12px;color:#6b7280;margin:0">© 2026 CRS Score Calculator. Free tool — not affiliated with IRCC.</p>
-      <div style="display:flex;gap:20px">
+      <div style="display:flex;gap:16px">
         <a href="https://crsscorecalculator.vercel.app/privacy-policy" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Privacy</a>
         <a href="https://crsscorecalculator.vercel.app/terms-and-conditions" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Terms</a>
         <a href="https://crsscorecalculator.vercel.app/contact" style="font-size:12px;color:#6b7280;text-decoration:none" onmouseover="this.style.color='#f87171'" onmouseout="this.style.color='#6b7280'">Contact</a>
       </div>
     </div>
-
   </div>
 </footer>
-<!-- ============================================================
-  END UNIVERSAL FOOTER
-  ============================================================ -->
-
-<style>
-@media(max-width:600px){
-  #contactForm > div[style*="grid"]{display:block !important}
-}
-</style>
-<script>
-function handleSubmit(e){
-  e.preventDefault();
-  var msg = document.getElementById('formMsg');
-  msg.style.display='block';
-  msg.style.color='#16a34a';
-  msg.innerHTML='✅ Thank you! Your message has been sent. We'll get back to you within 24–48 hours.';
-  e.target.reset();
-}
-</script>
 
 </body>
 </html>
