@@ -14,13 +14,27 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4.2.2
 
+      - name: Show repo structure (debug)
+        run: |
+          echo "=== Root files ==="
+          ls -la
+          echo ""
+          echo "=== footer-snippet.html preview ==="
+          head -5 footer-snippet.html || echo "NOT FOUND"
+          echo ""
+          echo "=== HTML files found ==="
+          find . -name "*.html" -not -path "./.git/*" -not -path "./node_modules/*" | sort
+
       - name: Run footer replacement
         run: python replace-footer.py
+
+      - name: Show git diff summary
+        run: git diff --stat || echo "No changes"
 
       - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
           git add -A
-          git diff --staged --quiet || git commit -m "chore: replace footer across all pages"
+          git diff --staged --quiet || git commit -m "chore: force replace footer across all pages"
           git push
