@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """
-fix_jsonld_quotes.py
-Scans repo files and fixes common broken JSON-LD quote issues.
+fix_jsonld_quotes_html_only.py
+Safely fixes broken JSON-LD quote issues only inside .html/.htm files.
 
 Usage:
-  python fix_jsonld_quotes.py
-  python fix_jsonld_quotes.py --dry-run
+  python fix_jsonld_quotes_html_only.py
+  python fix_jsonld_quotes_html_only.py --dry-run
 """
 
 import re
@@ -17,7 +17,7 @@ from pathlib import Path
 DRY_RUN = "--dry-run" in sys.argv
 ROOT = Path(__file__).resolve().parent
 SKIP_DIRS = {"node_modules", ".git", ".next", "dist", ".vercel", "__pycache__"}
-TEXT_EXTS = {".html", ".htm", ".xml", ".txt", ".json", ".js", ".jsx", ".ts", ".tsx", ".md"}
+TEXT_EXTS = {".html", ".htm"}
 
 script_tag_re = re.compile(
     r'(<script\s+type=["\']application/ld\+json["\'][^>]*>)([\s\S]*?)(</script>)',
@@ -71,7 +71,6 @@ for path in ROOT.rglob("*"):
             return start + body3 + end
 
         updated = script_tag_re.sub(repl, updated)
-        updated = clean_json_text(updated)
 
         if updated != original:
             if DRY_RUN:
@@ -91,7 +90,7 @@ for path in ROOT.rglob("*"):
         errors.append(f"{path}: {e}")
 
 print("=" * 60)
-print("JSON-LD FIXER")
+print("JSON-LD FIXER (HTML ONLY)")
 print("=" * 60)
 print(f"DRY RUN: {DRY_RUN}")
 print(f"Changed files: {len(changed)}")
@@ -100,10 +99,8 @@ for f in changed[:200]:
 if len(changed) > 200:
     print(f" ... and {len(changed) - 200} more")
 print(f"Fixed schema blocks: {fixed_blocks}")
-
 if errors:
     print("\nErrors:")
     for e in errors:
         print(" x", e)
-
 print("=" * 60)
